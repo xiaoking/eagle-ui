@@ -737,16 +737,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	    Input.prototype.checkbox = function checkbox() {
 	        var _classnames, _classnames2, _classnames3;
 
+	        var checked = typeof this.props.checked != 'undefined' ? this.props.checked : this.state.isActive;
 	        return _react2['default'].createElement(
 	            'div',
-	            { ref: '', className: _classnames11['default'](this.getClassNamesForArguments('' + this.className + this.props.type), (_classnames = {}, _classnames['eg-input-' + this.props.type + '-active'] = this.state.isActive, _classnames), (_classnames2 = {}, _classnames2['eg-input-' + this.props.type + '-disabled'] = this.props.disabled, _classnames2)), onClick: this.setCheck.bind(this) },
+	            { ref: '', className: _classnames11['default'](this.getClassNamesForArguments('' + this.className + this.props.type), (_classnames = {}, _classnames['eg-input-' + this.props.type + '-active'] = checked, _classnames), (_classnames2 = {}, _classnames2['eg-input-' + this.props.type + '-disabled'] = this.props.disabled, _classnames2)), onClick: this.setCheck.bind(this) },
 	            _react2['default'].createElement('input', _extends({ type: this.props.type }, this.props, { onChange: this.onchange.bind(this) })),
 	            _react2['default'].createElement(
 	                'div',
 	                { className: 'box' },
 	                _react2['default'].createElement(
 	                    'div',
-	                    { className: _classnames11['default']('checkbox', (_classnames3 = {}, _classnames3[this.getClassName('icon-tick', false)] = this.state.isActive, _classnames3)) },
+	                    { className: _classnames11['default']('checkbox', (_classnames3 = {}, _classnames3[this.getClassName('icon-tick', false)] = checked, _classnames3)) },
 	                    _react2['default'].createElement('div', { className: 'round' })
 	                )
 	            ),
@@ -763,16 +764,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	    Input.prototype.checkboxs = function checkboxs() {
 	        var _classnames4, _classnames5, _classnames6;
 
+	        var checked = typeof this.props.checked != 'undefined' ? this.props.checked : this.state.isActive;
 	        return _react2['default'].createElement(
 	            'div',
-	            { ref: '', className: _classnames11['default'](this.getClassNamesForArguments('' + this.className + this.props.type), (_classnames4 = {}, _classnames4['eg-input-' + this.props.type + '-active'] = this.state.isActive, _classnames4), (_classnames5 = {}, _classnames5['eg-input-' + this.props.type + '-disabled'] = this.props.disabled, _classnames5)), onClick: this.setCheck.bind(this) },
+	            { ref: '', className: _classnames11['default'](this.getClassNamesForArguments('' + this.className + this.props.type), (_classnames4 = {}, _classnames4['eg-input-' + this.props.type + '-active'] = checked, _classnames4), (_classnames5 = {}, _classnames5['eg-input-' + this.props.type + '-disabled'] = this.props.disabled, _classnames5)), onClick: this.setCheck.bind(this) },
 	            _react2['default'].createElement('input', _extends({}, this.props, { type: 'checkbox', onChange: this.onchange.bind(this) })),
 	            _react2['default'].createElement(
 	                'div',
 	                { className: 'box' },
 	                _react2['default'].createElement(
 	                    'div',
-	                    { className: _classnames11['default']('checkbox', (_classnames6 = {}, _classnames6[this.getClassName('icon-tick', false)] = this.state.isActive, _classnames6)) },
+	                    { className: _classnames11['default']('checkbox', (_classnames6 = {}, _classnames6[this.getClassName('icon-tick', false)] = checked, _classnames6)) },
 	                    _react2['default'].createElement('div', { className: 'round' })
 	                )
 	            ),

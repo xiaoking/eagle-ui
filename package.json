@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "The coolest cortex module.",
   "main": "dist/eagle-ui.js",
-  "repository": "git@github.com:xiaoking/eagle-ui.git",
+  "repository": "git://github.com/xiaoking/eagle-ui.git",
   "keywords": [
     "engle-ui"
   ],
