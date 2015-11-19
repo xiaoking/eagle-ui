@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "The coolest cortex module.",
   "main": "dist/eagle-ui.js",
-  "repository": "git://github.com/mac/eagle-ui.git",
+  "repository": "git@github.com:xiaoking/eagle-ui.git",
   "keywords": [
     "engle-ui"
   ],
@@ -19,9 +19,9 @@
     "email": "min.xiao@dianping.com"
   },
   "bugs": {
-    "url": "http://github.com/mac/eagle-ui/issues"
+    "url": "http://github.com/xiaoking/eagle-ui/issues"
   },
-  "homepage": "http://github.com/mac/eagle-ui",
+  "homepage": "http://github.com/xiaoking/eagle-ui",
   "dependencies": {
     "babel": "^6.0.15",
     "babel-core": "^5.8.23",
