@@ -1,0 +1,20 @@
+{
+  "name": "eagle-ui",
+  "main": "index.js",
+  "version": "0.0.0",
+  "authors": [
+    "min.xiao@dianping.com <min.xiao@dianping.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "~0.14.0",
+    "seajs": "~3.0.0"
+  }
+}

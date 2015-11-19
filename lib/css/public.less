@@ -1,0 +1,252 @@
+@import "color.less";
+/**清除浮动*/
+.clearfix:before, .clearfix:after {
+    display: table;
+    line-height: 0;
+    content:"";
+}
+.clearfix:after {
+    clear: both;
+}
+/**搜索图标*/
+.eg-search-icon:before, .eg-search-icon:after{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    z-index:10;
+}
+.eg-search-icon:before{
+    border: 2px solid @gray-b2;
+    height: 10px;
+    width: 10px;
+    border-radius: 7px;
+    top: 11px;
+    left: 5px;
+}
+.eg-search-icon:after{
+    height: 7px;
+    width: 2px;
+    transform: rotate(-45deg);
+    top: 21px;
+    left: 18px;
+    background: @gray-b2;
+}
+
+/**圆角*/
+.eg-radius{
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+//选中背景色
+.eg-active{
+    color: @orange-btn;
+}
+//selec
+.eg-selected{
+    color: @white;
+    background:@orange-btn ;
+}
+/**淡入淡出动画*/
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0; /*初始状态 透明度为0*/
+    }
+    50% {
+        opacity: 0.5; /*中间状态 透明度为0.5*/
+    }
+    100% {
+        opacity: 1; /*结尾状态 透明度为1*/
+    }
+}
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1; /*初始状态 透明度为1*/
+    }
+    50% {
+        opacity: 0.5; /*中间状态 透明度为0.5*/
+    }
+    100% {
+        opacity: 0; /*结尾状态 透明度为0*/
+    }
+
+}
+/**显示*/
+.eg-hide{
+    display: none;
+}
+.eg-show{
+    display: block;
+}
+
+.eg-fadein{
+    -webkit-animation: fadeIn .4s 1 0s;
+}
+.eg-fadeout{
+    -webkit-animation: fadeOut .4s 2 3s ;
+
+}
+/**成功图标*/
+.eg-tips-success{
+    background: @lighet-green;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    display: inline-block;
+    position: relative;
+}
+/**出错提示*/
+.eg-tips-error{
+    background: @danger;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    display: inline-block;
+    position: relative;
+}
+/**加载中*/
+.eg-tips-loading{
+    background: @gray-bb;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    display: inline-block;
+    position: relative;
+}
+.eg-tips-success:before,.eg-icon-tick:before,.eg-icon-tick:after,.eg-tips-success:after,.eg-tips-error:after, .eg-tips-error:before,.eg-tips-loading:before, .eg-tips-loading:after{
+    display: inline-block;
+    position: absolute;
+    content: "";
+}
+.eg-tips-success:before,.eg-icon-tick:before{
+    height: 8px;
+    width: 2px;
+    background: #fff;
+    left: 10px;
+    top: 13px;
+    transform: rotate(135deg);
+}
+.eg-tips-success:after,.eg-icon-tick:after{
+    height: 14px;
+    width: 2px;
+    background: #fff;
+    left: 17px;
+    top: 8px;
+    transform: rotate(45deg);
+}
+.eg-tips-error:after{
+    height: 10px;
+    width: 2px;
+    background: #fff;
+    left: 14px;
+    top: 6px;
+}
+.eg-tips-error:before{
+    height: 2px;
+    width: 2px;
+    background: #fff;
+    left: 14px;
+    top: 19px;
+}
+.eg-tips-loading:before{
+    width: 15px;
+    height: 15px;
+    background: transparent;
+    border: 2px solid #fff;
+    top: 5.5px;
+    left: 5.5px;
+    border-radius: 12px;
+    clip: rect(auto,16px,auto,auto);
+    animation: 0.5s linear 0s normal none infinite rotate;
+
+}
+//旋转动画
+@-webkit-keyframes rotate{
+    from{-webkit-transform:rotate(0deg)}
+    to{-webkit-transform:rotate(360deg)}
+}
+/*icon*/
+
+.eg-arrow-up,.eg-arrow-down{
+    &::before{
+        content:'';
+        display: inline-block;
+        width: 6px;
+        height: 9px;
+        position: absolute;
+        top: 50%;
+        margin-left: 9px;
+    }
+    &::after{
+        content:'';
+        display: inline-block;
+        border-width: 7px;
+        border-style: solid;
+        margin-left: 5px;
+        position: relative;
+    }
+}
+/*向上箭头*/
+@green-arrow:#38bd7c;
+.eg-arrow-up{
+    &::before{
+        background: @green-arrow;
+        margin-top: -1px;
+        border-radius: 0px 0px 1px 1px;
+    }
+    &::after{
+        border-color: transparent transparent @green-arrow transparent;
+        top: -6px;
+    }
+}
+/*向下箭头*/
+@red-arrow:#fa3739;
+.eg-arrow-down{
+    &::before{
+        background: @red-arrow;
+        margin-top: -8px;
+        border-radius: 1px 1px 0px 0px;
+    }
+    &::after{
+        border-color:@red-arrow transparent transparent transparent;
+        top: 10px;
+    }
+}
+/**图标*/
+.eg-icon-calendar{
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJViUEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4MUU4N0VFRjdCODYxMUU1QUY5NkM3NDVDRjI5NkNEQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4MUU4N0VGMDdCODYxMUU1QUY5NkM3NDVDRjI5NkNEQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjgxRTg3RUVEN0I4NjExRTVBRjk2Qzc0NUNGMjk2Q0RDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjgxRTg3RUVFN0I4NjExRTVBRjk2Qzc0NUNGMjk2Q0RDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Q96nFgAAAIpJREFUeNpi/P//PwMIzJo1C0RBOAwMjCAiLS0NJo4iBxIHM2bOnMmABFA0owEMOSYgFgXi80iSMIXoGFkOpF4UpHkXEBswkAZA6ncxkaERbgATAwWABcaAhSAxABYDFNlMHWcTciI27w2cs2nrZ3xRCNJ8AZRa0AOGCHAJ5Gw3EINEjWeB2AUgwADA4SbftT6JBAAAAABJRU5ErkJggg==") no-repeat right center;
+}
+/**左箭头*/
+.eg-icon-prev,.eg-icon-next{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+    &:after{
+        content: '';
+        display: inline-block;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 12px;
+        height: 12px;
+        border-top: 2px solid @black-99;
+        border-left: 2px solid @black-99;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+}
+.eg-icon-next{
+    &:after{
+        border-left:none;
+        border-right: 2px solid @black-99;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+}
+

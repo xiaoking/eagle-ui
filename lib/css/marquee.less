@@ -1,0 +1,193 @@
+@import 'color.less';
+
+.eg-marquee-container {
+  position: relative;
+  display: inline-block;
+  width: 380px;
+  height: auto;
+  padding: 0px 0px;
+  border: @red-border 2px solid;
+  overflow: hidden;
+  border-radius: 3px;
+  background: #fff;
+  .eg-marquee-new-tip {
+    position: absolute;
+    top: -26px;
+    left: -24px;
+    z-index: 90001;
+    background: @lighet-green;
+    color: #fff;
+    width: 50px;
+    height: 61px;
+    transform: rotate(45deg);
+    .eg-marquee-new{
+      display: inline-block;
+      position: relative;
+      top: 20px;
+      left: 31px;
+      transform: rotate(-45deg);
+    }
+  }
+  .eg-marquee-check {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 90001;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .eg-marquee-title {
+    color: @black-33;
+    font-size: 16px;
+    font-weight: bolder;
+    line-height: 17px;
+    margin: 15px 10px 5px 10px;
+  }
+  .eg-marquee-content {
+    color: @black-99;
+    font-size: 14px;
+    line-height: 15px;
+    margin: 10px 10px;
+  }
+  .eg-marquee-tips {
+    position: relative;
+    color: @black-99;
+    font-size: 14px;
+    margin: 15px 10px 5px 10px;
+  }
+  .eg-bars{
+    position: relative;
+    display: inline-block;
+    background: @black-99;
+    background: #999;
+    padding: 5px;
+    margin-right: 10px;
+
+  }
+  .eg-bars:before, .eg-bars:after{
+    position: absolute;
+    content: '';
+    display: inline-block;
+  }
+  .eg-bars:before{
+    top:0px;
+    left: 10px;
+    border-width: 5px;
+    border-style: dashed dashed solid;
+    border-color: transparent transparent transparent  @black-99;
+  }
+  .eg-bars:after{
+    top: 4px;
+    left: 7.5px;
+    z-index: 10;
+    border: 1.5px solid #fff;
+    border-radius: 5px;
+  }
+}
+//此例中仅仅用来显示选择按钮
+.eg-input-checkboxs{
+  position: relative;
+  height: 35px;
+  top: -5px;
+  width: 35px;
+  display: inline-block;
+  input[type="checkbox"]{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+    pointer-events: all;
+    opacity: 0;
+    z-index: 2;
+    left: 0;
+  }
+  .box{
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    float: left;
+    position: relative;
+    display: block;
+    width: 16px;
+    margin-right: 10px;
+    margin-left: 0;
+    height: 24px;
+    .checkbox{
+      width: 35px;
+      height: 35px;
+      border: 1px solid #999;
+      position: relative;
+      top: 5px;
+      left: 1px;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      background: @white;
+      .round{
+        display: none;
+      }
+    }
+    .active{
+
+    }
+  }
+  label{
+    float: left;
+    position: relative;
+    display: block;
+    line-height: 24px;
+  }
+}
+.eg-input-checkboxs-active{
+  .box{
+    .checkbox{
+      background: @orange-btn;
+      border-color: @orange-btn;
+    }
+    .eg-icon-tick{
+      &:before{
+        height: 9px;
+        width: 2px;
+        left: 11px;
+        top: 13px;
+      }
+      &:after{
+        height: 17px;
+        width: 2px;
+        left: 19px;
+        top: 6px;
+      }
+    }
+  }
+
+}
+.eg-input-checkboxs-disabled{
+  .box{
+    .checkbox{
+      background: @gray-ee;
+      color:@black-99;
+      border-color:@gray-cc;
+    }
+    .eg-icon-tick{
+      &:before{
+        background-color: @gray-fe;
+      }
+      &:after{
+        background-color: @gray-fe;
+      }
+    }
+  }
+  label{
+    color:@black-99;
+  }
+
+}
+.eg-input-checkboxs-disabled{
+  .box{
+    .checkbox{
+      background: @gray-cc;
+      color:@black-99;
+
+    }
+  }
+}

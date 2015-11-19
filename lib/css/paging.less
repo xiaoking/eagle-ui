@@ -1,0 +1,27 @@
+@import "color.less";
+/**按钮组*/
+
+.eg-paging-container{
+    text-align: right;
+    padding: 10px 0;
+    a,.page{
+        padding:5px;
+        margin: 0 5px;
+        //color:#333;
+    }
+    .info{
+        font-size: 12px;
+        color: @black-99;
+        margin-left: 20px
+    }
+    /*.current{
+        color: @orange-btn;
+    }*/
+}
+.eg-paging-active{
+    color: @orange-btn;
+}
+.eg-paging-disabled{
+    color:@gray-cc;
+    cursor: default;
+}

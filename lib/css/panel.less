@@ -1,0 +1,29 @@
+@import "color.less";
+
+/**面板*/
+@panel-default-theme:#ffffff;
+.eg-panel{
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid @gray-dd;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  .eg-panel-header{
+    padding: 10px 15px;
+    border-bottom: 1px solid transparent;
+    border-radius: 3px 3px 0px 0px;
+
+    color: #333;
+    background-color: @panel-default-theme;
+    border-color: #ddd;
+  }
+  .eg-panel-content{
+    padding:10px 15px;
+  }
+  .eg-panel-footer{
+    padding: 10px 15px;
+    background-color: @panel-default-theme;
+    border-top: 1px solid #ddd;
+    border-radius:0px 0px 3px 3px;
+  }
+}

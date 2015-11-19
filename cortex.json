@@ -1,0 +1,25 @@
+{
+  "name": "eagle-ui",
+  "version": "0.1.0",
+  "description": "The coolest cortex module.",
+  "main": "dist/eagle-ui.js",
+  "devDependencies": {
+    "assert": "*"
+  },
+  "dependencies": {
+    "react": "~0.14.1"
+  },
+  "repository": "git://github.com/mac/eagle-ui.git",
+  "keywords": [
+    "engle-ui"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "min.xiao@dianping.com",
+    "email": "min.xiao@dianping.com"
+  },
+  "bugs": {
+    "url": "http://github.com/mac/eagle-ui/issues"
+  },
+  "homepage": "http://github.com/mac/eagle-ui"
+}

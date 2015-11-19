@@ -1,0 +1,45 @@
+@import "color.less";
+.eg-select-container{
+  width: 300px;
+  position: relative;
+  display: inline-block;
+  margin-right: 15px;
+  ul{
+    background: #fff;
+    position: absolute;
+    width: inherit;
+    top: 39px;
+    left: 0px;
+    li{
+      text-indent: 10px;
+      padding: 5px 0;
+      cursor: pointer;
+    }
+    li:hover{
+      color:@red-num;
+    }
+  }
+  .eg-select-ul{
+    display: none;
+  }
+  .eg-select-show{
+    display: block;
+  }
+  /*下箭头*/
+  .eg-select-arrow{
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    z-index:10;
+    border-top: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-left: 5px solid @gray-bb;
+    border-bottom: 5px solid @gray-bb;
+  }
+  .eg-select-arrow{
+    transform: rotate(-45deg);
+  }
+
+}

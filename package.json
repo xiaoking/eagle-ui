@@ -1,0 +1,61 @@
+{
+  "name": "eagle-ui",
+  "version": "0.1.0",
+  "description": "The coolest cortex module.",
+  "main": "dist/eagle-ui.js",
+  "repository": "git://github.com/mac/eagle-ui.git",
+  "keywords": [
+    "engle-ui"
+  ],
+  "scripts": {
+    "build": "node_modules/.bin/gulp ",
+    "test": "karma start",
+    "demo": "node_modules/.bin/gulp demo",
+    "doc": "smartDoc ||node_modules/.bin/smartDoc"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "min.xiao@dianping.com",
+    "email": "min.xiao@dianping.com"
+  },
+  "bugs": {
+    "url": "http://github.com/mac/eagle-ui/issues"
+  },
+  "homepage": "http://github.com/mac/eagle-ui",
+  "dependencies": {
+    "babel": "^6.0.15",
+    "babel-core": "^5.8.23",
+    "babel-loader": "^5.3.2",
+    "classnames": "^2.1.3",
+    "css-loader": "0.17.0",
+    "extend": "^3.0.0",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "glob": "^5.0.14",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.0.0",
+    "gulp-karma": "0.0.5",
+    "gulp-less": "^3.0.3",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-util": "^3.0.6",
+    "gulp-webpack": "^1.5.0",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.15",
+    "karma-chrome-launcher": "^0.2.1",
+    "karma-cli": "^0.1.1",
+    "karma-jasmine": "^0.3.6",
+    "karma-webpack": "^1.7.0",
+    "less": "^2.5.1",
+    "less-loader": "^2.2.0",
+    "raw-loader": "^0.5.1",
+    "react": "^0.14.2",
+    "react-hot-loader": "^1.3.0",
+    "redux": "^2.0.0",
+    "smartdoc": "^0.1.1",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.12.1",
+    "webpack-bower-resolver": "0.0.1",
+    "webpack-dev-server": "^1.10.1"
+  }
+}

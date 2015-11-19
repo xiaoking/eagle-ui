@@ -1,0 +1,20 @@
+@import "color.less";
+
+@tab-active-color:#f25300;
+.eg-tab-item{
+  cursor:pointer;
+  display: inline-block;
+  min-width: 100px;
+  box-sizing: border-box;
+  padding: 5px 3px;
+  text-align: center;
+  &:hover{
+    text-decoration: none;
+  }
+  border-bottom: 1px solid #dddddd;
+  &.eg-tab-active{
+    color:@tab-active-color;
+    border-bottom: 1px solid @tab-active-color;
+    box-shadow: 0px -3px 0px 0px red inset;
+  }
+}
