@@ -89,8 +89,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    Demo.prototype.render = function render() {
-
-	        return _react2['default'].createElement(_libDialogJs2['default'], { type: 'alert', show: true });
+	        return _react2['default'].createElement(_libDialogJs2['default'], { type: 'confirm', show: true });
 	    };
 
 	    _createClass(Demo, null, [{
@@ -399,6 +398,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _classnames = __webpack_require__(29);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
+
+	/**
+	 * 按钮组件
+	 * @class Button
+	 * @module form
+	 * @extends Component
+	 * @since 0.1.0
+	 * @demo src/button.js {js}
+	 * @demo button.html {html}
+	 * @show true
+	 * */
 
 	var Button = (function (_Component) {
 	    _inherits(Button, _Component);
@@ -735,7 +745,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            successCallback: null, //success回掉函数
 	            cancelCallback: null, //cancel回调函数
 	            close: false, //是否有x图标
-	            title: ' ', //标题
+	            title: '爱生活爱点评', //标题
 	            show: false,
 	            type: 'alert',
 	            tips: null,
@@ -855,7 +865,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            _react2['default'].createElement(
 	                _RowJs2['default'],
 	                { className: _classnames3['default'](this.getClassNamesForArguments('content')) },
-	                this.props.children
+	                this.props.children ? this.props.children : '请快乐的修bug'
 	            ),
 	            _react2['default'].createElement(
 	                _RowJs2['default'],
@@ -879,7 +889,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    Dialog.prototype.dialog = function dialog() {
-	        debugger;
 	        return _react2['default'].createElement(
 	            _RowJs2['default'],
 	            { className: _classnames3['default'](this.getClassNamesForArguments('dialog')) },
@@ -950,7 +959,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    Dialog.prototype.render = function render() {
 	        var _classnames;
 
-	        debugger;
 	        return _react2['default'].createElement(
 	            _GridJs2['default'],
 	            { className: _classnames3['default'](this.getClassName('container'), (_classnames = {}, _classnames[this.getClassName('show')] = this.props.cancelCallback ? this.props.show : this.state.show, _classnames)) },

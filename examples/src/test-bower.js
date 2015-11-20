@@ -1,6 +1,6 @@
 import React from 'react';
-import {Button} from 'eagle-ui';
+import {Input} from 'eagle-ui';
 
 ReactDOM.render(
-  <Button>测试</Button>
+    <Input  type="checkbox"  />
   ,document.getElementById('root'));

@@ -8,49 +8,40 @@
       a {
         display: block;
         float: left;
-        height: 34px;
         background: transparent;
         color: @black;
-      }
-      a:after, a:before {
-        display: inline-block;
-        background-color: @gray-a0;
-        position: absolute;
-        content: "";
-        right: -12px;
-        height: 8px;
-        width: 1px;
-      }
-      a:after {
-        top: 9px;
-        transform: rotate(45deg);
+        &:after, &:before {
+          display: inline-block;
+          background-color: @gray-a0;
+          position: absolute;
+          content: "";
+          right: -12px;
+          height: 8px;
+          width: 1px;
+        }
+        &:after {
+          top: 9px;
+          transform: rotate(45deg);
 
-      }
-      a:before {
-        top: 4px;
-        transform: rotate(135deg);
+        }
+        &:before {
+          top: 4px;
+          transform: rotate(135deg);
 
+        }
       }
+
     }
     li:last-child {
-       a:before, a:after{
-         display: none;
-       }
+      cursor: default;
+      color: @gray-bb;
+      a{
+        &:before, &:after{
+          display: none;
+        }
+      }
     }
   }
 }
 
-.test {
-  border-top: 1px solid red;
-  border-bottom: 20px solid transparent;
-  border-left: 20px solid transparent;
-  border-right: 1px solid red;
-  position: absolute;
-  transform: rotate(45deg);
-  left: 100px;
-  top: 200px;
-  -ms-transform: rotate(7deg); /* IE 9 */
-  -moz-transform: rotate(7deg); /* Firefox */
-  -webkit-transform: rotate(7deg); /* Safari 和 Chrome */
-  -o-transform: rotate(7deg);
-}
+

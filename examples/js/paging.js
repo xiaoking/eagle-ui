@@ -97,7 +97,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _react2['default'].createElement(
 	        _libColJs2['default'],
 	        { sm: 12 },
-	        _react2['default'].createElement(_libPagingJs2['default'], { currentPage: page, pageCallback: callback, total: 1024 })
+	        _react2['default'].createElement(_libPagingJs2['default'], { currentPage: page, pageCallback: callback, total: 5024 })
 	    )
 	), document.getElementById('root'));
 

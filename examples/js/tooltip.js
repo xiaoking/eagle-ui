@@ -389,6 +389,17 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
+	/**
+	 * 按钮组件
+	 * @class Button
+	 * @module form
+	 * @extends Component
+	 * @since 0.1.0
+	 * @demo src/button.js {js}
+	 * @demo button.html {html}
+	 * @show true
+	 * */
+
 	var Button = (function (_Component) {
 	    _inherits(Button, _Component);
 
@@ -727,7 +738,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    Tooltip.prototype.render = function render() {
 	        var _classnames;
 
-	        debugger;
 	        return _react2['default'].createElement(
 	            _GridJs2['default'],
 	            { className: _classnames3['default'](this.getClassName('wraper'), (_classnames = {}, _classnames[this.getClassName('show')] = this.state.show, _classnames)) },
@@ -830,7 +840,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    TooltipPanel.prototype.render = function render() {
-	        debugger;
 	        var componentTag = this.props.children.props.componentTag;
 
 	        return _react2['default'].createElement(
@@ -846,7 +855,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    TooltipPanel.prototype.showTips = function showTips() {
-	        debugger;
 	        this.setState({
 	            show: true
 	        });

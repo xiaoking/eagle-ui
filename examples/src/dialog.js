@@ -12,9 +12,8 @@ let Demo= class Demo extends Component{
     };
 
     render(){
-
         return (
-            <Dialog type='alert' show/>
+            <Dialog type='confirm' show />
         );
     }
 }

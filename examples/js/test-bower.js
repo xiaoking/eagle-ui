@@ -65,11 +65,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _eagleUi = __webpack_require__(59);
 
-	ReactDOM.render(_react2['default'].createElement(
-	  _eagleUi.Button,
-	  null,
-	  '测试'
-	), document.getElementById('root'));
+	ReactDOM.render(_react2['default'].createElement(_eagleUi.Input, { type: 'checkbox' }), document.getElementById('root'));
 
 /***/ },
 

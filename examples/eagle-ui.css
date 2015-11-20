@@ -67,6 +67,16 @@ h6 {
 .clearfix:after {
   clear: both;
 }
+/**控制块级、内敛*/
+.inline-block {
+  display: inline-block !important;
+}
+.inline {
+  display: inline !important;
+}
+.block {
+  display: block !important;
+}
 /**搜索图标*/
 .eg-search-icon:before,
 .eg-search-icon:after {
@@ -831,7 +841,6 @@ h6 {
 .eg-crumb ul li a {
   display: block;
   float: left;
-  height: 34px;
   background: transparent;
   color: #000000;
 }
@@ -853,26 +862,13 @@ h6 {
   top: 4px;
   transform: rotate(135deg);
 }
+.eg-crumb ul li:last-child {
+  cursor: default;
+  color: #bbbbbb;
+}
 .eg-crumb ul li:last-child a:before,
 .eg-crumb ul li:last-child a:after {
   display: none;
-}
-.test {
-  border-top: 1px solid red;
-  border-bottom: 20px solid transparent;
-  border-left: 20px solid transparent;
-  border-right: 1px solid red;
-  position: absolute;
-  transform: rotate(45deg);
-  left: 100px;
-  top: 200px;
-  -ms-transform: rotate(7deg);
-  /* IE 9 */
-  -moz-transform: rotate(7deg);
-  /* Firefox */
-  -webkit-transform: rotate(7deg);
-  /* Safari 和 Chrome */
-  -o-transform: rotate(7deg);
 }
 .eg-search-wrapper {
   width: 300px;
@@ -913,6 +909,9 @@ h6 {
 }
 .eg-label-group-simple .eg-label-item:hover {
   color: #2f93d2;
+}
+.eg-label-group-simple .eg-label-item:last-child {
+  border-right: none;
 }
 .eg-label-group {
   border: 1px solid #eee;
@@ -1146,17 +1145,25 @@ h6 {
   display: inline-block;
   min-width: 100px;
   box-sizing: border-box;
-  padding: 5px 3px;
+  padding: 5px 15px;
   text-align: center;
   border-bottom: 1px solid #dddddd;
 }
 .eg-tab-item:hover {
   text-decoration: none;
+  color: #f25300;
+  background: #dddddd;
+  border-bottom: 1px solid #dddddd;
 }
 .eg-tab-item.eg-tab-active {
   color: #f25300;
   border-bottom: 1px solid #f25300;
-  box-shadow: 0px -3px 0px 0px red inset;
+  box-shadow: 0px -3px 0px 0px #f25300 inset;
+  cursor: default;
+}
+.eg-tab-item.eg-tab-active:hover {
+  background: transparent;
+  border-bottom: 1px solid #f25300;
 }
 .eg-select-container {
   width: 300px;

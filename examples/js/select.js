@@ -831,7 +831,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    Select.prototype.changeValue = function changeValue() {
-	        debugger;
 	        clearTimeout(this.timeout);
 	        this.timeout = setTimeout(this.callBacks.bind(this), 2000);
 	    };
@@ -839,7 +838,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    Select.prototype.chooseItem = function chooseItem(event) {
 	        var input = this.props.name;
 	        var inputObj = ReactDOM.findDOMNode(this.refs.select);
-	        debugger;
 	        inputObj.value = event.target.textContent;
 	        this.setState({
 	            show: !this.state.show
@@ -849,7 +847,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    Select.prototype.hideUl = function hideUl(event) {
-	        debugger;
 	        this.setState({
 	            show: false
 	        });

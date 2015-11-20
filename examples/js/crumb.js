@@ -100,7 +100,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    ),
 	    _react2['default'].createElement(
 	        'item',
-	        null,
+	        { url: 'baidu.html' },
 	        '菜单'
 	    )
 	), document.getElementById('root'));
@@ -546,23 +546,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	    Crumb.prototype.render = function render() {
+	        debugger;
+	        var length = this.props.children.length;
+	        var li = this.props.children.map(function (item, index) {
+	            return _react2['default'].createElement(
+	                'li',
+	                null,
+	                index < length - 1 ? _react2['default'].createElement(
+	                    'a',
+	                    { href: item.props.url },
+	                    item.props.children
+	                ) : item.props.children
+	            );
+	        });
 	        return _react2['default'].createElement(
 	            _GridJs2['default'],
 	            { className: _classnames2['default'](this.getClassNamesForArguments(this.props.classPrefix)) },
 	            _react2['default'].createElement(
 	                'ul',
 	                null,
-	                this.props.children.map(function (item) {
-	                    return _react2['default'].createElement(
-	                        'li',
-	                        null,
-	                        item.props.url ? _react2['default'].createElement(
-	                            'a',
-	                            { href: item.props.url },
-	                            item.props.children
-	                        ) : item.props.children
-	                    );
-	                })
+	                li
 	            ),
 	            _react2['default'].createElement(_RowJs2['default'], { className: 'clearfix' })
 	        );

@@ -18,7 +18,7 @@ var page =location.search ? querystring.parse(location.search.substr(1) ).page*1
 ReactDOM.render(
     <Row>
         <Col sm={12}>
-            <Paging currentPage={page} pageCallback={callback} total={1024} />
+            <Paging currentPage={page} pageCallback={callback} total={5024} />
         </Col>
     </Row>
     ,document.getElementById('root'));

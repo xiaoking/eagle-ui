@@ -147,23 +147,92 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        _react2['default'].createElement(
 	                            _libColJs2['default'],
 	                            { sm: 1 },
-	                            _react2['default'].createElement(_libInputJs2['default'], { label: '', type: 'checkbox', checked: true })
+	                            _react2['default'].createElement(_libInputJs2['default'], { label: '', type: 'checkbox' })
 	                        ),
 	                        _react2['default'].createElement(
 	                            _libColJs2['default'],
-	                            { sm: 9 },
+	                            { sm: 10 },
 	                            _react2['default'].createElement(
 	                                'div',
 	                                { className: 'shop-card' },
 	                                _react2['default'].createElement(
 	                                    'h1',
-	                                    { className: 'shop-card-title' },
+	                                    { className: 'shop-card-title inline-block' },
 	                                    '西贝莜面村（中山公园店）'
 	                                ),
 	                                _react2['default'].createElement(
 	                                    _libLabelJs2['default'],
 	                                    { error: true, radius: true },
-	                                    'aaaa'
+	                                    '运营下线'
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    null,
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'row-key' },
+	                                        '方案ID：'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'row-value' },
+	                                        '21355'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'row-key' },
+	                                        '负责人：'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'row-value' },
+	                                        '张三丰'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'row-key' },
+	                                        '城市：'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'row-value' },
+	                                        '上海'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'row-key' },
+	                                        '售卖时间：'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'row-value' },
+	                                        '2014-2015'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'row-key' },
+	                                        '售卖量：'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'row-value' },
+	                                        '0'
+	                                    )
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    null,
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'row-key' },
+	                                        '客户：'
+	                                    ),
+	                                    _react2['default'].createElement('span', { className: 'row-value' }),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'row-key' },
+	                                        '已分配（王卓轩 2015-02-01 14:22）'
+	                                    )
 	                                ),
 	                                _react2['default'].createElement(
 	                                    'div',
@@ -197,8 +266,137 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        ),
 	                        _react2['default'].createElement(
 	                            _libColJs2['default'],
-	                            { sm: 2 },
-	                            '啊哈'
+	                            { sm: 1 },
+	                            '审批通过'
+	                        )
+	                    ),
+	                    _react2['default'].createElement(
+	                        _libRowJs2['default'],
+	                        null,
+	                        _react2['default'].createElement(
+	                            _libColJs2['default'],
+	                            { sm: 1 },
+	                            _react2['default'].createElement(_libInputJs2['default'], { label: '', type: 'checkbox', checked: true })
+	                        ),
+	                        _react2['default'].createElement(
+	                            _libColJs2['default'],
+	                            { sm: 10 },
+	                            _react2['default'].createElement(
+	                                'div',
+	                                { className: 'shop-card' },
+	                                _react2['default'].createElement(
+	                                    'h1',
+	                                    { className: 'shop-card-title inline-block' },
+	                                    '西贝莜面村（中山公园店）'
+	                                ),
+	                                _react2['default'].createElement(
+	                                    _libLabelJs2['default'],
+	                                    { success: true, radius: true },
+	                                    '售卖中'
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    null,
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'row-key' },
+	                                        '方案ID：'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'row-value' },
+	                                        '21355'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'row-key' },
+	                                        '负责人：'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'row-value' },
+	                                        '张三丰'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'row-key' },
+	                                        '城市：'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'row-value' },
+	                                        '上海'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'row-key' },
+	                                        '售卖时间：'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'row-value' },
+	                                        '2014-2015'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'row-key' },
+	                                        '售卖量：'
+	                                    ),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'row-value' },
+	                                        '0'
+	                                    )
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    null,
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'row-key' },
+	                                        '客户：'
+	                                    ),
+	                                    _react2['default'].createElement('span', { className: 'row-value' }),
+	                                    _react2['default'].createElement(
+	                                        'span',
+	                                        { className: 'row-key' },
+	                                        '已分配（王卓轩 2015-02-01 14:22）'
+	                                    )
+	                                ),
+	                                _react2['default'].createElement(
+	                                    'div',
+	                                    null,
+	                                    _react2['default'].createElement(
+	                                        _libLabelGroupJs2['default'],
+	                                        { simple: true, clickCallback: this.show },
+	                                        _react2['default'].createElement(
+	                                            _libLabelJs2['default'],
+	                                            null,
+	                                            '流程历史'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            _libLabelJs2['default'],
+	                                            null,
+	                                            '编辑'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            _libLabelJs2['default'],
+	                                            null,
+	                                            '删除'
+	                                        ),
+	                                        _react2['default'].createElement(
+	                                            _libLabelJs2['default'],
+	                                            null,
+	                                            '复制'
+	                                        )
+	                                    )
+	                                )
+	                            )
+	                        ),
+	                        _react2['default'].createElement(
+	                            _libColJs2['default'],
+	                            { sm: 1 },
+	                            '审批通过'
 	                        )
 	                    )
 	                )
