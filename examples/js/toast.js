@@ -7,7 +7,7 @@
 		var a = typeof exports === 'object' ? factory(require("react")) : factory(root["React"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_25__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_26__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -62,15 +62,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _lib_includeLess = __webpack_require__(21);
+	var _lib_includeLess = __webpack_require__(22);
 
 	var _lib_includeLess2 = _interopRequireDefault(_lib_includeLess);
 
-	var _react = __webpack_require__(25);
+	var _react = __webpack_require__(26);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _libToastJs = __webpack_require__(60);
+	var _libToastJs = __webpack_require__(61);
 
 	var _libToastJs2 = _interopRequireDefault(_libToastJs);
 
@@ -78,21 +78,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 21:
+/***/ 22:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 25:
+/***/ 26:
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_25__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_26__;
 
 /***/ },
 
-/***/ 27:
+/***/ 28:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -102,13 +102,17 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _constantsJs = __webpack_require__(28);
+	var _constantsJs = __webpack_require__(29);
 
 	var consts = _constantsJs.classConstants;
 
 	exports['default'] = function (obj) {
 	    /**
 	     * 给className添加前缀后返回className
+	     * @method getClassName
+	     * @param name {String} 从该字符串中去查找
+	     * @param pre {Boolean} 是否添加Component中定义的class前缀，默认添加
+	     * @return {String}
 	     * */
 	    obj.prototype.getClassName = function (name) {
 	        var _this2 = this;
@@ -135,6 +139,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	    /**
 	     * 验证props中的样式是否符合规则
+	     * @method getClassNames
+	     * @param props {Object} 从该对象中去查找
+	     * @param pre {Boolean} 是否添加Component中定义的class前缀，默认添加
+	     * @return {String}
 	     * */
 	    obj.prototype.getClassNames = function (props) {
 	        var pre = arguments.length <= 1 || arguments[1] === undefined ? true : arguments[1];
@@ -149,6 +157,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	    /**
 	     * 给多个className添加前缀后返回
+	     * @method getClassNamesForArguments
+	     * @param arguments {Arguments String} 多个class参数
+	     * @return {String}
 	     * */
 	    obj.prototype.getClassNamesForArguments = function () {
 	        var arg = arguments;
@@ -186,13 +197,32 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return str;
 	    };
 
+	    /**
+	     * 检查元素是否存在样式名
+	     * @method hasClass
+	     * @param obj {Object} 元素
+	     * @param cls {String} 需要检查的样式名
+	     * @return {Boolean}
+	     * */
 	    obj.prototype.hasClass = function (obj, cls) {
 	        return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
 	    };
 
+	    /**
+	     * 给元素增加一个样式名
+	     * @method addClass
+	     * @param obj {Object} 元素
+	     * @param cls {String} 样式名
+	     * */
 	    obj.prototype.addClass = function (obj, cls) {
 	        if (!this.hasClass(obj, cls)) obj.className += " " + cls;
 	    };
+	    /**
+	     * 给元素删除一个样式名
+	     * @method removeClass
+	     * @param obj {Object} 元素
+	     * @param cls {String} 样式名
+	     * */
 	    obj.prototype.removeClass = function (obj, cls) {
 	        if (this.hasClass(obj, cls)) {
 	            var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
@@ -205,7 +235,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 28:
+/***/ 29:
 /***/ function(module, exports) {
 
 	/**
@@ -267,7 +297,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 29:
+/***/ 30:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -322,7 +352,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 30:
+/***/ 31:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -342,15 +372,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(25);
+	var _react = __webpack_require__(26);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(27);
+	var _utilsClassNameMixin = __webpack_require__(28);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -359,6 +389,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @class Button
 	 * @module form
 	 * @extends Component
+	 * @constructor
 	 * @since 0.1.0
 	 * @demo src/button.js {js}
 	 * @demo button.html {html}
@@ -366,71 +397,131 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * */
 
 	var Button = (function (_Component) {
-	    _inherits(Button, _Component);
+	  _inherits(Button, _Component);
 
-	    _createClass(Button, null, [{
-	        key: 'propTypes',
+	  _createClass(Button, null, [{
+	    key: 'propTypes',
 
-	        //static mixins = [ClassNameMixin];
-	        value: {
-	            egSize: _react.PropTypes.string,
-	            disabled: _react.PropTypes.bool,
-	            enable: _react.PropTypes.bool,
-	            //success:PropTypes.bool,
-	            active: _react.PropTypes.bool,
-	            radius: _react.PropTypes.bool,
-	            round: _react.PropTypes.bool,
-	            //error:PropTypes.bool,
-	            //warning:PropTypes.bool,
-	            //danger:PropTypes.bool,
-	            egStyle: _react.PropTypes.string,
-	            classPrefix: _react.PropTypes.string,
-	            componentTag: _react.PropTypes.string,
-	            block: _react.PropTypes.bool,
-	            egHref: _react.PropTypes.string
-	        },
-	        enumerable: true
-	    }, {
-	        key: 'defaultProps',
-	        value: {
-	            egSize: 'default',
-	            classPrefix: 'btn',
-	            componentTag: 'a'
-	        },
+	    //static mixins = [ClassNameMixin];
+	    value: {
+	      /**
+	       * 按钮尺寸,分别为xs、sm、lg
+	       * @property egSize
+	       * @type String
+	       * @default sm
+	       * */
+	      egSize: _react.PropTypes.string,
+	      /**
+	       * 禁用
+	       * @property disabled
+	       * @type Boolean
+	       * @default false
+	       * */
+	      disabled: _react.PropTypes.bool,
+	      /**
+	       * 启用
+	       * @property enable
+	       * @type Boolean
+	       * @default true
+	       * */
+	      enable: _react.PropTypes.bool,
+	      //success:PropTypes.bool,
+	      /**
+	       * 选中
+	       * @property active
+	       * @type Boolean
+	       * @default false
+	       * */
+	      active: _react.PropTypes.bool,
+	      /**
+	       * 圆角
+	       * @property radius
+	       * @type Boolean
+	       * @default false
+	       * */
+	      radius: _react.PropTypes.bool,
+	      /**
+	       * 椭圆角
+	       * @property round
+	       * @type Boolean
+	       * @default false
+	       * */
+	      round: _react.PropTypes.bool,
+	      //error:PropTypes.bool,
+	      //warning:PropTypes.bool,
+	      //danger:PropTypes.bool,
+	      /**
+	       * 颜色[error、warning、danger、link、gray、white、success、'']
+	       * @property egStyle
+	       * @type Boolean
+	       * @default ''
+	       * */
+	      egStyle: _react.PropTypes.string,
+	      /**
+	       * 样式前缀
+	       * @property classPrefix
+	       * @type String
+	       * @default btn
+	       * */
+	      classPrefix: _react.PropTypes.string,
+	      /**
+	       * 标签tagName
+	       * @property componentTag
+	       * @type String
+	       * @default a
+	       * */
+	      componentTag: _react.PropTypes.string,
+	      /**
+	       * 块级显示
+	       * @property block
+	       * @type Boolean
+	       * @default false
+	       * */
+	      block: _react.PropTypes.bool,
+	      egHref: _react.PropTypes.string
+	    },
+	    enumerable: true
+	  }, {
+	    key: 'defaultProps',
+	    value: {
+	      egSize: 'default',
+	      classPrefix: 'btn',
+	      componentTag: 'a'
+	    },
 
-	        //lg
-	        //sm
-	        //xs this.getClassName('demo'); eg-demo
-	        enumerable: true
-	    }]);
+	    //lg
+	    //sm
+	    //xs this.getClassName('demo'); eg-demo
+	    enumerable: true
+	  }]);
 
-	    function Button(props, context) {
-	        _classCallCheck(this, _Button);
+	  function Button(props, context) {
+	    _classCallCheck(this, _Button);
 
-	        _Component.call(this, props, context);
-	        //this.classNameMixin = new ClassNameMixin(this.props);
-	    }
+	    _Component.call(this, props, context);
+	    //this.classNameMixin = new ClassNameMixin(this.props);
+	  }
 
-	    Button.prototype.render = function render() {
-	        //const {} = this.props;
-	        //什么颜色，大小  类型
-	        var _props = this.props;
-	        var egSize = _props.egSize;
-	        var Component = _props.componentTag;
-	        var egStyle = _props.egStyle;
+	  Button.prototype.render = function render() {
+	    //const {} = this.props;
+	    //什么颜色，大小  类型
+	    var _props = this.props;
+	    var egSize = _props.egSize;
+	    var Component = _props.componentTag;
+	    var egStyle = _props.egStyle;
 
-	        //let  size= this.classNameMixin.getClassName(egSize);
+	    //let  size= this.classNameMixin.getClassName(egSize);
 
-	        return _react2['default'].createElement(
-	            Component,
-	            _extends({}, this.props, { className: _classnames2['default'](this.getClassNamesForArguments('btn', egSize, egStyle), this.getClassNames(this.props)) }),
-	            this.props.children
-	        );
-	    };
+	    return _react2['default'].createElement(
+	      Component,
+	      _extends({}, this.props, { className: _classnames2['default'](this.getClassNamesForArguments('btn', egSize, egStyle), this.getClassNames(this.props)) }),
+	      this.props.children
+	    );
+	  };
 
-	    var _Button = Button;
-	    Button = _utilsClassNameMixin2['default'](Button) || Button;
-	    return Button;
+	  var _Button = Button;
+	  Button = _utilsClassNameMixin2['default'](Button) || Button;
+	  return Button;
 	})(_react.Component);
 
 	exports['default'] = Button;
@@ -438,7 +529,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 31:
+/***/ 32:
 /***/ function(module, exports, __webpack_require__) {
 
 	//import RowLess from './row.less';
@@ -456,13 +547,22 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(25);
+	var _react = __webpack_require__(26);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
+
+	/**
+	 * 行
+	 * @class Row
+	 * @module grid
+	 * @extends Component
+	 * @constructor
+	 * @since 0.1.0
+	 * */
 
 	var Row = (function (_Component) {
 	    _inherits(Row, _Component);
@@ -496,12 +596,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 32:
+/***/ 33:
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * Created by mac on 15/9/7.
-	 */
 	'use strict';
 
 	exports.__esModule = true;
@@ -516,13 +613,22 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(25);
+	var _react = __webpack_require__(26);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
+
+	/**
+	 * 列
+	 * @class Col
+	 * @module grid
+	 * @extends Component
+	 * @constructor
+	 * @since 0.1.0
+	 * */
 
 	var Col = (function (_Component) {
 	    _inherits(Col, _Component);
@@ -534,7 +640,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    Col.prototype.getWidthClass = function getWidthClass() {
-	        var className = ['eg-sm-' + this.props.sm];
+	        var className = ['eg-sm-' + (this.props.sm ? this.props.sm : '12')];
 
 	        if (this.props.end) {
 	            className.push('eg-end');
@@ -555,7 +661,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(Col, null, [{
 	        key: 'propTypes',
 	        value: {
+	            /**
+	             * 占几列，共12列
+	             * @property egSize
+	             * @type Integer
+	             * */
 	            sm: _react.PropTypes.number.isRequired,
+	            /**
+	             * 是否是最后一列
+	             * @property end
+	             * @type Boolean
+	             * @default false
+	             * */
 	            end: _react.PropTypes.bool
 	        },
 	        enumerable: true
@@ -569,15 +686,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 33:
+/***/ 34:
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * Created by mac on 15/9/7.
-	 */
 	'use strict';
 
 	exports.__esModule = true;
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
@@ -587,15 +703,32 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(25);
+	var _react = __webpack_require__(26);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _classnames = __webpack_require__(30);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var _utilsClassNameMixin = __webpack_require__(28);
+
+	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+
+	/**
+	 * 布局组件
+	 * @class Grid
+	 * @module grid
+	 * @extends Component
+	 * @constructor
+	 * @since 0.1.0
+	 * */
 
 	var Grid = (function (_Component) {
 	    _inherits(Grid, _Component);
 
 	    function Grid() {
-	        _classCallCheck(this, Grid);
+	        _classCallCheck(this, _Grid);
 
 	        _Component.apply(this, arguments);
 	    }
@@ -604,7 +737,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        return _react2['default'].createElement(
 	            'div',
-	            this.props,
+	            _extends({}, this.props, {
+	                className: _classnames2['default'](this.getClassName('grid'), this.props.className) }),
 	            this.props.children
 	        );
 	    };
@@ -615,6 +749,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        enumerable: true
 	    }]);
 
+	    var _Grid = Grid;
+	    Grid = _utilsClassNameMixin2['default'](Grid) || Grid;
 	    return Grid;
 	})(_react.Component);
 
@@ -623,7 +759,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 60:
+/***/ 61:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -641,31 +777,31 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(25);
+	var _react = __webpack_require__(26);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(27);
+	var _utilsClassNameMixin = __webpack_require__(28);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames2 = __webpack_require__(29);
+	var _classnames2 = __webpack_require__(30);
 
 	var _classnames3 = _interopRequireDefault(_classnames2);
 
-	var _ButtonJs = __webpack_require__(30);
+	var _ButtonJs = __webpack_require__(31);
 
 	var _ButtonJs2 = _interopRequireDefault(_ButtonJs);
 
-	var _RowJs = __webpack_require__(31);
+	var _RowJs = __webpack_require__(32);
 
 	var _RowJs2 = _interopRequireDefault(_RowJs);
 
-	var _ColJs = __webpack_require__(32);
+	var _ColJs = __webpack_require__(33);
 
 	var _ColJs2 = _interopRequireDefault(_ColJs);
 
-	var _GridJs = __webpack_require__(33);
+	var _GridJs = __webpack_require__(34);
 
 	var _GridJs2 = _interopRequireDefault(_GridJs);
 

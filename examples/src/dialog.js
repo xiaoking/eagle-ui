@@ -13,7 +13,11 @@ let Demo= class Demo extends Component{
 
     render(){
         return (
-            <Dialog type='confirm' show />
+            <Dialog type='dialog' show>
+            ahflaskdjflajsflajsdlf;jkasdfk
+                adfkjasd;fkjas;dlf
+                asdfkn;askdfnas
+            </Dialog>
         );
     }
 }

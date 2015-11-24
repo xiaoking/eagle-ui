@@ -6,6 +6,8 @@ import React from 'react';
 import Search from '../../lib/Search.js';
 
 ReactDOM.render(
-    <Search callBack={function(val){alert(val)}}>
-    </Search>
+    <div>
+        <Search callBack={function(val){alert(val)}}>
+        </Search>
+    </div>
     ,document.getElementById('root'));

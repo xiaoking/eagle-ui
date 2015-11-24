@@ -7,7 +7,7 @@
 		var a = typeof exports === 'object' ? factory(require("react")) : factory(root["React"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_25__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_26__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -66,19 +66,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _lib_includeLess = __webpack_require__(21);
+	var _lib_includeLess = __webpack_require__(22);
 
 	var _lib_includeLess2 = _interopRequireDefault(_lib_includeLess);
 
-	var _react = __webpack_require__(25);
+	var _react = __webpack_require__(26);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _libTabJs = __webpack_require__(53);
+	var _libTabJs = __webpack_require__(55);
 
 	var _libTabJs2 = _interopRequireDefault(_libTabJs);
 
-	var _libTabsetJs = __webpack_require__(54);
+	var _libTabsetJs = __webpack_require__(56);
 
 	var _libTabsetJs2 = _interopRequireDefault(_libTabsetJs);
 
@@ -162,21 +162,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 21:
+/***/ 22:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 25:
+/***/ 26:
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_25__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_26__;
 
 /***/ },
 
-/***/ 27:
+/***/ 28:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -186,13 +186,17 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _constantsJs = __webpack_require__(28);
+	var _constantsJs = __webpack_require__(29);
 
 	var consts = _constantsJs.classConstants;
 
 	exports['default'] = function (obj) {
 	    /**
 	     * 给className添加前缀后返回className
+	     * @method getClassName
+	     * @param name {String} 从该字符串中去查找
+	     * @param pre {Boolean} 是否添加Component中定义的class前缀，默认添加
+	     * @return {String}
 	     * */
 	    obj.prototype.getClassName = function (name) {
 	        var _this2 = this;
@@ -219,6 +223,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	    /**
 	     * 验证props中的样式是否符合规则
+	     * @method getClassNames
+	     * @param props {Object} 从该对象中去查找
+	     * @param pre {Boolean} 是否添加Component中定义的class前缀，默认添加
+	     * @return {String}
 	     * */
 	    obj.prototype.getClassNames = function (props) {
 	        var pre = arguments.length <= 1 || arguments[1] === undefined ? true : arguments[1];
@@ -233,6 +241,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	    /**
 	     * 给多个className添加前缀后返回
+	     * @method getClassNamesForArguments
+	     * @param arguments {Arguments String} 多个class参数
+	     * @return {String}
 	     * */
 	    obj.prototype.getClassNamesForArguments = function () {
 	        var arg = arguments;
@@ -270,13 +281,32 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return str;
 	    };
 
+	    /**
+	     * 检查元素是否存在样式名
+	     * @method hasClass
+	     * @param obj {Object} 元素
+	     * @param cls {String} 需要检查的样式名
+	     * @return {Boolean}
+	     * */
 	    obj.prototype.hasClass = function (obj, cls) {
 	        return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
 	    };
 
+	    /**
+	     * 给元素增加一个样式名
+	     * @method addClass
+	     * @param obj {Object} 元素
+	     * @param cls {String} 样式名
+	     * */
 	    obj.prototype.addClass = function (obj, cls) {
 	        if (!this.hasClass(obj, cls)) obj.className += " " + cls;
 	    };
+	    /**
+	     * 给元素删除一个样式名
+	     * @method removeClass
+	     * @param obj {Object} 元素
+	     * @param cls {String} 样式名
+	     * */
 	    obj.prototype.removeClass = function (obj, cls) {
 	        if (this.hasClass(obj, cls)) {
 	            var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
@@ -289,7 +319,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 28:
+/***/ 29:
 /***/ function(module, exports) {
 
 	/**
@@ -351,7 +381,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 29:
+/***/ 30:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -406,7 +436,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 53:
+/***/ 55:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -426,15 +456,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(25);
+	var _react = __webpack_require__(26);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(27);
+	var _utilsClassNameMixin = __webpack_require__(28);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -485,7 +515,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 54:
+/***/ 56:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -507,19 +537,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(25);
+	var _react = __webpack_require__(26);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(27);
+	var _utilsClassNameMixin = __webpack_require__(28);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _TabJs = __webpack_require__(53);
+	var _TabJs = __webpack_require__(55);
 
 	var _TabJs2 = _interopRequireDefault(_TabJs);
 

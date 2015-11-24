@@ -7,7 +7,7 @@
 		var a = typeof exports === 'object' ? factory(require("react")) : factory(root["React"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_27__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_28__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -54,7 +54,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(21);
+	module.exports = __webpack_require__(22);
 
 
 /***/ },
@@ -78,7 +78,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 18 */,
 /* 19 */,
 /* 20 */,
-/* 21 */
+/* 21 */,
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -118,131 +119,209 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _lib_includeLess = __webpack_require__(22);
+	var _lib_includeLess = __webpack_require__(23);
 
 	var _lib_includeLess2 = _interopRequireDefault(_lib_includeLess);
 
 	//import Mask from './lib/mask/mask';
 
-	var _libGrid = __webpack_require__(26);
+	var _libGrid = __webpack_require__(27);
 
 	var _libGrid2 = _interopRequireDefault(_libGrid);
 
 	exports.Grid = _libGrid2['default'];
 
-	var _libCol = __webpack_require__(28);
+	var _libCol = __webpack_require__(32);
 
 	var _libCol2 = _interopRequireDefault(_libCol);
 
 	exports.Col = _libCol2['default'];
 
-	var _libRow = __webpack_require__(30);
+	var _libRow = __webpack_require__(33);
 
 	var _libRow2 = _interopRequireDefault(_libRow);
 
 	exports.Row = _libRow2['default'];
 
-	var _libButton = __webpack_require__(31);
+	var _libButton = __webpack_require__(34);
 
 	var _libButton2 = _interopRequireDefault(_libButton);
 
 	exports.Button = _libButton2['default'];
 
-	var _libButtonGroup = __webpack_require__(34);
+	var _libButtonGroup = __webpack_require__(35);
 
 	var _libButtonGroup2 = _interopRequireDefault(_libButtonGroup);
 
 	exports.ButtonGroup = _libButtonGroup2['default'];
 
-	var _libInputJs = __webpack_require__(35);
+	var _libInputJs = __webpack_require__(36);
 
 	var _libInputJs2 = _interopRequireDefault(_libInputJs);
 
 	exports.Input = _libInputJs2['default'];
 
-	var _libRadioGroupJs = __webpack_require__(36);
+	var _libRadioGroupJs = __webpack_require__(37);
 
 	var _libRadioGroupJs2 = _interopRequireDefault(_libRadioGroupJs);
 
 	exports.RadioGroup = _libRadioGroupJs2['default'];
 
-	var _libLabelJs = __webpack_require__(37);
+	var _libLabelJs = __webpack_require__(38);
 
 	var _libLabelJs2 = _interopRequireDefault(_libLabelJs);
 
 	exports.Label = _libLabelJs2['default'];
 
-	var _libCrumbJs = __webpack_require__(38);
+	var _libCrumbJs = __webpack_require__(39);
 
 	var _libCrumbJs2 = _interopRequireDefault(_libCrumbJs);
 
 	exports.Crumb = _libCrumbJs2['default'];
 
-	var _libSearchJs = __webpack_require__(39);
+	var _libSearchJs = __webpack_require__(40);
 
 	var _libSearchJs2 = _interopRequireDefault(_libSearchJs);
 
 	exports.Search = _libSearchJs2['default'];
 
-	var _libLabelGroupJs = __webpack_require__(40);
+	var _libSelectJs = __webpack_require__(41);
+
+	var _libSelectJs2 = _interopRequireDefault(_libSelectJs);
+
+	exports.Select = _libSelectJs2['default'];
+
+	var _libLabelGroupJs = __webpack_require__(42);
 
 	var _libLabelGroupJs2 = _interopRequireDefault(_libLabelGroupJs);
 
 	exports.LabelGroup = _libLabelGroupJs2['default'];
 
-	var _libToastJs = __webpack_require__(41);
+	var _libToastJs = __webpack_require__(43);
 
 	var _libToastJs2 = _interopRequireDefault(_libToastJs);
 
 	exports.Toast = _libToastJs2['default'];
 
-	var _libPagingJs = __webpack_require__(42);
+	var _libPagingJs = __webpack_require__(44);
 
 	var _libPagingJs2 = _interopRequireDefault(_libPagingJs);
 
 	exports.Paging = _libPagingJs2['default'];
 
-	var _libCalendar = __webpack_require__(43);
+	var _libCalendar = __webpack_require__(45);
 
 	var _libCalendar2 = _interopRequireDefault(_libCalendar);
 
 	exports.Calendar = _libCalendar2['default'];
 
-	var _libTabJs = __webpack_require__(44);
+	var _libTabJs = __webpack_require__(46);
 
 	var _libTabJs2 = _interopRequireDefault(_libTabJs);
 
 	exports.Tab = _libTabJs2['default'];
 
-	var _libDialogJs = __webpack_require__(45);
+	var _libTabsetJs = __webpack_require__(47);
+
+	var _libTabsetJs2 = _interopRequireDefault(_libTabsetJs);
+
+	exports.Tabset = _libTabsetJs2['default'];
+
+	var _libDialogJs = __webpack_require__(48);
 
 	var _libDialogJs2 = _interopRequireDefault(_libDialogJs);
 
 	exports.Dialog = _libDialogJs2['default'];
 
-	var _libTooltipJs = __webpack_require__(46);
+	var _libTooltipJs = __webpack_require__(49);
 
 	var _libTooltipJs2 = _interopRequireDefault(_libTooltipJs);
 
 	exports.Tooltip = _libTooltipJs2['default'];
 
+	var _libPanelPanelJs = __webpack_require__(50);
+
+	var _libPanelPanelJs2 = _interopRequireDefault(_libPanelPanelJs);
+
+	exports.Panel = _libPanelPanelJs2['default'];
+
+	var _libPanelPanelContentJs = __webpack_require__(51);
+
+	var _libPanelPanelContentJs2 = _interopRequireDefault(_libPanelPanelContentJs);
+
+	exports.PanelContent = _libPanelPanelContentJs2['default'];
+
+	var _libPanelPanelFooterJs = __webpack_require__(52);
+
+	var _libPanelPanelFooterJs2 = _interopRequireDefault(_libPanelPanelFooterJs);
+
+	exports.PanelFooter = _libPanelPanelFooterJs2['default'];
+
+	var _libPanelPanelHeaderJs = __webpack_require__(53);
+
+	var _libPanelPanelHeaderJs2 = _interopRequireDefault(_libPanelPanelHeaderJs);
+
+	exports.PanelHeader = _libPanelPanelHeaderJs2['default'];
+
+	var _libListJs = __webpack_require__(54);
+
+	var _libListJs2 = _interopRequireDefault(_libListJs);
+
+	exports.List = _libListJs2['default'];
+
+	var _libItemJs = __webpack_require__(55);
+
+	var _libItemJs2 = _interopRequireDefault(_libItemJs);
+
+	exports.Item = _libItemJs2['default'];
+
+	var _libValidatorPanel = __webpack_require__(56);
+
+	var _libValidatorPanel2 = _interopRequireDefault(_libValidatorPanel);
+
+	exports.ValidatorPanel = _libValidatorPanel2['default'];
+
+	var _libTableTableJs = __webpack_require__(57);
+
+	var _libTableTableJs2 = _interopRequireDefault(_libTableTableJs);
+
+	exports.Table = _libTableTableJs2['default'];
+
+	var _libTableTrJs = __webpack_require__(58);
+
+	var _libTableTrJs2 = _interopRequireDefault(_libTableTrJs);
+
+	exports.Tr = _libTableTrJs2['default'];
+
+	var _libTableTdJs = __webpack_require__(59);
+
+	var _libTableTdJs2 = _interopRequireDefault(_libTableTdJs);
+
+	exports.Td = _libTableTdJs2['default'];
+
+	var _libTableThJs = __webpack_require__(60);
+
+	var _libTableThJs2 = _interopRequireDefault(_libTableThJs);
+
+	exports.Th = _libTableThJs2['default'];
+
 	window['Eagleui'] = {};
 
-	['Grid', 'Col', 'Row', 'Button', 'ButtonGroup', 'Input', 'RadioGroup', 'Label', 'Crumb', 'Search', 'LabelGroup', 'Toast', 'Paging', 'Calendar', 'Tab', 'Dialog', 'Tooltip'].forEach(function (clazzName) {
+	['Grid', 'Col', 'Row', 'Button', 'ButtonGroup', 'Input', 'RadioGroup', 'Label', 'ValidatorPanel', 'Crumb', 'Search', 'Select', 'LabelGroup', 'Toast', 'Paging', 'Calendar', 'Tab', 'Tabset', 'Dialog', 'Tooltip', 'Panel', 'PanelContent', 'PanelFooter', 'PanelHeader', 'List', 'Item', 'Table', 'Tr', 'Td', 'Th'].forEach(function (clazzName) {
 	    Eagleui[clazzName] = exports[clazzName];
 	});
 
 /***/ },
-/* 22 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(23);
+	var content = __webpack_require__(24);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(25)(content, {});
+	var update = __webpack_require__(26)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -259,21 +338,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 23 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(24)();
+	exports = module.exports = __webpack_require__(25)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".red {\n  color: #ff717d;\n}\n* {\n  padding: 0px;\n  margin: 0px;\n  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);\n  -webkit-backface-visibility: hidden;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nnav,\nsection,\nsummary {\n  display: block;\n}\nhtml {\n  /*width: 100%;\n    min-height: 100%;*/\n}\nbody {\n  font: normal 14px \"Microsoft YaHei\", \"helvetica regular\", \"Helvetica Neue\", Arial, Helvetica, STHeiTi, sans-serif;\n  color: #333333;\n  -webkit-text-size-adjust: none;\n  text-size-adjust: none;\n  background-color: #f1f1f1;\n}\nul,\nol {\n  list-style: none;\n}\na {\n  text-decoration: none;\n  outline: none;\n  color: #333333;\n}\na:hover {\n  text-decoration: underline;\n}\naddress {\n  font-style: normal;\n}\n/**重置h1-h6的字体大小*/\nh1 {\n  font-size: 22px;\n}\nh2 {\n  font-size: 20px;\n}\nh3 {\n  font-size: 18px;\n}\nh4 {\n  font-size: 16px;\n}\nh5 {\n  font-size: 14px;\n}\nh6 {\n  font-size: 12px;\n}\n/**清除浮动*/\n.clearfix:before,\n.clearfix:after {\n  display: table;\n  line-height: 0;\n  content: \"\";\n}\n.clearfix:after {\n  clear: both;\n}\n/**控制块级、内敛*/\n.inline-block {\n  display: inline-block !important;\n}\n.inline {\n  display: inline !important;\n}\n.block {\n  display: block !important;\n}\n/**搜索图标*/\n.eg-search-icon:before,\n.eg-search-icon:after {\n  content: '';\n  position: absolute;\n  display: inline-block;\n  z-index: 10;\n}\n.eg-search-icon:before {\n  border: 2px solid #b2b2b2;\n  height: 10px;\n  width: 10px;\n  border-radius: 7px;\n  top: 11px;\n  left: 5px;\n}\n.eg-search-icon:after {\n  height: 7px;\n  width: 2px;\n  transform: rotate(-45deg);\n  top: 21px;\n  left: 18px;\n  background: #b2b2b2;\n}\n/**圆角*/\n.eg-radius {\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-active {\n  color: #ee5511;\n}\n.eg-selected {\n  color: #ffffff;\n  background: #ee5511;\n}\n/**淡入淡出动画*/\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0;\n    /*初始状态 透明度为0*/\n  }\n  50% {\n    opacity: 0.5;\n    /*中间状态 透明度为0.5*/\n  }\n  100% {\n    opacity: 1;\n    /*结尾状态 透明度为1*/\n  }\n}\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 1;\n    /*初始状态 透明度为1*/\n  }\n  50% {\n    opacity: 0.5;\n    /*中间状态 透明度为0.5*/\n  }\n  100% {\n    opacity: 0;\n    /*结尾状态 透明度为0*/\n  }\n}\n/**显示*/\n.eg-hide {\n  display: none;\n}\n.eg-show {\n  display: block;\n}\n.eg-fadein {\n  -webkit-animation: fadeIn .4s 1 0s;\n}\n.eg-fadeout {\n  -webkit-animation: fadeOut .4s 2 3s ;\n}\n/**成功图标*/\n.eg-tips-success {\n  background: #4fd564;\n  width: 30px;\n  height: 30px;\n  border-radius: 30px;\n  display: inline-block;\n  position: relative;\n}\n/**出错提示*/\n.eg-tips-error {\n  background: #dd514c;\n  width: 30px;\n  height: 30px;\n  border-radius: 30px;\n  display: inline-block;\n  position: relative;\n}\n/**加载中*/\n.eg-tips-loading {\n  background: #bbbbbb;\n  width: 30px;\n  height: 30px;\n  border-radius: 30px;\n  display: inline-block;\n  position: relative;\n}\n.eg-tips-success:before,\n.eg-icon-tick:before,\n.eg-icon-tick:after,\n.eg-tips-success:after,\n.eg-tips-error:after,\n.eg-tips-error:before,\n.eg-tips-loading:before,\n.eg-tips-loading:after {\n  display: inline-block;\n  position: absolute;\n  content: \"\";\n}\n.eg-tips-success:before,\n.eg-icon-tick:before {\n  height: 8px;\n  width: 2px;\n  background: #fff;\n  left: 10px;\n  top: 13px;\n  transform: rotate(135deg);\n}\n.eg-tips-success:after,\n.eg-icon-tick:after {\n  height: 14px;\n  width: 2px;\n  background: #fff;\n  left: 17px;\n  top: 8px;\n  transform: rotate(45deg);\n}\n.eg-tips-error:after {\n  height: 10px;\n  width: 2px;\n  background: #fff;\n  left: 14px;\n  top: 6px;\n}\n.eg-tips-error:before {\n  height: 2px;\n  width: 2px;\n  background: #fff;\n  left: 14px;\n  top: 19px;\n}\n.eg-tips-loading:before {\n  width: 15px;\n  height: 15px;\n  background: transparent;\n  border: 2px solid #fff;\n  top: 5.5px;\n  left: 5.5px;\n  border-radius: 12px;\n  clip: rect(auto, 16px, auto, auto);\n  animation: 0.5s linear 0s normal none infinite rotate;\n}\n@-webkit-keyframes rotate {\n  from {\n    -webkit-transform: rotate(0deg);\n  }\n  to {\n    -webkit-transform: rotate(360deg);\n  }\n}\n/*icon*/\n.eg-arrow-up::before,\n.eg-arrow-down::before {\n  content: '';\n  display: inline-block;\n  width: 6px;\n  height: 9px;\n  position: absolute;\n  top: 50%;\n  margin-left: 9px;\n}\n.eg-arrow-up::after,\n.eg-arrow-down::after {\n  content: '';\n  display: inline-block;\n  border-width: 7px;\n  border-style: solid;\n  margin-left: 5px;\n  position: relative;\n}\n/*向上箭头*/\n.eg-arrow-up::before {\n  background: #38bd7c;\n  margin-top: -1px;\n  border-radius: 0px 0px 1px 1px;\n}\n.eg-arrow-up::after {\n  border-color: transparent transparent #38bd7c transparent;\n  top: -6px;\n}\n/*向下箭头*/\n.eg-arrow-down::before {\n  background: #fa3739;\n  margin-top: -8px;\n  border-radius: 1px 1px 0px 0px;\n}\n.eg-arrow-down::after {\n  border-color: #fa3739 transparent transparent transparent;\n  top: 10px;\n}\n/**图标*/\n.eg-icon-calendar {\n  background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJViUEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4MUU4N0VFRjdCODYxMUU1QUY5NkM3NDVDRjI5NkNEQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4MUU4N0VGMDdCODYxMUU1QUY5NkM3NDVDRjI5NkNEQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjgxRTg3RUVEN0I4NjExRTVBRjk2Qzc0NUNGMjk2Q0RDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjgxRTg3RUVFN0I4NjExRTVBRjk2Qzc0NUNGMjk2Q0RDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Q96nFgAAAIpJREFUeNpi/P//PwMIzJo1C0RBOAwMjCAiLS0NJo4iBxIHM2bOnMmABFA0owEMOSYgFgXi80iSMIXoGFkOpF4UpHkXEBswkAZA6ncxkaERbgATAwWABcaAhSAxABYDFNlMHWcTciI27w2cs2nrZ3xRCNJ8AZRa0AOGCHAJ5Gw3EINEjWeB2AUgwADA4SbftT6JBAAAAABJRU5ErkJggg==\") no-repeat right center;\n}\n/**左箭头*/\n.eg-icon-prev,\n.eg-icon-next {\n  width: 100%;\n  height: 100%;\n  text-align: center;\n  cursor: pointer;\n}\n.eg-icon-prev:after,\n.eg-icon-next:after {\n  content: '';\n  display: inline-block;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  width: 12px;\n  height: 12px;\n  border-top: 2px solid #999;\n  border-left: 2px solid #999;\n  -webkit-transform: rotate(-45deg);\n  -moz-transform: rotate(-45deg);\n  -ms-transform: rotate(-45deg);\n  -o-transform: rotate(-45deg);\n  transform: rotate(-45deg);\n}\n.eg-icon-next:after {\n  border-left: none;\n  border-right: 2px solid #999;\n  -webkit-transform: rotate(45deg);\n  -moz-transform: rotate(45deg);\n  -ms-transform: rotate(45deg);\n  -o-transform: rotate(45deg);\n  transform: rotate(45deg);\n}\n/**字体大小*/\n.small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-12 {\n  font-size: 12px;\n}\n.ft-12 small,\n.ft-12 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-14 {\n  font-size: 14px;\n}\n.ft-14 small,\n.ft-14 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-16 {\n  font-size: 16px;\n}\n.ft-16 small,\n.ft-16 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-18 {\n  font-size: 18px;\n}\n.ft-18 small,\n.ft-18 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-20 {\n  font-size: 20px;\n}\n.ft-20 small,\n.ft-20 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-22 {\n  font-size: 22px;\n}\n.ft-22 small,\n.ft-22 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n/**按钮组*/\n.eg-btn-group {\n  position: relative;\n  display: inline-block;\n  vertical-align: middle;\n}\n.eg-btn-group .eg-btn {\n  position: relative;\n  float: left;\n  margin-left: -1px;\n}\n.eg-btn-group .eg-btn:not(:first-child):not(:last-child) {\n  border-radius: 0;\n}\n.eg-btn-group .eg-btn:first-child:not(:last-child) {\n  border-bottom-right-radius: 0;\n  border-top-right-radius: 0;\n}\n.eg-btn-group .eg-btn:last-child:not(:first-child) {\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n}\n.eg-btn-group-tacked .eg-btn {\n  float: none;\n  display: block;\n  margin-left: 0;\n  margin-top: -1px;\n}\n.eg-btn-group-tacked .eg-btn:first-child:not(:last-child) {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.eg-btn-group-tacked .eg-btn:last-child:not(:first-child) {\n  border-bottom-left-radius: 0;\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n}\n.eg-btn-group-justify {\n  width: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n}\n.eg-btn-group-justify .eg-btn {\n  float: none;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n}\n/**按钮*/\n.eg-btn {\n  display: inline-block;\n  text-align: center;\n  padding: 10px 15px;\n  color: #ffffff;\n  background: #ee5511;\n  border: 1px solid transparent;\n  cursor: pointer;\n  outline: 0;\n  text-decoration: none;\n}\n.eg-btn:hover {\n  background: #d94000;\n  text-decoration: none;\n}\n.eg-btn.eg-btn-disabled {\n  color: #f8c1a8;\n  background-color: #f49462;\n}\n.eg-btn-block {\n  display: block;\n  width: 100%;\n}\n.eg-btn-block + .eg-btn-block {\n  margin-top: 5px;\n}\n.eg-btn-radius {\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-btn-round {\n  -webkit-border-radius: 1000px;\n  -moz-border-radius: 1000px;\n  border-radius: 1000px;\n}\n.eg-btn-xs {\n  font-size: 12px;\n}\n.eg-btn-sm {\n  font-size: 14px;\n}\n.eg-btn-default {\n  font-size: 16px;\n}\n.eg-btn-lg {\n  font-size: 18px;\n}\n.eg-btn-xl {\n  font-size: 20px;\n}\n.eg-btn-error {\n  background-color: #d94000;\n}\n.eg-btn-success {\n  background-color: #2f93d2;\n}\n.eg-btn-success:hover {\n  background: #0c80ba;\n}\n.eg-btn-success.eg-btn-disabled {\n  color: #a2cae3;\n  background: #4ca0d5;\n}\n.eg-btn-warning {\n  background-color: #e0690c;\n}\n.eg-btn-danger {\n  background-color: #e0690c;\n}\n.eg-btn-link {\n  border: none;\n  color: #646464;\n  background-color: transparent;\n}\n.eg-btn-link:hover {\n  color: #646464;\n  background: transparent;\n  text-decoration: underline;\n}\n.eg-btn-link .eg-btn-disabled {\n  color: #cccccc;\n}\n.eg-btn-disabled {\n  color: #cccccc;\n  background-color: #f3f3f3;\n}\n.eg-btn-gray {\n  background-color: #d4d4d4;\n  color: #333333;\n}\n.eg-btn-gray:hover {\n  background: #cccccc;\n}\n.eg-btn-gray.eg-btn-disabled {\n  color: #999;\n  background-color: #e1e1e1;\n}\n.eg-btn-white {\n  background: #ffffff;\n  border-color: #dbdad9;\n  color: #000000;\n}\n.eg-btn-white:hover {\n  background: #f8f8f8;\n}\n.eg-btn-white.eg-btn-disabled {\n  color: #f2f2f2;\n  background-color: #cccccc;\n}\n.eg-btn-disabled {\n  cursor: auto;\n}\n.eg-input-text {\n  border: 1px solid #dddddd;\n  font-size: 14px;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n  background-color: #ffffff;\n  padding: 10px;\n  color: #333333;\n  width: 100%;\n}\n.eg-input-text:disabled {\n  background: #eeeeee;\n  color: #999;\n}\n.eg-input-checkbox,\n.eg-input-radio {\n  position: relative;\n  text-align: left;\n  margin-bottom: 10px;\n  margin-right: 10px;\n  min-height: 24px;\n  display: inline-block;\n}\n.eg-input-checkbox input[type=\"checkbox\"],\n.eg-input-radio input[type=\"checkbox\"],\n.eg-input-checkbox input[type=\"radio\"],\n.eg-input-radio input[type=\"radio\"] {\n  /*width: 14px;\n        height: 14px;\n        border: 1px solid @black-99;*/\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  cursor: pointer;\n  pointer-events: all;\n  opacity: 0;\n  z-index: 2;\n  left: 0;\n}\n.eg-input-checkbox .box,\n.eg-input-radio .box {\n  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;\n  float: left;\n  position: relative;\n  display: block;\n  width: 16px;\n  margin-right: 10px;\n  margin-left: 0;\n  height: 24px;\n}\n.eg-input-checkbox .box .checkbox,\n.eg-input-radio .box .checkbox {\n  width: 14px;\n  height: 14px;\n  border: 1px solid #999;\n  position: relative;\n  top: 5px;\n  left: 1px;\n  -webkit-border-radius: 2px;\n  -moz-border-radius: 2px;\n  border-radius: 2px;\n  background: #ffffff;\n}\n.eg-input-checkbox .box .checkbox .round,\n.eg-input-radio .box .checkbox .round {\n  display: none;\n}\n.eg-input-checkbox label,\n.eg-input-radio label {\n  float: left;\n  position: relative;\n  display: block;\n  line-height: 24px;\n}\n/*图片*/\n.checkbox-back {\n  background-position: center center;\n  background-repeat: no-repeat;\n}\n.eg-input-checkbox-active .box .checkbox {\n  background: #ee5511;\n  border-color: #ee5511;\n  background-position: center center;\n  background-repeat: no-repeat;\n}\n.eg-input-checkbox-active .box .eg-icon-tick:before {\n  height: 5px;\n  width: 2px;\n  left: 3px;\n  top: 5px;\n}\n.eg-input-checkbox-active .box .eg-icon-tick:after {\n  height: 8px;\n  width: 2px;\n  left: 7px;\n  top: 2px;\n}\n.eg-input-radio .box .checkbox {\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  border-radius: 50%;\n}\n.eg-input-radio .box .checkbox .round {\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  border-radius: 50%;\n  background: #ee5511;\n  margin: 4px;\n  width: 8px;\n  height: 8px;\n  margin: 2px;\n}\n.eg-input-radio-active .box .checkbox {\n  border-color: #ee5511;\n}\n.eg-input-radio-active .box .checkbox .round {\n  display: block;\n}\n.eg-input-radio-disabled .box .checkbox {\n  background: #eeeeee;\n  color: #999;\n  border: 1px solid #999;\n}\n.eg-input-radio-disabled .box .checkbox .round {\n  background: #cccccc;\n}\n.eg-input-radio-disabled label {\n  color: #999;\n}\n.eg-input-checkbox-disabled .box .checkbox {\n  background: #eeeeee;\n  color: #999;\n  border-color: #cccccc;\n}\n.eg-input-checkbox-disabled .box .eg-icon-tick:before {\n  background-color: #fefefe;\n}\n.eg-input-checkbox-disabled .box .eg-icon-tick:after {\n  background-color: #fefefe;\n}\n.eg-input-checkbox-disabled label {\n  color: #999;\n}\n.eg-input-checkbox-active.eg-input-checkbox-disabled .box .checkbox {\n  background: #cccccc;\n  color: #999;\n}\n.eg-sm-1 {\n  width: 8.33333333%;\n}\n.eg-sm-2 {\n  width: 16.66666667%;\n}\n.eg-sm-3 {\n  width: 25%;\n}\n.eg-sm-4 {\n  width: 33.33333333%;\n}\n.eg-sm-5 {\n  width: 41.66666667%;\n}\n.eg-sm-6 {\n  width: 50%;\n}\n.eg-sm-7 {\n  width: 58.33333333%;\n}\n.eg-sm-8 {\n  width: 66.66666667%;\n}\n.eg-sm-9 {\n  width: 75%;\n}\n.eg-sm-10 {\n  width: 83.33333333%;\n}\n.eg-sm-11 {\n  width: 91.66666667%;\n}\n.eg-sm-12 {\n  width: 100%;\n}\n[class*='eg-sm-'] {\n  padding: 5px 15px;\n  float: left;\n}\n[class*='eg-sm-']:last-child {\n  float: right;\n}\n[class*='eg-sm-'].eg-end {\n  float: left;\n}\n/**\n   带边框的样式\n*/\n.eg-sm-border {\n  border: 1px solid #e1e1e1;\n}\n.eg-dialog-container,\n.eg-tips-container {\n  display: none;\n}\n.eg-dialog-overlay,\n.eg-tips-overlay {\n  position: fixed;\n  left: 0px;\n  top: 0px;\n  z-index: 8900;\n  background-color: #000000;\n  opacity: 0.4;\n  width: 100%;\n  height: 100%;\n}\n.eg-dialog-close,\n.eg-tips-close {\n  display: inline-block;\n  float: right;\n  cursor: pointer;\n  font-size: 17px;\n  margin-top: -10px;\n  padding-right: 5px;\n}\n.eg-dialog,\n.eg-tips-container {\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n  opacity: 1;\n  background: #fff;\n  text-align: center;\n  padding: 10px;\n  box-shadow: 0px 1px 5px 2px #bbbbbb;\n  border-radius: 3px;\n}\n.eg-dialog {\n  z-index: 9000;\n}\n.eg-tips-container {\n  z-index: 9001;\n  display: none;\n}\n.eg-dialog-button,\n.eg-tips-button {\n  text-align: center;\n  padding: 5px 50px;\n}\n.eg-dialog-content,\n.eg-tips-content {\n  text-align: center;\n  margin-top: 10px;\n  padding: 10px 30px;\n}\n.eg-dialog-submit,\n.eg-dialog-cancel,\n.eg-tips-submit,\n.eg-tips-cancel {\n  margin: 5px;\n  border-radius: 4px;\n}\n.eg-submit {\n  color: #fff;\n  background: #d94000;\n}\n.eg-dialog-title,\n.eg-tips-title {\n  margin-top: 10px;\n  font-size: 18px;\n}\n.eg-dialog-show,\n.eg-tips-show {\n  display: block;\n}\n.eg-crumb ul li {\n  float: left;\n  position: relative;\n  margin: 10px;\n  cursor: pointer;\n}\n.eg-crumb ul li a {\n  display: block;\n  float: left;\n  background: transparent;\n  color: #000000;\n}\n.eg-crumb ul li a:after,\n.eg-crumb ul li a:before {\n  display: inline-block;\n  background-color: #a0a0a0;\n  position: absolute;\n  content: \"\";\n  right: -12px;\n  height: 8px;\n  width: 1px;\n}\n.eg-crumb ul li a:after {\n  top: 9px;\n  transform: rotate(45deg);\n}\n.eg-crumb ul li a:before {\n  top: 4px;\n  transform: rotate(135deg);\n}\n.eg-crumb ul li:last-child {\n  cursor: default;\n  color: #bbbbbb;\n}\n.eg-crumb ul li:last-child a:before,\n.eg-crumb ul li:last-child a:after {\n  display: none;\n}\n.eg-search-wrapper {\n  width: 300px;\n  position: relative;\n  display: inline-block;\n  margin-right: 15px;\n}\n.eg-search-wrapper input {\n  text-indent: 15px;\n}\n.eg-label-item {\n  padding: 2px 4px;\n  display: inline-block;\n  -webkit-border-radius: 2px;\n  -moz-border-radius: 2px;\n  border-radius: 2px;\n}\n.eg-label-item:hover {\n  text-decoration: none;\n}\n.eg-label-all {\n  margin-right: 45px;\n}\n.eg-label-title {\n  padding: 2px 0;\n  color: #999;\n}\n.eg-label-active {\n  background: #ee5511;\n  color: #ffffff;\n}\n.eg-label-group-simple .eg-label-item {\n  border-right: 1px solid #cccccc;\n  border-radius: 0px;\n  padding: 0px 15px 0px 0px;\n  margin-right: 15px;\n  line-height: 14px;\n}\n.eg-label-group-simple .eg-label-item:hover {\n  color: #2f93d2;\n}\n.eg-label-group-simple .eg-label-item:last-child {\n  border-right: none;\n}\n.eg-label-group {\n  border: 1px solid #eee;\n  box-shadow: 0 0 5px #eee;\n  padding: 15px 20px 5px;\n  background: #fff;\n  -webkit-box-shadow: 0px 0px 8px 1px #cccccc;\n  webkit-box-shadow: 0px 0px 8px 1px #cccccc;\n}\n.eg-label-group .eg-label-item {\n  margin: 0 15px 10px;\n}\n.eg-label-group .eg-label-all {\n  margin-right: 45px;\n}\n.eg-label-radius {\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-label-success {\n  background: #6bcb72;\n  color: #ffffff;\n}\n.eg-label-error {\n  background: #ff717d;\n  color: #ffffff;\n}\n.eg-label-disabled {\n  background: #cccccc;\n  color: #ffffff;\n}\n/**按钮组*/\n.eg-paging-container {\n  text-align: right;\n  padding: 10px 0;\n  /*.current{\n        color: @orange-btn;\n    }*/\n}\n.eg-paging-container a,\n.eg-paging-container .page {\n  padding: 5px;\n  margin: 0 5px;\n}\n.eg-paging-container .info {\n  font-size: 12px;\n  color: #999;\n  margin-left: 20px;\n}\n.eg-paging-active {\n  color: #ee5511;\n}\n.eg-paging-disabled {\n  color: #cccccc;\n  cursor: default;\n}\n.eg-calendar-container {\n  position: absolute;\n  border: 1px solid #eee;\n  box-shadow: 0 0 5px #eee;\n  background: #fff;\n  -webkit-box-shadow: 0px 0px 8px 1px #cccccc;\n  webkit-box-shadow: 0px 0px 8px 1px #cccccc;\n}\n.eg-calendar-container .eg-calendar-item:not(.no-hover) {\n  cursor: pointer;\n}\n.eg-calendar-container .eg-calendar-box .eg-calendar-selected {\n  color: #ffffff !important;\n  background: #ee5511;\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  border-radius: 50%;\n}\n.eg-calendar-container .eg-calendar-box .eg-calendar-disabled {\n  color: #cccccc;\n  cursor: default;\n}\n.eg-calendar-box {\n  background: #ffffff;\n  width: 270px;\n}\n.eg-calendar-box .box {\n  padding: 15px;\n}\n.eg-calendar-header {\n  line-height: 28px;\n  margin-bottom: 10px;\n}\n.eg-calendar-header .options {\n  border: 1px solid #cccccc;\n  height: 28px;\n  vertical-align: middle;\n  margin-right: 30px;\n}\n.eg-calendar-header .today {\n  cursor: pointer;\n  position: relative;\n  top: 2px;\n}\n.eg-calendar-header th {\n  padding-bottom: 10px;\n}\n.eg-calendar-header .title {\n  width: 100%;\n  height: 100%;\n  cursor: pointer;\n}\n.eg-calendar-header .title:hover {\n  background: #f0f0f0;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-calendar-body .calendar {\n  width: 100%;\n  text-align: center;\n}\n.eg-calendar-body .calendar tr.body td,\n.eg-calendar-body .calendar tr.head td {\n  height: 25px;\n  vertical-align: middle;\n}\n.eg-calendar-body .calendar tr.body td span,\n.eg-calendar-body .calendar tr.head td span {\n  width: 30px;\n  height: 30px;\n  line-height: 30px;\n  display: inline-block;\n}\n.eg-calendar-body .calendar tr.body td span:hover:not(.eg-calendar-selected):not(.eg-calendar-disabled):not(.no-hover),\n.eg-calendar-body .calendar tr.head td span:hover:not(.eg-calendar-selected):not(.eg-calendar-disabled):not(.no-hover) {\n  background: #f0f0f0;\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  border-radius: 50%;\n}\n.eg-calendar-body .calendar .month-list span {\n  display: inline-block;\n  zoom: 1;\n  width: 25%;\n  text-align: center;\n  height: 55px;\n  line-height: 55px;\n}\n.eg-calendar-body .calendar .month-list span i {\n  font-style: normal;\n  padding: 4px 9px;\n  -webkit-border-radius: 500px;\n  -moz-border-radius: 500px;\n  border-radius: 500px;\n  cursor: pointer;\n}\n.eg-calendar-body .calendar .month-list span i:hover:not(.eg-selected) {\n  background: #f0f0f0;\n}\n.eg-calendar-body .old {\n  color: #cccccc;\n}\n.eg-calendar-body .head {\n  color: #999;\n}\n.eg-icon-prev:hover,\n.eg-icon-next:hover {\n  background: #f0f0f0;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-table {\n  background: #ffffff;\n  border-spacing: 0px;\n  border-collapse: separate;\n  padding: 0px 20px 10px 20px;\n  font-size: 14px;\n}\n.eg-table tr {\n  /*td[rowspan]{\n      border-bottom: 1px solid @tr-split-line;\n    }*/\n}\n.eg-table tr.eg-tr-split td {\n  border-bottom: 1px solid #dddddd;\n}\n.eg-table tr td,\n.eg-table tr th {\n  padding: 10px 15px;\n  text-align: left;\n  position: relative;\n}\n.eg-table tr th {\n  color: #999;\n}\n.eg-table tr td {\n  color: #333333;\n}\n.eg-table thead th {\n  border-bottom: 2px solid #dddddd;\n}\n.eg-table tbody tr:nth-of-type(2n) {\n  background: #f7f7f7;\n}\n/**面板*/\n.eg-panel {\n  margin-bottom: 20px;\n  background-color: #fff;\n  border: 1px solid #dddddd;\n  border-radius: 4px;\n  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);\n}\n.eg-panel .eg-panel-header {\n  padding: 10px 15px;\n  border-bottom: 1px solid transparent;\n  border-radius: 3px 3px 0px 0px;\n  color: #333;\n  background-color: #ffffff;\n  border-color: #ddd;\n}\n.eg-panel .eg-panel-content {\n  padding: 10px 15px;\n}\n.eg-panel .eg-panel-footer {\n  padding: 10px 15px;\n  background-color: #ffffff;\n  border-top: 1px solid #ddd;\n  border-radius: 0px 0px 3px 3px;\n}\n.eg-tab-item {\n  cursor: pointer;\n  display: inline-block;\n  min-width: 100px;\n  box-sizing: border-box;\n  padding: 5px 15px;\n  text-align: center;\n  border-bottom: 1px solid #dddddd;\n}\n.eg-tab-item:hover {\n  text-decoration: none;\n  color: #f25300;\n  background: #dddddd;\n  border-bottom: 1px solid #dddddd;\n}\n.eg-tab-item.eg-tab-active {\n  color: #f25300;\n  border-bottom: 1px solid #f25300;\n  box-shadow: 0px -3px 0px 0px #f25300 inset;\n  cursor: default;\n}\n.eg-tab-item.eg-tab-active:hover {\n  background: transparent;\n  border-bottom: 1px solid #f25300;\n}\n.eg-select-container {\n  width: 300px;\n  position: relative;\n  display: inline-block;\n  margin-right: 15px;\n  /*下箭头*/\n}\n.eg-select-container ul {\n  background: #fff;\n  position: absolute;\n  width: inherit;\n  top: 39px;\n  left: 0px;\n}\n.eg-select-container ul li {\n  text-indent: 10px;\n  padding: 5px 0;\n  cursor: pointer;\n}\n.eg-select-container ul li:hover {\n  color: #ff717d;\n}\n.eg-select-container .eg-select-ul {\n  display: none;\n}\n.eg-select-container .eg-select-show {\n  display: block;\n}\n.eg-select-container .eg-select-arrow {\n  position: absolute;\n  top: 12px;\n  right: 10px;\n  display: inline-block;\n  cursor: pointer;\n  z-index: 10;\n  border-top: 5px solid transparent;\n  border-right: 5px solid transparent;\n  border-left: 5px solid #bbbbbb;\n  border-bottom: 5px solid #bbbbbb;\n}\n.eg-select-container .eg-select-arrow {\n  transform: rotate(-45deg);\n}\n.eg-tooltip-container .eg-tooltip-wraper {\n  display: none;\n  position: absolute;\n  z-index: 9001;\n  background: #000;\n  opacity: 0.4;\n  color: #fff;\n  max-width: 300px;\n  font-size: 13px;\n  padding: 15px;\n  text-align: left;\n  border-radius: 3px;\n  box-shadow: 0px 1px 5px 2px #bbbbbb;\n  margin: 5px;\n}\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip {\n  position: relative;\n}\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip .eg-tooltip-arrow {\n  border-width: 5px;\n  border-color: transparent transparent #000 transparent;\n  position: absolute;\n  left: 18px;\n  top: -25px;\n  height: 0;\n  width: 0;\n  line-height: 0;\n}\n.eg-tooltip-container .eg-tooltip-show {\n  display: block;\n}\n.eg-marquee-container {\n  position: relative;\n  display: inline-block;\n  width: 380px;\n  height: auto;\n  padding: 0px 0px;\n  border: #cc3333 2px solid;\n  overflow: hidden;\n  border-radius: 3px;\n  background: #fff;\n}\n.eg-marquee-container .eg-marquee-new-tip {\n  position: absolute;\n  top: -26px;\n  left: -24px;\n  z-index: 90001;\n  background: #4fd564;\n  color: #fff;\n  width: 50px;\n  height: 61px;\n  transform: rotate(45deg);\n}\n.eg-marquee-container .eg-marquee-new-tip .eg-marquee-new {\n  display: inline-block;\n  position: relative;\n  top: 20px;\n  left: 31px;\n  transform: rotate(-45deg);\n}\n.eg-marquee-container .eg-marquee-check {\n  position: absolute;\n  right: 0px;\n  top: 0px;\n  z-index: 90001;\n}\n.eg-marquee-container img {\n  width: 100%;\n  height: auto;\n}\n.eg-marquee-container .eg-marquee-title {\n  color: #333333;\n  font-size: 16px;\n  font-weight: bolder;\n  line-height: 17px;\n  margin: 15px 10px 5px 10px;\n}\n.eg-marquee-container .eg-marquee-content {\n  color: #999;\n  font-size: 14px;\n  line-height: 15px;\n  margin: 10px 10px;\n}\n.eg-marquee-container .eg-marquee-tips {\n  position: relative;\n  color: #999;\n  font-size: 14px;\n  margin: 15px 10px 5px 10px;\n}\n.eg-marquee-container .eg-bars {\n  position: relative;\n  display: inline-block;\n  background: #999;\n  padding: 5px;\n  margin-right: 10px;\n}\n.eg-marquee-container .eg-bars:before,\n.eg-marquee-container .eg-bars:after {\n  position: absolute;\n  content: '';\n  display: inline-block;\n}\n.eg-marquee-container .eg-bars:before {\n  top: 0px;\n  left: 10px;\n  border-width: 5px;\n  border-style: dashed dashed solid;\n  border-color: transparent transparent transparent #999;\n}\n.eg-marquee-container .eg-bars:after {\n  top: 4px;\n  left: 7.5px;\n  z-index: 10;\n  border: 1.5px solid #fff;\n  border-radius: 5px;\n}\n.eg-input-checkboxs {\n  position: relative;\n  height: 35px;\n  top: -5px;\n  width: 35px;\n  display: inline-block;\n}\n.eg-input-checkboxs input[type=\"checkbox\"] {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  cursor: pointer;\n  pointer-events: all;\n  opacity: 0;\n  z-index: 2;\n  left: 0;\n}\n.eg-input-checkboxs .box {\n  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;\n  float: left;\n  position: relative;\n  display: block;\n  width: 16px;\n  margin-right: 10px;\n  margin-left: 0;\n  height: 24px;\n}\n.eg-input-checkboxs .box .checkbox {\n  width: 35px;\n  height: 35px;\n  border: 1px solid #999;\n  position: relative;\n  top: 5px;\n  left: 1px;\n  -webkit-border-radius: 2px;\n  -moz-border-radius: 2px;\n  border-radius: 2px;\n  background: #ffffff;\n}\n.eg-input-checkboxs .box .checkbox .round {\n  display: none;\n}\n.eg-input-checkboxs label {\n  float: left;\n  position: relative;\n  display: block;\n  line-height: 24px;\n}\n.eg-input-checkboxs-active .box .checkbox {\n  background: #ee5511;\n  border-color: #ee5511;\n}\n.eg-input-checkboxs-active .box .eg-icon-tick:before {\n  height: 9px;\n  width: 2px;\n  left: 11px;\n  top: 13px;\n}\n.eg-input-checkboxs-active .box .eg-icon-tick:after {\n  height: 17px;\n  width: 2px;\n  left: 19px;\n  top: 6px;\n}\n.eg-input-checkboxs-disabled .box .checkbox {\n  background: #eeeeee;\n  color: #999;\n  border-color: #cccccc;\n}\n.eg-input-checkboxs-disabled .box .eg-icon-tick:before {\n  background-color: #fefefe;\n}\n.eg-input-checkboxs-disabled .box .eg-icon-tick:after {\n  background-color: #fefefe;\n}\n.eg-input-checkboxs-disabled label {\n  color: #999;\n}\n.eg-input-checkboxs-disabled .box .checkbox {\n  background: #cccccc;\n  color: #999;\n}\n", ""]);
+	exports.push([module.id, ".red {\n  color: #ff717d;\n}\n* {\n  padding: 0px;\n  margin: 0px;\n  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);\n  -webkit-backface-visibility: hidden;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nnav,\nsection,\nsummary {\n  display: block;\n}\nhtml {\n  /*width: 100%;\n    min-height: 100%;*/\n}\nbody {\n  font: normal 14px \"Microsoft YaHei\", \"helvetica regular\", \"Helvetica Neue\", Arial, Helvetica, STHeiTi, sans-serif;\n  color: #333333;\n  -webkit-text-size-adjust: none;\n  text-size-adjust: none;\n  background-color: #f1f1f1;\n}\nul,\nol {\n  list-style: none;\n}\na {\n  text-decoration: none;\n  outline: none;\n  color: #333333;\n}\na:hover {\n  text-decoration: underline;\n}\naddress {\n  font-style: normal;\n}\n/**重置h1-h6的字体大小*/\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-weight: normal;\n}\nh1 {\n  font-size: 22px;\n}\nh2 {\n  font-size: 20px;\n}\nh3 {\n  font-size: 18px;\n}\nh4 {\n  font-size: 16px;\n}\nh5 {\n  font-size: 14px;\n}\nh6 {\n  font-size: 12px;\n}\n/**清除浮动*/\n.clearfix:before,\n.clearfix:after {\n  display: table;\n  line-height: 0;\n  content: \"\";\n}\n.clearfix:after {\n  clear: both;\n}\n/**控制块级、内敛*/\n.inline-block {\n  display: inline-block !important;\n}\n.inline {\n  display: inline !important;\n}\n.block {\n  display: block !important;\n}\n/**搜索图标*/\n.eg-search-icon {\n  position: relative;\n}\n.eg-search-icon:before,\n.eg-search-icon:after {\n  content: '';\n  position: absolute;\n  display: inline-block;\n  z-index: 10;\n}\n.eg-search-icon:before {\n  border: 2px solid #b2b2b2;\n  height: 10px;\n  width: 10px;\n  border-radius: 7px;\n  top: 10px;\n  left: 6px;\n}\n.eg-search-icon:after {\n  height: 7px;\n  width: 2px;\n  transform: rotate(-45deg);\n  top: 22px;\n  left: 16px;\n  background: #b2b2b2;\n}\n/**圆角*/\n.eg-radius {\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-active {\n  color: #ee5511;\n}\n.eg-selected {\n  color: #ffffff;\n  background: #ee5511;\n}\n/**淡入淡出动画*/\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0;\n    /*初始状态 透明度为0*/\n  }\n  50% {\n    opacity: 0.5;\n    /*中间状态 透明度为0.5*/\n  }\n  100% {\n    opacity: 1;\n    /*结尾状态 透明度为1*/\n  }\n}\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 1;\n    /*初始状态 透明度为1*/\n  }\n  50% {\n    opacity: 0.5;\n    /*中间状态 透明度为0.5*/\n  }\n  100% {\n    opacity: 0;\n    /*结尾状态 透明度为0*/\n  }\n}\n/**显示*/\n.eg-hide {\n  display: none;\n}\n.eg-show {\n  display: block;\n}\n.eg-fadein {\n  -webkit-animation: fadeIn .4s 1 0s;\n}\n.eg-fadeout {\n  -webkit-animation: fadeOut .4s 2 3s ;\n}\n/**成功图标*/\n.eg-tips-success {\n  background: #4fd564;\n  width: 30px;\n  height: 30px;\n  border-radius: 30px;\n  display: inline-block;\n  position: relative;\n}\n/**出错提示*/\n.eg-tips-error {\n  background: #dd514c;\n  width: 30px;\n  height: 30px;\n  border-radius: 30px;\n  display: inline-block;\n  position: relative;\n}\n.eg-tips-error:before {\n  height: 2px;\n  width: 2px;\n  background: #fff;\n  left: 14px;\n  top: 19px;\n}\n.eg-tips-error:after {\n  height: 10px;\n  width: 2px;\n  background: #fff;\n  left: 14px;\n  top: 6px;\n}\n/**加载中*/\n.eg-tips-loading {\n  background: #bbbbbb;\n  width: 30px;\n  height: 30px;\n  border-radius: 30px;\n  display: inline-block;\n  position: relative;\n}\n.eg-tips-loading:before {\n  width: 15px;\n  height: 15px;\n  background: transparent;\n  border: 2px solid #fff;\n  top: 5.5px;\n  left: 5.5px;\n  border-radius: 12px;\n  clip: rect(auto, 16px, auto, auto);\n  animation: 0.5s linear 0s normal none infinite rotate;\n}\n.eg-tips-success:before,\n.eg-icon-tick:before,\n.eg-tips-success:before,\n.eg-tips-error:before,\n.eg-tips-success:after,\n.eg-icon-tick:after,\n.eg-tips-success:after,\n.eg-tips-error:after {\n  display: inline-block;\n  position: absolute;\n  content: \"\";\n}\n.eg-tips-success:before,\n.eg-icon-tick:before {\n  height: 8px;\n  width: 2px;\n  background: #fff;\n  left: 10px;\n  top: 13px;\n  transform: rotate(135deg);\n}\n.eg-tips-success:after,\n.eg-icon-tick:after {\n  height: 14px;\n  width: 2px;\n  background: #fff;\n  left: 17px;\n  top: 8px;\n  transform: rotate(45deg);\n}\n@-webkit-keyframes rotate {\n  from {\n    -webkit-transform: rotate(0deg);\n  }\n  to {\n    -webkit-transform: rotate(360deg);\n  }\n}\n/*icon*/\n.eg-arrow-up::before,\n.eg-arrow-down::before {\n  content: '';\n  display: inline-block;\n  width: 6px;\n  height: 9px;\n  position: absolute;\n  top: 50%;\n  margin-left: 9px;\n}\n.eg-arrow-up::after,\n.eg-arrow-down::after {\n  content: '';\n  display: inline-block;\n  border-width: 7px;\n  border-style: solid;\n  margin-left: 5px;\n  position: relative;\n}\n/*向上箭头*/\n.eg-arrow-up::before {\n  background: #38bd7c;\n  margin-top: -1px;\n  border-radius: 0px 0px 1px 1px;\n}\n.eg-arrow-up::after {\n  border-color: transparent transparent #38bd7c transparent;\n  top: -6px;\n}\n/*向下箭头*/\n.eg-arrow-down::before {\n  background: #fa3739;\n  margin-top: -8px;\n  border-radius: 1px 1px 0px 0px;\n}\n.eg-arrow-down::after {\n  border-color: #fa3739 transparent transparent transparent;\n  top: 10px;\n}\n/**图标*/\n.eg-icon-calendar {\n  background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJViUEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4MUU4N0VFRjdCODYxMUU1QUY5NkM3NDVDRjI5NkNEQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4MUU4N0VGMDdCODYxMUU1QUY5NkM3NDVDRjI5NkNEQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjgxRTg3RUVEN0I4NjExRTVBRjk2Qzc0NUNGMjk2Q0RDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjgxRTg3RUVFN0I4NjExRTVBRjk2Qzc0NUNGMjk2Q0RDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Q96nFgAAAIpJREFUeNpi/P//PwMIzJo1C0RBOAwMjCAiLS0NJo4iBxIHM2bOnMmABFA0owEMOSYgFgXi80iSMIXoGFkOpF4UpHkXEBswkAZA6ncxkaERbgATAwWABcaAhSAxABYDFNlMHWcTciI27w2cs2nrZ3xRCNJ8AZRa0AOGCHAJ5Gw3EINEjWeB2AUgwADA4SbftT6JBAAAAABJRU5ErkJggg==\") no-repeat right center;\n}\n/**左箭头*/\n.eg-icon-prev,\n.eg-icon-next {\n  width: 100%;\n  height: 100%;\n  text-align: center;\n  cursor: pointer;\n}\n.eg-icon-prev:after,\n.eg-icon-next:after {\n  content: '';\n  display: inline-block;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  width: 12px;\n  height: 12px;\n  border-top: 2px solid #999;\n  border-left: 2px solid #999;\n  -webkit-transform: rotate(-45deg);\n  -moz-transform: rotate(-45deg);\n  -ms-transform: rotate(-45deg);\n  -o-transform: rotate(-45deg);\n  transform: rotate(-45deg);\n}\n.eg-icon-next:after {\n  border-left: none;\n  border-right: 2px solid #999;\n  -webkit-transform: rotate(45deg);\n  -moz-transform: rotate(45deg);\n  -ms-transform: rotate(45deg);\n  -o-transform: rotate(45deg);\n  transform: rotate(45deg);\n}\n/**字体大小*/\n.small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-12 {\n  font-size: 12px;\n}\n.ft-12 small,\n.ft-12 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-14 {\n  font-size: 14px;\n}\n.ft-14 small,\n.ft-14 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-16 {\n  font-size: 16px;\n}\n.ft-16 small,\n.ft-16 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-18 {\n  font-size: 18px;\n}\n.ft-18 small,\n.ft-18 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-20 {\n  font-size: 20px;\n}\n.ft-20 small,\n.ft-20 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-22 {\n  font-size: 22px;\n}\n.ft-22 small,\n.ft-22 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n/**按钮组*/\n.eg-btn-group {\n  position: relative;\n  display: inline-block;\n  vertical-align: middle;\n}\n.eg-btn-group .eg-btn {\n  position: relative;\n  float: left;\n  margin-left: -1px;\n}\n.eg-btn-group .eg-btn:not(:first-child):not(:last-child) {\n  border-radius: 0;\n}\n.eg-btn-group .eg-btn:first-child:not(:last-child) {\n  border-bottom-right-radius: 0;\n  border-top-right-radius: 0;\n}\n.eg-btn-group .eg-btn:last-child:not(:first-child) {\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n}\n.eg-btn-group-tacked .eg-btn {\n  float: none;\n  display: block;\n  margin-left: 0;\n  margin-top: -1px;\n}\n.eg-btn-group-tacked .eg-btn:first-child:not(:last-child) {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.eg-btn-group-tacked .eg-btn:last-child:not(:first-child) {\n  border-bottom-left-radius: 0;\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n}\n.eg-btn-group-justify {\n  width: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n}\n.eg-btn-group-justify .eg-btn {\n  float: none;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n}\n/**按钮*/\n.eg-btn {\n  display: inline-block;\n  text-align: center;\n  padding: 10px 15px;\n  color: #ffffff;\n  background: #ee5511;\n  border: 1px solid transparent;\n  cursor: pointer;\n  outline: 0;\n  text-decoration: none;\n}\n.eg-btn:hover {\n  background: #d94000;\n  text-decoration: none;\n  color: #ffffff;\n}\n.eg-btn.eg-btn-disabled {\n  color: #f8c1a8;\n  background-color: #f49462;\n}\n.eg-btn-block {\n  display: block;\n  width: 100%;\n}\n.eg-btn-block + .eg-btn-block {\n  margin-top: 5px;\n}\n.eg-btn-radius {\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-btn-round {\n  -webkit-border-radius: 1000px;\n  -moz-border-radius: 1000px;\n  border-radius: 1000px;\n}\n.eg-btn-xs {\n  font-size: 12px;\n}\n.eg-btn-sm {\n  font-size: 14px;\n}\n.eg-btn-default {\n  font-size: 16px;\n}\n.eg-btn-lg {\n  font-size: 18px;\n}\n.eg-btn-xl {\n  font-size: 20px;\n}\n.eg-btn-error {\n  background-color: #d94000;\n}\n.eg-btn-success {\n  background-color: #2f93d2;\n}\n.eg-btn-success:hover {\n  background: #0c80ba;\n}\n.eg-btn-success.eg-btn-disabled {\n  color: #a2cae3;\n  background: #4ca0d5;\n}\n.eg-btn-warning {\n  background-color: #e0690c;\n}\n.eg-btn-danger {\n  background-color: #e0690c;\n}\n.eg-btn-link {\n  border: none;\n  color: #646464;\n  background-color: transparent;\n}\n.eg-btn-link:hover {\n  color: #646464;\n  background: transparent;\n  text-decoration: underline;\n}\n.eg-btn-link .eg-btn-disabled {\n  color: #cccccc;\n}\n.eg-btn-disabled {\n  color: #cccccc;\n  background-color: #f3f3f3;\n}\n.eg-btn-gray {\n  background-color: #d4d4d4;\n  color: #333333;\n}\n.eg-btn-gray:hover {\n  background: #cccccc;\n}\n.eg-btn-gray.eg-btn-disabled {\n  color: #999;\n  background-color: #e1e1e1;\n}\n.eg-btn-white {\n  background: #ffffff;\n  border-color: #dbdad9;\n  color: #000000;\n}\n.eg-btn-white:hover {\n  background: #f8f8f8;\n}\n.eg-btn-white.eg-btn-disabled {\n  color: #f2f2f2;\n  background-color: #cccccc;\n}\n.eg-btn-disabled {\n  cursor: auto;\n}\n.eg-input-text {\n  border: 1px solid #dddddd;\n  font-size: 14px;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n  background-color: #ffffff;\n  padding: 10px;\n  color: #333333;\n  width: 100%;\n}\n.eg-input-text:disabled {\n  background: #eeeeee;\n  color: #999;\n}\n.eg-input-checkbox,\n.eg-input-radio {\n  position: relative;\n  text-align: left;\n  margin-bottom: 10px;\n  margin-right: 10px;\n  min-height: 24px;\n  display: inline-block;\n}\n.eg-input-checkbox input[type=\"checkbox\"],\n.eg-input-radio input[type=\"checkbox\"],\n.eg-input-checkbox input[type=\"radio\"],\n.eg-input-radio input[type=\"radio\"] {\n  /*width: 14px;\n        height: 14px;\n        border: 1px solid @black-99;*/\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  cursor: pointer;\n  pointer-events: all;\n  opacity: 0;\n  z-index: 2;\n  left: 0;\n}\n.eg-input-checkbox .box,\n.eg-input-radio .box {\n  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;\n  float: left;\n  position: relative;\n  display: block;\n  width: 16px;\n  margin-right: 10px;\n  margin-left: 0;\n  height: 24px;\n}\n.eg-input-checkbox .box .checkbox,\n.eg-input-radio .box .checkbox {\n  width: 14px;\n  height: 14px;\n  border: 1px solid #999;\n  position: relative;\n  top: 5px;\n  left: 1px;\n  -webkit-border-radius: 2px;\n  -moz-border-radius: 2px;\n  border-radius: 2px;\n  background: #ffffff;\n}\n.eg-input-checkbox .box .checkbox .round,\n.eg-input-radio .box .checkbox .round {\n  display: none;\n}\n.eg-input-checkbox label,\n.eg-input-radio label {\n  float: left;\n  position: relative;\n  display: block;\n  line-height: 24px;\n}\n/*图片*/\n.checkbox-back {\n  background-position: center center;\n  background-repeat: no-repeat;\n}\n.eg-input-checkbox-active .box .checkbox {\n  background: #ee5511;\n  border-color: #ee5511;\n  background-position: center center;\n  background-repeat: no-repeat;\n}\n.eg-input-checkbox-active .box .eg-icon-tick:before {\n  height: 5px;\n  width: 2px;\n  left: 3px;\n  top: 5px;\n}\n.eg-input-checkbox-active .box .eg-icon-tick:after {\n  height: 8px;\n  width: 2px;\n  left: 7px;\n  top: 2px;\n}\n.eg-input-radio .box .checkbox {\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  border-radius: 50%;\n}\n.eg-input-radio .box .checkbox .round {\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  border-radius: 50%;\n  background: #ee5511;\n  margin: 4px;\n  width: 8px;\n  height: 8px;\n  margin: 2px;\n}\n.eg-input-radio-active .box .checkbox {\n  border-color: #ee5511;\n}\n.eg-input-radio-active .box .checkbox .round {\n  display: block;\n}\n.eg-input-radio-disabled .box .checkbox {\n  background: #eeeeee;\n  color: #999;\n  border: 1px solid #999;\n}\n.eg-input-radio-disabled .box .checkbox .round {\n  background: #cccccc;\n}\n.eg-input-radio-disabled label {\n  color: #999;\n}\n.eg-input-checkbox-disabled .box .checkbox {\n  background: #eeeeee;\n  color: #999;\n  border-color: #cccccc;\n}\n.eg-input-checkbox-disabled .box .eg-icon-tick:before {\n  background-color: #fefefe;\n}\n.eg-input-checkbox-disabled .box .eg-icon-tick:after {\n  background-color: #fefefe;\n}\n.eg-input-checkbox-disabled label {\n  color: #999;\n}\n.eg-input-checkbox-active.eg-input-checkbox-disabled .box .checkbox {\n  background: #cccccc;\n  color: #999;\n}\n.eg-grid .eg-row {\n  margin-left: -15px;\n  margin-right: -15px;\n}\n.eg-sm-1 {\n  width: 8.33333333%;\n}\n.eg-sm-2 {\n  width: 16.66666667%;\n}\n.eg-sm-3 {\n  width: 25%;\n}\n.eg-sm-4 {\n  width: 33.33333333%;\n}\n.eg-sm-5 {\n  width: 41.66666667%;\n}\n.eg-sm-6 {\n  width: 50%;\n}\n.eg-sm-7 {\n  width: 58.33333333%;\n}\n.eg-sm-8 {\n  width: 66.66666667%;\n}\n.eg-sm-9 {\n  width: 75%;\n}\n.eg-sm-10 {\n  width: 83.33333333%;\n}\n.eg-sm-11 {\n  width: 91.66666667%;\n}\n.eg-sm-12 {\n  width: 100%;\n}\n[class*='eg-sm-'] {\n  padding: 5px 15px;\n  float: left;\n}\n[class*='eg-sm-']:last-child {\n  float: right;\n}\n[class*='eg-sm-'].eg-end {\n  float: left;\n}\n/**\n   带边框的样式\n*/\n.eg-sm-border {\n  border: 1px solid #e1e1e1;\n}\n.eg-dialog-container,\n.eg-tips-container {\n  display: none;\n}\n.eg-dialog-overlay,\n.eg-tips-overlay {\n  position: fixed;\n  left: 0px;\n  top: 0px;\n  z-index: 8900;\n  background-color: #000000;\n  opacity: 0.4;\n  width: 100%;\n  height: 100%;\n}\n.eg-dialog-close,\n.eg-tips-close {\n  display: inline-block;\n  float: right;\n  cursor: pointer;\n  font-size: 17px;\n  margin-top: -10px;\n  padding-right: 5px;\n}\n.eg-dialog,\n.eg-tips-container {\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n  opacity: 1;\n  background: #fff;\n  text-align: center;\n  padding: 10px;\n  border-radius: 3px;\n}\n.eg-dialog {\n  z-index: 9000;\n}\n.eg-tips-container {\n  z-index: 9001;\n  display: none;\n}\n.eg-dialog-button,\n.eg-tips-button {\n  text-align: center;\n  padding: 5px 50px;\n}\n.eg-dialog-content,\n.eg-tips-content {\n  text-align: center;\n  margin-top: 10px;\n  padding: 10px 30px;\n}\n.eg-dialog-submit,\n.eg-dialog-cancel,\n.eg-tips-submit,\n.eg-tips-cancel {\n  margin: 5px;\n  border-radius: 4px;\n}\n.eg-submit {\n  color: #fff;\n  background: #d94000;\n}\n.eg-dialog-title,\n.eg-tips-title {\n  margin-top: 10px;\n  font-size: 18px;\n}\n.eg-dialog-show,\n.eg-tips-show {\n  display: block;\n}\n.eg-crumb ul li {\n  float: left;\n  position: relative;\n  margin: 10px;\n  cursor: pointer;\n}\n.eg-crumb ul li a {\n  display: block;\n  float: left;\n  background: transparent;\n  color: #000000;\n}\n.eg-crumb ul li a:after,\n.eg-crumb ul li a:before {\n  display: inline-block;\n  background-color: #a0a0a0;\n  position: absolute;\n  content: \"\";\n  right: -12px;\n  height: 8px;\n  width: 1px;\n}\n.eg-crumb ul li a:after {\n  top: 9px;\n  transform: rotate(45deg);\n}\n.eg-crumb ul li a:before {\n  top: 4px;\n  transform: rotate(135deg);\n}\n.eg-crumb ul li:last-child {\n  cursor: default;\n  color: #bbbbbb;\n}\n.eg-crumb ul li:last-child a:before,\n.eg-crumb ul li:last-child a:after {\n  display: none;\n}\n.eg-search-wrapper {\n  width: 100%;\n  position: relative;\n  display: box;\n  /* OLD - Android 4.4- */\n  display: -webkit-box;\n  /* OLD - iOS 6-, Safari 3.1-6 */\n  display: -moz-box;\n  /* OLD - Firefox 19- (buggy but mostly works) */\n  display: -ms-flexbox;\n  /* TWEENER - IE 10 */\n  display: -webkit-flex;\n  /* NEW - Chrome */\n  display: flex;\n  margin-right: 15px;\n}\n.eg-search-wrapper input {\n  text-indent: 15px;\n}\n.eg-search-wrapper .eg-search-content {\n  display: -webkit-box;\n  -webkit-box-flex: 1;\n  /* OLD - iOS 6-, Safari 3.1-6 */\n  -moz-box-flex: 1;\n  /* OLD - Firefox 19- */\n  -webkit-flex: 1;\n  /* Chrome */\n  -ms-flex: 1;\n  flex: 1.0;\n}\n.eg-search-wrapper .eg-search-icon {\n  position: relative;\n}\n.eg-label-item {\n  padding: 2px 4px;\n  display: inline-block;\n  -webkit-border-radius: 2px;\n  -moz-border-radius: 2px;\n  border-radius: 2px;\n}\n.eg-label-item:hover {\n  text-decoration: none;\n}\n.eg-label-all {\n  margin-right: 45px;\n}\n.eg-label-title {\n  padding: 2px 0;\n  color: #999;\n}\n.eg-label-active {\n  background: #ee5511;\n  color: #ffffff;\n}\n.eg-label-group-simple .eg-label-item {\n  border-right: 1px solid #cccccc;\n  border-radius: 0px;\n  padding: 0px 15px 0px 0px;\n  margin-right: 15px;\n  line-height: 14px;\n}\n.eg-label-group-simple .eg-label-item:hover {\n  color: #2f93d2;\n}\n.eg-label-group-simple .eg-label-item:last-child {\n  border-right: none;\n}\n.eg-label-group {\n  margin-bottom: 15px;\n}\n.eg-label-group .eg-row {\n  padding: 0px;\n}\n.eg-label-group .eg-row div[class*='eg-sm-'] {\n  padding: 0px 15px;\n}\n.eg-label-group .eg-row div[class*='eg-sm-'].eg-end {\n  margin-bottom: -10px;\n}\n.eg-label-group .eg-label-item {\n  margin: 0 15px 10px;\n}\n.eg-label-group .eg-label-all {\n  margin-right: 45px;\n}\n.eg-label-radius {\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-label-success {\n  background: #6bcb72;\n  color: #ffffff;\n}\n.eg-label-error {\n  background: #ff717d;\n  color: #ffffff;\n}\n.eg-label-disabled {\n  background: #cccccc;\n  color: #ffffff;\n}\n.eg-label-end {\n  margin-bottom: 0;\n}\n/**按钮组*/\n.eg-paging-container {\n  text-align: right;\n  padding: 10px 0;\n  /*.current{\n        color: @orange-btn;\n    }*/\n}\n.eg-paging-container a,\n.eg-paging-container .page {\n  padding: 5px;\n  margin: 0 5px;\n}\n.eg-paging-container .info {\n  font-size: 12px;\n  color: #999;\n  margin-left: 20px;\n}\n.eg-paging-active {\n  color: #ee5511;\n}\n.eg-paging-disabled {\n  color: #cccccc;\n  cursor: default;\n}\n.eg-calendar-container {\n  position: absolute;\n  border: 1px solid #eee;\n  box-shadow: 0 0 5px #eee;\n  background: #fff;\n  -webkit-box-shadow: 0px 0px 8px 1px #cccccc;\n  webkit-box-shadow: 0px 0px 8px 1px #cccccc;\n}\n.eg-calendar-container .eg-calendar-item:not(.no-hover) {\n  cursor: pointer;\n}\n.eg-calendar-container .eg-calendar-box .eg-calendar-selected {\n  color: #ffffff !important;\n  background: #ee5511;\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  border-radius: 50%;\n}\n.eg-calendar-container .eg-calendar-box .eg-calendar-disabled {\n  color: #cccccc;\n  cursor: default;\n}\n.eg-calendar-box {\n  background: #ffffff;\n  width: 270px;\n}\n.eg-calendar-box .box {\n  padding: 15px;\n}\n.eg-calendar-header {\n  line-height: 28px;\n  margin-bottom: 10px;\n}\n.eg-calendar-header .options {\n  border: 1px solid #cccccc;\n  height: 28px;\n  vertical-align: middle;\n  margin-right: 30px;\n}\n.eg-calendar-header .today {\n  cursor: pointer;\n  position: relative;\n  top: 2px;\n}\n.eg-calendar-header th {\n  padding-bottom: 10px;\n}\n.eg-calendar-header .title {\n  width: 100%;\n  height: 100%;\n  cursor: pointer;\n}\n.eg-calendar-header .title:hover {\n  background: #f0f0f0;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-calendar-body .calendar {\n  width: 100%;\n  text-align: center;\n}\n.eg-calendar-body .calendar tr.body td,\n.eg-calendar-body .calendar tr.head td {\n  height: 25px;\n  vertical-align: middle;\n}\n.eg-calendar-body .calendar tr.body td span,\n.eg-calendar-body .calendar tr.head td span {\n  width: 30px;\n  height: 30px;\n  line-height: 30px;\n  display: inline-block;\n}\n.eg-calendar-body .calendar tr.body td span:hover:not(.eg-calendar-selected):not(.eg-calendar-disabled):not(.no-hover),\n.eg-calendar-body .calendar tr.head td span:hover:not(.eg-calendar-selected):not(.eg-calendar-disabled):not(.no-hover) {\n  background: #f0f0f0;\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  border-radius: 50%;\n}\n.eg-calendar-body .calendar .month-list span {\n  display: inline-block;\n  zoom: 1;\n  width: 25%;\n  text-align: center;\n  height: 55px;\n  line-height: 55px;\n}\n.eg-calendar-body .calendar .month-list span i {\n  font-style: normal;\n  padding: 4px 9px;\n  -webkit-border-radius: 500px;\n  -moz-border-radius: 500px;\n  border-radius: 500px;\n  cursor: pointer;\n}\n.eg-calendar-body .calendar .month-list span i:hover:not(.eg-selected) {\n  background: #f0f0f0;\n}\n.eg-calendar-body .old {\n  color: #cccccc;\n}\n.eg-calendar-body .head {\n  color: #999;\n}\n.eg-icon-prev:hover,\n.eg-icon-next:hover {\n  background: #f0f0f0;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-table {\n  background: #ffffff;\n  border-spacing: 0px;\n  border-collapse: separate;\n  padding: 0px 20px 10px 20px;\n  font-size: 14px;\n  width: 100%;\n}\n.eg-table tr {\n  /*td[rowspan]{\n      border-bottom: 1px solid @tr-split-line;\n    }*/\n}\n.eg-table tr.eg-tr-split td {\n  border-bottom: 1px solid #dddddd;\n}\n.eg-table tr td,\n.eg-table tr th {\n  padding: 10px 15px;\n  text-align: left;\n  position: relative;\n}\n.eg-table tr th {\n  color: #999;\n}\n.eg-table tr td {\n  color: #333333;\n}\n.eg-table thead th {\n  border-bottom: 2px solid #dddddd;\n}\n.eg-table tbody tr:nth-of-type(2n) {\n  background: #f7f7f7;\n}\n/**面板*/\n.eg-panel {\n  margin-bottom: 20px;\n  background-color: #fff;\n  border: 1px solid #dddddd;\n  border-radius: 4px;\n  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);\n  overflow-x: hidden;\n}\n.eg-panel .eg-panel-header {\n  padding: 10px 15px;\n  border-bottom: 1px solid transparent;\n  border-radius: 3px 3px 0px 0px;\n  color: #333;\n  background-color: #eeeeee;\n  border-color: #ddd;\n}\n.eg-panel .eg-panel-footer {\n  background-color: #eeeeee;\n  border-top: 1px solid #ddd;\n  border-radius: 0px 0px 3px 3px;\n}\n/**添加padding*/\n.eg-panel-padding {\n  padding: 10px 15px;\n}\n.eg-tab-item {\n  cursor: pointer;\n  display: inline-block;\n  min-width: 100px;\n  box-sizing: border-box;\n  padding: 5px 15px;\n  text-align: center;\n  border-bottom: 1px solid #dddddd;\n}\n.eg-tab-item:hover {\n  text-decoration: none;\n  color: #f25300;\n  background: #dddddd;\n  border-bottom: 1px solid #dddddd;\n}\n.eg-tab-item.eg-tab-active {\n  color: #f25300;\n  border-bottom: 1px solid #f25300;\n  box-shadow: 0px -3px 0px 0px #f25300 inset;\n  cursor: default;\n}\n.eg-tab-item.eg-tab-active:hover {\n  background: transparent;\n  border-bottom: 1px solid #f25300;\n}\n.eg-select-container {\n  width: 300px;\n  position: relative;\n  display: inline-block;\n  margin-right: 15px;\n  /*下箭头*/\n}\n.eg-select-container ul {\n  background: #fff;\n  position: absolute;\n  width: inherit;\n  top: 39px;\n  left: 0px;\n}\n.eg-select-container ul li {\n  text-indent: 10px;\n  padding: 5px 0;\n  cursor: pointer;\n}\n.eg-select-container ul li:hover,\n.eg-select-container ul li:focus {\n  color: #ff717d;\n}\n.eg-select-container ul li.active {\n  color: #ff717d;\n}\n.eg-select-container .eg-select-ul {\n  display: none;\n}\n.eg-select-container .eg-select-show {\n  display: block;\n}\n.eg-select-container .eg-select-arrow {\n  position: absolute;\n  top: 12px;\n  right: 10px;\n  display: inline-block;\n  cursor: pointer;\n  z-index: 10;\n  border-top: 5px solid transparent;\n  border-right: 5px solid transparent;\n  border-left: 5px solid #bbbbbb;\n  border-bottom: 5px solid #bbbbbb;\n}\n.eg-select-container .eg-select-arrow {\n  transform: rotate(-45deg);\n}\n.eg-tooltip-container .eg-tooltip-wraper {\n  display: none;\n  position: absolute;\n  z-index: 9001;\n  background: #000;\n  opacity: 0.4;\n  color: #fff;\n  max-width: 300px;\n  font-size: 13px;\n  padding: 15px;\n  text-align: left;\n  border-radius: 3px;\n  box-shadow: 0px 1px 5px 2px #bbbbbb;\n  margin: 5px 0px;\n}\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip {\n  position: relative;\n}\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip .eg-tooltip-arrow {\n  border-width: 5px;\n  border-style: dashed;\n  border-color: transparent transparent #000 transparent;\n  position: absolute;\n  left: 18px;\n  top: -25px;\n  height: 0;\n  width: 0;\n  line-height: 0;\n}\n.eg-tooltip-container .eg-tooltip-show {\n  display: block;\n}\n.eg-marquee-container {\n  position: relative;\n  display: inline-block;\n  width: 380px;\n  height: auto;\n  padding: 0px 0px;\n  border: #cc3333 2px solid;\n  overflow: hidden;\n  border-radius: 3px;\n  background: #fff;\n}\n.eg-marquee-container .eg-marquee-new-tip {\n  position: absolute;\n  top: -26px;\n  left: -24px;\n  z-index: 90001;\n  background: #4fd564;\n  color: #fff;\n  width: 50px;\n  height: 61px;\n  transform: rotate(45deg);\n}\n.eg-marquee-container .eg-marquee-new-tip .eg-marquee-new {\n  display: inline-block;\n  position: relative;\n  top: 20px;\n  left: 31px;\n  transform: rotate(-45deg);\n}\n.eg-marquee-container .eg-marquee-check {\n  position: absolute;\n  right: 0px;\n  top: 0px;\n  z-index: 90001;\n}\n.eg-marquee-container img {\n  width: 100%;\n  height: auto;\n}\n.eg-marquee-container .eg-marquee-title {\n  color: #333333;\n  font-size: 16px;\n  font-weight: bolder;\n  line-height: 17px;\n  margin: 15px 10px 5px 10px;\n}\n.eg-marquee-container .eg-marquee-content {\n  color: #999;\n  font-size: 14px;\n  line-height: 15px;\n  margin: 10px 10px;\n}\n.eg-marquee-container .eg-marquee-tips {\n  position: relative;\n  color: #999;\n  font-size: 14px;\n  margin: 15px 10px 5px 10px;\n}\n.eg-marquee-container .eg-bars {\n  position: relative;\n  display: inline-block;\n  background: #999;\n  padding: 5px;\n  margin-right: 10px;\n}\n.eg-marquee-container .eg-bars:before,\n.eg-marquee-container .eg-bars:after {\n  position: absolute;\n  content: '';\n  display: inline-block;\n}\n.eg-marquee-container .eg-bars:before {\n  top: 0px;\n  left: 10px;\n  border-width: 5px;\n  border-style: dashed dashed solid;\n  border-color: transparent transparent transparent #999;\n}\n.eg-marquee-container .eg-bars:after {\n  top: 4px;\n  left: 7.5px;\n  z-index: 10;\n  border: 1.5px solid #fff;\n  border-radius: 5px;\n}\n.eg-input-checkboxs {\n  position: relative;\n  height: 35px;\n  top: -5px;\n  width: 35px;\n  display: inline-block;\n}\n.eg-input-checkboxs input[type=\"checkbox\"] {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  cursor: pointer;\n  pointer-events: all;\n  opacity: 0;\n  z-index: 2;\n  left: 0;\n}\n.eg-input-checkboxs .box {\n  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;\n  float: left;\n  position: relative;\n  display: block;\n  width: 16px;\n  margin-right: 10px;\n  margin-left: 0;\n  height: 24px;\n}\n.eg-input-checkboxs .box .checkbox {\n  width: 35px;\n  height: 35px;\n  border: 1px solid #999;\n  position: relative;\n  top: 5px;\n  left: 1px;\n  -webkit-border-radius: 2px;\n  -moz-border-radius: 2px;\n  border-radius: 2px;\n  background: #ffffff;\n}\n.eg-input-checkboxs .box .checkbox .round {\n  display: none;\n}\n.eg-input-checkboxs label {\n  float: left;\n  position: relative;\n  display: block;\n  line-height: 24px;\n}\n.eg-input-checkboxs-active .box .checkbox {\n  background: #ee5511;\n  border-color: #ee5511;\n}\n.eg-input-checkboxs-active .box .eg-icon-tick:before {\n  height: 9px;\n  width: 2px;\n  left: 11px;\n  top: 13px;\n}\n.eg-input-checkboxs-active .box .eg-icon-tick:after {\n  height: 17px;\n  width: 2px;\n  left: 19px;\n  top: 6px;\n}\n.eg-input-checkboxs-disabled .box .checkbox {\n  background: #eeeeee;\n  color: #999;\n  border-color: #cccccc;\n}\n.eg-input-checkboxs-disabled .box .eg-icon-tick:before {\n  background-color: #fefefe;\n}\n.eg-input-checkboxs-disabled .box .eg-icon-tick:after {\n  background-color: #fefefe;\n}\n.eg-input-checkboxs-disabled label {\n  color: #999;\n}\n.eg-input-checkboxs-disabled .box .checkbox {\n  background: #cccccc;\n  color: #999;\n}\n.eg-list .eg-item {\n  background-color: #ffffff;\n  color: #333333;\n  position: relative;\n  display: block;\n  padding: 10px 15px;\n  border-bottom: 1px solid #dddddd;\n  font-size: 14px;\n}\n.eg-list .eg-item:last-child {\n  border-bottom: none;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 24 */
+/* 25 */
 /***/ function(module, exports) {
 
 	/*
@@ -329,7 +408,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 25 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -554,71 +633,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 26 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Created by mac on 15/9/7.
-	 */
-	'use strict';
-
-	exports.__esModule = true;
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var _react = __webpack_require__(27);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var Grid = (function (_Component) {
-	    _inherits(Grid, _Component);
-
-	    function Grid() {
-	        _classCallCheck(this, Grid);
-
-	        _Component.apply(this, arguments);
-	    }
-
-	    Grid.prototype.render = function render() {
-
-	        return _react2['default'].createElement(
-	            'div',
-	            this.props,
-	            this.props.children
-	        );
-	    };
-
-	    _createClass(Grid, null, [{
-	        key: 'propTypes',
-	        value: {},
-	        enumerable: true
-	    }]);
-
-	    return Grid;
-	})(_react.Component);
-
-	exports['default'] = Grid;
-	module.exports = exports['default'];
-
-/***/ },
 /* 27 */
-/***/ function(module, exports) {
-
-	module.exports = __WEBPACK_EXTERNAL_MODULE_27__;
-
-/***/ },
-/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * Created by mac on 15/9/7.
-	 */
 	'use strict';
 
 	exports.__esModule = true;
@@ -633,7 +650,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
@@ -641,48 +658,57 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var Col = (function (_Component) {
-	    _inherits(Col, _Component);
+	var _utilsClassNameMixin = __webpack_require__(30);
 
-	    function Col() {
-	        _classCallCheck(this, Col);
+	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+
+	/**
+	 * 布局组件
+	 * @class Grid
+	 * @module grid
+	 * @extends Component
+	 * @constructor
+	 * @since 0.1.0
+	 * */
+
+	var Grid = (function (_Component) {
+	    _inherits(Grid, _Component);
+
+	    function Grid() {
+	        _classCallCheck(this, _Grid);
 
 	        _Component.apply(this, arguments);
 	    }
 
-	    Col.prototype.getWidthClass = function getWidthClass() {
-	        var className = ['eg-sm-' + this.props.sm];
-
-	        if (this.props.end) {
-	            className.push('eg-end');
-	        }
-
-	        return className.join(' ');
-	    };
-
-	    Col.prototype.render = function render() {
+	    Grid.prototype.render = function render() {
 
 	        return _react2['default'].createElement(
 	            'div',
-	            _extends({}, this.props, { className: _classnames2['default'](this.getWidthClass(), this.props.className) }),
+	            _extends({}, this.props, {
+	                className: _classnames2['default'](this.getClassName('grid'), this.props.className) }),
 	            this.props.children
 	        );
 	    };
 
-	    _createClass(Col, null, [{
+	    _createClass(Grid, null, [{
 	        key: 'propTypes',
-	        value: {
-	            sm: _react.PropTypes.number.isRequired,
-	            end: _react.PropTypes.bool
-	        },
+	        value: {},
 	        enumerable: true
 	    }]);
 
-	    return Col;
+	    var _Grid = Grid;
+	    Grid = _utilsClassNameMixin2['default'](Grid) || Grid;
+	    return Grid;
 	})(_react.Component);
 
-	exports['default'] = Col;
+	exports['default'] = Grid;
 	module.exports = exports['default'];
+
+/***/ },
+/* 28 */
+/***/ function(module, exports) {
+
+	module.exports = __WEBPACK_EXTERNAL_MODULE_28__;
 
 /***/ },
 /* 29 */
@@ -742,6 +768,298 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
+	/**
+	 * Created by mac on 15/9/7.
+	 */
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _constantsJs = __webpack_require__(31);
+
+	var consts = _constantsJs.classConstants;
+
+	exports['default'] = function (obj) {
+	    /**
+	     * 给className添加前缀后返回className
+	     * @method getClassName
+	     * @param name {String} 从该字符串中去查找
+	     * @param pre {Boolean} 是否添加Component中定义的class前缀，默认添加
+	     * @return {String}
+	     * */
+	    obj.prototype.getClassName = function (name) {
+	        var _this2 = this;
+
+	        var pre = arguments.length <= 1 || arguments[1] === undefined ? true : arguments[1];
+
+	        if (name) {
+	            var _ret = (function () {
+	                name = name.split(' ');
+	                var list = [],
+	                    _this = _this2;
+	                name.forEach(function (item) {
+	                    list.push(_this.setPrefix(item, pre));
+	                });
+
+	                return {
+	                    v: list.join(' ')
+	                };
+	            })();
+
+	            if (typeof _ret === 'object') return _ret.v;
+	        }
+	        return '';
+	    };
+	    /**
+	     * 验证props中的样式是否符合规则
+	     * @method getClassNames
+	     * @param props {Object} 从该对象中去查找
+	     * @param pre {Boolean} 是否添加Component中定义的class前缀，默认添加
+	     * @return {String}
+	     * */
+	    obj.prototype.getClassNames = function (props) {
+	        var pre = arguments.length <= 1 || arguments[1] === undefined ? true : arguments[1];
+
+	        var clazz = {};
+	        for (var item in props) {
+	            if (props[item] && item === consts[item]) {
+	                clazz[this.getClassName(item, pre)] = true;
+	            }
+	        }
+	        return clazz;
+	    };
+	    /**
+	     * 给多个className添加前缀后返回
+	     * @method getClassNamesForArguments
+	     * @param arguments {Arguments String} 多个class参数
+	     * @return {String}
+	     * */
+	    obj.prototype.getClassNamesForArguments = function () {
+	        var arg = arguments;
+	        var arr = [];
+	        var _this = this;
+
+	        if (arg && arg.length > 0) {
+	            for (var i = 0, len = arg.length; i < len; i++) {
+	                if (arg[i]) {
+	                    arr.push(_this.getClassName(arg[i]));
+	                }
+	            }
+	        }
+
+	        return arr.join(' ');
+	    };
+	    /**
+	     * 设置css类名前缀
+	     * @method setPrefix
+	     * @param name{String} class名字
+	     * @param pre{Boolean} 是否添加前缀
+	     * @return {String}
+	     * */
+	    obj.prototype.setPrefix = function (name) {
+	        var pre = arguments.length <= 1 || arguments[1] === undefined ? true : arguments[1];
+
+	        var str = consts.classNameNamespace;
+	        if (pre && this.props.classPrefix) {
+	            str += '-' + this.props.classPrefix;
+	        }
+	        if (name != this.props.classPrefix) {
+	            str += '-' + name;
+	        }
+
+	        return str;
+	    };
+
+	    /**
+	     * 检查元素是否存在样式名
+	     * @method hasClass
+	     * @param obj {Object} 元素
+	     * @param cls {String} 需要检查的样式名
+	     * @return {Boolean}
+	     * */
+	    obj.prototype.hasClass = function (obj, cls) {
+	        return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
+	    };
+
+	    /**
+	     * 给元素增加一个样式名
+	     * @method addClass
+	     * @param obj {Object} 元素
+	     * @param cls {String} 样式名
+	     * */
+	    obj.prototype.addClass = function (obj, cls) {
+	        if (!this.hasClass(obj, cls)) obj.className += " " + cls;
+	    };
+	    /**
+	     * 给元素删除一个样式名
+	     * @method removeClass
+	     * @param obj {Object} 元素
+	     * @param cls {String} 样式名
+	     * */
+	    obj.prototype.removeClass = function (obj, cls) {
+	        if (this.hasClass(obj, cls)) {
+	            var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+	            obj.className = obj.className.replace(reg, ' ');
+	        }
+	    };
+	};
+
+	module.exports = exports['default'];
+
+/***/ },
+/* 31 */
+/***/ function(module, exports) {
+
+	/**
+	 * Created by mac on 15/9/7.
+	 */
+	//classname前缀
+
+	'use strict';
+
+	exports.__esModule = true;
+	function setNamespace(className) {
+	  return '' + className;
+	}
+	var CLASS_NAME_NAMESPACE = 'eg';
+
+	var classConstants = {
+	  /**
+	   * 状态
+	   * */
+	  //禁用
+	  disabled: setNamespace('disabled'),
+	  //启用
+	  enable: setNamespace('enable'),
+	  block: setNamespace('block'),
+	  //垂直
+	  tacked: setNamespace('tacked'),
+	  //宽度自适应
+	  justify: setNamespace('justify'),
+	  //选中
+	  active: setNamespace('active'),
+	  //大小
+	  size: setNamespace('size'),
+	  //圆形样式
+	  radius: setNamespace('radius'),
+	  //隨圆
+	  round: setNamespace('round'),
+	  //向上箭头
+	  'arrow-up': setNamespace('arrow-up'),
+	  //向下箭头
+	  'arrow-down': setNamespace('arrow-down'),
+
+	  /**
+	   * 颜色
+	   * */
+	  //成功样式
+	  success: setNamespace('success'),
+	  //错误红色
+	  error: setNamespace('error'),
+	  //警告warning
+	  warning: setNamespace('warning'),
+	  //危险danger
+	  danger: setNamespace('danger'),
+	  //展示
+	  show: setNamespace('show'),
+	  white: setNamespace('white'),
+	  classNameNamespace: CLASS_NAME_NAMESPACE
+	};
+	exports.classConstants = classConstants;
+
+/***/ },
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(28);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _classnames = __webpack_require__(29);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	/**
+	 * 列
+	 * @class Col
+	 * @module grid
+	 * @extends Component
+	 * @constructor
+	 * @since 0.1.0
+	 * */
+
+	var Col = (function (_Component) {
+	    _inherits(Col, _Component);
+
+	    function Col() {
+	        _classCallCheck(this, Col);
+
+	        _Component.apply(this, arguments);
+	    }
+
+	    Col.prototype.getWidthClass = function getWidthClass() {
+	        var className = ['eg-sm-' + (this.props.sm ? this.props.sm : '12')];
+
+	        if (this.props.end) {
+	            className.push('eg-end');
+	        }
+
+	        return className.join(' ');
+	    };
+
+	    Col.prototype.render = function render() {
+
+	        return _react2['default'].createElement(
+	            'div',
+	            _extends({}, this.props, { className: _classnames2['default'](this.getWidthClass(), this.props.className) }),
+	            this.props.children
+	        );
+	    };
+
+	    _createClass(Col, null, [{
+	        key: 'propTypes',
+	        value: {
+	            /**
+	             * 占几列，共12列
+	             * @property egSize
+	             * @type Integer
+	             * */
+	            sm: _react.PropTypes.number.isRequired,
+	            /**
+	             * 是否是最后一列
+	             * @property end
+	             * @type Boolean
+	             * @default false
+	             * */
+	            end: _react.PropTypes.bool
+	        },
+	        enumerable: true
+	    }]);
+
+	    return Col;
+	})(_react.Component);
+
+	exports['default'] = Col;
+	module.exports = exports['default'];
+
+/***/ },
+/* 33 */
+/***/ function(module, exports, __webpack_require__) {
+
 	//import RowLess from './row.less';
 	'use strict';
 
@@ -757,13 +1075,22 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
 	var _classnames = __webpack_require__(29);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
+
+	/**
+	 * 行
+	 * @class Row
+	 * @module grid
+	 * @extends Component
+	 * @constructor
+	 * @since 0.1.0
+	 * */
 
 	var Row = (function (_Component) {
 	    _inherits(Row, _Component);
@@ -796,7 +1123,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 31 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -816,11 +1143,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(32);
+	var _utilsClassNameMixin = __webpack_require__(30);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
@@ -972,210 +1299,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 32 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Created by mac on 15/9/7.
-	 */
-	'use strict';
-
-	exports.__esModule = true;
-
-	var _constantsJs = __webpack_require__(33);
-
-	var consts = _constantsJs.classConstants;
-
-	exports['default'] = function (obj) {
-	    /**
-	     * 给className添加前缀后返回className
-	     * @method getClassName
-	     * @param name {String} 从该字符串中去查找
-	     * @param pre {Boolean} 是否添加Component中定义的class前缀，默认添加
-	     * @return {String}
-	     * */
-	    obj.prototype.getClassName = function (name) {
-	        var _this2 = this;
-
-	        var pre = arguments.length <= 1 || arguments[1] === undefined ? true : arguments[1];
-
-	        if (name) {
-	            var _ret = (function () {
-	                name = name.split(' ');
-	                var list = [],
-	                    _this = _this2;
-	                name.forEach(function (item) {
-	                    list.push(_this.setPrefix(item, pre));
-	                });
-
-	                return {
-	                    v: list.join(' ')
-	                };
-	            })();
-
-	            if (typeof _ret === 'object') return _ret.v;
-	        }
-	        return '';
-	    };
-	    /**
-	     * 验证props中的样式是否符合规则
-	     * @method getClassNames
-	     * @param props {Object} 从该对象中去查找
-	     * @param pre {Boolean} 是否添加Component中定义的class前缀，默认添加
-	     * @return {String}
-	     * */
-	    obj.prototype.getClassNames = function (props) {
-	        var pre = arguments.length <= 1 || arguments[1] === undefined ? true : arguments[1];
-
-	        var clazz = {};
-	        for (var item in props) {
-	            if (props[item] && item === consts[item]) {
-	                clazz[this.getClassName(item, pre)] = true;
-	            }
-	        }
-	        return clazz;
-	    };
-	    /**
-	     * 给多个className添加前缀后返回
-	     * @method getClassNamesForArguments
-	     * @param arguments {Arguments String} 多个class参数
-	     * @return {String}
-	     * */
-	    obj.prototype.getClassNamesForArguments = function () {
-	        var arg = arguments;
-	        var arr = [];
-	        var _this = this;
-
-	        if (arg && arg.length > 0) {
-	            for (var i = 0, len = arg.length; i < len; i++) {
-	                if (arg[i]) {
-	                    arr.push(_this.getClassName(arg[i]));
-	                }
-	            }
-	        }
-
-	        return arr.join(' ');
-	    };
-	    /**
-	     * 设置css类名前缀
-	     * @method setPrefix
-	     * @param name{String} class名字
-	     * @param pre{Boolean} 是否添加前缀
-	     * @return {String}
-	     * */
-	    obj.prototype.setPrefix = function (name) {
-	        var pre = arguments.length <= 1 || arguments[1] === undefined ? true : arguments[1];
-
-	        var str = consts.classNameNamespace;
-	        if (pre && this.props.classPrefix) {
-	            str += '-' + this.props.classPrefix;
-	        }
-	        if (name != this.props.classPrefix) {
-	            str += '-' + name;
-	        }
-
-	        return str;
-	    };
-
-	    /**
-	     * 检查元素是否存在样式名
-	     * @method hasClass
-	     * @param obj {Object} 元素
-	     * @param cls {String} 需要检查的样式名
-	     * @return {Boolean}
-	     * */
-	    obj.prototype.hasClass = function (obj, cls) {
-	        return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
-	    };
-
-	    /**
-	     * 给元素增加一个样式名
-	     * @method addClass
-	     * @param obj {Object} 元素
-	     * @param cls {String} 样式名
-	     * */
-	    obj.prototype.addClass = function (obj, cls) {
-	        if (!this.hasClass(obj, cls)) obj.className += " " + cls;
-	    };
-	    /**
-	     * 给元素删除一个样式名
-	     * @method removeClass
-	     * @param obj {Object} 元素
-	     * @param cls {String} 样式名
-	     * */
-	    obj.prototype.removeClass = function (obj, cls) {
-	        if (this.hasClass(obj, cls)) {
-	            var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
-	            obj.className = obj.className.replace(reg, ' ');
-	        }
-	    };
-	};
-
-	module.exports = exports['default'];
-
-/***/ },
-/* 33 */
-/***/ function(module, exports) {
-
-	/**
-	 * Created by mac on 15/9/7.
-	 */
-	//classname前缀
-
-	'use strict';
-
-	exports.__esModule = true;
-	function setNamespace(className) {
-	  return '' + className;
-	}
-	var CLASS_NAME_NAMESPACE = 'eg';
-
-	var classConstants = {
-	  /**
-	   * 状态
-	   * */
-	  //禁用
-	  disabled: setNamespace('disabled'),
-	  //启用
-	  enable: setNamespace('enable'),
-	  block: setNamespace('block'),
-	  //垂直
-	  tacked: setNamespace('tacked'),
-	  //宽度自适应
-	  justify: setNamespace('justify'),
-	  //选中
-	  active: setNamespace('active'),
-	  //大小
-	  size: setNamespace('size'),
-	  //圆形样式
-	  radius: setNamespace('radius'),
-	  //隨圆
-	  round: setNamespace('round'),
-	  //向上箭头
-	  'arrow-up': setNamespace('arrow-up'),
-	  //向下箭头
-	  'arrow-down': setNamespace('arrow-down'),
-
-	  /**
-	   * 颜色
-	   * */
-	  //成功样式
-	  success: setNamespace('success'),
-	  //错误红色
-	  error: setNamespace('error'),
-	  //警告warning
-	  warning: setNamespace('warning'),
-	  //危险danger
-	  danger: setNamespace('danger'),
-	  //展示
-	  show: setNamespace('show'),
-	  white: setNamespace('white'),
-	  classNameNamespace: CLASS_NAME_NAMESPACE
-	};
-	exports.classConstants = classConstants;
-
-/***/ },
-/* 34 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1195,11 +1319,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(32);
+	var _utilsClassNameMixin = __webpack_require__(30);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
@@ -1281,7 +1405,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 35 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1298,11 +1422,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(32);
+	var _utilsClassNameMixin = __webpack_require__(30);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
@@ -1463,7 +1587,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 36 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1485,13 +1609,25 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _InputJs = __webpack_require__(35);
+	var _InputJs = __webpack_require__(36);
 
 	var _InputJs2 = _interopRequireDefault(_InputJs);
+
+	/**
+	 * 单选按钮组组件
+	 * @class RadioGroup
+	 * @module form
+	 * @extends Component
+	 * @constructor
+	 * @since 0.1.0
+	 * @demo src/input.js {js}
+	 * @demo input.html {html}
+	 * @show true
+	 * */
 
 	var RadioGroup = (function (_Component) {
 	    _inherits(RadioGroup, _Component);
@@ -1499,7 +1635,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(RadioGroup, null, [{
 	        key: 'propTypes',
 	        value: {
-	            name: _react.PropTypes.string.required,
+	            /**
+	             * radio name
+	             * @property name
+	             * @type String
+	             * */
+	            name: _react.PropTypes.string,
+	            /**
+	             * 默认选中项
+	             * @property defaultChecked
+	             * @type String
+	             * */
 	            defaultChecked: _react.PropTypes.string
 	        },
 	        enumerable: true
@@ -1561,7 +1707,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 37 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1581,11 +1727,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(32);
+	var _utilsClassNameMixin = __webpack_require__(30);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
@@ -1594,8 +1740,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _classnames2 = _interopRequireDefault(_classnames);
 
 	/**
+	 * 标签
 	 * @class Label
-	 * @description   标签
+	 * @module ui
+	 * @extends Component
+	 * @constructor
+	 * @since 0.1.0
+	 * @demo src/label.js {js}
+	 * @demo label.html {html}
+	 * @show true
 	 * */
 
 	var Label = (function (_Component) {
@@ -1605,7 +1758,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        key: 'propTypes',
 	        value: {
 	            url: _react.PropTypes.string,
-	            clickCallback: _react.PropTypes.fun
+	            clickCallback: _react.PropTypes.func
 	        },
 	        enumerable: true
 	    }, {
@@ -1633,13 +1786,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    Label.prototype.clickHandler = function clickHandler(e) {
 	        var clickCallback = this.props.clickCallback;
-
+	        var target = e.target;
 	        //,
 	        //     active = !this.state.active;
 	        //this.setState({
 	        //    active:active
 	        //});
-	        clickCallback && clickCallback(!this.props.active, e.target);
+	        clickCallback && clickCallback(target.getAttribute('value'), target.innerHTML, target, !this.props.active);
 	    };
 
 	    Label.prototype.render = function render() {
@@ -1663,7 +1816,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 38 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1692,11 +1845,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(32);
+	var _utilsClassNameMixin = __webpack_require__(30);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
@@ -1704,11 +1857,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _GridJs = __webpack_require__(26);
+	var _GridJs = __webpack_require__(27);
 
 	var _GridJs2 = _interopRequireDefault(_GridJs);
 
-	var _RowJs = __webpack_require__(30);
+	var _RowJs = __webpack_require__(33);
 
 	var _RowJs2 = _interopRequireDefault(_RowJs);
 
@@ -1753,7 +1906,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	    Crumb.prototype.render = function render() {
-	        debugger;
 	        var length = this.props.children.length;
 	        var li = this.props.children.map(function (item, index) {
 	            return _react2['default'].createElement(
@@ -1787,12 +1939,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 39 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * Created by panqianjin on 15/11/4.
-	 */
 	'use strict';
 
 	exports.__esModule = true;
@@ -1805,11 +1954,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(32);
+	var _utilsClassNameMixin = __webpack_require__(30);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
@@ -1817,23 +1966,23 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _InputJs = __webpack_require__(35);
+	var _InputJs = __webpack_require__(36);
 
 	var _InputJs2 = _interopRequireDefault(_InputJs);
 
-	var _ButtonJs = __webpack_require__(31);
+	var _ButtonJs = __webpack_require__(34);
 
 	var _ButtonJs2 = _interopRequireDefault(_ButtonJs);
 
-	var _RowJs = __webpack_require__(30);
+	var _RowJs = __webpack_require__(33);
 
 	var _RowJs2 = _interopRequireDefault(_RowJs);
 
-	var _ColJs = __webpack_require__(28);
+	var _ColJs = __webpack_require__(32);
 
 	var _ColJs2 = _interopRequireDefault(_ColJs);
 
-	var _GridJs = __webpack_require__(26);
+	var _GridJs = __webpack_require__(27);
 
 	var _GridJs2 = _interopRequireDefault(_GridJs);
 
@@ -1870,17 +2019,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	    Search.prototype.render = function render() {
 	        return _react2['default'].createElement(
 	            _GridJs2['default'],
-	            null,
+	            { style: { minWidth: '240px' } },
 	            _react2['default'].createElement(
-	                _RowJs2['default'],
+	                'div',
 	                { className: _classnames2['default'](this.getClassNamesForArguments('wrapper', 'icon')) },
-	                _react2['default'].createElement(_InputJs2['default'], { ref: this.props.name, id: this.props.id, placeholder: this.props.placeholder,
-	                    onChange: this.changeValue.bind(this) })
-	            ),
-	            _react2['default'].createElement(
-	                _ButtonJs2['default'],
-	                { radius: true, egSize: 'xs', onClick: this.submitSearch.bind(this) },
-	                '搜索'
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: _classnames2['default'](this.getClassNamesForArguments('content')) },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { style: { width: '100%' } },
+	                        _react2['default'].createElement(_InputJs2['default'], { ref: this.props.name, id: this.props.id, placeholder: this.props.placeholder,
+	                            onChange: this.changeValue.bind(this), onKeyPress: this.keyIn.bind(this), onKeyPress: this.keyIn.bind(this) })
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    _ButtonJs2['default'],
+	                    { radius: true, egSize: 'xs', onClick: this.submitSearch.bind(this) },
+	                    '搜索'
+	                )
 	            )
 	        );
 	    };
@@ -1897,6 +2054,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        });
 	    };
 
+	    Search.prototype.keyIn = function keyIn(event) {
+	        if (event.keyCode == 13) {
+	            this.changeValue();
+	        }
+	    };
+
 	    /**
 	     * @method submit search
 	     * @param none
@@ -1908,6 +2071,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.props.callBack && this.props.callBack(val);
 	    };
 
+	    Search.prototype.keyIn = function keyIn(event) {
+	        if (event.charCode == 13) {
+	            this.submitSearch();
+	        }
+	    };
+
 	    var _Search = Search;
 	    Search = _utilsClassNameMixin2['default'](Search) || Search;
 	    return Search;
@@ -1917,7 +2086,252 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 40 */
+/* 41 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Created by panqianjin on 15/11/12.
+	 */
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(28);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _utilsClassNameMixin = __webpack_require__(30);
+
+	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+
+	var _classnames3 = __webpack_require__(29);
+
+	var _classnames4 = _interopRequireDefault(_classnames3);
+
+	var _InputJs = __webpack_require__(36);
+
+	var _InputJs2 = _interopRequireDefault(_InputJs);
+
+	var _RowJs = __webpack_require__(33);
+
+	var _RowJs2 = _interopRequireDefault(_RowJs);
+
+	var _ColJs = __webpack_require__(32);
+
+	var _ColJs2 = _interopRequireDefault(_ColJs);
+
+	var _GridJs = __webpack_require__(27);
+
+	var _GridJs2 = _interopRequireDefault(_GridJs);
+
+	var Select = (function (_Component) {
+	    _inherits(Select, _Component);
+
+	    _createClass(Select, null, [{
+	        key: 'defaultProps',
+	        value: {
+	            callback: null,
+	            name: 'select',
+	            id: '1',
+	            classPrefix: 'select',
+	            componentTag: 'div',
+	            value: '',
+	            show: false,
+	            target: '0'
+	        },
+	        enumerable: true
+	    }]);
+
+	    function Select(props, context) {
+	        _classCallCheck(this, _Select);
+
+	        _Component.call(this, props, context);
+	        this.state = {
+	            show: this.props.show,
+	            value: this.props.value
+	        };
+	    }
+
+	    Select.prototype.componentDidMount = function componentDidMount() {
+	        var _this = this;
+	        var selectContair = ReactDOM.findDOMNode(this.refs.selectContair);
+	        document.addEventListener('click', function (e) {
+	            if (_this.isParent(e.target, selectContair)) {
+	                console.dir('不要动');
+	            } else {
+	                _this.hideUl();
+	            }
+	        }, false);
+	    };
+
+	    Select.prototype.isParent = function isParent(obj, parentObj) {
+	        while (obj != undefined && obj != null) {
+	            if (obj == parentObj) {
+	                return true;
+	            }
+	            obj = obj.parentNode;
+	        }
+	        return false;
+	    };
+
+	    Select.prototype.showUl = function showUl() {
+	        this.setState({
+	            show: true
+	        });
+	    };
+
+	    Select.prototype.showAutoUl = function showAutoUl() {
+	        this.setState({
+	            show: true
+	        });
+	        this.changeValue();
+	    };
+
+	    Select.prototype.toogleUl = function toogleUl() {
+	        this.setState({
+	            show: !this.state.show
+	        });
+	    };
+
+	    Select.prototype.callBacks = function callBacks() {
+	        var val = this.state.value;
+	        this.setState({
+	            show: false
+	        });
+	        this.props.callback && this.props.callback(val);
+	    };
+
+	    Select.prototype.handlerValue = function handlerValue(event) {
+	        this.setState({
+	            value: event.target.value
+	        });
+	        this.changeValue();
+	    };
+
+	    Select.prototype.changeValue = function changeValue() {
+	        clearTimeout(this.timeout);
+	        this.timeout = setTimeout(this.callBacks.bind(this), 2000);
+	    };
+
+	    Select.prototype.chooseItem = function chooseItem(event) {
+	        //debugger
+	        //react 避免直接取dom
+	        //这么写的原因在于Input是外层包了div，直接拿不到input。。
+	        var inputObj = ReactDOM.findDOMNode(this.refs.select);
+	        //inputObj.value = event.target.textContent;
+	        this.setState({
+	            show: !this.state.show,
+	            value: event.target.textContent
+	        });
+	        inputObj.focus();
+	        this.changeValue();
+	    };
+
+	    Select.prototype.hideUl = function hideUl() {
+	        this.setState({
+	            show: false
+	        });
+	    };
+
+	    Select.prototype.keyIn = function keyIn(event) {
+	        //debugger
+	        if (event.keyCode == 40) {
+	            this.setState({
+	                show: true
+	            });
+	            var _this = this;
+	            var selectUl = ReactDOM.findDOMNode(this.refs.selectUl);
+	            if (_this.isParent(event.target, selectUl)) {
+	                event.target.nextSibling ? event.target.nextSibling.focus() : event.target.focus();
+	            } else {
+	                selectUl.children[0].focus();
+	            }
+	        } else if (event.keyCode == 13) {
+	            this.setState({
+	                show: false
+	            });
+	            this.changeValue();
+	        }
+	    };
+
+	    Select.prototype.keyInUl = function keyInUl(e) {
+	        debugger;
+	        if (e.charCode == 13) {
+	            this.setState({
+	                show: false
+	            });
+	            this.chooseItem();
+	            this.changeValue();
+	        }
+	    };
+
+	    Select.prototype.renderSelect = function renderSelect() {
+	        var _classnames,
+	            _this2 = this;
+
+	        return _react2['default'].createElement(
+	            _GridJs2['default'],
+	            { ref: 'selectContair', className: _classnames4['default'](this.getClassNamesForArguments('container')) },
+	            _react2['default'].createElement(_InputJs2['default'], { ref: this.props.name, value: this.state.value, onClick: this.showUl.bind(this), onChange: this.handlerValue.bind(this), onKeyDown: this.keyIn.bind(this) }),
+	            _react2['default'].createElement('i', { className: _classnames4['default'](this.getClassName('arrow')), onClick: this.toogleUl.bind(this) }),
+	            _react2['default'].createElement(
+	                'ul',
+	                { ref: 'selectUl', className: _classnames4['default'](this.getClassNamesForArguments('ul'), (_classnames = {}, _classnames[this.getClassName('show')] = this.state.show, _classnames)), onKeyPress: this.keyInUl.bind(this) },
+	                this.props.children.map(function (item) {
+	                    return _react2['default'].createElement(
+	                        'li',
+	                        { value: item.props.children, onClick: _this2.chooseItem.bind(_this2) },
+	                        item.props.children
+	                    );
+	                })
+	            )
+	        );
+	    };
+
+	    Select.prototype.renderAuto = function renderAuto() {
+	        var _classnames2,
+	            _this3 = this;
+
+	        return _react2['default'].createElement(
+	            _GridJs2['default'],
+	            { className: _classnames4['default'](this.getClassNamesForArguments('container')) },
+	            _react2['default'].createElement(_InputJs2['default'], { ref: this.props.name, value: this.state.value, onChange: this.showAutoUl.bind(this) }),
+	            _react2['default'].createElement(
+	                'ul',
+	                { className: _classnames4['default'](this.getClassNamesForArguments('ul'), (_classnames2 = {}, _classnames2[this.getClassName('show')] = this.state.show, _classnames2)) },
+	                this.props.children.map(function (item) {
+	                    return _react2['default'].createElement(
+	                        'li',
+	                        { value: item.props.children, onKeyPress: _this3.keyInUl.bind(_this3), onClick: _this3.chooseItem.bind(_this3) },
+	                        item.props.children
+	                    );
+	                })
+	            )
+	        );
+	    };
+
+	    Select.prototype.render = function render() {
+	        return this.props.auto ? this.renderAuto() : this.renderSelect();
+	    };
+
+	    var _Select = Select;
+	    Select = _utilsClassNameMixin2['default'](Select) || Select;
+	    return Select;
+	})(_react.Component);
+
+	exports['default'] = Select;
+	module.exports = exports['default'];
+
+/***/ },
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1939,37 +2353,44 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(32);
+	var _utilsClassNameMixin = __webpack_require__(30);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames2 = __webpack_require__(29);
 
-	var _classnames2 = _interopRequireDefault(_classnames);
+	var _classnames3 = _interopRequireDefault(_classnames2);
 
-	var _GridJs = __webpack_require__(26);
+	var _GridJs = __webpack_require__(27);
 
 	var _GridJs2 = _interopRequireDefault(_GridJs);
 
-	var _RowJs = __webpack_require__(30);
+	var _RowJs = __webpack_require__(33);
 
 	var _RowJs2 = _interopRequireDefault(_RowJs);
 
-	var _ColJs = __webpack_require__(28);
+	var _ColJs = __webpack_require__(32);
 
 	var _ColJs2 = _interopRequireDefault(_ColJs);
 
-	var _LabelJs = __webpack_require__(37);
+	var _LabelJs = __webpack_require__(38);
 
 	var _LabelJs2 = _interopRequireDefault(_LabelJs);
 
 	/**
-	 * @class Label
-	 * @description   标签组
+	 * 标签组
+	 * @class LabelGroup
+	 * @module ui
+	 * @extends Component
+	 * @constructor
+	 * @since 0.1.0
+	 * @demo src/label.js {js}
+	 * @demo label.html {html}
+	 * @show true
 	 * */
 
 	var LabelGroup = (function (_Component) {
@@ -1978,7 +2399,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(LabelGroup, null, [{
 	        key: 'propTypes',
 	        value: {
+	            /**
+	             * 左侧总标题
+	             * @property title
+	             * @type String
+	             * */
 	            title: _react.PropTypes.string,
+	            /**
+	             * 普通标签列表
+	             * @property simple
+	             * @type Boolean
+	             * @default false
+	             * */
 	            simple: _react.PropTypes.bool
 	        },
 	        enumerable: true
@@ -2001,18 +2433,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	        };
 	    }
 
-	    LabelGroup.prototype.activeHandler = function activeHandler(callback, active, target) {
+	    LabelGroup.prototype.activeHandler = function activeHandler(callback, value, text, target, active) {
 	        //debugger;
 
 	        if (this.state.checked != target.innerHTML) {
 	            this.setState({
-	                checked: target.innerHTML
+	                checked: text
 	            });
+	            callback && callback(value, text, target, active);
 	        }
 	    };
 
 	    LabelGroup.prototype.render = function render() {
-	        var _this2 = this;
+	        var _classnames,
+	            _this2 = this;
 
 	        var _this = this;
 	        var options = _react2['default'].Children.map(this.props.children, function (option) {
@@ -2026,7 +2460,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _LabelJs2['default'],
 	                _extends({}, other, {
 	                    url: url ? url : _this.props.url,
-	                    value: option.props.children,
+	                    value: option.props.value ? option.props.value : option.props.children,
 	                    clickCallback: _this.activeHandler.bind(_this, clickCallback ? clickCallback : _this.props.clickCallback),
 	                    active: _this2.props.simple ? false : option.props.children === _this.state.checked }),
 	                option.props.children
@@ -2035,11 +2469,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        var labelCroupContent = this.props.simple ? _react2['default'].createElement(
 	            'div',
-	            { className: _classnames2['default'](this.getClassName('group-simple')) },
+	            { className: _classnames3['default'](this.getClassName('group-simple')) },
 	            options
 	        ) : _react2['default'].createElement(
 	            _GridJs2['default'],
-	            { className: _classnames2['default'](this.getClassName('group')) },
+	            { className: _classnames3['default'](this.getClassName('group'), (_classnames = {}, _classnames[this.getClassName('end')] = !!this.props.end, _classnames)) },
 	            _react2['default'].createElement(
 	                _RowJs2['default'],
 	                null,
@@ -2048,7 +2482,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    { sm: 1 },
 	                    _react2['default'].createElement(
 	                        'div',
-	                        { className: _classnames2['default'](this.getClassName('title')) },
+	                        { className: _classnames3['default'](this.getClassName('title')) },
 	                        this.props.title
 	                    )
 	                ) : null,
@@ -2071,7 +2505,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 41 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2089,11 +2523,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(32);
+	var _utilsClassNameMixin = __webpack_require__(30);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
@@ -2101,19 +2535,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _classnames3 = _interopRequireDefault(_classnames2);
 
-	var _ButtonJs = __webpack_require__(31);
+	var _ButtonJs = __webpack_require__(34);
 
 	var _ButtonJs2 = _interopRequireDefault(_ButtonJs);
 
-	var _RowJs = __webpack_require__(30);
+	var _RowJs = __webpack_require__(33);
 
 	var _RowJs2 = _interopRequireDefault(_RowJs);
 
-	var _ColJs = __webpack_require__(28);
+	var _ColJs = __webpack_require__(32);
 
 	var _ColJs2 = _interopRequireDefault(_ColJs);
 
-	var _GridJs = __webpack_require__(26);
+	var _GridJs = __webpack_require__(27);
 
 	var _GridJs2 = _interopRequireDefault(_GridJs);
 
@@ -2203,15 +2637,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	            _RowJs2['default'],
 	            { className: _classnames3['default'](this.getClassNamesForArguments(this.props.classPrefix)) },
 	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                { className: _classnames3['default'](this.getClassNamesForArguments('content')) },
+	                _ColJs2['default'],
+	                null,
 	                _react2['default'].createElement(
 	                    _RowJs2['default'],
-	                    null,
-	                    _react2['default'].createElement(_ColJs2['default'], { className: _classnames3['default'](this.getClassNamesForArguments(this.props.type)) }),
+	                    { className: _classnames3['default'](this.getClassNamesForArguments('content')) },
+	                    _react2['default'].createElement('div', { style: { padding: '5px 15px', float: 'left' }, className: _classnames3['default'](this.getClassNamesForArguments(this.props.type)) }),
 	                    _react2['default'].createElement(
-	                        _ColJs2['default'],
-	                        null,
+	                        'div',
+	                        { style: { padding: '5px 15px', float: 'right' } },
 	                        this.props.msg
 	                    )
 	                )
@@ -2228,7 +2662,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 42 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2243,7 +2677,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
@@ -2251,7 +2685,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _classnames3 = _interopRequireDefault(_classnames2);
 
-	var _utilsClassNameMixinJs = __webpack_require__(32);
+	var _utilsClassNameMixinJs = __webpack_require__(30);
 
 	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
 
@@ -2554,7 +2988,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 43 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2569,7 +3003,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
@@ -2577,7 +3011,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _classnames5 = _interopRequireDefault(_classnames4);
 
-	var _utilsClassNameMixinJs = __webpack_require__(32);
+	var _utilsClassNameMixinJs = __webpack_require__(30);
 
 	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
 
@@ -3133,7 +3567,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 44 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -3153,11 +3587,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(32);
+	var _utilsClassNameMixin = __webpack_require__(30);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
@@ -3211,7 +3645,147 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 45 */
+/* 47 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Created by mac on 15/9/7.
+	 */
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(28);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _utilsClassNameMixin = __webpack_require__(30);
+
+	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+
+	var _classnames = __webpack_require__(29);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var _TabJs = __webpack_require__(46);
+
+	var _TabJs2 = _interopRequireDefault(_TabJs);
+
+	/**
+	 * @class Tab
+	 * @description   Tab
+	 * */
+
+	var Tabset = (function (_Component) {
+	    _inherits(Tabset, _Component);
+
+	    _createClass(Tabset, null, [{
+	        key: 'defaultProps',
+	        value: {
+	            classPrefix: 'tabset',
+	            activeTab: 0
+	        },
+	        enumerable: true
+	    }, {
+	        key: 'propTypes',
+	        value: {
+	            /**
+	             * 需要在初始的时候打开第几个tab，默认为0（从0计数，即打开第一个tab）
+	             * @property activeTabIndex
+	             * @type number
+	             * @default 0
+	             * */
+	            activeTab: _react.PropTypes.number
+	        },
+	        enumerable: true
+	    }]);
+
+	    function Tabset(props, context) {
+	        _classCallCheck(this, _Tabset);
+
+	        _Component.call(this, props, context);
+	        this.state = {
+	            active: props.activeTab
+	        };
+	        if (this.props.tabCallback) {
+	            this.props.tabCallback(props.activeTab);
+	        }
+	    }
+
+	    Tabset.prototype.activeHandler = function activeHandler(index) {
+	        if (this.state.active !== index) {
+	            this.setState({
+	                active: index
+	            });
+	            if (this.props.tabCallback) {
+	                this.props.tabCallback(index);
+	            }
+	        }
+	    };
+
+	    Tabset.prototype.render = function render() {
+	        var _this = this;
+
+	        var headings = _react2['default'].Children.map(this.props.children, function (option, index) {
+	            var _option$props = option.props;
+	            var tabCallback = _option$props.tabCallback;
+
+	            var other = _objectWithoutProperties(_option$props, ['tabCallback']);
+
+	            return _react2['default'].createElement(_TabJs2['default'], _extends({
+	                index: index,
+	                active: _this.state.active === index,
+	                clickCallback: _this.activeHandler.bind(_this)
+	            }, other));
+	        }, this);
+	        var panes = _react2['default'].Children.map(this.props.children, function (option, index) {
+	            return _react2['default'].createElement(
+	                'div',
+	                {
+	                    className: _classnames2['default'](_this.getClassName('panes')),
+	                    style: { display: _this.state.active === index ? null : 'none' }
+	                },
+	                option.props.children
+	            );
+	        }, this);
+	        return _react2['default'].createElement(
+	            'div',
+	            null,
+	            _react2['default'].createElement(
+	                'ul',
+	                null,
+	                headings
+	            ),
+	            _react2['default'].createElement(
+	                'div',
+	                { className: _classnames2['default'](this.getClassName('tab-content')) },
+	                panes
+	            )
+	        );
+	    };
+
+	    var _Tabset = Tabset;
+	    Tabset = _utilsClassNameMixin2['default'](Tabset) || Tabset;
+	    return Tabset;
+	})(_react.Component);
+
+	exports['default'] = Tabset;
+	module.exports = exports['default'];
+
+/***/ },
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -3242,11 +3816,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(32);
+	var _utilsClassNameMixin = __webpack_require__(30);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
@@ -3254,19 +3828,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _classnames3 = _interopRequireDefault(_classnames2);
 
-	var _ButtonJs = __webpack_require__(31);
+	var _ButtonJs = __webpack_require__(34);
 
 	var _ButtonJs2 = _interopRequireDefault(_ButtonJs);
 
-	var _RowJs = __webpack_require__(30);
+	var _RowJs = __webpack_require__(33);
 
 	var _RowJs2 = _interopRequireDefault(_RowJs);
 
-	var _ColJs = __webpack_require__(28);
+	var _ColJs = __webpack_require__(32);
 
 	var _ColJs2 = _interopRequireDefault(_ColJs);
 
-	var _GridJs = __webpack_require__(26);
+	var _GridJs = __webpack_require__(27);
 
 	var _GridJs2 = _interopRequireDefault(_GridJs);
 
@@ -3363,25 +3937,33 @@ return /******/ (function(modules) { // webpackBootstrap
 	            _RowJs2['default'],
 	            { className: _classnames3['default'](this.getClassNamesForArguments('dialog')), style: { width: '300px' } },
 	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                { className: _classnames3['default'](this.getClassNamesForArguments('title')) },
-	                this.props.title
-	            ),
-	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                { className: _classnames3['default'](this.getClassNamesForArguments('content')) },
-	                this.props.children
-	            ),
-	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                { className: _classnames3['default'](this.getClassNamesForArguments('button')) },
+	                _ColJs2['default'],
+	                null,
 	                _react2['default'].createElement(
-	                    _ColJs2['default'],
-	                    { sm: 12 },
+	                    _RowJs2['default'],
+	                    { className: _classnames3['default'](this.getClassNamesForArguments('title')) },
+	                    this.props.title
+	                ),
+	                _react2['default'].createElement(
+	                    _RowJs2['default'],
+	                    { className: _classnames3['default'](this.getClassNamesForArguments('content')) },
 	                    _react2['default'].createElement(
-	                        _ButtonJs2['default'],
-	                        { radius: true, egSize: 'xs', onClick: this.submitForm.bind(this) },
-	                        '确定'
+	                        _ColJs2['default'],
+	                        null,
+	                        this.props.children
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    _RowJs2['default'],
+	                    { className: _classnames3['default'](this.getClassNamesForArguments('button')) },
+	                    _react2['default'].createElement(
+	                        _ColJs2['default'],
+	                        { sm: 12 },
+	                        _react2['default'].createElement(
+	                            _ButtonJs2['default'],
+	                            { radius: true, egSize: 'xs', onClick: this.submitForm.bind(this) },
+	                            '确定'
+	                        )
 	                    )
 	                )
 	            )
@@ -3393,35 +3975,43 @@ return /******/ (function(modules) { // webpackBootstrap
 	            _RowJs2['default'],
 	            { className: _classnames3['default'](this.getClassNamesForArguments('dialog')), style: { width: '300px' } },
 	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                { className: _classnames3['default'](this.getClassNamesForArguments('title')) },
-	                this.props.title,
+	                _ColJs2['default'],
+	                null,
 	                _react2['default'].createElement(
-	                    'div',
-	                    { className: _classnames3['default'](this.getClassNamesForArguments('close')), onClick: this.closeDialog.bind(this) },
-	                    'x'
-	                )
-	            ),
-	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                { className: _classnames3['default'](this.getClassNamesForArguments('content')) },
-	                this.props.children ? this.props.children : '请快乐的修bug'
-	            ),
-	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                { className: _classnames3['default'](this.getClassNamesForArguments('button')) },
+	                    _RowJs2['default'],
+	                    { className: _classnames3['default'](this.getClassNamesForArguments('title')) },
+	                    this.props.title,
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: _classnames3['default'](this.getClassNamesForArguments('close')), onClick: this.closeDialog.bind(this) },
+	                        'x'
+	                    )
+	                ),
 	                _react2['default'].createElement(
-	                    _ColJs2['default'],
-	                    { sm: 12 },
+	                    _RowJs2['default'],
+	                    { className: _classnames3['default'](this.getClassNamesForArguments('content')) },
 	                    _react2['default'].createElement(
-	                        _ButtonJs2['default'],
-	                        { radius: true, egSize: 'xs', style: { marginRight: '20px' }, onClick: this.submitForm.bind(this) },
-	                        '确定'
-	                    ),
+	                        _ColJs2['default'],
+	                        null,
+	                        this.props.children ? this.props.children : '请快乐的修bug'
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    _RowJs2['default'],
+	                    { className: _classnames3['default'](this.getClassNamesForArguments('button')) },
 	                    _react2['default'].createElement(
-	                        _ButtonJs2['default'],
-	                        { radius: true, white: true, egSize: 'xs', onClick: this.cancleDialog.bind(this) },
-	                        '取消'
+	                        _ColJs2['default'],
+	                        { sm: 12 },
+	                        _react2['default'].createElement(
+	                            _ButtonJs2['default'],
+	                            { radius: true, egSize: 'xs', style: { marginRight: '20px' }, onClick: this.submitForm.bind(this) },
+	                            '确定'
+	                        ),
+	                        _react2['default'].createElement(
+	                            _ButtonJs2['default'],
+	                            { radius: true, white: true, egSize: 'xs', onClick: this.cancleDialog.bind(this) },
+	                            '取消'
+	                        )
 	                    )
 	                )
 	            )
@@ -3433,35 +4023,43 @@ return /******/ (function(modules) { // webpackBootstrap
 	            _RowJs2['default'],
 	            { className: _classnames3['default'](this.getClassNamesForArguments('dialog')) },
 	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                { className: _classnames3['default'](this.getClassNamesForArguments('title')) },
-	                this.props.title,
+	                _ColJs2['default'],
+	                null,
 	                _react2['default'].createElement(
-	                    'div',
-	                    { className: _classnames3['default'](this.getClassNamesForArguments('close')), onClick: this.closeDialog.bind(this) },
-	                    'x'
-	                )
-	            ),
-	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                { className: _classnames3['default'](this.getClassNamesForArguments('content')) },
-	                this.props.children
-	            ),
-	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                { className: _classnames3['default'](this.getClassNamesForArguments('button')) },
+	                    _RowJs2['default'],
+	                    { className: _classnames3['default'](this.getClassNamesForArguments('title')) },
+	                    this.props.title,
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: _classnames3['default'](this.getClassNamesForArguments('close')), onClick: this.closeDialog.bind(this) },
+	                        'x'
+	                    )
+	                ),
 	                _react2['default'].createElement(
-	                    _ColJs2['default'],
-	                    { sm: 12 },
+	                    _RowJs2['default'],
+	                    { className: _classnames3['default'](this.getClassNamesForArguments('content')) },
 	                    _react2['default'].createElement(
-	                        _ButtonJs2['default'],
-	                        { radius: true, egSize: 'xs', style: { marginRight: '20px' }, onClick: this.submitForm.bind(this) },
-	                        '确定'
-	                    ),
+	                        _ColJs2['default'],
+	                        null,
+	                        this.props.children
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    _RowJs2['default'],
+	                    { className: _classnames3['default'](this.getClassNamesForArguments('button')) },
 	                    _react2['default'].createElement(
-	                        _ButtonJs2['default'],
-	                        { radius: true, white: true, egSize: 'xs', onClick: this.cancleDialog.bind(this) },
-	                        '取消'
+	                        _ColJs2['default'],
+	                        { sm: 12 },
+	                        _react2['default'].createElement(
+	                            _ButtonJs2['default'],
+	                            { radius: true, egSize: 'xs', style: { marginRight: '20px' }, onClick: this.submitForm.bind(this) },
+	                            '确定'
+	                        ),
+	                        _react2['default'].createElement(
+	                            _ButtonJs2['default'],
+	                            { radius: true, white: true, egSize: 'xs', onClick: this.cancleDialog.bind(this) },
+	                            '取消'
+	                        )
 	                    )
 	                )
 	            )
@@ -3473,19 +4071,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	            _RowJs2['default'],
 	            { className: _classnames3['default'](this.getClassNamesForArguments('dialog')) },
 	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                { className: _classnames3['default'](this.getClassNamesForArguments('title')) },
-	                this.props.title,
+	                _ColJs2['default'],
+	                null,
 	                _react2['default'].createElement(
-	                    'div',
-	                    { className: _classnames3['default'](this.getClassNamesForArguments('close')), onClick: this.closeDialog.bind(this) },
-	                    'x'
+	                    _RowJs2['default'],
+	                    { className: _classnames3['default'](this.getClassNamesForArguments('title')) },
+	                    this.props.title,
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: _classnames3['default'](this.getClassNamesForArguments('close')), onClick: this.closeDialog.bind(this) },
+	                        'x'
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    _RowJs2['default'],
+	                    { className: _classnames3['default'](this.getClassNamesForArguments('content')) },
+	                    _react2['default'].createElement(
+	                        _ColJs2['default'],
+	                        null,
+	                        this.props.children
+	                    )
 	                )
-	            ),
-	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                { className: _classnames3['default'](this.getClassNamesForArguments('content')) },
-	                this.props.children
 	            )
 	        );
 	    };
@@ -3516,7 +4122,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 46 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -3534,11 +4140,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(32);
+	var _utilsClassNameMixin = __webpack_require__(30);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
@@ -3546,19 +4152,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _classnames3 = _interopRequireDefault(_classnames2);
 
-	var _ButtonJs = __webpack_require__(31);
+	var _ButtonJs = __webpack_require__(34);
 
 	var _ButtonJs2 = _interopRequireDefault(_ButtonJs);
 
-	var _RowJs = __webpack_require__(30);
+	var _RowJs = __webpack_require__(33);
 
 	var _RowJs2 = _interopRequireDefault(_RowJs);
 
-	var _ColJs = __webpack_require__(28);
+	var _ColJs = __webpack_require__(32);
 
 	var _ColJs2 = _interopRequireDefault(_ColJs);
 
-	var _GridJs = __webpack_require__(26);
+	var _GridJs = __webpack_require__(27);
 
 	var _GridJs2 = _interopRequireDefault(_GridJs);
 
@@ -3618,6 +4224,1034 @@ return /******/ (function(modules) { // webpackBootstrap
 	})(_react.Component);
 
 	exports['default'] = Tooltip;
+	module.exports = exports['default'];
+
+/***/ },
+/* 50 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(28);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _classnames = __webpack_require__(29);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var _utilsClassNameMixinJs = __webpack_require__(30);
+
+	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
+
+	/**
+	 * Panel组件
+	 * @class Panel
+	 * @constructor
+	 * @module ui
+	 * @extends Component
+	 * @requires React classnames
+	 * @since 0.1.0
+	 * @demo src/panel.js {js}
+	 * @demo panel.html {html}
+	 * @author bo.an@dianping.com
+	 * */
+
+	var Panel = (function (_Component) {
+	    _inherits(Panel, _Component);
+
+	    function Panel() {
+	        _classCallCheck(this, _Panel);
+
+	        _Component.apply(this, arguments);
+	    }
+
+	    /**
+	     * @method render
+	     * @return {ReactElement}
+	     * */
+
+	    Panel.prototype.render = function render() {
+	        return _react2['default'].createElement(
+	            'div',
+	            _extends({}, this.props, { className: _classnames2['default'](this.getClassName('panel'), this.props.className) }),
+	            this.props.children
+	        );
+	    };
+
+	    _createClass(Panel, null, [{
+	        key: 'propTypes',
+	        value: {},
+	        enumerable: true
+	    }, {
+	        key: 'defaultProps',
+	        value: {},
+	        enumerable: true
+	    }]);
+
+	    var _Panel = Panel;
+	    Panel = _utilsClassNameMixinJs2['default'](Panel) || Panel;
+	    return Panel;
+	})(_react.Component);
+
+	exports['default'] = Panel;
+	module.exports = exports['default'];
+
+/***/ },
+/* 51 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(28);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _classnames = __webpack_require__(29);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var _utilsClassNameMixinJs = __webpack_require__(30);
+
+	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
+
+	/**
+	 * PanelContent组件
+	 * @class PanelContent
+	 * @constructor
+	 * @module ui
+	 * @extends Component
+	 * @requires React classnames
+	 * @since 0.1.0
+	 * @demo src/panel.js {js}
+	 * @demo panel.html {html}
+	 * @author bo.an@dianping.com
+	 * */
+
+	var PanelContent = (function (_Component) {
+	    _inherits(PanelContent, _Component);
+
+	    function PanelContent() {
+	        _classCallCheck(this, _PanelContent);
+
+	        _Component.apply(this, arguments);
+	    }
+
+	    /**
+	     * @method render
+	     * @return {ReactElement}
+	     * */
+
+	    PanelContent.prototype.render = function render() {
+	        return _react2['default'].createElement(
+	            'div',
+	            { className: _classnames2['default'](this.getClassName('content'), this.props.padding ? this.getClassName('padding') : '') },
+	            this.props.children
+	        );
+	    };
+
+	    _createClass(PanelContent, null, [{
+	        key: 'propTypes',
+	        value: {
+	            /**
+	             * 是否加padding
+	             * @property padding
+	             * @type bool
+	             * @default true
+	             * */
+	            padding: _react.PropTypes.bool
+	        },
+	        enumerable: true
+	    }, {
+	        key: 'defaultProps',
+	        value: {
+	            classPrefix: 'panel',
+	            padding: true
+	        },
+	        enumerable: true
+	    }]);
+
+	    var _PanelContent = PanelContent;
+	    PanelContent = _utilsClassNameMixinJs2['default'](PanelContent) || PanelContent;
+	    return PanelContent;
+	})(_react.Component);
+
+	exports['default'] = PanelContent;
+	module.exports = exports['default'];
+
+/***/ },
+/* 52 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(28);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _classnames = __webpack_require__(29);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var _utilsClassNameMixinJs = __webpack_require__(30);
+
+	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
+
+	/**
+	 * PanelFooter组件
+	 * @class PanelFooter
+	 * @constructor
+	 * @module ui
+	 * @extends Component
+	 * @requires React classnames
+	 * @since 0.1.0
+	 * @demo src/panel.js {js}
+	 * @demo panel.html {html}
+	 * @author bo.an@dianping.com
+	 * */
+
+	var PanelFooter = (function (_Component) {
+	    _inherits(PanelFooter, _Component);
+
+	    function PanelFooter() {
+	        _classCallCheck(this, _PanelFooter);
+
+	        _Component.apply(this, arguments);
+	    }
+
+	    /**
+	     * @method render
+	     * @return {ReactElement}
+	     * */
+
+	    PanelFooter.prototype.render = function render() {
+	        return _react2['default'].createElement(
+	            'div',
+	            { className: _classnames2['default'](this.getClassName('footer'), this.props.padding ? this.getClassName('padding') : '') },
+	            this.props.children
+	        );
+	    };
+
+	    _createClass(PanelFooter, null, [{
+	        key: 'propTypes',
+	        value: {
+	            /**
+	             * 是否加padding
+	             * @property padding
+	             * @type bool
+	             * @default true
+	             * */
+	            padding: _react.PropTypes.bool
+	        },
+	        enumerable: true
+	    }, {
+	        key: 'defaultProps',
+	        value: {
+	            classPrefix: 'panel',
+	            padding: true
+	        },
+	        enumerable: true
+	    }]);
+
+	    var _PanelFooter = PanelFooter;
+	    PanelFooter = _utilsClassNameMixinJs2['default'](PanelFooter) || PanelFooter;
+	    return PanelFooter;
+	})(_react.Component);
+
+	exports['default'] = PanelFooter;
+	module.exports = exports['default'];
+
+/***/ },
+/* 53 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(28);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _classnames = __webpack_require__(29);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var _utilsClassNameMixinJs = __webpack_require__(30);
+
+	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
+
+	/**
+	 * PanelHeader组件
+	 * @class PanelHeader
+	 * @constructor
+	 * @module ui
+	 * @extends Component
+	 * @requires React classnames
+	 * @since 0.1.0
+	 * @demo src/panel.js {js}
+	 * @demo panel.html {html}
+	 * @author bo.an@dianping.com
+	 * */
+
+	var PanelHeader = (function (_Component) {
+	    _inherits(PanelHeader, _Component);
+
+	    function PanelHeader() {
+	        _classCallCheck(this, _PanelHeader);
+
+	        _Component.apply(this, arguments);
+	    }
+
+	    /**
+	     * @method render
+	     * @return {ReactElement}
+	     * */
+
+	    PanelHeader.prototype.render = function render() {
+	        return _react2['default'].createElement(
+	            'div',
+	            { className: _classnames2['default'](this.getClassName('header')) },
+	            this.props.children
+	        );
+	    };
+
+	    _createClass(PanelHeader, null, [{
+	        key: 'propTypes',
+	        value: {},
+	        enumerable: true
+	    }, {
+	        key: 'defaultProps',
+	        value: {
+	            classPrefix: 'panel'
+	        },
+	        enumerable: true
+	    }]);
+
+	    var _PanelHeader = PanelHeader;
+	    PanelHeader = _utilsClassNameMixinJs2['default'](PanelHeader) || PanelHeader;
+	    return PanelHeader;
+	})(_react.Component);
+
+	exports['default'] = PanelHeader;
+	module.exports = exports['default'];
+
+/***/ },
+/* 54 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(28);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _classnames = __webpack_require__(29);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var _utilsClassNameMixinJs = __webpack_require__(30);
+
+	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
+
+	/**
+	 * 表组件
+	 * @class List
+	 * @constructor
+	 * @module ui
+	 * @extends Component
+	 * @requires React classnames
+	 * @since 0.1.0
+	 * @author bo.an@dianping.com
+	 * */
+
+	var List = (function (_Component) {
+	    _inherits(List, _Component);
+
+	    function List() {
+	        _classCallCheck(this, _List);
+
+	        _Component.apply(this, arguments);
+	    }
+
+	    /**
+	     * @method render
+	     * @return {ReactElement}
+	     * */
+
+	    List.prototype.render = function render() {
+	        return _react2['default'].createElement(
+	            'div',
+	            { className: _classnames2['default'](this.getClassName('list'), this.props.className) },
+	            this.props.children
+	        );
+	    };
+
+	    _createClass(List, null, [{
+	        key: 'propTypes',
+	        value: {},
+	        enumerable: true
+	    }, {
+	        key: 'defaultProps',
+	        value: {},
+	        enumerable: true
+	    }]);
+
+	    var _List = List;
+	    List = _utilsClassNameMixinJs2['default'](List) || List;
+	    return List;
+	})(_react.Component);
+
+	exports['default'] = List;
+	module.exports = exports['default'];
+
+/***/ },
+/* 55 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(28);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _classnames = __webpack_require__(29);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var _utilsClassNameMixinJs = __webpack_require__(30);
+
+	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
+
+	/**
+	 * 表组件
+	 * @class Item
+	 * @constructor
+	 * @module ui
+	 * @extends Component
+	 * @requires React classnames
+	 * @since 0.1.0
+	 * @author bo.an@dianping.com
+	 * */
+
+	var Item = (function (_Component) {
+	    _inherits(Item, _Component);
+
+	    function Item() {
+	        _classCallCheck(this, _Item);
+
+	        _Component.apply(this, arguments);
+	    }
+
+	    /**
+	     * @method render
+	     * @return {ReactElement}
+	     * */
+
+	    Item.prototype.render = function render() {
+	        return _react2['default'].createElement(
+	            'div',
+	            { className: _classnames2['default'](this.getClassName('item'), this.props.className) },
+	            this.props.children
+	        );
+	    };
+
+	    _createClass(Item, null, [{
+	        key: 'propTypes',
+	        value: {},
+	        enumerable: true
+	    }, {
+	        key: 'defaultProps',
+	        value: {},
+	        enumerable: true
+	    }]);
+
+	    var _Item = Item;
+	    Item = _utilsClassNameMixinJs2['default'](Item) || Item;
+	    return Item;
+	})(_react.Component);
+
+	exports['default'] = Item;
+	module.exports = exports['default'];
+
+/***/ },
+/* 56 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(28);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _utilsClassNameMixin = __webpack_require__(30);
+
+	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+
+	var _classnames = __webpack_require__(29);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var ValidatorPanel = (function (_Component) {
+	    _inherits(ValidatorPanel, _Component);
+
+	    _createClass(ValidatorPanel, null, [{
+	        key: 'propTypes',
+	        value: {
+	            //触发点，change blur  manual（手动）
+	            trigger: _react.PropTypes.string,
+	            submitCallback: _react.PropTypes.func
+	        },
+	        enumerable: true
+	    }, {
+	        key: 'defaultProps',
+	        value: {
+	            componentTag: 'form',
+	            trigger: 'blur keyup focus click',
+	            message: {
+	                required: '不能为空',
+	                date: '请正确填写日期',
+	                number: '请输入一个有效的号码',
+	                url: '请输入一个有效的URL',
+	                email: '请输入一个有效的电子邮件地址',
+	                dateISO: '请输入一个有效的日期(ISO)',
+	                digits: '请输入数字',
+	                equalTo: '请再次输入相同的值。',
+	                minlength: '请输入至少{0}字符',
+	                maxlength: '请输入不超过{0}字符',
+	                rangelength: '请输入一个值{0}和{1}字符之间',
+	                min: '请输入一个值大于或等于{0}',
+	                max: '请输入一个值小于或等于{0}',
+	                range: '请输入一个值{0} - {1}'
+	            }
+	        },
+	        enumerable: true
+	    }]);
+
+	    function ValidatorPanel(props, context) {
+	        _classCallCheck(this, _ValidatorPanel);
+
+	        _Component.call(this, props, context);
+
+	        this.state = {};
+	    }
+
+	    ValidatorPanel.prototype.optional = function optional(element) {
+	        var val = this.getValue(element);
+	        return !this.options.defaultRules.required.call(this, val, element);
+	    };
+
+	    ValidatorPanel.prototype.required = function required(value, element) {
+
+	        if (element.nodeName.toLowerCase() === "select") {
+	            var val = $(element).val();
+	            return val && val.length > 0;
+	        }
+	        if (this.checkable(element)) {
+	            return this.getLength(value, element) > 0;
+	        }
+	        return $.trim(value).length > 0;
+	    };
+
+	    ValidatorPanel.prototype.date = function date(value, element) {
+	        return this.optional(element) || !/Invalid|NaN/.test(new Date(value).toString());
+	    };
+
+	    ValidatorPanel.prototype.number = function number(value, element) {
+	        return this.optional(element) || /^-?(?:\d+|\d{1,3}(?:,\d{3})+)?(?:\.\d+)?$/.test(value);
+	    };
+
+	    ValidatorPanel.prototype.url = function url(value, element) {
+	        return this.optional(element) || /^(https?|s?ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$/i.test(value);
+	    };
+
+	    ValidatorPanel.prototype.email = function email(value, element) {
+
+	        return this.optional(element) || /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(value);
+	    };
+
+	    ValidatorPanel.prototype.dateISO = function dateISO(value, element) {
+	        return this.optional(element) || /^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/.test(value);
+	    };
+
+	    ValidatorPanel.prototype.digits = function digits(value, element) {
+	        return this.optional(element) || /^\d+$/.test(value);
+	    };
+
+	    ValidatorPanel.prototype.equalTo = function equalTo(value, element, param) {
+	        var target = $(param);
+	        if (this.onfocus) {
+	            target.off(".validate-equalTo").on("blur.validate-equalTo", function () {
+	                this.show();
+	            });
+	        }
+	        return this.optional(element) || value === target.val();
+	    };
+
+	    ValidatorPanel.prototype.minlength = function minlength(value, element, param) {
+	        var length = $.isArray(value) ? value.length : this.getLength(value, element);
+	        return this.optional(element) || length >= param;
+	    };
+
+	    ValidatorPanel.prototype.maxlength = function maxlength(value, element, param) {
+	        var length = $.isArray(value) ? value.length : this.getLength(value, element);
+	        return this.optional(element) || length <= param;
+	    };
+
+	    ValidatorPanel.prototype.rangelength = function rangelength(value, element, param) {
+	        var length = $.isArray(value) ? value.length : this.getLength(value, element);
+	        return this.optional(element) || length >= param[0] && length <= param[1];
+	    };
+
+	    ValidatorPanel.prototype.min = function min(value, element, param) {
+	        return this.optional(element) || value >= param;
+	    };
+
+	    ValidatorPanel.prototype.max = function max(value, element, param) {
+	        return this.optional(element) || value <= param;
+	    };
+
+	    ValidatorPanel.prototype.range = function range(value, element, param) {
+	        return this.optional(element) || value >= param[0] && value <= param[1];
+	    };
+
+	    ValidatorPanel.prototype.bindValidate = function bindValidate() {
+
+	        var options = _react2['default'].Children.map(this.props.children, function (option) {
+	            //将validate保存起来，在适当的时候调用
+	            return _react2['default'].cloneElement(option, {});
+	        }, this);
+	        return options;
+	    };
+
+	    ValidatorPanel.prototype.render = function render() {
+	        var Component = this.props.componentTag;
+
+	        return _react2['default'].createElement(
+	            Component,
+	            this.props,
+	            this.bindValidate()
+	        );
+	    };
+
+	    var _ValidatorPanel = ValidatorPanel;
+	    ValidatorPanel = _utilsClassNameMixin2['default'](ValidatorPanel) || ValidatorPanel;
+	    return ValidatorPanel;
+	})(_react.Component);
+
+	exports['default'] = ValidatorPanel;
+	module.exports = exports['default'];
+
+/***/ },
+/* 57 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(28);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _classnames = __webpack_require__(29);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var _utilsClassNameMixinJs = __webpack_require__(30);
+
+	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
+
+	/**
+	 * 表格组件
+	 * @class Table
+	 * @constructor
+	 * @module ui
+	 * @extends Component
+	 * @requires React classnames
+	 * @since 0.1.0
+	 * @demo src/table.js {js}
+	 * @demo table.html {html}
+	 * @show true
+	 * @author bo.an@dianping.com
+	 * */
+
+	var Table = (function (_Component) {
+	    _inherits(Table, _Component);
+
+	    function Table() {
+	        _classCallCheck(this, _Table);
+
+	        _Component.apply(this, arguments);
+	    }
+
+	    /**
+	     * @method render
+	     * @return {ReactElement}
+	     * */
+
+	    Table.prototype.render = function render() {
+	        console.debug('table');
+	        return _react2['default'].createElement(
+	            'table',
+	            { className: _classnames2['default'](this.getClassName('table')) },
+	            this.props.children
+	        );
+	    };
+
+	    _createClass(Table, null, [{
+	        key: 'propTypes',
+	        value: {},
+	        enumerable: true
+	    }, {
+	        key: 'defaultProps',
+	        value: {},
+	        enumerable: true
+	    }]);
+
+	    var _Table = Table;
+	    Table = _utilsClassNameMixinJs2['default'](Table) || Table;
+	    return Table;
+	})(_react.Component);
+
+	exports['default'] = Table;
+	module.exports = exports['default'];
+
+/***/ },
+/* 58 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(28);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _classnames = __webpack_require__(29);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var _utilsClassNameMixinJs = __webpack_require__(30);
+
+	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
+
+	/**
+	 * 表格组件
+	 * @class Paging
+	 * @constructor
+	 * @module ui
+	 * @extends Component
+	 * @requires React classnames
+	 * @since 0.1.0
+	 * @demo src/table.js {js}
+	 * @demo table.html {html}
+	 * @show true
+	 * @author bo.an@dianping.com
+	 * */
+
+	var Tr = (function (_Component) {
+	    _inherits(Tr, _Component);
+
+	    function Tr() {
+	        _classCallCheck(this, _Tr);
+
+	        _Component.apply(this, arguments);
+	    }
+
+	    /**
+	     * @method render
+	     * @return {ReactElement}
+	     * */
+
+	    Tr.prototype.render = function render() {
+	        return _react2['default'].createElement(
+	            'tr',
+	            { className: _classnames2['default'](this.props.split ? this.getClassName('split') : null) },
+	            this.props.children
+	        );
+	    };
+
+	    _createClass(Tr, null, [{
+	        key: 'propTypes',
+	        value: {
+	            /**
+	             * 是否在每一行下添加分割线
+	             * @property split
+	             * @type bool
+	             * @default false
+	             * */
+	            split: _react.PropTypes.bool
+	        },
+	        enumerable: true
+	    }, {
+	        key: 'defaultProps',
+	        value: {
+	            classPrefix: 'tr'
+	        },
+	        enumerable: true
+	    }]);
+
+	    var _Tr = Tr;
+	    Tr = _utilsClassNameMixinJs2['default'](Tr) || Tr;
+	    return Tr;
+	})(_react.Component);
+
+	exports['default'] = Tr;
+	module.exports = exports['default'];
+
+/***/ },
+/* 59 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(28);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _classnames = __webpack_require__(29);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var _utilsClassNameMixinJs = __webpack_require__(30);
+
+	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
+
+	/**
+	 * 表格组件
+	 * @class Paging
+	 * @constructor
+	 * @module ui
+	 * @extends Component
+	 * @requires React classnames
+	 * @since 0.1.0
+	 * @demo src/table.js {js}
+	 * @demo table.html {html}
+	 * @show true
+	 * @author bo.an@dianping.com
+	 * */
+
+	var Td = (function (_Component) {
+	    _inherits(Td, _Component);
+
+	    function Td() {
+	        _classCallCheck(this, _Td);
+
+	        _Component.apply(this, arguments);
+	    }
+
+	    /**
+	     * @method render
+	     * @return {ReactElement}
+	     * */
+
+	    Td.prototype.render = function render() {
+	        console.debug('td');
+	        return _react2['default'].createElement(
+	            'td',
+	            this.props,
+	            this.props.children,
+	            _classnames2['default'](this.getClassNames(this.props)) === '' ? null : _react2['default'].createElement('span', { className: _classnames2['default'](this.getClassNames(this.props)) })
+	        );
+	    };
+
+	    _createClass(Td, null, [{
+	        key: 'propTypes',
+	        value: {},
+	        enumerable: true
+	    }, {
+	        key: 'defaultProps',
+	        value: {},
+	        enumerable: true
+	    }]);
+
+	    var _Td = Td;
+	    Td = _utilsClassNameMixinJs2['default'](Td) || Td;
+	    return Td;
+	})(_react.Component);
+
+	exports['default'] = Td;
+	module.exports = exports['default'];
+
+/***/ },
+/* 60 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(28);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _classnames = __webpack_require__(29);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var _utilsClassNameMixinJs = __webpack_require__(30);
+
+	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
+
+	/**
+	 * 表格组件
+	 * @class Paging
+	 * @constructor
+	 * @module ui
+	 * @extends Component
+	 * @requires React classnames
+	 * @since 0.1.0
+	 * @demo src/table.js {js}
+	 * @demo table.html {html}
+	 * @show true
+	 * @author bo.an@dianping.com
+	 * */
+
+	var Th = (function (_Component) {
+	    _inherits(Th, _Component);
+
+	    function Th() {
+	        _classCallCheck(this, _Th);
+
+	        _Component.apply(this, arguments);
+	    }
+
+	    /**
+	     * @method render
+	     * @return {ReactElement}
+	     * */
+
+	    Th.prototype.render = function render() {
+	        console.debug('th');
+	        return _react2['default'].createElement(
+	            'th',
+	            null,
+	            this.props.children
+	        );
+	    };
+
+	    _createClass(Th, null, [{
+	        key: 'propTypes',
+	        value: {},
+	        enumerable: true
+	    }, {
+	        key: 'defaultProps',
+	        value: {},
+	        enumerable: true
+	    }]);
+
+	    var _Th = Th;
+	    Th = _utilsClassNameMixinJs2['default'](Th) || Th;
+	    return Th;
+	})(_react.Component);
+
+	exports['default'] = Th;
 	module.exports = exports['default'];
 
 /***/ }

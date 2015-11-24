@@ -37,12 +37,16 @@
     }
 }
 .eg-label-group{
-    border: 1px solid #eee;
-    box-shadow: 0 0 5px #eee;
-    padding: 15px 20px 5px;
-    background: #fff;
-    -webkit-box-shadow: 0px 0px 8px 1px @gray-cc;
-    webkit-box-shadow: 0px 0px 8px 1px @gray-cc;
+    margin-bottom: 15px;
+    .eg-row{
+        padding:0px;
+        div[class*='eg-sm-']{
+            padding: 0px 15px;
+            &.eg-end{
+                margin-bottom: -10px;
+            }
+        }
+    }
     .eg-label-item{
         margin: 0 15px 10px;
     }
@@ -66,4 +70,7 @@
 .eg-label-disabled{
     background: @gray-cc;
     color: @white;
+}
+.eg-label-end{
+    margin-bottom: 0;
 }

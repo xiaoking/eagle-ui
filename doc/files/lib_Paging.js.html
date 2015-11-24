@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>lib/Paging.js - eagle-ui</title>
+  
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-smart">
+ <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               <a class="navbar-brand mainlogo" href="">
+             
+            <img alt="eagle-ui" src="../assets/css/logo.png" title="eagle-ui">
+            
+                eagle-ui
+          </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                 <ul class="nav navbar-nav">
+                    
+                    <li><a href="">主页</a>
+                    </li>
+                    
+                </ul>
+               <div class="navbar-form navbar-right filterAPi" autocomplete="off">
+                <input type="text" id='txtSearchAPI' class="form-control search-query" placeholder="Search for API" />
+                 <ul id="filterList" class="filterItems dropdown-menu" role="menu"></ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="sidebar">
+    <h3>Modules/Classes</h3>
+        <div id="api-tabview-filter">
+            <input id='txtSearch' type="search" class="form-control" placeholder="Type to filter Modules/Classes">
+        </div>
+        <dl id="sidebar_list">
+             
+                <dt>
+                    <span class="glyphicon glyphicon-minus"></span>
+                    <a href="../modules/form.html">form</a>
+                </dt>
+                <dd>
+                    <ul>
+                   
+                       <li>
+                            
+                           <a href="../classes/RadioGroup.html">RadioGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Button.html">Button</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/ButtonGroup.html">ButtonGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                    </ul>
+                </dd>
+             
+                <dt>
+                    <span class="glyphicon glyphicon-minus"></span>
+                    <a href="../modules/grid.html">grid</a>
+                </dt>
+                <dd>
+                    <ul>
+                   
+                       <li>
+                            
+                           <a href="../classes/Row.html">Row</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Col.html">Col</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/crumb.html">crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/dialog.html">dialog</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Grid.html">Grid</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Select.html">Select</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/toast.html">toast</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                    </ul>
+                </dd>
+             
+                <dt>
+                    <span class="glyphicon glyphicon-minus"></span>
+                    <a href="../modules/ui.html">ui</a>
+                </dt>
+                <dd>
+                    <ul>
+                   
+                       <li>
+                            
+                           <a href="../classes/Calendar.html">Calendar</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Label.html">Label</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Panel.html">Panel</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/PanelContent.html">PanelContent</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/PanelFooter.html">PanelFooter</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/PanelHeader.html">PanelHeader</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Table.html">Table</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Paging.html">Paging</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/CalendarPanel.html">CalendarPanel</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/LabelGroup.html">LabelGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                    </ul>
+                </dd>
+             
+        </dl>
+</div>
+   
+    <div class="stdoc-content">
+        <!--     <form id="options-form" class="form-inline pull-right">
+        Show:
+        <label for="api-show-inherited" class="checkbox">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected" class="checkbox">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private" class="checkbox">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated" class="checkbox">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </form>
+
+ -->
+        <div class="apidocs">
+            <div id="docs-main">
+                <div class="content">
+                    <div class="page-header">
+    <h1>lib/Paging.js <small>File</small></h1>
+</div>
+
+<div class="file">
+    <pre class="prettyprint linenums" id='src_code'>
+import React,{ PropTypes, Component } from &#x27;react&#x27;;
+import classnames from &#x27;classnames&#x27;;
+import ClassNameMixin from &#x27;./utils/ClassNameMixin.js&#x27;;
+
+/**
+ * 分页组件
+ * @class Paging
+ * @constructor
+ * @module ui
+ * @extends Component
+ * @requires React classnames
+ * @since 0.1.0
+ * @demo src/paging.js {js}
+ * @demo paging.html {html}
+ * @show true
+ * @author min.xiao@dianping.com
+ * */
+@ClassNameMixin
+export default class Paging extends Component{
+
+    static propTypes = {
+        /**
+         * 总页数
+         * @property currentPage
+         * @type Integer
+         * @default 1
+         * */
+        currentPage:PropTypes.number.isRequired,
+        /**
+         * 每页显示多少条数据
+         * @property pageSize
+         * @type Integer
+         * @default 20
+         * */
+        pageSize:PropTypes.number.isRequired,
+        /**
+         * 数据总数
+         * @property total
+         * @type Integer
+         * */
+        total:PropTypes.number.isRequired,
+        /**
+         * 点击分页回调
+         * @property pageCallback
+         * @type Function
+         * */
+        pageCallback:PropTypes.func,
+        /**
+         *
+         * @property activeClass
+         * @type String
+         * @default active
+         * */
+        activeClass:PropTypes.string,
+        classPrefix:PropTypes.string,
+        componentTag:PropTypes.string
+    };
+
+    static defaultProps = {
+        activeClass:&#x27;active&#x27;,
+        currentPage:1,
+        pageSize:20,
+        classPrefix:&#x27;paging&#x27;,
+        componentTag:&#x27;div&#x27;
+    };
+
+    /**
+     * @constructor
+     * @param props {Object}
+     * @param context {Object}
+     * */
+    constructor(props, context) {
+        super(props, context);
+
+        /**
+         * @type Integer
+         * @default
+         * */
+        this.pages=this.getPages();
+
+        this.index = 0;
+
+        this.number = 5;
+
+        /**
+         * @type Boolean
+         * @default false
+         * */
+        this.init = false;
+        //总数：this.total
+
+
+        this.state = {
+            /**
+             * 当前页
+             * @type Integer
+             * */
+            currentPage:this.props.currentPage
+        };
+    }
+
+    /**
+     * 上一页
+     * @method prev
+     * */
+    prev(){
+        this.gotoPage(this.props.currentPage-1 );
+    }
+
+    /**
+     * 下一页
+     * @method prev
+     * */
+    next(){
+        this.gotoPage(this.props.currentPage+1);
+    }
+
+    /**
+     * 获取页大小
+     * @method getPages
+     * @return {Integer}
+     * */
+    getPages(){
+        return Math.ceil(this.props.total/this.props.pageSize);
+    }
+
+    /**
+     * 跳转至N页
+     * @method goto
+     * @param page {Integer} 页码，从1开始
+     * @private
+     * @return {Array}
+     * */
+    goto(page = this.state.currentPage){
+
+        this.pages=this.getPages();
+        if(page &lt;=1){
+            page = 1;
+        }
+        if(page &gt;= this.pages){
+            page = this.pages;
+        }
+
+        /*if(this.init){
+            this.setState({
+                currentPage:page
+            });
+            this.init = false;
+        }*/
+
+        return this.generate();
+    }
+
+    /**
+     * 跳转至N页
+     * @method gotoPage
+     * @param index {Integer} 页码，从1开始
+     * @return {Array}
+     * */
+    gotoPage(index){
+        this.init=true;
+        this.props.pageCallback &amp;&amp; this.props.pageCallback(index );
+        return this.goto(index);
+    }
+
+    /**
+     * 生成页码
+     * @method generate
+     * @return {Array}
+     * */
+    generate(){
+        const {currentPage,activeClass} = this.props;
+        let i=1,
+            htmlList = [],
+            distance = 4,
+            len = currentPage+distance;
+
+
+        i =currentPage&lt;=6 ? i:currentPage-distance;
+        i = i&lt;=1?1:i;
+
+        len = len&gt;this.pages ? this.pages : len;
+
+        if(currentPage&gt;1){
+            htmlList.push(&lt;a href=&quot;javascript:void(0);&quot; className=&quot;&quot; onClick={::this.prev}&gt;上一页&lt;/a&gt;);
+        }
+
+        //9     ....4....|.
+        if(currentPage&gt;=7){
+            htmlList.push(&lt;a href=&quot;javascript:void(0);&quot; onClick={::this.gotoPage.bind(this,1)}&gt;{1}&lt;/a&gt;);
+            htmlList.push(&lt;a href=&quot;javascript:void(0);&quot;&gt;...&lt;/a&gt;);
+            //i+=1;
+        }
+
+        for(;i&lt;=len;i++){
+            htmlList.push(&lt;a href=&quot;javascript:void(0);&quot; onClick={this.gotoPage.bind(this,i)} className={classnames({
+              [this.getClassName(activeClass) ]:  i==currentPage
+            } ) } &gt;{i}&lt;/a&gt; );
+        }
+        //pages-currentPage =
+        let bt = this.pages-currentPage;
+        if(bt&gt;=7 ){
+            htmlList.push(&lt;a href=&quot;javascript:void(0);&quot;&gt;...&lt;/a&gt;);
+            htmlList.push(&lt;a href=&quot;javascript:void(0);&quot; onClick={::this.gotoPage.bind(this,this.pages)}&gt;{this.pages}&lt;/a&gt;);
+        }
+
+        if(this.pages&gt;1 &amp;&amp; currentPage!=this.pages){
+            htmlList.push(&lt;a href=&quot;javascript:void(0);&quot; onClick={::this.next}&gt;下一页&lt;/a&gt;);
+
+        }
+
+        return htmlList;
+
+    }
+
+    /**
+     * @method render
+     * @return {ReactElement}
+     * */
+    render(){
+
+        const {componentTag:Component,activeClass} = this.props;
+
+        return (
+
+            &lt;Component className={classnames(this.getClassName(&#x27;container&#x27;)) }&gt;
+                {this.goto() }
+                &lt;span className=&#x27;info&#x27;&gt;
+                    &lt;span className={classnames(this.getClassName(activeClass)) }&gt;
+                        {this.props.currentPage}
+                    &lt;/span&gt;/{this.getPages()}，共{this.props.total}条
+                &lt;/span&gt;
+            &lt;/Component&gt;
+        );
+
+    }
+}
+    </pre>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<a id="gotoTop" class='well well-small' href='#'>
+    Top
+</a>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/doc.js"></script>
+</body>
+</html>

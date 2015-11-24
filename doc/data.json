@@ -1,0 +1,2180 @@
+{
+    "project": {
+        "name": "eagle-ui",
+        "version": "0.1.0",
+        "url": "",
+        "navs": [
+            {
+                "name": "主页",
+                "url": ""
+            }
+        ]
+    },
+    "files": {
+        "lib/Panel/Panel.js": {
+            "name": "lib/Panel/Panel.js",
+            "modules": {},
+            "classes": {
+                "Panel": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/Panel/PanelContent.js": {
+            "name": "lib/Panel/PanelContent.js",
+            "modules": {},
+            "classes": {
+                "PanelContent": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/Panel/PanelFooter.js": {
+            "name": "lib/Panel/PanelFooter.js",
+            "modules": {},
+            "classes": {
+                "PanelFooter": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/Panel/PanelHeader.js": {
+            "name": "lib/Panel/PanelHeader.js",
+            "modules": {},
+            "classes": {
+                "PanelHeader": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/Table/Table.js": {
+            "name": "lib/Table/Table.js",
+            "modules": {},
+            "classes": {
+                "Table": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/Table/Td.js": {
+            "name": "lib/Table/Td.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/Table/Th.js": {
+            "name": "lib/Table/Th.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/Table/Tr.js": {
+            "name": "lib/Table/Tr.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/utils/ClassNameMixin.js": {
+            "name": "lib/utils/ClassNameMixin.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/utils/constants.js": {
+            "name": "lib/utils/constants.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/utils/extend.js": {
+            "name": "lib/utils/extend.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/Button.js": {
+            "name": "lib/Button.js",
+            "modules": {},
+            "classes": {
+                "Button": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/ButtonGroup.js": {
+            "name": "lib/ButtonGroup.js",
+            "modules": {},
+            "classes": {
+                "ButtonGroup": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/Calendar.js": {
+            "name": "lib/Calendar.js",
+            "modules": {},
+            "classes": {
+                "Calendar": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/CalendarPanel.js": {
+            "name": "lib/CalendarPanel.js",
+            "modules": {},
+            "classes": {
+                "CalendarPanel": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/Col.js": {
+            "name": "lib/Col.js",
+            "modules": {},
+            "classes": {
+                "Col": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/Crumb.js": {
+            "name": "lib/Crumb.js",
+            "modules": {},
+            "classes": {
+                "crumb": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/Dialog.js": {
+            "name": "lib/Dialog.js",
+            "modules": {},
+            "classes": {
+                "dialog": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/Grid.js": {
+            "name": "lib/Grid.js",
+            "modules": {},
+            "classes": {
+                "Grid": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/Input.js": {
+            "name": "lib/Input.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/Label.js": {
+            "name": "lib/Label.js",
+            "modules": {
+                "ui": 1
+            },
+            "classes": {
+                "Label": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/LabelGroup.js": {
+            "name": "lib/LabelGroup.js",
+            "modules": {},
+            "classes": {
+                "LabelGroup": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/Marquee.js": {
+            "name": "lib/Marquee.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/Paging.js": {
+            "name": "lib/Paging.js",
+            "modules": {},
+            "classes": {
+                "Paging": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/RadioGroup.js": {
+            "name": "lib/RadioGroup.js",
+            "modules": {
+                "form": 1
+            },
+            "classes": {
+                "RadioGroup": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/Row.js": {
+            "name": "lib/Row.js",
+            "modules": {
+                "grid": 1
+            },
+            "classes": {
+                "Row": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/Search.js": {
+            "name": "lib/Search.js",
+            "modules": {},
+            "classes": {
+                "Select": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/Select.js": {
+            "name": "lib/Select.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/Tab.js": {
+            "name": "lib/Tab.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/Tabset.js": {
+            "name": "lib/Tabset.js",
+            "modules": {},
+            "classes": {
+                "Tab": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/Toast.js": {
+            "name": "lib/Toast.js",
+            "modules": {},
+            "classes": {
+                "toast": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/Tooltip.js": {
+            "name": "lib/Tooltip.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "lib/TooltipPanel.js": {
+            "name": "lib/TooltipPanel.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "ui": {
+            "name": "ui",
+            "submodules": {},
+            "classes": {
+                "Calendar": 1,
+                "Label": 1,
+                "Panel": 1,
+                "PanelContent": 1,
+                "PanelFooter": 1,
+                "PanelHeader": 1,
+                "Table": 1,
+                "Paging": 1,
+                "CalendarPanel": 1,
+                "LabelGroup": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "lib/LabelGroup.js",
+            "line": 12,
+            "description": "标签"
+        },
+        "form": {
+            "name": "form",
+            "submodules": {},
+            "classes": {
+                "RadioGroup": 1,
+                "Button": 1,
+                "ButtonGroup": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "lib/RadioGroup.js",
+            "line": 7,
+            "description": "单选按钮组组件"
+        },
+        "grid": {
+            "name": "grid",
+            "submodules": {
+                "undefined": 1
+            },
+            "classes": {
+                "Row": 1,
+                "Col": 1,
+                "crumb": 1,
+                "dialog": 1,
+                "Grid": 1,
+                "Select": 1,
+                "Tab": 1,
+                "toast": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "lib/Toast.js",
+            "line": 11,
+            "description": "行"
+        }
+    },
+    "classes": {
+        "Panel": {
+            "name": "Panel",
+            "shortname": "Panel",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ui",
+            "file": "lib/Panel/Panel.js",
+            "line": 5,
+            "description": "Panel组件",
+            "is_constructor": 1,
+            "extends": "Component",
+            "requires": [
+                "React classnames"
+            ],
+            "since": "0.1.0",
+            "example": [],
+            "exampleTitles": [],
+            "author": "bo.an@dianping.com"
+        },
+        "PanelContent": {
+            "name": "PanelContent",
+            "shortname": "PanelContent",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ui",
+            "namespace": "",
+            "file": "lib/Panel/PanelContent.js",
+            "line": 5,
+            "description": "PanelContent组件",
+            "is_constructor": 1,
+            "extends": "Component",
+            "requires": [
+                "React classnames"
+            ],
+            "since": "0.1.0",
+            "example": [],
+            "exampleTitles": [],
+            "author": "bo.an@dianping.com"
+        },
+        "PanelFooter": {
+            "name": "PanelFooter",
+            "shortname": "PanelFooter",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ui",
+            "namespace": "",
+            "file": "lib/Panel/PanelFooter.js",
+            "line": 5,
+            "description": "PanelFooter组件",
+            "is_constructor": 1,
+            "extends": "Component",
+            "requires": [
+                "React classnames"
+            ],
+            "since": "0.1.0",
+            "example": [],
+            "exampleTitles": [],
+            "author": "bo.an@dianping.com"
+        },
+        "PanelHeader": {
+            "name": "PanelHeader",
+            "shortname": "PanelHeader",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ui",
+            "namespace": "",
+            "file": "lib/Panel/PanelHeader.js",
+            "line": 5,
+            "description": "PanelHeader组件",
+            "is_constructor": 1,
+            "extends": "Component",
+            "requires": [
+                "React classnames"
+            ],
+            "since": "0.1.0",
+            "example": [],
+            "exampleTitles": [],
+            "author": "bo.an@dianping.com"
+        },
+        "Table": {
+            "name": "Table",
+            "shortname": "Table",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ui",
+            "namespace": "",
+            "file": "lib/Table/Table.js",
+            "line": 5,
+            "description": "表格组件",
+            "is_constructor": 1,
+            "extends": "Component",
+            "requires": [
+                "React classnames"
+            ],
+            "since": "0.1.0",
+            "example": [
+                "\t/**\n\t * Created by mac on 15/11/4.\n\t */\n\timport css from '../../lib/_include.less';\n\timport React from 'react';\n\timport Table from '../../lib/Table/Table.js';\n\timport Tr from '../../lib/Table/Tr.js';\n\timport Td from '../../lib/Table/Td.js';\n\timport Th from '../../lib/Table/Th.js';\n\t\n\tReactDOM.render(\n\t    <Table>\n\t        <thead>\n\t            <Tr>\n\t                <Th>数据类型</Th>\n\t                <Th>数据项</Th>\n\t                <Th>昨日</Th>\n\t                <Th>本月</Th>\n\t                <Th>上月</Th>\n\t                <Th>本月城市排名</Th>\n\t            </Tr>\n\t        </thead>\n\t        <tbody>\n\t            <Tr>\n\t                <Td rowSpan=\"4\">过程指标</Td>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr>\n\t                <Td arrow-up>消费交易额</Td>\n\t                <Td arrow-down>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr split>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td arrow-down>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr>\n\t                <Td rowSpan=\"4\">业绩</Td>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t        </tbody>\n\t    </Table>\n\t    ,document.getElementById('root'));",
+                "\t<!DOCTYPE html>\n\t<html>\n\t<head>\n\t    <meta charset=\"UTF-8\">\n\t    <title>分页组件</title>\n\t    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no, minimal-ui\">\n\t    <link rel=\"stylesheet\" type=\"text/css\" href=\"./eagle-ui.css\" />\n\t    <style>\n\t        table{\n\t            width: 100%;\n\t        }\n\t    </style>\n\t</head>\n\t<body>\n\t<div id=\"root\"></div>\n\t\n\t<script src=\"../bower_components/react/react.js\"></script>\n\t<script src=\"../bower_components/react/react-dom.js\"></script>\n\t<script src=\"js/table.js\"></script>\n\t</body>\n\t</html>"
+            ],
+            "exampleTitles": [
+                "js",
+                "html"
+            ],
+            "show": true,
+            "author": "bo.an@dianping.com"
+        },
+        "Paging": {
+            "name": "Paging",
+            "shortname": "Paging",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ui",
+            "namespace": "",
+            "file": "lib/Paging.js",
+            "line": 5,
+            "description": "分页组件",
+            "is_constructor": 1,
+            "extends": "Component",
+            "requires": [
+                "React classnames"
+            ],
+            "since": "0.1.0",
+            "example": [
+                "\t/**\n\t * Created by mac on 15/11/4.\n\t */\n\timport css from '../../lib/_include.less';\n\timport React from 'react';\n\timport Table from '../../lib/Table/Table.js';\n\timport Tr from '../../lib/Table/Tr.js';\n\timport Td from '../../lib/Table/Td.js';\n\timport Th from '../../lib/Table/Th.js';\n\t\n\tReactDOM.render(\n\t    <Table>\n\t        <thead>\n\t            <Tr>\n\t                <Th>数据类型</Th>\n\t                <Th>数据项</Th>\n\t                <Th>昨日</Th>\n\t                <Th>本月</Th>\n\t                <Th>上月</Th>\n\t                <Th>本月城市排名</Th>\n\t            </Tr>\n\t        </thead>\n\t        <tbody>\n\t            <Tr>\n\t                <Td rowSpan=\"4\">过程指标</Td>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr>\n\t                <Td arrow-up>消费交易额</Td>\n\t                <Td arrow-down>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr split>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td arrow-down>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr>\n\t                <Td rowSpan=\"4\">业绩</Td>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t        </tbody>\n\t    </Table>\n\t    ,document.getElementById('root'));",
+                "\t<!DOCTYPE html>\n\t<html>\n\t<head>\n\t    <meta charset=\"UTF-8\">\n\t    <title>分页组件</title>\n\t    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no, minimal-ui\">\n\t    <link rel=\"stylesheet\" type=\"text/css\" href=\"./eagle-ui.css\" />\n\t    <style>\n\t        table{\n\t            width: 100%;\n\t        }\n\t    </style>\n\t</head>\n\t<body>\n\t<div id=\"root\"></div>\n\t\n\t<script src=\"../bower_components/react/react.js\"></script>\n\t<script src=\"../bower_components/react/react-dom.js\"></script>\n\t<script src=\"js/table.js\"></script>\n\t</body>\n\t</html>"
+            ],
+            "exampleTitles": [
+                "js",
+                "html"
+            ],
+            "show": true,
+            "author": "bo.an@dianping.com"
+        },
+        "Button": {
+            "name": "Button",
+            "shortname": "Button",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "form",
+            "namespace": "",
+            "file": "lib/Button.js",
+            "line": 8,
+            "description": "按钮组件",
+            "extends": "Component",
+            "is_constructor": 1,
+            "since": "0.1.0",
+            "example": [
+                "\t/**\n\t * Created by mac on 15/11/4.\n\t */\n\timport css from '../../lib/_include.less';\n\timport React from 'react';\n\timport ButtonGroup from '../../lib/ButtonGroup.js';\n\timport Button from '../../lib/Button.js';\n\timport Row from '../../lib/Row.js';\n\timport Col from '../../lib/Col.js';\n\timport Grid from '../../lib/Grid.js';\n\t\n\tReactDOM.render(\n\t    <Grid>\n\t        <Row>\n\t            <Col sm={12}>\n\t                <ButtonGroup justify>\n\t                    <Button radius egSize=\"sm\" egStyle=\"warning\">水平按钮组</Button>\n\t                    <Button radius egSize=\"sm\" egStyle=\"warning\">水平按钮组</Button>\n\t                    <Button radius egSize=\"sm\" egStyle=\"warning\">水平按钮组</Button>\n\t                </ButtonGroup>\n\t            </Col>\n\t        </Row>\n\t        <Row>\n\t            <Col sm={12}>\n\t                <ButtonGroup tacked>\n\t                    <Button radius egSize=\"sm\" egStyle=\"\">垂直按钮组</Button>\n\t                    <Button radius egSize=\"sm\" egStyle=\"\">垂直按钮组</Button>\n\t                    <Button radius egSize=\"sm\" egStyle=\"\">垂直按钮组</Button>\n\t                </ButtonGroup>\n\t            </Col>\n\t        </Row>\n\t        <Row>\n\t            <Col sm={3}><Button radius egSize=\"sm\" egStyle=\"warning\">警告</Button></Col>\n\t            <Col sm={3}><Button radius egSize=\"sm\" egStyle=\"success\">成功</Button></Col>\n\t            <Col sm={3}><Button radius egSize=\"sm\" egStyle=\"danger\">危险</Button></Col>\n\t            <Col sm={3}><Button radius egSize=\"sm\" egStyle=\"error\">错误</Button></Col>\n\t        </Row>\n\t        <Row>\n\t            <Col sm={3}><Button radius egSize=\"sm\" egStyle=\"gray\">灰色</Button></Col>\n\t            <Col sm={3}><Button radius egSize=\"sm\" >默认</Button></Col>\n\t            <Col sm={3}><Button radius egSize=\"sm\" egStyle=\"white\">白色</Button></Col>\n\t            <Col sm={3}><Button radius egSize=\"sm\" egStyle=\"white\">白色</Button></Col>\n\t        </Row>\n\t        <Row>\n\t            <Col sm={3}><Button block radius egSize=\"sm\" egStyle=\"gray\">灰色</Button></Col>\n\t            <Col sm={3}><Button block radius egSize=\"sm\" >默认</Button></Col>\n\t            <Col sm={3}><Button block radius egSize=\"sm\" disabled>默认不可点</Button></Col>\n\t            <Col sm={3}><Button block radius egSize=\"sm\" egStyle=\"white\" disabled>白色不可点</Button></Col>\n\t        </Row>\n\t        <Row>\n\t            <Col sm={3}><Button block radius egSize=\"sm\" egStyle=\"success\" disabled>成功不可点</Button></Col>\n\t            <Col sm={3}><Button block radius egSize=\"sm\" >默认</Button></Col>\n\t            <Col sm={3}><Button block radius egSize=\"sm\" disabled>默认不可点</Button></Col>\n\t            <Col sm={3}><Button block radius egSize=\"sm\" egStyle=\"link\" >链接</Button></Col>\n\t        </Row>\n\t        <Row>\n\t            <Col sm={3}><Button block radius egSize=\"xs\" egStyle=\"success\" disabled>大号</Button></Col>\n\t            <Col sm={3}><Button block radius egSize=\"xs\" >大号</Button></Col>\n\t            <Col sm={3}><Button block radius egSize=\"xs\" disabled>大号</Button></Col>\n\t            <Col sm={3}><Button block radius egSize=\"xs\" egStyle=\"link\" >大号</Button></Col>\n\t        </Row>\n\t        <Row>\n\t            <Col sm={3}><Button block radius egSize=\"lg\" egStyle=\"success\" disabled>小号</Button></Col>\n\t            <Col sm={3}><Button block radius egSize=\"lg\" >小号</Button></Col>\n\t            <Col sm={3}><Button block radius egSize=\"lg\" disabled>小号</Button></Col>\n\t            <Col sm={3}><Button block radius egSize=\"lg\" egStyle=\"link\" >小号</Button></Col>\n\t        </Row>\n\t    </Grid>\n\t    ,document.getElementById('root'));",
+                "\t<!DOCTYPE html>\n\t<html>\n\t<head>\n\t    <meta charset=\"UTF-8\">\n\t    <title>按钮</title>\n\t    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no, minimal-ui\">\n\t    <link rel=\"stylesheet\" type=\"text/css\" href=\"./eagle-ui.css\" />\n\t\n\t</head>\n\t<body>\n\t<div id=\"root\"></div>\n\t\n\t<script src=\"../bower_components/react/react.js\"></script>\n\t<script src=\"../bower_components/react/react-dom.js\"></script>\n\t<script src=\"js/button.js\"></script>\n\t</body>\n\t</html>"
+            ],
+            "exampleTitles": [
+                "js",
+                "html"
+            ],
+            "show": true
+        },
+        "ButtonGroup": {
+            "name": "ButtonGroup",
+            "shortname": "ButtonGroup",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "form",
+            "namespace": "",
+            "file": "lib/ButtonGroup.js",
+            "line": 8,
+            "description": "按钮组组件<br/>",
+            "extends": "Component",
+            "is_constructor": 1,
+            "since": "0.1.0",
+            "example": [
+                "\t/**\n\t * Created by mac on 15/11/4.\n\t */\n\timport css from '../../lib/_include.less';\n\timport React from 'react';\n\timport ButtonGroup from '../../lib/ButtonGroup.js';\n\timport Button from '../../lib/Button.js';\n\timport Row from '../../lib/Row.js';\n\timport Col from '../../lib/Col.js';\n\timport Grid from '../../lib/Grid.js';\n\t\n\tReactDOM.render(\n\t    <Grid>\n\t        <Row>\n\t            <Col sm={12}>\n\t                <ButtonGroup justify>\n\t                    <Button radius egSize=\"sm\" egStyle=\"warning\">水平按钮组</Button>\n\t                    <Button radius egSize=\"sm\" egStyle=\"warning\">水平按钮组</Button>\n\t                    <Button radius egSize=\"sm\" egStyle=\"warning\">水平按钮组</Button>\n\t                </ButtonGroup>\n\t            </Col>\n\t        </Row>\n\t        <Row>\n\t            <Col sm={12}>\n\t                <ButtonGroup tacked>\n\t                    <Button radius egSize=\"sm\" egStyle=\"\">垂直按钮组</Button>\n\t                    <Button radius egSize=\"sm\" egStyle=\"\">垂直按钮组</Button>\n\t                    <Button radius egSize=\"sm\" egStyle=\"\">垂直按钮组</Button>\n\t                </ButtonGroup>\n\t            </Col>\n\t        </Row>\n\t        <Row>\n\t            <Col sm={3}><Button radius egSize=\"sm\" egStyle=\"warning\">警告</Button></Col>\n\t            <Col sm={3}><Button radius egSize=\"sm\" egStyle=\"success\">成功</Button></Col>\n\t            <Col sm={3}><Button radius egSize=\"sm\" egStyle=\"danger\">危险</Button></Col>\n\t            <Col sm={3}><Button radius egSize=\"sm\" egStyle=\"error\">错误</Button></Col>\n\t        </Row>\n\t        <Row>\n\t            <Col sm={3}><Button radius egSize=\"sm\" egStyle=\"gray\">灰色</Button></Col>\n\t            <Col sm={3}><Button radius egSize=\"sm\" >默认</Button></Col>\n\t            <Col sm={3}><Button radius egSize=\"sm\" egStyle=\"white\">白色</Button></Col>\n\t            <Col sm={3}><Button radius egSize=\"sm\" egStyle=\"white\">白色</Button></Col>\n\t        </Row>\n\t        <Row>\n\t            <Col sm={3}><Button block radius egSize=\"sm\" egStyle=\"gray\">灰色</Button></Col>\n\t            <Col sm={3}><Button block radius egSize=\"sm\" >默认</Button></Col>\n\t            <Col sm={3}><Button block radius egSize=\"sm\" disabled>默认不可点</Button></Col>\n\t            <Col sm={3}><Button block radius egSize=\"sm\" egStyle=\"white\" disabled>白色不可点</Button></Col>\n\t        </Row>\n\t        <Row>\n\t            <Col sm={3}><Button block radius egSize=\"sm\" egStyle=\"success\" disabled>成功不可点</Button></Col>\n\t            <Col sm={3}><Button block radius egSize=\"sm\" >默认</Button></Col>\n\t            <Col sm={3}><Button block radius egSize=\"sm\" disabled>默认不可点</Button></Col>\n\t            <Col sm={3}><Button block radius egSize=\"sm\" egStyle=\"link\" >链接</Button></Col>\n\t        </Row>\n\t        <Row>\n\t            <Col sm={3}><Button block radius egSize=\"xs\" egStyle=\"success\" disabled>大号</Button></Col>\n\t            <Col sm={3}><Button block radius egSize=\"xs\" >大号</Button></Col>\n\t            <Col sm={3}><Button block radius egSize=\"xs\" disabled>大号</Button></Col>\n\t            <Col sm={3}><Button block radius egSize=\"xs\" egStyle=\"link\" >大号</Button></Col>\n\t        </Row>\n\t        <Row>\n\t            <Col sm={3}><Button block radius egSize=\"lg\" egStyle=\"success\" disabled>小号</Button></Col>\n\t            <Col sm={3}><Button block radius egSize=\"lg\" >小号</Button></Col>\n\t            <Col sm={3}><Button block radius egSize=\"lg\" disabled>小号</Button></Col>\n\t            <Col sm={3}><Button block radius egSize=\"lg\" egStyle=\"link\" >小号</Button></Col>\n\t        </Row>\n\t    </Grid>\n\t    ,document.getElementById('root'));",
+                "\t<!DOCTYPE html>\n\t<html>\n\t<head>\n\t    <meta charset=\"UTF-8\">\n\t    <title>按钮</title>\n\t    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no, minimal-ui\">\n\t    <link rel=\"stylesheet\" type=\"text/css\" href=\"./eagle-ui.css\" />\n\t\n\t</head>\n\t<body>\n\t<div id=\"root\"></div>\n\t\n\t<script src=\"../bower_components/react/react.js\"></script>\n\t<script src=\"../bower_components/react/react-dom.js\"></script>\n\t<script src=\"js/button.js\"></script>\n\t</body>\n\t</html>"
+            ],
+            "exampleTitles": [
+                "js",
+                "html"
+            ],
+            "show": true
+        },
+        "Calendar": {
+            "name": "Calendar",
+            "shortname": "Calendar",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ui",
+            "namespace": "",
+            "file": "lib/Calendar.js",
+            "line": 5,
+            "description": "日历组件<br />\n需要和CalendarPanel组合使用",
+            "extends": "Component",
+            "is_constructor": 1,
+            "since": "0.1.0",
+            "example": [
+                "\t/**\n\t * Created by mac on 15/11/4.\n\t */\n\timport css from '../../lib/_include.less';\n\timport React,{Component,PropTypes} from 'react';\n\timport Calendar from '../../lib/Calendar.js';\n\timport Input from '../../lib/Input.js';\n\timport Row from '../../lib/Row.js';\n\timport Col from '../../lib/Col.js';\n\timport Grid from '../../lib/Grid.js';\n\timport CalendarPanel from '../../lib/CalendarPanel.js';\n\timport querystring from 'querystring';\n\t\n\t\n\tlet Demo= class Demo extends Component{\n\t    constructor(props, context) {\n\t        super(props, context);\n\t\n\t        this.state = {\n\t            show:false\n\t        }\n\t    };\n\t\n\t    focus(){\n\t        this.setState({\n\t            show:true\n\t        });\n\t    }\n\t    blur(){\n\t        this.setState({\n\t            show:false\n\t        });\n\t    }\n\t\n\t    render(){\n\t\n\t        return (\n\t            <Grid>\n\t            <Row>\n\t                <Col sm={12}>\n\t                    <CalendarPanel startDate=\"2015-11-11\">\n\t                        <Input placeholder=\"请选择日期\" style={{width:'150px'}} />\n\t                    </CalendarPanel>\n\t\n\t                </Col>\n\t                <Col sm={1} end>\n\t                    每日邮报报道,英国华威大学划艇队推出了2016年新版裸体日历,小伙子们在镜头前“坦诚相见”,大秀肌肉。这是该校划艇队第六次拍摄这种日历。 长期锻炼的队员们骄傲的\n\t                </Col>\n\t            </Row>\n\t            <Row>\n\t                <Col sm={3}>\n\t                    <CalendarPanel startDate=\"2015-11-11\" endDate=\"2015-12-1\">\n\t                        <Input placeholder=\"请选择日期\" style={{width:'150px'}} />\n\t                    </CalendarPanel>\n\t                </Col>\n\t            </Row>\n\t            </Grid>\n\t        );\n\t    }\n\t}\n\t\n\tReactDOM.render(\n\t    <Demo />\n\t    ,document.getElementById('root'));",
+                "\t<!DOCTYPE html>\n\t<html>\n\t<head>\n\t    <meta charset=\"UTF-8\">\n\t    <title>日历组件</title>\n\t    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no, minimal-ui\">\n\t    <link rel=\"stylesheet\" type=\"text/css\" href=\"./eagle-ui.css\" />\n\t\n\t</head>\n\t<body>\n\t<div id=\"root\"></div>\n\t\n\t<script src=\"../bower_components/react/react.js\"></script>\n\t<script src=\"../bower_components/react/react-dom.js\"></script>\n\t<script src=\"js/calendar.js\"></script>\n\t</body>\n\t</html>"
+            ],
+            "exampleTitles": [
+                "js",
+                "html"
+            ],
+            "show": true
+        },
+        "CalendarPanel": {
+            "name": "CalendarPanel",
+            "shortname": "CalendarPanel",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ui",
+            "namespace": "",
+            "file": "lib/CalendarPanel.js",
+            "line": 8,
+            "description": "CalendarPanel组件",
+            "extends": "Component",
+            "is_constructor": 1,
+            "since": "0.1.0",
+            "example": [
+                "\t/**\n\t * Created by mac on 15/11/4.\n\t */\n\timport css from '../../lib/_include.less';\n\timport React,{Component,PropTypes} from 'react';\n\timport Calendar from '../../lib/Calendar.js';\n\timport Input from '../../lib/Input.js';\n\timport Row from '../../lib/Row.js';\n\timport Col from '../../lib/Col.js';\n\timport Grid from '../../lib/Grid.js';\n\timport CalendarPanel from '../../lib/CalendarPanel.js';\n\timport querystring from 'querystring';\n\t\n\t\n\tlet Demo= class Demo extends Component{\n\t    constructor(props, context) {\n\t        super(props, context);\n\t\n\t        this.state = {\n\t            show:false\n\t        }\n\t    };\n\t\n\t    focus(){\n\t        this.setState({\n\t            show:true\n\t        });\n\t    }\n\t    blur(){\n\t        this.setState({\n\t            show:false\n\t        });\n\t    }\n\t\n\t    render(){\n\t\n\t        return (\n\t            <Grid>\n\t            <Row>\n\t                <Col sm={12}>\n\t                    <CalendarPanel startDate=\"2015-11-11\">\n\t                        <Input placeholder=\"请选择日期\" style={{width:'150px'}} />\n\t                    </CalendarPanel>\n\t\n\t                </Col>\n\t                <Col sm={1} end>\n\t                    每日邮报报道,英国华威大学划艇队推出了2016年新版裸体日历,小伙子们在镜头前“坦诚相见”,大秀肌肉。这是该校划艇队第六次拍摄这种日历。 长期锻炼的队员们骄傲的\n\t                </Col>\n\t            </Row>\n\t            <Row>\n\t                <Col sm={3}>\n\t                    <CalendarPanel startDate=\"2015-11-11\" endDate=\"2015-12-1\">\n\t                        <Input placeholder=\"请选择日期\" style={{width:'150px'}} />\n\t                    </CalendarPanel>\n\t                </Col>\n\t            </Row>\n\t            </Grid>\n\t        );\n\t    }\n\t}\n\t\n\tReactDOM.render(\n\t    <Demo />\n\t    ,document.getElementById('root'));",
+                "\t<!DOCTYPE html>\n\t<html>\n\t<head>\n\t    <meta charset=\"UTF-8\">\n\t    <title>日历组件</title>\n\t    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no, minimal-ui\">\n\t    <link rel=\"stylesheet\" type=\"text/css\" href=\"./eagle-ui.css\" />\n\t\n\t</head>\n\t<body>\n\t<div id=\"root\"></div>\n\t\n\t<script src=\"../bower_components/react/react.js\"></script>\n\t<script src=\"../bower_components/react/react-dom.js\"></script>\n\t<script src=\"js/calendar.js\"></script>\n\t</body>\n\t</html>"
+            ],
+            "exampleTitles": [
+                "js",
+                "html"
+            ],
+            "show": true
+        },
+        "Col": {
+            "name": "Col",
+            "shortname": "Col",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "grid",
+            "namespace": "",
+            "file": "lib/Col.js",
+            "line": 4,
+            "description": "列",
+            "extends": "Component",
+            "is_constructor": 1,
+            "since": "0.1.0"
+        },
+        "crumb": {
+            "name": "crumb",
+            "shortname": "crumb",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "grid",
+            "namespace": "",
+            "file": "lib/Crumb.js",
+            "line": 20,
+            "description": "主体类:crumd\n只需在Crumb下面应包含子节点\n如 <<item url=\"dddd.html\">>菜单<</item>>形式，最后一个应无url值.\n即，this.props.children 不为空"
+        },
+        "dialog": {
+            "name": "dialog",
+            "shortname": "dialog",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "grid",
+            "namespace": "",
+            "file": "lib/Dialog.js",
+            "line": 24,
+            "description": "dialog 弹窗组件"
+        },
+        "Grid": {
+            "name": "Grid",
+            "shortname": "Grid",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "grid",
+            "namespace": "",
+            "file": "lib/Grid.js",
+            "line": 3,
+            "description": "布局组件",
+            "extends": "Component",
+            "is_constructor": 1,
+            "since": "0.1.0"
+        },
+        "Label": {
+            "name": "Label",
+            "shortname": "Label",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ui",
+            "namespace": "",
+            "file": "lib/Label.js",
+            "line": 8,
+            "description": "标签",
+            "extends": "Component",
+            "is_constructor": 1,
+            "since": "0.1.0",
+            "example": [],
+            "exampleTitles": [],
+            "show": true
+        },
+        "LabelGroup": {
+            "name": "LabelGroup",
+            "shortname": "LabelGroup",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ui",
+            "namespace": "",
+            "file": "lib/LabelGroup.js",
+            "line": 12,
+            "description": "标签组",
+            "extends": "Component",
+            "is_constructor": 1,
+            "since": "0.1.0",
+            "example": [],
+            "exampleTitles": [],
+            "show": true
+        },
+        "RadioGroup": {
+            "name": "RadioGroup",
+            "shortname": "RadioGroup",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "form",
+            "namespace": "",
+            "file": "lib/RadioGroup.js",
+            "line": 7,
+            "description": "单选按钮组组件",
+            "extends": "Component",
+            "is_constructor": 1,
+            "since": "0.1.0",
+            "example": [
+                "\t/**\n\t * Created by mac on 15/11/4.\n\t */\n\timport css from '../../lib/_include.less';\n\timport React,{Component,PropTypes} from 'react';\n\timport Input from '../../lib/Input.js';\n\timport Row from '../../lib/Row.js';\n\timport Col from '../../lib/Col.js';\n\timport Grid from '../../lib/Grid.js';\n\timport RadioGroup from '../../lib/RadioGroup.js';\n\timport CalendarPanel from '../../lib/CalendarPanel.js';\n\timport querystring from 'querystring';\n\t\n\t\n\tlet Demo= class Demo extends Component{\n\t    constructor(props, context) {\n\t        super(props, context);\n\t\n\t        this.state = {\n\t            show:false\n\t        }\n\t    };\n\t\n\t    focus(){\n\t        this.setState({\n\t            show:true\n\t        });\n\t    }\n\t    blur(){\n\t        this.setState({\n\t            show:false\n\t        });\n\t    }\n\t\n\t    render(){\n\t\n\t        return (\n\t            <Grid>\n\t                <Row>\n\t                    <Col sm={12}><Input name=\"test\" id=\"test\" placeholder=\"请输入\" icon=\"calendar\"  /></Col>\n\t                    <Col sm={12}>\n\t                        <Input  type=\"checkbox\" checked  disabled={true}  />\n\t                        <Input  type=\"checkbox\"  disabled={true}   />\n\t                        <Input  type=\"checkbox\"   />\n\t                        <Input  type=\"checkbox\" checked  />\n\t\n\t                    </Col>\n\t                    <Col sm={12}>\n\t                        <Col sm={6}>\n\t                            <RadioGroup defaultChecked=\"石榴\" name=\"radio-test\">\n\t                                <Input  type=\"radio\"  label=\"石榴\" value=\"石榴\" />\n\t                                <Input  type=\"radio\"  label=\"橘子\" value=\"橘子\"  />\n\t                                <Input  type=\"radio\"  label=\"苹果\" value=\"苹果\" />\n\t                            </RadioGroup>\n\t                        </Col>\n\t                        <Col sm={6}>\n\t                            <RadioGroup defaultChecked=\"鸡蛋\" name=\"radio-foot\">\n\t                                <Input  type=\"radio\"  label=\"大白菜\" value=\"大白菜\" />\n\t                                <Input  type=\"radio\"  label=\"鸡蛋\" value=\"鸡蛋\" disabled={true}  />\n\t                                <Input  type=\"radio\"  label=\"猪肉\" value=\"猪肉\" />\n\t                                <Input  type=\"radio\"  label=\"牛肉\" value=\"牛肉\" />\n\t                                <Input  type=\"radio\"  label=\"鱼肉\" value=\"鱼肉\" disabled={true} />\n\t                            </RadioGroup>\n\t                        </Col>\n\t                    </Col>\n\t                </Row>\n\t            </Grid>\n\t        );\n\t    }\n\t}\n\t\n\tReactDOM.render(\n\t    <Demo />\n\t    ,document.getElementById('root'));",
+                "\t<!DOCTYPE html>\n\t<html>\n\t<head>\n\t    <meta charset=\"UTF-8\">\n\t    <title>表单元素</title>\n\t    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no, minimal-ui\">\n\t    <link rel=\"stylesheet\" type=\"text/css\" href=\"./eagle-ui.css\" />\n\t\n\t</head>\n\t<body>\n\t<div id=\"root\"></div>\n\t\n\t<script src=\"../bower_components/react/react.js\"></script>\n\t<script src=\"../bower_components/react/react-dom.js\"></script>\n\t<script src=\"js/input.js\"></script>\n\t</body>\n\t</html>"
+            ],
+            "exampleTitles": [
+                "js",
+                "html"
+            ],
+            "show": true
+        },
+        "Row": {
+            "name": "Row",
+            "shortname": "Row",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "grid",
+            "namespace": "",
+            "file": "lib/Row.js",
+            "line": 5,
+            "description": "行",
+            "extends": "Component",
+            "is_constructor": 1,
+            "since": "0.1.0"
+        },
+        "Select": {
+            "name": "Select",
+            "shortname": "Select",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "grid",
+            "namespace": "",
+            "file": "lib/Search.js",
+            "line": 9,
+            "description": "搜索按钮组件\n参数： id/callBack/placeholder 均可不传"
+        },
+        "Tab": {
+            "name": "Tab",
+            "shortname": "Tab",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "grid",
+            "namespace": "",
+            "file": "lib/Tabset.js",
+            "line": 8,
+            "description": "Tab"
+        },
+        "toast": {
+            "name": "toast",
+            "shortname": "toast",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "grid",
+            "namespace": "",
+            "file": "lib/Toast.js",
+            "line": 11,
+            "description": "three tips: success/error/loading\ndate 2015/211"
+        }
+    },
+    "classitems": [
+        {
+            "file": "lib/Panel/Panel.js",
+            "line": 28,
+            "itemtype": "method",
+            "name": "render",
+            "return": {
+                "description": "",
+                "type": "ReactElement"
+            },
+            "class": "Panel",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Panel/PanelContent.js",
+            "line": 29,
+            "itemtype": "method",
+            "name": "render",
+            "return": {
+                "description": "",
+                "type": "ReactElement"
+            },
+            "class": "PanelContent",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Panel/PanelFooter.js",
+            "line": 29,
+            "itemtype": "method",
+            "name": "render",
+            "return": {
+                "description": "",
+                "type": "ReactElement"
+            },
+            "class": "PanelFooter",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Panel/PanelHeader.js",
+            "line": 29,
+            "itemtype": "method",
+            "name": "render",
+            "return": {
+                "description": "",
+                "type": "ReactElement"
+            },
+            "class": "PanelHeader",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Table/Table.js",
+            "line": 30,
+            "itemtype": "method",
+            "name": "render",
+            "return": {
+                "description": "",
+                "type": "ReactElement"
+            },
+            "class": "Table",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Table/Td.js",
+            "line": 31,
+            "itemtype": "method",
+            "name": "render",
+            "return": {
+                "description": "",
+                "type": "ReactElement"
+            },
+            "class": "Paging",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Table/Th.js",
+            "line": 31,
+            "itemtype": "method",
+            "name": "render",
+            "return": {
+                "description": "",
+                "type": "ReactElement"
+            },
+            "class": "Paging",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Table/Tr.js",
+            "line": 22,
+            "description": "是否在每一行下添加分割线",
+            "itemtype": "property",
+            "name": "split",
+            "type": "bool",
+            "default": "false",
+            "class": "Paging",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Table/Tr.js",
+            "line": 37,
+            "itemtype": "method",
+            "name": "render",
+            "return": {
+                "description": "",
+                "type": "ReactElement"
+            },
+            "class": "Paging",
+            "module": "ui"
+        },
+        {
+            "file": "lib/utils/ClassNameMixin.js",
+            "line": 1,
+            "description": "Created by mac on 15/9/7.",
+            "class": "Button",
+            "module": "ui"
+        },
+        {
+            "file": "lib/utils/ClassNameMixin.js",
+            "line": 9,
+            "description": "给className添加前缀后返回className",
+            "itemtype": "method",
+            "name": "getClassName",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "从该字符串中去查找",
+                    "type": "String"
+                },
+                {
+                    "name": "pre",
+                    "description": "是否添加Component中定义的class前缀，默认添加",
+                    "type": "Boolean"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Button",
+            "module": "ui"
+        },
+        {
+            "file": "lib/utils/ClassNameMixin.js",
+            "line": 29,
+            "description": "验证props中的样式是否符合规则",
+            "itemtype": "method",
+            "name": "getClassNames",
+            "params": [
+                {
+                    "name": "props",
+                    "description": "从该对象中去查找",
+                    "type": "Object"
+                },
+                {
+                    "name": "pre",
+                    "description": "是否添加Component中定义的class前缀，默认添加",
+                    "type": "Boolean"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Button",
+            "module": "ui"
+        },
+        {
+            "file": "lib/utils/ClassNameMixin.js",
+            "line": 45,
+            "description": "给多个className添加前缀后返回",
+            "itemtype": "method",
+            "name": "getClassNamesForArguments",
+            "params": [
+                {
+                    "name": "arguments",
+                    "description": "多个class参数",
+                    "type": "Arguments String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Button",
+            "module": "ui"
+        },
+        {
+            "file": "lib/utils/ClassNameMixin.js",
+            "line": 67,
+            "description": "设置css类名前缀",
+            "itemtype": "method",
+            "name": "setPrefix",
+            "params": [
+                {
+                    "name": "name",
+                    "description": "class名字",
+                    "type": "String"
+                },
+                {
+                    "name": "pre",
+                    "description": "是否添加前缀",
+                    "type": "Boolean"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Button",
+            "module": "ui"
+        },
+        {
+            "file": "lib/utils/ClassNameMixin.js",
+            "line": 86,
+            "description": "检查元素是否存在样式名",
+            "itemtype": "method",
+            "name": "hasClass",
+            "params": [
+                {
+                    "name": "obj",
+                    "description": "元素",
+                    "type": "Object"
+                },
+                {
+                    "name": "cls",
+                    "description": "需要检查的样式名",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Button",
+            "module": "ui"
+        },
+        {
+            "file": "lib/utils/ClassNameMixin.js",
+            "line": 97,
+            "description": "给元素增加一个样式名",
+            "itemtype": "method",
+            "name": "addClass",
+            "params": [
+                {
+                    "name": "obj",
+                    "description": "元素",
+                    "type": "Object"
+                },
+                {
+                    "name": "cls",
+                    "description": "样式名",
+                    "type": "String"
+                }
+            ],
+            "class": "Button",
+            "module": "ui"
+        },
+        {
+            "file": "lib/utils/ClassNameMixin.js",
+            "line": 106,
+            "description": "给元素删除一个样式名",
+            "itemtype": "method",
+            "name": "removeClass",
+            "params": [
+                {
+                    "name": "obj",
+                    "description": "元素",
+                    "type": "Object"
+                },
+                {
+                    "name": "cls",
+                    "description": "样式名",
+                    "type": "String"
+                }
+            ],
+            "class": "Button",
+            "module": "ui"
+        },
+        {
+            "file": "lib/utils/constants.js",
+            "line": 1,
+            "description": "Created by mac on 15/9/7.",
+            "class": "Button",
+            "module": "ui"
+        },
+        {
+            "file": "lib/utils/constants.js",
+            "line": 12,
+            "description": "状态",
+            "class": "Button",
+            "module": "ui"
+        },
+        {
+            "file": "lib/utils/constants.js",
+            "line": 37,
+            "description": "颜色",
+            "class": "Button",
+            "module": "ui"
+        },
+        {
+            "file": "lib/utils/extend.js",
+            "line": 5,
+            "description": "A recursive merge between two objects.",
+            "params": [
+                {
+                    "name": "base",
+                    "description": "- the object whose properties are to be overwritten. It\n                  should be either the root level or some nested level."
+                },
+                {
+                    "name": "override",
+                    "description": "- an object containing properties to be overwritten. It\n                  should have the same structure as the object object."
+                }
+            ],
+            "class": "Button",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Button.js",
+            "line": 1,
+            "description": "Created by mac on 15/9/7.",
+            "class": "Button",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Button.js",
+            "line": 23,
+            "description": "按钮尺寸,分别为xs、sm、lg",
+            "itemtype": "property",
+            "name": "egSize",
+            "type": "String",
+            "default": "sm",
+            "class": "Button",
+            "module": "form"
+        },
+        {
+            "file": "lib/Button.js",
+            "line": 30,
+            "description": "禁用",
+            "itemtype": "property",
+            "name": "disabled",
+            "type": "Boolean",
+            "default": "false",
+            "class": "Button",
+            "module": "form"
+        },
+        {
+            "file": "lib/Button.js",
+            "line": 37,
+            "description": "启用",
+            "itemtype": "property",
+            "name": "enable",
+            "type": "Boolean",
+            "default": "true",
+            "class": "Button",
+            "module": "form"
+        },
+        {
+            "file": "lib/Button.js",
+            "line": 45,
+            "description": "选中",
+            "itemtype": "property",
+            "name": "active",
+            "type": "Boolean",
+            "default": "false",
+            "class": "Button",
+            "module": "form"
+        },
+        {
+            "file": "lib/Button.js",
+            "line": 52,
+            "description": "圆角",
+            "itemtype": "property",
+            "name": "radius",
+            "type": "Boolean",
+            "default": "false",
+            "class": "Button",
+            "module": "form"
+        },
+        {
+            "file": "lib/Button.js",
+            "line": 59,
+            "description": "椭圆角",
+            "itemtype": "property",
+            "name": "round",
+            "type": "Boolean",
+            "default": "false",
+            "class": "Button",
+            "module": "form"
+        },
+        {
+            "file": "lib/Button.js",
+            "line": 69,
+            "description": "颜色[error、warning、danger、link、gray、white、success、'']",
+            "itemtype": "property",
+            "name": "egStyle",
+            "type": "Boolean",
+            "default": "''",
+            "class": "Button",
+            "module": "form"
+        },
+        {
+            "file": "lib/Button.js",
+            "line": 76,
+            "description": "样式前缀",
+            "itemtype": "property",
+            "name": "classPrefix",
+            "type": "String",
+            "default": "btn",
+            "class": "Button",
+            "module": "form"
+        },
+        {
+            "file": "lib/Button.js",
+            "line": 83,
+            "description": "标签tagName",
+            "itemtype": "property",
+            "name": "componentTag",
+            "type": "String",
+            "default": "a",
+            "class": "Button",
+            "module": "form"
+        },
+        {
+            "file": "lib/Button.js",
+            "line": 90,
+            "description": "块级显示",
+            "itemtype": "property",
+            "name": "block",
+            "type": "Boolean",
+            "default": "false",
+            "class": "Button",
+            "module": "form"
+        },
+        {
+            "file": "lib/ButtonGroup.js",
+            "line": 1,
+            "description": "Created by mac on 15/9/8.",
+            "class": "ButtonGroup",
+            "module": "form"
+        },
+        {
+            "file": "lib/ButtonGroup.js",
+            "line": 23,
+            "description": "是否自适应宽度",
+            "itemtype": "property",
+            "name": "justify",
+            "type": "Boolean",
+            "default": "false",
+            "class": "ButtonGroup",
+            "module": "form"
+        },
+        {
+            "file": "lib/ButtonGroup.js",
+            "line": 30,
+            "description": "是否垂直排列",
+            "itemtype": "property",
+            "name": "tacked",
+            "type": "Boolean",
+            "default": "false",
+            "class": "ButtonGroup",
+            "module": "form"
+        },
+        {
+            "file": "lib/ButtonGroup.js",
+            "line": 43,
+            "description": "tacked: bool 是否垂直排列\njustify: justify 是否自适应宽度",
+            "class": "ButtonGroup",
+            "module": "form"
+        },
+        {
+            "file": "lib/Calendar.js",
+            "line": 21,
+            "description": "样式类名前缀",
+            "itemtype": "property",
+            "name": "classPrefix",
+            "type": "String",
+            "default": "calendar",
+            "class": "Calendar",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Calendar.js",
+            "line": 28,
+            "description": "起始日期",
+            "itemtype": "property",
+            "name": "startDate",
+            "type": "String",
+            "default": "empty",
+            "class": "Calendar",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Calendar.js",
+            "line": 35,
+            "description": "终止日期",
+            "itemtype": "property",
+            "name": "endDate",
+            "type": "String",
+            "default": "empty",
+            "class": "Calendar",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Calendar.js",
+            "line": 42,
+            "description": "默认选中日期",
+            "itemtype": "property",
+            "name": "defaultDate",
+            "type": "String",
+            "default": "当天",
+            "class": "Calendar",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Calendar.js",
+            "line": 49,
+            "description": "日期格式",
+            "itemtype": "property",
+            "name": "format",
+            "type": "string",
+            "default": "'yyyy-MM-dd'",
+            "class": "Calendar",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Calendar.js",
+            "line": 56,
+            "description": "选择某个具体日期后执行的回调函数",
+            "itemtype": "property",
+            "name": "selectCallback",
+            "type": "Function",
+            "default": "empty",
+            "class": "Calendar",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Calendar.js",
+            "line": 141,
+            "class": "Calendar",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Calendar.js",
+            "line": 148,
+            "class": "Calendar",
+            "module": "ui"
+        },
+        {
+            "file": "lib/CalendarPanel.js",
+            "line": 26,
+            "description": "通过传入此函数获取日期值",
+            "itemtype": "property",
+            "name": "getValueCallback",
+            "type": "Function",
+            "class": "CalendarPanel",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Col.js",
+            "line": 15,
+            "description": "占几列，共12列",
+            "itemtype": "property",
+            "name": "egSize",
+            "type": "Integer",
+            "class": "Col",
+            "module": "grid"
+        },
+        {
+            "file": "lib/Col.js",
+            "line": 21,
+            "description": "是否是最后一列",
+            "itemtype": "property",
+            "name": "end",
+            "type": "Boolean",
+            "default": "false",
+            "class": "Col",
+            "module": "grid"
+        },
+        {
+            "file": "lib/Crumb.js",
+            "line": 1,
+            "description": "Created by panqianjin on 15/11/3.",
+            "class": "crumb",
+            "module": "grid"
+        },
+        {
+            "file": "lib/Crumb.js",
+            "line": 4,
+            "description": "面包屑组件\nFeatures :\n实现面包屑导航样式\n\nUpdate Note:\n+2015.11.03 ： Created",
+            "moudle": "Crumb",
+            "class": "crumb",
+            "module": "grid"
+        },
+        {
+            "file": "lib/Crumb.js",
+            "line": 33,
+            "description": "构造函数",
+            "itemtype": "method",
+            "name": "constructor",
+            "params": [
+                {
+                    "name": "props",
+                    "description": "父组件属性",
+                    "type": "Object"
+                },
+                {
+                    "name": "cotext",
+                    "description": "上下文环境",
+                    "type": "Object"
+                }
+            ],
+            "class": "crumb",
+            "module": "grid"
+        },
+        {
+            "file": "lib/Crumb.js",
+            "line": 42,
+            "description": "渲染方法",
+            "itemtype": "method",
+            "name": "render",
+            "params": [
+                {
+                    "name": "none",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "对应dom结构",
+                "type": "Object"
+            },
+            "class": "crumb",
+            "module": "grid"
+        },
+        {
+            "file": "lib/Dialog.js",
+            "line": 1,
+            "description": "Created by panqianjin on 15/10/30.",
+            "class": "dialog",
+            "module": "grid"
+        },
+        {
+            "file": "lib/Dialog.js",
+            "line": 4,
+            "description": "弹框组件\nFeatures :\n1.根据不同的type渲染不同的弹框样式\n2.根据需要提供callback\n\n\nUpdate Note:\n+2015.10.30 ： Created\n+2015.11.8 : Restructure",
+            "moudle": "Dialog",
+            "class": "dialog",
+            "module": "grid"
+        },
+        {
+            "file": "lib/Dialog.js",
+            "line": 50,
+            "itemtype": "method",
+            "name": "close dialog",
+            "return": {
+                "description": "change state"
+            },
+            "class": "dialog",
+            "module": "grid"
+        },
+        {
+            "file": "lib/Dialog.js",
+            "line": 62,
+            "itemtype": "method",
+            "name": "submit dialog",
+            "return": {
+                "description": "callBack;\n        change state"
+            },
+            "class": "dialog",
+            "module": "grid"
+        },
+        {
+            "file": "lib/Dialog.js",
+            "line": 85,
+            "itemtype": "method",
+            "name": "show dialog overly",
+            "return": {
+                "description": "dom"
+            },
+            "class": "dialog",
+            "module": "grid"
+        },
+        {
+            "file": "lib/Dialog.js",
+            "line": 101,
+            "itemtype": "method",
+            "name": "face to this.props.type",
+            "return": {
+                "description": "alert/confirm/dialog/mask"
+            },
+            "class": "dialog",
+            "module": "grid"
+        },
+        {
+            "file": "lib/Input.js",
+            "line": 5,
+            "description": "input组件",
+            "class": "Label",
+            "module": "grid"
+        },
+        {
+            "file": "lib/Label.js",
+            "line": 1,
+            "description": "Created by mac on 15/9/7.",
+            "class": "Label",
+            "module": "grid"
+        },
+        {
+            "file": "lib/Label.js",
+            "line": 37,
+            "description": "点击回调函数",
+            "class": "Label",
+            "module": "ui"
+        },
+        {
+            "file": "lib/LabelGroup.js",
+            "line": 1,
+            "description": "Created by mac on 15/9/7.",
+            "class": "LabelGroup",
+            "module": "ui"
+        },
+        {
+            "file": "lib/LabelGroup.js",
+            "line": 26,
+            "description": "左侧总标题",
+            "itemtype": "property",
+            "name": "title",
+            "type": "String",
+            "class": "LabelGroup",
+            "module": "ui"
+        },
+        {
+            "file": "lib/LabelGroup.js",
+            "line": 32,
+            "description": "普通标签列表",
+            "itemtype": "property",
+            "name": "simple",
+            "type": "Boolean",
+            "default": "false",
+            "class": "LabelGroup",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Marquee.js",
+            "line": 1,
+            "description": "Created by panqianjin on 15/11/18.",
+            "class": "Paging",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Paging.js",
+            "line": 22,
+            "description": "总页数",
+            "itemtype": "property",
+            "name": "currentPage",
+            "type": "Integer",
+            "default": "1",
+            "class": "Paging",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Paging.js",
+            "line": 29,
+            "description": "每页显示多少条数据",
+            "itemtype": "property",
+            "name": "pageSize",
+            "type": "Integer",
+            "default": "20",
+            "class": "Paging",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Paging.js",
+            "line": 36,
+            "description": "数据总数",
+            "itemtype": "property",
+            "name": "total",
+            "type": "Integer",
+            "class": "Paging",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Paging.js",
+            "line": 42,
+            "description": "点击分页回调",
+            "itemtype": "property",
+            "name": "pageCallback",
+            "type": "Function",
+            "class": "Paging",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Paging.js",
+            "line": 48,
+            "itemtype": "property",
+            "name": "activeClass",
+            "type": "String",
+            "default": "active",
+            "class": "Paging",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Paging.js",
+            "line": 67,
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "props",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "context",
+                    "description": "",
+                    "type": "Object"
+                }
+            ],
+            "class": "Paging",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Paging.js",
+            "line": 75,
+            "type": "Integer",
+            "default": "",
+            "class": "Paging",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Paging.js",
+            "line": 85,
+            "type": "Boolean",
+            "default": "false",
+            "class": "Paging",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Paging.js",
+            "line": 94,
+            "description": "当前页",
+            "type": "Integer",
+            "class": "Paging",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Paging.js",
+            "line": 102,
+            "description": "上一页",
+            "itemtype": "method",
+            "name": "prev",
+            "class": "Paging",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Paging.js",
+            "line": 110,
+            "description": "下一页",
+            "itemtype": "method",
+            "name": "prev",
+            "class": "Paging",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Paging.js",
+            "line": 118,
+            "description": "获取页大小",
+            "itemtype": "method",
+            "name": "getPages",
+            "return": {
+                "description": "",
+                "type": "Integer"
+            },
+            "class": "Paging",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Paging.js",
+            "line": 127,
+            "description": "跳转至N页",
+            "itemtype": "method",
+            "name": "goto",
+            "params": [
+                {
+                    "name": "page",
+                    "description": "页码，从1开始",
+                    "type": "Integer"
+                }
+            ],
+            "access": "private",
+            "tagname": "",
+            "return": {
+                "description": "",
+                "type": "Array"
+            },
+            "class": "Paging",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Paging.js",
+            "line": 154,
+            "description": "跳转至N页",
+            "itemtype": "method",
+            "name": "gotoPage",
+            "params": [
+                {
+                    "name": "index",
+                    "description": "页码，从1开始",
+                    "type": "Integer"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Array"
+            },
+            "class": "Paging",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Paging.js",
+            "line": 166,
+            "description": "生成页码",
+            "itemtype": "method",
+            "name": "generate",
+            "return": {
+                "description": "",
+                "type": "Array"
+            },
+            "class": "Paging",
+            "module": "ui"
+        },
+        {
+            "file": "lib/Paging.js",
+            "line": 216,
+            "itemtype": "method",
+            "name": "render",
+            "return": {
+                "description": "",
+                "type": "ReactElement"
+            },
+            "class": "Paging",
+            "module": "ui"
+        },
+        {
+            "file": "lib/RadioGroup.js",
+            "line": 1,
+            "description": "Created by mac on 15/9/7.",
+            "class": "RadioGroup",
+            "module": "ui"
+        },
+        {
+            "file": "lib/RadioGroup.js",
+            "line": 21,
+            "description": "radio name",
+            "itemtype": "property",
+            "name": "name",
+            "type": "String",
+            "class": "RadioGroup",
+            "module": "form"
+        },
+        {
+            "file": "lib/RadioGroup.js",
+            "line": 27,
+            "description": "默认选中项",
+            "itemtype": "property",
+            "name": "defaultChecked",
+            "type": "String",
+            "class": "RadioGroup",
+            "module": "form"
+        },
+        {
+            "file": "lib/Search.js",
+            "line": 44,
+            "itemtype": "method",
+            "name": "change input value",
+            "params": [
+                {
+                    "name": "none",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "setState"
+            },
+            "class": "Select",
+            "module": "grid"
+        },
+        {
+            "file": "lib/Search.js",
+            "line": 54,
+            "itemtype": "method",
+            "name": "submit search",
+            "params": [
+                {
+                    "name": "none",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "get value calback if exist"
+            },
+            "class": "Select",
+            "module": "grid"
+        },
+        {
+            "file": "lib/Select.js",
+            "line": 1,
+            "description": "Created by panqianjin on 15/11/12.",
+            "class": "Tab",
+            "module": "grid"
+        },
+        {
+            "file": "lib/Tab.js",
+            "line": 1,
+            "description": "Created by mac on 15/9/7.",
+            "class": "Tab",
+            "module": "grid"
+        },
+        {
+            "file": "lib/Tabset.js",
+            "line": 1,
+            "description": "Created by mac on 15/9/7.",
+            "class": "Tab",
+            "module": "grid"
+        },
+        {
+            "file": "lib/Tabset.js",
+            "line": 21,
+            "description": "需要在初始的时候打开第几个tab，默认为0（从0计数，即打开第一个tab）",
+            "itemtype": "property",
+            "name": "activeTabIndex",
+            "type": "number",
+            "default": "0",
+            "class": "Tab",
+            "module": "grid"
+        },
+        {
+            "file": "lib/Toast.js",
+            "line": 1,
+            "description": "Created by panqianjin on 15/10/30.",
+            "class": "toast",
+            "module": "grid"
+        },
+        {
+            "file": "lib/Toast.js",
+            "line": 35,
+            "itemtype": "method",
+            "name": "n seconds hide toast",
+            "class": "toast",
+            "module": "grid"
+        },
+        {
+            "file": "lib/Toast.js",
+            "line": 90,
+            "itemtype": "method",
+            "name": "render content",
+            "class": "toast",
+            "module": "grid"
+        },
+        {
+            "file": "lib/Tooltip.js",
+            "line": 1,
+            "description": "Created by panqianjin on 15/11/17.",
+            "class": "",
+            "module": "grid"
+        },
+        {
+            "file": "lib/TooltipPanel.js",
+            "line": 1,
+            "description": "Created by panqianjin on 15/11/17.",
+            "class": "",
+            "module": "grid"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Panel/Panel.js:5"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Panel/Panel.js:5"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Panel/PanelContent.js:5"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Panel/PanelContent.js:5"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Panel/PanelFooter.js:5"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Panel/PanelFooter.js:5"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Panel/PanelHeader.js:5"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Panel/PanelHeader.js:5"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Table/Table.js:5"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Table/Table.js:5"
+        },
+        {
+            "message": "unknown tag: show",
+            "line": " lib/Table/Table.js:5"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Table/Td.js:5"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Table/Td.js:5"
+        },
+        {
+            "message": "unknown tag: show",
+            "line": " lib/Table/Td.js:5"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Table/Th.js:5"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Table/Th.js:5"
+        },
+        {
+            "message": "unknown tag: show",
+            "line": " lib/Table/Th.js:5"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Table/Tr.js:5"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Table/Tr.js:5"
+        },
+        {
+            "message": "unknown tag: show",
+            "line": " lib/Table/Tr.js:5"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Button.js:8"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Button.js:8"
+        },
+        {
+            "message": "unknown tag: show",
+            "line": " lib/Button.js:8"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/ButtonGroup.js:8"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/ButtonGroup.js:8"
+        },
+        {
+            "message": "unknown tag: show",
+            "line": " lib/ButtonGroup.js:8"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Calendar.js:5"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Calendar.js:5"
+        },
+        {
+            "message": "unknown tag: show",
+            "line": " lib/Calendar.js:5"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/CalendarPanel.js:8"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/CalendarPanel.js:8"
+        },
+        {
+            "message": "unknown tag: show",
+            "line": " lib/CalendarPanel.js:8"
+        },
+        {
+            "message": "unknown tag: moudle",
+            "line": " lib/Crumb.js:4"
+        },
+        {
+            "message": "unknown tag: moudle",
+            "line": " lib/Dialog.js:4"
+        },
+        {
+            "message": "unknown tag: name",
+            "line": " lib/Dialog.js:101"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Label.js:8"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Label.js:8"
+        },
+        {
+            "message": "unknown tag: show",
+            "line": " lib/Label.js:8"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/LabelGroup.js:12"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/LabelGroup.js:12"
+        },
+        {
+            "message": "unknown tag: show",
+            "line": " lib/LabelGroup.js:12"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Paging.js:5"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Paging.js:5"
+        },
+        {
+            "message": "unknown tag: show",
+            "line": " lib/Paging.js:5"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/RadioGroup.js:7"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/RadioGroup.js:7"
+        },
+        {
+            "message": "unknown tag: show",
+            "line": " lib/RadioGroup.js:7"
+        },
+        {
+            "message": "Missing item type\nCreated by mac on 15/9/7.",
+            "line": " lib/utils/ClassNameMixin.js:1"
+        },
+        {
+            "message": "Missing item type\nCreated by mac on 15/9/7.",
+            "line": " lib/utils/constants.js:1"
+        },
+        {
+            "message": "Missing item type\n状态",
+            "line": " lib/utils/constants.js:12"
+        },
+        {
+            "message": "Missing item type\n颜色",
+            "line": " lib/utils/constants.js:37"
+        },
+        {
+            "message": "Missing item type\nA recursive merge between two objects.",
+            "line": " lib/utils/extend.js:5"
+        },
+        {
+            "message": "Missing item type\nCreated by mac on 15/9/7.",
+            "line": " lib/Button.js:1"
+        },
+        {
+            "message": "Missing item type\nCreated by mac on 15/9/8.",
+            "line": " lib/ButtonGroup.js:1"
+        },
+        {
+            "message": "Missing item type\ntacked: bool 是否垂直排列\njustify: justify 是否自适应宽度",
+            "line": " lib/ButtonGroup.js:43"
+        },
+        {
+            "message": "Missing item type",
+            "line": " lib/Calendar.js:141"
+        },
+        {
+            "message": "Missing item type",
+            "line": " lib/Calendar.js:148"
+        },
+        {
+            "message": "Missing item type\nCreated by panqianjin on 15/11/3.",
+            "line": " lib/Crumb.js:1"
+        },
+        {
+            "message": "Missing item type\n面包屑组件\nFeatures :\n实现面包屑导航样式\n\nUpdate Note:\n+2015.11.03 ： Created",
+            "line": " lib/Crumb.js:4"
+        },
+        {
+            "message": "Missing item type\nCreated by panqianjin on 15/10/30.",
+            "line": " lib/Dialog.js:1"
+        },
+        {
+            "message": "Missing item type\n弹框组件\nFeatures :\n1.根据不同的type渲染不同的弹框样式\n2.根据需要提供callback\n\n\nUpdate Note:\n+2015.10.30 ： Created\n+2015.11.8 : Restructure",
+            "line": " lib/Dialog.js:4"
+        },
+        {
+            "message": "Missing item type\ninput组件",
+            "line": " lib/Input.js:5"
+        },
+        {
+            "message": "Missing item type\nCreated by mac on 15/9/7.",
+            "line": " lib/Label.js:1"
+        },
+        {
+            "message": "Missing item type\n点击回调函数",
+            "line": " lib/Label.js:37"
+        },
+        {
+            "message": "Missing item type\nCreated by mac on 15/9/7.",
+            "line": " lib/LabelGroup.js:1"
+        },
+        {
+            "message": "Missing item type\nCreated by panqianjin on 15/11/18.",
+            "line": " lib/Marquee.js:1"
+        },
+        {
+            "message": "Missing item type",
+            "line": " lib/Paging.js:67"
+        },
+        {
+            "message": "Missing item type",
+            "line": " lib/Paging.js:75"
+        },
+        {
+            "message": "Missing item type",
+            "line": " lib/Paging.js:85"
+        },
+        {
+            "message": "Missing item type\n当前页",
+            "line": " lib/Paging.js:94"
+        },
+        {
+            "message": "Missing item type\nCreated by mac on 15/9/7.",
+            "line": " lib/RadioGroup.js:1"
+        },
+        {
+            "message": "Missing item type\nCreated by panqianjin on 15/11/12.",
+            "line": " lib/Select.js:1"
+        },
+        {
+            "message": "Missing item type\nCreated by mac on 15/9/7.",
+            "line": " lib/Tab.js:1"
+        },
+        {
+            "message": "Missing item type\nCreated by mac on 15/9/7.",
+            "line": " lib/Tabset.js:1"
+        },
+        {
+            "message": "Missing item type\nCreated by panqianjin on 15/10/30.",
+            "line": " lib/Toast.js:1"
+        },
+        {
+            "message": "Missing item type\nCreated by panqianjin on 15/11/17.",
+            "line": " lib/Tooltip.js:1"
+        },
+        {
+            "message": "Missing item type\nCreated by panqianjin on 15/11/17.",
+            "line": " lib/TooltipPanel.js:1"
+        }
+    ]
+}

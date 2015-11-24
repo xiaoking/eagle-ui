@@ -1,6 +1,6 @@
 {
   "name": "eagle-ui",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "description": "The coolest cortex module.",
   "main": "dist/eagle-ui.min.js",
   "devDependencies": {

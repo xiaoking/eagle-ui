@@ -14,10 +14,14 @@
       text-indent: 10px;
       padding: 5px 0;
       cursor: pointer;
+      &:hover,&:focus{
+        color:@red-num;
+      }
     }
-    li:hover{
+    li.active{
       color:@red-num;
     }
+
   }
   .eg-select-ul{
     display: none;

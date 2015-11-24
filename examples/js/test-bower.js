@@ -7,7 +7,7 @@
 		var a = typeof exports === 'object' ? factory(require("react"), require("Eagleui")) : factory(root["React"], root["Eagleui"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_25__, __WEBPACK_EXTERNAL_MODULE_59__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_26__, __WEBPACK_EXTERNAL_MODULE_42__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -59,27 +59,27 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _react = __webpack_require__(25);
+	var _react = __webpack_require__(26);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _eagleUi = __webpack_require__(59);
+	var _eagleUi = __webpack_require__(42);
 
 	ReactDOM.render(_react2['default'].createElement(_eagleUi.Input, { type: 'checkbox' }), document.getElementById('root'));
 
 /***/ },
 
-/***/ 25:
+/***/ 26:
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_25__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_26__;
 
 /***/ },
 
-/***/ 59:
+/***/ 42:
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_59__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_42__;
 
 /***/ }
 

@@ -7,7 +7,7 @@
 		var a = typeof exports === 'object' ? factory(require("react")) : factory(root["React"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_25__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_26__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -65,39 +65,39 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _lib_includeLess = __webpack_require__(21);
+	var _lib_includeLess = __webpack_require__(22);
 
 	var _lib_includeLess2 = _interopRequireDefault(_lib_includeLess);
 
-	var _react = __webpack_require__(25);
+	var _react = __webpack_require__(26);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _libCalendarJs = __webpack_require__(34);
+	var _libCalendarJs = __webpack_require__(35);
 
 	var _libCalendarJs2 = _interopRequireDefault(_libCalendarJs);
 
-	var _libInputJs = __webpack_require__(35);
+	var _libInputJs = __webpack_require__(36);
 
 	var _libInputJs2 = _interopRequireDefault(_libInputJs);
 
-	var _libRowJs = __webpack_require__(31);
+	var _libRowJs = __webpack_require__(32);
 
 	var _libRowJs2 = _interopRequireDefault(_libRowJs);
 
-	var _libColJs = __webpack_require__(32);
+	var _libColJs = __webpack_require__(33);
 
 	var _libColJs2 = _interopRequireDefault(_libColJs);
 
-	var _libGridJs = __webpack_require__(33);
+	var _libGridJs = __webpack_require__(34);
 
 	var _libGridJs2 = _interopRequireDefault(_libGridJs);
 
-	var _libCalendarPanelJs = __webpack_require__(36);
+	var _libCalendarPanelJs = __webpack_require__(37);
 
 	var _libCalendarPanelJs2 = _interopRequireDefault(_libCalendarPanelJs);
 
-	var _querystring = __webpack_require__(37);
+	var _querystring = __webpack_require__(38);
 
 	var _querystring2 = _interopRequireDefault(_querystring);
 
@@ -191,23 +191,24 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 18 */,
 /* 19 */,
 /* 20 */,
-/* 21 */
+/* 21 */,
+/* 22 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 22 */,
 /* 23 */,
 /* 24 */,
-/* 25 */
+/* 25 */,
+/* 26 */
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_25__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_26__;
 
 /***/ },
-/* 26 */,
-/* 27 */
+/* 27 */,
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -217,13 +218,17 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _constantsJs = __webpack_require__(28);
+	var _constantsJs = __webpack_require__(29);
 
 	var consts = _constantsJs.classConstants;
 
 	exports['default'] = function (obj) {
 	    /**
 	     * 给className添加前缀后返回className
+	     * @method getClassName
+	     * @param name {String} 从该字符串中去查找
+	     * @param pre {Boolean} 是否添加Component中定义的class前缀，默认添加
+	     * @return {String}
 	     * */
 	    obj.prototype.getClassName = function (name) {
 	        var _this2 = this;
@@ -250,6 +255,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	    /**
 	     * 验证props中的样式是否符合规则
+	     * @method getClassNames
+	     * @param props {Object} 从该对象中去查找
+	     * @param pre {Boolean} 是否添加Component中定义的class前缀，默认添加
+	     * @return {String}
 	     * */
 	    obj.prototype.getClassNames = function (props) {
 	        var pre = arguments.length <= 1 || arguments[1] === undefined ? true : arguments[1];
@@ -264,6 +273,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	    /**
 	     * 给多个className添加前缀后返回
+	     * @method getClassNamesForArguments
+	     * @param arguments {Arguments String} 多个class参数
+	     * @return {String}
 	     * */
 	    obj.prototype.getClassNamesForArguments = function () {
 	        var arg = arguments;
@@ -301,13 +313,32 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return str;
 	    };
 
+	    /**
+	     * 检查元素是否存在样式名
+	     * @method hasClass
+	     * @param obj {Object} 元素
+	     * @param cls {String} 需要检查的样式名
+	     * @return {Boolean}
+	     * */
 	    obj.prototype.hasClass = function (obj, cls) {
 	        return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
 	    };
 
+	    /**
+	     * 给元素增加一个样式名
+	     * @method addClass
+	     * @param obj {Object} 元素
+	     * @param cls {String} 样式名
+	     * */
 	    obj.prototype.addClass = function (obj, cls) {
 	        if (!this.hasClass(obj, cls)) obj.className += " " + cls;
 	    };
+	    /**
+	     * 给元素删除一个样式名
+	     * @method removeClass
+	     * @param obj {Object} 元素
+	     * @param cls {String} 样式名
+	     * */
 	    obj.prototype.removeClass = function (obj, cls) {
 	        if (this.hasClass(obj, cls)) {
 	            var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
@@ -319,7 +350,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 28 */
+/* 29 */
 /***/ function(module, exports) {
 
 	/**
@@ -380,7 +411,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.classConstants = classConstants;
 
 /***/ },
-/* 29 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -434,8 +465,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 30 */,
-/* 31 */
+/* 31 */,
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//import RowLess from './row.less';
@@ -453,13 +484,22 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(25);
+	var _react = __webpack_require__(26);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
+
+	/**
+	 * 行
+	 * @class Row
+	 * @module grid
+	 * @extends Component
+	 * @constructor
+	 * @since 0.1.0
+	 * */
 
 	var Row = (function (_Component) {
 	    _inherits(Row, _Component);
@@ -492,12 +532,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 32 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * Created by mac on 15/9/7.
-	 */
 	'use strict';
 
 	exports.__esModule = true;
@@ -512,13 +549,22 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(25);
+	var _react = __webpack_require__(26);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
+
+	/**
+	 * 列
+	 * @class Col
+	 * @module grid
+	 * @extends Component
+	 * @constructor
+	 * @since 0.1.0
+	 * */
 
 	var Col = (function (_Component) {
 	    _inherits(Col, _Component);
@@ -530,7 +576,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    Col.prototype.getWidthClass = function getWidthClass() {
-	        var className = ['eg-sm-' + this.props.sm];
+	        var className = ['eg-sm-' + (this.props.sm ? this.props.sm : '12')];
 
 	        if (this.props.end) {
 	            className.push('eg-end');
@@ -551,7 +597,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(Col, null, [{
 	        key: 'propTypes',
 	        value: {
+	            /**
+	             * 占几列，共12列
+	             * @property egSize
+	             * @type Integer
+	             * */
 	            sm: _react.PropTypes.number.isRequired,
+	            /**
+	             * 是否是最后一列
+	             * @property end
+	             * @type Boolean
+	             * @default false
+	             * */
 	            end: _react.PropTypes.bool
 	        },
 	        enumerable: true
@@ -564,15 +621,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 33 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * Created by mac on 15/9/7.
-	 */
 	'use strict';
 
 	exports.__esModule = true;
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
@@ -582,15 +638,32 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(25);
+	var _react = __webpack_require__(26);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _classnames = __webpack_require__(30);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var _utilsClassNameMixin = __webpack_require__(28);
+
+	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+
+	/**
+	 * 布局组件
+	 * @class Grid
+	 * @module grid
+	 * @extends Component
+	 * @constructor
+	 * @since 0.1.0
+	 * */
 
 	var Grid = (function (_Component) {
 	    _inherits(Grid, _Component);
 
 	    function Grid() {
-	        _classCallCheck(this, Grid);
+	        _classCallCheck(this, _Grid);
 
 	        _Component.apply(this, arguments);
 	    }
@@ -599,7 +672,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        return _react2['default'].createElement(
 	            'div',
-	            this.props,
+	            _extends({}, this.props, {
+	                className: _classnames2['default'](this.getClassName('grid'), this.props.className) }),
 	            this.props.children
 	        );
 	    };
@@ -610,6 +684,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        enumerable: true
 	    }]);
 
+	    var _Grid = Grid;
+	    Grid = _utilsClassNameMixin2['default'](Grid) || Grid;
 	    return Grid;
 	})(_react.Component);
 
@@ -617,7 +693,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 34 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -632,17 +708,30 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(25);
+	var _react = __webpack_require__(26);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames4 = __webpack_require__(29);
+	var _classnames4 = __webpack_require__(30);
 
 	var _classnames5 = _interopRequireDefault(_classnames4);
 
-	var _utilsClassNameMixinJs = __webpack_require__(27);
+	var _utilsClassNameMixinJs = __webpack_require__(28);
 
 	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
+
+	/**
+	 * 日历组件<br />
+	 * 需要和CalendarPanel组合使用
+	 * @class Calendar
+	 * @module ui
+	 * @extends Component
+	 * @constructor
+	 * @since 0.1.0
+	 * @demo src/calendar.js {js}
+	 * @demo calendar.html {html}
+	 * @show true
+	 * */
 
 	var Calendar = (function (_Component) {
 	    _inherits(Calendar, _Component);
@@ -675,7 +764,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	             * 默认选中日期
 	             * @property defaultDate
 	             * @type String
-	             * @default new Date()
+	             * @default 当天
 	             * */
 	            defaultDate: _react.PropTypes.string,
 	            /**
@@ -685,6 +774,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	             * @default 'yyyy-MM-dd'
 	             * */
 	            format: _react.PropTypes.string,
+	            /**
+	             * 选择某个具体日期后执行的回调函数
+	             * @property selectCallback
+	             * @type Function
+	             * @default empty
+	             * */
 	            selectCallback: _react.PropTypes.func
 	        },
 	        enumerable: true
@@ -1177,7 +1272,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 35 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1194,15 +1289,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(25);
+	var _react = __webpack_require__(26);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(27);
+	var _utilsClassNameMixin = __webpack_require__(28);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames10 = __webpack_require__(29);
+	var _classnames10 = __webpack_require__(30);
 
 	var _classnames11 = _interopRequireDefault(_classnames10);
 
@@ -1359,7 +1454,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 36 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1376,25 +1471,37 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(25);
+	var _react = __webpack_require__(26);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _utilsClassNameMixinJs = __webpack_require__(27);
+	var _utilsClassNameMixinJs = __webpack_require__(28);
 
 	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
 
-	var _InputJs = __webpack_require__(35);
+	var _InputJs = __webpack_require__(36);
 
 	var _InputJs2 = _interopRequireDefault(_InputJs);
 
-	var _CalendarJs = __webpack_require__(34);
+	var _CalendarJs = __webpack_require__(35);
 
 	var _CalendarJs2 = _interopRequireDefault(_CalendarJs);
+
+	/**
+	 * CalendarPanel组件
+	 * @class CalendarPanel
+	 * @module ui
+	 * @extends Component
+	 * @constructor
+	 * @since 0.1.0
+	 * @demo src/calendar.js {js}
+	 * @demo calendar.html {html}
+	 * @show true
+	 * */
 
 	var CalendarPanel = (function (_Component) {
 	    _inherits(CalendarPanel, _Component);
@@ -1405,6 +1512,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	            showCallback: _react.PropTypes.func,
 	            hideCallback: _react.PropTypes.func,
 	            componentTag: _react.PropTypes.string,
+	            /**
+	             * 通过传入此函数获取日期值
+	             * @property getValueCallback
+	             * @type Function
+	             * */
 	            getValueCallback: _react.PropTypes.func
 	        },
 	        enumerable: true
@@ -1540,17 +1652,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 37 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	exports.decode = exports.parse = __webpack_require__(38);
-	exports.encode = exports.stringify = __webpack_require__(39);
+	exports.decode = exports.parse = __webpack_require__(39);
+	exports.encode = exports.stringify = __webpack_require__(40);
 
 
 /***/ },
-/* 38 */
+/* 39 */
 /***/ function(module, exports) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
@@ -1640,7 +1752,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 39 */
+/* 40 */
 /***/ function(module, exports) {
 
 	// Copyright Joyent, Inc. and other Node contributors.
