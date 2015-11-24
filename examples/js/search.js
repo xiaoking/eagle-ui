@@ -74,9 +74,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _libSearchJs2 = _interopRequireDefault(_libSearchJs);
 
-	ReactDOM.render(_react2['default'].createElement(_libSearchJs2['default'], { callBack: function (val) {
-	    alert(val);
-	  } }), document.getElementById('root'));
+	ReactDOM.render(_react2['default'].createElement(
+	    'div',
+	    null,
+	    _react2['default'].createElement(_libSearchJs2['default'], { callBack: function (val) {
+	            alert(val);
+	        } })
+	), document.getElementById('root'));
 
 /***/ },
 
@@ -1024,17 +1028,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	    Search.prototype.render = function render() {
 	        return _react2['default'].createElement(
 	            _GridJs2['default'],
-	            null,
+	            { style: { minWidth: '240px' } },
 	            _react2['default'].createElement(
-	                _RowJs2['default'],
+	                'div',
 	                { className: _classnames2['default'](this.getClassNamesForArguments('wrapper', 'icon')) },
-	                _react2['default'].createElement(_InputJs2['default'], { ref: this.props.name, id: this.props.id, placeholder: this.props.placeholder,
-	                    onChange: this.changeValue.bind(this) })
-	            ),
-	            _react2['default'].createElement(
-	                _ButtonJs2['default'],
-	                { radius: true, egSize: 'xs', onClick: this.submitSearch.bind(this) },
-	                '搜索'
+	                _react2['default'].createElement(
+	                    'div',
+	                    { className: _classnames2['default'](this.getClassNamesForArguments('content')) },
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { style: { width: '100%' } },
+	                        _react2['default'].createElement(_InputJs2['default'], { ref: this.props.name, id: this.props.id, placeholder: this.props.placeholder,
+	                            onChange: this.changeValue.bind(this), onKeyPress: this.keyIn.bind(this), onKeyPress: this.keyIn.bind(this) })
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    _ButtonJs2['default'],
+	                    { radius: true, egSize: 'xs', onClick: this.submitSearch.bind(this) },
+	                    '搜索'
+	                )
 	            )
 	        );
 	    };
@@ -1051,6 +1063,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        });
 	    };
 
+	    Search.prototype.keyIn = function keyIn(event) {
+	        if (event.keyCode == 13) {
+	            this.changeValue();
+	        }
+	    };
+
 	    /**
 	     * @method submit search
 	     * @param none
@@ -1060,6 +1078,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	    Search.prototype.submitSearch = function submitSearch() {
 	        var val = this.state.value;
 	        this.props.callBack && this.props.callBack(val);
+	    };
+
+	    Search.prototype.keyIn = function keyIn(event) {
+	        if (event.charCode == 13) {
+	            this.submitSearch();
+	        }
 	    };
 
 	    var _Search = Search;

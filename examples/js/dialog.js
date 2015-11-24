@@ -943,25 +943,33 @@ return /******/ (function(modules) { // webpackBootstrap
 	            _RowJs2['default'],
 	            { className: _classnames3['default'](this.getClassNamesForArguments('dialog')), style: { width: '300px' } },
 	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                { className: _classnames3['default'](this.getClassNamesForArguments('title')) },
-	                this.props.title
-	            ),
-	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                { className: _classnames3['default'](this.getClassNamesForArguments('content')) },
-	                this.props.children
-	            ),
-	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                { className: _classnames3['default'](this.getClassNamesForArguments('button')) },
+	                _ColJs2['default'],
+	                null,
 	                _react2['default'].createElement(
-	                    _ColJs2['default'],
-	                    { sm: 12 },
+	                    _RowJs2['default'],
+	                    { className: _classnames3['default'](this.getClassNamesForArguments('title')) },
+	                    this.props.title
+	                ),
+	                _react2['default'].createElement(
+	                    _RowJs2['default'],
+	                    { className: _classnames3['default'](this.getClassNamesForArguments('content')) },
 	                    _react2['default'].createElement(
-	                        _ButtonJs2['default'],
-	                        { radius: true, egSize: 'xs', onClick: this.submitForm.bind(this) },
-	                        '确定'
+	                        _ColJs2['default'],
+	                        null,
+	                        this.props.children
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    _RowJs2['default'],
+	                    { className: _classnames3['default'](this.getClassNamesForArguments('button')) },
+	                    _react2['default'].createElement(
+	                        _ColJs2['default'],
+	                        { sm: 12 },
+	                        _react2['default'].createElement(
+	                            _ButtonJs2['default'],
+	                            { radius: true, egSize: 'xs', onClick: this.submitForm.bind(this) },
+	                            '确定'
+	                        )
 	                    )
 	                )
 	            )
@@ -973,35 +981,43 @@ return /******/ (function(modules) { // webpackBootstrap
 	            _RowJs2['default'],
 	            { className: _classnames3['default'](this.getClassNamesForArguments('dialog')), style: { width: '300px' } },
 	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                { className: _classnames3['default'](this.getClassNamesForArguments('title')) },
-	                this.props.title,
+	                _ColJs2['default'],
+	                null,
 	                _react2['default'].createElement(
-	                    'div',
-	                    { className: _classnames3['default'](this.getClassNamesForArguments('close')), onClick: this.closeDialog.bind(this) },
-	                    'x'
-	                )
-	            ),
-	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                { className: _classnames3['default'](this.getClassNamesForArguments('content')) },
-	                this.props.children ? this.props.children : '请快乐的修bug'
-	            ),
-	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                { className: _classnames3['default'](this.getClassNamesForArguments('button')) },
+	                    _RowJs2['default'],
+	                    { className: _classnames3['default'](this.getClassNamesForArguments('title')) },
+	                    this.props.title,
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: _classnames3['default'](this.getClassNamesForArguments('close')), onClick: this.closeDialog.bind(this) },
+	                        'x'
+	                    )
+	                ),
 	                _react2['default'].createElement(
-	                    _ColJs2['default'],
-	                    { sm: 12 },
+	                    _RowJs2['default'],
+	                    { className: _classnames3['default'](this.getClassNamesForArguments('content')) },
 	                    _react2['default'].createElement(
-	                        _ButtonJs2['default'],
-	                        { radius: true, egSize: 'xs', style: { marginRight: '20px' }, onClick: this.submitForm.bind(this) },
-	                        '确定'
-	                    ),
+	                        _ColJs2['default'],
+	                        null,
+	                        this.props.children ? this.props.children : '请快乐的修bug'
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    _RowJs2['default'],
+	                    { className: _classnames3['default'](this.getClassNamesForArguments('button')) },
 	                    _react2['default'].createElement(
-	                        _ButtonJs2['default'],
-	                        { radius: true, white: true, egSize: 'xs', onClick: this.cancleDialog.bind(this) },
-	                        '取消'
+	                        _ColJs2['default'],
+	                        { sm: 12 },
+	                        _react2['default'].createElement(
+	                            _ButtonJs2['default'],
+	                            { radius: true, egSize: 'xs', style: { marginRight: '20px' }, onClick: this.submitForm.bind(this) },
+	                            '确定'
+	                        ),
+	                        _react2['default'].createElement(
+	                            _ButtonJs2['default'],
+	                            { radius: true, white: true, egSize: 'xs', onClick: this.cancleDialog.bind(this) },
+	                            '取消'
+	                        )
 	                    )
 	                )
 	            )
@@ -1013,35 +1029,43 @@ return /******/ (function(modules) { // webpackBootstrap
 	            _RowJs2['default'],
 	            { className: _classnames3['default'](this.getClassNamesForArguments('dialog')) },
 	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                { className: _classnames3['default'](this.getClassNamesForArguments('title')) },
-	                this.props.title,
+	                _ColJs2['default'],
+	                null,
 	                _react2['default'].createElement(
-	                    'div',
-	                    { className: _classnames3['default'](this.getClassNamesForArguments('close')), onClick: this.closeDialog.bind(this) },
-	                    'x'
-	                )
-	            ),
-	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                { className: _classnames3['default'](this.getClassNamesForArguments('content')) },
-	                this.props.children
-	            ),
-	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                { className: _classnames3['default'](this.getClassNamesForArguments('button')) },
+	                    _RowJs2['default'],
+	                    { className: _classnames3['default'](this.getClassNamesForArguments('title')) },
+	                    this.props.title,
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: _classnames3['default'](this.getClassNamesForArguments('close')), onClick: this.closeDialog.bind(this) },
+	                        'x'
+	                    )
+	                ),
 	                _react2['default'].createElement(
-	                    _ColJs2['default'],
-	                    { sm: 12 },
+	                    _RowJs2['default'],
+	                    { className: _classnames3['default'](this.getClassNamesForArguments('content')) },
 	                    _react2['default'].createElement(
-	                        _ButtonJs2['default'],
-	                        { radius: true, egSize: 'xs', style: { marginRight: '20px' }, onClick: this.submitForm.bind(this) },
-	                        '确定'
-	                    ),
+	                        _ColJs2['default'],
+	                        null,
+	                        this.props.children
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    _RowJs2['default'],
+	                    { className: _classnames3['default'](this.getClassNamesForArguments('button')) },
 	                    _react2['default'].createElement(
-	                        _ButtonJs2['default'],
-	                        { radius: true, white: true, egSize: 'xs', onClick: this.cancleDialog.bind(this) },
-	                        '取消'
+	                        _ColJs2['default'],
+	                        { sm: 12 },
+	                        _react2['default'].createElement(
+	                            _ButtonJs2['default'],
+	                            { radius: true, egSize: 'xs', style: { marginRight: '20px' }, onClick: this.submitForm.bind(this) },
+	                            '确定'
+	                        ),
+	                        _react2['default'].createElement(
+	                            _ButtonJs2['default'],
+	                            { radius: true, white: true, egSize: 'xs', onClick: this.cancleDialog.bind(this) },
+	                            '取消'
+	                        )
 	                    )
 	                )
 	            )
@@ -1053,19 +1077,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	            _RowJs2['default'],
 	            { className: _classnames3['default'](this.getClassNamesForArguments('dialog')) },
 	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                { className: _classnames3['default'](this.getClassNamesForArguments('title')) },
-	                this.props.title,
+	                _ColJs2['default'],
+	                null,
 	                _react2['default'].createElement(
-	                    'div',
-	                    { className: _classnames3['default'](this.getClassNamesForArguments('close')), onClick: this.closeDialog.bind(this) },
-	                    'x'
+	                    _RowJs2['default'],
+	                    { className: _classnames3['default'](this.getClassNamesForArguments('title')) },
+	                    this.props.title,
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: _classnames3['default'](this.getClassNamesForArguments('close')), onClick: this.closeDialog.bind(this) },
+	                        'x'
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    _RowJs2['default'],
+	                    { className: _classnames3['default'](this.getClassNamesForArguments('content')) },
+	                    _react2['default'].createElement(
+	                        _ColJs2['default'],
+	                        null,
+	                        this.props.children
+	                    )
 	                )
-	            ),
-	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                { className: _classnames3['default'](this.getClassNamesForArguments('content')) },
-	                this.props.children
 	            )
 	        );
 	    };

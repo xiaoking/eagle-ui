@@ -604,7 +604,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	     */
 
 	    Crumb.prototype.render = function render() {
-	        debugger;
 	        var length = this.props.children.length;
 	        var li = this.props.children.map(function (item, index) {
 	            return _react2['default'].createElement(

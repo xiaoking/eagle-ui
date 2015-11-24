@@ -842,7 +842,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	            id: '1',
 	            classPrefix: 'select',
 	            componentTag: 'div',
-	            show: false
+	            value: '',
+	            show: false,
+	            target: '0'
 	        },
 	        enumerable: true
 	    }]);
@@ -852,7 +854,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        _Component.call(this, props, context);
 	        this.state = {
-	            show: this.props.show
+	            show: this.props.show,
+	            value: this.props.value
 	        };
 	    }
 
@@ -898,11 +901,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    Select.prototype.callBacks = function callBacks() {
-	        var val = ReactDOM.findDOMNode(this.refs.select).value;
+	        var val = this.state.value;
 	        this.setState({
 	            show: false
 	        });
 	        this.props.callback && this.props.callback(val);
+	    };
+
+	    Select.prototype.handlerValue = function handlerValue(event) {
+	        this.setState({
+	            value: event.target.value
+	        });
+	        this.changeValue();
 	    };
 
 	    Select.prototype.changeValue = function changeValue() {
@@ -911,20 +921,55 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    Select.prototype.chooseItem = function chooseItem(event) {
-	        var input = this.props.name;
+	        //debugger
+	        //react 避免直接取dom
+	        //这么写的原因在于Input是外层包了div，直接拿不到input。。
 	        var inputObj = ReactDOM.findDOMNode(this.refs.select);
-	        inputObj.value = event.target.textContent;
+	        //inputObj.value = event.target.textContent;
 	        this.setState({
-	            show: !this.state.show
+	            show: !this.state.show,
+	            value: event.target.textContent
 	        });
 	        inputObj.focus();
 	        this.changeValue();
 	    };
 
-	    Select.prototype.hideUl = function hideUl(event) {
+	    Select.prototype.hideUl = function hideUl() {
 	        this.setState({
 	            show: false
 	        });
+	    };
+
+	    Select.prototype.keyIn = function keyIn(event) {
+	        //debugger
+	        if (event.keyCode == 40) {
+	            this.setState({
+	                show: true
+	            });
+	            var _this = this;
+	            var selectUl = ReactDOM.findDOMNode(this.refs.selectUl);
+	            if (_this.isParent(event.target, selectUl)) {
+	                event.target.nextSibling ? event.target.nextSibling.focus() : event.target.focus();
+	            } else {
+	                selectUl.children[0].focus();
+	            }
+	        } else if (event.keyCode == 13) {
+	            this.setState({
+	                show: false
+	            });
+	            this.changeValue();
+	        }
+	    };
+
+	    Select.prototype.keyInUl = function keyInUl(e) {
+	        debugger;
+	        if (e.charCode == 13) {
+	            this.setState({
+	                show: false
+	            });
+	            this.chooseItem();
+	            this.changeValue();
+	        }
 	    };
 
 	    Select.prototype.renderSelect = function renderSelect() {
@@ -934,11 +979,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return _react2['default'].createElement(
 	            _GridJs2['default'],
 	            { ref: 'selectContair', className: _classnames4['default'](this.getClassNamesForArguments('container')) },
-	            _react2['default'].createElement(_InputJs2['default'], { ref: this.props.name, id: this.props.id, onClick: this.showUl.bind(this), onChange: this.changeValue.bind(this) }),
+	            _react2['default'].createElement(_InputJs2['default'], { ref: this.props.name, value: this.state.value, onClick: this.showUl.bind(this), onChange: this.handlerValue.bind(this), onKeyDown: this.keyIn.bind(this) }),
 	            _react2['default'].createElement('i', { className: _classnames4['default'](this.getClassName('arrow')), onClick: this.toogleUl.bind(this) }),
 	            _react2['default'].createElement(
 	                'ul',
-	                { ref: 'selectUl', className: _classnames4['default'](this.getClassNamesForArguments('ul'), (_classnames = {}, _classnames[this.getClassName('show')] = this.state.show, _classnames)) },
+	                { ref: 'selectUl', className: _classnames4['default'](this.getClassNamesForArguments('ul'), (_classnames = {}, _classnames[this.getClassName('show')] = this.state.show, _classnames)), onKeyPress: this.keyInUl.bind(this) },
 	                this.props.children.map(function (item) {
 	                    return _react2['default'].createElement(
 	                        'li',
@@ -957,14 +1002,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return _react2['default'].createElement(
 	            _GridJs2['default'],
 	            { className: _classnames4['default'](this.getClassNamesForArguments('container')) },
-	            _react2['default'].createElement(_InputJs2['default'], { ref: this.props.name, id: this.props.id, onChange: this.showAutoUl.bind(this) }),
+	            _react2['default'].createElement(_InputJs2['default'], { ref: this.props.name, value: this.state.value, onChange: this.showAutoUl.bind(this) }),
 	            _react2['default'].createElement(
 	                'ul',
 	                { className: _classnames4['default'](this.getClassNamesForArguments('ul'), (_classnames2 = {}, _classnames2[this.getClassName('show')] = this.state.show, _classnames2)) },
 	                this.props.children.map(function (item) {
 	                    return _react2['default'].createElement(
 	                        'li',
-	                        { value: item.props.children, onClick: _this3.chooseItem.bind(_this3) },
+	                        { value: item.props.children, onKeyPress: _this3.keyInUl.bind(_this3), onClick: _this3.chooseItem.bind(_this3) },
 	                        item.props.children
 	                    );
 	                })

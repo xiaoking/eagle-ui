@@ -74,7 +74,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _libToastJs2 = _interopRequireDefault(_libToastJs);
 
-	ReactDOM.render(_react2['default'].createElement(_libToastJs2['default'], { type: 'success', msg: '保存成功', seconds: '3', show: true }), document.getElementById('root'));
+	ReactDOM.render(_react2['default'].createElement(_libToastJs2['default'], { type: 'error', msg: '保存成功', seconds: '3', show: true }), document.getElementById('root'));
 
 /***/ },
 
@@ -891,15 +891,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	            _RowJs2['default'],
 	            { className: _classnames3['default'](this.getClassNamesForArguments(this.props.classPrefix)) },
 	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                { className: _classnames3['default'](this.getClassNamesForArguments('content')) },
+	                _ColJs2['default'],
+	                null,
 	                _react2['default'].createElement(
 	                    _RowJs2['default'],
-	                    null,
-	                    _react2['default'].createElement(_ColJs2['default'], { className: _classnames3['default'](this.getClassNamesForArguments(this.props.type)) }),
+	                    { className: _classnames3['default'](this.getClassNamesForArguments('content')) },
+	                    _react2['default'].createElement('div', { style: { padding: '5px 15px', float: 'left' }, className: _classnames3['default'](this.getClassNamesForArguments(this.props.type)) }),
 	                    _react2['default'].createElement(
-	                        _ColJs2['default'],
-	                        null,
+	                        'div',
+	                        { style: { padding: '5px 15px', float: 'right' } },
 	                        this.props.msg
 	                    )
 	                )
