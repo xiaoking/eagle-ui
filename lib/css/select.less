@@ -10,6 +10,11 @@
     width: inherit;
     top: 39px;
     left: 0px;
+    display: block;
+    border: @gray-line solid 1px;
+    border-radius: 0px 0px 4px 4px;
+    max-height: 150px;
+    overflow: auto;
     li{
       text-indent: 10px;
       padding: 5px 0;
@@ -25,14 +30,35 @@
   }
   .eg-select-ul{
     display: none;
+    &::-webkit-scrollbar
+    {
+      width: 16px;
+      height: 16px;
+      background-color: #fff;
+    }
+
+    /*定义滚动条轨道 内阴影+圆角*/
+    &::-webkit-scrollbar-track
+    {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      border-radius: 10px;
+      background-color: #fff;
+    }
+
+    /*定义滑块 内阴影+圆角*/
+    &::-webkit-scrollbar-thumb
+    {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+      background-color: #fff;
+    }
   }
   .eg-select-show{
     display: block;
   }
-  /*下箭头*/
-  .eg-select-arrow{
+  /*箭头*/
+  .eg-select-arrow-up,.eg-select-arrow-down{
     position: absolute;
-    top: 12px;
     right: 10px;
     display: inline-block;
     cursor: pointer;
@@ -42,8 +68,13 @@
     border-left: 5px solid @gray-bb;
     border-bottom: 5px solid @gray-bb;
   }
-  .eg-select-arrow{
+  .eg-select-arrow-down{
     transform: rotate(-45deg);
+    top: 16px;
+  }
+  .eg-select-arrow-up{
+    transform: rotate(135deg);
+    top: 13px;
   }
 
 }

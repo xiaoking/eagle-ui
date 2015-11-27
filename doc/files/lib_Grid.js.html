@@ -64,6 +64,22 @@
                     
                        <li>
                             
+                           <a href="../classes/Select.html">Select</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/ValidatorPanel.html">ValidatorPanel</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Button.html">Button</a>
                            <ul>
                                 
@@ -73,6 +89,14 @@
                        <li>
                             
                            <a href="../classes/ButtonGroup.html">ButtonGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -90,6 +114,14 @@
                    
                        <li>
                             
+                           <a href="../classes/Grid.html">Grid</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Row.html">Row</a>
                            <ul>
                                 
@@ -99,54 +131,6 @@
                        <li>
                             
                            <a href="../classes/Col.html">Col</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/crumb.html">crumb</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/dialog.html">dialog</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Grid.html">Grid</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Select.html">Select</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Tab.html">Tab</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/toast.html">toast</a>
                            <ul>
                                 
                            </ul>
@@ -172,7 +156,23 @@
                     
                        <li>
                             
-                           <a href="../classes/Label.html">Label</a>
+                           <a href="../classes/crumb.html">crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/toast.html">toast</a>
                            <ul>
                                 
                            </ul>
@@ -236,7 +236,31 @@
                     
                        <li>
                             
+                           <a href="../classes/dialog.html">dialog</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Label.html">Label</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/LabelGroup.html">LabelGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/List.html">List</a>
                            <ul>
                                 
                            </ul>
@@ -283,7 +307,10 @@
 <div class="file">
     <pre class="prettyprint linenums" id='src_code'>
 import React,{ PropTypes, Component } from &#x27;react&#x27;;
+import classnames from &#x27;classnames&#x27;;
+import ClassNameMixin from &#x27;./utils/ClassNameMixin&#x27;;
 
+@ClassNameMixin
 /**
  * 布局组件
  * @class Grid
@@ -301,7 +328,8 @@ export default class Grid extends Component{
     render(){
 
         return (
-            &lt;div {...this.props}&gt;
+            &lt;div {...this.props}
+                className={classnames(this.getClassName(&#x27;grid&#x27;),this.props.className)}&gt;
                 {this.props.children}
             &lt;/div&gt;
         );

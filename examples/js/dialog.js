@@ -7,7 +7,7 @@
 		var a = typeof exports === 'object' ? factory(require("react")) : factory(root["React"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_26__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_27__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -68,15 +68,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _lib_includeLess = __webpack_require__(22);
+	var _lib_includeLess = __webpack_require__(23);
 
 	var _lib_includeLess2 = _interopRequireDefault(_lib_includeLess);
 
-	var _react = __webpack_require__(26);
+	var _react = __webpack_require__(27);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _libDialogJs = __webpack_require__(43);
+	var _libDialogJs = __webpack_require__(44);
 
 	var _libDialogJs2 = _interopRequireDefault(_libDialogJs);
 
@@ -110,21 +110,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 22:
+/***/ 23:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 26:
+/***/ 27:
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_26__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_27__;
 
 /***/ },
 
-/***/ 28:
+/***/ 29:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -134,7 +134,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _constantsJs = __webpack_require__(29);
+	var _constantsJs = __webpack_require__(30);
 
 	var consts = _constantsJs.classConstants;
 
@@ -236,8 +236,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @param cls {String} 需要检查的样式名
 	     * @return {Boolean}
 	     * */
-	    obj.prototype.hasClass = function (obj, cls) {
-	        return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
+	    obj.prototype.hasClass = function () {
+	        return arguments[0].className.match(new RegExp('(\\s|^)' + arguments[1] + '(\\s|$)'));
 	    };
 
 	    /**
@@ -247,7 +247,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @param cls {String} 样式名
 	     * */
 	    obj.prototype.addClass = function (obj, cls) {
-	        if (!this.hasClass(obj, cls)) obj.className += " " + cls;
+	        if (!this.hasClass(obj, cls)) {
+	            obj.className = (obj.className + " " + cls).replace(/\s{2,}/g, " ");
+	        }
 	    };
 	    /**
 	     * 给元素删除一个样式名
@@ -255,10 +257,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @param obj {Object} 元素
 	     * @param cls {String} 样式名
 	     * */
-	    obj.prototype.removeClass = function (obj, cls) {
-	        if (this.hasClass(obj, cls)) {
-	            var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
-	            obj.className = obj.className.replace(reg, ' ');
+	    obj.prototype.removeClass = function () {
+	        if (this.hasClass(arguments[0], arguments[1])) {
+	            var reg = new RegExp('(\\s|^)' + arguments[1] + '(\\s|$)');
+	            arguments[0].className = arguments[0].className.replace(reg, ' ').split(" ").join(" ");
 	        }
 	    };
 	};
@@ -267,7 +269,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 29:
+/***/ 30:
 /***/ function(module, exports) {
 
 	/**
@@ -329,7 +331,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 30:
+/***/ 31:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -384,7 +386,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 31:
+/***/ 32:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -404,15 +406,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(26);
+	var _react = __webpack_require__(27);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(28);
+	var _utilsClassNameMixin = __webpack_require__(29);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames = __webpack_require__(30);
+	var _classnames = __webpack_require__(31);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -561,7 +563,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 32:
+/***/ 33:
 /***/ function(module, exports, __webpack_require__) {
 
 	//import RowLess from './row.less';
@@ -579,11 +581,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(26);
+	var _react = __webpack_require__(27);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(30);
+	var _classnames = __webpack_require__(31);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -628,7 +630,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 33:
+/***/ 34:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -645,11 +647,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(26);
+	var _react = __webpack_require__(27);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(30);
+	var _classnames = __webpack_require__(31);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -718,7 +720,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 34:
+/***/ 35:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -735,15 +737,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(26);
+	var _react = __webpack_require__(27);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(30);
+	var _classnames = __webpack_require__(31);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _utilsClassNameMixin = __webpack_require__(28);
+	var _utilsClassNameMixin = __webpack_require__(29);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
@@ -791,25 +793,12 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 43:
+/***/ 44:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Created by panqianjin on 15/10/30.
 	 */
-	/**
-	 弹框组件
-	 Features :
-	 1.根据不同的type渲染不同的弹框样式
-	 2.根据需要提供callback
-
-
-	 Update Note:
-	 +2015.10.30 ： Created
-	 +2015.11.8 : Restructure
-	 @moudle Dialog
-	 */
-
 	'use strict';
 
 	exports.__esModule = true;
@@ -822,54 +811,106 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(26);
+	var _react = __webpack_require__(27);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(28);
+	var _utilsClassNameMixin = __webpack_require__(29);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames2 = __webpack_require__(30);
+	var _classnames2 = __webpack_require__(31);
 
 	var _classnames3 = _interopRequireDefault(_classnames2);
 
-	var _ButtonJs = __webpack_require__(31);
+	var _ButtonJs = __webpack_require__(32);
 
 	var _ButtonJs2 = _interopRequireDefault(_ButtonJs);
 
-	var _RowJs = __webpack_require__(32);
+	var _RowJs = __webpack_require__(33);
 
 	var _RowJs2 = _interopRequireDefault(_RowJs);
 
-	var _ColJs = __webpack_require__(33);
+	var _ColJs = __webpack_require__(34);
 
 	var _ColJs2 = _interopRequireDefault(_ColJs);
 
-	var _GridJs = __webpack_require__(34);
+	var _GridJs = __webpack_require__(35);
 
 	var _GridJs2 = _interopRequireDefault(_GridJs);
 
 	/**
-	 * dialog 弹窗组件
-	 *
+	 * 弹框组件
 	 * @class dialog
-	 */
+	 * @module ui
+	 * @extends Component
+	 * @constructor
+	 * @since 0.1.0
+	 * @demo src/dialog.js{js}
+	 * @demo dialog.html
+	 * @show true
+	 * */
 
 	var Dialog = (function (_Component) {
 	    _inherits(Dialog, _Component);
 
 	    _createClass(Dialog, null, [{
+	        key: 'propType',
+	        value: {
+	            /**
+	             * dialog类型：分为alert,confirm,dialog,mask 四种。默认alert
+	             * @property type
+	             * @type String
+	             * @default alert
+	             * */
+	            type: _react.PropTypes.string,
+	            /**
+	             * 标题
+	             * @property title
+	             * @type String
+	             * @default 温馨提示
+	             * */
+	            title: _react.PropTypes.string,
+	            /**
+	             * 点击确定时，回调方法
+	             * @property successCallback
+	             * @type Function
+	             * @default null
+	             * */
+	            successCallback: _react.PropTypes.func,
+	            /**
+	             * 点击取消时，回调方法
+	             * @property cancelCallback
+	             * @type Function
+	             * @default null
+	             * */
+	            cancelCallback: _react.PropTypes.func,
+	            /**
+	             * 类名样式前缀
+	             * @property classPrefix
+	             * @type sting
+	             * @default crumb
+	             * */
+	            classPrefix: _react.PropTypes.string,
+	            /**
+	             * 标签tagName
+	             * @property componentTag
+	             * @type String
+	             * @default div
+	             * */
+	            componentTag: _react.PropTypes.string
+
+	        },
+	        enumerable: true
+	    }, {
 	        key: 'defaultProps',
 	        value: {
 	            successCallback: null, //success回掉函数
 	            cancelCallback: null, //cancel回调函数
 	            close: false, //是否有x图标
-	            title: '爱生活爱点评', //标题
-	            show: false,
+	            title: '温馨提示', //标题
 	            type: 'alert',
-	            tips: null,
-	            classPrefix: 'dialog', //类名前前缀
+	            classPrefix: 'dialog',
 	            componentTag: 'div'
 	        },
 	        enumerable: true
@@ -885,8 +926,37 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    /**
-	     * @method close dialog
-	     * @return change state
+	     * 接收到新props时执行,props是否存在show，是改变state.show，否则不变
+	     * 生命周期方法
+	     * @method componentWillReceiveProps
+	     * */
+
+	    Dialog.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+	        this.setState({
+	            show: nextProps.show ? nextProps.show : this.state.show
+	        });
+	    };
+
+	    /**
+	     * @method render
+	     * @return {ReactElement}
+	     * */
+
+	    Dialog.prototype.render = function render() {
+	        var _classnames;
+
+	        return _react2['default'].createElement(
+	            _GridJs2['default'],
+	            { className: _classnames3['default'](this.getClassName('container'), (_classnames = {}, _classnames['fadein'] = this.props.cancelCallback ? this.props.show : this.state.show, _classnames['fadeout'] = !(this.props.cancelCallback ? this.props.show : this.state.show), _classnames)) },
+	            this[this.props.type.toLowerCase()](),
+	            this.showOverlay(this.props.tips)
+	        );
+	    };
+
+	    /**
+	     * 点击X，调用cancelCallback（如果存在），否则通过改变自身state来关闭
+	     * @method closeDialog
+	     * @return null
 	     * */
 
 	    Dialog.prototype.closeDialog = function closeDialog() {
@@ -899,9 +969,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    /**
-	     * @method submit dialog
-	     * @return callBack;
-	     *         change state
+	     * 点击确定按钮，调用successCallback（如果存在），否则通过改变自身state来关闭
+	     * @method submitForm
+	     * @return null;
 	     * */
 
 	    Dialog.prototype.submitForm = function submitForm() {
@@ -914,6 +984,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	    };
 
+	    /**
+	     * 点击取消按钮，调用cancelCallback（如果存在），否则通过改变自身state来关闭
+	     * @method cancleDialog
+	     * @return null;
+	     * */
+
 	    Dialog.prototype.cancleDialog = function cancleDialog() {
 	        this.props.cancelCallback && this.props.cancelCallback();
 	        if (!this.props.cancelCallback) {
@@ -924,8 +1000,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    /**
-	     * @method show dialog overly
-	     * @return dom
+	     * 显示遮罩
+	     * @method showOverlay
+	     * @return {ReactElement}
 	     * */
 
 	    Dialog.prototype.showOverlay = function showOverlay() {
@@ -933,9 +1010,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    /**
-	     * @method render different dom
-	     * @name    face to this.props.type
-	     * @return  alert/confirm/dialog/mask
+	     * 渲染alert
+	     * @method alert
+	     * @return  {ReactElement}
 	     * */
 
 	    Dialog.prototype.alert = function alert() {
@@ -975,6 +1052,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	            )
 	        );
 	    };
+
+	    /**
+	     * 渲染confirm
+	     * @method confirm
+	     * @return  {ReactElement}
+	     * */
 
 	    Dialog.prototype.confirm = function confirm() {
 	        return _react2['default'].createElement(
@@ -1024,6 +1107,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        );
 	    };
 
+	    /**
+	     * 渲染dialog
+	     * @method dialog
+	     * @return  {ReactElement}
+	     * */
+
 	    Dialog.prototype.dialog = function dialog() {
 	        return _react2['default'].createElement(
 	            _RowJs2['default'],
@@ -1072,6 +1161,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        );
 	    };
 
+	    /**
+	     * 渲染mask
+	     * @method mask
+	     * @return  {ReactElement}
+	     * */
+
 	    Dialog.prototype.mask = function mask() {
 	        return _react2['default'].createElement(
 	            _RowJs2['default'],
@@ -1099,23 +1194,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    )
 	                )
 	            )
-	        );
-	    };
-
-	    Dialog.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
-	        this.setState({
-	            show: nextProps.show ? nextProps.show : this.state.show
-	        });
-	    };
-
-	    Dialog.prototype.render = function render() {
-	        var _classnames;
-
-	        return _react2['default'].createElement(
-	            _GridJs2['default'],
-	            { className: _classnames3['default'](this.getClassName('container'), (_classnames = {}, _classnames[this.getClassName('show')] = this.props.cancelCallback ? this.props.show : this.state.show, _classnames)) },
-	            this[this.props.type.toLowerCase()](),
-	            this.showOverlay(this.props.tips)
 	        );
 	    };
 

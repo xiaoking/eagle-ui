@@ -64,6 +64,22 @@
                     
                        <li>
                             
+                           <a href="../classes/Select.html">Select</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/ValidatorPanel.html">ValidatorPanel</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Button.html">Button</a>
                            <ul>
                                 
@@ -73,6 +89,14 @@
                        <li>
                             
                            <a href="../classes/ButtonGroup.html">ButtonGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -90,6 +114,14 @@
                    
                        <li>
                             
+                           <a href="../classes/Grid.html">Grid</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Row.html">Row</a>
                            <ul>
                                 
@@ -99,54 +131,6 @@
                        <li>
                             
                            <a href="../classes/Col.html">Col</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/crumb.html">crumb</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/dialog.html">dialog</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Grid.html">Grid</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Select.html">Select</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Tab.html">Tab</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/toast.html">toast</a>
                            <ul>
                                 
                            </ul>
@@ -172,7 +156,23 @@
                     
                        <li>
                             
-                           <a href="../classes/Label.html">Label</a>
+                           <a href="../classes/crumb.html">crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/toast.html">toast</a>
                            <ul>
                                 
                            </ul>
@@ -236,7 +236,31 @@
                     
                        <li>
                             
+                           <a href="../classes/dialog.html">dialog</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Label.html">Label</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/LabelGroup.html">LabelGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/List.html">List</a>
                            <ul>
                                 
                            </ul>
@@ -285,19 +309,6 @@
 /**
  * Created by panqianjin on 15/10/30.
  */
-/**
- 弹框组件
- Features :
- 1.根据不同的type渲染不同的弹框样式
- 2.根据需要提供callback
-
-
- Update Note:
- +2015.10.30 ： Created
- +2015.11.8 : Restructure
- @moudle Dialog
- */
-
 import React,{Component,PropTypes} from &#x27;react&#x27;;
 import ClassNameMixin from &#x27;./utils/ClassNameMixin&#x27;;
 import classnames from &#x27;classnames&#x27;;
@@ -306,23 +317,72 @@ import Row from &#x27;./Row.js&#x27;;
 import Col from &#x27;./Col.js&#x27;;
 import Grid from &#x27;./Grid.js&#x27;;
 /**
- * dialog 弹窗组件
- *
+ * 弹框组件
  * @class dialog
- */
-
+ * @module ui
+ * @extends Component
+ * @constructor
+ * @since 0.1.0
+ * @demo src/dialog.js{js}
+ * @demo dialog.html
+ * @show true
+ * */
 @ClassNameMixin
-export default class Dialog extends Component {
+export default
+class Dialog extends Component {
+    static propType = {
+        /**
+         * dialog类型：分为alert,confirm,dialog,mask 四种。默认alert
+         * @property type
+         * @type String
+         * @default alert
+         * */
+        type: PropTypes.string,
+        /**
+         * 标题
+         * @property title
+         * @type String
+         * @default 温馨提示
+         * */
+        title: PropTypes.string,
+        /**
+         * 点击确定时，回调方法
+         * @property successCallback
+         * @type Function
+         * @default null
+         * */
+        successCallback: PropTypes.func,
+        /**
+         * 点击取消时，回调方法
+         * @property cancelCallback
+         * @type Function
+         * @default null
+         * */
+        cancelCallback: PropTypes.func,
+        /**
+         * 类名样式前缀
+         * @property classPrefix
+         * @type sting
+         * @default crumb
+         * */
+        classPrefix: PropTypes.string,
+        /**
+         * 标签tagName
+         * @property componentTag
+         * @type String
+         * @default div
+         * */
+        componentTag: PropTypes.string
+
+    }
     static defaultProps = {
         successCallback: null,//success回掉函数
         cancelCallback: null,//cancel回调函数
         close: false,//是否有x图标
-        title: &#x27;爱生活爱点评&#x27;,//标题
-        show: false,
+        title: &#x27;温馨提示&#x27;,//标题
         type: &#x27;alert&#x27;,
-        tips: null,
-        classPrefix:&#x27;dialog&#x27;,//类名前前缀
-        componentTag:&#x27;div&#x27;
+        classPrefix: &#x27;dialog&#x27;,
+        componentTag: &#x27;div&#x27;
     }
 
     constructor(props, context) {
@@ -332,43 +392,80 @@ export default class Dialog extends Component {
         };
     }
     /**
-     * @method close dialog
-     * @return change state
+     * 接收到新props时执行,props是否存在show，是改变state.show，否则不变
+     * 生命周期方法
+     * @method componentWillReceiveProps
+     * */
+    componentWillReceiveProps(nextProps) {
+        this.setState({
+            show: nextProps.show ? nextProps.show : this.state.show
+        });
+
+    }
+    /**
+     * @method render
+     * @return {ReactElement}
+     * */
+    render() {
+        return (
+            &lt;Grid className={classnames(
+                this.getClassName(&#x27;container&#x27;),
+                {
+                    [&#x27;fadein&#x27;]: this.props.cancelCallback?this.props.show:this.state.show,
+                    [&#x27;fadeout&#x27;]: !(this.props.cancelCallback?this.props.show:this.state.show)
+                }
+                )}&gt;
+                {this[this.props.type.toLowerCase()]()}
+                {this.showOverlay(this.props.tips)}
+            &lt;/Grid&gt;
+        );
+    }
+    /**
+     * 点击X，调用cancelCallback（如果存在），否则通过改变自身state来关闭
+     * @method closeDialog
+     * @return null
      * */
     closeDialog() {
         this.props.cancelCallback &amp;&amp; this.props.cancelCallback();
-        if(!this.props.cancelCallback) {
+        if (!this.props.cancelCallback) {
             this.setState({
                 show: false
             });
         }
     }
+
     /**
-     * @method submit dialog
-     * @return callBack;
-     *         change state
+     * 点击确定按钮，调用successCallback（如果存在），否则通过改变自身state来关闭
+     * @method submitForm
+     * @return null;
      * */
     submitForm() {
 
         this.props.successCallback &amp;&amp; this.props.successCallback();
-        if(!this.props.successCallback) {
-            this.setState({
-                show: false
-            });
-        }
-    }
-
-    cancleDialog() {
-        this.props.cancelCallback &amp;&amp; this.props.cancelCallback();
-        if(!this.props.cancelCallback) {
+        if (!this.props.successCallback) {
             this.setState({
                 show: false
             });
         }
     }
     /**
-     * @method show dialog overly
-     * @return dom
+     * 点击取消按钮，调用cancelCallback（如果存在），否则通过改变自身state来关闭
+     * @method cancleDialog
+     * @return null;
+     * */
+    cancleDialog() {
+        this.props.cancelCallback &amp;&amp; this.props.cancelCallback();
+        if (!this.props.cancelCallback) {
+            this.setState({
+                show: false
+            });
+        }
+    }
+
+    /**
+     * 显示遮罩
+     * @method showOverlay
+     * @return {ReactElement}
      * */
     showOverlay() {
         return (
@@ -383,135 +480,148 @@ export default class Dialog extends Component {
     }
 
     /**
-     * @method render different dom
-     * @name    face to this.props.type
-     * @return  alert/confirm/dialog/mask
+     * 渲染alert
+     * @method alert
+     * @return  {ReactElement}
      * */
     alert() {
         return (
             &lt;Row className={ classnames(
                     this.getClassNamesForArguments(&#x27;dialog&#x27;)
                 )} style={{width:&#x27;300px&#x27;}}&gt;
-                &lt;Row className={classnames(
+                &lt;Col&gt;
+                    &lt;Row className={classnames(
                    this.getClassNamesForArguments(&#x27;title&#x27;)
                 )}&gt;
-                    {this.props.title}
-                &lt;/Row&gt;
-                &lt;Row className={ classnames(
+                            {this.props.title}
+                    &lt;/Row&gt;
+                    &lt;Row className={ classnames(
                     this.getClassNamesForArguments(&#x27;content&#x27;))}&gt;
-                    {this.props.children}
-                &lt;/Row&gt;
-                &lt;Row className={ classnames(
+                        &lt;Col&gt;
+                            {this.props.children}
+                        &lt;/Col&gt;
+                    &lt;/Row&gt;
+                    &lt;Row className={ classnames(
                     this.getClassNamesForArguments(&#x27;button&#x27;)
                 )}&gt;
-                    &lt;Col sm={12}&gt;
-                        &lt;Button radius egSize=&quot;xs&quot; onClick={::this.submitForm}&gt;确定&lt;/Button&gt;
-                    &lt;/Col&gt;
-                &lt;/Row&gt;
+                        &lt;Col sm={12}&gt;
+                            &lt;Button radius egSize=&quot;xs&quot; onClick={::this.submitForm}&gt;确定&lt;/Button&gt;
+                        &lt;/Col&gt;
+                    &lt;/Row&gt;
+                &lt;/Col&gt;
             &lt;/Row&gt;
         );
     }
-
+    /**
+     * 渲染confirm
+     * @method confirm
+     * @return  {ReactElement}
+     * */
 
     confirm() {
         return (
             &lt;Row className={ classnames(
                     this.getClassNamesForArguments(&#x27;dialog&#x27;)
                 )} style={{width:&#x27;300px&#x27;}}&gt;
-                &lt;Row className={classnames(
+                &lt;Col&gt;
+                    &lt;Row className={classnames(
                    this.getClassNamesForArguments(&#x27;title&#x27;)
                 )}&gt;
-                    {this.props.title}
-                    &lt;div className={classnames(
+                            {this.props.title}
+                            &lt;div className={classnames(
                     this.getClassNamesForArguments(&#x27;close&#x27;)
-                    )} onClick={::this.closeDialog}&gt;x&lt;/div&gt;
-                &lt;/Row&gt;
-                &lt;Row className={ classnames(
+                    )} onClick={::this.closeDialog}&gt;x
+                            &lt;/div&gt;
+                    &lt;/Row&gt;
+                    &lt;Row className={ classnames(
                     this.getClassNamesForArguments(&#x27;content&#x27;))}&gt;
-                    {this.props.children?this.props.children:&#x27;请快乐的修bug&#x27;}
-                &lt;/Row&gt;
-                &lt;Row className={ classnames(
+                        &lt;Col&gt;
+                            {this.props.children?this.props.children:&#x27;请快乐的修bug&#x27;}
+                        &lt;/Col&gt;
+                    &lt;/Row&gt;
+                    &lt;Row className={ classnames(
                     this.getClassNamesForArguments(&#x27;button&#x27;))}&gt;
-                    &lt;Col sm={12}&gt;
-                        &lt;Button radius egSize=&quot;xs&quot; style={{marginRight:&#x27;20px&#x27;}} onClick={::this.submitForm}&gt;确定&lt;/Button&gt;
-                        &lt;Button radius white egSize=&quot;xs&quot; onClick={::this.cancleDialog}&gt;取消&lt;/Button&gt;
-                    &lt;/Col&gt;
-                &lt;/Row&gt;
+                        &lt;Col sm={12}&gt;
+                            &lt;Button radius egSize=&quot;xs&quot; style={{marginRight:&#x27;20px&#x27;}} onClick={::this.submitForm}&gt;确定
+                            &lt;/Button&gt;
+                            &lt;Button radius white egSize=&quot;xs&quot; onClick={::this.cancleDialog}&gt;取消&lt;/Button&gt;
+                        &lt;/Col&gt;
+                    &lt;/Row&gt;
+                &lt;/Col&gt;
             &lt;/Row&gt;
         );
     }
 
-
+    /**
+     * 渲染dialog
+     * @method dialog
+     * @return  {ReactElement}
+     * */
     dialog() {
         return (
             &lt;Row className={ classnames(
                     this.getClassNamesForArguments(&#x27;dialog&#x27;)
                 )}&gt;
-                &lt;Row className={classnames(
+                &lt;Col&gt;
+                    &lt;Row className={classnames(
                    this.getClassNamesForArguments(&#x27;title&#x27;)
                 )}&gt;
-                    {this.props.title}
-                    &lt;div className={classnames(
+                            {this.props.title}
+                            &lt;div className={classnames(
                     this.getClassNamesForArguments(&#x27;close&#x27;)
-                    )} onClick={::this.closeDialog}&gt;x&lt;/div&gt;
-                &lt;/Row&gt;
-                &lt;Row className={ classnames(
+                    )} onClick={::this.closeDialog}&gt;x
+                            &lt;/div&gt;
+                    &lt;/Row&gt;
+                    &lt;Row className={ classnames(
                     this.getClassNamesForArguments(&#x27;content&#x27;))}&gt;
-                    {this.props.children}
-                &lt;/Row&gt;
-                &lt;Row className={ classnames(
+                        &lt;Col&gt;
+                            {this.props.children}
+                        &lt;/Col&gt;
+                    &lt;/Row&gt;
+                    &lt;Row className={ classnames(
                     this.getClassNamesForArguments(&#x27;button&#x27;))}&gt;
-                    &lt;Col sm={12}&gt;
-                        &lt;Button radius egSize=&quot;xs&quot; style={{marginRight:&#x27;20px&#x27;}} onClick={::this.submitForm}&gt;确定&lt;/Button&gt;
-                        &lt;Button radius white egSize=&quot;xs&quot; onClick={::this.cancleDialog}&gt;取消&lt;/Button&gt;
-                    &lt;/Col&gt;
-                &lt;/Row&gt;
+                        &lt;Col sm={12}&gt;
+                            &lt;Button radius egSize=&quot;xs&quot; style={{marginRight:&#x27;20px&#x27;}} onClick={::this.submitForm}&gt;确定
+                            &lt;/Button&gt;
+                            &lt;Button radius white egSize=&quot;xs&quot; onClick={::this.cancleDialog}&gt;取消&lt;/Button&gt;
+                        &lt;/Col&gt;
+                    &lt;/Row&gt;
+                &lt;/Col&gt;
             &lt;/Row&gt;
         );
     }
-
+    /**
+     * 渲染mask
+     * @method mask
+     * @return  {ReactElement}
+     * */
 
     mask() {
         return (
             &lt;Row className={ classnames(
                     this.getClassNamesForArguments(&#x27;dialog&#x27;)
                 )}&gt;
-                &lt;Row className={classnames(
+                &lt;Col&gt;
+                    &lt;Row className={classnames(
                    this.getClassNamesForArguments(&#x27;title&#x27;)
                 )}&gt;
-                    {this.props.title}
-                    &lt;div className={classnames(
+                            {this.props.title}
+                            &lt;div className={classnames(
                     this.getClassNamesForArguments(&#x27;close&#x27;)
-                    )} onClick={::this.closeDialog}&gt;x&lt;/div&gt;
-                &lt;/Row&gt;
-                &lt;Row className={ classnames(
+                    )} onClick={::this.closeDialog}&gt;x
+                            &lt;/div&gt;
+                    &lt;/Row&gt;
+                    &lt;Row className={ classnames(
                     this.getClassNamesForArguments(&#x27;content&#x27;))}&gt;
-                    {this.props.children}
-                &lt;/Row&gt;
+                        &lt;Col&gt;
+                            {this.props.children}
+                        &lt;/Col&gt;
+                    &lt;/Row&gt;
+                &lt;/Col&gt;
             &lt;/Row&gt;
 
         )
     }
-    componentWillReceiveProps(nextProps) {
-        this.setState({
-            show : nextProps.show?nextProps.show:this.state.show
-        });
-
-    }
-    render() {
-        return (
-            &lt;Grid className={classnames(
-                this.getClassName(&#x27;container&#x27;),
-                {
-                    [this.getClassName(&#x27;show&#x27;)]: this.props.cancelCallback?this.props.show:this.state.show
-                }
-                )}&gt;
-                {this[this.props.type.toLowerCase()]()}
-                {this.showOverlay(this.props.tips)}
-            &lt;/Grid&gt;
-        );
-    }
-
 }
 
 

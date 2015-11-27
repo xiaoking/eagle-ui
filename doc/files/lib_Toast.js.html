@@ -64,6 +64,22 @@
                     
                        <li>
                             
+                           <a href="../classes/Select.html">Select</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/ValidatorPanel.html">ValidatorPanel</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Button.html">Button</a>
                            <ul>
                                 
@@ -73,6 +89,14 @@
                        <li>
                             
                            <a href="../classes/ButtonGroup.html">ButtonGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -90,6 +114,14 @@
                    
                        <li>
                             
+                           <a href="../classes/Grid.html">Grid</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Row.html">Row</a>
                            <ul>
                                 
@@ -99,54 +131,6 @@
                        <li>
                             
                            <a href="../classes/Col.html">Col</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/crumb.html">crumb</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/dialog.html">dialog</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Grid.html">Grid</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Select.html">Select</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Tab.html">Tab</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/toast.html">toast</a>
                            <ul>
                                 
                            </ul>
@@ -172,7 +156,23 @@
                     
                        <li>
                             
-                           <a href="../classes/Label.html">Label</a>
+                           <a href="../classes/crumb.html">crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/toast.html">toast</a>
                            <ul>
                                 
                            </ul>
@@ -236,7 +236,31 @@
                     
                        <li>
                             
+                           <a href="../classes/dialog.html">dialog</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Label.html">Label</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/LabelGroup.html">LabelGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/List.html">List</a>
                            <ul>
                                 
                            </ul>
@@ -293,18 +317,69 @@ import Row from &#x27;./Row.js&#x27;;
 import Col from &#x27;./Col.js&#x27;;
 import Grid from &#x27;./Grid.js&#x27;;
 /**
- * @class  toast
- * @description three tips: success/error/loading
- * date 2015/211
+ * 提示组件
+ * @class toast
+ * @module ui
+ * @extends Component
+ * @constructor
+ * @since 0.1.0
+ * @demo src/toast.js{js}
+ * @demo toast.html
+ * @show true
  * */
 @ClassNameMixin
-export default class Toast extends Component {
+export default
+class Toast extends Component {
+    static propType = {
+        /**
+         * toast类型：分为success,error,loading 三种。默认success
+         * @property type
+         * @type String
+         * @default success
+         * */
+        type: PropTypes.string,
+        /**
+         * 文字信息
+         * @property msg
+         * @type String
+         * @default 保存成功
+         * */
+        msg: PropTypes.string,
+        /**
+         * tips n秒后消失 默认4秒
+         * @property seconds
+         * @type Integer
+         * @default 4
+         * */
+        seconds: PropTypes.number,
+        /**
+         * 是否显示遮罩，默认false
+         * @property overlay
+         * @type Boolean
+         * @default false
+         * */
+        overlay: PropTypes.boolean,
+        /**
+         * 类名样式前缀
+         * @property classPrefix
+         * @type sting
+         * @default crumb
+         * */
+        classPrefix: PropTypes.string,
+        /**
+         * 标签tagName
+         * @property componentTag
+         * @type String
+         * @default div
+         * */
+        componentTag: PropTypes.string
+
+    }
     static defaultProps = {
         type: &#x27;sucess-tips&#x27;,
         msg: &#x27;保存成功&#x27;,
-        overlay: false,
         seconds: 4,
-        target: true,
+        overlay: false,
         classPrefix: &#x27;tips&#x27;,
         componentTag: &#x27;div&#x27;
     }
@@ -312,53 +387,55 @@ export default class Toast extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
+            /**
+             * 是否显示tips
+             * @type Boolean
+             * */
             show: this.props.show
         };
     }
-
     /**
-     * @method  n seconds hide toast
+     * 接收到新props时执行,props改变，改变state.show
+     * @method componentWillReceiveProps
+     *
      * */
-    setTimeoutForClose() {
-        if(this.state.show){
-            let seconds = this.props.seconds * 1000;
-            clearTimeout(this.timeout);
-            this.timeout = setTimeout(::this.closeToast, seconds);
-        }
-    }
     componentWillReceiveProps(nextProps) {
         this.setState({
-            show : nextProps.show
+            /**
+             * state.show随新的props里的值改变
+             * @type Boolean
+             * */
+            show: nextProps.show
         });
 
     }
-
+    /**
+     * @method render
+     * @return {ReactElement}
+     * */
     render() {
         this.setTimeoutForClose();
         return (
             &lt;Grid className={classnames(
                     this.getClassName(&#x27;container&#x27;),
                     {
-                        [this.getClassName(&#x27;show&#x27;)]:this.state.show
+                        [&#x27;fadein&#x27;]:this.state.show,
+                        [&#x27;fadeout&#x27;]:!this.state.show
                     }
                 )}&gt;
                 {this.toast()}
-                {this.showOverlay(this.props.target)}
+                {this.showOverlay(this.props.overlay)}
             &lt;/Grid&gt;
         );
     }
-
-    closeToast() {
-        this.props.closeCallback &amp;&amp; (this.props.closeCallback() );
-        this.setState({
-            show: false
-        });
-    }
-
+    /**
+     * 是否展示遮罩层
+     * @method showOverlay
+     * @param target {Boolean}
+     * return {ReactElement}
+     * */
     showOverlay(target) {
         if (target) {
-            return (&lt;Grid&gt;&lt;/Grid&gt;);
-        } else {
             return (
                 &lt;Grid className={
                      classnames(
@@ -368,11 +445,15 @@ export default class Toast extends Component {
                 }&gt;
                 &lt;/Grid&gt;
             );
+        } else {
+            return (&lt;Grid&gt;&lt;/Grid&gt;);
         }
     }
 
     /**
-     * @method render content
+     * 渲染toast主体
+     * @method toast
+     * @return {ReactElement}
      * */
     toast() {
         return (
@@ -380,22 +461,49 @@ export default class Toast extends Component {
                  classnames(
                     this.getClassNamesForArguments(this.props.classPrefix)
                 )}&gt;
-                &lt;Row className={classnames(
+                &lt;Col&gt;
+                    &lt;Row className={classnames(
                     this.getClassNamesForArguments(&#x27;content&#x27;)
                 )}&gt;
-                    &lt;Row&gt;
-                        &lt;Col className={classnames(
+
+                        &lt;div style={{padding: &#x27;5px 15px&#x27;,float: &#x27;left&#x27;}} className={classnames(
                             this.getClassNamesForArguments(this.props.type)
                         )}&gt;
-                        &lt;/Col&gt;
-                        &lt;Col&gt;
+                        &lt;/div&gt;
+                        &lt;div style={{padding: &#x27;5px 15px&#x27;,float:&#x27;right&#x27;}}&gt;
                             {this.props.msg}
-                        &lt;/Col&gt;
+                        &lt;/div&gt;
                     &lt;/Row&gt;
-                &lt;/Row&gt;
+                &lt;/Col&gt;
             &lt;/Row&gt;
         )
     }
+    /**
+     * 延时n秒消失
+     * @method  setTimeoutForClose
+     * @return null
+     * */
+    setTimeoutForClose() {
+        if (this.state.show) {
+            let seconds = this.props.seconds * 1000;
+            clearTimeout(this.timeout);
+            this.timeout = setTimeout(::this.closeToast, seconds
+        )
+            ;
+        }
+    }
+    /**
+     * 改变state.show 隐藏tips,并调用回调方法
+     * @method closeToast
+     * @return null
+     * */
+    closeToast() {
+        this.props.closeCallback &amp;&amp; (this.props.closeCallback() );
+        this.setState({
+            show: false
+        });
+    }
+
 
 
 }

@@ -64,6 +64,22 @@
                     
                        <li>
                             
+                           <a href="../classes/Select.html">Select</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/ValidatorPanel.html">ValidatorPanel</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Button.html">Button</a>
                            <ul>
                                 
@@ -73,6 +89,14 @@
                        <li>
                             
                            <a href="../classes/ButtonGroup.html">ButtonGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -90,6 +114,14 @@
                    
                        <li>
                             
+                           <a href="../classes/Grid.html">Grid</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Row.html">Row</a>
                            <ul>
                                 
@@ -99,54 +131,6 @@
                        <li>
                             
                            <a href="../classes/Col.html">Col</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/crumb.html">crumb</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/dialog.html">dialog</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Grid.html">Grid</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Select.html">Select</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Tab.html">Tab</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/toast.html">toast</a>
                            <ul>
                                 
                            </ul>
@@ -172,7 +156,23 @@
                     
                        <li>
                             
-                           <a href="../classes/Label.html">Label</a>
+                           <a href="../classes/crumb.html">crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/toast.html">toast</a>
                            <ul>
                                 
                            </ul>
@@ -236,7 +236,31 @@
                     
                        <li>
                             
+                           <a href="../classes/dialog.html">dialog</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Label.html">Label</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/LabelGroup.html">LabelGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/List.html">List</a>
                            <ul>
                                 
                            </ul>
@@ -418,6 +442,162 @@
 
     
 
+    
+        <div class="example">
+            <h4>Example:</h4>
+            <ul class="nav nav-tabs example-list">
+                
+                <li role="presentation"  class="active"  _no='0'> <a>js</a></li>
+                
+                <li role="presentation"   _no='1'> <a>html</a></li>
+                
+            </ul>
+
+            <div class="example-content  showdemo ">
+                <div class="stdoc-code"><pre class="code prettyprint"><code>/**
+ * Created by mac on 15/11/4.
+ */
+import css from &#39;../../lib/_include.less&#39;;
+import React,{Component} from &#39;react&#39;;
+import {Label,LabelGroup,Panel,Grid,Row,Col} from &#39;eagle-ui&#39;;
+
+let Demo = class Demo extends Component{
+
+    constructor(props,context){
+        super(props,context);
+
+    }
+
+    show(value,text,target,active){
+        console.dir(value);
+    }
+
+    render(){
+        return (
+            &lt;Panel style={{
+                margin:&#39;20px&#39;
+            }}&gt;
+                &lt;PanelContent &gt;
+                    &lt;Grid&gt;
+                        &lt;Row&gt;
+                            &lt;Col&gt;
+                                &lt;h3&gt;标签组&lt;/h3&gt;
+                            &lt;/Col&gt;
+                        &lt;/Row&gt;
+                        &lt;Row&gt;
+                            &lt;Col&gt;
+                                &lt;LabelGroup title=&#39;行政区&#39; defaultChecked=&#39;全部&#39; clickCallback={this.show} end&gt;
+                                    &lt;Label value="0"&gt;全部&lt;/Label&gt;
+                                    &lt;Label value="1"&gt;卢湾区&lt;/Label&gt;
+                                    &lt;Label value="10"&gt;徐汇区&lt;/Label&gt;
+                                    &lt;Label&gt;静安区&lt;/Label&gt;
+                                    &lt;Label&gt;长宁区&lt;/Label&gt;
+                                    &lt;Label&gt;闵行区&lt;/Label&gt;
+                                    &lt;Label&gt;浦东新区&lt;/Label&gt;
+                                    &lt;Label&gt;黄浦区&lt;/Label&gt;
+                                    &lt;Label&gt;普陀区&lt;/Label&gt;
+                                    &lt;Label&gt;闸北区&lt;/Label&gt;
+                                    &lt;Label&gt;虹口区&lt;/Label&gt;
+                                    &lt;Label&gt;杨浦区&lt;/Label&gt;
+                                    &lt;Label&gt;宝山区&lt;/Label&gt;
+                                &lt;/LabelGroup&gt;
+                            &lt;/Col&gt;
+                        &lt;/Row&gt;
+                        &lt;Row&gt;
+                            &lt;Col&gt;
+                                &lt;LabelGroup defaultChecked=&#39;卢湾区&#39; clickCallback={this.show} end&gt;
+                                    &lt;Label value="0"&gt;全部&lt;/Label&gt;
+                                    &lt;Label value="1"&gt;卢湾区&lt;/Label&gt;
+                                    &lt;Label value="10"&gt;徐汇区&lt;/Label&gt;
+                                    &lt;Label&gt;静安区&lt;/Label&gt;
+                                    &lt;Label&gt;长宁区&lt;/Label&gt;
+                                    &lt;Label&gt;闵行区&lt;/Label&gt;
+                                    &lt;Label&gt;浦东新区&lt;/Label&gt;
+                                    &lt;Label&gt;黄浦区&lt;/Label&gt;
+                                    &lt;Label&gt;普陀区&lt;/Label&gt;
+                                    &lt;Label&gt;闸北区&lt;/Label&gt;
+                                    &lt;Label&gt;虹口区&lt;/Label&gt;
+                                    &lt;Label&gt;杨浦区&lt;/Label&gt;
+                                    &lt;Label&gt;宝山区&lt;/Label&gt;
+                                &lt;/LabelGroup&gt;
+                            &lt;/Col&gt;
+                        &lt;/Row&gt;
+                        &lt;Row&gt;
+                            &lt;Col&gt;
+                                &lt;h3&gt;普通标签组&lt;/h3&gt;
+                            &lt;/Col&gt;
+                        &lt;/Row&gt;
+                        &lt;Row&gt;
+                            &lt;Col&gt;
+                                &lt;LabelGroup simple  defaultChecked=&#39;全部&#39; clickCallback={this.show} end&gt;
+                                    &lt;Label value="0"&gt;全部&lt;/Label&gt;
+                                    &lt;Label value="1"&gt;卢湾区&lt;/Label&gt;
+                                    &lt;Label value="10"&gt;徐汇区&lt;/Label&gt;
+                                    &lt;Label&gt;静安区&lt;/Label&gt;
+                                    &lt;Label&gt;长宁区&lt;/Label&gt;
+                                    &lt;Label&gt;闵行区&lt;/Label&gt;
+                                    &lt;Label url="http://baidu.com"&gt;点击跳转至百度&lt;/Label&gt;
+                                &lt;/LabelGroup&gt;
+                            &lt;/Col&gt;
+                        &lt;/Row&gt;
+                        &lt;Row&gt;
+                            &lt;Col&gt;
+                                &lt;h3&gt;单个标签&lt;/h3&gt;
+                            &lt;/Col&gt;
+                        &lt;/Row&gt;
+                        &lt;Row&gt;
+                            &lt;Col sm={2}&gt;
+                                &lt;Label active&gt;选中&lt;/Label&gt;
+                            &lt;/Col&gt;
+                            &lt;Col sm={2}&gt;
+                                &lt;Label success&gt;成功&lt;/Label&gt;
+                            &lt;/Col&gt;
+                            &lt;Col sm={2}&gt;
+                                &lt;Label error&gt;错误&lt;/Label&gt;
+                            &lt;/Col&gt;
+                            &lt;Col sm={2}&gt;
+                                &lt;Label disabled&gt;禁用&lt;/Label&gt;
+                            &lt;/Col&gt;
+                            &lt;Col sm={2}&gt;
+                                &lt;Label error radius&gt;圆角&lt;/Label&gt;
+                            &lt;/Col&gt;
+                            &lt;Col sm={2}&gt;
+                                &lt;Label &gt;默认&lt;/Label&gt;
+                            &lt;/Col&gt;
+                        &lt;/Row&gt;
+                    &lt;/Grid&gt;
+                &lt;/PanelContent&gt;
+            &lt;/Panel&gt;
+        );
+    }
+}
+
+ReactDOM.render(
+    &lt;Demo /&gt;
+    ,document.getElementById(&#39;root&#39;));</code></pre>
+</div><div class="stdoc-code"><pre class="code prettyprint"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;标签组件&lt;/title&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id="root"&gt;&lt;/div&gt;
+
+&lt;script src="../bower_components/react/react.js"&gt;&lt;/script&gt;
+&lt;script src="../bower_components/react/react-dom.js"&gt;&lt;/script&gt;
+&lt;script src="../dist/eagle-ui.js"&gt;&lt;/script&gt;
+&lt;script src="js/label.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+            </div>
+
+             <button class="btn btn-info btn-viewDemo" type="button">view demo</button>
+            <button class="btn btn-info btn-editDemo" type="button">edit code</button>
+        </div>
     
 </div>
 

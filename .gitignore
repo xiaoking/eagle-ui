@@ -1,32 +1,45 @@
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# Cortex
+neurons
 
-# Precompiled Headers
-*.gch
-*.pch
+# Numerous always-ignore extensions
+*.bak
+*.patch
+*.diff
+*.err
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+# temp file for git conflict merging
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.zip
+*.vi
+*~
+*.sass-cache
+*.tmp.html
+*.dump
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+# OS or Editor folders
+.DS_Store
+._*
+.cache
+.project
+.settings
+.tmproj
+*.esproj
+*.sublime-project
+*.sublime-workspace
+nbproject
+thumbs.db
+*.iml
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
+# Folders to ignore
+.hg
+.svn
+.CVS
+.idea
+node_modules/
+jscoverage_lib/
+example/
+bower_components/

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Table - eagle-ui</title>
+    <title>ValidatorPanel - eagle-ui</title>
   
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -301,11 +301,28 @@
             <div id="docs-main">
                 <div class="content">
                     <div class="page-header">
-    <h1>Table <small>Class</small></h1>
+    <h1>ValidatorPanel <small>Class</small></h1>
 </div>
  <div class="well well-small sign-left3">
-      <div class="stdoc-code"><p>表格组件</p>
-</div>
+      <div class="stdoc-code"><p>表单验证组件<br />
+默认规则有<br/></p>
+<pre>
+    required：是否必填
+    date：日期格式验证
+    number：是否是有效的号码
+    url：url规则验证
+    dateISO：日期ISO验证
+    digits：是否是数字
+    equalTo：值对比
+    minlength：最少输入
+    maxlength：最大输入
+    email：邮箱验证
+    rangelength：字符大小需在某个区间之内
+    min：输入的值需要大于等于此规则定义的值
+    max：输入的值需要小于等于此规则定义的值
+    range：一个区间取值范围
+
+</pre></div>
  </div>
 
 <div class="well well-small sign-left2 container-fluid" id="classesItems">
@@ -314,21 +331,56 @@
         <div class="index-section methods col-sm-4">
             <h3>Methods</h3>
             
-            <ul class="index-list methods extends">
+        </div>
+    
+        <div class="index-section properties col-sm-4">
+            <h3>Properties</h3>
+            
+            <ul class="index-list properties extends">
                 
-                    <li class="index-item method">
-                        <a href="#" data-tabid="#method" data-anchor="#method_render" data-tablink="render">render</a>
+                    <li class="index-item property">
+                        <a href="#" data-tabid="#property" data-anchor="#property_componentTag" data-tablink="componentTag">componentTag</a>
+
+                        
+                        
+                    </li>
+                
+                    <li class="index-item property">
+                        <a href="#" data-tabid="#property" data-anchor="#property_message" data-tablink="message">message</a>
+
+                        
+                        
+                    </li>
+                
+                    <li class="index-item property">
+                        <a href="#" data-tabid="#property" data-anchor="#property_rules" data-tablink="rules">rules</a>
+
+                        
+                        
+                    </li>
+                
+                    <li class="index-item property">
+                        <a href="#" data-tabid="#property" data-anchor="#property_shake" data-tablink="shake">shake</a>
+
+                        
+                        
+                    </li>
+                
+                    <li class="index-item property">
+                        <a href="#" data-tabid="#property" data-anchor="#property_submitCallback" data-tablink="submitCallback">submitCallback</a>
+
+                        
+                        
+                    </li>
+                
+                    <li class="index-item property">
+                        <a href="#" data-tabid="#property" data-anchor="#property_trigger" data-tablink="trigger">trigger</a>
 
                         
                         
                     </li>
                 
             </ul>
-            
-        </div>
-    
-        <div class="index-section properties col-sm-4">
-            <h3>Properties</h3>
             
         </div>
     
@@ -343,8 +395,8 @@
     <ul id="itemTab" class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#class">Detail</a></li>
         
-            <li><a data-toggle="tab" href="#method">Methods</a></li>
         
+            <li><a data-toggle="tab" href="#property">Properties</a></li>
         
         
     </ul>
@@ -362,13 +414,13 @@
 
             
                 <div class="foundat">
-                    Defined in: <a href="../files/lib_Table_Table.js.html#l5"><code>lib&#x2F;Table&#x2F;Table.js:5</code></a>
+                    Defined in: <a href="../files/lib_ValidatorPanel.js.html#l5"><code>lib&#x2F;ValidatorPanel.js:5</code></a>
                 </div>
             
 
             
                 
-                    Module: <a href="../modules/ui.html">ui</a>
+                    Module: <a href="../modules/form.html">form</a>
                 
             
 
@@ -381,10 +433,10 @@
             
                 <div class="constructor">
                     <h2>Constructor</h2>
-                    <div id="method_Table" class="method item">
-    <h3 class="name">Table</h3>
+                    <div id="method_ValidatorPanel" class="method item">
+    <h3 class="name">ValidatorPanel</h3>
     <code>
-    Table
+    ValidatorPanel
     
         <span class="paren">()</span>
     
@@ -415,7 +467,7 @@
             
         
         
-        <a href="../files/lib_Table_Table.js.html#l5"><code>lib&#x2F;Table&#x2F;Table.js:5</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l5"><code>lib&#x2F;ValidatorPanel.js:5</code></a>
         
         </p>
 
@@ -451,105 +503,155 @@
  * Created by mac on 15/11/4.
  */
 import css from &#39;../../lib/_include.less&#39;;
-import React from &#39;react&#39;;
-import Table from &#39;../../lib/Table/Table.js&#39;;
-import Tr from &#39;../../lib/Table/Tr.js&#39;;
-import Td from &#39;../../lib/Table/Td.js&#39;;
-import Th from &#39;../../lib/Table/Th.js&#39;;
+import React,{Component} from &#39;react&#39;;
+import Input from &#39;../../lib/Input.js&#39;;
+import Button from &#39;../../lib/Button.js&#39;;
+import Row from &#39;../../lib/Row.js&#39;;
+import Panel from &#39;../../lib/panel/Panel.js&#39;;
+import PanelContent from &#39;../../lib/panel/PanelContent.js&#39;;
+import Col from &#39;../../lib/Col.js&#39;;
+import Grid from &#39;../../lib/Grid.js&#39;;
+import ValidatorPanel from &#39;../../lib/ValidatorPanel.js&#39;;
+
+let Demo = class Demo extends Component{
+
+    constructor(props,context){
+        super(props,context);
+
+
+        this.rules = {
+            //key对应的是表单元素的name
+            calendar:{
+                //组件默认规则
+                required:true
+            },
+            checkbox:{
+                required:true,
+                //自定义规则
+                isValueToNumber:{
+                    text:&#39;value值不是字符串&#39;,
+                    rule:function(value){
+                        console.dir(value);
+                        return isNaN(value);
+                    }
+                }
+            },
+            date:{
+                date:true
+            },
+            number:{
+                number:true,
+                digits:true
+            },
+            equalTo:{
+                digits:true,
+                equalTo:{
+                    params:&#39;[name="number"]&#39;
+                }
+
+            },
+            minlength:{
+                minlength:{
+                    params:10
+                },
+                maxlength:{
+                    params:15
+                }
+            },
+            email:{
+                email:true
+            }
+        };
+
+    }
+
+    show(value,text,target,active){
+        console.dir(value);
+    }
+
+    render(){
+        return (
+            &lt;Panel&gt;
+
+                    &lt;Grid&gt;
+                        &lt;Row&gt;
+                            &lt;Col sm={5} end&gt;
+                                &lt;ValidatorPanel rules={this.rules} submitElement="#submit"&gt;
+                                    &lt;Row&gt;
+                                        &lt;Col&gt;
+                                            &lt;PanelContent&gt;
+                                                &lt;Row&gt;
+                                                    &lt;Col&gt;
+                                                        &lt;Input placeholder="请输入" icon="calendar" name="calendar" data-validate /&gt;
+                                                        &lt;Input  type="checkbox"  name="checkbox" value="1"  data-validate /&gt;
+                                                        &lt;Input  type="checkbox"   name="checkbox" value="2" data-validate  /&gt;
+                                                        &lt;Input  type="checkbox"   name="checkbox" value="3" data-validate  /&gt;
+                                                        &lt;Input  type="checkbox"   name="checkbox" value="4" data-validate  /&gt;
+                                                    &lt;/Col&gt;
+
+                                                &lt;/Row&gt;
+                                                &lt;Row&gt;
+                                                    &lt;Col&gt;
+                                                        &lt;Input placeholder="请输入日期" icon="calendar" name="date" data-validate /&gt;
+                                                    &lt;/Col&gt;
+                                                &lt;/Row&gt;
+                                                &lt;Row&gt;
+                                                    &lt;Col&gt;
+                                                        &lt;Input placeholder="请输入有效的号码" name="number" data-validate /&gt;
+                                                    &lt;/Col&gt;
+                                                &lt;/Row&gt;
+                                                &lt;Row&gt;
+                                                    &lt;Col&gt;
+                                                        &lt;Input placeholder="请输入有效的号码" name="equalTo" data-validate /&gt;
+                                                    &lt;/Col&gt;
+                                                &lt;/Row&gt;
+                                                &lt;Row&gt;
+                                                    &lt;Col&gt;
+                                                        &lt;Input placeholder="最大最小字符10-15" name="minlength" data-validate /&gt;
+                                                    &lt;/Col&gt;
+                                                &lt;/Row&gt;
+                                                &lt;Row&gt;
+                                                    &lt;Col&gt;
+                                                        &lt;Input placeholder="请输入您的email" name="email" data-validate /&gt;
+                                                    &lt;/Col&gt;
+                                                &lt;/Row&gt;
+                                                &lt;Row&gt;
+                                                    &lt;Col&gt;
+                                                        &lt;Button radius egSize="xs" id="submit"&gt;点我提交表单&lt;/Button&gt;
+                                                    &lt;/Col&gt;
+                                                &lt;/Row&gt;
+                                            &lt;/PanelContent&gt;
+                                        &lt;/Col&gt;
+                                    &lt;/Row&gt;
+
+                                &lt;/ValidatorPanel&gt;
+                            &lt;/Col&gt;
+                        &lt;/Row&gt;
+                    &lt;/Grid&gt;
+
+            &lt;/Panel&gt;
+        );
+    }
+}
 
 ReactDOM.render(
-    &lt;Table&gt;
-        &lt;thead&gt;
-            &lt;Tr&gt;
-                &lt;Th&gt;数据类型&lt;/Th&gt;
-                &lt;Th&gt;数据项&lt;/Th&gt;
-                &lt;Th&gt;昨日&lt;/Th&gt;
-                &lt;Th&gt;本月&lt;/Th&gt;
-                &lt;Th&gt;上月&lt;/Th&gt;
-                &lt;Th&gt;本月城市排名&lt;/Th&gt;
-            &lt;/Tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody&gt;
-            &lt;Tr&gt;
-                &lt;Td rowSpan="4"&gt;过程指标&lt;/Td&gt;
-                &lt;Td&gt;消费交易额&lt;/Td&gt;
-                &lt;Td&gt;1876500&lt;/Td&gt;
-                &lt;Td&gt;1876500&lt;/Td&gt;
-                &lt;Td&gt;1876500&lt;/Td&gt;
-                &lt;Td&gt;200&lt;/Td&gt;
-            &lt;/Tr&gt;
-            &lt;Tr&gt;
-                &lt;Td arrow-up&gt;消费交易额&lt;/Td&gt;
-                &lt;Td arrow-down&gt;1876500&lt;/Td&gt;
-                &lt;Td&gt;1876500&lt;/Td&gt;
-                &lt;Td&gt;1876500&lt;/Td&gt;
-                &lt;Td&gt;200&lt;/Td&gt;
-            &lt;/Tr&gt;
-            &lt;Tr&gt;
-                &lt;Td&gt;消费交易额&lt;/Td&gt;
-                &lt;Td&gt;1876500&lt;/Td&gt;
-                &lt;Td&gt;1876500&lt;/Td&gt;
-                &lt;Td&gt;1876500&lt;/Td&gt;
-                &lt;Td&gt;200&lt;/Td&gt;
-            &lt;/Tr&gt;
-            &lt;Tr split&gt;
-                &lt;Td&gt;消费交易额&lt;/Td&gt;
-                &lt;Td&gt;1876500&lt;/Td&gt;
-                &lt;Td&gt;1876500&lt;/Td&gt;
-                &lt;Td arrow-down&gt;1876500&lt;/Td&gt;
-                &lt;Td&gt;200&lt;/Td&gt;
-            &lt;/Tr&gt;
-            &lt;Tr&gt;
-                &lt;Td rowSpan="4"&gt;业绩&lt;/Td&gt;
-                &lt;Td&gt;消费交易额&lt;/Td&gt;
-                &lt;Td&gt;1876500&lt;/Td&gt;
-                &lt;Td&gt;1876500&lt;/Td&gt;
-                &lt;Td&gt;1876500&lt;/Td&gt;
-                &lt;Td&gt;200&lt;/Td&gt;
-            &lt;/Tr&gt;
-            &lt;Tr&gt;
-                &lt;Td&gt;消费交易额&lt;/Td&gt;
-                &lt;Td&gt;1876500&lt;/Td&gt;
-                &lt;Td&gt;1876500&lt;/Td&gt;
-                &lt;Td&gt;1876500&lt;/Td&gt;
-                &lt;Td&gt;200&lt;/Td&gt;
-            &lt;/Tr&gt;
-            &lt;Tr&gt;
-                &lt;Td&gt;消费交易额&lt;/Td&gt;
-                &lt;Td&gt;1876500&lt;/Td&gt;
-                &lt;Td&gt;1876500&lt;/Td&gt;
-                &lt;Td&gt;1876500&lt;/Td&gt;
-                &lt;Td&gt;200&lt;/Td&gt;
-            &lt;/Tr&gt;
-            &lt;Tr&gt;
-                &lt;Td&gt;消费交易额&lt;/Td&gt;
-                &lt;Td&gt;1876500&lt;/Td&gt;
-                &lt;Td&gt;1876500&lt;/Td&gt;
-                &lt;Td&gt;1876500&lt;/Td&gt;
-                &lt;Td&gt;200&lt;/Td&gt;
-            &lt;/Tr&gt;
-        &lt;/tbody&gt;
-    &lt;/Table&gt;
+    &lt;Demo /&gt;
     ,document.getElementById(&#39;root&#39;));</code></pre>
 </div><div class="stdoc-code"><pre class="code prettyprint"><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;分页组件&lt;/title&gt;
+    &lt;title&gt;验证组件&lt;/title&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"&gt;
     &lt;link rel="stylesheet" type="text/css" href="./eagle-ui.css" /&gt;
-    &lt;style&gt;
-        table{
-            width: 100%;
-        }
-    &lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
 &lt;div id="root"&gt;&lt;/div&gt;
 
 &lt;script src="../bower_components/react/react.js"&gt;&lt;/script&gt;
 &lt;script src="../bower_components/react/react-dom.js"&gt;&lt;/script&gt;
-&lt;script src="js/table.js"&gt;&lt;/script&gt;
+&lt;script src="../dist/eagle-ui.js"&gt;&lt;/script&gt;
+&lt;script src="js/validate.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 </div>
@@ -566,28 +668,15 @@ ReactDOM.render(
         </div>
 
         
-            <div id="method" class="tab-pane">
-                <h2 class="off-left">Methods</h2>
+
+        
+            <div id="property" class="tab-pane">
+                <h2 class="off-left">Properties</h2>
 
                 
-                    <div id="method_render" class="method item">
-    <h3 class="name">render</h3>
-    <code>
-    render
-    
-        <span class="paren">()</span>
-    
-    </code>
-
-    
-        <span class="returns-inline">
-            <span class="type">ReactElement</span>
-        </span>
-    
-
-    
-
-    
+                    <div id="property_componentTag" class="property item">
+    <h3 class="name"><code>componentTag</code></h3>
+    <span class="type">String</span>
 
     
 
@@ -608,34 +697,272 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Table_Table.js.html#l30"><code>lib&#x2F;Table&#x2F;Table.js:30</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l43"><code>lib&#x2F;ValidatorPanel.js:43</code></a>
         
         </p>
 
+        
+
+        
+    </div>
+
+    <div class="description">
+        <div class="stdoc-code"><p>包装容器</p>
+</div>
+    </div>
+
+    
+        <p><strong>Default:</strong></p>
+         <code> form</code>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_message" class="property item">
+    <h3 class="name"><code>message</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_ValidatorPanel.js.html#l57"><code>lib&#x2F;ValidatorPanel.js:57</code></a>
+        
+        </p>
 
         
 
         
     </div>
 
-    <div class="description well well-small sign-left3">
-        <div class="stdoc-code"></div>
+    <div class="description">
+        <div class="stdoc-code"><p>默认规则提示文案</p>
+</div>
+    </div>
+
+    
+        <p><strong>Default:</strong></p>
+         <code> required: &#x27;不能为空&#x27;,
+                date: &#x27;请正确填写日期&#x27;,
+                number: &#x27;请输入一个有效的号码&#x27;,
+                url: &#x27;请输入一个有效的URL&#x27;,
+                email: &#x27;请输入一个有效的电子邮件地址&#x27;,
+                dateISO: &#x27;请输入一个有效的日期(ISO)&#x27;,
+                digits: &#x27;请输入数字&#x27;,
+                equalTo:&#x27;请再次输入相同的值。&#x27;,
+                minlength: &#x27;请输入至少{0}字符&#x27;,
+                maxlength: &#x27;请输入不超过{0}字符&#x27;,
+                rangelength: &#x27;请输入一个值{0}和{1}字符之间&#x27;,
+                min: &#x27;请输入一个值大于或等于{0}&#x27;,
+                max: &#x27;请输入一个值小于或等于{0}&#x27;,
+                range: &#x27;请输入一个值{0} - {1}&#x27;</code>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_rules" class="property item">
+    <h3 class="name"><code>rules</code></h3>
+    <span class="type">Object</span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_ValidatorPanel.js.html#l111"><code>lib&#x2F;ValidatorPanel.js:111</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <div class="stdoc-code"><p>规则验证</p>
+</div>
     </div>
 
     
 
     
-        <div class="returns">
-            <h4>Returns:</h4>
 
-            <div class="returns-description">
+    
+</div>
+
                 
-                    
-                        <span class="type">ReactElement</span>:
-                    
+                    <div id="property_shake" class="property item">
+    <h3 class="name"><code>shake</code></h3>
+    <span class="type">Boolean</span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
                 
-            </div>
-        </div>
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_ValidatorPanel.js.html#l104"><code>lib&#x2F;ValidatorPanel.js:104</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <div class="stdoc-code"><p>是否增强文本框提示</p>
+</div>
+    </div>
+
+    
+        <p><strong>Default:</strong></p>
+         <code> true</code>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_submitCallback" class="property item">
+    <h3 class="name"><code>submitCallback</code></h3>
+    <span class="type">Function</span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_ValidatorPanel.js.html#l94"><code>lib&#x2F;ValidatorPanel.js:94</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <div class="stdoc-code"><p>在提交时除验证规则之外的其他逻辑</p>
+</div>
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_trigger" class="property item">
+    <h3 class="name"><code>trigger</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_ValidatorPanel.js.html#l50"><code>lib&#x2F;ValidatorPanel.js:50</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <div class="stdoc-code"><p>触发验证的事件集合</p>
+</div>
+    </div>
+
+    
+        <p><strong>Default:</strong></p>
+         <code> blur keyup focus click</code>
+    
+
     
 
     
@@ -643,8 +970,6 @@ ReactDOM.render(
 
                 
             </div>
-        
-
         
 
         

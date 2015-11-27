@@ -7,7 +7,7 @@
 		var a = typeof exports === 'object' ? factory(require("react")) : factory(root["React"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_28__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_29__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -54,7 +54,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(22);
+	module.exports = __webpack_require__(23);
 
 
 /***/ },
@@ -79,7 +79,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 19 */,
 /* 20 */,
 /* 21 */,
-/* 22 */
+/* 22 */,
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -119,187 +120,187 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _lib_includeLess = __webpack_require__(23);
+	var _lib_includeLess = __webpack_require__(24);
 
 	var _lib_includeLess2 = _interopRequireDefault(_lib_includeLess);
 
 	//import Mask from './lib/mask/mask';
 
-	var _libGrid = __webpack_require__(27);
+	var _libGrid = __webpack_require__(28);
 
 	var _libGrid2 = _interopRequireDefault(_libGrid);
 
 	exports.Grid = _libGrid2['default'];
 
-	var _libCol = __webpack_require__(32);
+	var _libCol = __webpack_require__(33);
 
 	var _libCol2 = _interopRequireDefault(_libCol);
 
 	exports.Col = _libCol2['default'];
 
-	var _libRow = __webpack_require__(33);
+	var _libRow = __webpack_require__(34);
 
 	var _libRow2 = _interopRequireDefault(_libRow);
 
 	exports.Row = _libRow2['default'];
 
-	var _libButton = __webpack_require__(34);
+	var _libButton = __webpack_require__(35);
 
 	var _libButton2 = _interopRequireDefault(_libButton);
 
 	exports.Button = _libButton2['default'];
 
-	var _libButtonGroup = __webpack_require__(35);
+	var _libButtonGroup = __webpack_require__(36);
 
 	var _libButtonGroup2 = _interopRequireDefault(_libButtonGroup);
 
 	exports.ButtonGroup = _libButtonGroup2['default'];
 
-	var _libInputJs = __webpack_require__(36);
+	var _libInputJs = __webpack_require__(37);
 
 	var _libInputJs2 = _interopRequireDefault(_libInputJs);
 
 	exports.Input = _libInputJs2['default'];
 
-	var _libRadioGroupJs = __webpack_require__(37);
+	var _libRadioGroupJs = __webpack_require__(38);
 
 	var _libRadioGroupJs2 = _interopRequireDefault(_libRadioGroupJs);
 
 	exports.RadioGroup = _libRadioGroupJs2['default'];
 
-	var _libLabelJs = __webpack_require__(38);
+	var _libLabelJs = __webpack_require__(39);
 
 	var _libLabelJs2 = _interopRequireDefault(_libLabelJs);
 
 	exports.Label = _libLabelJs2['default'];
 
-	var _libCrumbJs = __webpack_require__(39);
+	var _libCrumbJs = __webpack_require__(40);
 
 	var _libCrumbJs2 = _interopRequireDefault(_libCrumbJs);
 
 	exports.Crumb = _libCrumbJs2['default'];
 
-	var _libSearchJs = __webpack_require__(40);
+	var _libSearchJs = __webpack_require__(41);
 
 	var _libSearchJs2 = _interopRequireDefault(_libSearchJs);
 
 	exports.Search = _libSearchJs2['default'];
 
-	var _libSelectJs = __webpack_require__(41);
+	var _libSelectJs = __webpack_require__(42);
 
 	var _libSelectJs2 = _interopRequireDefault(_libSelectJs);
 
 	exports.Select = _libSelectJs2['default'];
 
-	var _libLabelGroupJs = __webpack_require__(42);
+	var _libLabelGroupJs = __webpack_require__(43);
 
 	var _libLabelGroupJs2 = _interopRequireDefault(_libLabelGroupJs);
 
 	exports.LabelGroup = _libLabelGroupJs2['default'];
 
-	var _libToastJs = __webpack_require__(43);
+	var _libToastJs = __webpack_require__(44);
 
 	var _libToastJs2 = _interopRequireDefault(_libToastJs);
 
 	exports.Toast = _libToastJs2['default'];
 
-	var _libPagingJs = __webpack_require__(44);
+	var _libPagingJs = __webpack_require__(45);
 
 	var _libPagingJs2 = _interopRequireDefault(_libPagingJs);
 
 	exports.Paging = _libPagingJs2['default'];
 
-	var _libCalendar = __webpack_require__(45);
+	var _libCalendar = __webpack_require__(46);
 
 	var _libCalendar2 = _interopRequireDefault(_libCalendar);
 
 	exports.Calendar = _libCalendar2['default'];
 
-	var _libTabJs = __webpack_require__(46);
+	var _libTabJs = __webpack_require__(47);
 
 	var _libTabJs2 = _interopRequireDefault(_libTabJs);
 
 	exports.Tab = _libTabJs2['default'];
 
-	var _libTabsetJs = __webpack_require__(47);
+	var _libTabsetJs = __webpack_require__(48);
 
 	var _libTabsetJs2 = _interopRequireDefault(_libTabsetJs);
 
 	exports.Tabset = _libTabsetJs2['default'];
 
-	var _libDialogJs = __webpack_require__(48);
+	var _libDialogJs = __webpack_require__(49);
 
 	var _libDialogJs2 = _interopRequireDefault(_libDialogJs);
 
 	exports.Dialog = _libDialogJs2['default'];
 
-	var _libTooltipJs = __webpack_require__(49);
+	var _libTooltipJs = __webpack_require__(50);
 
 	var _libTooltipJs2 = _interopRequireDefault(_libTooltipJs);
 
 	exports.Tooltip = _libTooltipJs2['default'];
 
-	var _libPanelPanelJs = __webpack_require__(50);
+	var _libPanelPanelJs = __webpack_require__(51);
 
 	var _libPanelPanelJs2 = _interopRequireDefault(_libPanelPanelJs);
 
 	exports.Panel = _libPanelPanelJs2['default'];
 
-	var _libPanelPanelContentJs = __webpack_require__(51);
+	var _libPanelPanelContentJs = __webpack_require__(52);
 
 	var _libPanelPanelContentJs2 = _interopRequireDefault(_libPanelPanelContentJs);
 
 	exports.PanelContent = _libPanelPanelContentJs2['default'];
 
-	var _libPanelPanelFooterJs = __webpack_require__(52);
+	var _libPanelPanelFooterJs = __webpack_require__(53);
 
 	var _libPanelPanelFooterJs2 = _interopRequireDefault(_libPanelPanelFooterJs);
 
 	exports.PanelFooter = _libPanelPanelFooterJs2['default'];
 
-	var _libPanelPanelHeaderJs = __webpack_require__(53);
+	var _libPanelPanelHeaderJs = __webpack_require__(54);
 
 	var _libPanelPanelHeaderJs2 = _interopRequireDefault(_libPanelPanelHeaderJs);
 
 	exports.PanelHeader = _libPanelPanelHeaderJs2['default'];
 
-	var _libListJs = __webpack_require__(54);
+	var _libListJs = __webpack_require__(55);
 
 	var _libListJs2 = _interopRequireDefault(_libListJs);
 
 	exports.List = _libListJs2['default'];
 
-	var _libItemJs = __webpack_require__(55);
+	var _libItemJs = __webpack_require__(56);
 
 	var _libItemJs2 = _interopRequireDefault(_libItemJs);
 
 	exports.Item = _libItemJs2['default'];
 
-	var _libValidatorPanel = __webpack_require__(56);
+	var _libValidatorPanel = __webpack_require__(57);
 
 	var _libValidatorPanel2 = _interopRequireDefault(_libValidatorPanel);
 
 	exports.ValidatorPanel = _libValidatorPanel2['default'];
 
-	var _libTableTableJs = __webpack_require__(57);
+	var _libTableTableJs = __webpack_require__(58);
 
 	var _libTableTableJs2 = _interopRequireDefault(_libTableTableJs);
 
 	exports.Table = _libTableTableJs2['default'];
 
-	var _libTableTrJs = __webpack_require__(58);
+	var _libTableTrJs = __webpack_require__(59);
 
 	var _libTableTrJs2 = _interopRequireDefault(_libTableTrJs);
 
 	exports.Tr = _libTableTrJs2['default'];
 
-	var _libTableTdJs = __webpack_require__(59);
+	var _libTableTdJs = __webpack_require__(60);
 
 	var _libTableTdJs2 = _interopRequireDefault(_libTableTdJs);
 
 	exports.Td = _libTableTdJs2['default'];
 
-	var _libTableThJs = __webpack_require__(60);
+	var _libTableThJs = __webpack_require__(61);
 
 	var _libTableThJs2 = _interopRequireDefault(_libTableThJs);
 
@@ -312,16 +313,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 
 /***/ },
-/* 23 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(24);
+	var content = __webpack_require__(25);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(26)(content, {});
+	var update = __webpack_require__(27)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -338,21 +339,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 
 /***/ },
-/* 24 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(25)();
+	exports = module.exports = __webpack_require__(26)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".red {\n  color: #ff717d;\n}\n* {\n  padding: 0px;\n  margin: 0px;\n  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);\n  -webkit-backface-visibility: hidden;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nnav,\nsection,\nsummary {\n  display: block;\n}\nhtml {\n  /*width: 100%;\n    min-height: 100%;*/\n}\nbody {\n  font: normal 14px \"Microsoft YaHei\", \"helvetica regular\", \"Helvetica Neue\", Arial, Helvetica, STHeiTi, sans-serif;\n  color: #333333;\n  -webkit-text-size-adjust: none;\n  text-size-adjust: none;\n  background-color: #f1f1f1;\n}\nul,\nol {\n  list-style: none;\n}\na {\n  text-decoration: none;\n  outline: none;\n  color: #333333;\n}\na:hover {\n  text-decoration: underline;\n}\naddress {\n  font-style: normal;\n}\n/**重置h1-h6的字体大小*/\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-weight: normal;\n}\nh1 {\n  font-size: 22px;\n}\nh2 {\n  font-size: 20px;\n}\nh3 {\n  font-size: 18px;\n}\nh4 {\n  font-size: 16px;\n}\nh5 {\n  font-size: 14px;\n}\nh6 {\n  font-size: 12px;\n}\n/**清除浮动*/\n.clearfix:before,\n.clearfix:after {\n  display: table;\n  line-height: 0;\n  content: \"\";\n}\n.clearfix:after {\n  clear: both;\n}\n/**控制块级、内敛*/\n.inline-block {\n  display: inline-block !important;\n}\n.inline {\n  display: inline !important;\n}\n.block {\n  display: block !important;\n}\n/**搜索图标*/\n.eg-search-icon {\n  position: relative;\n}\n.eg-search-icon:before,\n.eg-search-icon:after {\n  content: '';\n  position: absolute;\n  display: inline-block;\n  z-index: 10;\n}\n.eg-search-icon:before {\n  border: 2px solid #b2b2b2;\n  height: 10px;\n  width: 10px;\n  border-radius: 7px;\n  top: 10px;\n  left: 6px;\n}\n.eg-search-icon:after {\n  height: 7px;\n  width: 2px;\n  transform: rotate(-45deg);\n  top: 22px;\n  left: 16px;\n  background: #b2b2b2;\n}\n/**圆角*/\n.eg-radius {\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-active {\n  color: #ee5511;\n}\n.eg-selected {\n  color: #ffffff;\n  background: #ee5511;\n}\n/**淡入淡出动画*/\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0;\n    /*初始状态 透明度为0*/\n  }\n  50% {\n    opacity: 0.5;\n    /*中间状态 透明度为0.5*/\n  }\n  100% {\n    opacity: 1;\n    /*结尾状态 透明度为1*/\n  }\n}\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 1;\n    /*初始状态 透明度为1*/\n  }\n  50% {\n    opacity: 0.5;\n    /*中间状态 透明度为0.5*/\n  }\n  100% {\n    opacity: 0;\n    /*结尾状态 透明度为0*/\n  }\n}\n/**显示*/\n.eg-hide {\n  display: none;\n}\n.eg-show {\n  display: block;\n}\n.eg-fadein {\n  -webkit-animation: fadeIn .4s 1 0s;\n}\n.eg-fadeout {\n  -webkit-animation: fadeOut .4s 2 3s ;\n}\n/**成功图标*/\n.eg-tips-success {\n  background: #4fd564;\n  width: 30px;\n  height: 30px;\n  border-radius: 30px;\n  display: inline-block;\n  position: relative;\n}\n/**出错提示*/\n.eg-tips-error {\n  background: #dd514c;\n  width: 30px;\n  height: 30px;\n  border-radius: 30px;\n  display: inline-block;\n  position: relative;\n}\n.eg-tips-error:before {\n  height: 2px;\n  width: 2px;\n  background: #fff;\n  left: 14px;\n  top: 19px;\n}\n.eg-tips-error:after {\n  height: 10px;\n  width: 2px;\n  background: #fff;\n  left: 14px;\n  top: 6px;\n}\n/**加载中*/\n.eg-tips-loading {\n  background: #bbbbbb;\n  width: 30px;\n  height: 30px;\n  border-radius: 30px;\n  display: inline-block;\n  position: relative;\n}\n.eg-tips-loading:before {\n  width: 15px;\n  height: 15px;\n  background: transparent;\n  border: 2px solid #fff;\n  top: 5.5px;\n  left: 5.5px;\n  border-radius: 12px;\n  clip: rect(auto, 16px, auto, auto);\n  animation: 0.5s linear 0s normal none infinite rotate;\n}\n.eg-tips-success:before,\n.eg-icon-tick:before,\n.eg-tips-success:before,\n.eg-tips-error:before,\n.eg-tips-success:after,\n.eg-icon-tick:after,\n.eg-tips-success:after,\n.eg-tips-error:after {\n  display: inline-block;\n  position: absolute;\n  content: \"\";\n}\n.eg-tips-success:before,\n.eg-icon-tick:before {\n  height: 8px;\n  width: 2px;\n  background: #fff;\n  left: 10px;\n  top: 13px;\n  transform: rotate(135deg);\n}\n.eg-tips-success:after,\n.eg-icon-tick:after {\n  height: 14px;\n  width: 2px;\n  background: #fff;\n  left: 17px;\n  top: 8px;\n  transform: rotate(45deg);\n}\n@-webkit-keyframes rotate {\n  from {\n    -webkit-transform: rotate(0deg);\n  }\n  to {\n    -webkit-transform: rotate(360deg);\n  }\n}\n/*icon*/\n.eg-arrow-up::before,\n.eg-arrow-down::before {\n  content: '';\n  display: inline-block;\n  width: 6px;\n  height: 9px;\n  position: absolute;\n  top: 50%;\n  margin-left: 9px;\n}\n.eg-arrow-up::after,\n.eg-arrow-down::after {\n  content: '';\n  display: inline-block;\n  border-width: 7px;\n  border-style: solid;\n  margin-left: 5px;\n  position: relative;\n}\n/*向上箭头*/\n.eg-arrow-up::before {\n  background: #38bd7c;\n  margin-top: -1px;\n  border-radius: 0px 0px 1px 1px;\n}\n.eg-arrow-up::after {\n  border-color: transparent transparent #38bd7c transparent;\n  top: -6px;\n}\n/*向下箭头*/\n.eg-arrow-down::before {\n  background: #fa3739;\n  margin-top: -8px;\n  border-radius: 1px 1px 0px 0px;\n}\n.eg-arrow-down::after {\n  border-color: #fa3739 transparent transparent transparent;\n  top: 10px;\n}\n/**图标*/\n.eg-icon-calendar {\n  background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJViUEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4MUU4N0VFRjdCODYxMUU1QUY5NkM3NDVDRjI5NkNEQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4MUU4N0VGMDdCODYxMUU1QUY5NkM3NDVDRjI5NkNEQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjgxRTg3RUVEN0I4NjExRTVBRjk2Qzc0NUNGMjk2Q0RDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjgxRTg3RUVFN0I4NjExRTVBRjk2Qzc0NUNGMjk2Q0RDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Q96nFgAAAIpJREFUeNpi/P//PwMIzJo1C0RBOAwMjCAiLS0NJo4iBxIHM2bOnMmABFA0owEMOSYgFgXi80iSMIXoGFkOpF4UpHkXEBswkAZA6ncxkaERbgATAwWABcaAhSAxABYDFNlMHWcTciI27w2cs2nrZ3xRCNJ8AZRa0AOGCHAJ5Gw3EINEjWeB2AUgwADA4SbftT6JBAAAAABJRU5ErkJggg==\") no-repeat right center;\n}\n/**左箭头*/\n.eg-icon-prev,\n.eg-icon-next {\n  width: 100%;\n  height: 100%;\n  text-align: center;\n  cursor: pointer;\n}\n.eg-icon-prev:after,\n.eg-icon-next:after {\n  content: '';\n  display: inline-block;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  width: 12px;\n  height: 12px;\n  border-top: 2px solid #999;\n  border-left: 2px solid #999;\n  -webkit-transform: rotate(-45deg);\n  -moz-transform: rotate(-45deg);\n  -ms-transform: rotate(-45deg);\n  -o-transform: rotate(-45deg);\n  transform: rotate(-45deg);\n}\n.eg-icon-next:after {\n  border-left: none;\n  border-right: 2px solid #999;\n  -webkit-transform: rotate(45deg);\n  -moz-transform: rotate(45deg);\n  -ms-transform: rotate(45deg);\n  -o-transform: rotate(45deg);\n  transform: rotate(45deg);\n}\n/**字体大小*/\n.small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-12 {\n  font-size: 12px;\n}\n.ft-12 small,\n.ft-12 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-14 {\n  font-size: 14px;\n}\n.ft-14 small,\n.ft-14 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-16 {\n  font-size: 16px;\n}\n.ft-16 small,\n.ft-16 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-18 {\n  font-size: 18px;\n}\n.ft-18 small,\n.ft-18 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-20 {\n  font-size: 20px;\n}\n.ft-20 small,\n.ft-20 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-22 {\n  font-size: 22px;\n}\n.ft-22 small,\n.ft-22 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n/**按钮组*/\n.eg-btn-group {\n  position: relative;\n  display: inline-block;\n  vertical-align: middle;\n}\n.eg-btn-group .eg-btn {\n  position: relative;\n  float: left;\n  margin-left: -1px;\n}\n.eg-btn-group .eg-btn:not(:first-child):not(:last-child) {\n  border-radius: 0;\n}\n.eg-btn-group .eg-btn:first-child:not(:last-child) {\n  border-bottom-right-radius: 0;\n  border-top-right-radius: 0;\n}\n.eg-btn-group .eg-btn:last-child:not(:first-child) {\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n}\n.eg-btn-group-tacked .eg-btn {\n  float: none;\n  display: block;\n  margin-left: 0;\n  margin-top: -1px;\n}\n.eg-btn-group-tacked .eg-btn:first-child:not(:last-child) {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.eg-btn-group-tacked .eg-btn:last-child:not(:first-child) {\n  border-bottom-left-radius: 0;\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n}\n.eg-btn-group-justify {\n  width: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n}\n.eg-btn-group-justify .eg-btn {\n  float: none;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n}\n/**按钮*/\n.eg-btn {\n  display: inline-block;\n  text-align: center;\n  padding: 10px 15px;\n  color: #ffffff;\n  background: #ee5511;\n  border: 1px solid transparent;\n  cursor: pointer;\n  outline: 0;\n  text-decoration: none;\n}\n.eg-btn:hover {\n  background: #d94000;\n  text-decoration: none;\n}\n.eg-btn.eg-btn-disabled {\n  color: #f8c1a8;\n  background-color: #f49462;\n}\n.eg-btn-block {\n  display: block;\n  width: 100%;\n}\n.eg-btn-block + .eg-btn-block {\n  margin-top: 5px;\n}\n.eg-btn-radius {\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-btn-round {\n  -webkit-border-radius: 1000px;\n  -moz-border-radius: 1000px;\n  border-radius: 1000px;\n}\n.eg-btn-xs {\n  font-size: 12px;\n}\n.eg-btn-sm {\n  font-size: 14px;\n}\n.eg-btn-default {\n  font-size: 16px;\n}\n.eg-btn-lg {\n  font-size: 18px;\n}\n.eg-btn-xl {\n  font-size: 20px;\n}\n.eg-btn-error {\n  background-color: #d94000;\n}\n.eg-btn-success {\n  background-color: #2f93d2;\n}\n.eg-btn-success:hover {\n  background: #0c80ba;\n}\n.eg-btn-success.eg-btn-disabled {\n  color: #a2cae3;\n  background: #4ca0d5;\n}\n.eg-btn-warning {\n  background-color: #e0690c;\n}\n.eg-btn-danger {\n  background-color: #e0690c;\n}\n.eg-btn-link {\n  border: none;\n  color: #646464;\n  background-color: transparent;\n}\n.eg-btn-link:hover {\n  color: #646464;\n  background: transparent;\n  text-decoration: underline;\n}\n.eg-btn-link .eg-btn-disabled {\n  color: #cccccc;\n}\n.eg-btn-disabled {\n  color: #cccccc;\n  background-color: #f3f3f3;\n}\n.eg-btn-gray {\n  background-color: #d4d4d4;\n  color: #333333;\n}\n.eg-btn-gray:hover {\n  background: #cccccc;\n}\n.eg-btn-gray.eg-btn-disabled {\n  color: #999;\n  background-color: #e1e1e1;\n}\n.eg-btn-white {\n  background: #ffffff;\n  border-color: #dbdad9;\n  color: #000000;\n}\n.eg-btn-white:hover {\n  background: #f8f8f8;\n}\n.eg-btn-white.eg-btn-disabled {\n  color: #f2f2f2;\n  background-color: #cccccc;\n}\n.eg-btn-disabled {\n  cursor: auto;\n}\n.eg-input-text {\n  border: 1px solid #dddddd;\n  font-size: 14px;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n  background-color: #ffffff;\n  padding: 10px;\n  color: #333333;\n  width: 100%;\n}\n.eg-input-text:disabled {\n  background: #eeeeee;\n  color: #999;\n}\n.eg-input-checkbox,\n.eg-input-radio {\n  position: relative;\n  text-align: left;\n  margin-bottom: 10px;\n  margin-right: 10px;\n  min-height: 24px;\n  display: inline-block;\n}\n.eg-input-checkbox input[type=\"checkbox\"],\n.eg-input-radio input[type=\"checkbox\"],\n.eg-input-checkbox input[type=\"radio\"],\n.eg-input-radio input[type=\"radio\"] {\n  /*width: 14px;\n        height: 14px;\n        border: 1px solid @black-99;*/\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  cursor: pointer;\n  pointer-events: all;\n  opacity: 0;\n  z-index: 2;\n  left: 0;\n}\n.eg-input-checkbox .box,\n.eg-input-radio .box {\n  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;\n  float: left;\n  position: relative;\n  display: block;\n  width: 16px;\n  margin-right: 10px;\n  margin-left: 0;\n  height: 24px;\n}\n.eg-input-checkbox .box .checkbox,\n.eg-input-radio .box .checkbox {\n  width: 14px;\n  height: 14px;\n  border: 1px solid #999;\n  position: relative;\n  top: 5px;\n  left: 1px;\n  -webkit-border-radius: 2px;\n  -moz-border-radius: 2px;\n  border-radius: 2px;\n  background: #ffffff;\n}\n.eg-input-checkbox .box .checkbox .round,\n.eg-input-radio .box .checkbox .round {\n  display: none;\n}\n.eg-input-checkbox label,\n.eg-input-radio label {\n  float: left;\n  position: relative;\n  display: block;\n  line-height: 24px;\n}\n/*图片*/\n.checkbox-back {\n  background-position: center center;\n  background-repeat: no-repeat;\n}\n.eg-input-checkbox-active .box .checkbox {\n  background: #ee5511;\n  border-color: #ee5511;\n  background-position: center center;\n  background-repeat: no-repeat;\n}\n.eg-input-checkbox-active .box .eg-icon-tick:before {\n  height: 5px;\n  width: 2px;\n  left: 3px;\n  top: 5px;\n}\n.eg-input-checkbox-active .box .eg-icon-tick:after {\n  height: 8px;\n  width: 2px;\n  left: 7px;\n  top: 2px;\n}\n.eg-input-radio .box .checkbox {\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  border-radius: 50%;\n}\n.eg-input-radio .box .checkbox .round {\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  border-radius: 50%;\n  background: #ee5511;\n  margin: 4px;\n  width: 8px;\n  height: 8px;\n  margin: 2px;\n}\n.eg-input-radio-active .box .checkbox {\n  border-color: #ee5511;\n}\n.eg-input-radio-active .box .checkbox .round {\n  display: block;\n}\n.eg-input-radio-disabled .box .checkbox {\n  background: #eeeeee;\n  color: #999;\n  border: 1px solid #999;\n}\n.eg-input-radio-disabled .box .checkbox .round {\n  background: #cccccc;\n}\n.eg-input-radio-disabled label {\n  color: #999;\n}\n.eg-input-checkbox-disabled .box .checkbox {\n  background: #eeeeee;\n  color: #999;\n  border-color: #cccccc;\n}\n.eg-input-checkbox-disabled .box .eg-icon-tick:before {\n  background-color: #fefefe;\n}\n.eg-input-checkbox-disabled .box .eg-icon-tick:after {\n  background-color: #fefefe;\n}\n.eg-input-checkbox-disabled label {\n  color: #999;\n}\n.eg-input-checkbox-active.eg-input-checkbox-disabled .box .checkbox {\n  background: #cccccc;\n  color: #999;\n}\n.eg-grid .eg-row {\n  margin-left: -15px;\n  margin-right: -15px;\n}\n.eg-sm-1 {\n  width: 8.33333333%;\n}\n.eg-sm-2 {\n  width: 16.66666667%;\n}\n.eg-sm-3 {\n  width: 25%;\n}\n.eg-sm-4 {\n  width: 33.33333333%;\n}\n.eg-sm-5 {\n  width: 41.66666667%;\n}\n.eg-sm-6 {\n  width: 50%;\n}\n.eg-sm-7 {\n  width: 58.33333333%;\n}\n.eg-sm-8 {\n  width: 66.66666667%;\n}\n.eg-sm-9 {\n  width: 75%;\n}\n.eg-sm-10 {\n  width: 83.33333333%;\n}\n.eg-sm-11 {\n  width: 91.66666667%;\n}\n.eg-sm-12 {\n  width: 100%;\n}\n[class*='eg-sm-'] {\n  padding: 5px 15px;\n  float: left;\n}\n[class*='eg-sm-']:last-child {\n  float: right;\n}\n[class*='eg-sm-'].eg-end {\n  float: left;\n}\n/**\n   带边框的样式\n*/\n.eg-sm-border {\n  border: 1px solid #e1e1e1;\n}\n.eg-dialog-container,\n.eg-tips-container {\n  display: none;\n}\n.eg-dialog-overlay,\n.eg-tips-overlay {\n  position: fixed;\n  left: 0px;\n  top: 0px;\n  z-index: 8900;\n  background-color: #000000;\n  opacity: 0.4;\n  width: 100%;\n  height: 100%;\n}\n.eg-dialog-close,\n.eg-tips-close {\n  display: inline-block;\n  float: right;\n  cursor: pointer;\n  font-size: 17px;\n  margin-top: -10px;\n  padding-right: 5px;\n}\n.eg-dialog,\n.eg-tips-container {\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n  opacity: 1;\n  background: #fff;\n  text-align: center;\n  padding: 10px;\n  border-radius: 3px;\n}\n.eg-dialog {\n  z-index: 9000;\n}\n.eg-tips-container {\n  z-index: 9001;\n  display: none;\n}\n.eg-dialog-button,\n.eg-tips-button {\n  text-align: center;\n  padding: 5px 50px;\n}\n.eg-dialog-content,\n.eg-tips-content {\n  text-align: center;\n  margin-top: 10px;\n  padding: 10px 30px;\n}\n.eg-dialog-submit,\n.eg-dialog-cancel,\n.eg-tips-submit,\n.eg-tips-cancel {\n  margin: 5px;\n  border-radius: 4px;\n}\n.eg-submit {\n  color: #fff;\n  background: #d94000;\n}\n.eg-dialog-title,\n.eg-tips-title {\n  margin-top: 10px;\n  font-size: 18px;\n}\n.eg-dialog-show,\n.eg-tips-show {\n  display: block;\n}\n.eg-crumb ul li {\n  float: left;\n  position: relative;\n  margin: 10px;\n  cursor: pointer;\n}\n.eg-crumb ul li a {\n  display: block;\n  float: left;\n  background: transparent;\n  color: #000000;\n}\n.eg-crumb ul li a:after,\n.eg-crumb ul li a:before {\n  display: inline-block;\n  background-color: #a0a0a0;\n  position: absolute;\n  content: \"\";\n  right: -12px;\n  height: 8px;\n  width: 1px;\n}\n.eg-crumb ul li a:after {\n  top: 9px;\n  transform: rotate(45deg);\n}\n.eg-crumb ul li a:before {\n  top: 4px;\n  transform: rotate(135deg);\n}\n.eg-crumb ul li:last-child {\n  cursor: default;\n  color: #bbbbbb;\n}\n.eg-crumb ul li:last-child a:before,\n.eg-crumb ul li:last-child a:after {\n  display: none;\n}\n.eg-search-wrapper {\n  width: 100%;\n  position: relative;\n  display: box;\n  /* OLD - Android 4.4- */\n  display: -webkit-box;\n  /* OLD - iOS 6-, Safari 3.1-6 */\n  display: -moz-box;\n  /* OLD - Firefox 19- (buggy but mostly works) */\n  display: -ms-flexbox;\n  /* TWEENER - IE 10 */\n  display: -webkit-flex;\n  /* NEW - Chrome */\n  display: flex;\n  margin-right: 15px;\n}\n.eg-search-wrapper input {\n  text-indent: 15px;\n}\n.eg-search-wrapper .eg-search-content {\n  display: -webkit-box;\n  -webkit-box-flex: 1;\n  /* OLD - iOS 6-, Safari 3.1-6 */\n  -moz-box-flex: 1;\n  /* OLD - Firefox 19- */\n  -webkit-flex: 1;\n  /* Chrome */\n  -ms-flex: 1;\n  flex: 1.0;\n}\n.eg-search-wrapper .eg-search-icon {\n  position: relative;\n}\n.eg-label-item {\n  padding: 2px 4px;\n  display: inline-block;\n  -webkit-border-radius: 2px;\n  -moz-border-radius: 2px;\n  border-radius: 2px;\n}\n.eg-label-item:hover {\n  text-decoration: none;\n}\n.eg-label-all {\n  margin-right: 45px;\n}\n.eg-label-title {\n  padding: 2px 0;\n  color: #999;\n}\n.eg-label-active {\n  background: #ee5511;\n  color: #ffffff;\n}\n.eg-label-group-simple .eg-label-item {\n  border-right: 1px solid #cccccc;\n  border-radius: 0px;\n  padding: 0px 15px 0px 0px;\n  margin-right: 15px;\n  line-height: 14px;\n}\n.eg-label-group-simple .eg-label-item:hover {\n  color: #2f93d2;\n}\n.eg-label-group-simple .eg-label-item:last-child {\n  border-right: none;\n}\n.eg-label-group {\n  margin-bottom: 15px;\n}\n.eg-label-group .eg-row {\n  padding: 0px;\n}\n.eg-label-group .eg-row div[class*='eg-sm-'] {\n  padding: 0px 15px;\n}\n.eg-label-group .eg-row div[class*='eg-sm-'].eg-end {\n  margin-bottom: -10px;\n}\n.eg-label-group .eg-label-item {\n  margin: 0 15px 10px;\n}\n.eg-label-group .eg-label-all {\n  margin-right: 45px;\n}\n.eg-label-radius {\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-label-success {\n  background: #6bcb72;\n  color: #ffffff;\n}\n.eg-label-error {\n  background: #ff717d;\n  color: #ffffff;\n}\n.eg-label-disabled {\n  background: #cccccc;\n  color: #ffffff;\n}\n.eg-label-end {\n  margin-bottom: 0;\n}\n/**按钮组*/\n.eg-paging-container {\n  text-align: right;\n  padding: 10px 0;\n  /*.current{\n        color: @orange-btn;\n    }*/\n}\n.eg-paging-container a,\n.eg-paging-container .page {\n  padding: 5px;\n  margin: 0 5px;\n}\n.eg-paging-container .info {\n  font-size: 12px;\n  color: #999;\n  margin-left: 20px;\n}\n.eg-paging-active {\n  color: #ee5511;\n}\n.eg-paging-disabled {\n  color: #cccccc;\n  cursor: default;\n}\n.eg-calendar-container {\n  position: absolute;\n  border: 1px solid #eee;\n  box-shadow: 0 0 5px #eee;\n  background: #fff;\n  -webkit-box-shadow: 0px 0px 8px 1px #cccccc;\n  webkit-box-shadow: 0px 0px 8px 1px #cccccc;\n}\n.eg-calendar-container .eg-calendar-item:not(.no-hover) {\n  cursor: pointer;\n}\n.eg-calendar-container .eg-calendar-box .eg-calendar-selected {\n  color: #ffffff !important;\n  background: #ee5511;\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  border-radius: 50%;\n}\n.eg-calendar-container .eg-calendar-box .eg-calendar-disabled {\n  color: #cccccc;\n  cursor: default;\n}\n.eg-calendar-box {\n  background: #ffffff;\n  width: 270px;\n}\n.eg-calendar-box .box {\n  padding: 15px;\n}\n.eg-calendar-header {\n  line-height: 28px;\n  margin-bottom: 10px;\n}\n.eg-calendar-header .options {\n  border: 1px solid #cccccc;\n  height: 28px;\n  vertical-align: middle;\n  margin-right: 30px;\n}\n.eg-calendar-header .today {\n  cursor: pointer;\n  position: relative;\n  top: 2px;\n}\n.eg-calendar-header th {\n  padding-bottom: 10px;\n}\n.eg-calendar-header .title {\n  width: 100%;\n  height: 100%;\n  cursor: pointer;\n}\n.eg-calendar-header .title:hover {\n  background: #f0f0f0;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-calendar-body .calendar {\n  width: 100%;\n  text-align: center;\n}\n.eg-calendar-body .calendar tr.body td,\n.eg-calendar-body .calendar tr.head td {\n  height: 25px;\n  vertical-align: middle;\n}\n.eg-calendar-body .calendar tr.body td span,\n.eg-calendar-body .calendar tr.head td span {\n  width: 30px;\n  height: 30px;\n  line-height: 30px;\n  display: inline-block;\n}\n.eg-calendar-body .calendar tr.body td span:hover:not(.eg-calendar-selected):not(.eg-calendar-disabled):not(.no-hover),\n.eg-calendar-body .calendar tr.head td span:hover:not(.eg-calendar-selected):not(.eg-calendar-disabled):not(.no-hover) {\n  background: #f0f0f0;\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  border-radius: 50%;\n}\n.eg-calendar-body .calendar .month-list span {\n  display: inline-block;\n  zoom: 1;\n  width: 25%;\n  text-align: center;\n  height: 55px;\n  line-height: 55px;\n}\n.eg-calendar-body .calendar .month-list span i {\n  font-style: normal;\n  padding: 4px 9px;\n  -webkit-border-radius: 500px;\n  -moz-border-radius: 500px;\n  border-radius: 500px;\n  cursor: pointer;\n}\n.eg-calendar-body .calendar .month-list span i:hover:not(.eg-selected) {\n  background: #f0f0f0;\n}\n.eg-calendar-body .old {\n  color: #cccccc;\n}\n.eg-calendar-body .head {\n  color: #999;\n}\n.eg-icon-prev:hover,\n.eg-icon-next:hover {\n  background: #f0f0f0;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-table {\n  background: #ffffff;\n  border-spacing: 0px;\n  border-collapse: separate;\n  padding: 0px 20px 10px 20px;\n  font-size: 14px;\n  width: 100%;\n}\n.eg-table tr {\n  /*td[rowspan]{\n      border-bottom: 1px solid @tr-split-line;\n    }*/\n}\n.eg-table tr.eg-tr-split td {\n  border-bottom: 1px solid #dddddd;\n}\n.eg-table tr td,\n.eg-table tr th {\n  padding: 10px 15px;\n  text-align: left;\n  position: relative;\n}\n.eg-table tr th {\n  color: #999;\n}\n.eg-table tr td {\n  color: #333333;\n}\n.eg-table thead th {\n  border-bottom: 2px solid #dddddd;\n}\n.eg-table tbody tr:nth-of-type(2n) {\n  background: #f7f7f7;\n}\n/**面板*/\n.eg-panel {\n  margin-bottom: 20px;\n  background-color: #fff;\n  border: 1px solid #dddddd;\n  border-radius: 4px;\n  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);\n  overflow-x: hidden;\n}\n.eg-panel .eg-panel-header {\n  padding: 10px 15px;\n  border-bottom: 1px solid transparent;\n  border-radius: 3px 3px 0px 0px;\n  color: #333;\n  background-color: #eeeeee;\n  border-color: #ddd;\n}\n.eg-panel .eg-panel-footer {\n  background-color: #eeeeee;\n  border-top: 1px solid #ddd;\n  border-radius: 0px 0px 3px 3px;\n}\n/**添加padding*/\n.eg-panel-padding {\n  padding: 10px 15px;\n}\n.eg-tab-item {\n  cursor: pointer;\n  display: inline-block;\n  min-width: 100px;\n  box-sizing: border-box;\n  padding: 5px 15px;\n  text-align: center;\n  border-bottom: 1px solid #dddddd;\n}\n.eg-tab-item:hover {\n  text-decoration: none;\n  color: #f25300;\n  background: #dddddd;\n  border-bottom: 1px solid #dddddd;\n}\n.eg-tab-item.eg-tab-active {\n  color: #f25300;\n  border-bottom: 1px solid #f25300;\n  box-shadow: 0px -3px 0px 0px #f25300 inset;\n  cursor: default;\n}\n.eg-tab-item.eg-tab-active:hover {\n  background: transparent;\n  border-bottom: 1px solid #f25300;\n}\n.eg-select-container {\n  width: 300px;\n  position: relative;\n  display: inline-block;\n  margin-right: 15px;\n  /*下箭头*/\n}\n.eg-select-container ul {\n  background: #fff;\n  position: absolute;\n  width: inherit;\n  top: 39px;\n  left: 0px;\n}\n.eg-select-container ul li {\n  text-indent: 10px;\n  padding: 5px 0;\n  cursor: pointer;\n}\n.eg-select-container ul li:hover,\n.eg-select-container ul li:focus {\n  color: #ff717d;\n}\n.eg-select-container ul li.active {\n  color: #ff717d;\n}\n.eg-select-container .eg-select-ul {\n  display: none;\n}\n.eg-select-container .eg-select-show {\n  display: block;\n}\n.eg-select-container .eg-select-arrow {\n  position: absolute;\n  top: 12px;\n  right: 10px;\n  display: inline-block;\n  cursor: pointer;\n  z-index: 10;\n  border-top: 5px solid transparent;\n  border-right: 5px solid transparent;\n  border-left: 5px solid #bbbbbb;\n  border-bottom: 5px solid #bbbbbb;\n}\n.eg-select-container .eg-select-arrow {\n  transform: rotate(-45deg);\n}\n.eg-tooltip-container .eg-tooltip-wraper {\n  display: none;\n  position: absolute;\n  z-index: 9001;\n  background: #000;\n  opacity: 0.4;\n  color: #fff;\n  max-width: 300px;\n  font-size: 13px;\n  padding: 15px;\n  text-align: left;\n  border-radius: 3px;\n  box-shadow: 0px 1px 5px 2px #bbbbbb;\n  margin: 5px 0px;\n}\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip {\n  position: relative;\n}\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip .eg-tooltip-arrow {\n  border-width: 5px;\n  border-style: dashed;\n  border-color: transparent transparent #000 transparent;\n  position: absolute;\n  left: 18px;\n  top: -25px;\n  height: 0;\n  width: 0;\n  line-height: 0;\n}\n.eg-tooltip-container .eg-tooltip-show {\n  display: block;\n}\n.eg-marquee-container {\n  position: relative;\n  display: inline-block;\n  width: 380px;\n  height: auto;\n  padding: 0px 0px;\n  border: #cc3333 2px solid;\n  overflow: hidden;\n  border-radius: 3px;\n  background: #fff;\n}\n.eg-marquee-container .eg-marquee-new-tip {\n  position: absolute;\n  top: -26px;\n  left: -24px;\n  z-index: 90001;\n  background: #4fd564;\n  color: #fff;\n  width: 50px;\n  height: 61px;\n  transform: rotate(45deg);\n}\n.eg-marquee-container .eg-marquee-new-tip .eg-marquee-new {\n  display: inline-block;\n  position: relative;\n  top: 20px;\n  left: 31px;\n  transform: rotate(-45deg);\n}\n.eg-marquee-container .eg-marquee-check {\n  position: absolute;\n  right: 0px;\n  top: 0px;\n  z-index: 90001;\n}\n.eg-marquee-container img {\n  width: 100%;\n  height: auto;\n}\n.eg-marquee-container .eg-marquee-title {\n  color: #333333;\n  font-size: 16px;\n  font-weight: bolder;\n  line-height: 17px;\n  margin: 15px 10px 5px 10px;\n}\n.eg-marquee-container .eg-marquee-content {\n  color: #999;\n  font-size: 14px;\n  line-height: 15px;\n  margin: 10px 10px;\n}\n.eg-marquee-container .eg-marquee-tips {\n  position: relative;\n  color: #999;\n  font-size: 14px;\n  margin: 15px 10px 5px 10px;\n}\n.eg-marquee-container .eg-bars {\n  position: relative;\n  display: inline-block;\n  background: #999;\n  padding: 5px;\n  margin-right: 10px;\n}\n.eg-marquee-container .eg-bars:before,\n.eg-marquee-container .eg-bars:after {\n  position: absolute;\n  content: '';\n  display: inline-block;\n}\n.eg-marquee-container .eg-bars:before {\n  top: 0px;\n  left: 10px;\n  border-width: 5px;\n  border-style: dashed dashed solid;\n  border-color: transparent transparent transparent #999;\n}\n.eg-marquee-container .eg-bars:after {\n  top: 4px;\n  left: 7.5px;\n  z-index: 10;\n  border: 1.5px solid #fff;\n  border-radius: 5px;\n}\n.eg-input-checkboxs {\n  position: relative;\n  height: 35px;\n  top: -5px;\n  width: 35px;\n  display: inline-block;\n}\n.eg-input-checkboxs input[type=\"checkbox\"] {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  cursor: pointer;\n  pointer-events: all;\n  opacity: 0;\n  z-index: 2;\n  left: 0;\n}\n.eg-input-checkboxs .box {\n  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;\n  float: left;\n  position: relative;\n  display: block;\n  width: 16px;\n  margin-right: 10px;\n  margin-left: 0;\n  height: 24px;\n}\n.eg-input-checkboxs .box .checkbox {\n  width: 35px;\n  height: 35px;\n  border: 1px solid #999;\n  position: relative;\n  top: 5px;\n  left: 1px;\n  -webkit-border-radius: 2px;\n  -moz-border-radius: 2px;\n  border-radius: 2px;\n  background: #ffffff;\n}\n.eg-input-checkboxs .box .checkbox .round {\n  display: none;\n}\n.eg-input-checkboxs label {\n  float: left;\n  position: relative;\n  display: block;\n  line-height: 24px;\n}\n.eg-input-checkboxs-active .box .checkbox {\n  background: #ee5511;\n  border-color: #ee5511;\n}\n.eg-input-checkboxs-active .box .eg-icon-tick:before {\n  height: 9px;\n  width: 2px;\n  left: 11px;\n  top: 13px;\n}\n.eg-input-checkboxs-active .box .eg-icon-tick:after {\n  height: 17px;\n  width: 2px;\n  left: 19px;\n  top: 6px;\n}\n.eg-input-checkboxs-disabled .box .checkbox {\n  background: #eeeeee;\n  color: #999;\n  border-color: #cccccc;\n}\n.eg-input-checkboxs-disabled .box .eg-icon-tick:before {\n  background-color: #fefefe;\n}\n.eg-input-checkboxs-disabled .box .eg-icon-tick:after {\n  background-color: #fefefe;\n}\n.eg-input-checkboxs-disabled label {\n  color: #999;\n}\n.eg-input-checkboxs-disabled .box .checkbox {\n  background: #cccccc;\n  color: #999;\n}\n.eg-list .eg-item {\n  background-color: #ffffff;\n  color: #333333;\n  position: relative;\n  display: block;\n  padding: 10px 15px;\n  border-bottom: 1px solid #dddddd;\n  font-size: 14px;\n}\n.eg-list .eg-item:last-child {\n  border-bottom: none;\n}\n", ""]);
+	exports.push([module.id, ".red {\n  color: #ff717d;\n}\n* {\n  padding: 0px;\n  margin: 0px;\n  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);\n  -webkit-backface-visibility: hidden;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nnav,\nsection,\nsummary {\n  display: block;\n}\nhtml {\n  /*width: 100%;\n    min-height: 100%;*/\n}\nbody {\n  font: normal 14px \"Microsoft YaHei\", \"helvetica regular\", \"Helvetica Neue\", Arial, Helvetica, STHeiTi, sans-serif;\n  color: #333333;\n  -webkit-text-size-adjust: none;\n  text-size-adjust: none;\n  background-color: #f1f1f1;\n}\nul,\nol {\n  list-style: none;\n}\na {\n  text-decoration: none;\n  outline: none;\n  color: #333333;\n}\na:hover {\n  text-decoration: underline;\n}\naddress {\n  font-style: normal;\n}\n/**重置h1-h6的字体大小*/\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-weight: normal;\n}\nh1 {\n  font-size: 22px;\n}\nh2 {\n  font-size: 20px;\n}\nh3 {\n  font-size: 18px;\n}\nh4 {\n  font-size: 16px;\n}\nh5 {\n  font-size: 14px;\n}\nh6 {\n  font-size: 12px;\n}\n/**清除浮动*/\n.clearfix:before,\n.clearfix:after {\n  display: table;\n  line-height: 0;\n  content: \"\";\n}\n.clearfix:after {\n  clear: both;\n}\n/**控制块级、内敛*/\n.inline-block {\n  display: inline-block !important;\n}\n.inline {\n  display: inline !important;\n}\n.block {\n  display: block !important;\n}\n/**搜索图标*/\n.eg-search-icon {\n  position: relative;\n}\n.eg-search-icon:before,\n.eg-search-icon:after {\n  content: '';\n  position: absolute;\n  display: inline-block;\n  z-index: 10;\n}\n.eg-search-icon:before {\n  border: 2px solid #b2b2b2;\n  height: 10px;\n  width: 10px;\n  border-radius: 7px;\n  top: 11px;\n  left: 3px;\n}\n.eg-search-icon:after {\n  height: 7px;\n  width: 2px;\n  transform: rotate(-45deg);\n  top: 22px;\n  left: 16px;\n  background: #b2b2b2;\n}\n/**圆角*/\n.eg-radius {\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-active {\n  color: #ee5511;\n}\n.eg-selected {\n  color: #ffffff;\n  background: #ee5511;\n}\n/**淡入淡出动画*/\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0;\n    /*初始状态 透明度为0*/\n  }\n  50% {\n    opacity: 0.5;\n    /*中间状态 透明度为0.5*/\n  }\n  100% {\n    opacity: 1;\n    /*结尾状态 透明度为1*/\n  }\n}\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 1;\n    /*初始状态 透明度为1*/\n  }\n  50% {\n    opacity: 0.5;\n    /*中间状态 透明度为0.5*/\n  }\n  100% {\n    opacity: 0;\n    /*结尾状态 透明度为0*/\n  }\n}\n/**显示*/\n.eg-hide,\n.show {\n  display: none;\n}\n.eg-show.show {\n  display: block;\n}\n.fadein {\n  display: block !important;\n  -webkit-animation: fadeIn .4s 1 0s;\n}\n.fadeout {\n  -webkit-animation: fadeOut .4s 1 0s ;\n  -webkit-animation-fill-mode: forwards;\n}\n/**成功图标*/\n.eg-tips-success {\n  background: #4fd564;\n  width: 30px;\n  height: 30px;\n  border-radius: 30px;\n  display: inline-block;\n  position: relative;\n}\n/**出错提示*/\n.eg-tips-error {\n  background: #dd514c;\n  width: 30px;\n  height: 30px;\n  border-radius: 30px;\n  display: inline-block;\n  position: relative;\n}\n.eg-tips-error:before {\n  height: 2px;\n  width: 2px;\n  background: #fff;\n  left: 14px;\n  top: 19px;\n}\n.eg-tips-error:after {\n  height: 10px;\n  width: 2px;\n  background: #fff;\n  left: 14px;\n  top: 6px;\n}\n/**加载中*/\n.eg-tips-loading {\n  background: #bbbbbb;\n  width: 30px;\n  height: 30px;\n  border-radius: 30px;\n  display: inline-block;\n  position: relative;\n}\n.eg-tips-loading:before {\n  width: 15px;\n  height: 15px;\n  background: transparent;\n  border: 2px solid #fff;\n  top: 5.5px;\n  left: 5.5px;\n  border-radius: 12px;\n  clip: rect(auto, 16px, auto, auto);\n  animation: 0.5s linear 0s normal none infinite rotate;\n}\n.eg-tips-success:before,\n.eg-icon-tick:before,\n.eg-tips-success:before,\n.eg-tips-error:before,\n.eg-tips-success:after,\n.eg-icon-tick:after,\n.eg-tips-success:after,\n.eg-tips-error:after {\n  display: inline-block;\n  position: absolute;\n  content: \"\";\n}\n.eg-tips-success:before,\n.eg-icon-tick:before {\n  height: 8px;\n  width: 2px;\n  background: #fff;\n  left: 10px;\n  top: 13px;\n  transform: rotate(135deg);\n}\n.eg-tips-success:after,\n.eg-icon-tick:after {\n  height: 14px;\n  width: 2px;\n  background: #fff;\n  left: 17px;\n  top: 8px;\n  transform: rotate(45deg);\n}\n@-webkit-keyframes rotate {\n  from {\n    -webkit-transform: rotate(0deg);\n  }\n  to {\n    -webkit-transform: rotate(360deg);\n  }\n}\n/*icon*/\n.eg-arrow-up::before,\n.eg-arrow-down::before {\n  content: '';\n  display: inline-block;\n  width: 6px;\n  height: 9px;\n  position: absolute;\n  top: 50%;\n  margin-left: 9px;\n}\n.eg-arrow-up::after,\n.eg-arrow-down::after {\n  content: '';\n  display: inline-block;\n  border-width: 7px;\n  border-style: solid;\n  margin-left: 5px;\n  position: relative;\n}\n/*向上箭头*/\n.eg-arrow-up::before {\n  background: #38bd7c;\n  margin-top: -1px;\n  border-radius: 0px 0px 1px 1px;\n}\n.eg-arrow-up::after {\n  border-color: transparent transparent #38bd7c transparent;\n  top: -6px;\n}\n/*向下箭头*/\n.eg-arrow-down::before {\n  background: #fa3739;\n  margin-top: -8px;\n  border-radius: 1px 1px 0px 0px;\n}\n.eg-arrow-down::after {\n  border-color: #fa3739 transparent transparent transparent;\n  top: 10px;\n}\n/**图标*/\n.eg-icon-calendar {\n  background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJViUEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4MUU4N0VFRjdCODYxMUU1QUY5NkM3NDVDRjI5NkNEQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4MUU4N0VGMDdCODYxMUU1QUY5NkM3NDVDRjI5NkNEQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjgxRTg3RUVEN0I4NjExRTVBRjk2Qzc0NUNGMjk2Q0RDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjgxRTg3RUVFN0I4NjExRTVBRjk2Qzc0NUNGMjk2Q0RDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Q96nFgAAAIpJREFUeNpi/P//PwMIzJo1C0RBOAwMjCAiLS0NJo4iBxIHM2bOnMmABFA0owEMOSYgFgXi80iSMIXoGFkOpF4UpHkXEBswkAZA6ncxkaERbgATAwWABcaAhSAxABYDFNlMHWcTciI27w2cs2nrZ3xRCNJ8AZRa0AOGCHAJ5Gw3EINEjWeB2AUgwADA4SbftT6JBAAAAABJRU5ErkJggg==\") no-repeat right center;\n}\n/**左箭头*/\n.eg-icon-prev,\n.eg-icon-next {\n  width: 100%;\n  height: 100%;\n  text-align: center;\n  cursor: pointer;\n}\n.eg-icon-prev:after,\n.eg-icon-next:after {\n  content: '';\n  display: inline-block;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  width: 12px;\n  height: 12px;\n  border-top: 2px solid #999;\n  border-left: 2px solid #999;\n  -webkit-transform: rotate(-45deg);\n  -moz-transform: rotate(-45deg);\n  -ms-transform: rotate(-45deg);\n  -o-transform: rotate(-45deg);\n  transform: rotate(-45deg);\n}\n.eg-icon-next:after {\n  border-left: none;\n  border-right: 2px solid #999;\n  -webkit-transform: rotate(45deg);\n  -moz-transform: rotate(45deg);\n  -ms-transform: rotate(45deg);\n  -o-transform: rotate(45deg);\n  transform: rotate(45deg);\n}\n/**晃动*/\n@-webkit-keyframes shake {\n  0%,\n  100% {\n    -webkit-transform: translate3d(0, 0, 0);\n    transform: translate3d(0, 0, 0);\n  }\n  10%,\n  30%,\n  50%,\n  70%,\n  90% {\n    -webkit-transform: translate3d(-10px, 0, 0);\n    transform: translate3d(-10px, 0, 0);\n  }\n  20%,\n  40%,\n  60%,\n  80% {\n    -webkit-transform: translate3d(10px, 0, 0);\n    transform: translate3d(10px, 0, 0);\n  }\n}\n@keyframes shake {\n  0%,\n  100% {\n    -webkit-transform: translate3d(0, 0, 0);\n    transform: translate3d(0, 0, 0);\n  }\n  10%,\n  30%,\n  50%,\n  70%,\n  90% {\n    -webkit-transform: translate3d(-10px, 0, 0);\n    transform: translate3d(-10px, 0, 0);\n  }\n  20%,\n  40%,\n  60%,\n  80% {\n    -webkit-transform: translate3d(10px, 0, 0);\n    transform: translate3d(10px, 0, 0);\n  }\n}\n.shake {\n  -webkit-animation-name: shake;\n  animation-name: shake;\n}\n.animated {\n  -webkit-animation-duration: .8s;\n  animation-duration: .8s;\n  -webkit-animation-fill-mode: both;\n  animation-fill-mode: both;\n}\n/**字体大小*/\n.small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-12 {\n  font-size: 12px;\n}\n.ft-12 small,\n.ft-12 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-14 {\n  font-size: 14px;\n}\n.ft-14 small,\n.ft-14 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-16 {\n  font-size: 16px;\n}\n.ft-16 small,\n.ft-16 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-18 {\n  font-size: 18px;\n}\n.ft-18 small,\n.ft-18 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-20 {\n  font-size: 20px;\n}\n.ft-20 small,\n.ft-20 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-22 {\n  font-size: 22px;\n}\n.ft-22 small,\n.ft-22 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n/**按钮组*/\n.eg-btn-group {\n  position: relative;\n  display: inline-block;\n  vertical-align: middle;\n}\n.eg-btn-group .eg-btn {\n  position: relative;\n  float: left;\n  margin-left: -1px;\n}\n.eg-btn-group .eg-btn:not(:first-child):not(:last-child) {\n  border-radius: 0;\n}\n.eg-btn-group .eg-btn:first-child:not(:last-child) {\n  border-bottom-right-radius: 0;\n  border-top-right-radius: 0;\n}\n.eg-btn-group .eg-btn:last-child:not(:first-child) {\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n}\n.eg-btn-group-tacked .eg-btn {\n  float: none;\n  display: block;\n  margin-left: 0;\n  margin-top: -1px;\n}\n.eg-btn-group-tacked .eg-btn:first-child:not(:last-child) {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.eg-btn-group-tacked .eg-btn:last-child:not(:first-child) {\n  border-bottom-left-radius: 0;\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n}\n.eg-btn-group-justify {\n  width: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n}\n.eg-btn-group-justify .eg-btn {\n  float: none;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n}\n/**按钮*/\n.eg-btn {\n  display: inline-block;\n  text-align: center;\n  padding: 10px 15px;\n  color: #ffffff;\n  background: #ee5511;\n  border: 1px solid transparent;\n  cursor: pointer;\n  outline: 0;\n  text-decoration: none;\n}\n.eg-btn:hover {\n  background: #d94000;\n  text-decoration: none;\n}\n.eg-btn.eg-btn-disabled {\n  color: #f8c1a8;\n  background-color: #f49462;\n}\n.eg-btn-block {\n  display: block;\n  width: 100%;\n}\n.eg-btn-block + .eg-btn-block {\n  margin-top: 5px;\n}\n.eg-btn-radius {\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-btn-round {\n  -webkit-border-radius: 1000px;\n  -moz-border-radius: 1000px;\n  border-radius: 1000px;\n}\n.eg-btn-xs {\n  font-size: 12px;\n}\n.eg-btn-sm {\n  font-size: 14px;\n}\n.eg-btn-default {\n  font-size: 16px;\n}\n.eg-btn-lg {\n  font-size: 18px;\n}\n.eg-btn-xl {\n  font-size: 20px;\n}\n.eg-btn-error {\n  background-color: #d94000;\n}\n.eg-btn-success {\n  background-color: #2f93d2;\n}\n.eg-btn-success:hover {\n  background: #0c80ba;\n}\n.eg-btn-success.eg-btn-disabled {\n  color: #a2cae3;\n  background: #4ca0d5;\n}\n.eg-btn-warning {\n  background-color: #e0690c;\n}\n.eg-btn-danger {\n  background-color: #e0690c;\n}\n.eg-btn-link {\n  border: none;\n  color: #646464;\n  background-color: transparent;\n}\n.eg-btn-link:hover {\n  color: #646464;\n  background: transparent;\n  text-decoration: underline;\n}\n.eg-btn-link .eg-btn-disabled {\n  color: #cccccc;\n}\n.eg-btn-disabled {\n  color: #cccccc;\n  background-color: #f3f3f3;\n}\n.eg-btn-gray {\n  background-color: #d4d4d4;\n  color: #333333;\n}\n.eg-btn-gray:hover {\n  background: #cccccc;\n}\n.eg-btn-gray.eg-btn-disabled {\n  color: #999;\n  background-color: #e1e1e1;\n}\n.eg-btn-white {\n  background: #ffffff;\n  border-color: #dbdad9;\n  color: #000000;\n}\n.eg-btn-white:hover {\n  background: #f8f8f8;\n}\n.eg-btn-white.eg-btn-disabled {\n  color: #f2f2f2;\n  background-color: #cccccc;\n}\n.eg-btn-disabled {\n  cursor: auto;\n}\n.eg-input-text {\n  border: 1px solid #dddddd;\n  font-size: 14px;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n  background-color: #ffffff;\n  padding: 10px;\n  color: #333333;\n  width: 100%;\n}\n.eg-input-text:disabled {\n  background: #eeeeee;\n  color: #999;\n}\n.eg-input-checkbox,\n.eg-input-radio {\n  position: relative;\n  text-align: left;\n  margin-bottom: 10px;\n  margin-right: 10px;\n  min-height: 24px;\n  display: inline-block;\n}\n.eg-input-checkbox input[type=\"checkbox\"],\n.eg-input-radio input[type=\"checkbox\"],\n.eg-input-checkbox input[type=\"radio\"],\n.eg-input-radio input[type=\"radio\"] {\n  /*width: 14px;\n        height: 14px;\n        border: 1px solid @black-99;*/\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  cursor: pointer;\n  pointer-events: all;\n  opacity: 0;\n  z-index: 2;\n  left: 0;\n}\n.eg-input-checkbox .box,\n.eg-input-radio .box {\n  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;\n  float: left;\n  position: relative;\n  display: block;\n  width: 16px;\n  margin-right: 10px;\n  margin-left: 0;\n  height: 24px;\n}\n.eg-input-checkbox .box .checkbox,\n.eg-input-radio .box .checkbox {\n  width: 14px;\n  height: 14px;\n  border: 1px solid #999;\n  position: relative;\n  top: 5px;\n  left: 1px;\n  -webkit-border-radius: 2px;\n  -moz-border-radius: 2px;\n  border-radius: 2px;\n  background: #ffffff;\n}\n.eg-input-checkbox .box .checkbox .round,\n.eg-input-radio .box .checkbox .round {\n  display: none;\n}\n.eg-input-checkbox label,\n.eg-input-radio label {\n  float: left;\n  position: relative;\n  display: block;\n  line-height: 24px;\n}\n/*图片*/\n.checkbox-back {\n  background-position: center center;\n  background-repeat: no-repeat;\n}\n.eg-input-checkbox-active .box .checkbox {\n  background: #ee5511;\n  border-color: #ee5511;\n  background-position: center center;\n  background-repeat: no-repeat;\n}\n.eg-input-checkbox-active .box .eg-icon-tick:before {\n  height: 5px;\n  width: 2px;\n  left: 3px;\n  top: 5px;\n}\n.eg-input-checkbox-active .box .eg-icon-tick:after {\n  height: 8px;\n  width: 2px;\n  left: 7px;\n  top: 2px;\n}\n.eg-input-radio .box .checkbox {\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  border-radius: 50%;\n}\n.eg-input-radio .box .checkbox .round {\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  border-radius: 50%;\n  background: #ee5511;\n  margin: 4px;\n  width: 8px;\n  height: 8px;\n  margin: 2px;\n}\n.eg-input-radio-active .box .checkbox {\n  border-color: #ee5511;\n}\n.eg-input-radio-active .box .checkbox .round {\n  display: block;\n}\n.eg-input-radio-disabled .box .checkbox {\n  background: #eeeeee;\n  color: #999;\n  border: 1px solid #999;\n}\n.eg-input-radio-disabled .box .checkbox .round {\n  background: #cccccc;\n}\n.eg-input-radio-disabled label {\n  color: #999;\n}\n.eg-input-checkbox-disabled .box .checkbox {\n  background: #eeeeee;\n  color: #999;\n  border-color: #cccccc;\n}\n.eg-input-checkbox-disabled .box .eg-icon-tick:before {\n  background-color: #fefefe;\n}\n.eg-input-checkbox-disabled .box .eg-icon-tick:after {\n  background-color: #fefefe;\n}\n.eg-input-checkbox-disabled label {\n  color: #999;\n}\n.eg-input-checkbox-active.eg-input-checkbox-disabled .box .checkbox {\n  background: #cccccc;\n  color: #999;\n}\n.eg-grid .eg-row {\n  margin-left: -15px;\n  margin-right: -15px;\n}\n.eg-sm-1 {\n  width: 8.33333333%;\n}\n.eg-sm-2 {\n  width: 16.66666667%;\n}\n.eg-sm-3 {\n  width: 25%;\n}\n.eg-sm-4 {\n  width: 33.33333333%;\n}\n.eg-sm-5 {\n  width: 41.66666667%;\n}\n.eg-sm-6 {\n  width: 50%;\n}\n.eg-sm-7 {\n  width: 58.33333333%;\n}\n.eg-sm-8 {\n  width: 66.66666667%;\n}\n.eg-sm-9 {\n  width: 75%;\n}\n.eg-sm-10 {\n  width: 83.33333333%;\n}\n.eg-sm-11 {\n  width: 91.66666667%;\n}\n.eg-sm-12 {\n  width: 100%;\n}\n[class*='eg-sm-'] {\n  padding: 5px 15px;\n  float: left;\n}\n[class*='eg-sm-']:last-child {\n  float: right;\n}\n[class*='eg-sm-'].eg-end {\n  float: left;\n}\n/**\n   带边框的样式\n*/\n.eg-sm-border {\n  border: 1px solid #e1e1e1;\n}\n.eg-dialog-container,\n.eg-tips-container {\n  display: none;\n}\n.eg-dialog-overlay,\n.eg-tips-overlay {\n  position: fixed;\n  left: 0px;\n  top: 0px;\n  z-index: 8900;\n  background-color: #000000;\n  opacity: 0.4;\n  width: 100%;\n  height: 100%;\n}\n.eg-dialog-close,\n.eg-tips-close {\n  display: inline-block;\n  float: right;\n  cursor: pointer;\n  font-size: 17px;\n  margin-top: -10px;\n  padding-right: 5px;\n}\n.eg-dialog,\n.eg-tips {\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n  opacity: 1;\n  background: #fff;\n  text-align: center;\n  padding: 10px;\n  border-radius: 3px;\n  z-index: 9000;\n}\n.eg-tips-container {\n  z-index: 9001;\n  display: none;\n}\n.eg-dialog-button,\n.eg-tips-button {\n  text-align: center;\n  padding: 5px 50px;\n}\n.eg-dialog-content,\n.eg-tips-content {\n  text-align: center;\n  margin-top: 10px;\n  padding: 10px 30px;\n}\n.eg-dialog-submit,\n.eg-dialog-cancel,\n.eg-tips-submit,\n.eg-tips-cancel {\n  margin: 5px;\n  border-radius: 4px;\n}\n.eg-submit {\n  color: #fff;\n  background: #d94000;\n}\n.eg-dialog-title,\n.eg-tips-title {\n  margin-top: 10px;\n  font-size: 18px;\n}\n.eg-dialog-show,\n.eg-tips-show {\n  display: block;\n}\n/**淡入淡出动画*/\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0;\n    /*初始状态 透明度为0*/\n  }\n  50% {\n    opacity: 0.5;\n    /*中间状态 透明度为0.5*/\n  }\n  100% {\n    opacity: 1;\n    /*结尾状态 透明度为1*/\n  }\n}\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 1;\n    /*初始状态 透明度为1*/\n  }\n  50% {\n    opacity: 0.5;\n    /*中间状态 透明度为0.5*/\n  }\n  100% {\n    opacity: 0;\n    /*结尾状态 透明度为0*/\n  }\n}\n/**显示*/\n.eg-hide {\n  display: none;\n}\n.eg-show {\n  display: block;\n}\n.eg-fadein {\n  display: block;\n  -webkit-animation: fadeIn .4s 1 0s;\n}\n.eg-fadeout {\n  display: block;\n  -webkit-animation: fadeOut .4s 1 0s ;\n  -webkit-animation-fill-mode: forwards;\n}\n.eg-crumb ul li {\n  float: left;\n  position: relative;\n  margin: 10px;\n  cursor: pointer;\n}\n.eg-crumb ul li a {\n  display: block;\n  float: left;\n  background: transparent;\n  color: #000000;\n}\n.eg-crumb ul li a:after,\n.eg-crumb ul li a:before {\n  display: inline-block;\n  background-color: #a0a0a0;\n  position: absolute;\n  content: \"\";\n  right: -12px;\n  height: 8px;\n  width: 1px;\n}\n.eg-crumb ul li a:after {\n  top: 9px;\n  transform: rotate(45deg);\n}\n.eg-crumb ul li a:before {\n  top: 4px;\n  transform: rotate(135deg);\n}\n.eg-crumb ul li:last-child {\n  cursor: default;\n  color: #bbbbbb;\n}\n.eg-crumb ul li:last-child a:before,\n.eg-crumb ul li:last-child a:after {\n  display: none;\n}\n.eg-search-wrapper {\n  width: 100%;\n  position: relative;\n  display: box;\n  /* OLD - Android 4.4- */\n  display: -webkit-box;\n  /* OLD - iOS 6-, Safari 3.1-6 */\n  display: -moz-box;\n  /* OLD - Firefox 19- (buggy but mostly works) */\n  display: -ms-flexbox;\n  /* TWEENER - IE 10 */\n  display: -webkit-flex;\n  /* NEW - Chrome */\n  display: flex;\n  margin-right: 15px;\n}\n.eg-search-wrapper input {\n  text-indent: 15px;\n}\n.eg-search-wrapper .eg-search-content {\n  display: -webkit-box;\n  -webkit-box-flex: 1;\n  /* OLD - iOS 6-, Safari 3.1-6 */\n  -moz-box-flex: 1;\n  /* OLD - Firefox 19- */\n  -webkit-flex: 1;\n  /* Chrome */\n  -ms-flex: 1;\n  flex: 1.0;\n}\n.eg-search-wrapper .eg-search-icon {\n  position: relative;\n}\n.eg-label-item {\n  padding: 2px 4px;\n  display: inline-block;\n  -webkit-border-radius: 2px;\n  -moz-border-radius: 2px;\n  border-radius: 2px;\n}\n.eg-label-item:hover {\n  text-decoration: none;\n}\n.eg-label-all {\n  margin-right: 45px;\n}\n.eg-label-title {\n  padding: 2px 0;\n  color: #999;\n}\n.eg-label-active {\n  background: #ee5511;\n  color: #ffffff;\n}\n.eg-label-group-simple .eg-label-item {\n  border-right: 1px solid #cccccc;\n  border-radius: 0px;\n  padding: 0px 15px 0px 0px;\n  margin-right: 15px;\n  line-height: 14px;\n}\n.eg-label-group-simple .eg-label-item:hover {\n  color: #2f93d2;\n}\n.eg-label-group-simple .eg-label-item:last-child {\n  border-right: none;\n}\n.eg-label-group {\n  margin-bottom: 15px;\n}\n.eg-label-group .eg-row {\n  padding: 0px;\n}\n.eg-label-group .eg-row div[class*='eg-sm-'] {\n  padding: 0px 15px;\n}\n.eg-label-group .eg-row div[class*='eg-sm-'].eg-end {\n  margin-bottom: -10px;\n}\n.eg-label-group .eg-label-item {\n  margin: 0 15px 10px;\n}\n.eg-label-group .eg-label-all {\n  margin-right: 45px;\n}\n.eg-label-radius {\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-label-success {\n  background: #6bcb72;\n  color: #ffffff;\n}\n.eg-label-error {\n  background: #ff717d;\n  color: #ffffff;\n}\n.eg-label-disabled {\n  background: #cccccc;\n  color: #ffffff;\n}\n.eg-label-end {\n  margin-bottom: 0;\n}\n/**按钮组*/\n.eg-paging-container {\n  text-align: right;\n  padding: 10px 0;\n  /*.current{\n        color: @orange-btn;\n    }*/\n}\n.eg-paging-container a,\n.eg-paging-container .page {\n  padding: 5px;\n  margin: 0 5px;\n}\n.eg-paging-container .info {\n  font-size: 12px;\n  color: #999;\n  margin-left: 20px;\n}\n.eg-paging-active {\n  color: #ee5511;\n}\n.eg-paging-disabled {\n  color: #cccccc;\n  cursor: default;\n}\n.eg-calendar-container {\n  position: absolute;\n  border: 1px solid #eee;\n  box-shadow: 0 0 5px #eee;\n  background: #fff;\n  -webkit-box-shadow: 0px 0px 8px 1px #cccccc;\n  webkit-box-shadow: 0px 0px 8px 1px #cccccc;\n}\n.eg-calendar-container .eg-calendar-item:not(.no-hover) {\n  cursor: pointer;\n}\n.eg-calendar-container .eg-calendar-box .eg-calendar-selected {\n  color: #ffffff !important;\n  background: #ee5511;\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  border-radius: 50%;\n}\n.eg-calendar-container .eg-calendar-box .eg-calendar-disabled {\n  color: #cccccc;\n  cursor: default;\n}\n.eg-calendar-box {\n  background: #ffffff;\n  width: 270px;\n}\n.eg-calendar-box .box {\n  padding: 15px;\n}\n.eg-calendar-header {\n  line-height: 28px;\n  margin-bottom: 10px;\n}\n.eg-calendar-header .options {\n  border: 1px solid #cccccc;\n  height: 28px;\n  vertical-align: middle;\n  margin-right: 30px;\n}\n.eg-calendar-header .today {\n  cursor: pointer;\n  position: relative;\n  top: 2px;\n}\n.eg-calendar-header th {\n  padding-bottom: 10px;\n}\n.eg-calendar-header .title {\n  width: 100%;\n  height: 100%;\n  cursor: pointer;\n}\n.eg-calendar-header .title:hover {\n  background: #f0f0f0;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-calendar-body .calendar {\n  width: 100%;\n  text-align: center;\n}\n.eg-calendar-body .calendar tr.body td,\n.eg-calendar-body .calendar tr.head td {\n  height: 25px;\n  vertical-align: middle;\n}\n.eg-calendar-body .calendar tr.body td span,\n.eg-calendar-body .calendar tr.head td span {\n  width: 30px;\n  height: 30px;\n  line-height: 30px;\n  display: inline-block;\n}\n.eg-calendar-body .calendar tr.body td span:hover:not(.eg-calendar-selected):not(.eg-calendar-disabled):not(.no-hover),\n.eg-calendar-body .calendar tr.head td span:hover:not(.eg-calendar-selected):not(.eg-calendar-disabled):not(.no-hover) {\n  background: #f0f0f0;\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  border-radius: 50%;\n}\n.eg-calendar-body .calendar .month-list span {\n  display: inline-block;\n  zoom: 1;\n  width: 25%;\n  text-align: center;\n  height: 55px;\n  line-height: 55px;\n}\n.eg-calendar-body .calendar .month-list span i {\n  font-style: normal;\n  padding: 4px 9px;\n  -webkit-border-radius: 500px;\n  -moz-border-radius: 500px;\n  border-radius: 500px;\n  cursor: pointer;\n}\n.eg-calendar-body .calendar .month-list span i:hover:not(.eg-selected) {\n  background: #f0f0f0;\n}\n.eg-calendar-body .old {\n  color: #cccccc;\n}\n.eg-calendar-body .head {\n  color: #999;\n}\n.eg-icon-prev:hover,\n.eg-icon-next:hover {\n  background: #f0f0f0;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-table {\n  background: #ffffff;\n  border-spacing: 0px;\n  border-collapse: separate;\n  padding: 0px 20px 10px 20px;\n  font-size: 14px;\n  width: 100%;\n}\n.eg-table tr {\n  /*td[rowspan]{\n      border-bottom: 1px solid @tr-split-line;\n    }*/\n}\n.eg-table tr.eg-tr-split td {\n  border-bottom: 1px solid #dddddd;\n}\n.eg-table tr td,\n.eg-table tr th {\n  padding: 10px 15px;\n  text-align: left;\n  position: relative;\n}\n.eg-table tr th {\n  color: #999;\n}\n.eg-table tr td {\n  color: #333333;\n}\n.eg-table thead th {\n  border-bottom: 2px solid #dddddd;\n}\n.eg-table tbody tr:nth-of-type(2n) {\n  background: #f7f7f7;\n}\n/**面板*/\n.eg-panel {\n  margin-bottom: 20px;\n  background-color: #fff;\n  border: 1px solid #dddddd;\n  border-radius: 4px;\n  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);\n  overflow-x: hidden;\n}\n.eg-panel .eg-panel-header {\n  padding: 10px 15px;\n  border-bottom: 1px solid transparent;\n  border-radius: 3px 3px 0px 0px;\n  color: #333;\n  background-color: #eeeeee;\n  border-color: #ddd;\n}\n.eg-panel .eg-panel-footer {\n  background-color: #eeeeee;\n  border-top: 1px solid #ddd;\n  border-radius: 0px 0px 3px 3px;\n}\n/**添加padding*/\n.eg-panel-padding {\n  padding: 10px 15px;\n}\n.eg-tab-item {\n  cursor: pointer;\n  display: inline-block;\n  min-width: 100px;\n  box-sizing: border-box;\n  padding: 5px 15px;\n  text-align: center;\n  border-bottom: 1px solid #dddddd;\n}\n.eg-tab-item:hover {\n  text-decoration: none;\n  color: #f25300;\n  background: #dddddd;\n  border-bottom: 1px solid #dddddd;\n}\n.eg-tab-item.eg-tab-active {\n  color: #f25300;\n  border-bottom: 1px solid #f25300;\n  box-shadow: 0px -3px 0px 0px #f25300 inset;\n  cursor: default;\n}\n.eg-tab-item.eg-tab-active:hover {\n  background: transparent;\n  border-bottom: 1px solid #f25300;\n}\n.eg-select-container {\n  width: 300px;\n  position: relative;\n  display: inline-block;\n  margin-right: 15px;\n  /*箭头*/\n}\n.eg-select-container ul {\n  background: #fff;\n  position: absolute;\n  width: inherit;\n  top: 39px;\n  left: 0px;\n  display: block;\n  border: #dadbdd solid 1px;\n  border-radius: 0px 0px 4px 4px;\n  max-height: 150px;\n  overflow: auto;\n}\n.eg-select-container ul li {\n  text-indent: 10px;\n  padding: 5px 0;\n  cursor: pointer;\n}\n.eg-select-container ul li:hover,\n.eg-select-container ul li:focus {\n  color: #ff717d;\n}\n.eg-select-container ul li.active {\n  color: #ff717d;\n}\n.eg-select-container .eg-select-ul {\n  display: none;\n  /*定义滚动条轨道 内阴影+圆角*/\n  /*定义滑块 内阴影+圆角*/\n}\n.eg-select-container .eg-select-ul::-webkit-scrollbar {\n  width: 16px;\n  height: 16px;\n  background-color: #fff;\n}\n.eg-select-container .eg-select-ul::-webkit-scrollbar-track {\n  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);\n  border-radius: 10px;\n  background-color: #fff;\n}\n.eg-select-container .eg-select-ul::-webkit-scrollbar-thumb {\n  border-radius: 10px;\n  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);\n  background-color: #fff;\n}\n.eg-select-container .eg-select-show {\n  display: block;\n}\n.eg-select-container .eg-select-arrow-up,\n.eg-select-container .eg-select-arrow-down {\n  position: absolute;\n  right: 10px;\n  display: inline-block;\n  cursor: pointer;\n  z-index: 10;\n  border-top: 5px solid transparent;\n  border-right: 5px solid transparent;\n  border-left: 5px solid #bbbbbb;\n  border-bottom: 5px solid #bbbbbb;\n}\n.eg-select-container .eg-select-arrow-down {\n  transform: rotate(-45deg);\n  top: 16px;\n}\n.eg-select-container .eg-select-arrow-up {\n  transform: rotate(135deg);\n  top: 13px;\n}\n.eg-tooltip-container .eg-tooltip-wraper {\n  display: none;\n  position: absolute;\n  z-index: 9001;\n  background: #000;\n  opacity: 0.4;\n  color: #fff;\n  max-width: 300px;\n  font-size: 13px;\n  padding: 5px;\n  text-align: left;\n  border-radius: 3px;\n  box-shadow: 0px 1px 5px 2px #bbbbbb;\n  margin: 5px 0px;\n}\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip {\n  position: relative;\n}\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip .eg-tooltip-arrow {\n  border-width: 5px;\n  border-style: dashed;\n  border-color: transparent transparent #000 transparent;\n  position: absolute;\n  left: 18px;\n  top: -15px;\n  height: 0;\n  width: 0;\n  line-height: 0;\n}\n.eg-tooltip-container .eg-tooltip-show {\n  display: block;\n}\n.eg-marquee-container {\n  position: relative;\n  display: inline-block;\n  width: 380px;\n  height: auto;\n  padding: 0px 0px;\n  border: #cc3333 2px solid;\n  overflow: hidden;\n  border-radius: 3px;\n  background: #fff;\n}\n.eg-marquee-container .eg-marquee-new-tip {\n  position: absolute;\n  top: -26px;\n  left: -24px;\n  z-index: 90001;\n  background: #4fd564;\n  color: #fff;\n  width: 50px;\n  height: 61px;\n  transform: rotate(45deg);\n}\n.eg-marquee-container .eg-marquee-new-tip .eg-marquee-new {\n  display: inline-block;\n  position: relative;\n  top: 20px;\n  left: 31px;\n  transform: rotate(-45deg);\n}\n.eg-marquee-container .eg-marquee-check {\n  position: absolute;\n  right: 0px;\n  top: 0px;\n  z-index: 90001;\n}\n.eg-marquee-container img {\n  width: 100%;\n  height: auto;\n}\n.eg-marquee-container .eg-marquee-title {\n  color: #333333;\n  font-size: 16px;\n  font-weight: bolder;\n  line-height: 17px;\n  margin: 15px 10px 5px 10px;\n}\n.eg-marquee-container .eg-marquee-content {\n  color: #999;\n  font-size: 14px;\n  line-height: 15px;\n  margin: 10px 10px;\n}\n.eg-marquee-container .eg-marquee-tips {\n  position: relative;\n  color: #999;\n  font-size: 14px;\n  margin: 15px 10px 5px 10px;\n}\n.eg-marquee-container .eg-bars {\n  position: relative;\n  display: inline-block;\n  background: #999;\n  padding: 5px;\n  margin-right: 10px;\n}\n.eg-marquee-container .eg-bars:before,\n.eg-marquee-container .eg-bars:after {\n  position: absolute;\n  content: '';\n  display: inline-block;\n}\n.eg-marquee-container .eg-bars:before {\n  top: 0px;\n  left: 10px;\n  border-width: 5px;\n  border-style: dashed dashed solid;\n  border-color: transparent transparent transparent #999;\n}\n.eg-marquee-container .eg-bars:after {\n  top: 4px;\n  left: 7.5px;\n  z-index: 10;\n  border: 1.5px solid #fff;\n  border-radius: 5px;\n}\n.eg-input-checkboxs {\n  position: relative;\n  height: 35px;\n  top: -5px;\n  width: 35px;\n  display: inline-block;\n}\n.eg-input-checkboxs input[type=\"checkbox\"] {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  cursor: pointer;\n  pointer-events: all;\n  opacity: 0;\n  z-index: 2;\n  left: 0;\n}\n.eg-input-checkboxs .box {\n  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;\n  float: left;\n  position: relative;\n  display: block;\n  width: 16px;\n  margin-right: 10px;\n  margin-left: 0;\n  height: 24px;\n}\n.eg-input-checkboxs .box .checkbox {\n  width: 35px;\n  height: 35px;\n  border: 1px solid #999;\n  position: relative;\n  top: 5px;\n  left: 1px;\n  -webkit-border-radius: 2px;\n  -moz-border-radius: 2px;\n  border-radius: 2px;\n  background: #ffffff;\n}\n.eg-input-checkboxs .box .checkbox .round {\n  display: none;\n}\n.eg-input-checkboxs label {\n  float: left;\n  position: relative;\n  display: block;\n  line-height: 24px;\n}\n.eg-input-checkboxs-active .box .checkbox {\n  background: #ee5511;\n  border-color: #ee5511;\n}\n.eg-input-checkboxs-active .box .eg-icon-tick:before {\n  height: 9px;\n  width: 2px;\n  left: 11px;\n  top: 13px;\n}\n.eg-input-checkboxs-active .box .eg-icon-tick:after {\n  height: 17px;\n  width: 2px;\n  left: 19px;\n  top: 6px;\n}\n.eg-input-checkboxs-disabled .box .checkbox {\n  background: #eeeeee;\n  color: #999;\n  border-color: #cccccc;\n}\n.eg-input-checkboxs-disabled .box .eg-icon-tick:before {\n  background-color: #fefefe;\n}\n.eg-input-checkboxs-disabled .box .eg-icon-tick:after {\n  background-color: #fefefe;\n}\n.eg-input-checkboxs-disabled label {\n  color: #999;\n}\n.eg-input-checkboxs-disabled .box .checkbox {\n  background: #cccccc;\n  color: #999;\n}\n.eg-list .eg-item {\n  background-color: #ffffff;\n  color: #333333;\n  position: relative;\n  display: block;\n  padding: 10px 15px;\n  border-bottom: 1px solid #dddddd;\n  font-size: 14px;\n}\n.eg-list .eg-item:last-child {\n  border-bottom: none;\n}\n/**按钮组*/\n.eg-validate .eg-validate-error {\n  outline: none;\n  border-color: #dd514c;\n}\n.eg-validate .eg-validate-tips {\n  position: absolute;\n  padding: 4px 10px;\n  display: none;\n}\n.eg-validate .eg-validate-tips i {\n  border-radius: 50%;\n  display: inline-block;\n  background: #dd514c;\n  width: 18px;\n  height: 18px;\n  top: 50%;\n  left: 0;\n  margin-top: -10px;\n  position: absolute;\n}\n.eg-validate .eg-validate-tips i:before {\n  height: 2px;\n  width: 2px;\n  background: #fff;\n  left: 8px;\n  top: 13px;\n  position: absolute;\n  content: \"\";\n  opacity: 0.9;\n}\n.eg-validate .eg-validate-tips i:after {\n  height: 8px;\n  width: 2px;\n  background: #fff;\n  left: 8px;\n  top: 4px;\n  position: absolute;\n  content: \"\";\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 25 */
+/* 26 */
 /***/ function(module, exports) {
 
 	/*
@@ -408,7 +409,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 26 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -633,7 +634,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 27 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -650,15 +651,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _utilsClassNameMixin = __webpack_require__(30);
+	var _utilsClassNameMixin = __webpack_require__(31);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
@@ -705,13 +706,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 28 */
+/* 29 */
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_28__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_29__;
 
 /***/ },
-/* 29 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -765,7 +766,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 /***/ },
-/* 30 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -775,7 +776,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _constantsJs = __webpack_require__(31);
+	var _constantsJs = __webpack_require__(32);
 
 	var consts = _constantsJs.classConstants;
 
@@ -877,8 +878,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @param cls {String} 需要检查的样式名
 	     * @return {Boolean}
 	     * */
-	    obj.prototype.hasClass = function (obj, cls) {
-	        return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
+	    obj.prototype.hasClass = function () {
+	        return arguments[0].className.match(new RegExp('(\\s|^)' + arguments[1] + '(\\s|$)'));
 	    };
 
 	    /**
@@ -888,7 +889,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @param cls {String} 样式名
 	     * */
 	    obj.prototype.addClass = function (obj, cls) {
-	        if (!this.hasClass(obj, cls)) obj.className += " " + cls;
+	        if (!this.hasClass(obj, cls)) {
+	            obj.className = (obj.className + " " + cls).replace(/\s{2,}/g, " ");
+	        }
 	    };
 	    /**
 	     * 给元素删除一个样式名
@@ -896,10 +899,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @param obj {Object} 元素
 	     * @param cls {String} 样式名
 	     * */
-	    obj.prototype.removeClass = function (obj, cls) {
-	        if (this.hasClass(obj, cls)) {
-	            var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
-	            obj.className = obj.className.replace(reg, ' ');
+	    obj.prototype.removeClass = function () {
+	        if (this.hasClass(arguments[0], arguments[1])) {
+	            var reg = new RegExp('(\\s|^)' + arguments[1] + '(\\s|$)');
+	            arguments[0].className = arguments[0].className.replace(reg, ' ').split(" ").join(" ");
 	        }
 	    };
 	};
@@ -907,7 +910,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 31 */
+/* 32 */
 /***/ function(module, exports) {
 
 	/**
@@ -968,7 +971,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.classConstants = classConstants;
 
 /***/ },
-/* 32 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -985,11 +988,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -1057,7 +1060,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 33 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//import RowLess from './row.less';
@@ -1075,11 +1078,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -1123,7 +1126,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 34 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1143,15 +1146,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(30);
+	var _utilsClassNameMixin = __webpack_require__(31);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -1299,7 +1302,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 35 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1319,15 +1322,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(30);
+	var _utilsClassNameMixin = __webpack_require__(31);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -1405,7 +1408,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 36 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1422,15 +1425,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(30);
+	var _utilsClassNameMixin = __webpack_require__(31);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames10 = __webpack_require__(29);
+	var _classnames10 = __webpack_require__(30);
 
 	var _classnames11 = _interopRequireDefault(_classnames10);
 
@@ -1587,7 +1590,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 37 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1609,11 +1612,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _InputJs = __webpack_require__(36);
+	var _InputJs = __webpack_require__(37);
 
 	var _InputJs2 = _interopRequireDefault(_InputJs);
 
@@ -1707,7 +1710,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 38 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1727,15 +1730,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(30);
+	var _utilsClassNameMixin = __webpack_require__(31);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -1816,23 +1819,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 39 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Created by panqianjin on 15/11/3.
 	 */
-	/**
-	 面包屑组件
-	 Features :
-	 实现面包屑导航样式
-
-	 Update Note:
-	 +2015.11.03 ： Created
-
-	 @moudle Crumb
-	 */
-
 	'use strict';
 
 	exports.__esModule = true;
@@ -1845,50 +1837,66 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(30);
+	var _utilsClassNameMixin = __webpack_require__(31);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _GridJs = __webpack_require__(27);
+	var _GridJs = __webpack_require__(28);
 
 	var _GridJs2 = _interopRequireDefault(_GridJs);
 
-	var _RowJs = __webpack_require__(33);
+	var _RowJs = __webpack_require__(34);
 
 	var _RowJs2 = _interopRequireDefault(_RowJs);
 
 	/**
-	 * 主体类:crumd
-	 * 只需在Crumb下面应包含子节点
-	 * 如 <<item url="dddd.html">>菜单<</item>>形式，最后一个应无url值.
-	 * 即，this.props.children 不为空
+	 * 面包屑组件
 	 * @class crumb
+	 * @module ui
+	 * @extends Component
+	 * @constructor
+	 * @since 0.1.0
+	 * @demo src/crumb.js{js}
+	 * @demo crumb.html
+	 * @show true
 	 * */
 
 	var Crumb = (function (_Component) {
 	    _inherits(Crumb, _Component);
 
 	    _createClass(Crumb, null, [{
+	        key: 'propTypes',
+	        value: {
+	            /**
+	             * 类名样式前缀
+	             * @property classPrefix
+	             * @type sting
+	             * @default crumb
+	             * */
+	            classPrefix: _react.PropTypes.string,
+	            /**
+	             * 标签tagName
+	             * @property componentTag
+	             * @type String
+	             * @default div
+	             * */
+	            componentTag: _react.PropTypes.string
+	        },
+	        enumerable: true
+	    }, {
 	        key: 'defaultProps',
 	        value: {
 	            classPrefix: 'crumb',
 	            componentTag: 'div'
 	        },
-
-	        /**
-	          构造函数
-	          @method constructor
-	          @param {object} props 父组件属性
-	          @param {object} cotext 上下文环境
-	         */
 	        enumerable: true
 	    }]);
 
@@ -1899,10 +1907,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    /**
-	      渲染方法
-	      @method render
-	      @param none
-	      @return {object} 对应dom结构
+	     * @method render
+	     * @return {ReactElement}
 	     */
 
 	    Crumb.prototype.render = function render() {
@@ -1939,7 +1945,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 40 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1954,35 +1960,35 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(30);
+	var _utilsClassNameMixin = __webpack_require__(31);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _InputJs = __webpack_require__(36);
+	var _InputJs = __webpack_require__(37);
 
 	var _InputJs2 = _interopRequireDefault(_InputJs);
 
-	var _ButtonJs = __webpack_require__(34);
+	var _ButtonJs = __webpack_require__(35);
 
 	var _ButtonJs2 = _interopRequireDefault(_ButtonJs);
 
-	var _RowJs = __webpack_require__(33);
+	var _RowJs = __webpack_require__(34);
 
 	var _RowJs2 = _interopRequireDefault(_RowJs);
 
-	var _ColJs = __webpack_require__(32);
+	var _ColJs = __webpack_require__(33);
 
 	var _ColJs2 = _interopRequireDefault(_ColJs);
 
-	var _GridJs = __webpack_require__(27);
+	var _GridJs = __webpack_require__(28);
 
 	var _GridJs2 = _interopRequireDefault(_GridJs);
 
@@ -2030,7 +2036,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        'div',
 	                        { style: { width: '100%' } },
 	                        _react2['default'].createElement(_InputJs2['default'], { ref: this.props.name, id: this.props.id, placeholder: this.props.placeholder,
-	                            onChange: this.changeValue.bind(this), onKeyPress: this.keyIn.bind(this), onKeyPress: this.keyIn.bind(this) })
+	                            onChange: this.changeValue.bind(this), onKeyPress: this.keyIn.bind(this) })
 	                    )
 	                ),
 	                _react2['default'].createElement(
@@ -2086,7 +2092,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 41 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2104,33 +2110,44 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(30);
+	var _utilsClassNameMixin = __webpack_require__(31);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames3 = __webpack_require__(29);
+	var _classnames3 = __webpack_require__(30);
 
 	var _classnames4 = _interopRequireDefault(_classnames3);
 
-	var _InputJs = __webpack_require__(36);
+	var _InputJs = __webpack_require__(37);
 
 	var _InputJs2 = _interopRequireDefault(_InputJs);
 
-	var _RowJs = __webpack_require__(33);
+	var _RowJs = __webpack_require__(34);
 
 	var _RowJs2 = _interopRequireDefault(_RowJs);
 
-	var _ColJs = __webpack_require__(32);
+	var _ColJs = __webpack_require__(33);
 
 	var _ColJs2 = _interopRequireDefault(_ColJs);
 
-	var _GridJs = __webpack_require__(27);
+	var _GridJs = __webpack_require__(28);
 
 	var _GridJs2 = _interopRequireDefault(_GridJs);
+
+	/**
+	 * 下拉选择框组件
+	 * @Class Select
+	 * @Module form
+	 * @extends Coponent
+	 * @since 0.1.0
+	 * @demo src/select.js{js}
+	 * @demo select.html{html}
+	 * @show true
+	 * */
 
 	var Select = (function (_Component) {
 	    _inherits(Select, _Component);
@@ -2138,14 +2155,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _createClass(Select, null, [{
 	        key: 'defaultProps',
 	        value: {
+	            /**
+	             * 回调方法，主要作用将value传给父级元素。默认为null
+	             * @property callback
+	             * @type func
+	             * @default null
+	             * */
 	            callback: null,
-	            name: 'select',
-	            id: '1',
+	            /**
+	             * 样式类名前缀
+	             * @property classPrefix
+	             * @type string
+	             *
+	             * */
 	            classPrefix: 'select',
 	            componentTag: 'div',
 	            value: '',
+	            key: '',
 	            show: false,
-	            target: '0'
+	            target: '0',
+	            autoVal: ''
 	        },
 	        enumerable: true
 	    }]);
@@ -2156,21 +2185,39 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _Component.call(this, props, context);
 	        this.state = {
 	            show: this.props.show,
-	            value: this.props.value
+	            value: this.props.value,
+	            autoVal: this.props.autoVal,
+	            key: this.props.key
 	        };
 	    }
+
+	    /**
+	     * 第一次渲染完成后执行,为document添加点击监听事件，判断是否关闭ul
+	     * 生命周期方法
+	     * @method componentDidMount
+	     * */
 
 	    Select.prototype.componentDidMount = function componentDidMount() {
 	        var _this = this;
 	        var selectContair = ReactDOM.findDOMNode(this.refs.selectContair);
 	        document.addEventListener('click', function (e) {
 	            if (_this.isParent(e.target, selectContair)) {
-	                console.dir('不要动');
+	                //console.dir('不要动');
 	            } else {
-	                _this.hideUl();
-	            }
+	                    if (_this.state.show) {
+	                        _this.hideUl();
+	                    }
+	                }
 	        }, false);
 	    };
+
+	    /**
+	     * 判断obj是否为parentObj的子元素
+	     * @method isParent
+	     * @param obj {Object}
+	     * @param parentObj {Object}
+	     * @return {Boolean}
+	     * */
 
 	    Select.prototype.isParent = function isParent(obj, parentObj) {
 	        while (obj != undefined && obj != null) {
@@ -2182,18 +2229,44 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return false;
 	    };
 
+	    /**
+	     * 显示选项列表,当ul关闭时才changestate
+	     * @method showUl
+	     * @return null
+	     * */
+
 	    Select.prototype.showUl = function showUl() {
-	        this.setState({
-	            show: true
-	        });
+	        if (!this.state.show) {
+	            this.setState({
+	                show: true
+	            });
+	        }
 	    };
 
-	    Select.prototype.showAutoUl = function showAutoUl() {
+	    /**
+	     * 显示auto自动补充选项列表
+	     * @method showAutoUl
+	     * @param event {Object}
+	     * @return null
+	     * */
+
+	    Select.prototype.showAutoUl = function showAutoUl(event) {
 	        this.setState({
-	            show: true
+	            value: event.target.value
 	        });
+	        if (!this.state.show) {
+	            this.setState({
+	                show: true
+	            });
+	        }
 	        this.changeValue();
 	    };
+
+	    /**
+	     * 点击倒三角icon时，控制ul的显示与否
+	     * @method toogleUl
+	     * @return null
+	     * */
 
 	    Select.prototype.toogleUl = function toogleUl() {
 	        this.setState({
@@ -2201,122 +2274,283 @@ return /******/ (function(modules) { // webpackBootstrap
 	        });
 	    };
 
+	    /**
+	     * 取得当前选中值，父级回调存在的话调用
+	     * @method callBacks
+	     * @return null
+	     * */
+
 	    Select.prototype.callBacks = function callBacks() {
 	        var val = this.state.value;
-	        this.setState({
-	            show: false
-	        });
+	        if (this.state.show) {
+	            this.setState({
+	                show: false
+	            });
+	        }
+	        console.log(ReactDOM.findDOMNode(this.refs.test).value);
 	        this.props.callback && this.props.callback(val);
 	    };
 
+	    /**
+	     * 改变input的value
+	     * @method handlerValue
+	     * @param event {Object}
+	     * @return null
+	     * */
+
 	    Select.prototype.handlerValue = function handlerValue(event) {
+	        //console.log(event.target.value);
+	        var val = event.target.value;
 	        this.setState({
-	            value: event.target.value
+	            value: val,
+	            autoVal: val
 	        });
 	        this.changeValue();
 	    };
+
+	    /**
+	     * 延时2s后点用callBacks方法
+	     * @method changeValue
+	     * @return null
+	     * */
 
 	    Select.prototype.changeValue = function changeValue() {
 	        clearTimeout(this.timeout);
 	        this.timeout = setTimeout(this.callBacks.bind(this), 2000);
 	    };
 
+	    /**
+	     * 点击或者enter键时，选择当前li的值，并关闭ul
+	     * @method chooseItem
+	     * @param event {Object}
+	     * @return null
+	     * */
+
 	    Select.prototype.chooseItem = function chooseItem(event) {
-	        //debugger
-	        //react 避免直接取dom
-	        //这么写的原因在于Input是外层包了div，直接拿不到input。。
+	        var ulChildren = ReactDOM.findDOMNode(this.refs.selectUl).children;
 	        var inputObj = ReactDOM.findDOMNode(this.refs.select);
-	        //inputObj.value = event.target.textContent;
+	        this.removeAllActive(ulChildren);
+	        event.target.classList.add('active');
 	        this.setState({
 	            show: !this.state.show,
-	            value: event.target.textContent
+	            value: event.target.textContent,
+	            key: event.target.value
 	        });
 	        inputObj.focus();
 	        this.changeValue();
 	    };
 
+	    /**
+	     * 关闭ul，当前ul显示时起作用
+	     * @method hideUl
+	     * @return null
+	     * */
+
 	    Select.prototype.hideUl = function hideUl() {
-	        this.setState({
-	            show: false
+	        if (this.state.show) {
+	            this.setState({
+	                show: false
+	            });
+	        }
+	    };
+
+	    /**
+	     * target为flase移除li的active状态，否则将obj子元素的值付给state.value
+	     * @method removeAllActive
+	     * @param obj {Object}
+	     * @param target {Boolean}
+	     * @return null
+	     * */
+	    //@target: is changState
+
+	    Select.prototype.removeAllActive = function removeAllActive(obj, target) {
+	        var _this2 = this;
+
+	        Array.prototype.slice.call(obj).map(function (item, index) {
+	            if (item.className.indexOf('active') > -1) {
+	                if (target) {
+	                    _this2.setState({
+	                        value: item.textContent
+	                    });
+	                } else {
+	                    item.classList.remove('active');
+	                }
+	            }
 	        });
 	    };
 
+	    /**
+	    * keydown时触发，不通方向键分别对应不同方法
+	    * @method keyIn
+	    * @param event {Object}
+	    * @return null
+	    * */
+
 	    Select.prototype.keyIn = function keyIn(event) {
-	        //debugger
-	        if (event.keyCode == 40) {
-	            this.setState({
-	                show: true
-	            });
-	            var _this = this;
-	            var selectUl = ReactDOM.findDOMNode(this.refs.selectUl);
-	            if (_this.isParent(event.target, selectUl)) {
-	                event.target.nextSibling ? event.target.nextSibling.focus() : event.target.focus();
-	            } else {
-	                selectUl.children[0].focus();
+	        var selectUl = ReactDOM.findDOMNode(this.refs.selectUl);
+	        var ulChildren = ReactDOM.findDOMNode(this.refs.selectUl).children;
+	        var ulArrey = Array.prototype.slice.call(ulChildren);
+	        var i = -1;
+	        var obj = ulChildren[0];
+	        if (event.keyCode == 40 || event.keyCode == 38) {
+	            /**
+	             * 当ul显示时，方向键移动起作用
+	             * 遍历寻找当前active元素的位置，并移除active
+	             * */
+	            if (this.state.show) {
+	                ulArrey.map(function (item, index) {
+	                    if (item.className.indexOf('active') > -1) {
+	                        i = index;
+	                        item.classList.remove('active');
+	                    }
+	                });
+	                if (event.keyCode == 40) {
+	                    /**
+	                     * 下方向键，判断active元素是否为最后一个，是则不再向下否则i+1
+	                     * */
+	                    obj = i == ulChildren.length - 1 ? ulChildren[i] : ulChildren[i + 1];
+	                } else {
+	                    /**
+	                     * 上方向键，判断active元素是否为第一个，是则不再向上否则i－1
+	                     * */
+	                    obj = i == 0 ? ulChildren[i] : ulChildren[i - 1];
+	                }
+	                obj.classList.add('active');
+	                /**
+	                 * 如果active为第五个元素之前的元素，则scrollTop不变，否则每向下一个，scrollTop加30
+	                 * */
+	                selectUl.scrollTop = i < 4 ? 0 : (i - 3) * 30;
 	            }
 	        } else if (event.keyCode == 13) {
+	            /**
+	             * enter键，取得当前元素值
+	             * */
 	            this.setState({
 	                show: false
 	            });
+	            this.removeAllActive(ulChildren, true);
 	            this.changeValue();
 	        }
 	    };
 
-	    Select.prototype.keyInUl = function keyInUl(e) {
-	        debugger;
-	        if (e.charCode == 13) {
-	            this.setState({
-	                show: false
-	            });
-	            this.chooseItem();
-	            this.changeValue();
+	    /**
+	     * 为选中li元素增加active class
+	     * @method addActive
+	     * @param event {Object}
+	     * @return null
+	     * */
+
+	    Select.prototype.addActive = function addActive(event) {
+	        var obj = event.target;
+	        var ulChildren = ReactDOM.findDOMNode(this.refs.selectUl).children;
+	        this.removeAllActive(ulChildren, false);
+	        obj.classList.add('active');
+	    };
+
+	    /**
+	     * 为li元素移除active class
+	     * @method removeActive
+	     * @param event {Object}
+	     * @return null
+	     * */
+
+	    Select.prototype.removeActive = function removeActive(event) {
+	        var obj = event.target;
+	        if (this.state.show) {
+	            obj.classList.remove('active');
 	        }
 	    };
+
+	    /**
+	     * 渲染li元素，并根据autoVal来匹配获得符合元素
+	     * this.state.autoVal 为input输入值，初始为.*匹配任意
+	     * @method renderLi
+	     * @return li {ReactElement}
+	     * */
+
+	    Select.prototype.renderLi = function renderLi() {
+	        var _this3 = this;
+
+	        var autoVal = this.state.autoVal == '' ? '.*' : this.state.autoVal;
+	        var reg = new RegExp(autoVal, "g");
+	        var li = _react2['default'].Children.map(this.props.children, function (item) {
+	            if (reg.test(item.props.children)) {
+	                return _react2['default'].createElement(
+	                    'li',
+	                    { value: item.props.value, onMouseOver: _this3.addActive.bind(_this3), onMouseOut: _this3.removeActive.bind(_this3), onClick: _this3.chooseItem.bind(_this3) },
+	                    item.props.children
+	                );
+	            }
+	        }, this);
+
+	        return li;
+	    };
+
+	    Select.prototype.renderOption = function renderOption() {
+	        var option = _react2['default'].Children.map(this.props.children, function (item) {
+	            return _react2['default'].createElement(
+	                'option',
+	                { value: item.props.value },
+	                item.props.children
+	            );
+	        }, this);
+	        return option;
+	    };
+
+	    /**
+	     * 渲染select
+	     * @method renderSelect
+	     * @return {ReactElement}
+	     * */
 
 	    Select.prototype.renderSelect = function renderSelect() {
-	        var _classnames,
-	            _this2 = this;
+	        var _classnames;
+
+	        return _react2['default'].createElement(
+	            _GridJs2['default'],
+	            { ref: 'selectContair', className: _classnames4['default'](this.getClassNamesForArguments('container')), value: this.state.value },
+	            _react2['default'].createElement(
+	                'select',
+	                { ref: 'test', value: this.state.key, style: { display: 'none' } },
+	                this.renderOption()
+	            ),
+	            _react2['default'].createElement(_InputJs2['default'], { ref: 'select', value: this.state.value, onClick: this.showUl.bind(this), onChange: this.handlerValue.bind(this), onKeyDown: this.keyIn.bind(this) }),
+	            _react2['default'].createElement('i', { className: _classnames4['default'](this.getClassName('arrow-up')), onClick: this.toogleUl.bind(this) }),
+	            _react2['default'].createElement('i', { className: _classnames4['default'](this.getClassName('arrow-down')), onClick: this.toogleUl.bind(this) }),
+	            _react2['default'].createElement(
+	                'ul',
+	                { ref: 'selectUl', className: _classnames4['default'](this.getClassNamesForArguments('ul'), (_classnames = {}, _classnames[this.getClassName('show')] = this.state.show, _classnames)) },
+	                this.renderLi()
+	            )
+	        );
+	    };
+
+	    /**
+	     * 渲染自动补全的输入框
+	     * @method renderAuto
+	     * @return {ReactElement}
+	     * */
+
+	    Select.prototype.renderAuto = function renderAuto() {
+	        var _classnames2;
 
 	        return _react2['default'].createElement(
 	            _GridJs2['default'],
 	            { ref: 'selectContair', className: _classnames4['default'](this.getClassNamesForArguments('container')) },
-	            _react2['default'].createElement(_InputJs2['default'], { ref: this.props.name, value: this.state.value, onClick: this.showUl.bind(this), onChange: this.handlerValue.bind(this), onKeyDown: this.keyIn.bind(this) }),
-	            _react2['default'].createElement('i', { className: _classnames4['default'](this.getClassName('arrow')), onClick: this.toogleUl.bind(this) }),
+	            _react2['default'].createElement(_InputJs2['default'], { ref: 'select', value: this.state.value, onChange: this.showAutoUl.bind(this), onKeyDown: this.keyIn.bind(this) }),
 	            _react2['default'].createElement(
 	                'ul',
-	                { ref: 'selectUl', className: _classnames4['default'](this.getClassNamesForArguments('ul'), (_classnames = {}, _classnames[this.getClassName('show')] = this.state.show, _classnames)), onKeyPress: this.keyInUl.bind(this) },
-	                this.props.children.map(function (item) {
-	                    return _react2['default'].createElement(
-	                        'li',
-	                        { value: item.props.children, onClick: _this2.chooseItem.bind(_this2) },
-	                        item.props.children
-	                    );
-	                })
+	                { ref: 'selectUl', className: _classnames4['default'](this.getClassNamesForArguments('ul'), (_classnames2 = {}, _classnames2[this.getClassName('show')] = this.state.show, _classnames2)) },
+	                this.renderLi()
 	            )
 	        );
 	    };
 
-	    Select.prototype.renderAuto = function renderAuto() {
-	        var _classnames2,
-	            _this3 = this;
-
-	        return _react2['default'].createElement(
-	            _GridJs2['default'],
-	            { className: _classnames4['default'](this.getClassNamesForArguments('container')) },
-	            _react2['default'].createElement(_InputJs2['default'], { ref: this.props.name, value: this.state.value, onChange: this.showAutoUl.bind(this) }),
-	            _react2['default'].createElement(
-	                'ul',
-	                { className: _classnames4['default'](this.getClassNamesForArguments('ul'), (_classnames2 = {}, _classnames2[this.getClassName('show')] = this.state.show, _classnames2)) },
-	                this.props.children.map(function (item) {
-	                    return _react2['default'].createElement(
-	                        'li',
-	                        { value: item.props.children, onKeyPress: _this3.keyInUl.bind(_this3), onClick: _this3.chooseItem.bind(_this3) },
-	                        item.props.children
-	                    );
-	                })
-	            )
-	        );
-	    };
+	    /**
+	     * 根据auto存在与否渲染不同类型的元素
+	     * @method render
+	     * @return {ReactElement}
+	     * */
 
 	    Select.prototype.render = function render() {
 	        return this.props.auto ? this.renderAuto() : this.renderSelect();
@@ -2331,7 +2565,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 42 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2353,31 +2587,31 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(30);
+	var _utilsClassNameMixin = __webpack_require__(31);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames2 = __webpack_require__(29);
+	var _classnames2 = __webpack_require__(30);
 
 	var _classnames3 = _interopRequireDefault(_classnames2);
 
-	var _GridJs = __webpack_require__(27);
+	var _GridJs = __webpack_require__(28);
 
 	var _GridJs2 = _interopRequireDefault(_GridJs);
 
-	var _RowJs = __webpack_require__(33);
+	var _RowJs = __webpack_require__(34);
 
 	var _RowJs2 = _interopRequireDefault(_RowJs);
 
-	var _ColJs = __webpack_require__(32);
+	var _ColJs = __webpack_require__(33);
 
 	var _ColJs2 = _interopRequireDefault(_ColJs);
 
-	var _LabelJs = __webpack_require__(38);
+	var _LabelJs = __webpack_require__(39);
 
 	var _LabelJs2 = _interopRequireDefault(_LabelJs);
 
@@ -2505,7 +2739,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 43 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2523,51 +2757,104 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(30);
+	var _utilsClassNameMixin = __webpack_require__(31);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames2 = __webpack_require__(29);
+	var _classnames2 = __webpack_require__(30);
 
 	var _classnames3 = _interopRequireDefault(_classnames2);
 
-	var _ButtonJs = __webpack_require__(34);
+	var _ButtonJs = __webpack_require__(35);
 
 	var _ButtonJs2 = _interopRequireDefault(_ButtonJs);
 
-	var _RowJs = __webpack_require__(33);
+	var _RowJs = __webpack_require__(34);
 
 	var _RowJs2 = _interopRequireDefault(_RowJs);
 
-	var _ColJs = __webpack_require__(32);
+	var _ColJs = __webpack_require__(33);
 
 	var _ColJs2 = _interopRequireDefault(_ColJs);
 
-	var _GridJs = __webpack_require__(27);
+	var _GridJs = __webpack_require__(28);
 
 	var _GridJs2 = _interopRequireDefault(_GridJs);
 
 	/**
-	 * @class  toast
-	 * @description three tips: success/error/loading
-	 * date 2015/211
+	 * 提示组件
+	 * @class toast
+	 * @module ui
+	 * @extends Component
+	 * @constructor
+	 * @since 0.1.0
+	 * @demo src/toast.js{js}
+	 * @demo toast.html
+	 * @show true
 	 * */
 
 	var Toast = (function (_Component) {
 	    _inherits(Toast, _Component);
 
 	    _createClass(Toast, null, [{
+	        key: 'propType',
+	        value: {
+	            /**
+	             * toast类型：分为success,error,loading 三种。默认success
+	             * @property type
+	             * @type String
+	             * @default success
+	             * */
+	            type: _react.PropTypes.string,
+	            /**
+	             * 文字信息
+	             * @property msg
+	             * @type String
+	             * @default 保存成功
+	             * */
+	            msg: _react.PropTypes.string,
+	            /**
+	             * tips n秒后消失 默认4秒
+	             * @property seconds
+	             * @type Integer
+	             * @default 4
+	             * */
+	            seconds: _react.PropTypes.number,
+	            /**
+	             * 是否显示遮罩，默认false
+	             * @property overlay
+	             * @type Boolean
+	             * @default false
+	             * */
+	            overlay: _react.PropTypes.boolean,
+	            /**
+	             * 类名样式前缀
+	             * @property classPrefix
+	             * @type sting
+	             * @default crumb
+	             * */
+	            classPrefix: _react.PropTypes.string,
+	            /**
+	             * 标签tagName
+	             * @property componentTag
+	             * @type String
+	             * @default div
+	             * */
+	            componentTag: _react.PropTypes.string
+
+	        },
+	        enumerable: true
+	    }, {
 	        key: 'defaultProps',
 	        value: {
 	            type: 'sucess-tips',
 	            msg: '保存成功',
-	            overlay: false,
 	            seconds: 4,
-	            target: true,
+	            overlay: false,
 	            classPrefix: 'tips',
 	            componentTag: 'div'
 	        },
@@ -2579,27 +2866,34 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        _Component.call(this, props, context);
 	        this.state = {
+	            /**
+	             * 是否显示tips
+	             * @type Boolean
+	             * */
 	            show: this.props.show
 	        };
 	    }
 
 	    /**
-	     * @method  n seconds hide toast
+	     * 接收到新props时执行,props改变，改变state.show
+	     * @method componentWillReceiveProps
+	     *
 	     * */
-
-	    Toast.prototype.setTimeoutForClose = function setTimeoutForClose() {
-	        if (this.state.show) {
-	            var seconds = this.props.seconds * 1000;
-	            clearTimeout(this.timeout);
-	            this.timeout = setTimeout(this.closeToast.bind(this), seconds);
-	        }
-	    };
 
 	    Toast.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
 	        this.setState({
+	            /**
+	             * state.show随新的props里的值改变
+	             * @type Boolean
+	             * */
 	            show: nextProps.show
 	        });
 	    };
+
+	    /**
+	     * @method render
+	     * @return {ReactElement}
+	     * */
 
 	    Toast.prototype.render = function render() {
 	        var _classnames;
@@ -2607,29 +2901,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.setTimeoutForClose();
 	        return _react2['default'].createElement(
 	            _GridJs2['default'],
-	            { className: _classnames3['default'](this.getClassName('container'), (_classnames = {}, _classnames[this.getClassName('show')] = this.state.show, _classnames)) },
+	            { className: _classnames3['default'](this.getClassName('container'), (_classnames = {}, _classnames['fadein'] = this.state.show, _classnames['fadeout'] = !this.state.show, _classnames)) },
 	            this.toast(),
-	            this.showOverlay(this.props.target)
+	            this.showOverlay(this.props.overlay)
 	        );
 	    };
 
-	    Toast.prototype.closeToast = function closeToast() {
-	        this.props.closeCallback && this.props.closeCallback();
-	        this.setState({
-	            show: false
-	        });
-	    };
+	    /**
+	     * 是否展示遮罩层
+	     * @method showOverlay
+	     * @param target {Boolean}
+	     * return {ReactElement}
+	     * */
 
 	    Toast.prototype.showOverlay = function showOverlay(target) {
 	        if (target) {
-	            return _react2['default'].createElement(_GridJs2['default'], null);
-	        } else {
 	            return _react2['default'].createElement(_GridJs2['default'], { className: _classnames3['default'](this.getClassNamesForArguments('overlay'), 'clearfix') });
+	        } else {
+	            return _react2['default'].createElement(_GridJs2['default'], null);
 	        }
 	    };
 
 	    /**
-	     * @method render content
+	     * 渲染toast主体
+	     * @method toast
+	     * @return {ReactElement}
 	     * */
 
 	    Toast.prototype.toast = function toast() {
@@ -2653,6 +2949,33 @@ return /******/ (function(modules) { // webpackBootstrap
 	        );
 	    };
 
+	    /**
+	     * 延时n秒消失
+	     * @method  setTimeoutForClose
+	     * @return null
+	     * */
+
+	    Toast.prototype.setTimeoutForClose = function setTimeoutForClose() {
+	        if (this.state.show) {
+	            var seconds = this.props.seconds * 1000;
+	            clearTimeout(this.timeout);
+	            this.timeout = setTimeout(this.closeToast.bind(this), seconds);
+	        }
+	    };
+
+	    /**
+	     * 改变state.show 隐藏tips,并调用回调方法
+	     * @method closeToast
+	     * @return null
+	     * */
+
+	    Toast.prototype.closeToast = function closeToast() {
+	        this.props.closeCallback && this.props.closeCallback();
+	        this.setState({
+	            show: false
+	        });
+	    };
+
 	    var _Toast = Toast;
 	    Toast = _utilsClassNameMixin2['default'](Toast) || Toast;
 	    return Toast;
@@ -2662,7 +2985,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 44 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2677,15 +3000,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames2 = __webpack_require__(29);
+	var _classnames2 = __webpack_require__(30);
 
 	var _classnames3 = _interopRequireDefault(_classnames2);
 
-	var _utilsClassNameMixinJs = __webpack_require__(30);
+	var _utilsClassNameMixinJs = __webpack_require__(31);
 
 	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
 
@@ -2988,7 +3311,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 45 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3003,15 +3326,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames4 = __webpack_require__(29);
+	var _classnames4 = __webpack_require__(30);
 
 	var _classnames5 = _interopRequireDefault(_classnames4);
 
-	var _utilsClassNameMixinJs = __webpack_require__(30);
+	var _utilsClassNameMixinJs = __webpack_require__(31);
 
 	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
 
@@ -3567,7 +3890,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 46 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -3587,15 +3910,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(30);
+	var _utilsClassNameMixin = __webpack_require__(31);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -3645,7 +3968,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 47 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -3667,19 +3990,19 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(30);
+	var _utilsClassNameMixin = __webpack_require__(31);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _TabJs = __webpack_require__(46);
+	var _TabJs = __webpack_require__(47);
 
 	var _TabJs2 = _interopRequireDefault(_TabJs);
 
@@ -3785,25 +4108,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 48 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Created by panqianjin on 15/10/30.
 	 */
-	/**
-	 弹框组件
-	 Features :
-	 1.根据不同的type渲染不同的弹框样式
-	 2.根据需要提供callback
-
-
-	 Update Note:
-	 +2015.10.30 ： Created
-	 +2015.11.8 : Restructure
-	 @moudle Dialog
-	 */
-
 	'use strict';
 
 	exports.__esModule = true;
@@ -3816,54 +4126,106 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(30);
+	var _utilsClassNameMixin = __webpack_require__(31);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames2 = __webpack_require__(29);
+	var _classnames2 = __webpack_require__(30);
 
 	var _classnames3 = _interopRequireDefault(_classnames2);
 
-	var _ButtonJs = __webpack_require__(34);
+	var _ButtonJs = __webpack_require__(35);
 
 	var _ButtonJs2 = _interopRequireDefault(_ButtonJs);
 
-	var _RowJs = __webpack_require__(33);
+	var _RowJs = __webpack_require__(34);
 
 	var _RowJs2 = _interopRequireDefault(_RowJs);
 
-	var _ColJs = __webpack_require__(32);
+	var _ColJs = __webpack_require__(33);
 
 	var _ColJs2 = _interopRequireDefault(_ColJs);
 
-	var _GridJs = __webpack_require__(27);
+	var _GridJs = __webpack_require__(28);
 
 	var _GridJs2 = _interopRequireDefault(_GridJs);
 
 	/**
-	 * dialog 弹窗组件
-	 *
+	 * 弹框组件
 	 * @class dialog
-	 */
+	 * @module ui
+	 * @extends Component
+	 * @constructor
+	 * @since 0.1.0
+	 * @demo src/dialog.js{js}
+	 * @demo dialog.html
+	 * @show true
+	 * */
 
 	var Dialog = (function (_Component) {
 	    _inherits(Dialog, _Component);
 
 	    _createClass(Dialog, null, [{
+	        key: 'propType',
+	        value: {
+	            /**
+	             * dialog类型：分为alert,confirm,dialog,mask 四种。默认alert
+	             * @property type
+	             * @type String
+	             * @default alert
+	             * */
+	            type: _react.PropTypes.string,
+	            /**
+	             * 标题
+	             * @property title
+	             * @type String
+	             * @default 温馨提示
+	             * */
+	            title: _react.PropTypes.string,
+	            /**
+	             * 点击确定时，回调方法
+	             * @property successCallback
+	             * @type Function
+	             * @default null
+	             * */
+	            successCallback: _react.PropTypes.func,
+	            /**
+	             * 点击取消时，回调方法
+	             * @property cancelCallback
+	             * @type Function
+	             * @default null
+	             * */
+	            cancelCallback: _react.PropTypes.func,
+	            /**
+	             * 类名样式前缀
+	             * @property classPrefix
+	             * @type sting
+	             * @default crumb
+	             * */
+	            classPrefix: _react.PropTypes.string,
+	            /**
+	             * 标签tagName
+	             * @property componentTag
+	             * @type String
+	             * @default div
+	             * */
+	            componentTag: _react.PropTypes.string
+
+	        },
+	        enumerable: true
+	    }, {
 	        key: 'defaultProps',
 	        value: {
 	            successCallback: null, //success回掉函数
 	            cancelCallback: null, //cancel回调函数
 	            close: false, //是否有x图标
-	            title: '爱生活爱点评', //标题
-	            show: false,
+	            title: '温馨提示', //标题
 	            type: 'alert',
-	            tips: null,
-	            classPrefix: 'dialog', //类名前前缀
+	            classPrefix: 'dialog',
 	            componentTag: 'div'
 	        },
 	        enumerable: true
@@ -3879,8 +4241,37 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 
 	    /**
-	     * @method close dialog
-	     * @return change state
+	     * 接收到新props时执行,props是否存在show，是改变state.show，否则不变
+	     * 生命周期方法
+	     * @method componentWillReceiveProps
+	     * */
+
+	    Dialog.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+	        this.setState({
+	            show: nextProps.show ? nextProps.show : this.state.show
+	        });
+	    };
+
+	    /**
+	     * @method render
+	     * @return {ReactElement}
+	     * */
+
+	    Dialog.prototype.render = function render() {
+	        var _classnames;
+
+	        return _react2['default'].createElement(
+	            _GridJs2['default'],
+	            { className: _classnames3['default'](this.getClassName('container'), (_classnames = {}, _classnames['fadein'] = this.props.cancelCallback ? this.props.show : this.state.show, _classnames['fadeout'] = !(this.props.cancelCallback ? this.props.show : this.state.show), _classnames)) },
+	            this[this.props.type.toLowerCase()](),
+	            this.showOverlay(this.props.tips)
+	        );
+	    };
+
+	    /**
+	     * 点击X，调用cancelCallback（如果存在），否则通过改变自身state来关闭
+	     * @method closeDialog
+	     * @return null
 	     * */
 
 	    Dialog.prototype.closeDialog = function closeDialog() {
@@ -3893,9 +4284,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    /**
-	     * @method submit dialog
-	     * @return callBack;
-	     *         change state
+	     * 点击确定按钮，调用successCallback（如果存在），否则通过改变自身state来关闭
+	     * @method submitForm
+	     * @return null;
 	     * */
 
 	    Dialog.prototype.submitForm = function submitForm() {
@@ -3908,6 +4299,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	    };
 
+	    /**
+	     * 点击取消按钮，调用cancelCallback（如果存在），否则通过改变自身state来关闭
+	     * @method cancleDialog
+	     * @return null;
+	     * */
+
 	    Dialog.prototype.cancleDialog = function cancleDialog() {
 	        this.props.cancelCallback && this.props.cancelCallback();
 	        if (!this.props.cancelCallback) {
@@ -3918,8 +4315,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    /**
-	     * @method show dialog overly
-	     * @return dom
+	     * 显示遮罩
+	     * @method showOverlay
+	     * @return {ReactElement}
 	     * */
 
 	    Dialog.prototype.showOverlay = function showOverlay() {
@@ -3927,9 +4325,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    /**
-	     * @method render different dom
-	     * @name    face to this.props.type
-	     * @return  alert/confirm/dialog/mask
+	     * 渲染alert
+	     * @method alert
+	     * @return  {ReactElement}
 	     * */
 
 	    Dialog.prototype.alert = function alert() {
@@ -3969,6 +4367,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	            )
 	        );
 	    };
+
+	    /**
+	     * 渲染confirm
+	     * @method confirm
+	     * @return  {ReactElement}
+	     * */
 
 	    Dialog.prototype.confirm = function confirm() {
 	        return _react2['default'].createElement(
@@ -4018,6 +4422,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        );
 	    };
 
+	    /**
+	     * 渲染dialog
+	     * @method dialog
+	     * @return  {ReactElement}
+	     * */
+
 	    Dialog.prototype.dialog = function dialog() {
 	        return _react2['default'].createElement(
 	            _RowJs2['default'],
@@ -4066,6 +4476,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        );
 	    };
 
+	    /**
+	     * 渲染mask
+	     * @method mask
+	     * @return  {ReactElement}
+	     * */
+
 	    Dialog.prototype.mask = function mask() {
 	        return _react2['default'].createElement(
 	            _RowJs2['default'],
@@ -4096,23 +4512,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        );
 	    };
 
-	    Dialog.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
-	        this.setState({
-	            show: nextProps.show ? nextProps.show : this.state.show
-	        });
-	    };
-
-	    Dialog.prototype.render = function render() {
-	        var _classnames;
-
-	        return _react2['default'].createElement(
-	            _GridJs2['default'],
-	            { className: _classnames3['default'](this.getClassName('container'), (_classnames = {}, _classnames[this.getClassName('show')] = this.props.cancelCallback ? this.props.show : this.state.show, _classnames)) },
-	            this[this.props.type.toLowerCase()](),
-	            this.showOverlay(this.props.tips)
-	        );
-	    };
-
 	    var _Dialog = Dialog;
 	    Dialog = _utilsClassNameMixin2['default'](Dialog) || Dialog;
 	    return Dialog;
@@ -4122,7 +4521,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 49 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -4140,31 +4539,31 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(30);
+	var _utilsClassNameMixin = __webpack_require__(31);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames2 = __webpack_require__(29);
+	var _classnames2 = __webpack_require__(30);
 
 	var _classnames3 = _interopRequireDefault(_classnames2);
 
-	var _ButtonJs = __webpack_require__(34);
+	var _ButtonJs = __webpack_require__(35);
 
 	var _ButtonJs2 = _interopRequireDefault(_ButtonJs);
 
-	var _RowJs = __webpack_require__(33);
+	var _RowJs = __webpack_require__(34);
 
 	var _RowJs2 = _interopRequireDefault(_RowJs);
 
-	var _ColJs = __webpack_require__(32);
+	var _ColJs = __webpack_require__(33);
 
 	var _ColJs2 = _interopRequireDefault(_ColJs);
 
-	var _GridJs = __webpack_require__(27);
+	var _GridJs = __webpack_require__(28);
 
 	var _GridJs2 = _interopRequireDefault(_GridJs);
 
@@ -4208,11 +4607,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	            _react2['default'].createElement(
 	                _RowJs2['default'],
 	                { className: _classnames3['default'](this.getClassName('tooltip')) },
-	                _react2['default'].createElement(_RowJs2['default'], { className: _classnames3['default'](this.getClassName('arrow')) }),
 	                _react2['default'].createElement(
-	                    _RowJs2['default'],
-	                    { className: _classnames3['default'](this.getClassName('content')) },
-	                    this.props.msg
+	                    _ColJs2['default'],
+	                    null,
+	                    _react2['default'].createElement('div', { className: _classnames3['default'](this.getClassName('arrow')) }),
+	                    _react2['default'].createElement(
+	                        'div',
+	                        { className: _classnames3['default'](this.getClassName('content')) },
+	                        this.props.msg
+	                    )
 	                )
 	            )
 	        );
@@ -4227,7 +4630,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 50 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4244,15 +4647,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _utilsClassNameMixinJs = __webpack_require__(30);
+	var _utilsClassNameMixinJs = __webpack_require__(31);
 
 	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
 
@@ -4310,7 +4713,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 51 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4325,15 +4728,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _utilsClassNameMixinJs = __webpack_require__(30);
+	var _utilsClassNameMixinJs = __webpack_require__(31);
 
 	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
 
@@ -4402,7 +4805,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 52 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4417,15 +4820,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _utilsClassNameMixinJs = __webpack_require__(30);
+	var _utilsClassNameMixinJs = __webpack_require__(31);
 
 	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
 
@@ -4494,7 +4897,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 53 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4509,15 +4912,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _utilsClassNameMixinJs = __webpack_require__(30);
+	var _utilsClassNameMixinJs = __webpack_require__(31);
 
 	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
 
@@ -4577,7 +4980,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 54 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4592,15 +4995,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _utilsClassNameMixinJs = __webpack_require__(30);
+	var _utilsClassNameMixinJs = __webpack_require__(31);
 
 	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
 
@@ -4656,7 +5059,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 55 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4671,15 +5074,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _utilsClassNameMixinJs = __webpack_require__(30);
+	var _utilsClassNameMixinJs = __webpack_require__(31);
 
 	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
 
@@ -4735,12 +5138,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 56 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	exports.__esModule = true;
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
@@ -4750,17 +5155,47 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(30);
+	var _utilsClassNameMixin = __webpack_require__(31);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
+
+	/**
+	 * 表单验证组件<br />
+	 * 默认规则有<br/>
+	 * <pre>
+	 *     required：是否必填
+	 *     date：日期格式验证
+	 *     number：是否是有效的号码
+	 *     url：url规则验证
+	 *     dateISO：日期ISO验证
+	 *     digits：是否是数字
+	 *     equalTo：值对比
+	 *     minlength：最少输入
+	 *     maxlength：最大输入
+	 *     email：邮箱验证
+	 *     rangelength：字符大小需在某个区间之内
+	 *     min：输入的值需要大于等于此规则定义的值
+	 *     max：输入的值需要小于等于此规则定义的值
+	 *     range：一个区间取值范围
+	 *
+	 * </pre>
+	 * @class ValidatorPanel
+	 * @module form
+	 * @extends Component
+	 * @constructor
+	 * @since 0.1.0
+	 * @demo src/validate.js {js}
+	 * @demo validate.html {html}
+	 * @show true
+	 * */
 
 	var ValidatorPanel = (function (_Component) {
 	    _inherits(ValidatorPanel, _Component);
@@ -4776,8 +5211,40 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }, {
 	        key: 'defaultProps',
 	        value: {
+	            /**
+	             * 包装容器
+	             * @property componentTag
+	             * @type String
+	             * @default form
+	             * */
 	            componentTag: 'form',
+	            /**
+	             * 触发验证的事件集合
+	             * @property trigger
+	             * @type String
+	             * @default blur keyup focus click
+	             * */
 	            trigger: 'blur keyup focus click',
+	            /**
+	             * 默认规则提示文案
+	             * @property message
+	             * @type String
+	             * @default
+	             *       required: '不能为空',
+	                     date: '请正确填写日期',
+	                     number: '请输入一个有效的号码',
+	                     url: '请输入一个有效的URL',
+	                     email: '请输入一个有效的电子邮件地址',
+	                     dateISO: '请输入一个有效的日期(ISO)',
+	                     digits: '请输入数字',
+	                     equalTo:'请再次输入相同的值。',
+	                     minlength: '请输入至少{0}字符',
+	                     maxlength: '请输入不超过{0}字符',
+	                     rangelength: '请输入一个值{0}和{1}字符之间',
+	                     min: '请输入一个值大于或等于{0}',
+	                     max: '请输入一个值小于或等于{0}',
+	                     range: '请输入一个值{0} - {1}'
+	             * */
 	            message: {
 	                required: '不能为空',
 	                date: '请正确填写日期',
@@ -4793,7 +5260,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	                min: '请输入一个值大于或等于{0}',
 	                max: '请输入一个值小于或等于{0}',
 	                range: '请输入一个值{0} - {1}'
-	            }
+	            },
+	            initCallback: function initCallback() {},
+	            /**
+	             * 在提交时除验证规则之外的其他逻辑
+	             * @property submitCallback
+	             * @type Function
+	             * */
+	            submitCallback: function submitCallback() {
+	                return true;
+	            },
+	            timeout: 3000,
+	            submitElement: '',
+	            /**
+	             * 是否增强文本框提示
+	             * @property shake
+	             * @type Boolean
+	             * @default true
+	             * */
+	            shake: true,
+	            /**
+	             * 规则验证
+	             * @property rules
+	             * @type Object
+	             * */
+	            rules: {}
 	        },
 	        enumerable: true
 	    }]);
@@ -4803,8 +5294,26 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        _Component.call(this, props, context);
 
+	        this.elements = {};
+
+	        this.formName = 'validate-form';
+	        this.errorClass = this.getClassName('validate-error');
+	        this.init = true;
+
 	        this.state = {};
 	    }
+
+	    ValidatorPanel.prototype.trim = function trim(str) {
+	        return str.replace(/(^\s*)|(\s*$)/g, "");
+	    };
+
+	    ValidatorPanel.prototype.isArray = function isArray(value) {
+	        if (value instanceof Array || !(value instanceof Object) && Object.prototype.toString.call(value) == '[object Array]' || typeof value.length == 'number' && typeof value.splice != 'undefined' && typeof value.propertyIsEnumerable != 'undefined' && !value.propertyIsEnumerable('splice')) {
+
+	            return true;
+	        }
+	        return false;
+	    };
 
 	    ValidatorPanel.prototype.optional = function optional(element) {
 	        var val = this.getValue(element);
@@ -4820,7 +5329,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        if (this.checkable(element)) {
 	            return this.getLength(value, element) > 0;
 	        }
-	        return $.trim(value).length > 0;
+	        return this.trim(value).length > 0;
 	    };
 
 	    ValidatorPanel.prototype.date = function date(value, element) {
@@ -4849,27 +5358,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    ValidatorPanel.prototype.equalTo = function equalTo(value, element, param) {
-	        var target = $(param);
-	        if (this.onfocus) {
-	            target.off(".validate-equalTo").on("blur.validate-equalTo", function () {
+	        var target = document.querySelectorAll(param);
+	        /*if ( this.onfocus ) {
+	            target.off( ".validate-equalTo" ).on( "blur.validate-equalTo", function() {
 	                this.show();
 	            });
-	        }
-	        return this.optional(element) || value === target.val();
+	        }*/
+	        return this.optional(element) || value === target[0].value;
 	    };
 
 	    ValidatorPanel.prototype.minlength = function minlength(value, element, param) {
-	        var length = $.isArray(value) ? value.length : this.getLength(value, element);
+	        var length = this.isArray(value) ? value.length : this.getLength(value, element);
 	        return this.optional(element) || length >= param;
 	    };
 
 	    ValidatorPanel.prototype.maxlength = function maxlength(value, element, param) {
-	        var length = $.isArray(value) ? value.length : this.getLength(value, element);
+	        var length = this.isArray(value) ? value.length : this.getLength(value, element);
 	        return this.optional(element) || length <= param;
 	    };
 
 	    ValidatorPanel.prototype.rangelength = function rangelength(value, element, param) {
-	        var length = $.isArray(value) ? value.length : this.getLength(value, element);
+	        var length = this.isArray(value) ? value.length : this.getLength(value, element);
 	        return this.optional(element) || length >= param[0] && length <= param[1];
 	    };
 
@@ -4885,13 +5394,317 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return this.optional(element) || value >= param[0] && value <= param[1];
 	    };
 
-	    ValidatorPanel.prototype.bindValidate = function bindValidate() {
+	    //待改进
 
+	    ValidatorPanel.prototype.optional = function optional(element) {
+	        var val = this.getValue(element);
+	        return !this.required.call(this, val, element);
+	    };
+
+	    //高亮
+
+	    ValidatorPanel.prototype.highlight = function highlight(element) {
+	        if (!this.checkable(element)) {
+	            this.addClass(element, this.errorClass);
+
+	            if (this.props.shake) {
+
+	                this.addClass(element, 'shake animated');
+	                setTimeout((function () {
+	                    this.removeClass(element, 'shake animated');
+	                }).bind(this), 1000);
+	            }
+	        }
+	    };
+
+	    //取消高亮
+
+	    ValidatorPanel.prototype.unhighlight = function unhighlight(element) {
+	        this.removeClass(element, this.errorClass);
+	    };
+
+	    ValidatorPanel.prototype.checkable = function checkable(element) {
+	        return (/radio|checkbox/i.test(element.type)
+	        );
+	    };
+
+	    ValidatorPanel.prototype.getLength = function getLength(value, element) {
+	        switch (element.nodeName.toLowerCase()) {
+	            case "select":
+	                return document.querySelectorAll("option:selected", element).length;
+	            case "input":
+	                if (this.checkable(element)) {
+	                    return document.querySelectorAll("[name='" + element.name + "']:checked").length;
+	                }
+	        }
+	        return value.length;
+	    };
+
+	    ValidatorPanel.prototype.formatString = function formatString(str, options) {
+
+	        if (!options) {
+	            return str;
+	        }
+
+	        return str.replace(/\{(.+?)\}/ig, function (match, key) {
+	            var value = typeof options != 'object' ? options : options[key];
+	            return typeof value == 'undefined' ? match : value;
+	        });
+	    };
+
+	    ValidatorPanel.prototype.getValue = function getValue(element) {
+	        var val = undefined,
+	            type = element.type.toLowerCase();
+
+	        if (type === "radio" || type === "checkbox") {
+	            var el = document.querySelectorAll('input[name="' + element.name + '"]:checked');
+	            return el && el.length > 0 ? el[0].value : '';
+	        } else if (type === "number" && typeof element.validity !== "undefined") {
+	            return element.validity.badInput ? false : element.value;
+	        }
+
+	        val = element.value;
+	        if (typeof val === "string") {
+	            return val.replace(/\r/g, "");
+	        }
+	        return val;
+	    };
+
+	    //循环验证单个input上的规则
+
+	    ValidatorPanel.prototype.check = function check(element) {
+
+	        //从每一项中提取验证规则
+	        var message = this.props.message;
+
+	        //let options = extend(true,{},this.options );
+	        var val = this.getValue(element),
+
+	        //rule = null,
+	        msg = '',
+	            text = null,
+	            rules = this.props.rules[element.name]; //element.getAttribute('data-rules') ;
+
+	        /*{
+	            require:true,
+	                isName:function(){
+	            return true
+	        },
+	            number:{
+	                text:'不能为空',
+	                    params:1,
+	                    rule:function(){
+	                    return true;
+	                }
+	            }
+	        }*/
+
+	        for (var rule in rules) {
+
+	            text = rules[rule];
+	            //text =typeof(text)!=='string' ? text : {text:text};
+	            if (typeof text == 'boolean') {
+	                text = {};
+	            }
+	            if (!text.text) {
+	                text.text = message[rule];
+	            }
+
+	            var validate = text.rule && text.rule instanceof Function ? text.rule : this[rule];
+
+	            if (!validate.call(this, val, element, text.params)) {
+	                msg = text.text;
+	                break;
+	            }
+	            /*if(text.url && text.url!='' ){
+	                msg = this.ajaxValidate(text.url,val,text.params);
+	                if(typeof(msg) !== 'string'){
+	                    msg = text.text;
+	                }
+	                break;
+	            }else if(!this[rule].call(this,val,element,text.params)  ){
+	                msg = text.text;
+	                break;
+	            }*/
+	        }
+	        return this.formatString(msg, text && text.params || '');
+	    };
+
+	    //验证
+
+	    ValidatorPanel.prototype.validate = function validate(element) {
+	        var message = this.check(element) || '';
+	        if (message !== '') {
+	            //错误提示
+	            //this.elements[element.name].status=1;
+
+	            this.setTipsOffset(element);
+
+	            //设置错误消息
+	            this.setState({
+	                message: message
+	            });
+	            //this.highlight(this.parent, this.options.errorClass, this.options.validClass);
+	            clearTimeout(this.validateTimeout);
+	            this.validateTimeout = setTimeout((function () {
+	                this.setState({
+	                    message: ''
+	                });
+	            }).bind(this), this.props.timeout);
+	            return false;
+	        }
+	        this.setState({
+	            message: null
+	        });
+	        this.unhighlight(element);
+	        //this.hide();
+	        return true;
+	    };
+
+	    ValidatorPanel.prototype.validateHandler = function validateHandler(e) {
+	        clearTimeout(this.vaTimeout);
+	        this.vaTimeout = setTimeout(this.validate.bind(this, e.target), 400);
+	    };
+
+	    ValidatorPanel.prototype.submit = function submit() {
+	        clearTimeout(this.__blurTimeobj);
+	        var elements = this.elements,
+	            element = null,
+	            isSubmit = true;
+
+	        for (var item in elements) {
+	            element = elements[item]; //React.findDOMNode(this.props.refs[item] );
+	            if (!this.validate(element)) {
+	                setTimeout(function () {
+	                    element.focus();
+	                });
+	                isSubmit = false;
+	                break;
+	            }
+	        }
+
+	        if (isSubmit && this.props.submitCallback()) {
+	            //this.options.submitCallback &&(this.options.submitCallback() );
+	            return true;
+	        }
+	        return false;
+	    };
+
+	    //隐藏错误提示
+
+	    ValidatorPanel.prototype.hide = function hide() {};
+
+	    ValidatorPanel.prototype.parents = function parents(ele, str) {
+	        try {
+	            var tempNode = ele.parentNode;
+	            while (tempNode && tempNode.tagName != arguments[0].toUpperCase()) {
+	                tempNode = tempNode.parentNode;
+	            }
+	            return [tempNode];
+	        } catch (err) {
+	            return [];
+	        }
+	    };
+
+	    //设置错误提示框的位置
+
+	    ValidatorPanel.prototype.setTipsOffset = function setTipsOffset(element) {
+	        var node = null,
+	            name = element.name,
+	            tip = _react2['default'].findDOMNode(this.refs[this.formName]),
+	            w = element.offsetLeft,
+	            t = element.offsetTop,
+	            h = element.offsetHeight;
+
+	        while (element.nodeType !== 1 || element.nodeName.toLowerCase() != this.props.componentTag) {
+	            element = element.parentNode;
+	        }
+
+	        element = element.querySelectorAll('[name="' + name + '"]');
+
+	        element = element[element.length - 1];
+
+	        w = element.offsetLeft;
+	        t = element.offsetTop;
+	        node = element.offsetParent;
+	        while (node) {
+	            t += node.offsetTop;
+	            w += node.offsetLeft;
+	            node = node.offsetParent;
+	        }
+	        //w = tip.offsetWidth;
+	        this.highlight(element);
+	        tip = tip.querySelector('.' + this.getClassName("validate-tips"));
+
+	        tip.style.cssText = 'position:absolute;left:' + (w + element.offsetWidth) + 'px;top:' + t + 'px;height:' + h + 'px;line-height:' + h + 'px;background-color:transparent;padding:0px 10px 0 22px;z-index:99;margin-left:15px;}';
+	    };
+
+	    //废弃
+
+	    ValidatorPanel.prototype.bindValidate = function bindValidate() {
+	        var _this2 = this;
+
+	        //let _this = this;
+	        var same = null,
+	            showOrhide = 'show';
 	        var options = _react2['default'].Children.map(this.props.children, function (option) {
 	            //将validate保存起来，在适当的时候调用
-	            return _react2['default'].cloneElement(option, {});
+	            var _option$props = option.props;
+	            var rules = _option$props.rules;
+	            var name = _option$props.name;
+
+	            if (rules) {
+
+	                _this2.elements[name] = {
+	                    rules: rules,
+	                    status: 0
+	                };
+
+	                var opt = _react2['default'].cloneElement(option, {
+	                    onBlur: _this2.validateHandler.bind(_this2),
+	                    onFocus: _this2.validateHandler.bind(_this2),
+	                    onClick: _this2.validateHandler.bind(_this2),
+	                    onKeyUp: _this2.validateHandler.bind(_this2),
+	                    ref: 'ref-' + name
+	                });
+
+	                showOrhide = _this2.state[name] && same != name ? 'show' : 'hide';
+	                same = name;
+	                return { opt: opt };
+	            }
+	            return option;
 	        }, this);
 	        return options;
+	    };
+
+	    ValidatorPanel.prototype.getElements = function getElements() {
+	        return _react2['default'].findDOMNode(this.refs[this.formName]).querySelectorAll('[data-validate]');
+	    };
+
+	    ValidatorPanel.prototype.componentDidMount = function componentDidMount() {
+	        var elements = this.getElements();var _this = this;var _props = this.props;
+	        var trigger = _props.trigger;
+	        var initCallback = _props.initCallback;
+	        var submitElement = _props.submitElement;
+
+	        var _loop = function (i, len) {
+	            trigger.split(' ').forEach(function (event) {
+
+	                elements[i].addEventListener(event, _this.validateHandler.bind(_this), false);
+	            });
+	        };
+
+	        for (var i = 0, len = elements.length; i < len; i++) {
+	            _loop(i, len);
+	        }
+
+	        initCallback.call(this, this.submit.bind(this));
+
+	        if (submitElement) {
+	            document.querySelector(submitElement).addEventListener('mousedown', this.submit.bind(this), false);
+	        }
+	        this.elements = elements;
+	        this.init = false;
 	    };
 
 	    ValidatorPanel.prototype.render = function render() {
@@ -4899,8 +5712,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        return _react2['default'].createElement(
 	            Component,
-	            this.props,
-	            this.bindValidate()
+	            _extends({}, this.props, { ref: this.formName, className: this.getClassName('validate') }),
+	            this.props.children,
+	            _react2['default'].createElement(
+	                'div',
+	                { className: _classnames2['default'](this.getClassName('validate-tips'), '' + (this.init ? "" : this.state.message ? "fadein" : "fadeout")) },
+	                _react2['default'].createElement('i', null),
+	                this.state.message
+	            )
 	        );
 	    };
 
@@ -4913,7 +5732,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 57 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4928,15 +5747,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _utilsClassNameMixinJs = __webpack_require__(30);
+	var _utilsClassNameMixinJs = __webpack_require__(31);
 
 	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
 
@@ -4996,7 +5815,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 58 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5011,15 +5830,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _utilsClassNameMixinJs = __webpack_require__(30);
+	var _utilsClassNameMixinJs = __webpack_require__(31);
 
 	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
 
@@ -5088,7 +5907,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 59 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5103,15 +5922,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _utilsClassNameMixinJs = __webpack_require__(30);
+	var _utilsClassNameMixinJs = __webpack_require__(31);
 
 	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
 
@@ -5172,7 +5991,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 60 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5187,15 +6006,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(28);
+	var _react = __webpack_require__(29);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(29);
+	var _classnames = __webpack_require__(30);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _utilsClassNameMixinJs = __webpack_require__(30);
+	var _utilsClassNameMixinJs = __webpack_require__(31);
 
 	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>lib/Crumb.js - eagle-ui</title>
+    <title>lib/List.js - eagle-ui</title>
   
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -301,76 +301,52 @@
             <div id="docs-main">
                 <div class="content">
                     <div class="page-header">
-    <h1>lib/Crumb.js <small>File</small></h1>
+    <h1>lib/List.js <small>File</small></h1>
 </div>
 
 <div class="file">
     <pre class="prettyprint linenums" id='src_code'>
-/**
- * Created by panqianjin on 15/11/3.
- */
-import React,{Component,PropTypes} from &#x27;react&#x27;;
-import ClassNameMixin from &#x27;./utils/ClassNameMixin&#x27;;
+import React,{ PropTypes, Component } from &#x27;react&#x27;;
 import classnames from &#x27;classnames&#x27;;
-import Grid from &#x27;./Grid.js&#x27;;
-import Row from &#x27;./Row.js&#x27;;
+import ClassNameMixin from &#x27;./utils/ClassNameMixin.js&#x27;;
+
 /**
- * 面包屑组件
- * @class crumb
+ * 表组件
+ * @class List
+ * @constructor
  * @module ui
  * @extends Component
- * @constructor
+ * @requires React classnames
  * @since 0.1.0
- * @demo src/crumb.js{js}
- * @demo crumb.html
- * @show true
+ * @author bo.an@dianping.com
  * */
 @ClassNameMixin
-export default class Crumb extends Component {
+export default class List extends Component{
+
     static propTypes = {
-        /**
-         * 类名样式前缀
-         * @property classPrefix
-         * @type sting
-         * @default crumb
-         * */
-        classPrefix: PropTypes.string,
-        /**
-         * 标签tagName
-         * @property componentTag
-         * @type String
-         * @default div
-         * */
-        componentTag: PropTypes.string
-    }
+    };
+
     static defaultProps = {
-        classPrefix: &#x27;crumb&#x27;,
-        componentTag: &#x27;div&#x27;
-    }
-    constructor(props, context) {
-        super(props, context);
-    }
+
+    };
+
+
+
     /**
      * @method render
      * @return {ReactElement}
-     */
-    render() {
-        let length = this.props.children.length;
-        let li = this.props.children.map((item,index)=&gt;{
-                return &lt;li&gt;{index &lt; length-1?&lt;a href={item.props.url}&gt;{item.props.children}&lt;/a&gt;:item.props.children}&lt;/li&gt;
-            })
+     * */
+    render(){
         return (
-            &lt;Grid className={
+            &lt;div className={
                 classnames(
-                    this.getClassNamesForArguments(this.props.classPrefix)
-                )
-            }&gt;
-                &lt;ul&gt;
-                    {li}
-                &lt;/ul&gt;
-                &lt;Row className=&#x27;clearfix&#x27;&gt;&lt;/Row&gt;
-            &lt;/Grid&gt;
-        )
+                    this.getClassName(&#x27;list&#x27;),
+                    this.props.className
+                )}&gt;
+                {this.props.children}
+            &lt;/div&gt;
+        );
+
     }
 }
     </pre>

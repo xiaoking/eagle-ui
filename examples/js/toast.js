@@ -7,7 +7,7 @@
 		var a = typeof exports === 'object' ? factory(require("react")) : factory(root["React"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_26__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_27__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -62,37 +62,37 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _lib_includeLess = __webpack_require__(22);
+	var _lib_includeLess = __webpack_require__(23);
 
 	var _lib_includeLess2 = _interopRequireDefault(_lib_includeLess);
 
-	var _react = __webpack_require__(26);
+	var _react = __webpack_require__(27);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _libToastJs = __webpack_require__(61);
+	var _libToastJs = __webpack_require__(62);
 
 	var _libToastJs2 = _interopRequireDefault(_libToastJs);
 
-	ReactDOM.render(_react2['default'].createElement(_libToastJs2['default'], { type: 'error', msg: '保存成功', seconds: '3', show: true }), document.getElementById('root'));
+	ReactDOM.render(_react2['default'].createElement(_libToastJs2['default'], { type: 'error', msg: '保存成功', seconds: '3', show: true, overlay: true }), document.getElementById('root'));
 
 /***/ },
 
-/***/ 22:
+/***/ 23:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 26:
+/***/ 27:
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_26__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_27__;
 
 /***/ },
 
-/***/ 28:
+/***/ 29:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -102,7 +102,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _constantsJs = __webpack_require__(29);
+	var _constantsJs = __webpack_require__(30);
 
 	var consts = _constantsJs.classConstants;
 
@@ -204,8 +204,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @param cls {String} 需要检查的样式名
 	     * @return {Boolean}
 	     * */
-	    obj.prototype.hasClass = function (obj, cls) {
-	        return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
+	    obj.prototype.hasClass = function () {
+	        return arguments[0].className.match(new RegExp('(\\s|^)' + arguments[1] + '(\\s|$)'));
 	    };
 
 	    /**
@@ -215,7 +215,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @param cls {String} 样式名
 	     * */
 	    obj.prototype.addClass = function (obj, cls) {
-	        if (!this.hasClass(obj, cls)) obj.className += " " + cls;
+	        if (!this.hasClass(obj, cls)) {
+	            obj.className = (obj.className + " " + cls).replace(/\s{2,}/g, " ");
+	        }
 	    };
 	    /**
 	     * 给元素删除一个样式名
@@ -223,10 +225,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @param obj {Object} 元素
 	     * @param cls {String} 样式名
 	     * */
-	    obj.prototype.removeClass = function (obj, cls) {
-	        if (this.hasClass(obj, cls)) {
-	            var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
-	            obj.className = obj.className.replace(reg, ' ');
+	    obj.prototype.removeClass = function () {
+	        if (this.hasClass(arguments[0], arguments[1])) {
+	            var reg = new RegExp('(\\s|^)' + arguments[1] + '(\\s|$)');
+	            arguments[0].className = arguments[0].className.replace(reg, ' ').split(" ").join(" ");
 	        }
 	    };
 	};
@@ -235,7 +237,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 29:
+/***/ 30:
 /***/ function(module, exports) {
 
 	/**
@@ -297,7 +299,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 30:
+/***/ 31:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -352,7 +354,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 31:
+/***/ 32:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -372,15 +374,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(26);
+	var _react = __webpack_require__(27);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(28);
+	var _utilsClassNameMixin = __webpack_require__(29);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames = __webpack_require__(30);
+	var _classnames = __webpack_require__(31);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -529,7 +531,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 32:
+/***/ 33:
 /***/ function(module, exports, __webpack_require__) {
 
 	//import RowLess from './row.less';
@@ -547,11 +549,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(26);
+	var _react = __webpack_require__(27);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(30);
+	var _classnames = __webpack_require__(31);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -596,7 +598,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 33:
+/***/ 34:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -613,11 +615,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(26);
+	var _react = __webpack_require__(27);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(30);
+	var _classnames = __webpack_require__(31);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -686,7 +688,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 34:
+/***/ 35:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -703,15 +705,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(26);
+	var _react = __webpack_require__(27);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(30);
+	var _classnames = __webpack_require__(31);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _utilsClassNameMixin = __webpack_require__(28);
+	var _utilsClassNameMixin = __webpack_require__(29);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
@@ -759,7 +761,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 61:
+/***/ 62:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -777,51 +779,104 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(26);
+	var _react = __webpack_require__(27);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(28);
+	var _utilsClassNameMixin = __webpack_require__(29);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames2 = __webpack_require__(30);
+	var _classnames2 = __webpack_require__(31);
 
 	var _classnames3 = _interopRequireDefault(_classnames2);
 
-	var _ButtonJs = __webpack_require__(31);
+	var _ButtonJs = __webpack_require__(32);
 
 	var _ButtonJs2 = _interopRequireDefault(_ButtonJs);
 
-	var _RowJs = __webpack_require__(32);
+	var _RowJs = __webpack_require__(33);
 
 	var _RowJs2 = _interopRequireDefault(_RowJs);
 
-	var _ColJs = __webpack_require__(33);
+	var _ColJs = __webpack_require__(34);
 
 	var _ColJs2 = _interopRequireDefault(_ColJs);
 
-	var _GridJs = __webpack_require__(34);
+	var _GridJs = __webpack_require__(35);
 
 	var _GridJs2 = _interopRequireDefault(_GridJs);
 
 	/**
-	 * @class  toast
-	 * @description three tips: success/error/loading
-	 * date 2015/211
+	 * 提示组件
+	 * @class toast
+	 * @module ui
+	 * @extends Component
+	 * @constructor
+	 * @since 0.1.0
+	 * @demo src/toast.js{js}
+	 * @demo toast.html
+	 * @show true
 	 * */
 
 	var Toast = (function (_Component) {
 	    _inherits(Toast, _Component);
 
 	    _createClass(Toast, null, [{
+	        key: 'propType',
+	        value: {
+	            /**
+	             * toast类型：分为success,error,loading 三种。默认success
+	             * @property type
+	             * @type String
+	             * @default success
+	             * */
+	            type: _react.PropTypes.string,
+	            /**
+	             * 文字信息
+	             * @property msg
+	             * @type String
+	             * @default 保存成功
+	             * */
+	            msg: _react.PropTypes.string,
+	            /**
+	             * tips n秒后消失 默认4秒
+	             * @property seconds
+	             * @type Integer
+	             * @default 4
+	             * */
+	            seconds: _react.PropTypes.number,
+	            /**
+	             * 是否显示遮罩，默认false
+	             * @property overlay
+	             * @type Boolean
+	             * @default false
+	             * */
+	            overlay: _react.PropTypes.boolean,
+	            /**
+	             * 类名样式前缀
+	             * @property classPrefix
+	             * @type sting
+	             * @default crumb
+	             * */
+	            classPrefix: _react.PropTypes.string,
+	            /**
+	             * 标签tagName
+	             * @property componentTag
+	             * @type String
+	             * @default div
+	             * */
+	            componentTag: _react.PropTypes.string
+
+	        },
+	        enumerable: true
+	    }, {
 	        key: 'defaultProps',
 	        value: {
 	            type: 'sucess-tips',
 	            msg: '保存成功',
-	            overlay: false,
 	            seconds: 4,
-	            target: true,
+	            overlay: false,
 	            classPrefix: 'tips',
 	            componentTag: 'div'
 	        },
@@ -833,27 +888,34 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        _Component.call(this, props, context);
 	        this.state = {
+	            /**
+	             * 是否显示tips
+	             * @type Boolean
+	             * */
 	            show: this.props.show
 	        };
 	    }
 
 	    /**
-	     * @method  n seconds hide toast
+	     * 接收到新props时执行,props改变，改变state.show
+	     * @method componentWillReceiveProps
+	     *
 	     * */
-
-	    Toast.prototype.setTimeoutForClose = function setTimeoutForClose() {
-	        if (this.state.show) {
-	            var seconds = this.props.seconds * 1000;
-	            clearTimeout(this.timeout);
-	            this.timeout = setTimeout(this.closeToast.bind(this), seconds);
-	        }
-	    };
 
 	    Toast.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
 	        this.setState({
+	            /**
+	             * state.show随新的props里的值改变
+	             * @type Boolean
+	             * */
 	            show: nextProps.show
 	        });
 	    };
+
+	    /**
+	     * @method render
+	     * @return {ReactElement}
+	     * */
 
 	    Toast.prototype.render = function render() {
 	        var _classnames;
@@ -861,29 +923,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.setTimeoutForClose();
 	        return _react2['default'].createElement(
 	            _GridJs2['default'],
-	            { className: _classnames3['default'](this.getClassName('container'), (_classnames = {}, _classnames[this.getClassName('show')] = this.state.show, _classnames)) },
+	            { className: _classnames3['default'](this.getClassName('container'), (_classnames = {}, _classnames['fadein'] = this.state.show, _classnames['fadeout'] = !this.state.show, _classnames)) },
 	            this.toast(),
-	            this.showOverlay(this.props.target)
+	            this.showOverlay(this.props.overlay)
 	        );
 	    };
 
-	    Toast.prototype.closeToast = function closeToast() {
-	        this.props.closeCallback && this.props.closeCallback();
-	        this.setState({
-	            show: false
-	        });
-	    };
+	    /**
+	     * 是否展示遮罩层
+	     * @method showOverlay
+	     * @param target {Boolean}
+	     * return {ReactElement}
+	     * */
 
 	    Toast.prototype.showOverlay = function showOverlay(target) {
 	        if (target) {
-	            return _react2['default'].createElement(_GridJs2['default'], null);
-	        } else {
 	            return _react2['default'].createElement(_GridJs2['default'], { className: _classnames3['default'](this.getClassNamesForArguments('overlay'), 'clearfix') });
+	        } else {
+	            return _react2['default'].createElement(_GridJs2['default'], null);
 	        }
 	    };
 
 	    /**
-	     * @method render content
+	     * 渲染toast主体
+	     * @method toast
+	     * @return {ReactElement}
 	     * */
 
 	    Toast.prototype.toast = function toast() {
@@ -905,6 +969,33 @@ return /******/ (function(modules) { // webpackBootstrap
 	                )
 	            )
 	        );
+	    };
+
+	    /**
+	     * 延时n秒消失
+	     * @method  setTimeoutForClose
+	     * @return null
+	     * */
+
+	    Toast.prototype.setTimeoutForClose = function setTimeoutForClose() {
+	        if (this.state.show) {
+	            var seconds = this.props.seconds * 1000;
+	            clearTimeout(this.timeout);
+	            this.timeout = setTimeout(this.closeToast.bind(this), seconds);
+	        }
+	    };
+
+	    /**
+	     * 改变state.show 隐藏tips,并调用回调方法
+	     * @method closeToast
+	     * @return null
+	     * */
+
+	    Toast.prototype.closeToast = function closeToast() {
+	        this.props.closeCallback && this.props.closeCallback();
+	        this.setState({
+	            show: false
+	        });
 	    };
 
 	    var _Toast = Toast;

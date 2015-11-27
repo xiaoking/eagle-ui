@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>lib/ValidatorPanel.js - eagle-ui</title>
+  
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-smart">
+ <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               <a class="navbar-brand mainlogo" href="">
+             
+            <img alt="eagle-ui" src="../assets/css/logo.png" title="eagle-ui">
+            
+                eagle-ui
+          </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                 <ul class="nav navbar-nav">
+                    
+                    <li><a href="">主页</a>
+                    </li>
+                    
+                </ul>
+               <div class="navbar-form navbar-right filterAPi" autocomplete="off">
+                <input type="text" id='txtSearchAPI' class="form-control search-query" placeholder="Search for API" />
+                 <ul id="filterList" class="filterItems dropdown-menu" role="menu"></ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="sidebar">
+    <h3>Modules/Classes</h3>
+        <div id="api-tabview-filter">
+            <input id='txtSearch' type="search" class="form-control" placeholder="Type to filter Modules/Classes">
+        </div>
+        <dl id="sidebar_list">
+             
+                <dt>
+                    <span class="glyphicon glyphicon-minus"></span>
+                    <a href="../modules/form.html">form</a>
+                </dt>
+                <dd>
+                    <ul>
+                   
+                       <li>
+                            
+                           <a href="../classes/RadioGroup.html">RadioGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Select.html">Select</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/ValidatorPanel.html">ValidatorPanel</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Button.html">Button</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/ButtonGroup.html">ButtonGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                    </ul>
+                </dd>
+             
+                <dt>
+                    <span class="glyphicon glyphicon-minus"></span>
+                    <a href="../modules/grid.html">grid</a>
+                </dt>
+                <dd>
+                    <ul>
+                   
+                       <li>
+                            
+                           <a href="../classes/Grid.html">Grid</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Row.html">Row</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Col.html">Col</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                    </ul>
+                </dd>
+             
+                <dt>
+                    <span class="glyphicon glyphicon-minus"></span>
+                    <a href="../modules/ui.html">ui</a>
+                </dt>
+                <dd>
+                    <ul>
+                   
+                       <li>
+                            
+                           <a href="../classes/Calendar.html">Calendar</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/crumb.html">crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/toast.html">toast</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Panel.html">Panel</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/PanelContent.html">PanelContent</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/PanelFooter.html">PanelFooter</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/PanelHeader.html">PanelHeader</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Table.html">Table</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Paging.html">Paging</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/CalendarPanel.html">CalendarPanel</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/dialog.html">dialog</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Label.html">Label</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/LabelGroup.html">LabelGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/List.html">List</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                    </ul>
+                </dd>
+             
+        </dl>
+</div>
+   
+    <div class="stdoc-content">
+        <!--     <form id="options-form" class="form-inline pull-right">
+        Show:
+        <label for="api-show-inherited" class="checkbox">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected" class="checkbox">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private" class="checkbox">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated" class="checkbox">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </form>
+
+ -->
+        <div class="apidocs">
+            <div id="docs-main">
+                <div class="content">
+                    <div class="page-header">
+    <h1>lib/ValidatorPanel.js <small>File</small></h1>
+</div>
+
+<div class="file">
+    <pre class="prettyprint linenums" id='src_code'>
+import React,{Component,PropTypes} from &#x27;react&#x27;;
+import ClassNameMixin from &#x27;./utils/ClassNameMixin&#x27;;
+import classnames from &#x27;classnames&#x27;;
+
+/**
+ * 表单验证组件&lt;br /&gt;
+ * 默认规则有&lt;br/&gt;
+ * &lt;pre&gt;
+ *     required：是否必填
+ *     date：日期格式验证
+ *     number：是否是有效的号码
+ *     url：url规则验证
+ *     dateISO：日期ISO验证
+ *     digits：是否是数字
+ *     equalTo：值对比
+ *     minlength：最少输入
+ *     maxlength：最大输入
+ *     email：邮箱验证
+ *     rangelength：字符大小需在某个区间之内
+ *     min：输入的值需要大于等于此规则定义的值
+ *     max：输入的值需要小于等于此规则定义的值
+ *     range：一个区间取值范围
+ *
+ * &lt;/pre&gt;
+ * @class ValidatorPanel
+ * @module form
+ * @extends Component
+ * @constructor
+ * @since 0.1.0
+ * @demo src/validate.js {js}
+ * @demo validate.html {html}
+ * @show true
+ * */
+@ClassNameMixin
+export default class ValidatorPanel extends Component {
+    static propTypes = {
+        //触发点，change blur  manual（手动）
+        trigger:PropTypes.string,
+        submitCallback:PropTypes.func
+    };
+
+    static defaultProps = {
+        /**
+         * 包装容器
+         * @property componentTag
+         * @type String
+         * @default form
+         * */
+        componentTag: &#x27;form&#x27;,
+        /**
+         * 触发验证的事件集合
+         * @property trigger
+         * @type String
+         * @default blur keyup focus click
+         * */
+        trigger:&#x27;blur keyup focus click&#x27;,
+        /**
+         * 默认规则提示文案
+         * @property message
+         * @type String
+         * @default
+         *       required: &#x27;不能为空&#x27;,
+                 date: &#x27;请正确填写日期&#x27;,
+                 number: &#x27;请输入一个有效的号码&#x27;,
+                 url: &#x27;请输入一个有效的URL&#x27;,
+                 email: &#x27;请输入一个有效的电子邮件地址&#x27;,
+                 dateISO: &#x27;请输入一个有效的日期(ISO)&#x27;,
+                 digits: &#x27;请输入数字&#x27;,
+                 equalTo:&#x27;请再次输入相同的值。&#x27;,
+                 minlength: &#x27;请输入至少{0}字符&#x27;,
+                 maxlength: &#x27;请输入不超过{0}字符&#x27;,
+                 rangelength: &#x27;请输入一个值{0}和{1}字符之间&#x27;,
+                 min: &#x27;请输入一个值大于或等于{0}&#x27;,
+                 max: &#x27;请输入一个值小于或等于{0}&#x27;,
+                 range: &#x27;请输入一个值{0} - {1}&#x27;
+         * */
+        message:{
+            required: &#x27;不能为空&#x27;,
+            date: &#x27;请正确填写日期&#x27;,
+            number: &#x27;请输入一个有效的号码&#x27;,
+            url: &#x27;请输入一个有效的URL&#x27;,
+            email: &#x27;请输入一个有效的电子邮件地址&#x27;,
+            dateISO: &#x27;请输入一个有效的日期(ISO)&#x27;,
+            digits: &#x27;请输入数字&#x27;,
+            equalTo:&#x27;请再次输入相同的值。&#x27;,
+            minlength: &#x27;请输入至少{0}字符&#x27;,
+            maxlength: &#x27;请输入不超过{0}字符&#x27;,
+            rangelength: &#x27;请输入一个值{0}和{1}字符之间&#x27;,
+            min: &#x27;请输入一个值大于或等于{0}&#x27;,
+            max: &#x27;请输入一个值小于或等于{0}&#x27;,
+            range: &#x27;请输入一个值{0} - {1}&#x27;
+        },
+        initCallback:function(){},
+        /**
+         * 在提交时除验证规则之外的其他逻辑
+         * @property submitCallback
+         * @type Function
+         * */
+        submitCallback:function(){
+            return true;
+        },
+        timeout:3000,
+        submitElement:&#x27;&#x27;,
+        /**
+         * 是否增强文本框提示
+         * @property shake
+         * @type Boolean
+         * @default true
+         * */
+        shake:true,
+        /**
+         * 规则验证
+         * @property rules
+         * @type Object
+         * */
+        rules:{}
+    };
+
+    constructor(props, context) {
+        super(props, context);
+
+        this.elements = {};
+
+        this.formName = &#x27;validate-form&#x27;;
+        this.errorClass = this.getClassName(&#x27;validate-error&#x27;);
+        this.init = true;
+
+        this.state = {
+
+        };
+    }
+
+    trim(str){
+        return str.replace(/(^\s*)|(\s*$)/g,&quot;&quot;);
+    }
+
+    isArray(value){
+        if (value instanceof Array ||
+            (!(value instanceof Object) &amp;&amp;
+            (Object.prototype.toString.call((value)) == &#x27;[object Array]&#x27;) ||
+            typeof value.length == &#x27;number&#x27; &amp;&amp;
+            typeof value.splice != &#x27;undefined&#x27; &amp;&amp;
+            typeof value.propertyIsEnumerable != &#x27;undefined&#x27; &amp;&amp;
+            !value.propertyIsEnumerable(&#x27;splice&#x27;)) ) {
+
+            return true;
+        }
+        return false;
+    }
+
+    optional(element) {
+        let val = this.getValue(element );
+        return !this.options.defaultRules.required.call( this, val, element );
+    }
+
+    required( value, element ) {
+
+        if ( element.nodeName.toLowerCase() === &quot;select&quot; ) {
+            let val = $( element ).val();
+            return val &amp;&amp; val.length &gt; 0;
+        }
+        if ( this.checkable( element ) ) {
+            return this.getLength( value, element ) &gt; 0;
+        }
+        return this.trim( value ).length &gt; 0;
+    }
+
+    date( value, element ) {
+        return this.optional( element ) || !/Invalid|NaN/.test( new Date( value ).toString() );
+    }
+
+    number( value, element ) {
+        return this.optional( element ) || /^-?(?:\d+|\d{1,3}(?:,\d{3})+)?(?:\.\d+)?$/.test( value );
+    }
+
+    url( value, element ) {
+        return this.optional( element ) ||
+            /^(https?|s?ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&amp;&#x27;\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&amp;&#x27;\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&amp;&#x27;\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&amp;&#x27;\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&amp;&#x27;\(\)\*\+,;=]|:|@)|\/|\?)*)?$/i.test( value );
+    }
+    email( value, element ) {
+
+        return this.optional( element ) || /^[a-zA-Z0-9.!#$%&amp;&#x27;*+\/=?^_&#x60;{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test( value );
+    }
+    dateISO( value, element ) {
+        return this.optional( element ) || /^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/.test( value );
+    }
+    digits( value, element ) {
+        return this.optional( element ) || /^\d+$/.test( value );
+    }
+    equalTo( value, element, param ) {
+        let target = document.querySelectorAll(param);
+        /*if ( this.onfocus ) {
+            target.off( &quot;.validate-equalTo&quot; ).on( &quot;blur.validate-equalTo&quot;, function() {
+                this.show();
+            });
+        }*/
+        return this.optional( element ) || value === target[0].value;
+    }
+    minlength( value, element, param ) {
+        let length = this.isArray( value ) ? value.length : this.getLength( value, element );
+        return this.optional( element ) || length &gt;= param;
+    }
+    maxlength( value, element, param ) {
+        let length = this.isArray( value ) ? value.length : this.getLength( value, element );
+        return this.optional( element ) || length &lt;= param;
+    }
+    rangelength( value, element, param ) {
+        let length = this.isArray( value ) ? value.length : this.getLength( value, element );
+        return this.optional( element ) || ( length &gt;= param[ 0 ] &amp;&amp; length &lt;= param[ 1 ] );
+    }
+    min( value, element, param ) {
+        return this.optional( element ) || value &gt;= param;
+    }
+    max( value, element, param ) {
+        return this.optional( element ) || value &lt;= param;
+    }
+    range( value, element, param ) {
+        return this.optional( element ) || ( value &gt;= param[ 0 ] &amp;&amp; value &lt;= param[ 1 ] );
+    }
+
+    //待改进
+    optional(element) {
+        let val = this.getValue(element );
+        return !this.required.call( this, val, element );
+    }
+    //高亮
+    highlight(element){
+        if(!this.checkable(element)){
+            this.addClass(element,this.errorClass);
+
+            if(this.props.shake){
+
+                this.addClass(element,&#x27;shake animated&#x27;);
+                setTimeout(function(){
+                    this.removeClass(element,&#x27;shake animated&#x27;);
+                }.bind(this),1000 );
+            }
+
+        }
+
+    }
+    //取消高亮
+    unhighlight(element){
+        this.removeClass(element,this.errorClass);
+    }
+
+    checkable( element ) {
+        return ( /radio|checkbox/i ).test( element.type );
+    }
+
+    getLength( value, element ) {
+        switch ( element.nodeName.toLowerCase() ) {
+            case &quot;select&quot;:
+                return document.querySelectorAll( &quot;option:selected&quot;, element ).length;
+            case &quot;input&quot;:
+                if ( this.checkable( element ) ) {
+                    return document.querySelectorAll(&quot;[name=&#x27;&quot; + element.name + &quot;&#x27;]:checked&quot; ).length;
+                }
+        }
+        return value.length;
+    }
+
+    formatString(str, options){
+
+        if(!options){
+            return str;
+        }
+
+        return str.replace(/\{(.+?)\}/ig, function(match, key){
+            let value = typeof(options) != &#x27;object&#x27;?options: options[key];
+            return typeof value == &#x27;undefined&#x27; ? match : value;
+        });
+    }
+
+    getValue(element){
+        let val,
+            type = element.type.toLowerCase();
+
+        if ( type === &quot;radio&quot; || type === &quot;checkbox&quot; ) {
+            let el = document.querySelectorAll( &#x60;input[name=&quot;${element.name}&quot;]:checked&#x60; );
+            return el &amp;&amp; el.length&gt;0? el[0].value:&#x27;&#x27;;
+        } else if ( type === &quot;number&quot; &amp;&amp; typeof element.validity !== &quot;undefined&quot; ) {
+            return element.validity.badInput ? false : element.value;
+        }
+
+        val = element.value;
+        if ( typeof val === &quot;string&quot; ) {
+            return val.replace(/\r/g, &quot;&quot; );
+        }
+        return val;
+    }
+    //循环验证单个input上的规则
+    check(element){
+
+        //从每一项中提取验证规则
+        let {message} = this.props;
+        //let options = extend(true,{},this.options );
+        let val = this.getValue(element),
+        //rule = null,
+            msg = &#x27;&#x27;,
+            text = null,
+            rules = this.props.rules[element.name];//element.getAttribute(&#x27;data-rules&#x27;) ;
+
+
+        /*{
+            require:true,
+                isName:function(){
+            return true
+        },
+            number:{
+                text:&#x27;不能为空&#x27;,
+                    params:1,
+                    rule:function(){
+                    return true;
+                }
+            }
+        }*/
+
+        for(let rule in rules){
+
+            text = rules[rule];
+            //text =typeof(text)!==&#x27;string&#x27; ? text : {text:text};
+            if(typeof(text) == &#x27;boolean&#x27;){
+                text = {};
+            }
+            if(!text.text){
+                text.text = message[rule ];
+            }
+
+            let validate = text.rule &amp;&amp; text.rule instanceof  Function ? text.rule:this[rule];
+
+            if(!validate.call(this,val,element,text.params ) ){
+                msg = text.text;
+                break;
+            }
+            /*if(text.url &amp;&amp; text.url!=&#x27;&#x27; ){
+                msg = this.ajaxValidate(text.url,val,text.params);
+                if(typeof(msg) !== &#x27;string&#x27;){
+                    msg = text.text;
+                }
+                break;
+            }else if(!this[rule].call(this,val,element,text.params)  ){
+                msg = text.text;
+                break;
+            }*/
+        }
+        return this.formatString(msg,(text &amp;&amp;text.params) || &#x27;&#x27;);
+    }
+
+    //验证
+    validate(element){
+        let message = this.check(element) || &#x27;&#x27;;
+        if(message !== &#x27;&#x27; ){
+            //错误提示
+            //this.elements[element.name].status=1;
+
+            this.setTipsOffset(element);
+
+            //设置错误消息
+            this.setState({
+                message:message
+            });
+            //this.highlight(this.parent, this.options.errorClass, this.options.validClass);
+            clearTimeout(this.validateTimeout);
+            this.validateTimeout = setTimeout(function(){
+                this.setState({
+                    message:&#x27;&#x27;
+                });
+            }.bind(this),this.props.timeout);
+            return false;
+        }
+        this.setState({
+            message:null
+        });
+        this.unhighlight(element);
+        //this.hide();
+        return true;
+    }
+
+    validateHandler(e){
+        clearTimeout(this.vaTimeout);
+        this.vaTimeout = setTimeout(this.validate.bind(this,e.target),400 );
+    }
+
+    submit(){
+        clearTimeout(this.__blurTimeobj);
+        let elements = this.elements,
+            element = null,
+            isSubmit = true;
+
+        for(let item in elements){
+            element = elements[item];//React.findDOMNode(this.props.refs[item] );
+            if(!this.validate(element  ) ){
+                setTimeout(function(){
+                    element.focus();
+                });
+                isSubmit = false;
+                break;
+            }
+        }
+
+        if(isSubmit &amp;&amp; this.props.submitCallback() ){
+            //this.options.submitCallback &amp;&amp;(this.options.submitCallback() );
+            return true;
+        }
+        return false;
+    }
+
+    //隐藏错误提示
+    hide(){
+
+    }
+    parents (ele,str) {
+        try {
+            var tempNode = ele.parentNode;
+            while (tempNode &amp;&amp; tempNode.tagName != arguments[0].toUpperCase()) {
+                tempNode = tempNode.parentNode;
+            }
+            return [tempNode];
+        } catch (err) {
+            return [];
+        }
+    }
+    //设置错误提示框的位置
+    setTipsOffset(element){
+        let node = null,
+            name = element.name,
+            tip =React.findDOMNode(this.refs[this.formName]),
+            w = element.offsetLeft,
+            t = element.offsetTop,
+            h = element.offsetHeight;
+
+        while(element.nodeType!==1 || element.nodeName.toLowerCase()!=this.props.componentTag ){
+            element = element.parentNode;
+        }
+
+        element = element.querySelectorAll(&#x60;[name=&quot;${name}&quot;]&#x60;);
+
+        element = element[element.length-1];
+
+        w = element.offsetLeft;
+        t = element.offsetTop;
+        node = element.offsetParent;
+        while(node) {
+            t+=node.offsetTop;
+            w+=node.offsetLeft;
+            node = node.offsetParent;
+
+        }
+            //w = tip.offsetWidth;
+        this.highlight(element);
+        tip = tip.querySelector(&#x60;.${this.getClassName(&quot;validate-tips&quot;)}&#x60;);
+
+        tip.style.cssText = &#x60;position:absolute;left:${w+element.offsetWidth}px;top:${t}px;height:${h}px;line-height:${h}px;background-color:transparent;padding:0px 10px 0 22px;z-index:99;margin-left:15px;}&#x60;;
+    }
+
+    //废弃
+    bindValidate(){
+        //let _this = this;
+        let same = null,showOrhide=&#x27;show&#x27;;
+        let options = React.Children.map(this.props.children,(option)=&gt;{
+            //将validate保存起来，在适当的时候调用
+            let {rules,name} = option.props;
+            if(rules){
+
+                this.elements[name] = {
+                    rules:rules,
+                    status:0
+                };
+
+                let opt = React.cloneElement(option,{
+                    onBlur:this.validateHandler.bind(this),
+                    onFocus:this.validateHandler.bind(this),
+                    onClick:this.validateHandler.bind(this),
+                    onKeyUp:this.validateHandler.bind(this),
+                    ref:&#x27;ref-&#x27;+name
+                });
+
+                showOrhide =this.state[name] &amp;&amp; same!=name ? &#x27;show&#x27;:&#x27;hide&#x27;;
+                same = name;
+                return (
+                    {opt}
+                );
+            }
+            return option;
+
+        },this);
+        return options;
+    }
+
+    getElements(){
+        return React.findDOMNode(this.refs[this.formName]).querySelectorAll(&#x60;[data-validate]&#x60;);
+    }
+
+    componentDidMount(){
+        let elements = this.getElements(),_this = this,{trigger,initCallback,submitElement} = this.props;
+
+        for(let i=0,len=elements.length;i&lt;len;i++){
+            trigger.split(&#x27; &#x27;).forEach((event)=&gt;{
+
+                elements[i].addEventListener(event,_this.validateHandler.bind(_this),false);
+            });
+        }
+
+        initCallback.call(this,this.submit.bind(this));
+
+        if(submitElement){
+            document.querySelector(submitElement).addEventListener(&#x27;mousedown&#x27;,this.submit.bind(this),false);
+        }
+        this.elements = elements;
+        this.init = false;
+
+    }
+
+    render() {
+
+        let {componentTag:Component} = this.props;
+
+        return (
+            &lt;Component {...this.props} ref={this.formName} className={this.getClassName(&#x27;validate&#x27;)}&gt;
+                {this.props.children}
+                &lt;div className={classnames(
+                            this.getClassName(&#x60;validate-tips&#x60;),
+                            &#x60;${this.init ? &quot;&quot;:this.state.message ? &quot;fadein&quot; :&quot;fadeout&quot;}&#x60;
+                        )}&gt;
+                    &lt;i&gt;&lt;/i&gt;
+                    {this.state.message}
+                &lt;/div&gt;
+            &lt;/Component&gt;
+        );
+    }
+
+}
+    </pre>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<a id="gotoTop" class='well well-small' href='#'>
+    Top
+</a>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/doc.js"></script>
+</body>
+</html>

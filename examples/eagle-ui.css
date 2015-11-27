@@ -113,8 +113,8 @@ h6 {
   height: 10px;
   width: 10px;
   border-radius: 7px;
-  top: 10px;
-  left: 6px;
+  top: 11px;
+  left: 3px;
 }
 .eg-search-icon:after {
   height: 7px;
@@ -167,17 +167,20 @@ h6 {
   }
 }
 /**显示*/
-.eg-hide {
+.eg-hide,
+.show {
   display: none;
 }
-.eg-show {
+.eg-show.show {
   display: block;
 }
-.eg-fadein {
+.fadein {
+  display: block !important;
   -webkit-animation: fadeIn .4s 1 0s;
 }
-.eg-fadeout {
-  -webkit-animation: fadeOut .4s 2 3s ;
+.fadeout {
+  -webkit-animation: fadeOut .4s 1 0s ;
+  -webkit-animation-fill-mode: forwards;
 }
 /**成功图标*/
 .eg-tips-success {
@@ -346,6 +349,61 @@ h6 {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+/**晃动*/
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+.shake {
+  -webkit-animation-name: shake;
+  animation-name: shake;
+}
+.animated {
+  -webkit-animation-duration: .8s;
+  animation-duration: .8s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
 /**字体大小*/
 .small {
   font-size: 65%;
@@ -480,7 +538,6 @@ h6 {
 .eg-btn:hover {
   background: #d94000;
   text-decoration: none;
-  color: #ffffff;
 }
 .eg-btn.eg-btn-disabled {
   color: #f8c1a8;
@@ -809,7 +866,7 @@ h6 {
   padding-right: 5px;
 }
 .eg-dialog,
-.eg-tips-container {
+.eg-tips {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -820,8 +877,6 @@ h6 {
   text-align: center;
   padding: 10px;
   border-radius: 3px;
-}
-.eg-dialog {
   z-index: 9000;
 }
 .eg-tips-container {
@@ -858,6 +913,51 @@ h6 {
 .eg-dialog-show,
 .eg-tips-show {
   display: block;
+}
+/**淡入淡出动画*/
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    /*初始状态 透明度为0*/
+  }
+  50% {
+    opacity: 0.5;
+    /*中间状态 透明度为0.5*/
+  }
+  100% {
+    opacity: 1;
+    /*结尾状态 透明度为1*/
+  }
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+    /*初始状态 透明度为1*/
+  }
+  50% {
+    opacity: 0.5;
+    /*中间状态 透明度为0.5*/
+  }
+  100% {
+    opacity: 0;
+    /*结尾状态 透明度为0*/
+  }
+}
+/**显示*/
+.eg-hide {
+  display: none;
+}
+.eg-show {
+  display: block;
+}
+.eg-fadein {
+  display: block;
+  -webkit-animation: fadeIn .4s 1 0s;
+}
+.eg-fadeout {
+  display: block;
+  -webkit-animation: fadeOut .4s 1 0s ;
+  -webkit-animation-fill-mode: forwards;
 }
 .eg-crumb ul li {
   float: left;
@@ -1230,7 +1330,7 @@ h6 {
   position: relative;
   display: inline-block;
   margin-right: 15px;
-  /*下箭头*/
+  /*箭头*/
 }
 .eg-select-container ul {
   background: #fff;
@@ -1238,6 +1338,11 @@ h6 {
   width: inherit;
   top: 39px;
   left: 0px;
+  display: block;
+  border: #dadbdd solid 1px;
+  border-radius: 0px 0px 4px 4px;
+  max-height: 150px;
+  overflow: auto;
 }
 .eg-select-container ul li {
   text-indent: 10px;
@@ -1253,13 +1358,30 @@ h6 {
 }
 .eg-select-container .eg-select-ul {
   display: none;
+  /*定义滚动条轨道 内阴影+圆角*/
+  /*定义滑块 内阴影+圆角*/
+}
+.eg-select-container .eg-select-ul::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+}
+.eg-select-container .eg-select-ul::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #fff;
+}
+.eg-select-container .eg-select-ul::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
 }
 .eg-select-container .eg-select-show {
   display: block;
 }
-.eg-select-container .eg-select-arrow {
+.eg-select-container .eg-select-arrow-up,
+.eg-select-container .eg-select-arrow-down {
   position: absolute;
-  top: 12px;
   right: 10px;
   display: inline-block;
   cursor: pointer;
@@ -1269,8 +1391,13 @@ h6 {
   border-left: 5px solid #bbbbbb;
   border-bottom: 5px solid #bbbbbb;
 }
-.eg-select-container .eg-select-arrow {
+.eg-select-container .eg-select-arrow-down {
   transform: rotate(-45deg);
+  top: 16px;
+}
+.eg-select-container .eg-select-arrow-up {
+  transform: rotate(135deg);
+  top: 13px;
 }
 .eg-tooltip-container .eg-tooltip-wraper {
   display: none;
@@ -1281,7 +1408,7 @@ h6 {
   color: #fff;
   max-width: 300px;
   font-size: 13px;
-  padding: 15px;
+  padding: 5px;
   text-align: left;
   border-radius: 3px;
   box-shadow: 0px 1px 5px 2px #bbbbbb;
@@ -1296,7 +1423,7 @@ h6 {
   border-color: transparent transparent #000 transparent;
   position: absolute;
   left: 18px;
-  top: -25px;
+  top: -15px;
   height: 0;
   width: 0;
   line-height: 0;
@@ -1482,4 +1609,44 @@ h6 {
 }
 .eg-list .eg-item:last-child {
   border-bottom: none;
+}
+/**按钮组*/
+.eg-validate .eg-validate-error {
+  outline: none;
+  border-color: #dd514c;
+}
+.eg-validate .eg-validate-tips {
+  position: absolute;
+  padding: 4px 10px;
+  display: none;
+}
+.eg-validate .eg-validate-tips i {
+  border-radius: 50%;
+  display: inline-block;
+  background: #dd514c;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  left: 0;
+  margin-top: -10px;
+  position: absolute;
+}
+.eg-validate .eg-validate-tips i:before {
+  height: 2px;
+  width: 2px;
+  background: #fff;
+  left: 8px;
+  top: 13px;
+  position: absolute;
+  content: "";
+  opacity: 0.9;
+}
+.eg-validate .eg-validate-tips i:after {
+  height: 8px;
+  width: 2px;
+  background: #fff;
+  left: 8px;
+  top: 4px;
+  position: absolute;
+  content: "";
 }

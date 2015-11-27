@@ -64,6 +64,22 @@
                     
                        <li>
                             
+                           <a href="../classes/Select.html">Select</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/ValidatorPanel.html">ValidatorPanel</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Button.html">Button</a>
                            <ul>
                                 
@@ -73,6 +89,14 @@
                        <li>
                             
                            <a href="../classes/ButtonGroup.html">ButtonGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -90,6 +114,14 @@
                    
                        <li>
                             
+                           <a href="../classes/Grid.html">Grid</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Row.html">Row</a>
                            <ul>
                                 
@@ -99,54 +131,6 @@
                        <li>
                             
                            <a href="../classes/Col.html">Col</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/crumb.html">crumb</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/dialog.html">dialog</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Grid.html">Grid</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Select.html">Select</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Tab.html">Tab</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/toast.html">toast</a>
                            <ul>
                                 
                            </ul>
@@ -172,7 +156,23 @@
                     
                        <li>
                             
-                           <a href="../classes/Label.html">Label</a>
+                           <a href="../classes/crumb.html">crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/toast.html">toast</a>
                            <ul>
                                 
                            </ul>
@@ -236,7 +236,31 @@
                     
                        <li>
                             
+                           <a href="../classes/dialog.html">dialog</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Label.html">Label</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/LabelGroup.html">LabelGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/List.html">List</a>
                            <ul>
                                 
                            </ul>
@@ -313,15 +337,22 @@ export default class Search extends Component {
 
     render() {
         return (
-            &lt;Grid&gt;
-                &lt;Row className={
+            &lt;Grid style={{minWidth:&#x27;240px&#x27;}}&gt;
+                &lt;div className={
                     classnames(
                         this.getClassNamesForArguments(&#x27;wrapper&#x27;,&#x27;icon&#x27;)
                         )}&gt;
-                    &lt;Input ref={this.props.name} id={this.props.id} placeholder={this.props.placeholder}
-                           onChange={::this.changeValue}/&gt;
-                &lt;/Row&gt;
-                &lt;Button radius egSize=&quot;xs&quot; onClick={::this.submitSearch}&gt;搜索&lt;/Button&gt;
+                    &lt;div className={
+                    classnames(
+                        this.getClassNamesForArguments(&#x27;content&#x27;)
+                        )}&gt;
+                        &lt;div style={{width:&#x27;100%&#x27;}}&gt;
+                    &lt;Input  ref={this.props.name} id={this.props.id} placeholder={this.props.placeholder}
+                           onChange={::this.changeValue} onKeyPress={::this.keyIn}/&gt;
+                    &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;Button radius egSize=&quot;xs&quot; onClick={::this.submitSearch}&gt;搜索&lt;/Button&gt;
+                &lt;/div&gt;
             &lt;/Grid&gt;
         );
     }
@@ -335,6 +366,11 @@ export default class Search extends Component {
             value: event.target.value
         });
     }
+    keyIn(event){
+        if(event.keyCode == 13){
+            this.changeValue();
+        }
+    }
     /**
      * @method submit search
      * @param none
@@ -344,6 +380,12 @@ export default class Search extends Component {
         let val = this.state.value;
         this.props.callBack &amp;&amp; this.props.callBack(val);
     }
+    keyIn(event){
+        if(event.charCode == 13){
+            this.submitSearch();
+        }
+    }
+
 }
     </pre>
 </div>

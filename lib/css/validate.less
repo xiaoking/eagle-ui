@@ -1,0 +1,44 @@
+@import "color.less";
+/**按钮组*/
+
+.eg-validate{
+    .eg-validate-error{
+        outline:none;
+        border-color: @danger;
+    }
+    .eg-validate-tips{
+        position: absolute;
+        padding: 4px 10px;
+        display: none;
+        i{
+            border-radius: 50%;
+            display: inline-block;
+            background: @danger;
+            width: 18px;
+            height: 18px;
+            top: 50%;
+            left: 0;
+            margin-top: -10px;
+            position: absolute;
+            &:before{
+                height: 2px;
+                width: 2px;
+                background: #fff;
+                left: 8px;
+                top: 13px;
+                position: absolute;
+                content: "";
+                opacity: 0.9;
+            }
+            &:after{
+                height: 8px;
+                width: 2px;
+                background: #fff;
+                left: 8px;
+                top: 4px;
+                position: absolute;
+                content: "";
+            }
+        }
+    }
+}
