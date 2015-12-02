@@ -6,11 +6,11 @@
   margin-right: 15px;
   ul{
     background: #fff;
+    display: none;
     position: absolute;
     width: inherit;
     top: 39px;
     left: 0px;
-    display: block;
     border: @gray-line solid 1px;
     border-radius: 0px 0px 4px 4px;
     max-height: 150px;
@@ -27,31 +27,6 @@
       color:@red-num;
     }
 
-  }
-  .eg-select-ul{
-    display: none;
-    &::-webkit-scrollbar
-    {
-      width: 16px;
-      height: 16px;
-      background-color: #fff;
-    }
-
-    /*定义滚动条轨道 内阴影+圆角*/
-    &::-webkit-scrollbar-track
-    {
-      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-      border-radius: 10px;
-      background-color: #fff;
-    }
-
-    /*定义滑块 内阴影+圆角*/
-    &::-webkit-scrollbar-thumb
-    {
-      border-radius: 10px;
-      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-      background-color: #fff;
-    }
   }
   .eg-select-show{
     display: block;

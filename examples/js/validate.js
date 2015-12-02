@@ -7,7 +7,7 @@
 		var a = typeof exports === 'object' ? factory(require("react")) : factory(root["React"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_27__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_28__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -66,43 +66,47 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _lib_includeLess = __webpack_require__(23);
+	var _lib_includeLess = __webpack_require__(24);
 
 	var _lib_includeLess2 = _interopRequireDefault(_lib_includeLess);
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _libInputJs = __webpack_require__(37);
+	var _libInputJs = __webpack_require__(38);
 
 	var _libInputJs2 = _interopRequireDefault(_libInputJs);
 
-	var _libButtonJs = __webpack_require__(32);
+	var _libButtonJs = __webpack_require__(33);
 
 	var _libButtonJs2 = _interopRequireDefault(_libButtonJs);
 
-	var _libRowJs = __webpack_require__(33);
+	var _libRowJs = __webpack_require__(34);
 
 	var _libRowJs2 = _interopRequireDefault(_libRowJs);
 
-	var _libPanelPanelJs = __webpack_require__(65);
+	var _libPanelPanelJs = __webpack_require__(66);
 
 	var _libPanelPanelJs2 = _interopRequireDefault(_libPanelPanelJs);
 
-	var _libPanelPanelContentJs = __webpack_require__(66);
+	var _libPanelPanelContentJs = __webpack_require__(67);
 
 	var _libPanelPanelContentJs2 = _interopRequireDefault(_libPanelPanelContentJs);
 
-	var _libColJs = __webpack_require__(34);
+	var _libColJs = __webpack_require__(35);
 
 	var _libColJs2 = _interopRequireDefault(_libColJs);
 
-	var _libGridJs = __webpack_require__(35);
+	var _libGridJs = __webpack_require__(36);
 
 	var _libGridJs2 = _interopRequireDefault(_libGridJs);
 
-	var _libValidatorPanelJs = __webpack_require__(67);
+	var _libRadioGroupJs = __webpack_require__(46);
+
+	var _libRadioGroupJs2 = _interopRequireDefault(_libRadioGroupJs);
+
+	var _libValidatorPanelJs = __webpack_require__(68);
 
 	var _libValidatorPanelJs2 = _interopRequireDefault(_libValidatorPanelJs);
 
@@ -118,6 +122,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	            //key对应的是表单元素的name
 	            calendar: {
 	                //组件默认规则
+	                required: true
+	            },
+	            userName: {
 	                required: true
 	            },
 	            checkbox: {
@@ -157,10 +164,58 @@ return /******/ (function(modules) { // webpackBootstrap
 	                email: true
 	            }
 	        };
+
+	        this.state = {
+	            showTab: 0,
+	            update: 'uid'
+	        };
 	    }
 
 	    Demo.prototype.show = function show(value, text, target, active) {
 	        console.dir(value);
+	    };
+
+	    Demo.prototype.change = function change(value) {
+	        this.setState({
+	            showTab: value,
+	            update: 'uid' + +new Date()
+	        });
+	    };
+
+	    Demo.prototype.submit = function submit(vals) {
+	        alert('验证成功' + JSON.stringify(vals));
+	    };
+
+	    Demo.prototype.checktab = function checktab() {
+	        if (this.state.showTab == '1') {
+	            return _react2['default'].createElement(
+	                'div',
+	                null,
+	                _react2['default'].createElement(
+	                    _libRowJs2['default'],
+	                    null,
+	                    _react2['default'].createElement(
+	                        _libColJs2['default'],
+	                        null,
+	                        _react2['default'].createElement(_libInputJs2['default'], { placeholder: '请输入姓名', name: 'userName', 'data-validate': true })
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    _libRowJs2['default'],
+	                    null,
+	                    _react2['default'].createElement(
+	                        _libColJs2['default'],
+	                        null,
+	                        _react2['default'].createElement(_libInputJs2['default'], { type: 'checkbox', name: 'checkbox', value: '1', 'data-validate': true }),
+	                        _react2['default'].createElement(_libInputJs2['default'], { type: 'checkbox', name: 'checkbox', value: '2', 'data-validate': true }),
+	                        _react2['default'].createElement(_libInputJs2['default'], { type: 'checkbox', name: 'checkbox', value: '3', 'data-validate': true }),
+	                        _react2['default'].createElement(_libInputJs2['default'], { type: 'checkbox', name: 'checkbox', value: '4', 'data-validate': true })
+	                    )
+	                )
+	            );
+	        } else {
+	            return null;
+	        }
 	    };
 
 	    Demo.prototype.render = function render() {
@@ -175,10 +230,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    _react2['default'].createElement(
 	                        _libColJs2['default'],
+	                        null,
+	                        _react2['default'].createElement(
+	                            _libPanelPanelContentJs2['default'],
+	                            null,
+	                            _react2['default'].createElement(
+	                                _libRadioGroupJs2['default'],
+	                                { defaultChecked: this.state.showTab + '', name: 'radio-foot', getValueCallback: this.change.bind(this) },
+	                                _react2['default'].createElement(_libInputJs2['default'], { type: 'radio', label: '显示第一个表单元素', value: '0' }),
+	                                _react2['default'].createElement(_libInputJs2['default'], { type: 'radio', label: '显示第二个表单元素', value: '1' })
+	                            )
+	                        )
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    _libRowJs2['default'],
+	                    null,
+	                    _react2['default'].createElement(
+	                        _libColJs2['default'],
 	                        { sm: 5, end: true },
 	                        _react2['default'].createElement(
 	                            _libValidatorPanelJs2['default'],
-	                            { rules: this.rules, submitElement: '#submit' },
+	                            { rules: this.rules, submitElement: '#submit', direction: 'right', id: 'testFrom', update: this.state.update, submitCallback: this.submit.bind(this) },
 	                            _react2['default'].createElement(
 	                                _libRowJs2['default'],
 	                                null,
@@ -194,22 +267,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                            _react2['default'].createElement(
 	                                                _libColJs2['default'],
 	                                                null,
-	                                                _react2['default'].createElement(_libInputJs2['default'], { placeholder: '请输入', icon: 'calendar', name: 'calendar', 'data-validate': true }),
-	                                                _react2['default'].createElement(_libInputJs2['default'], { type: 'checkbox', name: 'checkbox', value: '1', 'data-validate': true }),
-	                                                _react2['default'].createElement(_libInputJs2['default'], { type: 'checkbox', name: 'checkbox', value: '2', 'data-validate': true }),
-	                                                _react2['default'].createElement(_libInputJs2['default'], { type: 'checkbox', name: 'checkbox', value: '3', 'data-validate': true }),
-	                                                _react2['default'].createElement(_libInputJs2['default'], { type: 'checkbox', name: 'checkbox', value: '4', 'data-validate': true })
-	                                            )
-	                                        ),
-	                                        _react2['default'].createElement(
-	                                            _libRowJs2['default'],
-	                                            null,
-	                                            _react2['default'].createElement(
-	                                                _libColJs2['default'],
-	                                                null,
 	                                                _react2['default'].createElement(_libInputJs2['default'], { placeholder: '请输入日期', icon: 'calendar', name: 'date', 'data-validate': true })
 	                                            )
 	                                        ),
+	                                        this.checktab(),
 	                                        _react2['default'].createElement(
 	                                            _libRowJs2['default'],
 	                                            null,
@@ -276,21 +337,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 23:
+/***/ 24:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 27:
+/***/ 28:
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_27__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_28__;
 
 /***/ },
 
-/***/ 29:
+/***/ 30:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -300,7 +361,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _constantsJs = __webpack_require__(30);
+	var _constantsJs = __webpack_require__(31);
 
 	var consts = _constantsJs.classConstants;
 
@@ -435,7 +496,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 30:
+/***/ 31:
 /***/ function(module, exports) {
 
 	/**
@@ -497,7 +558,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 31:
+/***/ 32:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -552,7 +613,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 32:
+/***/ 33:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -572,15 +633,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(29);
+	var _utilsClassNameMixin = __webpack_require__(30);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames = __webpack_require__(31);
+	var _classnames = __webpack_require__(32);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -729,7 +790,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 33:
+/***/ 34:
 /***/ function(module, exports, __webpack_require__) {
 
 	//import RowLess from './row.less';
@@ -747,11 +808,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(31);
+	var _classnames = __webpack_require__(32);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -796,7 +857,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 34:
+/***/ 35:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -813,11 +874,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(31);
+	var _classnames = __webpack_require__(32);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -886,7 +947,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 35:
+/***/ 36:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -903,15 +964,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(31);
+	var _classnames = __webpack_require__(32);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _utilsClassNameMixin = __webpack_require__(29);
+	var _utilsClassNameMixin = __webpack_require__(30);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
@@ -959,7 +1020,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 37:
+/***/ 38:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -976,15 +1037,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(29);
+	var _utilsClassNameMixin = __webpack_require__(30);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames10 = __webpack_require__(31);
+	var _classnames10 = __webpack_require__(32);
 
 	var _classnames11 = _interopRequireDefault(_classnames10);
 
@@ -1142,7 +1203,144 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 65:
+/***/ 46:
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Created by mac on 15/9/7.
+	 */
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(28);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _InputJs = __webpack_require__(38);
+
+	var _InputJs2 = _interopRequireDefault(_InputJs);
+
+	/**
+	 * 单选按钮组组件
+	 * @class RadioGroup
+	 * @module form
+	 * @extends Component
+	 * @constructor
+	 * @since 0.1.0
+	 * @demo src/input.js {js}
+	 * @demo input.html {html}
+	 * @show true
+	 * */
+
+	var RadioGroup = (function (_Component) {
+	    _inherits(RadioGroup, _Component);
+
+	    _createClass(RadioGroup, null, [{
+	        key: 'propTypes',
+	        value: {
+	            /**
+	             * radio name
+	             * @property name
+	             * @type String
+	             * */
+	            name: _react.PropTypes.string,
+	            /**
+	             * 默认选中项
+	             * @property defaultChecked
+	             * @type String
+	             * */
+	            defaultChecked: _react.PropTypes.string,
+	            /**
+	             * 获取选中的值
+	             * @property getValueCallback
+	             * @type String
+	             * */
+	            getValueCallback: _react.PropTypes.func
+	        },
+	        enumerable: true
+	    }]);
+
+	    function RadioGroup(props, context) {
+	        _classCallCheck(this, RadioGroup);
+
+	        _Component.call(this, props, context);
+
+	        this.state = {
+	            checked: this.props.defaultChecked
+	        };
+	    }
+
+	    RadioGroup.prototype._onChange = function _onChange(target) {
+
+	        if (this.state.checked != target.value) {
+
+	            this.setState({
+	                checked: target.value
+	            });
+	            this.props.getValueCallback(target.value, target);
+	        }
+	    };
+
+	    RadioGroup.prototype.componentDidMount = function componentDidMount() {};
+
+	    RadioGroup.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+	        this.setState({
+	            checked: nextProps.defaultChecked
+	        });
+	    };
+
+	    RadioGroup.prototype.render = function render() {
+	        var _this = this;
+
+	        var options = _react2['default'].Children.map(this.props.children, function (option) {
+	            var _option$props = option.props;
+	            var name = _option$props.name;
+	            var value = _option$props.value;
+	            var label = _option$props.label;
+	            var onCheck = _option$props.onCheck;
+
+	            var other = _objectWithoutProperties(_option$props, ['name', 'value', 'label', 'onCheck']);
+
+	            return _react2['default'].createElement(_InputJs2['default'], _extends({}, other, {
+	                ref: option.props.value,
+	                name: _this.props.name,
+	                key: option.props.value,
+	                value: option.props.value,
+	                label: option.props.label,
+	                onCheck: _this._onChange.bind(_this),
+	                checked: option.props.value === _this.state.checked }));
+	        }, this);
+
+	        return _react2['default'].createElement(
+	            'div',
+	            { style: this.props.style,
+	                className: this.props.className || '' },
+	            options
+	        );
+	    };
+
+	    return RadioGroup;
+	})(_react.Component);
+
+	exports['default'] = RadioGroup;
+	module.exports = exports['default'];
+
+/***/ },
+
+/***/ 66:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1159,15 +1357,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(31);
+	var _classnames = __webpack_require__(32);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _utilsClassNameMixinJs = __webpack_require__(29);
+	var _utilsClassNameMixinJs = __webpack_require__(30);
 
 	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
 
@@ -1175,7 +1373,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * Panel组件
 	 * @class Panel
 	 * @constructor
-	 * @module ui
+	 * @module panel
 	 * @extends Component
 	 * @requires React classnames
 	 * @since 0.1.0
@@ -1226,7 +1424,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 66:
+/***/ 67:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1241,15 +1439,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(31);
+	var _classnames = __webpack_require__(32);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _utilsClassNameMixinJs = __webpack_require__(29);
+	var _utilsClassNameMixinJs = __webpack_require__(30);
 
 	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
 
@@ -1257,7 +1455,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * PanelContent组件
 	 * @class PanelContent
 	 * @constructor
-	 * @module ui
+	 * @module panel
 	 * @extends Component
 	 * @requires React classnames
 	 * @since 0.1.0
@@ -1319,7 +1517,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 67:
+/***/ 68:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1336,15 +1534,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(29);
+	var _utilsClassNameMixin = __webpack_require__(30);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames = __webpack_require__(31);
+	var _classnames = __webpack_require__(32);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -1444,14 +1642,33 @@ return /******/ (function(modules) { // webpackBootstrap
 	            },
 	            initCallback: function initCallback() {},
 	            /**
-	             * 在提交时除验证规则之外的其他逻辑
+	             * 验证成功后提交表单
 	             * @property submitCallback
 	             * @type Function
 	             * */
 	            submitCallback: function submitCallback() {
 	                return true;
 	            },
+	            /**
+	             * 在提交时除验证规则之外的其他逻辑
+	             * @property validateCallback
+	             * @type Function
+	             * */
+	            validateCallback: function validateCallback() {
+	                return true;
+	            },
+	            /**
+	             * 提示框消失时间
+	             * @property timeout
+	             * @type Number
+	             * @default 3000
+	             * */
 	            timeout: 3000,
+	            /**
+	             * 提交按钮id
+	             * @property submitElement
+	             * @type String
+	             * */
 	            submitElement: '',
 	            /**
 	             * 是否增强文本框提示
@@ -1465,7 +1682,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	             * @property rules
 	             * @type Object
 	             * */
-	            rules: {}
+	            rules: {},
+	            /**
+	             * 提示方位
+	             * @property direction
+	             * @type String
+	             * @default right
+	             * */
+	            direction: 'right',
+	            /**
+	             * 重新更新dom
+	             * @property update
+	             * @type String
+	             * @default +new Date()
+	             * */
+	            update: +new Date()
 	        },
 	        enumerable: true
 	    }]);
@@ -1480,8 +1711,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.formName = 'validate-form';
 	        this.errorClass = this.getClassName('validate-error');
 	        this.init = true;
+	        this.update = this.props.update;
 
-	        this.state = {};
+	        this.isUpdate = false;
+
+	        this.vals = {};
+
+	        this.state = {
+	            message: '',
+	            show: '',
+	            fadeShow: 'block'
+	        };
 	    }
 
 	    ValidatorPanel.prototype.trim = function trim(str) {
@@ -1679,7 +1919,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                }
 	            }
 	        }*/
-
+	        this.vals[element.name] = val;
 	        for (var rule in rules) {
 
 	            text = rules[rule];
@@ -1715,7 +1955,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    ValidatorPanel.prototype.validate = function validate(element) {
 	        var message = this.check(element) || '';
-	        if (message !== '') {
+	        if (message !== '' && element.style.display != 'none' && !this.isUpdate) {
 	            //错误提示
 	            //this.elements[element.name].status=1;
 
@@ -1723,21 +1963,25 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	            //设置错误消息
 	            this.setState({
-	                message: message
+	                message: message,
+	                show: message
 	            });
 	            //this.highlight(this.parent, this.options.errorClass, this.options.validClass);
-	            clearTimeout(this.validateTimeout);
-	            this.validateTimeout = setTimeout((function () {
-	                this.setState({
-	                    message: ''
-	                });
-	            }).bind(this), this.props.timeout);
+	            if (this.props.timeout) {
+	                clearTimeout(this.validateTimeout);
+	                this.validateTimeout = setTimeout((function () {
+	                    this.setState({
+	                        show: ''
+	                    });
+	                }).bind(this), this.props.timeout);
+	            }
 	            return false;
 	        }
 	        this.setState({
-	            message: null
+	            show: null
 	        });
 	        this.unhighlight(element);
+	        this.isUpdate = false;
 	        //this.hide();
 	        return true;
 	    };
@@ -1747,27 +1991,33 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.vaTimeout = setTimeout(this.validate.bind(this, e.target), 400);
 	    };
 
-	    ValidatorPanel.prototype.submit = function submit() {
+	    ValidatorPanel.prototype.submit = function submit(e) {
 	        clearTimeout(this.__blurTimeobj);
 	        var elements = this.elements,
 	            element = null,
 	            isSubmit = true;
-
+	        if (!elements || elements.length <= 0) {
+	            return false;
+	        }
 	        for (var item in elements) {
 	            element = elements[item]; //React.findDOMNode(this.props.refs[item] );
-	            if (!this.validate(element)) {
-	                setTimeout(function () {
-	                    element.focus();
-	                });
-	                isSubmit = false;
-	                break;
+	            if (element && element.nodeType == 1) {
+	                if (!this.validate(element)) {
+	                    setTimeout(function () {
+	                        element.focus();
+	                    });
+	                    isSubmit = false;
+	                    break;
+	                }
 	            }
 	        }
 
-	        if (isSubmit && this.props.submitCallback()) {
-	            //this.options.submitCallback &&(this.options.submitCallback() );
+	        if (isSubmit && this.props.validateCallback(this.vals)) {
+	            this.props.submitCallback && this.props.submitCallback(this.vals);
 	            return true;
 	        }
+	        e.preventDefault();
+	        e.stopPropagation();
 	        return false;
 	    };
 
@@ -1787,37 +2037,55 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	    };
 
+	    ValidatorPanel.prototype.getTip = function getTip() {
+	        return this.form && this.form.querySelector('.' + this.getClassName("validate-tips"));
+	    };
+
 	    //设置错误提示框的位置
 
 	    ValidatorPanel.prototype.setTipsOffset = function setTipsOffset(element) {
 	        var node = null,
 	            name = element.name,
-	            tip = _react2['default'].findDOMNode(this.refs[this.formName]),
+	            d = this.props.direction,
+	            tb = d === "bottom" || d === "top",
+	            tip = this.getTip(),
 	            w = element.offsetLeft,
 	            t = element.offsetTop,
 	            h = element.offsetHeight;
 
-	        while (element.nodeType !== 1 || element.nodeName.toLowerCase() != this.props.componentTag) {
+	        while (element && (element.nodeType !== 1 || element.nodeName.toLowerCase() != this.props.componentTag)) {
 	            element = element.parentNode;
 	        }
 
-	        element = element.querySelectorAll('[name="' + name + '"]');
+	        if (element) {
+	            element = element.querySelectorAll('[name="' + name + '"]');
 
-	        element = element[element.length - 1];
+	            element = element[tb ? 0 : element.length - 1];
 
-	        w = element.offsetLeft;
-	        t = element.offsetTop;
-	        node = element.offsetParent;
-	        while (node) {
-	            t += node.offsetTop;
-	            w += node.offsetLeft;
-	            node = node.offsetParent;
+	            w = element.offsetLeft;
+	            t = element.offsetTop;
+	            node = element.offsetParent;
+	            while (node) {
+	                t += node.offsetTop;
+	                w += node.offsetLeft;
+	                node = node.offsetParent;
+	            }
+	            //w = tip.offsetWidth;
+	            this.highlight(element);
+
+	            tip.style.display = "block";
+
+	            setTimeout((function () {
+	                if (tb) {
+
+	                    tip.style.cssText = 'left:' + w + 'px;top:' + (d === "bottom" ? t + element.offsetHeight : t - tip.offsetHeight) + 'px;';
+	                } else {
+	                    tip.style.cssText = 'left:' + (w + (d === "right" ? element.offsetWidth + 15 : 0)) + 'px;top:' + t + 'px;height:' + h + 'px;line-height:' + h + 'px;';
+	                }
+	            }).bind(this));
+	        } else {
+	            //tip.style.display='none';
 	        }
-	        //w = tip.offsetWidth;
-	        this.highlight(element);
-	        tip = tip.querySelector('.' + this.getClassName("validate-tips"));
-
-	        tip.style.cssText = 'position:absolute;left:' + (w + element.offsetWidth) + 'px;top:' + t + 'px;height:' + h + 'px;line-height:' + h + 'px;background-color:transparent;padding:0px 10px 0 22px;z-index:99;margin-left:15px;}';
 	    };
 
 	    //废弃
@@ -1858,11 +2126,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return options;
 	    };
 
-	    ValidatorPanel.prototype.getElements = function getElements() {
-	        return _react2['default'].findDOMNode(this.refs[this.formName]).querySelectorAll('[data-validate]');
+	    ValidatorPanel.prototype.getForm = function getForm() {
+	        return _react2['default'].findDOMNode(this.refs[this.props.id ? this.props.id : this.formName]);
 	    };
 
-	    ValidatorPanel.prototype.componentDidMount = function componentDidMount() {
+	    ValidatorPanel.prototype.getElements = function getElements() {
+	        return this.form.querySelectorAll('[data-validate]');
+	    };
+
+	    ValidatorPanel.prototype.setDomEvent = function setDomEvent() {
 	        var elements = this.getElements();var _this = this;var _props = this.props;
 	        var trigger = _props.trigger;
 	        var initCallback = _props.initCallback;
@@ -1870,8 +2142,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        var _loop = function (i, len) {
 	            trigger.split(' ').forEach(function (event) {
-
-	                elements[i].addEventListener(event, _this.validateHandler.bind(_this), false);
+	                elements[i].removeEventListener(event, _this._fun, false);
+	                elements[i].addEventListener(event, _this._fun, false);
 	            });
 	        };
 
@@ -1879,25 +2151,76 @@ return /******/ (function(modules) { // webpackBootstrap
 	            _loop(i, len);
 	        }
 
+	        this.elements = elements;
+	    };
+
+	    ValidatorPanel.prototype.componentDidMount = function componentDidMount() {
+
+	        this._fun = (function (e) {
+	            this.validateHandler(e);
+	        }).bind(this);
+
+	        this.form = this.getForm();
+
+	        var elements = this.getElements();var _this = this;var _props2 = this.props;
+	        var trigger = _props2.trigger;
+	        var initCallback = _props2.initCallback;
+	        var submitElement = _props2.submitElement;
+
+	        /*for(let i=0,len=elements.length;i<len;i++){
+	            trigger.split(' ').forEach((event)=>{
+	                 elements[i].addEventListener(event,_this.validateHandler.bind(_this),false);
+	            });
+	        }*/
+
+	        this.setDomEvent();
+
 	        initCallback.call(this, this.submit.bind(this));
 
 	        if (submitElement) {
 	            document.querySelector(submitElement).addEventListener('mousedown', this.submit.bind(this), false);
 	        }
+	        //let tip = this.getTip();
+
 	        this.elements = elements;
 	        this.init = false;
 	    };
 
-	    ValidatorPanel.prototype.render = function render() {
-	        var Component = this.props.componentTag;
+	    ValidatorPanel.prototype.componentDidUpdate = function componentDidUpdate(prevProps, prevState) {
+	        if (this.props.update != this.update) {
+	            this.setDomEvent();
 
+	            this.update = this.props.update;
+	            this.isUpdate = true;
+	            this.setState({
+	                show: ''
+	            });
+	        }
+	    };
+
+	    ValidatorPanel.prototype.removeFadeout = function removeFadeout() {
+	        clearTimeout(this.fadeoutTimeObj);
+	        this.fadeoutTimeObj = setTimeout((function () {
+	            if (!this.state.show && !this.init && this.state.fadeShow != 'none') {
+	                this.getTip().style.display = 'none';
+	            }
+	        }).bind(this), 400);
+	    };
+
+	    ValidatorPanel.prototype.render = function render() {
+	        var _props3 = this.props;
+	        var Component = _props3.componentTag;
+	        var direction = _props3.direction;
+	        var id = _props3.id;
+
+	        this.removeFadeout();
 	        return _react2['default'].createElement(
 	            Component,
-	            _extends({}, this.props, { ref: this.formName, className: this.getClassName('validate') }),
+	            _extends({}, this.props, { ref: id ? id : this.formName, className: this.getClassName('validate') }),
 	            this.props.children,
 	            _react2['default'].createElement(
 	                'div',
-	                { className: _classnames2['default'](this.getClassName('validate-tips'), '' + (this.init ? "" : this.state.message ? "fadein" : "fadeout")) },
+	                { ref: 'ref-validateTips', className: _classnames2['default'](this.getClassName('validate-tips'), 'animated', '' + (direction === "bottom" || direction === "top" ? 'bottom' : ''), '' + (this.init ? "" : this.state.show ? "fadein" : "fadeout")) },
 	                _react2['default'].createElement('i', null),
 	                this.state.message
 	            )

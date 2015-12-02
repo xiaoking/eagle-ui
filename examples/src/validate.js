@@ -10,6 +10,7 @@ import Panel from '../../lib/panel/Panel.js';
 import PanelContent from '../../lib/panel/PanelContent.js';
 import Col from '../../lib/Col.js';
 import Grid from '../../lib/Grid.js';
+import RadioGroup from '../../lib/RadioGroup.js';
 import ValidatorPanel from '../../lib/ValidatorPanel.js';
 
 let Demo = class Demo extends Component{
@@ -22,6 +23,9 @@ let Demo = class Demo extends Component{
             //key对应的是表单元素的name
             calendar:{
                 //组件默认规则
+                required:true
+            },
+            userName:{
                 required:true
             },
             checkbox:{
@@ -62,10 +66,51 @@ let Demo = class Demo extends Component{
             }
         };
 
+        this.state={
+            showTab:0,
+            update:'uid'
+        };
+
     }
 
     show(value,text,target,active){
         console.dir(value);
+    }
+
+    change(value){
+       this.setState({
+           showTab:value,
+           update:'uid'+(+new Date())
+       });
+    }
+
+    submit(vals){
+        alert('验证成功'+JSON.stringify(vals));
+    }
+
+    checktab(){
+        if(this.state.showTab =='1'){
+            return (
+                <div>
+                <Row>
+                    <Col>
+                        <Input placeholder="请输入姓名"  name="userName" data-validate />
+                    </Col>
+                </Row>
+                <Row>
+                <Col>
+                    <Input  type="checkbox"  name="checkbox" value="1"  data-validate />
+                    <Input  type="checkbox"   name="checkbox" value="2" data-validate  />
+                    <Input  type="checkbox"   name="checkbox" value="3" data-validate  />
+                    <Input  type="checkbox"   name="checkbox" value="4" data-validate  />
+                </Col>
+
+                </Row>
+                </div>
+            );
+        }else{
+            return null;
+        }
     }
 
     render(){
@@ -74,26 +119,27 @@ let Demo = class Demo extends Component{
 
                     <Grid>
                         <Row>
+                            <Col>
+                                <PanelContent>
+                                    <RadioGroup defaultChecked={this.state.showTab+''} name="radio-foot" getValueCallback={::this.change}>
+                                        <Input  type="radio"  label="显示第一个表单元素" value="0"  />
+                                        <Input  type="radio"  label="显示第二个表单元素" value="1"   />
+                                    </RadioGroup>
+                                </PanelContent>
+                            </Col>
+                        </Row>
+                        <Row>
                             <Col sm={5} end>
-                                <ValidatorPanel rules={this.rules} submitElement="#submit">
+                                <ValidatorPanel rules={this.rules} submitElement="#submit" direction="right" id="testFrom" update={this.state.update} submitCallback={::this.submit}>
                                     <Row>
                                         <Col>
                                             <PanelContent>
                                                 <Row>
                                                     <Col>
-                                                        <Input placeholder="请输入" icon="calendar" name="calendar" data-validate />
-                                                        <Input  type="checkbox"  name="checkbox" value="1"  data-validate />
-                                                        <Input  type="checkbox"   name="checkbox" value="2" data-validate  />
-                                                        <Input  type="checkbox"   name="checkbox" value="3" data-validate  />
-                                                        <Input  type="checkbox"   name="checkbox" value="4" data-validate  />
-                                                    </Col>
-
-                                                </Row>
-                                                <Row>
-                                                    <Col>
                                                         <Input placeholder="请输入日期" icon="calendar" name="date" data-validate />
                                                     </Col>
                                                 </Row>
+                                                {this.checktab()}
                                                 <Row>
                                                     <Col>
                                                         <Input placeholder="请输入有效的号码" name="number" data-validate />
@@ -116,7 +162,7 @@ let Demo = class Demo extends Component{
                                                 </Row>
                                                 <Row>
                                                     <Col>
-                                                        <Button radius egSize="xs" id="submit">点我提交表单</Button>
+                                                        <Button radius egSize="xs" id="submit" >点我提交表单</Button>
                                                     </Col>
                                                 </Row>
                                             </PanelContent>

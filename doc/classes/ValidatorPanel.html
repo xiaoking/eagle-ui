@@ -94,14 +94,6 @@
                            </ul>
                        </li>
                     
-                       <li>
-                            
-                           <a href="../classes/Tab.html">Tab</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
                     </ul>
                 </dd>
              
@@ -141,43 +133,11 @@
              
                 <dt>
                     <span class="glyphicon glyphicon-minus"></span>
-                    <a href="../modules/ui.html">ui</a>
+                    <a href="../modules/panel.html">panel</a>
                 </dt>
                 <dd>
                     <ul>
                    
-                       <li>
-                            
-                           <a href="../classes/Calendar.html">Calendar</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/crumb.html">crumb</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Item.html">Item</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/toast.html">toast</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
                        <li>
                             
                            <a href="../classes/Panel.html">Panel</a>
@@ -210,6 +170,16 @@
                            </ul>
                        </li>
                     
+                    </ul>
+                </dd>
+             
+                <dt>
+                    <span class="glyphicon glyphicon-minus"></span>
+                    <a href="../modules/table.html">table</a>
+                </dt>
+                <dd>
+                    <ul>
+                   
                        <li>
                             
                            <a href="../classes/Table.html">Table</a>
@@ -220,7 +190,65 @@
                     
                        <li>
                             
-                           <a href="../classes/Paging.html">Paging</a>
+                           <a href="../classes/Td.html">Td</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Th.html">Th</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tr.html">Tr</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                    </ul>
+                </dd>
+             
+                <dt>
+                    <span class="glyphicon glyphicon-minus"></span>
+                    <a href="../modules/ui.html">ui</a>
+                </dt>
+                <dd>
+                    <ul>
+                   
+                       <li>
+                            
+                           <a href="../classes/crumb.html">crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Calendar.html">Calendar</a>
                            <ul>
                                 
                            </ul>
@@ -261,6 +289,30 @@
                        <li>
                             
                            <a href="../classes/List.html">List</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Paging.html">Paging</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tabset.html">Tabset</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Toast.html">Toast</a>
                            <ul>
                                 
                            </ul>
@@ -346,6 +398,13 @@
                     </li>
                 
                     <li class="index-item property">
+                        <a href="#" data-tabid="#property" data-anchor="#property_direction" data-tablink="direction">direction</a>
+
+                        
+                        
+                    </li>
+                
+                    <li class="index-item property">
                         <a href="#" data-tabid="#property" data-anchor="#property_message" data-tablink="message">message</a>
 
                         
@@ -374,7 +433,35 @@
                     </li>
                 
                     <li class="index-item property">
+                        <a href="#" data-tabid="#property" data-anchor="#property_submitElement" data-tablink="submitElement">submitElement</a>
+
+                        
+                        
+                    </li>
+                
+                    <li class="index-item property">
+                        <a href="#" data-tabid="#property" data-anchor="#property_timeout" data-tablink="timeout">timeout</a>
+
+                        
+                        
+                    </li>
+                
+                    <li class="index-item property">
                         <a href="#" data-tabid="#property" data-anchor="#property_trigger" data-tablink="trigger">trigger</a>
+
+                        
+                        
+                    </li>
+                
+                    <li class="index-item property">
+                        <a href="#" data-tabid="#property" data-anchor="#property_update" data-tablink="update">update</a>
+
+                        
+                        
+                    </li>
+                
+                    <li class="index-item property">
+                        <a href="#" data-tabid="#property" data-anchor="#property_validateCallback" data-tablink="validateCallback">validateCallback</a>
 
                         
                         
@@ -511,6 +598,7 @@ import Panel from &#39;../../lib/panel/Panel.js&#39;;
 import PanelContent from &#39;../../lib/panel/PanelContent.js&#39;;
 import Col from &#39;../../lib/Col.js&#39;;
 import Grid from &#39;../../lib/Grid.js&#39;;
+import RadioGroup from &#39;../../lib/RadioGroup.js&#39;;
 import ValidatorPanel from &#39;../../lib/ValidatorPanel.js&#39;;
 
 let Demo = class Demo extends Component{
@@ -523,6 +611,9 @@ let Demo = class Demo extends Component{
             //key对应的是表单元素的name
             calendar:{
                 //组件默认规则
+                required:true
+            },
+            userName:{
                 required:true
             },
             checkbox:{
@@ -563,10 +654,51 @@ let Demo = class Demo extends Component{
             }
         };
 
+        this.state={
+            showTab:0,
+            update:&#39;uid&#39;
+        };
+
     }
 
     show(value,text,target,active){
         console.dir(value);
+    }
+
+    change(value){
+       this.setState({
+           showTab:value,
+           update:&#39;uid&#39;+(+new Date())
+       });
+    }
+
+    submit(vals){
+        alert(&#39;验证成功&#39;+JSON.stringify(vals));
+    }
+
+    checktab(){
+        if(this.state.showTab ==&#39;1&#39;){
+            return (
+                &lt;div&gt;
+                &lt;Row&gt;
+                    &lt;Col&gt;
+                        &lt;Input placeholder="请输入姓名"  name="userName" data-validate /&gt;
+                    &lt;/Col&gt;
+                &lt;/Row&gt;
+                &lt;Row&gt;
+                &lt;Col&gt;
+                    &lt;Input  type="checkbox"  name="checkbox" value="1"  data-validate /&gt;
+                    &lt;Input  type="checkbox"   name="checkbox" value="2" data-validate  /&gt;
+                    &lt;Input  type="checkbox"   name="checkbox" value="3" data-validate  /&gt;
+                    &lt;Input  type="checkbox"   name="checkbox" value="4" data-validate  /&gt;
+                &lt;/Col&gt;
+
+                &lt;/Row&gt;
+                &lt;/div&gt;
+            );
+        }else{
+            return null;
+        }
     }
 
     render(){
@@ -575,26 +707,27 @@ let Demo = class Demo extends Component{
 
                     &lt;Grid&gt;
                         &lt;Row&gt;
+                            &lt;Col&gt;
+                                &lt;PanelContent&gt;
+                                    &lt;RadioGroup defaultChecked={this.state.showTab+&#39;&#39;} name="radio-foot" getValueCallback={::this.change}&gt;
+                                        &lt;Input  type="radio"  label="显示第一个表单元素" value="0"  /&gt;
+                                        &lt;Input  type="radio"  label="显示第二个表单元素" value="1"   /&gt;
+                                    &lt;/RadioGroup&gt;
+                                &lt;/PanelContent&gt;
+                            &lt;/Col&gt;
+                        &lt;/Row&gt;
+                        &lt;Row&gt;
                             &lt;Col sm={5} end&gt;
-                                &lt;ValidatorPanel rules={this.rules} submitElement="#submit"&gt;
+                                &lt;ValidatorPanel rules={this.rules} submitElement="#submit" direction="right" id="testFrom" update={this.state.update} submitCallback={::this.submit}&gt;
                                     &lt;Row&gt;
                                         &lt;Col&gt;
                                             &lt;PanelContent&gt;
                                                 &lt;Row&gt;
                                                     &lt;Col&gt;
-                                                        &lt;Input placeholder="请输入" icon="calendar" name="calendar" data-validate /&gt;
-                                                        &lt;Input  type="checkbox"  name="checkbox" value="1"  data-validate /&gt;
-                                                        &lt;Input  type="checkbox"   name="checkbox" value="2" data-validate  /&gt;
-                                                        &lt;Input  type="checkbox"   name="checkbox" value="3" data-validate  /&gt;
-                                                        &lt;Input  type="checkbox"   name="checkbox" value="4" data-validate  /&gt;
-                                                    &lt;/Col&gt;
-
-                                                &lt;/Row&gt;
-                                                &lt;Row&gt;
-                                                    &lt;Col&gt;
                                                         &lt;Input placeholder="请输入日期" icon="calendar" name="date" data-validate /&gt;
                                                     &lt;/Col&gt;
                                                 &lt;/Row&gt;
+                                                {this.checktab()}
                                                 &lt;Row&gt;
                                                     &lt;Col&gt;
                                                         &lt;Input placeholder="请输入有效的号码" name="number" data-validate /&gt;
@@ -617,7 +750,7 @@ let Demo = class Demo extends Component{
                                                 &lt;/Row&gt;
                                                 &lt;Row&gt;
                                                     &lt;Col&gt;
-                                                        &lt;Button radius egSize="xs" id="submit"&gt;点我提交表单&lt;/Button&gt;
+                                                        &lt;Button radius egSize="xs" id="submit" &gt;点我提交表单&lt;/Button&gt;
                                                     &lt;/Col&gt;
                                                 &lt;/Row&gt;
                                             &lt;/PanelContent&gt;
@@ -650,7 +783,6 @@ ReactDOM.render(
 
 &lt;script src="../bower_components/react/react.js"&gt;&lt;/script&gt;
 &lt;script src="../bower_components/react/react-dom.js"&gt;&lt;/script&gt;
-&lt;script src="../dist/eagle-ui.js"&gt;&lt;/script&gt;
 &lt;script src="js/validate.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
@@ -714,6 +846,54 @@ ReactDOM.render(
     
         <p><strong>Default:</strong></p>
          <code> form</code>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_direction" class="property item">
+    <h3 class="name"><code>direction</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_ValidatorPanel.js.html#l136"><code>lib&#x2F;ValidatorPanel.js:136</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <div class="stdoc-code"><p>提示方位</p>
+</div>
+    </div>
+
+    
+        <p><strong>Default:</strong></p>
+         <code> right</code>
     
 
     
@@ -806,7 +986,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l111"><code>lib&#x2F;ValidatorPanel.js:111</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l130"><code>lib&#x2F;ValidatorPanel.js:130</code></a>
         
         </p>
 
@@ -851,7 +1031,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l104"><code>lib&#x2F;ValidatorPanel.js:104</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l123"><code>lib&#x2F;ValidatorPanel.js:123</code></a>
         
         </p>
 
@@ -909,10 +1089,103 @@ ReactDOM.render(
     </div>
 
     <div class="description">
-        <div class="stdoc-code"><p>在提交时除验证规则之外的其他逻辑</p>
+        <div class="stdoc-code"><p>验证成功后提交表单</p>
 </div>
     </div>
 
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_submitElement" class="property item">
+    <h3 class="name"><code>submitElement</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_ValidatorPanel.js.html#l117"><code>lib&#x2F;ValidatorPanel.js:117</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <div class="stdoc-code"><p>提交按钮id</p>
+</div>
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_timeout" class="property item">
+    <h3 class="name"><code>timeout</code></h3>
+    <span class="type">Number</span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_ValidatorPanel.js.html#l110"><code>lib&#x2F;ValidatorPanel.js:110</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <div class="stdoc-code"><p>提示框消失时间</p>
+</div>
+    </div>
+
+    
+        <p><strong>Default:</strong></p>
+         <code> 3000</code>
     
 
     
@@ -961,6 +1234,99 @@ ReactDOM.render(
     
         <p><strong>Default:</strong></p>
          <code> blur keyup focus click</code>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_update" class="property item">
+    <h3 class="name"><code>update</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_ValidatorPanel.js.html#l143"><code>lib&#x2F;ValidatorPanel.js:143</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <div class="stdoc-code"><p>重新更新dom</p>
+</div>
+    </div>
+
+    
+        <p><strong>Default:</strong></p>
+         <code> +new Date()</code>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_validateCallback" class="property item">
+    <h3 class="name"><code>validateCallback</code></h3>
+    <span class="type">Function</span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_ValidatorPanel.js.html#l102"><code>lib&#x2F;ValidatorPanel.js:102</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <div class="stdoc-code"><p>在提交时除验证规则之外的其他逻辑</p>
+</div>
+    </div>
+
     
 
     

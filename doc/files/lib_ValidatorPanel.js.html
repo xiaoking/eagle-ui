@@ -94,14 +94,6 @@
                            </ul>
                        </li>
                     
-                       <li>
-                            
-                           <a href="../classes/Tab.html">Tab</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
                     </ul>
                 </dd>
              
@@ -141,43 +133,11 @@
              
                 <dt>
                     <span class="glyphicon glyphicon-minus"></span>
-                    <a href="../modules/ui.html">ui</a>
+                    <a href="../modules/panel.html">panel</a>
                 </dt>
                 <dd>
                     <ul>
                    
-                       <li>
-                            
-                           <a href="../classes/Calendar.html">Calendar</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/crumb.html">crumb</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Item.html">Item</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/toast.html">toast</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
                        <li>
                             
                            <a href="../classes/Panel.html">Panel</a>
@@ -210,6 +170,16 @@
                            </ul>
                        </li>
                     
+                    </ul>
+                </dd>
+             
+                <dt>
+                    <span class="glyphicon glyphicon-minus"></span>
+                    <a href="../modules/table.html">table</a>
+                </dt>
+                <dd>
+                    <ul>
+                   
                        <li>
                             
                            <a href="../classes/Table.html">Table</a>
@@ -220,7 +190,65 @@
                     
                        <li>
                             
-                           <a href="../classes/Paging.html">Paging</a>
+                           <a href="../classes/Td.html">Td</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Th.html">Th</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tr.html">Tr</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                    </ul>
+                </dd>
+             
+                <dt>
+                    <span class="glyphicon glyphicon-minus"></span>
+                    <a href="../modules/ui.html">ui</a>
+                </dt>
+                <dd>
+                    <ul>
+                   
+                       <li>
+                            
+                           <a href="../classes/crumb.html">crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Calendar.html">Calendar</a>
                            <ul>
                                 
                            </ul>
@@ -261,6 +289,30 @@
                        <li>
                             
                            <a href="../classes/List.html">List</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Paging.html">Paging</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tabset.html">Tabset</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Toast.html">Toast</a>
                            <ul>
                                 
                            </ul>
@@ -400,14 +452,33 @@ export default class ValidatorPanel extends Component {
         },
         initCallback:function(){},
         /**
-         * 在提交时除验证规则之外的其他逻辑
+         * 验证成功后提交表单
          * @property submitCallback
          * @type Function
          * */
         submitCallback:function(){
             return true;
         },
+        /**
+         * 在提交时除验证规则之外的其他逻辑
+         * @property validateCallback
+         * @type Function
+         * */
+        validateCallback:function(){
+            return true;
+        },
+        /**
+         * 提示框消失时间
+         * @property timeout
+         * @type Number
+         * @default 3000
+         * */
         timeout:3000,
+        /**
+         * 提交按钮id
+         * @property submitElement
+         * @type String
+         * */
         submitElement:&#x27;&#x27;,
         /**
          * 是否增强文本框提示
@@ -421,7 +492,21 @@ export default class ValidatorPanel extends Component {
          * @property rules
          * @type Object
          * */
-        rules:{}
+        rules:{},
+        /**
+         * 提示方位
+         * @property direction
+         * @type String
+         * @default right
+         * */
+        direction:&#x27;right&#x27;,
+        /**
+         * 重新更新dom
+         * @property update
+         * @type String
+         * @default +new Date()
+         * */
+        update:+new Date()
     };
 
     constructor(props, context) {
@@ -432,9 +517,16 @@ export default class ValidatorPanel extends Component {
         this.formName = &#x27;validate-form&#x27;;
         this.errorClass = this.getClassName(&#x27;validate-error&#x27;);
         this.init = true;
+        this.update = this.props.update;
+
+        this.isUpdate = false;
+
+        this.vals={};
 
         this.state = {
-
+            message:&#x27;&#x27;,
+            show:&#x27;&#x27;,
+            fadeShow:&#x27;block&#x27;
         };
     }
 
@@ -623,7 +715,7 @@ export default class ValidatorPanel extends Component {
                 }
             }
         }*/
-
+        this.vals[element.name]=val;
         for(let rule in rules){
 
             text = rules[rule];
@@ -658,7 +750,7 @@ export default class ValidatorPanel extends Component {
     //验证
     validate(element){
         let message = this.check(element) || &#x27;&#x27;;
-        if(message !== &#x27;&#x27; ){
+        if(message !== &#x27;&#x27; &amp;&amp; element.style.display!=&#x27;none&#x27; &amp;&amp; !this.isUpdate){
             //错误提示
             //this.elements[element.name].status=1;
 
@@ -666,21 +758,25 @@ export default class ValidatorPanel extends Component {
 
             //设置错误消息
             this.setState({
-                message:message
+                message:message,
+                show:message
             });
             //this.highlight(this.parent, this.options.errorClass, this.options.validClass);
-            clearTimeout(this.validateTimeout);
-            this.validateTimeout = setTimeout(function(){
-                this.setState({
-                    message:&#x27;&#x27;
-                });
-            }.bind(this),this.props.timeout);
+            if(this.props.timeout){
+                clearTimeout(this.validateTimeout);
+                this.validateTimeout = setTimeout(function(){
+                    this.setState({
+                        show:&#x27;&#x27;
+                    });
+                }.bind(this),this.props.timeout);
+            }
             return false;
         }
         this.setState({
-            message:null
+            show:null
         });
         this.unhighlight(element);
+        this.isUpdate = false;
         //this.hide();
         return true;
     }
@@ -690,27 +786,33 @@ export default class ValidatorPanel extends Component {
         this.vaTimeout = setTimeout(this.validate.bind(this,e.target),400 );
     }
 
-    submit(){
+    submit(e){
         clearTimeout(this.__blurTimeobj);
         let elements = this.elements,
             element = null,
             isSubmit = true;
-
+        if(!elements || elements.length&lt;=0 ){
+            return false;
+        }
         for(let item in elements){
             element = elements[item];//React.findDOMNode(this.props.refs[item] );
-            if(!this.validate(element  ) ){
-                setTimeout(function(){
-                    element.focus();
-                });
-                isSubmit = false;
-                break;
+            if(element &amp;&amp; element.nodeType==1){
+                if(!this.validate(element  ) ){
+                    setTimeout(function(){
+                        element.focus();
+                    });
+                    isSubmit = false;
+                    break;
+                }
             }
         }
 
-        if(isSubmit &amp;&amp; this.props.submitCallback() ){
-            //this.options.submitCallback &amp;&amp;(this.options.submitCallback() );
+        if(isSubmit &amp;&amp; this.props.validateCallback(this.vals) ){
+            this.props.submitCallback &amp;&amp;(this.props.submitCallback(this.vals) );
             return true;
         }
+        e.preventDefault();
+        e.stopPropagation();
         return false;
     }
 
@@ -729,37 +831,56 @@ export default class ValidatorPanel extends Component {
             return [];
         }
     }
+
+    getTip(){
+        return this.form &amp;&amp; this.form.querySelector(&#x60;.${this.getClassName(&quot;validate-tips&quot;)}&#x60;);
+    }
     //设置错误提示框的位置
     setTipsOffset(element){
         let node = null,
             name = element.name,
-            tip =React.findDOMNode(this.refs[this.formName]),
+            d = this.props.direction,
+            tb=d===&quot;bottom&quot; || d===&quot;top&quot;,
+            tip =this.getTip(),
             w = element.offsetLeft,
             t = element.offsetTop,
             h = element.offsetHeight;
 
-        while(element.nodeType!==1 || element.nodeName.toLowerCase()!=this.props.componentTag ){
+        while(element &amp;&amp; (element.nodeType!==1 || element.nodeName.toLowerCase()!=this.props.componentTag) ){
             element = element.parentNode;
         }
 
-        element = element.querySelectorAll(&#x60;[name=&quot;${name}&quot;]&#x60;);
+        if(element){
+            element = element.querySelectorAll(&#x60;[name=&quot;${name}&quot;]&#x60;);
 
-        element = element[element.length-1];
+            element = element[tb ? 0:element.length-1];
 
-        w = element.offsetLeft;
-        t = element.offsetTop;
-        node = element.offsetParent;
-        while(node) {
-            t+=node.offsetTop;
-            w+=node.offsetLeft;
-            node = node.offsetParent;
+            w = element.offsetLeft;
+            t = element.offsetTop;
+            node = element.offsetParent;
+            while(node) {
+                t+=node.offsetTop;
+                w+=node.offsetLeft;
+                node = node.offsetParent;
 
+            }
+                //w = tip.offsetWidth;
+            this.highlight(element);
+
+            tip.style.display=&quot;block&quot;;
+
+            setTimeout(function(){
+                if(tb){
+
+                    tip.style.cssText=&#x60;left:${w}px;top:${(d===&quot;bottom&quot;?t+element.offsetHeight:t-tip.offsetHeight)}px;&#x60;;
+                }else{
+                    tip.style.cssText = &#x60;left:${w+(d===&quot;right&quot;?element.offsetWidth+15:0)}px;top:${t}px;height:${h}px;line-height:${h}px;&#x60;;
+                }
+            }.bind(this));
+        }else{
+            //tip.style.display=&#x27;none&#x27;;
         }
-            //w = tip.offsetWidth;
-        this.highlight(element);
-        tip = tip.querySelector(&#x60;.${this.getClassName(&quot;validate-tips&quot;)}&#x60;);
 
-        tip.style.cssText = &#x60;position:absolute;left:${w+element.offsetWidth}px;top:${t}px;height:${h}px;line-height:${h}px;background-color:transparent;padding:0px 10px 0 22px;z-index:99;margin-left:15px;}&#x60;;
     }
 
     //废弃
@@ -796,40 +917,90 @@ export default class ValidatorPanel extends Component {
         return options;
     }
 
+    getForm(){
+        return React.findDOMNode(this.refs[this.props.id?this.props.id:this.formName]);
+    }
     getElements(){
-        return React.findDOMNode(this.refs[this.formName]).querySelectorAll(&#x60;[data-validate]&#x60;);
+        return this.form.querySelectorAll(&#x60;[data-validate]&#x60;);
+    }
+
+    setDomEvent(){
+        let elements = this.getElements(),_this = this,{trigger,initCallback,submitElement} = this.props;
+        for(let i=0,len=elements.length;i&lt;len;i++){
+            trigger.split(&#x27; &#x27;).forEach((event)=&gt;{
+                elements[i].removeEventListener(event,_this._fun,false);
+                elements[i].addEventListener(event,_this._fun,false);
+            });
+        }
+
+        this.elements = elements;
     }
 
     componentDidMount(){
+
+        this._fun = function(e){
+            this.validateHandler(e);
+        }.bind(this);
+
+        this.form = this.getForm();
+
         let elements = this.getElements(),_this = this,{trigger,initCallback,submitElement} = this.props;
 
-        for(let i=0,len=elements.length;i&lt;len;i++){
+        /*for(let i=0,len=elements.length;i&lt;len;i++){
             trigger.split(&#x27; &#x27;).forEach((event)=&gt;{
 
                 elements[i].addEventListener(event,_this.validateHandler.bind(_this),false);
             });
-        }
+        }*/
+
+        this.setDomEvent();
 
         initCallback.call(this,this.submit.bind(this));
 
         if(submitElement){
             document.querySelector(submitElement).addEventListener(&#x27;mousedown&#x27;,this.submit.bind(this),false);
         }
+        //let tip = this.getTip();
+
         this.elements = elements;
         this.init = false;
 
     }
 
+    componentDidUpdate(prevProps,prevState){
+        if(this.props.update!=this.update){
+            this.setDomEvent();
+
+            this.update = this.props.update;
+            this.isUpdate = true;
+            this.setState({
+                show:&#x27;&#x27;
+            });
+        }
+    }
+
+
+    removeFadeout(){
+        clearTimeout(this.fadeoutTimeObj);
+        this.fadeoutTimeObj=setTimeout(function(){
+            if(!this.state.show &amp;&amp;!this.init &amp;&amp; this.state.fadeShow!=&#x27;none&#x27;){
+                this.getTip().style.display=&#x27;none&#x27;;
+            }
+        }.bind(this),400 );
+    }
+
     render() {
 
-        let {componentTag:Component} = this.props;
+        let {componentTag:Component,direction,id} = this.props;
 
+        this.removeFadeout();
         return (
-            &lt;Component {...this.props} ref={this.formName} className={this.getClassName(&#x27;validate&#x27;)}&gt;
+            &lt;Component {...this.props} ref={id?id:this.formName} className={this.getClassName(&#x27;validate&#x27;)}&gt;
                 {this.props.children}
-                &lt;div className={classnames(
-                            this.getClassName(&#x60;validate-tips&#x60;),
-                            &#x60;${this.init ? &quot;&quot;:this.state.message ? &quot;fadein&quot; :&quot;fadeout&quot;}&#x60;
+                &lt;div ref=&quot;ref-validateTips&quot; className={classnames(
+                            this.getClassName(&#x60;validate-tips&#x60;),&#x27;animated&#x27;,
+                            &#x60;${direction===&quot;bottom&quot;||direction===&quot;top&quot;?&#x27;bottom&#x27;:&#x27;&#x27;}&#x60;,
+                            &#x60;${this.init ? &quot;&quot;:this.state.show ? &quot;fadein&quot; :&quot;fadeout&quot;}&#x60;
                         )}&gt;
                     &lt;i&gt;&lt;/i&gt;
                     {this.state.message}

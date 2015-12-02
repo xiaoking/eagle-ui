@@ -7,7 +7,7 @@
 		var a = typeof exports === 'object' ? factory(require("react")) : factory(root["React"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_27__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_28__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -66,23 +66,23 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _lib_includeLess = __webpack_require__(23);
+	var _lib_includeLess = __webpack_require__(24);
 
 	var _lib_includeLess2 = _interopRequireDefault(_lib_includeLess);
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _libTooltipJs = __webpack_require__(63);
+	var _libTooltipJs = __webpack_require__(64);
 
 	var _libTooltipJs2 = _interopRequireDefault(_libTooltipJs);
 
-	var _libButtonJs = __webpack_require__(32);
+	var _libButtonJs = __webpack_require__(33);
 
 	var _libButtonJs2 = _interopRequireDefault(_libButtonJs);
 
-	var _libTooltipPanelJs = __webpack_require__(64);
+	var _libTooltipPanelJs = __webpack_require__(65);
 
 	var _libTooltipPanelJs2 = _interopRequireDefault(_libTooltipPanelJs);
 
@@ -97,12 +97,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    Demo.prototype.render = function render() {
 	        return _react2['default'].createElement(
-	            _libTooltipPanelJs2['default'],
+	            'div',
 	            null,
 	            _react2['default'].createElement(
-	                _libButtonJs2['default'],
-	                { radius: true, egSize: 'sm', egStyle: 'warning' },
-	                '我是按钮'
+	                'div',
+	                { style: { width: '300px', display: 'inline-block' } },
+	                'sadasda'
+	            ),
+	            _react2['default'].createElement(
+	                _libTooltipPanelJs2['default'],
+	                null,
+	                _react2['default'].createElement(
+	                    _libButtonJs2['default'],
+	                    { radius: true, egSize: 'sm', egStyle: 'warning' },
+	                    '我是按钮'
+	                )
 	            )
 	        );
 	    };
@@ -113,21 +122,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 23:
+/***/ 24:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 27:
+/***/ 28:
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_27__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_28__;
 
 /***/ },
 
-/***/ 29:
+/***/ 30:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -137,7 +146,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _constantsJs = __webpack_require__(30);
+	var _constantsJs = __webpack_require__(31);
 
 	var consts = _constantsJs.classConstants;
 
@@ -272,7 +281,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 30:
+/***/ 31:
 /***/ function(module, exports) {
 
 	/**
@@ -334,7 +343,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 31:
+/***/ 32:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -389,7 +398,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 32:
+/***/ 33:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -409,15 +418,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(29);
+	var _utilsClassNameMixin = __webpack_require__(30);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames = __webpack_require__(31);
+	var _classnames = __webpack_require__(32);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -566,7 +575,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 33:
+/***/ 34:
 /***/ function(module, exports, __webpack_require__) {
 
 	//import RowLess from './row.less';
@@ -584,11 +593,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(31);
+	var _classnames = __webpack_require__(32);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -633,7 +642,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 34:
+/***/ 35:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -650,11 +659,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(31);
+	var _classnames = __webpack_require__(32);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -723,7 +732,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 35:
+/***/ 36:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -740,15 +749,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(31);
+	var _classnames = __webpack_require__(32);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _utilsClassNameMixin = __webpack_require__(29);
+	var _utilsClassNameMixin = __webpack_require__(30);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
@@ -796,7 +805,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 63:
+/***/ 64:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -814,31 +823,31 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(29);
+	var _utilsClassNameMixin = __webpack_require__(30);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames2 = __webpack_require__(31);
+	var _classnames2 = __webpack_require__(32);
 
 	var _classnames3 = _interopRequireDefault(_classnames2);
 
-	var _ButtonJs = __webpack_require__(32);
+	var _ButtonJs = __webpack_require__(33);
 
 	var _ButtonJs2 = _interopRequireDefault(_ButtonJs);
 
-	var _RowJs = __webpack_require__(33);
+	var _RowJs = __webpack_require__(34);
 
 	var _RowJs2 = _interopRequireDefault(_RowJs);
 
-	var _ColJs = __webpack_require__(34);
+	var _ColJs = __webpack_require__(35);
 
 	var _ColJs2 = _interopRequireDefault(_ColJs);
 
-	var _GridJs = __webpack_require__(35);
+	var _GridJs = __webpack_require__(36);
 
 	var _GridJs2 = _interopRequireDefault(_GridJs);
 
@@ -906,7 +915,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 64:
+/***/ 65:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -926,35 +935,35 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(29);
+	var _utilsClassNameMixin = __webpack_require__(30);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames = __webpack_require__(31);
+	var _classnames = __webpack_require__(32);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _TooltipJs = __webpack_require__(63);
+	var _TooltipJs = __webpack_require__(64);
 
 	var _TooltipJs2 = _interopRequireDefault(_TooltipJs);
 
-	var _ButtonJs = __webpack_require__(32);
+	var _ButtonJs = __webpack_require__(33);
 
 	var _ButtonJs2 = _interopRequireDefault(_ButtonJs);
 
-	var _RowJs = __webpack_require__(33);
+	var _RowJs = __webpack_require__(34);
 
 	var _RowJs2 = _interopRequireDefault(_RowJs);
 
-	var _ColJs = __webpack_require__(34);
+	var _ColJs = __webpack_require__(35);
 
 	var _ColJs2 = _interopRequireDefault(_ColJs);
 
-	var _GridJs = __webpack_require__(35);
+	var _GridJs = __webpack_require__(36);
 
 	var _GridJs2 = _interopRequireDefault(_GridJs);
 

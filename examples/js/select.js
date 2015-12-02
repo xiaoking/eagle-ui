@@ -7,7 +7,7 @@
 		var a = typeof exports === 'object' ? factory(require("react")) : factory(root["React"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_27__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_28__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -62,15 +62,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _lib_includeLess = __webpack_require__(23);
+	var _lib_includeLess = __webpack_require__(24);
 
 	var _lib_includeLess2 = _interopRequireDefault(_lib_includeLess);
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _libSelectJs = __webpack_require__(55);
+	var _libSelectJs = __webpack_require__(56);
 
 	var _libSelectJs2 = _interopRequireDefault(_libSelectJs);
 
@@ -78,7 +78,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    _libSelectJs2['default'],
 	    { callback: function (val) {
 	            console.log(val);
-	        }, value: '上好' },
+	        } },
 	    _react2['default'].createElement(
 	        'item',
 	        { value: '0' },
@@ -148,21 +148,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 23:
+/***/ 24:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 27:
+/***/ 28:
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_27__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_28__;
 
 /***/ },
 
-/***/ 29:
+/***/ 30:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -172,7 +172,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _constantsJs = __webpack_require__(30);
+	var _constantsJs = __webpack_require__(31);
 
 	var consts = _constantsJs.classConstants;
 
@@ -307,7 +307,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 30:
+/***/ 31:
 /***/ function(module, exports) {
 
 	/**
@@ -369,7 +369,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 31:
+/***/ 32:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -424,7 +424,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 33:
+/***/ 34:
 /***/ function(module, exports, __webpack_require__) {
 
 	//import RowLess from './row.less';
@@ -442,11 +442,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(31);
+	var _classnames = __webpack_require__(32);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -491,7 +491,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 34:
+/***/ 35:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -508,11 +508,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(31);
+	var _classnames = __webpack_require__(32);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -581,7 +581,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 35:
+/***/ 36:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -598,15 +598,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(31);
+	var _classnames = __webpack_require__(32);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _utilsClassNameMixin = __webpack_require__(29);
+	var _utilsClassNameMixin = __webpack_require__(30);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
@@ -654,7 +654,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 37:
+/***/ 38:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -671,15 +671,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(29);
+	var _utilsClassNameMixin = __webpack_require__(30);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames10 = __webpack_require__(31);
+	var _classnames10 = __webpack_require__(32);
 
 	var _classnames11 = _interopRequireDefault(_classnames10);
 
@@ -837,7 +837,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 55:
+/***/ 56:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -855,36 +855,37 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _utilsClassNameMixin = __webpack_require__(29);
+	var _utilsClassNameMixin = __webpack_require__(30);
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames3 = __webpack_require__(31);
+	var _classnames3 = __webpack_require__(32);
 
 	var _classnames4 = _interopRequireDefault(_classnames3);
 
-	var _InputJs = __webpack_require__(37);
+	var _InputJs = __webpack_require__(38);
 
 	var _InputJs2 = _interopRequireDefault(_InputJs);
 
-	var _RowJs = __webpack_require__(33);
+	var _RowJs = __webpack_require__(34);
 
 	var _RowJs2 = _interopRequireDefault(_RowJs);
 
-	var _ColJs = __webpack_require__(34);
+	var _ColJs = __webpack_require__(35);
 
 	var _ColJs2 = _interopRequireDefault(_ColJs);
 
-	var _GridJs = __webpack_require__(35);
+	var _GridJs = __webpack_require__(36);
 
 	var _GridJs2 = _interopRequireDefault(_GridJs);
 
 	/**
-	 * 下拉选择框组件
+	 * 下拉选择框组件。
+	 * 因原先考虑不周，导致代码写得很乱，有待重构
 	 * @Class Select
 	 * @Module form
 	 * @extends Coponent
@@ -916,9 +917,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	            classPrefix: 'select',
 	            componentTag: 'div',
 	            value: '',
+	            /**
+	             * option对应的value
+	             * @property key
+	             * &type String
+	             * */
 	            key: '',
 	            show: false,
 	            target: '0',
+	            /**
+	             * 输入值，用来匹配显示对应列表的内容
+	             * @property autoVal
+	             * &type String
+	             * */
 	            autoVal: ''
 	        },
 	        enumerable: true
@@ -1008,7 +1019,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    /**
-	     * 点击倒三角icon时，控制ul的显示与否
+	     * 点击icon时，控制ul的显示与否
 	     * @method toogleUl
 	     * @return null
 	     * */
@@ -1020,12 +1031,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    /**
-	     * 取得当前选中值，父级回调存在的话调用
+	     * 取得符合要求的值，父级回调存在的话调用
 	     * @method callBacks
 	     * @return null
 	     * */
 
 	    Select.prototype.callBacks = function callBacks() {
+	        this.getTrueVal();
 	        var val = this.state.value;
 	        if (this.state.show) {
 	            this.setState({
@@ -1034,6 +1046,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	        console.log(ReactDOM.findDOMNode(this.refs.test).value);
 	        this.props.callback && this.props.callback(val);
+	    };
+
+	    /**
+	     * 验证输入值是否为select内容，return true 否则return false
+	     * @method isInSelect
+	     * @return flags {Boolean}
+	     * */
+
+	    Select.prototype.isInSelect = function isInSelect() {
+	        var val = '^' + this.state.value + '$';
+	        var reg = new RegExp(val, "g");
+	        var flags = false;
+	        var li = _react2['default'].Children.map(this.props.children, function (item) {
+	            if (reg.test(item.props.children)) {
+	                flags = true;
+	            }
+	            return item;
+	        }, this);
+	        return flags;
 	    };
 
 	    /**
@@ -1054,7 +1085,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    /**
-	     * 延时2s后点用callBacks方法
+	     * 判断是否输入值为select范围内,否则改为第一个值。延时2s后点用callBacks方法
 	     * @method changeValue
 	     * @return null
 	     * */
@@ -1062,6 +1093,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	    Select.prototype.changeValue = function changeValue() {
 	        clearTimeout(this.timeout);
 	        this.timeout = setTimeout(this.callBacks.bind(this), 2000);
+	    };
+
+	    /**
+	     * 根据当前值是否为select内的值，判断是否改变state的值
+	     * @method getTrueVal
+	     * @return null
+	     * */
+
+	    Select.prototype.getTrueVal = function getTrueVal() {
+	        if (!this.isInSelect.call(this)) {
+	            this.setState({
+	                value: this.props.children[0].props.children,
+	                key: this.props.children[0].props.value
+	            });
+	        }
 	    };
 
 	    /**

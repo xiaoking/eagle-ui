@@ -7,7 +7,7 @@
 		var a = typeof exports === 'object' ? factory(require("react")) : factory(root["React"]);
 		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
 	}
-})(this, function(__WEBPACK_EXTERNAL_MODULE_27__) {
+})(this, function(__WEBPACK_EXTERNAL_MODULE_28__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -62,27 +62,27 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _lib_includeLess = __webpack_require__(23);
+	var _lib_includeLess = __webpack_require__(24);
 
 	var _lib_includeLess2 = _interopRequireDefault(_lib_includeLess);
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _libTableTableJs = __webpack_require__(58);
+	var _libTableTableJs = __webpack_require__(59);
 
 	var _libTableTableJs2 = _interopRequireDefault(_libTableTableJs);
 
-	var _libTableTrJs = __webpack_require__(59);
+	var _libTableTrJs = __webpack_require__(60);
 
 	var _libTableTrJs2 = _interopRequireDefault(_libTableTrJs);
 
-	var _libTableTdJs = __webpack_require__(60);
+	var _libTableTdJs = __webpack_require__(61);
 
 	var _libTableTdJs2 = _interopRequireDefault(_libTableTdJs);
 
-	var _libTableThJs = __webpack_require__(61);
+	var _libTableThJs = __webpack_require__(62);
 
 	var _libTableThJs2 = _interopRequireDefault(_libTableThJs);
 
@@ -377,21 +377,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 23:
+/***/ 24:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 27:
+/***/ 28:
 /***/ function(module, exports) {
 
-	module.exports = __WEBPACK_EXTERNAL_MODULE_27__;
+	module.exports = __WEBPACK_EXTERNAL_MODULE_28__;
 
 /***/ },
 
-/***/ 29:
+/***/ 30:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -401,7 +401,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.__esModule = true;
 
-	var _constantsJs = __webpack_require__(30);
+	var _constantsJs = __webpack_require__(31);
 
 	var consts = _constantsJs.classConstants;
 
@@ -536,7 +536,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 30:
+/***/ 31:
 /***/ function(module, exports) {
 
 	/**
@@ -598,7 +598,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 31:
+/***/ 32:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -653,7 +653,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 58:
+/***/ 59:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -668,15 +668,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(31);
+	var _classnames = __webpack_require__(32);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _utilsClassNameMixinJs = __webpack_require__(29);
+	var _utilsClassNameMixinJs = __webpack_require__(30);
 
 	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
 
@@ -684,7 +684,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * 表格组件
 	 * @class Table
 	 * @constructor
-	 * @module ui
+	 * @module table
 	 * @extends Component
 	 * @requires React classnames
 	 * @since 0.1.0
@@ -737,7 +737,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 59:
+/***/ 60:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -752,23 +752,23 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(31);
+	var _classnames = __webpack_require__(32);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _utilsClassNameMixinJs = __webpack_require__(29);
+	var _utilsClassNameMixinJs = __webpack_require__(30);
 
 	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
 
 	/**
 	 * 表格组件
-	 * @class Paging
+	 * @class Tr
 	 * @constructor
-	 * @module ui
+	 * @module table
 	 * @extends Component
 	 * @requires React classnames
 	 * @since 0.1.0
@@ -830,7 +830,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 60:
+/***/ 61:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -845,23 +845,23 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(31);
+	var _classnames = __webpack_require__(32);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _utilsClassNameMixinJs = __webpack_require__(29);
+	var _utilsClassNameMixinJs = __webpack_require__(30);
 
 	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
 
 	/**
 	 * 表格组件
-	 * @class Paging
+	 * @class Td
 	 * @constructor
-	 * @module ui
+	 * @module table
 	 * @extends Component
 	 * @requires React classnames
 	 * @since 0.1.0
@@ -915,7 +915,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 
-/***/ 61:
+/***/ 62:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -930,23 +930,23 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var _react = __webpack_require__(27);
+	var _react = __webpack_require__(28);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(31);
+	var _classnames = __webpack_require__(32);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _utilsClassNameMixinJs = __webpack_require__(29);
+	var _utilsClassNameMixinJs = __webpack_require__(30);
 
 	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
 
 	/**
 	 * 表格组件
-	 * @class Paging
+	 * @class Th
 	 * @constructor
-	 * @module ui
+	 * @module table
 	 * @extends Component
 	 * @requires React classnames
 	 * @since 0.1.0

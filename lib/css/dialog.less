@@ -38,7 +38,6 @@
 }
 .eg-tips-container{
   z-index: 9001;
-  display: none;
 }
 .eg-dialog-button, .eg-tips-button{
   text-align: center;
@@ -63,46 +62,4 @@
 }
 .eg-dialog-show,.eg-tips-show{
   display: block;
-}
-
-/**淡入淡出动画*/
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0; /*初始状态 透明度为0*/
-  }
-  50% {
-    opacity: 0.5; /*中间状态 透明度为0.5*/
-  }
-  100% {
-    opacity: 1; /*结尾状态 透明度为1*/
-  }
-}
-@-webkit-keyframes fadeOut {
-  0% {
-    opacity: 1; /*初始状态 透明度为1*/
-  }
-  50% {
-    opacity: 0.5; /*中间状态 透明度为0.5*/
-  }
-  100% {
-    opacity: 0; /*结尾状态 透明度为0*/
-  }
-
-}
-/**显示*/
-.eg-hide{
-  display: none;
-}
-.eg-show{
-  display: block;
-}
-
-.eg-fadein{
-  display: block;
-  -webkit-animation: fadeIn .4s 1 0s;
-}
-.eg-fadeout{
-  display: block;
-  -webkit-animation: fadeOut .4s 1 0s ;
-  -webkit-animation-fill-mode: forwards;
 }

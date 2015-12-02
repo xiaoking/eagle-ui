@@ -21,14 +21,20 @@ YUI.add("yuidoc-meta", function(Y) {
         "Select",
         "Tab",
         "Table",
+        "Tabset",
+        "Td",
+        "Th",
+        "Toast",
+        "Tr",
         "ValidatorPanel",
         "crumb",
-        "dialog",
-        "toast"
+        "dialog"
     ],
     "modules": [
         "form",
         "grid",
+        "panel",
+        "table",
         "ui"
     ],
     "allModules": [
@@ -51,9 +57,6 @@ YUI.add("yuidoc-meta", function(Y) {
                 },
                 {
                     "name": "ButtonGroup"
-                },
-                {
-                    "name": "Tab"
                 }
             ]
         },
@@ -74,22 +77,10 @@ YUI.add("yuidoc-meta", function(Y) {
             ]
         },
         {
-            "displayName": "ui",
-            "name": "ui",
-            "description": "提示组件",
+            "displayName": "panel",
+            "name": "panel",
+            "description": "Panel组件",
             "classes": [
-                {
-                    "name": "Calendar"
-                },
-                {
-                    "name": "crumb"
-                },
-                {
-                    "name": "Item"
-                },
-                {
-                    "name": "toast"
-                },
                 {
                     "name": "Panel"
                 },
@@ -101,12 +92,44 @@ YUI.add("yuidoc-meta", function(Y) {
                 },
                 {
                     "name": "PanelHeader"
-                },
+                }
+            ]
+        },
+        {
+            "displayName": "table",
+            "name": "table",
+            "description": "表格组件",
+            "classes": [
                 {
                     "name": "Table"
                 },
                 {
-                    "name": "Paging"
+                    "name": "Td"
+                },
+                {
+                    "name": "Th"
+                },
+                {
+                    "name": "Tr"
+                }
+            ]
+        },
+        {
+            "displayName": "ui",
+            "name": "ui",
+            "description": "tab组件",
+            "classes": [
+                {
+                    "name": "crumb"
+                },
+                {
+                    "name": "Item"
+                },
+                {
+                    "name": "Tab"
+                },
+                {
+                    "name": "Calendar"
                 },
                 {
                     "name": "CalendarPanel"
@@ -122,6 +145,15 @@ YUI.add("yuidoc-meta", function(Y) {
                 },
                 {
                     "name": "List"
+                },
+                {
+                    "name": "Paging"
+                },
+                {
+                    "name": "Tabset"
+                },
+                {
+                    "name": "Toast"
                 }
             ]
         }

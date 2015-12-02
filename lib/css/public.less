@@ -61,45 +61,12 @@
     color: @white;
     background:@orange-btn ;
 }
-/**淡入淡出动画*/
-@-webkit-keyframes fadeIn {
-    0% {
-        opacity: 0; /*初始状态 透明度为0*/
-    }
-    50% {
-        opacity: 0.5; /*中间状态 透明度为0.5*/
-    }
-    100% {
-        opacity: 1; /*结尾状态 透明度为1*/
-    }
-}
-@-webkit-keyframes fadeOut {
-    0% {
-        opacity: 1; /*初始状态 透明度为1*/
-    }
-    50% {
-        opacity: 0.5; /*中间状态 透明度为0.5*/
-    }
-    100% {
-        opacity: 0; /*结尾状态 透明度为0*/
-    }
-
-}
 /**显示*/
 .eg-hide,.show{
     display: none;
 }
 .eg-show.show{
     display: block;
-}
-
-.fadein{
-    display: block !important;
-    -webkit-animation: fadeIn .4s 1 0s;
-}
-.fadeout{
-    -webkit-animation: fadeOut .4s 1 0s ;
-    -webkit-animation-fill-mode: forwards;
 }
 /**成功图标*/
 .eg-tips-success{
@@ -270,40 +237,4 @@
     }
 }
 
-/**晃动*/
-@-webkit-keyframes shake {
-    0%,100% {
-        -webkit-transform:translate3d(0,0,0);
-        transform:translate3d(0,0,0)
-    }
-    10%,30%,50%,70%,90% {
-        -webkit-transform:translate3d(-10px,0,0);
-        transform:translate3d(-10px,0,0)
-    }
-    20%,40%,60%,80% {
-        -webkit-transform:translate3d(10px,0,0);
-        transform:translate3d(10px,0,0)
-    }
-}@keyframes shake {
-     0%,100% {
-         -webkit-transform:translate3d(0,0,0);
-         transform:translate3d(0,0,0)
-     }
-     10%,30%,50%,70%,90% {
-         -webkit-transform:translate3d(-10px,0,0);
-         transform:translate3d(-10px,0,0)
-     }
-     20%,40%,60%,80% {
-         -webkit-transform:translate3d(10px,0,0);
-         transform:translate3d(10px,0,0)
-     }
- }.shake {
-      -webkit-animation-name:shake;
-      animation-name:shake
-  }
-.animated {
-    -webkit-animation-duration:.8s;
-    animation-duration:.8s;
-    -webkit-animation-fill-mode:both;
-    animation-fill-mode:both
-}
+

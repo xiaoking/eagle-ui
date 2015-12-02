@@ -13,7 +13,9 @@
     "files": {
         "lib/Panel/Panel.js": {
             "name": "lib/Panel/Panel.js",
-            "modules": {},
+            "modules": {
+                "panel": 1
+            },
             "classes": {
                 "Panel": 1
             },
@@ -49,7 +51,9 @@
         },
         "lib/Table/Table.js": {
             "name": "lib/Table/Table.js",
-            "modules": {},
+            "modules": {
+                "table": 1
+            },
             "classes": {
                 "Table": 1
             },
@@ -59,21 +63,27 @@
         "lib/Table/Td.js": {
             "name": "lib/Table/Td.js",
             "modules": {},
-            "classes": {},
+            "classes": {
+                "Td": 1
+            },
             "fors": {},
             "namespaces": {}
         },
         "lib/Table/Th.js": {
             "name": "lib/Table/Th.js",
             "modules": {},
-            "classes": {},
+            "classes": {
+                "Th": 1
+            },
             "fors": {},
             "namespaces": {}
         },
         "lib/Table/Tr.js": {
             "name": "lib/Table/Tr.js",
             "modules": {},
-            "classes": {},
+            "classes": {
+                "Tr": 1
+            },
             "fors": {},
             "namespaces": {}
         },
@@ -267,8 +277,12 @@
         },
         "lib/Tab.js": {
             "name": "lib/Tab.js",
-            "modules": {},
-            "classes": {},
+            "modules": {
+                "ui": 1
+            },
+            "classes": {
+                "Tab": 1
+            },
             "fors": {},
             "namespaces": {}
         },
@@ -276,18 +290,16 @@
             "name": "lib/Tabset.js",
             "modules": {},
             "classes": {
-                "Tab": 1
+                "Tabset": 1
             },
             "fors": {},
             "namespaces": {}
         },
         "lib/Toast.js": {
             "name": "lib/Toast.js",
-            "modules": {
-                "ui": 1
-            },
+            "modules": {},
             "classes": {
-                "toast": 1
+                "Toast": 1
             },
             "fors": {},
             "namespaces": {}
@@ -319,32 +331,37 @@
         }
     },
     "modules": {
-        "ui": {
-            "name": "ui",
+        "panel": {
+            "name": "panel",
             "submodules": {},
             "classes": {
-                "Calendar": 1,
-                "crumb": 1,
-                "Item": 1,
-                "toast": 1,
                 "Panel": 1,
                 "PanelContent": 1,
                 "PanelFooter": 1,
-                "PanelHeader": 1,
-                "Table": 1,
-                "Paging": 1,
-                "CalendarPanel": 1,
-                "dialog": 1,
-                "Label": 1,
-                "LabelGroup": 1,
-                "List": 1
+                "PanelHeader": 1
             },
             "fors": {},
             "namespaces": {},
             "tag": "module",
-            "file": "lib/Toast.js",
-            "line": 11,
-            "description": "提示组件"
+            "file": "lib/Panel/PanelHeader.js",
+            "line": 5,
+            "description": "Panel组件"
+        },
+        "table": {
+            "name": "table",
+            "submodules": {},
+            "classes": {
+                "Table": 1,
+                "Td": 1,
+                "Th": 1,
+                "Tr": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "lib/Table/Tr.js",
+            "line": 5,
+            "description": "表格组件"
         },
         "form": {
             "name": "form",
@@ -356,8 +373,7 @@
                 "Select": 1,
                 "ValidatorPanel": 1,
                 "Button": 1,
-                "ButtonGroup": 1,
-                "Tab": 1
+                "ButtonGroup": 1
             },
             "fors": {},
             "namespaces": {},
@@ -365,6 +381,30 @@
             "file": "lib/ValidatorPanel.js",
             "line": 5,
             "description": "表单验证组件<br />\n默认规则有<br/>\n<pre>\n    required：是否必填\n    date：日期格式验证\n    number：是否是有效的号码\n    url：url规则验证\n    dateISO：日期ISO验证\n    digits：是否是数字\n    equalTo：值对比\n    minlength：最少输入\n    maxlength：最大输入\n    email：邮箱验证\n    rangelength：字符大小需在某个区间之内\n    min：输入的值需要大于等于此规则定义的值\n    max：输入的值需要小于等于此规则定义的值\n    range：一个区间取值范围\n\n</pre>"
+        },
+        "ui": {
+            "name": "ui",
+            "submodules": {},
+            "classes": {
+                "crumb": 1,
+                "Item": 1,
+                "Tab": 1,
+                "Calendar": 1,
+                "CalendarPanel": 1,
+                "dialog": 1,
+                "Label": 1,
+                "LabelGroup": 1,
+                "List": 1,
+                "Paging": 1,
+                "Tabset": 1,
+                "Toast": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "lib/Toast.js",
+            "line": 11,
+            "description": "tab组件"
         },
         "grid": {
             "name": "grid",
@@ -391,7 +431,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ui",
+            "module": "panel",
             "file": "lib/Panel/Panel.js",
             "line": 5,
             "description": "Panel组件",
@@ -413,7 +453,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ui",
+            "module": "panel",
             "namespace": "",
             "file": "lib/Panel/PanelContent.js",
             "line": 5,
@@ -436,7 +476,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ui",
+            "module": "panel",
             "namespace": "",
             "file": "lib/Panel/PanelFooter.js",
             "line": 5,
@@ -459,7 +499,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ui",
+            "module": "panel",
             "namespace": "",
             "file": "lib/Panel/PanelHeader.js",
             "line": 5,
@@ -482,7 +522,7 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ui",
+            "module": "table",
             "namespace": "",
             "file": "lib/Table/Table.js",
             "line": 5,
@@ -504,19 +544,79 @@
             "show": true,
             "author": "bo.an@dianping.com"
         },
-        "Paging": {
-            "name": "Paging",
-            "shortname": "Paging",
+        "Td": {
+            "name": "Td",
+            "shortname": "Td",
             "classitems": [],
             "plugins": [],
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "ui",
+            "module": "table",
             "namespace": "",
-            "file": "lib/Paging.js",
+            "file": "lib/Table/Td.js",
             "line": 5,
-            "description": "分页组件",
+            "description": "表格组件",
+            "is_constructor": 1,
+            "extends": "Component",
+            "requires": [
+                "React classnames"
+            ],
+            "since": "0.1.0",
+            "example": [
+                "\t/**\n\t * Created by mac on 15/11/4.\n\t */\n\timport css from '../../lib/_include.less';\n\timport React from 'react';\n\timport Table from '../../lib/Table/Table.js';\n\timport Tr from '../../lib/Table/Tr.js';\n\timport Td from '../../lib/Table/Td.js';\n\timport Th from '../../lib/Table/Th.js';\n\t\n\tReactDOM.render(\n\t    <Table>\n\t        <thead>\n\t            <Tr>\n\t                <Th>数据类型</Th>\n\t                <Th>数据项</Th>\n\t                <Th>昨日</Th>\n\t                <Th>本月</Th>\n\t                <Th>上月</Th>\n\t                <Th>本月城市排名</Th>\n\t            </Tr>\n\t        </thead>\n\t        <tbody>\n\t            <Tr>\n\t                <Td rowSpan=\"4\">过程指标</Td>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr>\n\t                <Td arrow-up>消费交易额</Td>\n\t                <Td arrow-down>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr split>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td arrow-down>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr>\n\t                <Td rowSpan=\"4\">业绩</Td>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t        </tbody>\n\t    </Table>\n\t    ,document.getElementById('root'));",
+                "\t<!DOCTYPE html>\n\t<html>\n\t<head>\n\t    <meta charset=\"UTF-8\">\n\t    <title>分页组件</title>\n\t    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no, minimal-ui\">\n\t    <link rel=\"stylesheet\" type=\"text/css\" href=\"./eagle-ui.css\" />\n\t    <style>\n\t        table{\n\t            width: 100%;\n\t        }\n\t    </style>\n\t</head>\n\t<body>\n\t<div id=\"root\"></div>\n\t\n\t<script src=\"../bower_components/react/react.js\"></script>\n\t<script src=\"../bower_components/react/react-dom.js\"></script>\n\t<script src=\"js/table.js\"></script>\n\t</body>\n\t</html>"
+            ],
+            "exampleTitles": [
+                "js",
+                "html"
+            ],
+            "show": true,
+            "author": "bo.an@dianping.com"
+        },
+        "Th": {
+            "name": "Th",
+            "shortname": "Th",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "table",
+            "namespace": "",
+            "file": "lib/Table/Th.js",
+            "line": 5,
+            "description": "表格组件",
+            "is_constructor": 1,
+            "extends": "Component",
+            "requires": [
+                "React classnames"
+            ],
+            "since": "0.1.0",
+            "example": [
+                "\t/**\n\t * Created by mac on 15/11/4.\n\t */\n\timport css from '../../lib/_include.less';\n\timport React from 'react';\n\timport Table from '../../lib/Table/Table.js';\n\timport Tr from '../../lib/Table/Tr.js';\n\timport Td from '../../lib/Table/Td.js';\n\timport Th from '../../lib/Table/Th.js';\n\t\n\tReactDOM.render(\n\t    <Table>\n\t        <thead>\n\t            <Tr>\n\t                <Th>数据类型</Th>\n\t                <Th>数据项</Th>\n\t                <Th>昨日</Th>\n\t                <Th>本月</Th>\n\t                <Th>上月</Th>\n\t                <Th>本月城市排名</Th>\n\t            </Tr>\n\t        </thead>\n\t        <tbody>\n\t            <Tr>\n\t                <Td rowSpan=\"4\">过程指标</Td>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr>\n\t                <Td arrow-up>消费交易额</Td>\n\t                <Td arrow-down>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr split>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td arrow-down>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr>\n\t                <Td rowSpan=\"4\">业绩</Td>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t            <Tr>\n\t                <Td>消费交易额</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>1876500</Td>\n\t                <Td>200</Td>\n\t            </Tr>\n\t        </tbody>\n\t    </Table>\n\t    ,document.getElementById('root'));",
+                "\t<!DOCTYPE html>\n\t<html>\n\t<head>\n\t    <meta charset=\"UTF-8\">\n\t    <title>分页组件</title>\n\t    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no, minimal-ui\">\n\t    <link rel=\"stylesheet\" type=\"text/css\" href=\"./eagle-ui.css\" />\n\t    <style>\n\t        table{\n\t            width: 100%;\n\t        }\n\t    </style>\n\t</head>\n\t<body>\n\t<div id=\"root\"></div>\n\t\n\t<script src=\"../bower_components/react/react.js\"></script>\n\t<script src=\"../bower_components/react/react-dom.js\"></script>\n\t<script src=\"js/table.js\"></script>\n\t</body>\n\t</html>"
+            ],
+            "exampleTitles": [
+                "js",
+                "html"
+            ],
+            "show": true,
+            "author": "bo.an@dianping.com"
+        },
+        "Tr": {
+            "name": "Tr",
+            "shortname": "Tr",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "table",
+            "namespace": "",
+            "file": "lib/Table/Tr.js",
+            "line": 5,
+            "description": "表格组件",
             "is_constructor": 1,
             "extends": "Component",
             "requires": [
@@ -818,6 +918,36 @@
             "since": "0.1.0",
             "author": "bo.an@dianping.com"
         },
+        "Paging": {
+            "name": "Paging",
+            "shortname": "Paging",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ui",
+            "namespace": "",
+            "file": "lib/Paging.js",
+            "line": 5,
+            "description": "分页组件",
+            "is_constructor": 1,
+            "extends": "Component",
+            "requires": [
+                "React classnames"
+            ],
+            "since": "0.1.0",
+            "example": [
+                "\t/**\n\t * Created by mac on 15/11/4.\n\t */\n\timport css from '../../lib/_include.less';\n\timport React from 'react';\n\timport Paging from '../../lib/Paging.js';\n\timport Row from '../../lib/Row.js';\n\timport Col from '../../lib/Col.js';\n\timport querystring from 'querystring';\n\t\n\t\n\tfunction callback(page){\n\t    window.location = location.origin+location.pathname+'?page='+page;\n\t}\n\t\n\tvar page =location.search ? querystring.parse(location.search.substr(1) ).page*1 : 1;\n\t\n\tReactDOM.render(\n\t    <Row>\n\t        <Col sm={12}>\n\t            <Paging currentPage={page} pageCallback={callback} total={5024} />\n\t        </Col>\n\t    </Row>\n\t    ,document.getElementById('root'));",
+                "\t<!DOCTYPE html>\n\t<html>\n\t<head>\n\t    <meta charset=\"UTF-8\">\n\t    <title>分页组件</title>\n\t    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no, minimal-ui\">\n\t    <link rel=\"stylesheet\" type=\"text/css\" href=\"./eagle-ui.css\" />\n\t\n\t</head>\n\t<body>\n\t<div id=\"root\"></div>\n\t\n\t<script src=\"../bower_components/react/react.js\"></script>\n\t<script src=\"../bower_components/react/react-dom.js\"></script>\n\t<script src=\"js/paging.js\"></script>\n\t</body>\n\t</html>"
+            ],
+            "exampleTitles": [
+                "js",
+                "html"
+            ],
+            "show": true,
+            "author": "min.xiao@dianping.com"
+        },
         "RadioGroup": {
             "name": "RadioGroup",
             "shortname": "RadioGroup",
@@ -873,11 +1003,11 @@
             "namespace": "",
             "file": "lib/Select.js",
             "line": 11,
-            "description": "下拉选择框组件",
+            "description": "下拉选择框组件。\n因原先考虑不周，导致代码写得很乱，有待重构",
             "extends": "Coponent",
             "since": "0.1.0",
             "example": [
-                "\t/**\n\t * Created by panqianjin on 15/11/4.\n\t */\n\timport css from '../../lib/_include.less';\n\timport React from 'react';\n\timport Select from '../../lib/Select.js';\n\t\n\tReactDOM.render(\n\t    <Select  callback={function(val){console.log(val)}}  value=\"上好\">\n\t        <item value='0'>北京</item>\n\t        <item value='1'>上海</item>\n\t        <item value='2'>南京</item>\n\t        <item value='3'>ssdd</item>\n\t        <item value='4'>sd饭否否</item>\n\t        <item value='5'>南京</item>\n\t        <item value='6'>ssdd</item>\n\t        <item value='7'>sd饭否否</item>\n\t        <item value='8'>北京</item>\n\t        <item value='9'>上海</item>\n\t        <item value='10'>南京</item>\n\t        <item value='11'>ssdd</item>\n\t        <item value='12'>sd饭否否</item>\n\t\n\t    </Select>\n\t    ,document.getElementById('root'));",
+                "\t/**\n\t * Created by panqianjin on 15/11/4.\n\t */\n\timport css from '../../lib/_include.less';\n\timport React from 'react';\n\timport Select from '../../lib/Select.js';\n\t\n\tReactDOM.render(\n\t    <Select  callback={function(val){console.log(val)}} >\n\t        <item value='0'>北京</item>\n\t        <item value='1'>上海</item>\n\t        <item value='2'>南京</item>\n\t        <item value='3'>ssdd</item>\n\t        <item value='4'>sd饭否否</item>\n\t        <item value='5'>南京</item>\n\t        <item value='6'>ssdd</item>\n\t        <item value='7'>sd饭否否</item>\n\t        <item value='8'>北京</item>\n\t        <item value='9'>上海</item>\n\t        <item value='10'>南京</item>\n\t        <item value='11'>ssdd</item>\n\t        <item value='12'>sd饭否否</item>\n\t\n\t    </Select>\n\t    ,document.getElementById('root'));",
                 "\t<!DOCTYPE html>\n\t<html>\n\t<head>\n\t    <meta charset=\"UTF-8\">\n\t    <title>搜索</title>\n\t    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no, minimal-ui\">\n\t    <link rel=\"stylesheet\" type=\"text/css\" href=\"./eagle-ui.css\" />\n\t\n\t</head>\n\t<body>\n\t<div id=\"root\"></div>\n\t\n\t<script src=\"../bower_components/react/react.js\"></script>\n\t<script src=\"../bower_components/react/react-dom.js\"></script>\n\t<script src=\"./js/select.js\"></script>\n\t\n\t</body>\n\t</html>"
             ],
             "exampleTitles": [
@@ -894,15 +1024,53 @@
             "extensions": [],
             "plugin_for": [],
             "extension_for": [],
-            "module": "form",
+            "module": "ui",
+            "namespace": "",
+            "file": "lib/Tab.js",
+            "line": 8,
+            "description": "tab组件",
+            "extends": "Component",
+            "is_constructor": 1,
+            "since": "0.1.0",
+            "example": [
+                "\t/**\n\t * Created by mac on 15/11/4.\n\t */\n\timport css from '../../lib/_include.less';\n\timport React,{Component} from 'react';\n\timport Tab from '../../lib/Tab.js';\n\timport Tabset from '../../lib/Tabset.js';\n\t\n\tlet Demo = class Demo extends Component{\n\t\n\t    constructor(props,context){\n\t        super(props,context);\n\t\n\t        this.state={\n\t            tabIndex:0\n\t        };\n\t    }\n\t\n\t    callback(index){\n\t        if(this.state.tabIndex!==index){\n\t            this.setState({\n\t                tabIndex:index\n\t            });\n\t        }\n\t    }\n\t\n\t    tab3(){\n\t        if(this.state.tabIndex==2){\n\t            return (<div>tab3</div>);\n\t        }\n\t    }\n\t    tab2(){\n\t        if(this.state.tabIndex==1){\n\t            return (<div>tab2</div>);\n\t        }\n\t    }\n\t    tab1(){\n\t        if(this.state.tabIndex==0){\n\t            return (<div>tab1</div>);\n\t        }\n\t    }\n\t\n\t\n\t    render(){\n\t        return (\n\t            <Tabset activeTab={this.state.tabIndex} tabCallback={::this.callback}>\n\t                <Tab heading='tab1'>\n\t                    {::this.tab1()}\n\t                </Tab>\n\t                <Tab heading='tab2'>\n\t                    {::this.tab2()}\n\t                </Tab>\n\t                <Tab heading='tab3'>\n\t                    {::this.tab3()}\n\t                </Tab>\n\t            </Tabset>\n\t        );\n\t    }\n\t}\n\t\n\tReactDOM.render(\n\t    <Demo />\n\t    ,document.getElementById('root'));",
+                "\t<!DOCTYPE html>\n\t<html>\n\t<head>\n\t    <meta charset=\"UTF-8\">\n\t    <title>分页组件</title>\n\t    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no, minimal-ui\">\n\t    <link rel=\"stylesheet\" type=\"text/css\" href=\"./eagle-ui.css\" />\n\t\n\t</head>\n\t<body>\n\t<div id=\"root\"></div>\n\t\n\t<script src=\"../bower_components/react/react.js\"></script>\n\t<script src=\"../bower_components/react/react-dom.js\"></script>\n\t<script src=\"js/tab.js\"></script>\n\t</body>\n\t</html>"
+            ],
+            "exampleTitles": [
+                "js",
+                "tab"
+            ],
+            "show": true
+        },
+        "Tabset": {
+            "name": "Tabset",
+            "shortname": "Tabset",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "ui",
             "namespace": "",
             "file": "lib/Tabset.js",
             "line": 8,
-            "description": "Tab"
+            "description": "tab组件",
+            "extends": "Component",
+            "is_constructor": 1,
+            "since": "0.1.0",
+            "example": [
+                "\t/**\n\t * Created by mac on 15/11/4.\n\t */\n\timport css from '../../lib/_include.less';\n\timport React,{Component} from 'react';\n\timport Tab from '../../lib/Tab.js';\n\timport Tabset from '../../lib/Tabset.js';\n\t\n\tlet Demo = class Demo extends Component{\n\t\n\t    constructor(props,context){\n\t        super(props,context);\n\t\n\t        this.state={\n\t            tabIndex:0\n\t        };\n\t    }\n\t\n\t    callback(index){\n\t        if(this.state.tabIndex!==index){\n\t            this.setState({\n\t                tabIndex:index\n\t            });\n\t        }\n\t    }\n\t\n\t    tab3(){\n\t        if(this.state.tabIndex==2){\n\t            return (<div>tab3</div>);\n\t        }\n\t    }\n\t    tab2(){\n\t        if(this.state.tabIndex==1){\n\t            return (<div>tab2</div>);\n\t        }\n\t    }\n\t    tab1(){\n\t        if(this.state.tabIndex==0){\n\t            return (<div>tab1</div>);\n\t        }\n\t    }\n\t\n\t\n\t    render(){\n\t        return (\n\t            <Tabset activeTab={this.state.tabIndex} tabCallback={::this.callback}>\n\t                <Tab heading='tab1'>\n\t                    {::this.tab1()}\n\t                </Tab>\n\t                <Tab heading='tab2'>\n\t                    {::this.tab2()}\n\t                </Tab>\n\t                <Tab heading='tab3'>\n\t                    {::this.tab3()}\n\t                </Tab>\n\t            </Tabset>\n\t        );\n\t    }\n\t}\n\t\n\tReactDOM.render(\n\t    <Demo />\n\t    ,document.getElementById('root'));",
+                "\t<!DOCTYPE html>\n\t<html>\n\t<head>\n\t    <meta charset=\"UTF-8\">\n\t    <title>分页组件</title>\n\t    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no, minimal-ui\">\n\t    <link rel=\"stylesheet\" type=\"text/css\" href=\"./eagle-ui.css\" />\n\t\n\t</head>\n\t<body>\n\t<div id=\"root\"></div>\n\t\n\t<script src=\"../bower_components/react/react.js\"></script>\n\t<script src=\"../bower_components/react/react-dom.js\"></script>\n\t<script src=\"js/tab.js\"></script>\n\t</body>\n\t</html>"
+            ],
+            "exampleTitles": [
+                "js",
+                "tab"
+            ],
+            "show": true
         },
-        "toast": {
-            "name": "toast",
-            "shortname": "toast",
+        "Toast": {
+            "name": "Toast",
+            "shortname": "Toast",
             "classitems": [],
             "plugins": [],
             "extensions": [],
@@ -943,8 +1111,8 @@
             "is_constructor": 1,
             "since": "0.1.0",
             "example": [
-                "\t/**\n\t * Created by mac on 15/11/4.\n\t */\n\timport css from '../../lib/_include.less';\n\timport React,{Component} from 'react';\n\timport Input from '../../lib/Input.js';\n\timport Button from '../../lib/Button.js';\n\timport Row from '../../lib/Row.js';\n\timport Panel from '../../lib/panel/Panel.js';\n\timport PanelContent from '../../lib/panel/PanelContent.js';\n\timport Col from '../../lib/Col.js';\n\timport Grid from '../../lib/Grid.js';\n\timport ValidatorPanel from '../../lib/ValidatorPanel.js';\n\t\n\tlet Demo = class Demo extends Component{\n\t\n\t    constructor(props,context){\n\t        super(props,context);\n\t\n\t\n\t        this.rules = {\n\t            //key对应的是表单元素的name\n\t            calendar:{\n\t                //组件默认规则\n\t                required:true\n\t            },\n\t            checkbox:{\n\t                required:true,\n\t                //自定义规则\n\t                isValueToNumber:{\n\t                    text:'value值不是字符串',\n\t                    rule:function(value){\n\t                        console.dir(value);\n\t                        return isNaN(value);\n\t                    }\n\t                }\n\t            },\n\t            date:{\n\t                date:true\n\t            },\n\t            number:{\n\t                number:true,\n\t                digits:true\n\t            },\n\t            equalTo:{\n\t                digits:true,\n\t                equalTo:{\n\t                    params:'[name=\"number\"]'\n\t                }\n\t\n\t            },\n\t            minlength:{\n\t                minlength:{\n\t                    params:10\n\t                },\n\t                maxlength:{\n\t                    params:15\n\t                }\n\t            },\n\t            email:{\n\t                email:true\n\t            }\n\t        };\n\t\n\t    }\n\t\n\t    show(value,text,target,active){\n\t        console.dir(value);\n\t    }\n\t\n\t    render(){\n\t        return (\n\t            <Panel>\n\t\n\t                    <Grid>\n\t                        <Row>\n\t                            <Col sm={5} end>\n\t                                <ValidatorPanel rules={this.rules} submitElement=\"#submit\">\n\t                                    <Row>\n\t                                        <Col>\n\t                                            <PanelContent>\n\t                                                <Row>\n\t                                                    <Col>\n\t                                                        <Input placeholder=\"请输入\" icon=\"calendar\" name=\"calendar\" data-validate />\n\t                                                        <Input  type=\"checkbox\"  name=\"checkbox\" value=\"1\"  data-validate />\n\t                                                        <Input  type=\"checkbox\"   name=\"checkbox\" value=\"2\" data-validate  />\n\t                                                        <Input  type=\"checkbox\"   name=\"checkbox\" value=\"3\" data-validate  />\n\t                                                        <Input  type=\"checkbox\"   name=\"checkbox\" value=\"4\" data-validate  />\n\t                                                    </Col>\n\t\n\t                                                </Row>\n\t                                                <Row>\n\t                                                    <Col>\n\t                                                        <Input placeholder=\"请输入日期\" icon=\"calendar\" name=\"date\" data-validate />\n\t                                                    </Col>\n\t                                                </Row>\n\t                                                <Row>\n\t                                                    <Col>\n\t                                                        <Input placeholder=\"请输入有效的号码\" name=\"number\" data-validate />\n\t                                                    </Col>\n\t                                                </Row>\n\t                                                <Row>\n\t                                                    <Col>\n\t                                                        <Input placeholder=\"请输入有效的号码\" name=\"equalTo\" data-validate />\n\t                                                    </Col>\n\t                                                </Row>\n\t                                                <Row>\n\t                                                    <Col>\n\t                                                        <Input placeholder=\"最大最小字符10-15\" name=\"minlength\" data-validate />\n\t                                                    </Col>\n\t                                                </Row>\n\t                                                <Row>\n\t                                                    <Col>\n\t                                                        <Input placeholder=\"请输入您的email\" name=\"email\" data-validate />\n\t                                                    </Col>\n\t                                                </Row>\n\t                                                <Row>\n\t                                                    <Col>\n\t                                                        <Button radius egSize=\"xs\" id=\"submit\">点我提交表单</Button>\n\t                                                    </Col>\n\t                                                </Row>\n\t                                            </PanelContent>\n\t                                        </Col>\n\t                                    </Row>\n\t\n\t                                </ValidatorPanel>\n\t                            </Col>\n\t                        </Row>\n\t                    </Grid>\n\t\n\t            </Panel>\n\t        );\n\t    }\n\t}\n\t\n\tReactDOM.render(\n\t    <Demo />\n\t    ,document.getElementById('root'));",
-                "\t<!DOCTYPE html>\n\t<html>\n\t<head>\n\t    <meta charset=\"UTF-8\">\n\t    <title>验证组件</title>\n\t    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no, minimal-ui\">\n\t    <link rel=\"stylesheet\" type=\"text/css\" href=\"./eagle-ui.css\" />\n\t</head>\n\t<body>\n\t<div id=\"root\"></div>\n\t\n\t<script src=\"../bower_components/react/react.js\"></script>\n\t<script src=\"../bower_components/react/react-dom.js\"></script>\n\t<script src=\"../dist/eagle-ui.js\"></script>\n\t<script src=\"js/validate.js\"></script>\n\t</body>\n\t</html>"
+                "\t/**\n\t * Created by mac on 15/11/4.\n\t */\n\timport css from '../../lib/_include.less';\n\timport React,{Component} from 'react';\n\timport Input from '../../lib/Input.js';\n\timport Button from '../../lib/Button.js';\n\timport Row from '../../lib/Row.js';\n\timport Panel from '../../lib/panel/Panel.js';\n\timport PanelContent from '../../lib/panel/PanelContent.js';\n\timport Col from '../../lib/Col.js';\n\timport Grid from '../../lib/Grid.js';\n\timport RadioGroup from '../../lib/RadioGroup.js';\n\timport ValidatorPanel from '../../lib/ValidatorPanel.js';\n\t\n\tlet Demo = class Demo extends Component{\n\t\n\t    constructor(props,context){\n\t        super(props,context);\n\t\n\t\n\t        this.rules = {\n\t            //key对应的是表单元素的name\n\t            calendar:{\n\t                //组件默认规则\n\t                required:true\n\t            },\n\t            userName:{\n\t                required:true\n\t            },\n\t            checkbox:{\n\t                required:true,\n\t                //自定义规则\n\t                isValueToNumber:{\n\t                    text:'value值不是字符串',\n\t                    rule:function(value){\n\t                        console.dir(value);\n\t                        return isNaN(value);\n\t                    }\n\t                }\n\t            },\n\t            date:{\n\t                date:true\n\t            },\n\t            number:{\n\t                number:true,\n\t                digits:true\n\t            },\n\t            equalTo:{\n\t                digits:true,\n\t                equalTo:{\n\t                    params:'[name=\"number\"]'\n\t                }\n\t\n\t            },\n\t            minlength:{\n\t                minlength:{\n\t                    params:10\n\t                },\n\t                maxlength:{\n\t                    params:15\n\t                }\n\t            },\n\t            email:{\n\t                email:true\n\t            }\n\t        };\n\t\n\t        this.state={\n\t            showTab:0,\n\t            update:'uid'\n\t        };\n\t\n\t    }\n\t\n\t    show(value,text,target,active){\n\t        console.dir(value);\n\t    }\n\t\n\t    change(value){\n\t       this.setState({\n\t           showTab:value,\n\t           update:'uid'+(+new Date())\n\t       });\n\t    }\n\t\n\t    submit(vals){\n\t        alert('验证成功'+JSON.stringify(vals));\n\t    }\n\t\n\t    checktab(){\n\t        if(this.state.showTab =='1'){\n\t            return (\n\t                <div>\n\t                <Row>\n\t                    <Col>\n\t                        <Input placeholder=\"请输入姓名\"  name=\"userName\" data-validate />\n\t                    </Col>\n\t                </Row>\n\t                <Row>\n\t                <Col>\n\t                    <Input  type=\"checkbox\"  name=\"checkbox\" value=\"1\"  data-validate />\n\t                    <Input  type=\"checkbox\"   name=\"checkbox\" value=\"2\" data-validate  />\n\t                    <Input  type=\"checkbox\"   name=\"checkbox\" value=\"3\" data-validate  />\n\t                    <Input  type=\"checkbox\"   name=\"checkbox\" value=\"4\" data-validate  />\n\t                </Col>\n\t\n\t                </Row>\n\t                </div>\n\t            );\n\t        }else{\n\t            return null;\n\t        }\n\t    }\n\t\n\t    render(){\n\t        return (\n\t            <Panel>\n\t\n\t                    <Grid>\n\t                        <Row>\n\t                            <Col>\n\t                                <PanelContent>\n\t                                    <RadioGroup defaultChecked={this.state.showTab+''} name=\"radio-foot\" getValueCallback={::this.change}>\n\t                                        <Input  type=\"radio\"  label=\"显示第一个表单元素\" value=\"0\"  />\n\t                                        <Input  type=\"radio\"  label=\"显示第二个表单元素\" value=\"1\"   />\n\t                                    </RadioGroup>\n\t                                </PanelContent>\n\t                            </Col>\n\t                        </Row>\n\t                        <Row>\n\t                            <Col sm={5} end>\n\t                                <ValidatorPanel rules={this.rules} submitElement=\"#submit\" direction=\"right\" id=\"testFrom\" update={this.state.update} submitCallback={::this.submit}>\n\t                                    <Row>\n\t                                        <Col>\n\t                                            <PanelContent>\n\t                                                <Row>\n\t                                                    <Col>\n\t                                                        <Input placeholder=\"请输入日期\" icon=\"calendar\" name=\"date\" data-validate />\n\t                                                    </Col>\n\t                                                </Row>\n\t                                                {this.checktab()}\n\t                                                <Row>\n\t                                                    <Col>\n\t                                                        <Input placeholder=\"请输入有效的号码\" name=\"number\" data-validate />\n\t                                                    </Col>\n\t                                                </Row>\n\t                                                <Row>\n\t                                                    <Col>\n\t                                                        <Input placeholder=\"请输入有效的号码\" name=\"equalTo\" data-validate />\n\t                                                    </Col>\n\t                                                </Row>\n\t                                                <Row>\n\t                                                    <Col>\n\t                                                        <Input placeholder=\"最大最小字符10-15\" name=\"minlength\" data-validate />\n\t                                                    </Col>\n\t                                                </Row>\n\t                                                <Row>\n\t                                                    <Col>\n\t                                                        <Input placeholder=\"请输入您的email\" name=\"email\" data-validate />\n\t                                                    </Col>\n\t                                                </Row>\n\t                                                <Row>\n\t                                                    <Col>\n\t                                                        <Button radius egSize=\"xs\" id=\"submit\" >点我提交表单</Button>\n\t                                                    </Col>\n\t                                                </Row>\n\t                                            </PanelContent>\n\t                                        </Col>\n\t                                    </Row>\n\t\n\t                                </ValidatorPanel>\n\t                            </Col>\n\t                        </Row>\n\t                    </Grid>\n\t\n\t            </Panel>\n\t        );\n\t    }\n\t}\n\t\n\tReactDOM.render(\n\t    <Demo />\n\t    ,document.getElementById('root'));",
+                "\t<!DOCTYPE html>\n\t<html>\n\t<head>\n\t    <meta charset=\"UTF-8\">\n\t    <title>验证组件</title>\n\t    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no, minimal-ui\">\n\t    <link rel=\"stylesheet\" type=\"text/css\" href=\"./eagle-ui.css\" />\n\t</head>\n\t<body>\n\t<div id=\"root\"></div>\n\t\n\t<script src=\"../bower_components/react/react.js\"></script>\n\t<script src=\"../bower_components/react/react-dom.js\"></script>\n\t<script src=\"js/validate.js\"></script>\n\t</body>\n\t</html>"
             ],
             "exampleTitles": [
                 "js",
@@ -964,7 +1132,7 @@
                 "type": "ReactElement"
             },
             "class": "Panel",
-            "module": "ui"
+            "module": "panel"
         },
         {
             "file": "lib/Panel/PanelContent.js",
@@ -975,7 +1143,7 @@
             "type": "bool",
             "default": "true",
             "class": "PanelContent",
-            "module": "ui"
+            "module": "panel"
         },
         {
             "file": "lib/Panel/PanelContent.js",
@@ -987,7 +1155,7 @@
                 "type": "ReactElement"
             },
             "class": "PanelContent",
-            "module": "ui"
+            "module": "panel"
         },
         {
             "file": "lib/Panel/PanelFooter.js",
@@ -998,7 +1166,7 @@
             "type": "bool",
             "default": "true",
             "class": "PanelFooter",
-            "module": "ui"
+            "module": "panel"
         },
         {
             "file": "lib/Panel/PanelFooter.js",
@@ -1010,7 +1178,7 @@
                 "type": "ReactElement"
             },
             "class": "PanelFooter",
-            "module": "ui"
+            "module": "panel"
         },
         {
             "file": "lib/Panel/PanelHeader.js",
@@ -1022,7 +1190,7 @@
                 "type": "ReactElement"
             },
             "class": "PanelHeader",
-            "module": "ui"
+            "module": "panel"
         },
         {
             "file": "lib/Table/Table.js",
@@ -1034,7 +1202,7 @@
                 "type": "ReactElement"
             },
             "class": "Table",
-            "module": "ui"
+            "module": "table"
         },
         {
             "file": "lib/Table/Td.js",
@@ -1045,8 +1213,8 @@
                 "description": "",
                 "type": "ReactElement"
             },
-            "class": "Paging",
-            "module": "ui"
+            "class": "Td",
+            "module": "table"
         },
         {
             "file": "lib/Table/Th.js",
@@ -1057,8 +1225,8 @@
                 "description": "",
                 "type": "ReactElement"
             },
-            "class": "Paging",
-            "module": "ui"
+            "class": "Th",
+            "module": "table"
         },
         {
             "file": "lib/Table/Tr.js",
@@ -1068,8 +1236,8 @@
             "name": "split",
             "type": "bool",
             "default": "false",
-            "class": "Paging",
-            "module": "ui"
+            "class": "Tr",
+            "module": "table"
         },
         {
             "file": "lib/Table/Tr.js",
@@ -1080,15 +1248,15 @@
                 "description": "",
                 "type": "ReactElement"
             },
-            "class": "Paging",
-            "module": "ui"
+            "class": "Tr",
+            "module": "table"
         },
         {
             "file": "lib/utils/ClassNameMixin.js",
             "line": 1,
             "description": "Created by mac on 15/9/7.",
             "class": "Button",
-            "module": "ui"
+            "module": "table"
         },
         {
             "file": "lib/utils/ClassNameMixin.js",
@@ -1113,7 +1281,7 @@
                 "type": "String"
             },
             "class": "Button",
-            "module": "ui"
+            "module": "table"
         },
         {
             "file": "lib/utils/ClassNameMixin.js",
@@ -1138,7 +1306,7 @@
                 "type": "String"
             },
             "class": "Button",
-            "module": "ui"
+            "module": "table"
         },
         {
             "file": "lib/utils/ClassNameMixin.js",
@@ -1158,7 +1326,7 @@
                 "type": "String"
             },
             "class": "Button",
-            "module": "ui"
+            "module": "table"
         },
         {
             "file": "lib/utils/ClassNameMixin.js",
@@ -1183,7 +1351,7 @@
                 "type": "String"
             },
             "class": "Button",
-            "module": "ui"
+            "module": "table"
         },
         {
             "file": "lib/utils/ClassNameMixin.js",
@@ -1208,7 +1376,7 @@
                 "type": "Boolean"
             },
             "class": "Button",
-            "module": "ui"
+            "module": "table"
         },
         {
             "file": "lib/utils/ClassNameMixin.js",
@@ -1229,7 +1397,7 @@
                 }
             ],
             "class": "Button",
-            "module": "ui"
+            "module": "table"
         },
         {
             "file": "lib/utils/ClassNameMixin.js",
@@ -1250,28 +1418,28 @@
                 }
             ],
             "class": "Button",
-            "module": "ui"
+            "module": "table"
         },
         {
             "file": "lib/utils/constants.js",
             "line": 1,
             "description": "Created by mac on 15/9/7.",
             "class": "Button",
-            "module": "ui"
+            "module": "table"
         },
         {
             "file": "lib/utils/constants.js",
             "line": 12,
             "description": "状态",
             "class": "Button",
-            "module": "ui"
+            "module": "table"
         },
         {
             "file": "lib/utils/constants.js",
             "line": 37,
             "description": "颜色",
             "class": "Button",
-            "module": "ui"
+            "module": "table"
         },
         {
             "file": "lib/utils/extend.js",
@@ -1288,14 +1456,14 @@
                 }
             ],
             "class": "Button",
-            "module": "ui"
+            "module": "table"
         },
         {
             "file": "lib/Button.js",
             "line": 1,
             "description": "Created by mac on 15/9/7.",
             "class": "Button",
-            "module": "ui"
+            "module": "table"
         },
         {
             "file": "lib/Button.js",
@@ -1850,6 +2018,16 @@
             "module": "ui"
         },
         {
+            "file": "lib/LabelGroup.js",
+            "line": 39,
+            "description": "点击事件，所有label会被继承",
+            "itemtype": "property",
+            "name": "clickCallback",
+            "type": "Function",
+            "class": "LabelGroup",
+            "module": "ui"
+        },
+        {
             "file": "lib/List.js",
             "line": 27,
             "itemtype": "method",
@@ -2089,6 +2267,16 @@
             "module": "form"
         },
         {
+            "file": "lib/RadioGroup.js",
+            "line": 33,
+            "description": "获取选中的值",
+            "itemtype": "property",
+            "name": "getValueCallback",
+            "type": "String",
+            "class": "RadioGroup",
+            "module": "form"
+        },
+        {
             "file": "lib/Search.js",
             "line": 51,
             "itemtype": "method",
@@ -2131,7 +2319,7 @@
         },
         {
             "file": "lib/Select.js",
-            "line": 25,
+            "line": 26,
             "description": "回调方法，主要作用将value传给父级元素。默认为null",
             "itemtype": "property",
             "name": "callback",
@@ -2142,7 +2330,7 @@
         },
         {
             "file": "lib/Select.js",
-            "line": 32,
+            "line": 33,
             "description": "样式类名前缀",
             "itemtype": "property",
             "name": "classPrefix",
@@ -2152,7 +2340,25 @@
         },
         {
             "file": "lib/Select.js",
-            "line": 56,
+            "line": 42,
+            "description": "option对应的value",
+            "itemtype": "property",
+            "name": "key\n&type String",
+            "class": "Select",
+            "module": "form"
+        },
+        {
+            "file": "lib/Select.js",
+            "line": 50,
+            "description": "输入值，用来匹配显示对应列表的内容",
+            "itemtype": "property",
+            "name": "autoVal\n&type String",
+            "class": "Select",
+            "module": "form"
+        },
+        {
+            "file": "lib/Select.js",
+            "line": 67,
             "description": "第一次渲染完成后执行,为document添加点击监听事件，判断是否关闭ul\n生命周期方法",
             "itemtype": "method",
             "name": "componentDidMount",
@@ -2161,7 +2367,7 @@
         },
         {
             "file": "lib/Select.js",
-            "line": 74,
+            "line": 85,
             "description": "判断obj是否为parentObj的子元素",
             "itemtype": "method",
             "name": "isParent",
@@ -2186,7 +2392,7 @@
         },
         {
             "file": "lib/Select.js",
-            "line": 90,
+            "line": 101,
             "description": "显示选项列表,当ul关闭时才changestate",
             "itemtype": "method",
             "name": "showUl",
@@ -2198,7 +2404,7 @@
         },
         {
             "file": "lib/Select.js",
-            "line": 102,
+            "line": 113,
             "description": "显示auto自动补充选项列表",
             "itemtype": "method",
             "name": "showAutoUl",
@@ -2217,8 +2423,8 @@
         },
         {
             "file": "lib/Select.js",
-            "line": 119,
-            "description": "点击倒三角icon时，控制ul的显示与否",
+            "line": 130,
+            "description": "点击icon时，控制ul的显示与否",
             "itemtype": "method",
             "name": "toogleUl",
             "return": {
@@ -2229,8 +2435,8 @@
         },
         {
             "file": "lib/Select.js",
-            "line": 129,
-            "description": "取得当前选中值，父级回调存在的话调用",
+            "line": 140,
+            "description": "取得符合要求的值，父级回调存在的话调用",
             "itemtype": "method",
             "name": "callBacks",
             "return": {
@@ -2241,7 +2447,20 @@
         },
         {
             "file": "lib/Select.js",
-            "line": 144,
+            "line": 156,
+            "description": "验证输入值是否为select内容，return true 否则return false",
+            "itemtype": "method",
+            "name": "isInSelect",
+            "return": {
+                "description": "flags",
+                "type": "Boolean"
+            },
+            "class": "Select",
+            "module": "form"
+        },
+        {
+            "file": "lib/Select.js",
+            "line": 174,
             "description": "改变input的value",
             "itemtype": "method",
             "name": "handlerValue",
@@ -2260,8 +2479,8 @@
         },
         {
             "file": "lib/Select.js",
-            "line": 159,
-            "description": "延时2s后点用callBacks方法",
+            "line": 189,
+            "description": "判断是否输入值为select范围内,否则改为第一个值。延时2s后点用callBacks方法",
             "itemtype": "method",
             "name": "changeValue",
             "return": {
@@ -2272,7 +2491,19 @@
         },
         {
             "file": "lib/Select.js",
-            "line": 168,
+            "line": 198,
+            "description": "根据当前值是否为select内的值，判断是否改变state的值",
+            "itemtype": "method",
+            "name": "getTrueVal",
+            "return": {
+                "description": "null"
+            },
+            "class": "Select",
+            "module": "form"
+        },
+        {
+            "file": "lib/Select.js",
+            "line": 211,
             "description": "点击或者enter键时，选择当前li的值，并关闭ul",
             "itemtype": "method",
             "name": "chooseItem",
@@ -2291,7 +2522,7 @@
         },
         {
             "file": "lib/Select.js",
-            "line": 187,
+            "line": 230,
             "description": "关闭ul，当前ul显示时起作用",
             "itemtype": "method",
             "name": "hideUl",
@@ -2303,7 +2534,7 @@
         },
         {
             "file": "lib/Select.js",
-            "line": 200,
+            "line": 243,
             "description": "target为flase移除li的active状态，否则将obj子元素的值付给state.value",
             "itemtype": "method",
             "name": "removeAllActive",
@@ -2327,7 +2558,7 @@
         },
         {
             "file": "lib/Select.js",
-            "line": 222,
+            "line": 265,
             "description": "keydown时触发，不通方向键分别对应不同方法",
             "itemtype": "method",
             "name": "keyIn",
@@ -2346,42 +2577,42 @@
         },
         {
             "file": "lib/Select.js",
-            "line": 235,
+            "line": 278,
             "description": "当ul显示时，方向键移动起作用\n遍历寻找当前active元素的位置，并移除active",
             "class": "Select",
             "module": "form"
         },
         {
             "file": "lib/Select.js",
-            "line": 247,
+            "line": 290,
             "description": "下方向键，判断active元素是否为最后一个，是则不再向下否则i+1",
             "class": "Select",
             "module": "form"
         },
         {
             "file": "lib/Select.js",
-            "line": 252,
+            "line": 295,
             "description": "上方向键，判断active元素是否为第一个，是则不再向上否则i－1",
             "class": "Select",
             "module": "form"
         },
         {
             "file": "lib/Select.js",
-            "line": 258,
+            "line": 301,
             "description": "如果active为第五个元素之前的元素，则scrollTop不变，否则每向下一个，scrollTop加30",
             "class": "Select",
             "module": "form"
         },
         {
             "file": "lib/Select.js",
-            "line": 264,
+            "line": 307,
             "description": "enter键，取得当前元素值",
             "class": "Select",
             "module": "form"
         },
         {
             "file": "lib/Select.js",
-            "line": 274,
+            "line": 317,
             "description": "为选中li元素增加active class",
             "itemtype": "method",
             "name": "addActive",
@@ -2400,7 +2631,7 @@
         },
         {
             "file": "lib/Select.js",
-            "line": 286,
+            "line": 329,
             "description": "为li元素移除active class",
             "itemtype": "method",
             "name": "removeActive",
@@ -2419,7 +2650,7 @@
         },
         {
             "file": "lib/Select.js",
-            "line": 299,
+            "line": 342,
             "description": "渲染li元素，并根据autoVal来匹配获得符合元素\nthis.state.autoVal 为input输入值，初始为.*匹配任意",
             "itemtype": "method",
             "name": "renderLi",
@@ -2432,7 +2663,7 @@
         },
         {
             "file": "lib/Select.js",
-            "line": 323,
+            "line": 366,
             "description": "渲染select",
             "itemtype": "method",
             "name": "renderSelect",
@@ -2445,7 +2676,7 @@
         },
         {
             "file": "lib/Select.js",
-            "line": 360,
+            "line": 403,
             "description": "渲染自动补全的输入框",
             "itemtype": "method",
             "name": "renderAuto",
@@ -2458,7 +2689,7 @@
         },
         {
             "file": "lib/Select.js",
-            "line": 384,
+            "line": 427,
             "description": "根据auto存在与否渲染不同类型的元素",
             "itemtype": "method",
             "name": "render",
@@ -2480,26 +2711,26 @@
             "file": "lib/Tabset.js",
             "line": 1,
             "description": "Created by mac on 15/9/7.",
-            "class": "Tab",
-            "module": "form"
+            "class": "Tabset",
+            "module": "ui"
         },
         {
             "file": "lib/Tabset.js",
-            "line": 21,
+            "line": 28,
             "description": "需要在初始的时候打开第几个tab，默认为0（从0计数，即打开第一个tab）",
             "itemtype": "property",
-            "name": "activeTabIndex",
-            "type": "number",
+            "name": "activeTab",
+            "type": "Number",
             "default": "0",
-            "class": "Tab",
-            "module": "form"
+            "class": "Tabset",
+            "module": "ui"
         },
         {
             "file": "lib/Toast.js",
             "line": 1,
             "description": "Created by panqianjin on 15/10/30.",
-            "class": "toast",
-            "module": "form"
+            "class": "Toast",
+            "module": "ui"
         },
         {
             "file": "lib/Toast.js",
@@ -2509,7 +2740,7 @@
             "name": "type",
             "type": "String",
             "default": "success",
-            "class": "toast",
+            "class": "Toast",
             "module": "ui"
         },
         {
@@ -2520,7 +2751,7 @@
             "name": "msg",
             "type": "String",
             "default": "保存成功",
-            "class": "toast",
+            "class": "Toast",
             "module": "ui"
         },
         {
@@ -2531,7 +2762,7 @@
             "name": "seconds",
             "type": "Integer",
             "default": "4",
-            "class": "toast",
+            "class": "Toast",
             "module": "ui"
         },
         {
@@ -2542,7 +2773,7 @@
             "name": "overlay",
             "type": "Boolean",
             "default": "false",
-            "class": "toast",
+            "class": "Toast",
             "module": "ui"
         },
         {
@@ -2553,7 +2784,7 @@
             "name": "classPrefix",
             "type": "sting",
             "default": "crumb",
-            "class": "toast",
+            "class": "Toast",
             "module": "ui"
         },
         {
@@ -2564,7 +2795,7 @@
             "name": "componentTag",
             "type": "String",
             "default": "div",
-            "class": "toast",
+            "class": "Toast",
             "module": "ui"
         },
         {
@@ -2572,7 +2803,7 @@
             "line": 82,
             "description": "是否显示tips",
             "type": "Boolean",
-            "class": "toast",
+            "class": "Toast",
             "module": "ui"
         },
         {
@@ -2581,7 +2812,7 @@
             "description": "接收到新props时执行,props改变，改变state.show",
             "itemtype": "method",
             "name": "componentWillReceiveProps",
-            "class": "toast",
+            "class": "Toast",
             "module": "ui"
         },
         {
@@ -2589,7 +2820,7 @@
             "line": 96,
             "description": "state.show随新的props里的值改变",
             "type": "Boolean",
-            "class": "toast",
+            "class": "Toast",
             "module": "ui"
         },
         {
@@ -2601,7 +2832,7 @@
                 "description": "",
                 "type": "ReactElement"
             },
-            "class": "toast",
+            "class": "Toast",
             "module": "ui"
         },
         {
@@ -2617,7 +2848,7 @@
                     "type": "Boolean"
                 }
             ],
-            "class": "toast",
+            "class": "Toast",
             "module": "ui"
         },
         {
@@ -2630,7 +2861,7 @@
                 "description": "",
                 "type": "ReactElement"
             },
-            "class": "toast",
+            "class": "Toast",
             "module": "ui"
         },
         {
@@ -2642,7 +2873,7 @@
             "return": {
                 "description": "null"
             },
-            "class": "toast",
+            "class": "Toast",
             "module": "ui"
         },
         {
@@ -2654,7 +2885,7 @@
             "return": {
                 "description": "null"
             },
-            "class": "toast",
+            "class": "Toast",
             "module": "ui"
         },
         {
@@ -2707,7 +2938,7 @@
         {
             "file": "lib/ValidatorPanel.js",
             "line": 94,
-            "description": "在提交时除验证规则之外的其他逻辑",
+            "description": "验证成功后提交表单",
             "itemtype": "property",
             "name": "submitCallback",
             "type": "Function",
@@ -2716,7 +2947,38 @@
         },
         {
             "file": "lib/ValidatorPanel.js",
-            "line": 104,
+            "line": 102,
+            "description": "在提交时除验证规则之外的其他逻辑",
+            "itemtype": "property",
+            "name": "validateCallback",
+            "type": "Function",
+            "class": "ValidatorPanel",
+            "module": "form"
+        },
+        {
+            "file": "lib/ValidatorPanel.js",
+            "line": 110,
+            "description": "提示框消失时间",
+            "itemtype": "property",
+            "name": "timeout",
+            "type": "Number",
+            "default": "3000",
+            "class": "ValidatorPanel",
+            "module": "form"
+        },
+        {
+            "file": "lib/ValidatorPanel.js",
+            "line": 117,
+            "description": "提交按钮id",
+            "itemtype": "property",
+            "name": "submitElement",
+            "type": "String",
+            "class": "ValidatorPanel",
+            "module": "form"
+        },
+        {
+            "file": "lib/ValidatorPanel.js",
+            "line": 123,
             "description": "是否增强文本框提示",
             "itemtype": "property",
             "name": "shake",
@@ -2727,11 +2989,33 @@
         },
         {
             "file": "lib/ValidatorPanel.js",
-            "line": 111,
+            "line": 130,
             "description": "规则验证",
             "itemtype": "property",
             "name": "rules",
             "type": "Object",
+            "class": "ValidatorPanel",
+            "module": "form"
+        },
+        {
+            "file": "lib/ValidatorPanel.js",
+            "line": 136,
+            "description": "提示方位",
+            "itemtype": "property",
+            "name": "direction",
+            "type": "String",
+            "default": "right",
+            "class": "ValidatorPanel",
+            "module": "form"
+        },
+        {
+            "file": "lib/ValidatorPanel.js",
+            "line": 143,
+            "description": "重新更新dom",
+            "itemtype": "property",
+            "name": "update",
+            "type": "String",
+            "default": "+new Date()",
             "class": "ValidatorPanel",
             "module": "form"
         }
@@ -2951,6 +3235,30 @@
         },
         {
             "message": "unknown tag: demo",
+            "line": " lib/Tab.js:8"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Tab.js:8"
+        },
+        {
+            "message": "unknown tag: show",
+            "line": " lib/Tab.js:8"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Tabset.js:8"
+        },
+        {
+            "message": "unknown tag: demo",
+            "line": " lib/Tabset.js:8"
+        },
+        {
+            "message": "unknown tag: show",
+            "line": " lib/Tabset.js:8"
+        },
+        {
+            "message": "unknown tag: demo",
             "line": " lib/Toast.js:11"
         },
         {
@@ -3067,23 +3375,23 @@
         },
         {
             "message": "Missing item type\n当ul显示时，方向键移动起作用\n遍历寻找当前active元素的位置，并移除active",
-            "line": " lib/Select.js:235"
+            "line": " lib/Select.js:278"
         },
         {
             "message": "Missing item type\n下方向键，判断active元素是否为最后一个，是则不再向下否则i+1",
-            "line": " lib/Select.js:247"
+            "line": " lib/Select.js:290"
         },
         {
             "message": "Missing item type\n上方向键，判断active元素是否为第一个，是则不再向上否则i－1",
-            "line": " lib/Select.js:252"
+            "line": " lib/Select.js:295"
         },
         {
             "message": "Missing item type\n如果active为第五个元素之前的元素，则scrollTop不变，否则每向下一个，scrollTop加30",
-            "line": " lib/Select.js:258"
+            "line": " lib/Select.js:301"
         },
         {
             "message": "Missing item type\nenter键，取得当前元素值",
-            "line": " lib/Select.js:264"
+            "line": " lib/Select.js:307"
         },
         {
             "message": "Missing item type\nCreated by mac on 15/9/7.",

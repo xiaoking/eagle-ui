@@ -6,7 +6,7 @@ import React from 'react';
 import Select from '../../lib/Select.js';
 
 ReactDOM.render(
-    <Select  callback={function(val){console.log(val)}}  value="上好">
+    <Select  callback={function(val){console.log(val)}} >
         <item value='0'>北京</item>
         <item value='1'>上海</item>
         <item value='2'>南京</item>
