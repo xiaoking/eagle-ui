@@ -278,7 +278,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        ),
 	                        _react2['default'].createElement(
 	                            _eagleUi.PanelFooter,
-	                            { padding: false },
+	                            null,
 	                            _react2['default'].createElement(_eagleUi.Paging, { currentPage: 1, total: 30 })
 	                        )
 	                    )

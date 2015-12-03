@@ -12,6 +12,7 @@ import Col from '../../lib/Col.js';
 import Grid from '../../lib/Grid.js';
 import RadioGroup from '../../lib/RadioGroup.js';
 import ValidatorPanel from '../../lib/ValidatorPanel.js';
+import CalendarPanel from '../../lib/CalendarPanel.js';
 
 let Demo = class Demo extends Component{
 
@@ -136,7 +137,10 @@ let Demo = class Demo extends Component{
                                             <PanelContent>
                                                 <Row>
                                                     <Col>
-                                                        <Input placeholder="请输入日期" icon="calendar" name="date" data-validate />
+                                                        <CalendarPanel>
+                                                            <Input placeholder="请选择日期" icon="calendar" name="date" style={{width:'150px'}} data-validate />
+                                                        </CalendarPanel>
+
                                                     </Col>
                                                 </Row>
                                                 {this.checktab()}

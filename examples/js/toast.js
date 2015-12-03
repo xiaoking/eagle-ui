@@ -60,7 +60,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 	'use strict';
 
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var _lib_includeLess = __webpack_require__(24);
 
@@ -74,7 +80,109 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _libToastJs2 = _interopRequireDefault(_libToastJs);
 
-	ReactDOM.render(_react2['default'].createElement(_libToastJs2['default'], { type: 'error', msg: '保存成功', seconds: '3', show: true, overlay: true }), document.getElementById('root'));
+	var _libButtonJs = __webpack_require__(33);
+
+	var _libButtonJs2 = _interopRequireDefault(_libButtonJs);
+
+	var _libGridJs = __webpack_require__(36);
+
+	var _libGridJs2 = _interopRequireDefault(_libGridJs);
+
+	var _libRowJs = __webpack_require__(34);
+
+	var _libRowJs2 = _interopRequireDefault(_libRowJs);
+
+	var _libColJs = __webpack_require__(35);
+
+	var _libColJs2 = _interopRequireDefault(_libColJs);
+
+	var Demo = (function (_Component) {
+	    _inherits(Demo, _Component);
+
+	    _createClass(Demo, null, [{
+	        key: 'defaultProps',
+	        value: {
+	            show: false,
+	            type: "success"
+	        },
+	        enumerable: true
+	    }]);
+
+	    function Demo(props, context) {
+	        _classCallCheck(this, Demo);
+
+	        _Component.call(this, props, context);
+	        this.state = {
+	            show: this.props.show,
+	            type: this.props.type,
+	            overlay: true
+	        };
+	    }
+
+	    Demo.prototype.render = function render() {
+	        return _react2['default'].createElement(
+	            _libGridJs2['default'],
+	            null,
+	            _react2['default'].createElement(
+	                _libRowJs2['default'],
+	                null,
+	                _react2['default'].createElement(
+	                    _libColJs2['default'],
+	                    { sm: 4 },
+	                    _react2['default'].createElement(
+	                        _libButtonJs2['default'],
+	                        { block: true, radius: true, egSize: 'sm', onClick: this.showSuccess.bind(this) },
+	                        'success'
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    _libColJs2['default'],
+	                    { sm: 4 },
+	                    _react2['default'].createElement(
+	                        _libButtonJs2['default'],
+	                        { block: true, radius: true, egSize: 'sm', onClick: this.showError.bind(this) },
+	                        'error'
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    _libColJs2['default'],
+	                    { sm: 4 },
+	                    _react2['default'].createElement(
+	                        _libButtonJs2['default'],
+	                        { block: true, radius: true, egSize: 'sm', onClick: this.showLoading.bind(this) },
+	                        'loading'
+	                    )
+	                )
+	            ),
+	            _react2['default'].createElement(_libToastJs2['default'], { type: this.state.type, show: this.state.show, overlay: this.state.overlay })
+	        );
+	    };
+
+	    Demo.prototype.showSuccess = function showSuccess() {
+	        this.setState({
+	            show: true,
+	            type: 'success'
+	        });
+	    };
+
+	    Demo.prototype.showError = function showError() {
+	        this.setState({
+	            show: true,
+	            type: 'error'
+	        });
+	    };
+
+	    Demo.prototype.showLoading = function showLoading() {
+	        this.setState({
+	            show: true,
+	            type: 'loading'
+	        });
+	    };
+
+	    return Demo;
+	})(_react.Component);
+
+	ReactDOM.render(_react2['default'].createElement(Demo, null), document.getElementById('root'));
 
 /***/ },
 
@@ -887,6 +995,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _classCallCheck(this, _Toast);
 
 	        _Component.call(this, props, context);
+	        this.flag = true;
 	        this.state = {
 	            /**
 	             * 是否显示tips
@@ -913,6 +1022,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    /**
+	     * change flag状态，即非第一次
+	     * */
+
+	    Toast.prototype.componentDidMount = function componentDidMount() {
+	        this.flag = false;
+	    };
+
+	    /**
 	     * @method render
 	     * @return {ReactElement}
 	     * */
@@ -923,10 +1040,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.setTimeoutForClose();
 	        return _react2['default'].createElement(
 	            _GridJs2['default'],
-	            { className: _classnames3['default'](this.getClassName('container'), (_classnames = {}, _classnames['fadein'] = this.state.show, _classnames['fadeout'] = !this.state.show, _classnames)) },
+	            { ref: 'container', className: _classnames3['default'](this.getClassName('container'), (_classnames = {}, _classnames['fadein'] = this.state.show, _classnames['fadeout'] = this.flag ? false : !this.state.show, _classnames)) },
+	            !this.flag && !this.state.show ? this.displayNone() : null,
 	            this.toast(),
 	            this.showOverlay(this.props.overlay)
 	        );
+	    };
+
+	    /**
+	     * 改变display形态
+	     * */
+
+	    Toast.prototype.displayNone = function displayNone() {
+	        var _this = this;
+	        clearTimeout(this.timer);
+	        this.timer = setTimeout((function () {
+	            this.removeClass(ReactDOM.findDOMNode(_this.refs.container), 'fadeout');
+	        }).bind(this), 400);
 	    };
 
 	    /**

@@ -60,7 +60,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	 */
 	'use strict';
 
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var _lib_includeLess = __webpack_require__(24);
 
@@ -74,77 +80,149 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _libSelectJs2 = _interopRequireDefault(_libSelectJs);
 
-	ReactDOM.render(_react2['default'].createElement(
-	    _libSelectJs2['default'],
-	    { callback: function (val) {
-	            console.log(val);
-	        } },
-	    _react2['default'].createElement(
-	        'item',
-	        { value: '0' },
-	        '北京'
-	    ),
-	    _react2['default'].createElement(
-	        'item',
-	        { value: '1' },
-	        '上海'
-	    ),
-	    _react2['default'].createElement(
-	        'item',
-	        { value: '2' },
-	        '南京'
-	    ),
-	    _react2['default'].createElement(
-	        'item',
-	        { value: '3' },
-	        'ssdd'
-	    ),
-	    _react2['default'].createElement(
-	        'item',
-	        { value: '4' },
-	        'sd饭否否'
-	    ),
-	    _react2['default'].createElement(
-	        'item',
-	        { value: '5' },
-	        '南京'
-	    ),
-	    _react2['default'].createElement(
-	        'item',
-	        { value: '6' },
-	        'ssdd'
-	    ),
-	    _react2['default'].createElement(
-	        'item',
-	        { value: '7' },
-	        'sd饭否否'
-	    ),
-	    _react2['default'].createElement(
-	        'item',
-	        { value: '8' },
-	        '北京'
-	    ),
-	    _react2['default'].createElement(
-	        'item',
-	        { value: '9' },
-	        '上海'
-	    ),
-	    _react2['default'].createElement(
-	        'item',
-	        { value: '10' },
-	        '南京'
-	    ),
-	    _react2['default'].createElement(
-	        'item',
-	        { value: '11' },
-	        'ssdd'
-	    ),
-	    _react2['default'].createElement(
-	        'item',
-	        { value: '12' },
-	        'sd饭否否'
-	    )
-	), document.getElementById('root'));
+	var _libButtonJs = __webpack_require__(33);
+
+	var _libButtonJs2 = _interopRequireDefault(_libButtonJs);
+
+	var _libGridJs = __webpack_require__(36);
+
+	var _libGridJs2 = _interopRequireDefault(_libGridJs);
+
+	var _libRowJs = __webpack_require__(34);
+
+	var _libRowJs2 = _interopRequireDefault(_libRowJs);
+
+	var _libColJs = __webpack_require__(35);
+
+	var _libColJs2 = _interopRequireDefault(_libColJs);
+
+	var Demo = (function (_Component) {
+	    _inherits(Demo, _Component);
+
+	    _createClass(Demo, null, [{
+	        key: 'defaultProps',
+	        value: {
+	            input: true
+	        },
+	        enumerable: true
+	    }]);
+
+	    function Demo(props, context) {
+	        _classCallCheck(this, Demo);
+
+	        _Component.call(this, props, context);
+	        this.state = {
+	            input: this.props.input
+	        };
+	    }
+
+	    Demo.prototype.render = function render() {
+	        console.log(this.state.input);
+	        return _react2['default'].createElement(
+	            _libGridJs2['default'],
+	            null,
+	            _react2['default'].createElement(
+	                _libRowJs2['default'],
+	                null,
+	                _react2['default'].createElement(
+	                    _libColJs2['default'],
+	                    { sm: 3 },
+	                    _react2['default'].createElement(
+	                        _libButtonJs2['default'],
+	                        { block: true, radius: true, egSize: 'sm', onClick: this.changeIn.bind(this) },
+	                        '切换至不可输入模式'
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    _libColJs2['default'],
+	                    { sm: 8 },
+	                    _react2['default'].createElement(
+	                        _libSelectJs2['default'],
+	                        { callback: function (val, key) {
+	                                console.log(val + ':' + key);
+	                            }, input: this.state.input },
+	                        _react2['default'].createElement(
+	                            'item',
+	                            { value: '0' },
+	                            '北京'
+	                        ),
+	                        _react2['default'].createElement(
+	                            'item',
+	                            { value: '1' },
+	                            '上海'
+	                        ),
+	                        _react2['default'].createElement(
+	                            'item',
+	                            { value: '2' },
+	                            '南京'
+	                        ),
+	                        _react2['default'].createElement(
+	                            'item',
+	                            { value: '3' },
+	                            'ssdd'
+	                        ),
+	                        _react2['default'].createElement(
+	                            'item',
+	                            { value: '4' },
+	                            'sd饭否否'
+	                        ),
+	                        _react2['default'].createElement(
+	                            'item',
+	                            { value: '5' },
+	                            '南京'
+	                        ),
+	                        _react2['default'].createElement(
+	                            'item',
+	                            { value: '6' },
+	                            'ssdd'
+	                        ),
+	                        _react2['default'].createElement(
+	                            'item',
+	                            { value: '7' },
+	                            'sd饭否否'
+	                        ),
+	                        _react2['default'].createElement(
+	                            'item',
+	                            { value: '8' },
+	                            '北京'
+	                        ),
+	                        _react2['default'].createElement(
+	                            'item',
+	                            { value: '9' },
+	                            '上海'
+	                        ),
+	                        _react2['default'].createElement(
+	                            'item',
+	                            { value: '10' },
+	                            '南京'
+	                        ),
+	                        _react2['default'].createElement(
+	                            'item',
+	                            { value: '11' },
+	                            'ssdd'
+	                        ),
+	                        _react2['default'].createElement(
+	                            'item',
+	                            { value: '12' },
+	                            'sd饭否否'
+	                        )
+	                    )
+	                )
+	            )
+	        );
+	    };
+
+	    Demo.prototype.changeIn = function changeIn() {
+	        this.setState({
+	            input: false
+	        });
+	        alert('不可输入');
+	    };
+
+	    return Demo;
+	})(_react.Component);
+
+	ReactDOM.render(_react2['default'].createElement(Demo, null), document.getElementById('root'));
 
 /***/ },
 
@@ -421,6 +499,183 @@ return /******/ (function(modules) { // webpackBootstrap
 		}
 	}());
 
+
+/***/ },
+
+/***/ 33:
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Created by mac on 15/9/7.
+	 */
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(28);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _utilsClassNameMixin = __webpack_require__(30);
+
+	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+
+	var _classnames = __webpack_require__(32);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	/**
+	 * 按钮组件
+	 * @class Button
+	 * @module form
+	 * @extends Component
+	 * @constructor
+	 * @since 0.1.0
+	 * @demo src/button.js {js}
+	 * @demo button.html {html}
+	 * @show true
+	 * */
+
+	var Button = (function (_Component) {
+	  _inherits(Button, _Component);
+
+	  _createClass(Button, null, [{
+	    key: 'propTypes',
+
+	    //static mixins = [ClassNameMixin];
+	    value: {
+	      /**
+	       * 按钮尺寸,分别为xs、sm、lg
+	       * @property egSize
+	       * @type String
+	       * @default sm
+	       * */
+	      egSize: _react.PropTypes.string,
+	      /**
+	       * 禁用
+	       * @property disabled
+	       * @type Boolean
+	       * @default false
+	       * */
+	      disabled: _react.PropTypes.bool,
+	      /**
+	       * 启用
+	       * @property enable
+	       * @type Boolean
+	       * @default true
+	       * */
+	      enable: _react.PropTypes.bool,
+	      //success:PropTypes.bool,
+	      /**
+	       * 选中
+	       * @property active
+	       * @type Boolean
+	       * @default false
+	       * */
+	      active: _react.PropTypes.bool,
+	      /**
+	       * 圆角
+	       * @property radius
+	       * @type Boolean
+	       * @default false
+	       * */
+	      radius: _react.PropTypes.bool,
+	      /**
+	       * 椭圆角
+	       * @property round
+	       * @type Boolean
+	       * @default false
+	       * */
+	      round: _react.PropTypes.bool,
+	      //error:PropTypes.bool,
+	      //warning:PropTypes.bool,
+	      //danger:PropTypes.bool,
+	      /**
+	       * 颜色[error、warning、danger、link、gray、white、success、'']
+	       * @property egStyle
+	       * @type Boolean
+	       * @default ''
+	       * */
+	      egStyle: _react.PropTypes.string,
+	      /**
+	       * 样式前缀
+	       * @property classPrefix
+	       * @type String
+	       * @default btn
+	       * */
+	      classPrefix: _react.PropTypes.string,
+	      /**
+	       * 标签tagName
+	       * @property componentTag
+	       * @type String
+	       * @default a
+	       * */
+	      componentTag: _react.PropTypes.string,
+	      /**
+	       * 块级显示
+	       * @property block
+	       * @type Boolean
+	       * @default false
+	       * */
+	      block: _react.PropTypes.bool,
+	      egHref: _react.PropTypes.string
+	    },
+	    enumerable: true
+	  }, {
+	    key: 'defaultProps',
+	    value: {
+	      egSize: 'default',
+	      classPrefix: 'btn',
+	      componentTag: 'a'
+	    },
+
+	    //lg
+	    //sm
+	    //xs this.getClassName('demo'); eg-demo
+	    enumerable: true
+	  }]);
+
+	  function Button(props, context) {
+	    _classCallCheck(this, _Button);
+
+	    _Component.call(this, props, context);
+	    //this.classNameMixin = new ClassNameMixin(this.props);
+	  }
+
+	  Button.prototype.render = function render() {
+	    //const {} = this.props;
+	    //什么颜色，大小  类型
+	    var _props = this.props;
+	    var egSize = _props.egSize;
+	    var Component = _props.componentTag;
+	    var egStyle = _props.egStyle;
+
+	    //let  size= this.classNameMixin.getClassName(egSize);
+
+	    return _react2['default'].createElement(
+	      Component,
+	      _extends({}, this.props, { className: _classnames2['default'](this.getClassNamesForArguments('btn', egSize, egStyle), this.getClassNames(this.props)) }),
+	      this.props.children
+	    );
+	  };
+
+	  var _Button = Button;
+	  Button = _utilsClassNameMixin2['default'](Button) || Button;
+	  return Button;
+	})(_react.Component);
+
+	exports['default'] = Button;
+	module.exports = exports['default'];
 
 /***/ },
 
@@ -813,7 +1068,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            'div',
 	            { className: _classnames11['default']((_classnames9 = {}, _classnames9[this.getClassName('icon-container')] = !!this.props.icon, _classnames9)) },
 	            _react2['default'].createElement('input', _extends({}, this.props, { className: _classnames11['default'](this.getDefaultClass()) })),
-	            _react2['default'].createElement('i', { className: this.getClassName('icon-' + this.props.icon, false) })
+	            _react2['default'].createElement('i', { className: 'icon-input-right icon-' + this.props.icon })
 	        );
 	    };
 
@@ -863,9 +1118,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames3 = __webpack_require__(32);
+	var _classnames2 = __webpack_require__(32);
 
-	var _classnames4 = _interopRequireDefault(_classnames3);
+	var _classnames3 = _interopRequireDefault(_classnames2);
 
 	var _InputJs = __webpack_require__(38);
 
@@ -885,7 +1140,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	/**
 	 * 下拉选择框组件。
-	 * 因原先考虑不周，导致代码写得很乱，有待重构
+	 * 有input参数可以自由输入，否则不在列表中的输入改变为第一个item
 	 * @Class Select
 	 * @Module form
 	 * @extends Coponent
@@ -941,9 +1196,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _Component.call(this, props, context);
 	        this.state = {
 	            show: this.props.show,
+	            /**
+	             * item content文本值
+	             * @type {String}
+	             * */
 	            value: this.props.value,
-	            autoVal: this.props.autoVal,
-	            key: this.props.key
+	            /**
+	             * item value值
+	             * @type {String}
+	             * */
+	            key: this.props.key,
+	            /**
+	             * 是否可以自由输入
+	             * @type {Boolean}
+	             * */
+	            input: this.props.input
 	        };
 	    }
 
@@ -1000,25 +1267,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    /**
-	     * 显示auto自动补充选项列表
-	     * @method showAutoUl
-	     * @param event {Object}
-	     * @return null
-	     * */
-
-	    Select.prototype.showAutoUl = function showAutoUl(event) {
-	        this.setState({
-	            value: event.target.value
-	        });
-	        if (!this.state.show) {
-	            this.setState({
-	                show: true
-	            });
-	        }
-	        this.changeValue();
-	    };
-
-	    /**
 	     * 点击icon时，控制ul的显示与否
 	     * @method toogleUl
 	     * @return null
@@ -1028,107 +1276,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.setState({
 	            show: !this.state.show
 	        });
-	    };
-
-	    /**
-	     * 取得符合要求的值，父级回调存在的话调用
-	     * @method callBacks
-	     * @return null
-	     * */
-
-	    Select.prototype.callBacks = function callBacks() {
-	        this.getTrueVal();
-	        var val = this.state.value;
-	        if (this.state.show) {
-	            this.setState({
-	                show: false
-	            });
-	        }
-	        console.log(ReactDOM.findDOMNode(this.refs.test).value);
-	        this.props.callback && this.props.callback(val);
-	    };
-
-	    /**
-	     * 验证输入值是否为select内容，return true 否则return false
-	     * @method isInSelect
-	     * @return flags {Boolean}
-	     * */
-
-	    Select.prototype.isInSelect = function isInSelect() {
-	        var val = '^' + this.state.value + '$';
-	        var reg = new RegExp(val, "g");
-	        var flags = false;
-	        var li = _react2['default'].Children.map(this.props.children, function (item) {
-	            if (reg.test(item.props.children)) {
-	                flags = true;
-	            }
-	            return item;
-	        }, this);
-	        return flags;
-	    };
-
-	    /**
-	     * 改变input的value
-	     * @method handlerValue
-	     * @param event {Object}
-	     * @return null
-	     * */
-
-	    Select.prototype.handlerValue = function handlerValue(event) {
-	        //console.log(event.target.value);
-	        var val = event.target.value;
-	        this.setState({
-	            value: val,
-	            autoVal: val
-	        });
-	        this.changeValue();
-	    };
-
-	    /**
-	     * 判断是否输入值为select范围内,否则改为第一个值。延时2s后点用callBacks方法
-	     * @method changeValue
-	     * @return null
-	     * */
-
-	    Select.prototype.changeValue = function changeValue() {
-	        clearTimeout(this.timeout);
-	        this.timeout = setTimeout(this.callBacks.bind(this), 2000);
-	    };
-
-	    /**
-	     * 根据当前值是否为select内的值，判断是否改变state的值
-	     * @method getTrueVal
-	     * @return null
-	     * */
-
-	    Select.prototype.getTrueVal = function getTrueVal() {
-	        if (!this.isInSelect.call(this)) {
-	            this.setState({
-	                value: this.props.children[0].props.children,
-	                key: this.props.children[0].props.value
-	            });
-	        }
-	    };
-
-	    /**
-	     * 点击或者enter键时，选择当前li的值，并关闭ul
-	     * @method chooseItem
-	     * @param event {Object}
-	     * @return null
-	     * */
-
-	    Select.prototype.chooseItem = function chooseItem(event) {
-	        var ulChildren = ReactDOM.findDOMNode(this.refs.selectUl).children;
-	        var inputObj = ReactDOM.findDOMNode(this.refs.select);
-	        this.removeAllActive(ulChildren);
-	        event.target.classList.add('active');
-	        this.setState({
-	            show: !this.state.show,
-	            value: event.target.textContent,
-	            key: event.target.value
-	        });
-	        inputObj.focus();
-	        this.changeValue();
 	    };
 
 	    /**
@@ -1146,13 +1293,116 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    /**
+	     * 失去焦点事件
+	     * @method finishInput
+	     * @return null
+	     * */
+
+	    Select.prototype.finishInput = function finishInput(event) {
+	        //让出线程
+	        setTimeout(this.callBacks.bind(this));
+	    };
+
+	    /**
+	     * 取得符合要求的值，父级回调存在的话调用
+	     * @method callBacks
+	     * @return null
+	     * */
+
+	    Select.prototype.callBacks = function callBacks() {
+	        if (!this.props.input) {
+	            this.getTrueVal();
+	        }
+	        var val = this.state.value;
+	        var key = this.state.key;
+	        if (this.state.show) {
+	            this.setState({
+	                show: false
+	            });
+	        }
+	        console.log(ReactDOM.findDOMNode(this.refs.test).value);
+	        this.props.callback && this.props.callback(val, key);
+	    };
+
+	    /**
+	     * 根据当前值是否为select内的值，判断是否改变state的值
+	     * @method getTrueVal
+	     * @return null
+	     * */
+
+	    Select.prototype.getTrueVal = function getTrueVal() {
+	        var target = this.isInSelect();
+	        if (!target) {
+	            this.setState({
+	                value: this.props.children[0].props.children,
+	                key: this.props.children[0].props.value,
+	                autoVal: this.props.children[0].props.children
+	            });
+	        }
+	    };
+
+	    /**
+	     * 验证输入值是否为select内容，return true 否则return false
+	     * @method isInSelect
+	     * @return flags {Boolean}
+	     * */
+
+	    Select.prototype.isInSelect = function isInSelect() {
+	        var val = '^' + this.state.value + '$';
+	        var reg = new RegExp(val, "g");
+	        var flags = false;
+	        _react2['default'].Children.forEach(this.props.children, function (item) {
+	            if (reg.test(item.props.children)) {
+	                flags = true;
+	            }
+	        }, this);
+
+	        return flags;
+	    };
+
+	    /**
+	     * 改变input的value
+	     * @method handlerValue
+	     * @param event {Object}
+	     * @return null
+	     * */
+
+	    Select.prototype.handlerValue = function handlerValue(event) {
+	        //console.log(event.target.value);
+	        var val = event.target.value;
+	        this.setState({
+	            value: val,
+	            autoVal: val
+	        });
+	    };
+
+	    /**
+	     * 点击或者enter键时，选择当前li的值，并关闭ul
+	     * @method chooseItem
+	     * @param event {Object}
+	     * @return null
+	     * */
+
+	    Select.prototype.chooseItem = function chooseItem(event) {
+	        var ulChildren = ReactDOM.findDOMNode(this.refs.selectUl).children;
+	        //let inputObj = ReactDOM.findDOMNode(this.refs.select);
+	        this.removeAllActive(ulChildren);
+	        event.target.classList.add('active');
+	        this.setState({
+	            show: !this.state.show,
+	            value: event.target.textContent,
+	            key: event.target.value
+	        });
+	        //inputObj.focus();
+	    };
+
+	    /**
 	     * target为flase移除li的active状态，否则将obj子元素的值付给state.value
 	     * @method removeAllActive
 	     * @param obj {Object}
 	     * @param target {Boolean}
 	     * @return null
 	     * */
-	    //@target: is changState
 
 	    Select.prototype.removeAllActive = function removeAllActive(obj, target) {
 	        var _this2 = this;
@@ -1161,7 +1411,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	            if (item.className.indexOf('active') > -1) {
 	                if (target) {
 	                    _this2.setState({
-	                        value: item.textContent
+	                        value: item.textContent,
+	                        key: item.value
 	                    });
 	                } else {
 	                    item.classList.remove('active');
@@ -1220,7 +1471,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	                show: false
 	            });
 	            this.removeAllActive(ulChildren, true);
-	            this.changeValue();
 	        }
 	    };
 
@@ -1268,7 +1518,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            if (reg.test(item.props.children)) {
 	                return _react2['default'].createElement(
 	                    'li',
-	                    { value: item.props.value, onMouseOver: _this3.addActive.bind(_this3), onMouseOut: _this3.removeActive.bind(_this3), onClick: _this3.chooseItem.bind(_this3) },
+	                    { value: item.props.value, onMouseOver: _this3.addActive.bind(_this3), onClick: _this3.removeActive.bind(_this3), onMouseDown: _this3.chooseItem.bind(_this3) },
 	                    item.props.children
 	                );
 	            }
@@ -1299,39 +1549,17 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        return _react2['default'].createElement(
 	            _GridJs2['default'],
-	            { ref: 'selectContair', className: _classnames4['default'](this.getClassNamesForArguments('container')), value: this.state.value },
+	            { ref: 'selectContair', className: _classnames3['default'](this.getClassNamesForArguments('container')), value: this.state.value },
 	            _react2['default'].createElement(
 	                'select',
 	                { ref: 'test', value: this.state.key, style: { display: 'none' } },
 	                this.renderOption()
 	            ),
-	            _react2['default'].createElement(_InputJs2['default'], { ref: 'select', value: this.state.value, onClick: this.showUl.bind(this), onChange: this.handlerValue.bind(this), onKeyDown: this.keyIn.bind(this) }),
-	            _react2['default'].createElement('i', { className: _classnames4['default'](this.getClassName('arrow-up')), onClick: this.toogleUl.bind(this) }),
-	            _react2['default'].createElement('i', { className: _classnames4['default'](this.getClassName('arrow-down')), onClick: this.toogleUl.bind(this) }),
+	            _react2['default'].createElement(_InputJs2['default'], { ref: 'select', value: this.state.value, onClick: this.showUl.bind(this), onChange: this.handlerValue.bind(this), onKeyDown: this.keyIn.bind(this), onBlur: this.finishInput.bind(this) }),
+	            _react2['default'].createElement('i', { className: _classnames3['default'](this.getClassName('arrow-down')), onClick: this.toogleUl.bind(this) }),
 	            _react2['default'].createElement(
 	                'ul',
-	                { ref: 'selectUl', className: _classnames4['default'](this.getClassNamesForArguments('ul'), (_classnames = {}, _classnames[this.getClassName('show')] = this.state.show, _classnames)) },
-	                this.renderLi()
-	            )
-	        );
-	    };
-
-	    /**
-	     * 渲染自动补全的输入框
-	     * @method renderAuto
-	     * @return {ReactElement}
-	     * */
-
-	    Select.prototype.renderAuto = function renderAuto() {
-	        var _classnames2;
-
-	        return _react2['default'].createElement(
-	            _GridJs2['default'],
-	            { ref: 'selectContair', className: _classnames4['default'](this.getClassNamesForArguments('container')) },
-	            _react2['default'].createElement(_InputJs2['default'], { ref: 'select', value: this.state.value, onChange: this.showAutoUl.bind(this), onKeyDown: this.keyIn.bind(this) }),
-	            _react2['default'].createElement(
-	                'ul',
-	                { ref: 'selectUl', className: _classnames4['default'](this.getClassNamesForArguments('ul'), (_classnames2 = {}, _classnames2[this.getClassName('show')] = this.state.show, _classnames2)) },
+	                { ref: 'selectUl', className: _classnames3['default'](this.getClassNamesForArguments('ul'), (_classnames = {}, _classnames[this.getClassName('show')] = this.state.show, _classnames)) },
 	                this.renderLi()
 	            )
 	        );
@@ -1341,6 +1569,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * 根据auto存在与否渲染不同类型的元素
 	     * @method render
 	     * @return {ReactElement}
+	     * setValues(key){
+	     *      this.setState({
+	     *          [key]:e.target.value
+	     *      })
+	     * }
+	     * <Input value={this.state.inputValue} onChange={::this.setValues(inputValue)}/>
+	     * getValue(value,key){
+	     *
+	     * }
+	     * <Select onChangeCallback={::this.getValue}>
+	     *     <option value="1">xxx</option>
+	     *     <option value="1">xxx</option>
+	     * </Select>
 	     * */
 
 	    Select.prototype.render = function render() {

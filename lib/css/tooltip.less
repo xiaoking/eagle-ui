@@ -1,5 +1,6 @@
 .eg-tooltip-container {
   display: inline-block;
+  position: relative;
   .eg-tooltip-wraper {
     display: none;
     position: absolute;
@@ -13,22 +14,37 @@
     text-align: left;
     border-radius: 3px;
     box-shadow: 0px 1px 5px 2px #bbbbbb;
-    margin: 5px -15px;
+    margin: 5px 0px;
     .eg-tooltip {
       position: relative;
       .eg-tooltip-content {
 
       }
-      .eg-tooltip-arrow {
+      .eg-tooltip-arrow-down, .eg-tooltip-arrow-up, .eg-tooltip-arrow-left,.eg-tooltip-arrow-right {
         border-width: 5px;
         border-style: dashed;
-        border-color: transparent transparent #000 transparent;
         position: absolute;
-        left: 32px;
-        top: -15px;
         height: 0;
         width: 0;
         line-height: 0;
+      }
+      .eg-tooltip-arrow-down{
+        border-color: transparent transparent #000 transparent;
+        left: 32px;
+        top: -15px;
+      }
+      .eg-tooltip-arrow-up {
+        border-color: #000 transparent transparent transparent;
+        left: 32px;
+        bottom: -15px;
+      }
+      .eg-tooltip-arrow-left {
+        border-color: transparent transparent transparent #000;
+        right: 0px;
+      }
+      .eg-tooltip-arrow-right{
+        border-color: transparent #000 transparent transparent;
+        left: 0px;
       }
 
     }

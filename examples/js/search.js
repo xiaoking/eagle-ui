@@ -926,7 +926,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            'div',
 	            { className: _classnames11['default']((_classnames9 = {}, _classnames9[this.getClassName('icon-container')] = !!this.props.icon, _classnames9)) },
 	            _react2['default'].createElement('input', _extends({}, this.props, { className: _classnames11['default'](this.getDefaultClass()) })),
-	            _react2['default'].createElement('i', { className: this.getClassName('icon-' + this.props.icon, false) })
+	            _react2['default'].createElement('i', { className: 'icon-input-right icon-' + this.props.icon })
 	        );
 	    };
 

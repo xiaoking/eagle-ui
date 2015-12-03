@@ -101,12 +101,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	            null,
 	            _react2['default'].createElement(
 	                'div',
+	                { style: { width: '300px', marginBottom: '200px' } },
+	                'sadasda'
+	            ),
+	            _react2['default'].createElement(
+	                'div',
 	                { style: { width: '300px', display: 'inline-block' } },
 	                'sadasda'
 	            ),
 	            _react2['default'].createElement(
 	                _libTooltipPanelJs2['default'],
-	                null,
+	                { direction: 'down' },
 	                _react2['default'].createElement(
 	                    _libButtonJs2['default'],
 	                    { radius: true, egSize: 'sm', egStyle: 'warning' },
@@ -887,14 +892,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        return _react2['default'].createElement(
 	            _GridJs2['default'],
-	            { className: _classnames3['default'](this.getClassName('wraper'), (_classnames = {}, _classnames[this.getClassName('show')] = this.state.show, _classnames)) },
+	            { ref: this.props.ref, className: _classnames3['default'](this.getClassName('wraper'), (_classnames = {}, _classnames[this.getClassName('show')] = this.state.show, _classnames)) },
 	            _react2['default'].createElement(
 	                _RowJs2['default'],
 	                { className: _classnames3['default'](this.getClassName('tooltip')) },
 	                _react2['default'].createElement(
 	                    _ColJs2['default'],
 	                    null,
-	                    _react2['default'].createElement('div', { className: _classnames3['default'](this.getClassName('arrow')) }),
+	                    _react2['default'].createElement('div', { className: _classnames3['default'](this.getClassName('arrow-' + this.props.direction)) }),
 	                    _react2['default'].createElement(
 	                        'div',
 	                        { className: _classnames3['default'](this.getClassName('content')) },
@@ -975,6 +980,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        value: {
 	            show: false,
 	            msg: "这真是令人心碎的组件",
+	            direction: 'down',
 	            classPrefix: 'tooltip',
 	            componentTag: 'div'
 	        },
@@ -990,18 +996,22 @@ return /******/ (function(modules) { // webpackBootstrap
 	        };
 	    }
 
+	    TooltipPanel.prototype.componentDidMount = function componentDidMount() {
+	        this.changeStyle(this.props.direction);
+	    };
+
 	    TooltipPanel.prototype.render = function render() {
 	        var componentTag = this.props.children.props.componentTag;
 
+	        //  <componentTag {...this.props} onMouseEnter={::this.showTips} onMouseOut={::this.hideTips}/>
 	        return _react2['default'].createElement(
 	            _GridJs2['default'],
-	            { className: _classnames2['default'](this.getClassName('container')) },
-	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                null,
-	                _react2['default'].createElement('componentTag', _extends({}, this.props, { onMouseEnter: this.showTips.bind(this), onMouseOut: this.hideTips.bind(this) }))
-	            ),
-	            _react2['default'].createElement(_TooltipJs2['default'], { msg: this.props.msg, show: this.state.show })
+	            { className: _classnames2['default'](this.getClassName('container')), ref: 'container' },
+	            _react2['default'].cloneElement(this.props.children, {
+	                onMouseEnter: this.showTips.bind(this),
+	                onMouseOut: this.hideTips.bind(this)
+	            }),
+	            _react2['default'].createElement(_TooltipJs2['default'], _extends({ ref: 'tips' }, this.props, { show: this.state.show }))
 	        );
 	    };
 
@@ -1015,6 +1025,49 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.setState({
 	            show: false
 	        });
+	    };
+
+	    TooltipPanel.prototype.changeStyle = function changeStyle(direction) {
+	        var dir = direction;
+	        console.log(dir);
+	        var dbody = document.body;
+	        var delement = document.documentElement;
+	        var tipNode = ReactDOM.findDOMNode(this.refs.tips);
+	        var eleNode = ReactDOM.findDOMNode(this.refs.container).children[0];
+
+	        var win = {};
+	        var bodys = {
+	            height: dbody.clientHeight,
+	            width: dbody.clientWidth
+	        };
+	        var doc = {
+	            height: delement.clientHeight,
+	            width: delement.clientWidth
+	        };
+	        var tips = {
+	            height: tipNode.offsetHeight,
+	            width: tipNode.offsetWidth
+	        };
+	        var element = {
+	            height: eleNode.offsetHeight,
+	            width: eleNode.offsetWidth
+	        };
+	        switch (dir) {
+	            case 'down':
+	                break;
+	            case 'top':
+	                tipNode.style.top = '-' + element.height + 'px';
+	                console.log(tipNode.style.top);
+	                break;
+	            case 'left':
+	                tipNode.style.left = '-' + tips.width + 'px';
+	                break;
+	            case 'right':
+	                tipNode.style.right = '-' + tips.width + 'px';
+	                break;
+	            default:
+	                break;
+	        }
 	    };
 
 	    var _TooltipPanel = TooltipPanel;

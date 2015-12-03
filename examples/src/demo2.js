@@ -106,7 +106,7 @@ let TabContainer= class TabContainer extends Component{
                                 </Table>
 
                             </PanelContent>
-                            <PanelFooter padding={false}>
+                            <PanelFooter>
                                 <Paging currentPage={1} total={30} />
                             </PanelFooter>
                         </Panel>

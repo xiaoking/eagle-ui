@@ -80,28 +80,123 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _libDialogJs2 = _interopRequireDefault(_libDialogJs);
 
+	var _libButtonJs = __webpack_require__(33);
+
+	var _libButtonJs2 = _interopRequireDefault(_libButtonJs);
+
+	var _libGridJs = __webpack_require__(36);
+
+	var _libGridJs2 = _interopRequireDefault(_libGridJs);
+
+	var _libRowJs = __webpack_require__(34);
+
+	var _libRowJs2 = _interopRequireDefault(_libRowJs);
+
+	var _libColJs = __webpack_require__(35);
+
+	var _libColJs2 = _interopRequireDefault(_libColJs);
+
 	var Demo = (function (_Component) {
 	    _inherits(Demo, _Component);
 
-	    function Demo() {
+	    _createClass(Demo, null, [{
+	        key: 'defaultProps',
+	        value: {
+	            show: false,
+	            type: "alert"
+	        },
+	        enumerable: true
+	    }]);
+
+	    function Demo(props, context) {
 	        _classCallCheck(this, Demo);
 
-	        _Component.apply(this, arguments);
+	        _Component.call(this, props, context);
+	        this.state = {
+	            show: this.props.show,
+	            type: this.props.type
+	        };
 	    }
 
 	    Demo.prototype.render = function render() {
 	        return _react2['default'].createElement(
-	            _libDialogJs2['default'],
-	            { type: 'dialog', show: true },
-	            'ahflaskdjflajsflajsdlf;jkasdfk adfkjasd;fkjas;dlf asdfkn;askdfnas'
+	            _libGridJs2['default'],
+	            null,
+	            _react2['default'].createElement(
+	                _libRowJs2['default'],
+	                null,
+	                _react2['default'].createElement(
+	                    _libColJs2['default'],
+	                    { sm: 3 },
+	                    _react2['default'].createElement(
+	                        _libButtonJs2['default'],
+	                        { block: true, radius: true, egSize: 'sm', onClick: this.showDialog.bind(this) },
+	                        'dialog'
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    _libColJs2['default'],
+	                    { sm: 3 },
+	                    _react2['default'].createElement(
+	                        _libButtonJs2['default'],
+	                        { block: true, radius: true, egSize: 'sm', onClick: this.showAlert.bind(this) },
+	                        'alert'
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    _libColJs2['default'],
+	                    { sm: 3 },
+	                    _react2['default'].createElement(
+	                        _libButtonJs2['default'],
+	                        { block: true, radius: true, egSize: 'sm', onClick: this.showConfirm.bind(this) },
+	                        'confirm'
+	                    )
+	                ),
+	                _react2['default'].createElement(
+	                    _libColJs2['default'],
+	                    { sm: 3 },
+	                    _react2['default'].createElement(
+	                        _libButtonJs2['default'],
+	                        { block: true, radius: true, egSize: 'sm', onClick: this.showMsak.bind(this) },
+	                        'mask'
+	                    )
+	                )
+	            ),
+	            _react2['default'].createElement(
+	                _libDialogJs2['default'],
+	                { type: this.state.type, show: this.state.show },
+	                'ahflaskdjflajsflajsdlf;jkasdfk adfkjasd;fkjas;dlf asdfkn;askdfnas'
+	            )
 	        );
 	    };
 
-	    _createClass(Demo, null, [{
-	        key: 'propTypes',
-	        value: {},
-	        enumerable: true
-	    }]);
+	    Demo.prototype.showDialog = function showDialog() {
+	        this.setState({
+	            show: true,
+	            type: 'dialog'
+	        });
+	    };
+
+	    Demo.prototype.showAlert = function showAlert() {
+	        this.setState({
+	            show: true,
+	            type: 'alert'
+	        });
+	    };
+
+	    Demo.prototype.showConfirm = function showConfirm() {
+	        this.setState({
+	            show: true,
+	            type: 'confirm'
+	        });
+	    };
+
+	    Demo.prototype.showMsak = function showMsak() {
+	        this.setState({
+	            show: true,
+	            type: 'mask'
+	        });
+	    };
 
 	    return Demo;
 	})(_react.Component);
@@ -920,8 +1015,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _classCallCheck(this, _Dialog);
 
 	        _Component.call(this, props, context);
+	        this.flag = true;
 	        this.state = {
-	            show: this.props.show
+	            show: this.props.show,
+	            init: true
 	        };
 	    }
 
@@ -938,6 +1035,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    /**
+	     * change flag状态，即非第一次
+	     * */
+
+	    Dialog.prototype.componentDidMount = function componentDidMount() {
+	        this.flag = false;
+	    };
+
+	    /**
 	     * @method render
 	     * @return {ReactElement}
 	     * */
@@ -947,10 +1052,23 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        return _react2['default'].createElement(
 	            _GridJs2['default'],
-	            { className: _classnames3['default'](this.getClassName('container'), (_classnames = {}, _classnames['fadein'] = this.props.cancelCallback ? this.props.show : this.state.show, _classnames['fadeout'] = !(this.props.cancelCallback ? this.props.show : this.state.show), _classnames)) },
+	            { ref: 'container', className: _classnames3['default'](this.getClassName('container'), (_classnames = {}, _classnames['fadein'] = this.props.cancelCallback ? this.props.show : this.state.show, _classnames['fadeout'] = this.flag ? false : !(this.props.cancelCallback ? this.props.show : this.state.show), _classnames)) },
+	            !this.flag && !(this.props.cancelCallback ? this.props.show : this.state.show) ? this.displayNone() : null,
 	            this[this.props.type.toLowerCase()](),
 	            this.showOverlay(this.props.tips)
 	        );
+	    };
+
+	    /**
+	     * 改变display形态
+	     * */
+
+	    Dialog.prototype.displayNone = function displayNone() {
+	        var _this = this;
+	        clearTimeout(this.timer);
+	        this.timer = setTimeout((function () {
+	            this.removeClass(ReactDOM.findDOMNode(_this.refs.container), 'fadeout');
+	        }).bind(this), 400);
 	    };
 
 	    /**

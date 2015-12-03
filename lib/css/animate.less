@@ -38,24 +38,24 @@
 /**淡入淡出*/
 @-webkit-keyframes fadeIn {
     0% {
-        opacity:0
+        opacity:0;
     }
     50%{
         opacity: 0.5;
     }
     100% {
-        opacity:1
+        opacity:1;
     }
 }
 @keyframes fadeIn {
      0% {
-         opacity:0
+         opacity:0;
      }
      50%{
          opacity: 0.5;
      }
      100% {
-         opacity:1
+         opacity:1;
      }
 }
 .fadein {
@@ -67,7 +67,6 @@
 }
 @-webkit-keyframes fadeOut {
     0% {
-        display: block !important;
         opacity:1;
     }
     50%{
@@ -89,8 +88,11 @@
      }
  }
 .fadeout {
+    display: block !important;
     -webkit-animation-name:fadeOut;
     animation-name:fadeOut;
     -webkit-animation-duration:.4s;
     animation-duration:.4s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
   }

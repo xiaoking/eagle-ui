@@ -867,7 +867,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    _react2['default'].createElement(
 	                        'span',
-	                        { className: _classnames5['default'](this.getClassName('item'), (_classnames = {}, _classnames[this.getClassName('active', false)] = this.isToday(year, month + 1, d), _classnames[this.getClassName('disabled')] = disabled, _classnames['no-hover'] = d == ' ', _classnames[this.getClassName('selected')] = this.isOptionSelect(selectedDate, defaultDate) && defaultDate.getDate() == d && !disabled, _classnames)), onClick: disabled || d == ' ' ? '' : _this.dateClick.bind(_this, year + '/' + (month + 1) + '/' + d) },
+	                        { className: _classnames5['default'](this.getClassName('item'), (_classnames = {}, _classnames[this.getClassName('active', false)] = this.isToday(year, month + 1, d), _classnames[this.getClassName('disabled')] = disabled, _classnames['no-hover'] = d == ' ', _classnames[this.getClassName('selected')] = this.isOptionSelect(selectedDate, defaultDate) && defaultDate.getDate() == d && !disabled, _classnames)), onMouseDown: disabled || d == ' ' ? '' : _this.dateClick.bind(_this, year + '/' + (month + 1) + '/' + d) },
 	                        d
 	                    )
 	                ));
@@ -1024,7 +1024,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    null,
 	                    _react2['default'].createElement(
 	                        'i',
-	                        { className: _classnames5['default']((_classnames2 = {}, _classnames2[_this.getClassName('selected', false)] = sYear == y, _classnames2.old = i == -1 || i == 10, _classnames2)), onClick: _this.switchYear.bind(_this2, y) },
+	                        { className: _classnames5['default']((_classnames2 = {}, _classnames2[_this.getClassName('selected', false)] = sYear == y, _classnames2.old = i == -1 || i == 10, _classnames2)), onMouseDown: _this.switchYear.bind(_this2, y) },
 	                        y
 	                    )
 	                ));
@@ -1042,7 +1042,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2['default'].createElement(
 	                    'th',
 	                    null,
-	                    _react2['default'].createElement('div', { className: this.getClassName('icon-prev', false), onClick: this.switchYearForInterval.bind(this, year - 1, true) })
+	                    _react2['default'].createElement('div', { className: this.getClassName('icon-prev', false), onMouseDown: this.switchYearForInterval.bind(this, year - 1, true) })
 	                ),
 	                _react2['default'].createElement(
 	                    'th',
@@ -1056,7 +1056,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2['default'].createElement(
 	                    'th',
 	                    null,
-	                    _react2['default'].createElement('div', { className: this.getClassName('icon-next', false), onClick: this.switchYearForInterval.bind(this, year + 10, true) })
+	                    _react2['default'].createElement('div', { className: this.getClassName('icon-next', false), onMouseDown: this.switchYearForInterval.bind(this, year + 10, true) })
 	                )
 	            ),
 	            _react2['default'].createElement(
@@ -1090,21 +1090,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2['default'].createElement(
 	                    'th',
 	                    null,
-	                    _react2['default'].createElement('div', { className: this.getClassName('icon-prev', false), onClick: this.switchYear.bind(this, '-1') })
+	                    _react2['default'].createElement('div', { className: this.getClassName('icon-prev', false), onMouseDown: this.switchYear.bind(this, '-1') })
 	                ),
 	                _react2['default'].createElement(
 	                    'th',
 	                    { colSpan: '5' },
 	                    _react2['default'].createElement(
 	                        'div',
-	                        { className: 'title', onClick: (_context = this.switchWindow).bind.call(_context, this, 2) },
+	                        { className: 'title', onMouseDown: (_context = this.switchWindow).bind.call(_context, this, 2) },
 	                        selectDate.year + '年'
 	                    )
 	                ),
 	                _react2['default'].createElement(
 	                    'th',
 	                    null,
-	                    _react2['default'].createElement('div', { className: this.getClassName('icon-next', false), onClick: this.switchYear.bind(this, '+1') })
+	                    _react2['default'].createElement('div', { className: this.getClassName('icon-next', false), onMouseDown: this.switchYear.bind(this, '+1') })
 	                )
 	            ),
 	            _react2['default'].createElement(
@@ -1124,7 +1124,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                                null,
 	                                _react2['default'].createElement(
 	                                    'i',
-	                                    { className: _classnames5['default']((_classnames3 = {}, _classnames3[_this.getClassName('selected', false)] = selectDate.month == item, _classnames3)), onClick: _this.switchMonth.bind(_this, item * 1 - 1) },
+	                                    { className: _classnames5['default']((_classnames3 = {}, _classnames3[_this.getClassName('selected', false)] = selectDate.month == item, _classnames3)), onMouseDown: _this.switchMonth.bind(_this, item * 1 - 1) },
 	                                    item + '月'
 	                                )
 	                            );
@@ -1150,21 +1150,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	                _react2['default'].createElement(
 	                    'th',
 	                    null,
-	                    _react2['default'].createElement('div', { className: this.getClassName('icon-prev', false), onClick: this.switchMonth.bind(this, '-1') })
+	                    _react2['default'].createElement('div', { className: this.getClassName('icon-prev', false), onMouseDown: this.switchMonth.bind(this, '-1') })
 	                ),
 	                _react2['default'].createElement(
 	                    'th',
 	                    { colSpan: '5' },
 	                    _react2['default'].createElement(
 	                        'div',
-	                        { className: 'title', onClick: (_context2 = this.switchWindow).bind.call(_context2, this, 1) },
+	                        { className: 'title', onMouseDown: (_context2 = this.switchWindow).bind.call(_context2, this, 1) },
 	                        selectDate.year + '年' + selectDate.month + '月'
 	                    )
 	                ),
 	                _react2['default'].createElement(
 	                    'th',
 	                    null,
-	                    _react2['default'].createElement('div', { className: this.getClassName('icon-next', false), onClick: this.switchMonth.bind(this, '+1') })
+	                    _react2['default'].createElement('div', { className: this.getClassName('icon-next', false), onMouseDown: this.switchMonth.bind(this, '+1') })
 	                )
 	            ),
 	            _react2['default'].createElement(
@@ -1435,7 +1435,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            'div',
 	            { className: _classnames11['default']((_classnames9 = {}, _classnames9[this.getClassName('icon-container')] = !!this.props.icon, _classnames9)) },
 	            _react2['default'].createElement('input', _extends({}, this.props, { className: _classnames11['default'](this.getDefaultClass()) })),
-	            _react2['default'].createElement('i', { className: this.getClassName('icon-' + this.props.icon, false) })
+	            _react2['default'].createElement('i', { className: 'icon-input-right icon-' + this.props.icon })
 	        );
 	    };
 
