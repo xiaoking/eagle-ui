@@ -32,6 +32,9 @@
                     <li><a href="">主页</a>
                     </li>
                     
+                    <li><a href="/documents/eagle-ui/examples/">例子</a>
+                    </li>
+                    
                 </ul>
                <div class="navbar-form navbar-right filterAPi" autocomplete="off">
                 <input type="text" id='txtSearchAPI' class="form-control search-query" placeholder="Search for API" />
@@ -54,6 +57,22 @@
                 <dd>
                     <ul>
                    
+                       <li>
+                            
+                           <a href="../classes/CheckboxGroup.html">CheckboxGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Input.html">Input</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
                        <li>
                             
                            <a href="../classes/RadioGroup.html">RadioGroup</a>
@@ -182,6 +201,14 @@
                    
                        <li>
                             
+                           <a href="../classes/Th.html">Th</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Table.html">Table</a>
                            <ul>
                                 
@@ -191,14 +218,6 @@
                        <li>
                             
                            <a href="../classes/Td.html">Td</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Th.html">Th</a>
                            <ul>
                                 
                            </ul>
@@ -233,6 +252,14 @@
                        <li>
                             
                            <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Search.html">Search</a>
                            <ul>
                                 
                            </ul>
@@ -304,6 +331,14 @@
                     
                        <li>
                             
+                           <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Tabset.html">Tabset</a>
                            <ul>
                                 
@@ -313,6 +348,14 @@
                        <li>
                             
                            <a href="../classes/Toast.html">Toast</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/TooltipPanel.html">TooltipPanel</a>
                            <ul>
                                 
                            </ul>
@@ -508,17 +551,14 @@
                 
                 <li role="presentation"  class="active"  _no='0'> <a>js</a></li>
                 
-                <li role="presentation"   _no='1'> <a>html</a></li>
-                
             </ul>
 
             <div class="example-content  showdemo ">
                 <div class="stdoc-code"><pre class="code prettyprint"><code>/**
  * Created by mac on 15/11/4.
  */
-import css from &#39;../../lib/_include.less&#39;;
 import React,{Component} from &#39;react&#39;;
-import {Label,LabelGroup,Panel,Grid,Row,Col} from &#39;eagle-ui&#39;;
+import {Label,LabelGroup,Panel,Grid,Row,Col,PanelContent} from &#39;../../../index.js&#39;;
 
 let Demo = class Demo extends Component{
 
@@ -546,7 +586,7 @@ let Demo = class Demo extends Component{
                         &lt;Row&gt;
                             &lt;Col&gt;
                                 &lt;LabelGroup title=&#39;行政区&#39; defaultChecked=&#39;全部&#39; clickCallback={this.show} end&gt;
-                                    &lt;Label value="0"&gt;全部&lt;/Label&gt;
+                                    &lt;Label value="0" className="all"&gt;全部&lt;/Label&gt;
                                     &lt;Label value="1"&gt;卢湾区&lt;/Label&gt;
                                     &lt;Label value="10"&gt;徐汇区&lt;/Label&gt;
                                     &lt;Label&gt;静安区&lt;/Label&gt;
@@ -629,28 +669,15 @@ let Demo = class Demo extends Component{
             &lt;/Panel&gt;
         );
     }
-}
+};
 
-ReactDOM.render(
-    &lt;Demo /&gt;
-    ,document.getElementById(&#39;root&#39;));</code></pre>
-</div><div class="stdoc-code"><pre class="code prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;标签组件&lt;/title&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"&gt;
-
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div id="root"&gt;&lt;/div&gt;
-
-&lt;script src="../bower_components/react/react.js"&gt;&lt;/script&gt;
-&lt;script src="../bower_components/react/react-dom.js"&gt;&lt;/script&gt;
-&lt;script src="../dist/eagle-ui.js"&gt;&lt;/script&gt;
-&lt;script src="js/label.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+export default class LabelCls extends Component{
+    render(){
+        return (
+            &lt;Demo /&gt;
+        );
+    }
+}</code></pre>
 </div>
             </div>
 
@@ -694,7 +721,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_LabelGroup.js.html#l39"><code>lib&#x2F;LabelGroup.js:39</code></a>
+        <a href="../files/lib_LabelGroup.js.html#l38"><code>lib&#x2F;LabelGroup.js:38</code></a>
         
         </p>
 
@@ -739,7 +766,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_LabelGroup.js.html#l32"><code>lib&#x2F;LabelGroup.js:32</code></a>
+        <a href="../files/lib_LabelGroup.js.html#l31"><code>lib&#x2F;LabelGroup.js:31</code></a>
         
         </p>
 
@@ -787,7 +814,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_LabelGroup.js.html#l26"><code>lib&#x2F;LabelGroup.js:26</code></a>
+        <a href="../files/lib_LabelGroup.js.html#l25"><code>lib&#x2F;LabelGroup.js:25</code></a>
         
         </p>
 

@@ -32,6 +32,9 @@
                     <li><a href="">主页</a>
                     </li>
                     
+                    <li><a href="/documents/eagle-ui/examples/">例子</a>
+                    </li>
+                    
                 </ul>
                <div class="navbar-form navbar-right filterAPi" autocomplete="off">
                 <input type="text" id='txtSearchAPI' class="form-control search-query" placeholder="Search for API" />
@@ -54,6 +57,22 @@
                 <dd>
                     <ul>
                    
+                       <li>
+                            
+                           <a href="../classes/CheckboxGroup.html">CheckboxGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Input.html">Input</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
                        <li>
                             
                            <a href="../classes/RadioGroup.html">RadioGroup</a>
@@ -182,6 +201,14 @@
                    
                        <li>
                             
+                           <a href="../classes/Th.html">Th</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Table.html">Table</a>
                            <ul>
                                 
@@ -191,14 +218,6 @@
                        <li>
                             
                            <a href="../classes/Td.html">Td</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Th.html">Th</a>
                            <ul>
                                 
                            </ul>
@@ -233,6 +252,14 @@
                        <li>
                             
                            <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Search.html">Search</a>
                            <ul>
                                 
                            </ul>
@@ -304,6 +331,14 @@
                     
                        <li>
                             
+                           <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Tabset.html">Tabset</a>
                            <ul>
                                 
@@ -313,6 +348,14 @@
                        <li>
                             
                            <a href="../classes/Toast.html">Toast</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/TooltipPanel.html">TooltipPanel</a>
                            <ul>
                                 
                            </ul>
@@ -612,97 +655,81 @@
                 
                 <li role="presentation"  class="active"  _no='0'> <a>js</a></li>
                 
-                <li role="presentation"   _no='1'> <a>html</a></li>
-                
             </ul>
 
             <div class="example-content  showdemo ">
                 <div class="stdoc-code"><pre class="code prettyprint"><code>/**
  * Created by mac on 15/11/4.
  */
-import css from &#39;../../lib/_include.less&#39;;
-import React from &#39;react&#39;;
-import ButtonGroup from &#39;../../lib/ButtonGroup.js&#39;;
-import Button from &#39;../../lib/Button.js&#39;;
-import Row from &#39;../../lib/Row.js&#39;;
-import Col from &#39;../../lib/Col.js&#39;;
-import Grid from &#39;../../lib/Grid.js&#39;;
+import React, { Component ,PropTypes} from &#39;react&#39;;
+import ButtonGroup from &#39;../../../lib/ButtonGroup.js&#39;;
+import Button from &#39;../../../lib/Button.js&#39;;
+import Row from &#39;../../../lib/Row.js&#39;;
+import Col from &#39;../../../lib/Col.js&#39;;
+import Grid from &#39;../../../lib/Grid.js&#39;;
 
-ReactDOM.render(
-    &lt;Grid&gt;
-        &lt;Row&gt;
-            &lt;Col sm={12}&gt;
-                &lt;ButtonGroup justify&gt;
-                    &lt;Button radius egSize="sm" egStyle="warning"&gt;水平按钮组&lt;/Button&gt;
-                    &lt;Button radius egSize="sm" egStyle="warning"&gt;水平按钮组&lt;/Button&gt;
-                    &lt;Button radius egSize="sm" egStyle="warning"&gt;水平按钮组&lt;/Button&gt;
-                &lt;/ButtonGroup&gt;
-            &lt;/Col&gt;
-        &lt;/Row&gt;
-        &lt;Row&gt;
-            &lt;Col sm={12}&gt;
-                &lt;ButtonGroup tacked&gt;
-                    &lt;Button radius egSize="sm" egStyle=""&gt;垂直按钮组&lt;/Button&gt;
-                    &lt;Button radius egSize="sm" egStyle=""&gt;垂直按钮组&lt;/Button&gt;
-                    &lt;Button radius egSize="sm" egStyle=""&gt;垂直按钮组&lt;/Button&gt;
-                &lt;/ButtonGroup&gt;
-            &lt;/Col&gt;
-        &lt;/Row&gt;
-        &lt;Row&gt;
-            &lt;Col sm={3}&gt;&lt;Button radius egSize="sm" egStyle="warning"&gt;警告&lt;/Button&gt;&lt;/Col&gt;
-            &lt;Col sm={3}&gt;&lt;Button radius egSize="sm" egStyle="success"&gt;成功&lt;/Button&gt;&lt;/Col&gt;
-            &lt;Col sm={3}&gt;&lt;Button radius egSize="sm" egStyle="danger"&gt;危险&lt;/Button&gt;&lt;/Col&gt;
-            &lt;Col sm={3}&gt;&lt;Button radius egSize="sm" egStyle="error"&gt;错误&lt;/Button&gt;&lt;/Col&gt;
-        &lt;/Row&gt;
-        &lt;Row&gt;
-            &lt;Col sm={3}&gt;&lt;Button radius egSize="sm" egStyle="gray"&gt;灰色&lt;/Button&gt;&lt;/Col&gt;
-            &lt;Col sm={3}&gt;&lt;Button radius egSize="sm" &gt;默认&lt;/Button&gt;&lt;/Col&gt;
-            &lt;Col sm={3}&gt;&lt;Button radius egSize="sm" egStyle="white"&gt;白色&lt;/Button&gt;&lt;/Col&gt;
-            &lt;Col sm={3}&gt;&lt;Button radius egSize="sm" egStyle="white"&gt;白色&lt;/Button&gt;&lt;/Col&gt;
-        &lt;/Row&gt;
-        &lt;Row&gt;
-            &lt;Col sm={3}&gt;&lt;Button block radius egSize="sm" egStyle="gray"&gt;灰色&lt;/Button&gt;&lt;/Col&gt;
-            &lt;Col sm={3}&gt;&lt;Button block radius egSize="sm" &gt;默认&lt;/Button&gt;&lt;/Col&gt;
-            &lt;Col sm={3}&gt;&lt;Button block radius egSize="sm" disabled&gt;默认不可点&lt;/Button&gt;&lt;/Col&gt;
-            &lt;Col sm={3}&gt;&lt;Button block radius egSize="sm" egStyle="white" disabled&gt;白色不可点&lt;/Button&gt;&lt;/Col&gt;
-        &lt;/Row&gt;
-        &lt;Row&gt;
-            &lt;Col sm={3}&gt;&lt;Button block radius egSize="sm" egStyle="success" disabled&gt;成功不可点&lt;/Button&gt;&lt;/Col&gt;
-            &lt;Col sm={3}&gt;&lt;Button block radius egSize="sm" &gt;默认&lt;/Button&gt;&lt;/Col&gt;
-            &lt;Col sm={3}&gt;&lt;Button block radius egSize="sm" disabled&gt;默认不可点&lt;/Button&gt;&lt;/Col&gt;
-            &lt;Col sm={3}&gt;&lt;Button block radius egSize="sm" egStyle="link" &gt;链接&lt;/Button&gt;&lt;/Col&gt;
-        &lt;/Row&gt;
-        &lt;Row&gt;
-            &lt;Col sm={3}&gt;&lt;Button block radius egSize="xs" egStyle="success" disabled&gt;大号&lt;/Button&gt;&lt;/Col&gt;
-            &lt;Col sm={3}&gt;&lt;Button block radius egSize="xs" &gt;大号&lt;/Button&gt;&lt;/Col&gt;
-            &lt;Col sm={3}&gt;&lt;Button block radius egSize="xs" disabled&gt;大号&lt;/Button&gt;&lt;/Col&gt;
-            &lt;Col sm={3}&gt;&lt;Button block radius egSize="xs" egStyle="link" &gt;大号&lt;/Button&gt;&lt;/Col&gt;
-        &lt;/Row&gt;
-        &lt;Row&gt;
-            &lt;Col sm={3}&gt;&lt;Button block radius egSize="lg" egStyle="success" disabled&gt;小号&lt;/Button&gt;&lt;/Col&gt;
-            &lt;Col sm={3}&gt;&lt;Button block radius egSize="lg" &gt;小号&lt;/Button&gt;&lt;/Col&gt;
-            &lt;Col sm={3}&gt;&lt;Button block radius egSize="lg" disabled&gt;小号&lt;/Button&gt;&lt;/Col&gt;
-            &lt;Col sm={3}&gt;&lt;Button block radius egSize="lg" egStyle="link" &gt;小号&lt;/Button&gt;&lt;/Col&gt;
-        &lt;/Row&gt;
-    &lt;/Grid&gt;
-    ,document.getElementById(&#39;root&#39;));</code></pre>
-</div><div class="stdoc-code"><pre class="code prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;按钮&lt;/title&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"&gt;
-    &lt;link rel="stylesheet" type="text/css" href="./eagle-ui.css" /&gt;
-
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div id="root"&gt;&lt;/div&gt;
-
-&lt;script src="../bower_components/react/react.js"&gt;&lt;/script&gt;
-&lt;script src="../bower_components/react/react-dom.js"&gt;&lt;/script&gt;
-&lt;script src="js/button.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+export default class ButtonCls extends Component{
+    render(){
+        return (
+            &lt;Grid&gt;
+                &lt;Row&gt;
+                    &lt;Col sm={12}&gt;
+                        &lt;ButtonGroup justify&gt;
+                            &lt;Button radius egSize="sm" egStyle="warning"&gt;水平按钮组1&lt;/Button&gt;
+                            &lt;Button radius egSize="sm" egStyle="warning"&gt;水平按钮组2&lt;/Button&gt;
+                            &lt;Button radius egSize="sm" egStyle="warning"&gt;水平按钮组3&lt;/Button&gt;
+                        &lt;/ButtonGroup&gt;
+                    &lt;/Col&gt;
+                &lt;/Row&gt;
+                &lt;Row&gt;
+                    &lt;Col sm={12}&gt;
+                        &lt;ButtonGroup tacked&gt;
+                            &lt;Button radius egSize="sm" egStyle=""&gt;垂直按钮组1&lt;/Button&gt;
+                            &lt;Button radius egSize="sm" egStyle=""&gt;垂直按钮组2&lt;/Button&gt;
+                            &lt;Button radius egSize="sm" egStyle=""&gt;垂直按钮组3&lt;/Button&gt;
+                        &lt;/ButtonGroup&gt;
+                    &lt;/Col&gt;
+                &lt;/Row&gt;
+                &lt;Row&gt;
+                    &lt;Col sm={3}&gt;&lt;Button radius egSize="sm" egStyle="warning"&gt;警告&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button radius egSize="sm" egStyle="success"&gt;成功&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button radius egSize="sm" egStyle="danger"&gt;危险&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button radius egSize="sm" egStyle="error"&gt;错误&lt;/Button&gt;&lt;/Col&gt;
+                &lt;/Row&gt;
+                &lt;Row&gt;
+                    &lt;Col sm={3}&gt;&lt;Button radius egSize="sm" egStyle="gray"&gt;灰色&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button radius egSize="sm" &gt;默认&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button radius egSize="sm" egStyle="white"&gt;白色&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button radius egSize="sm" egStyle="white"&gt;白色&lt;/Button&gt;&lt;/Col&gt;
+                &lt;/Row&gt;
+                &lt;Row&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block radius egSize="sm" egStyle="gray"&gt;灰色&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block radius egSize="sm" &gt;默认&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block radius egSize="sm" disabled&gt;默认不可点&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block radius egSize="sm" egStyle="white" disabled&gt;白色不可点&lt;/Button&gt;&lt;/Col&gt;
+                &lt;/Row&gt;
+                &lt;Row&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block radius egSize="sm" egStyle="success" disabled&gt;成功不可点&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block radius egSize="sm" &gt;默认&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block radius egSize="sm" disabled&gt;默认不可点&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block radius egSize="sm" egStyle="link" &gt;链接&lt;/Button&gt;&lt;/Col&gt;
+                &lt;/Row&gt;
+                &lt;Row&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block radius egSize="xs" egStyle="success" disabled&gt;大号&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block radius egSize="xs" &gt;大号&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block radius egSize="xs" disabled&gt;大号&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block radius egSize="xs" egStyle="link" &gt;大号&lt;/Button&gt;&lt;/Col&gt;
+                &lt;/Row&gt;
+                &lt;Row&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block radius egSize="lg" egStyle="success" disabled&gt;小号&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block radius egSize="lg" &gt;小号&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block radius egSize="lg" disabled&gt;小号&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block radius egSize="lg" egStyle="link" &gt;小号&lt;/Button&gt;&lt;/Col&gt;
+                &lt;/Row&gt;
+            &lt;/Grid&gt;
+        );
+    }
+}</code></pre>
 </div>
             </div>
 
@@ -1635,7 +1662,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Button.js.html#l45"><code>lib&#x2F;Button.js:45</code></a>
+        <a href="../files/lib_Button.js.html#l44"><code>lib&#x2F;Button.js:44</code></a>
         
         </p>
 
@@ -1683,7 +1710,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Button.js.html#l90"><code>lib&#x2F;Button.js:90</code></a>
+        <a href="../files/lib_Button.js.html#l89"><code>lib&#x2F;Button.js:89</code></a>
         
         </p>
 
@@ -1731,7 +1758,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Button.js.html#l76"><code>lib&#x2F;Button.js:76</code></a>
+        <a href="../files/lib_Button.js.html#l75"><code>lib&#x2F;Button.js:75</code></a>
         
         </p>
 
@@ -1779,7 +1806,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Button.js.html#l83"><code>lib&#x2F;Button.js:83</code></a>
+        <a href="../files/lib_Button.js.html#l82"><code>lib&#x2F;Button.js:82</code></a>
         
         </p>
 
@@ -1827,7 +1854,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Button.js.html#l30"><code>lib&#x2F;Button.js:30</code></a>
+        <a href="../files/lib_Button.js.html#l29"><code>lib&#x2F;Button.js:29</code></a>
         
         </p>
 
@@ -1875,7 +1902,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Button.js.html#l23"><code>lib&#x2F;Button.js:23</code></a>
+        <a href="../files/lib_Button.js.html#l22"><code>lib&#x2F;Button.js:22</code></a>
         
         </p>
 
@@ -1923,7 +1950,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Button.js.html#l69"><code>lib&#x2F;Button.js:69</code></a>
+        <a href="../files/lib_Button.js.html#l68"><code>lib&#x2F;Button.js:68</code></a>
         
         </p>
 
@@ -1971,7 +1998,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Button.js.html#l37"><code>lib&#x2F;Button.js:37</code></a>
+        <a href="../files/lib_Button.js.html#l36"><code>lib&#x2F;Button.js:36</code></a>
         
         </p>
 
@@ -2019,7 +2046,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Button.js.html#l52"><code>lib&#x2F;Button.js:52</code></a>
+        <a href="../files/lib_Button.js.html#l51"><code>lib&#x2F;Button.js:51</code></a>
         
         </p>
 
@@ -2067,7 +2094,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Button.js.html#l59"><code>lib&#x2F;Button.js:59</code></a>
+        <a href="../files/lib_Button.js.html#l58"><code>lib&#x2F;Button.js:58</code></a>
         
         </p>
 

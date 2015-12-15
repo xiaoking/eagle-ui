@@ -32,6 +32,9 @@
                     <li><a href="">主页</a>
                     </li>
                     
+                    <li><a href="/documents/eagle-ui/examples/">例子</a>
+                    </li>
+                    
                 </ul>
                <div class="navbar-form navbar-right filterAPi" autocomplete="off">
                 <input type="text" id='txtSearchAPI' class="form-control search-query" placeholder="Search for API" />
@@ -54,6 +57,22 @@
                 <dd>
                     <ul>
                    
+                       <li>
+                            
+                           <a href="../classes/CheckboxGroup.html">CheckboxGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Input.html">Input</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
                        <li>
                             
                            <a href="../classes/RadioGroup.html">RadioGroup</a>
@@ -182,6 +201,14 @@
                    
                        <li>
                             
+                           <a href="../classes/Th.html">Th</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Table.html">Table</a>
                            <ul>
                                 
@@ -191,14 +218,6 @@
                        <li>
                             
                            <a href="../classes/Td.html">Td</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Th.html">Th</a>
                            <ul>
                                 
                            </ul>
@@ -233,6 +252,14 @@
                        <li>
                             
                            <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Search.html">Search</a>
                            <ul>
                                 
                            </ul>
@@ -304,6 +331,14 @@
                     
                        <li>
                             
+                           <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Tabset.html">Tabset</a>
                            <ul>
                                 
@@ -313,6 +348,14 @@
                        <li>
                             
                            <a href="../classes/Toast.html">Toast</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/TooltipPanel.html">TooltipPanel</a>
                            <ul>
                                 
                            </ul>
@@ -361,6 +404,9 @@
 import React,{ PropTypes, Component } from &#x27;react&#x27;;
 import classnames from &#x27;classnames&#x27;;
 import ClassNameMixin from &#x27;../utils/ClassNameMixin.js&#x27;;
+import Th from &#x27;./Th.js&#x27;;
+import Td from &#x27;./Td.js&#x27;;
+import Tr from &#x27;./Tr.js&#x27;
 
 /**
  * 表格组件
@@ -370,8 +416,7 @@ import ClassNameMixin from &#x27;../utils/ClassNameMixin.js&#x27;;
  * @extends Component
  * @requires React classnames
  * @since 0.1.0
- * @demo src/table.js {js}
- * @demo table.html {html}
+ * @demo table.js {js}
  * @show true
  * @author bo.an@dianping.com
  * */
@@ -379,27 +424,104 @@ import ClassNameMixin from &#x27;../utils/ClassNameMixin.js&#x27;;
 export default class Table extends Component{
 
     static propTypes = {
+        /**
+         * 用来渲染表格的数组，可选参数，如果传入data，会更具table下的column标签绑定的属性进行渲染
+         * @property data
+         * @type Array
+         * */
+        data:PropTypes.array
+
     };
 
     static defaultProps = {
 
     };
 
+    constructor(props, context) {
+        super(props, context);
+        var tableData=[];
+        Object.assign(tableData, props.data);
 
+        this.state = {
+            tableData:tableData,
+            sortField:{}
+        };
+    }
+
+    sort(field,method){
+        if(method===&#x27;asc&#x27;){
+            this.state.tableData.sort((pre,cur)=&gt;{
+                if(pre[field]&gt;cur[field]){
+                    return true;
+                }else{
+                    return false;
+                }
+            });
+        }else{
+            this.state.tableData.sort((pre,cur)=&gt;{
+                if(pre[field]&lt;cur[field]){
+                    return true;
+                }else{
+                    return false;
+                }
+            });
+        }
+        var sortFiled=this.state.sortField;
+        for(var key in sortFiled){
+            sortFiled[key]=null;
+        };
+        sortFiled[field]=method;
+        this.setState({
+            tableData:this.state.tableData,
+            sortFiled:sortFiled
+        });
+    };
 
     /**
      * @method render
      * @return {ReactElement}
      * */
     render(){
-        console.debug(&#x27;table&#x27;);
-        return (
-            &lt;table className={
+        if(!this.props.data){
+            return(
+                &lt;table className={
                 classnames(
                     this.getClassName(&#x27;table&#x27;)
                 )}&gt;
-                {this.props.children}
-            &lt;/table&gt;
+                    {this.props.children}
+                &lt;/table&gt;
+            )
+        };
+        var self=this;
+        let thList=React.Children.map(self.props.children,(Column,thIndex)=&gt;{
+            return (&lt;Th
+                {...Column.props}
+                key={&#x27;th-&#x27;+thIndex}
+                sort={this.state.sortField[Column.props.field]}
+                clickCallback={::this.sort}
+                &gt;{Column.props.header}&lt;/Th&gt;);
+        },self);
+        let trList=this.state.tableData.map((rowData,trIndex)=&gt;{
+            return &lt;Tr key={&#x27;tr-&#x27;+trIndex}&gt;
+                {React.Children.map(self.props.children,(Column,tdIndex)=&gt;{
+                    return (&lt;Td key={&#x27;td-&#x27;+trIndex+&#x27;-&#x27;+tdIndex}&gt;{self.state.tableData[trIndex][Column.props.field]}&lt;/Td&gt;);
+                },self)}
+            &lt;/Tr&gt;;
+        });
+        return (
+                &lt;table className={
+                classnames(
+                    this.getClassName(&#x27;table&#x27;)
+                )}&gt;
+                    &lt;thead&gt;
+                    &lt;Tr&gt;
+                        {thList}
+                    &lt;/Tr&gt;
+                    &lt;/thead&gt;
+                    &lt;tbody&gt;
+                    {trList}
+                    &lt;/tbody&gt;
+                &lt;/table&gt;
         );
 
     }

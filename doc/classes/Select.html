@@ -32,6 +32,9 @@
                     <li><a href="">主页</a>
                     </li>
                     
+                    <li><a href="/documents/eagle-ui/examples/">例子</a>
+                    </li>
+                    
                 </ul>
                <div class="navbar-form navbar-right filterAPi" autocomplete="off">
                 <input type="text" id='txtSearchAPI' class="form-control search-query" placeholder="Search for API" />
@@ -54,6 +57,22 @@
                 <dd>
                     <ul>
                    
+                       <li>
+                            
+                           <a href="../classes/CheckboxGroup.html">CheckboxGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Input.html">Input</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
                        <li>
                             
                            <a href="../classes/RadioGroup.html">RadioGroup</a>
@@ -182,6 +201,14 @@
                    
                        <li>
                             
+                           <a href="../classes/Th.html">Th</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Table.html">Table</a>
                            <ul>
                                 
@@ -191,14 +218,6 @@
                        <li>
                             
                            <a href="../classes/Td.html">Td</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Th.html">Th</a>
                            <ul>
                                 
                            </ul>
@@ -233,6 +252,14 @@
                        <li>
                             
                            <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Search.html">Search</a>
                            <ul>
                                 
                            </ul>
@@ -304,6 +331,14 @@
                     
                        <li>
                             
+                           <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Tabset.html">Tabset</a>
                            <ul>
                                 
@@ -313,6 +348,14 @@
                        <li>
                             
                            <a href="../classes/Toast.html">Toast</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/TooltipPanel.html">TooltipPanel</a>
                            <ul>
                                 
                            </ul>
@@ -357,7 +400,7 @@
 </div>
  <div class="well well-small sign-left3">
       <div class="stdoc-code"><p>下拉选择框组件。
-因原先考虑不周，导致代码写得很乱，有待重构</p>
+有input参数可以自由输入，否则不在列表中的输入值将改变为第一个item</p>
 </div>
  </div>
 
@@ -384,20 +427,6 @@
                     </li>
                 
                     <li class="index-item method">
-                        <a href="#" data-tabid="#method" data-anchor="#method_change input value" data-tablink="change input value">change input value</a>
-
-                        
-                        
-                    </li>
-                
-                    <li class="index-item method">
-                        <a href="#" data-tabid="#method" data-anchor="#method_changeValue" data-tablink="changeValue">changeValue</a>
-
-                        
-                        
-                    </li>
-                
-                    <li class="index-item method">
                         <a href="#" data-tabid="#method" data-anchor="#method_chooseItem" data-tablink="chooseItem">chooseItem</a>
 
                         
@@ -406,6 +435,13 @@
                 
                     <li class="index-item method">
                         <a href="#" data-tabid="#method" data-anchor="#method_componentDidMount" data-tablink="componentDidMount">componentDidMount</a>
+
+                        
+                        
+                    </li>
+                
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_finishInput" data-tablink="finishInput">finishInput</a>
 
                         
                         
@@ -475,13 +511,6 @@
                     </li>
                 
                     <li class="index-item method">
-                        <a href="#" data-tabid="#method" data-anchor="#method_renderAuto" data-tablink="renderAuto">renderAuto</a>
-
-                        
-                        
-                    </li>
-                
-                    <li class="index-item method">
                         <a href="#" data-tabid="#method" data-anchor="#method_renderLi" data-tablink="renderLi">renderLi</a>
 
                         
@@ -496,21 +525,7 @@
                     </li>
                 
                     <li class="index-item method">
-                        <a href="#" data-tabid="#method" data-anchor="#method_showAutoUl" data-tablink="showAutoUl">showAutoUl</a>
-
-                        
-                        
-                    </li>
-                
-                    <li class="index-item method">
                         <a href="#" data-tabid="#method" data-anchor="#method_showUl" data-tablink="showUl">showUl</a>
-
-                        
-                        
-                    </li>
-                
-                    <li class="index-item method">
-                        <a href="#" data-tabid="#method" data-anchor="#method_submit search" data-tablink="submit search">submit search</a>
 
                         
                         
@@ -596,7 +611,7 @@
 
             
                 <div class="extends">
-                    Extends Coponent
+                    Extends Component
                 </div>
             
 
@@ -618,6 +633,99 @@
         </div>
 
         
+            
+                <div class="constructor">
+                    <h2>Constructor</h2>
+                    <div id="method_Select" class="method item">
+    <h3 class="name">Select</h3>
+    <code>
+    Select
+    
+        <span class="paren">()</span>
+    
+    </code>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_Select.js.html#l11"><code>lib&#x2F;Select.js:11</code></a>
+        
+        </p>
+
+
+        
+
+        
+            <p>Available since 0.1.0</p>
+        
+    </div>
+
+    <div class="description well well-small sign-left3">
+        
+    </div>
+
+    
+
+    
+
+    
+        <div class="example">
+            <h4>Example:</h4>
+            <ul class="nav nav-tabs example-list">
+                
+                <li role="presentation"  class="active"  _no='0'> <a>js</a></li>
+                
+            </ul>
+
+            <div class="example-content  showdemo ">
+                <div class="stdoc-code"><pre class="code prettyprint"><code>/**
+ * Created by panqianjin on 15/11/4.
+ */
+import React,{Component} from &#39;react&#39;;
+import Search from &#39;../../../lib/Search.js&#39;;
+
+export default class SearchCls extends Component{
+    render(){
+        return (
+            &lt;div&gt;
+                &lt;Search callback={function(val){alert(val)}}&gt;
+                &lt;/Search&gt;
+            &lt;/div&gt;
+        );
+    }
+}</code></pre>
+</div>
+            </div>
+
+             <button class="btn btn-info btn-viewDemo" type="button">view demo</button>
+            <button class="btn btn-info btn-editDemo" type="button">edit code</button>
+        </div>
+    
+</div>
+
+                </div>
             
         </div>
 
@@ -674,7 +782,7 @@
             
         
         
-        <a href="../files/lib_Select.js.html#l317"><code>lib&#x2F;Select.js:317</code></a>
+        <a href="../files/lib_Select.js.html#l353"><code>lib&#x2F;Select.js:353</code></a>
         
         </p>
 
@@ -772,7 +880,7 @@
             
         
         
-        <a href="../files/lib_Select.js.html#l140"><code>lib&#x2F;Select.js:140</code></a>
+        <a href="../files/lib_Select.js.html#l197"><code>lib&#x2F;Select.js:197</code></a>
         
         </p>
 
@@ -784,188 +892,6 @@
 
     <div class="description well well-small sign-left3">
         <div class="stdoc-code"><p>取得符合要求的值，父级回调存在的话调用</p>
-</div>
-    </div>
-
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                
-                    
-                    <p>null</p>
-
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-                
-                    <div id="method_change input value" class="method item">
-    <h3 class="name">change input value</h3>
-    <code>
-    change input value
-    
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        none
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
-    
-    </code>
-
-    
-        <span class="returns-inline">
-            <span class="type"></span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                    <p>Provided by the <a href="../modules/grid.html">grid</a> module.</p>
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/lib_Search.js.html#l51"><code>lib&#x2F;Search.js:51</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description well well-small sign-left3">
-        <div class="stdoc-code"></div>
-    </div>
-
-    
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <table class="table table-bordered">
-            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
-            
-                <tr class="param">
-                    
-                       <td> <code class="param-name">none</code>
-                       <td> <span class="type">Object</span>
-                       <td>
-                    
-
-                    
-                    </td>
-                    <td><div class="param-description">
-                         
-                    </div>
-
-                    
-                </tr>
-            
-            </table>
-        </div>
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                
-                    
-                    <p>setState</p>
-
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-                
-                    <div id="method_changeValue" class="method item">
-    <h3 class="name">changeValue</h3>
-    <code>
-    changeValue
-    
-        <span class="paren">()</span>
-    
-    </code>
-
-    
-        <span class="returns-inline">
-            <span class="type"></span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/lib_Select.js.html#l189"><code>lib&#x2F;Select.js:189</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description well well-small sign-left3">
-        <div class="stdoc-code"><p>判断是否输入值为select范围内,否则改为第一个值。延时2s后点用callBacks方法</p>
 </div>
     </div>
 
@@ -1037,7 +963,7 @@
             
         
         
-        <a href="../files/lib_Select.js.html#l211"><code>lib&#x2F;Select.js:211</code></a>
+        <a href="../files/lib_Select.js.html#l263"><code>lib&#x2F;Select.js:263</code></a>
         
         </p>
 
@@ -1131,7 +1057,7 @@
             
         
         
-        <a href="../files/lib_Select.js.html#l67"><code>lib&#x2F;Select.js:67</code></a>
+        <a href="../files/lib_Select.js.html#l92"><code>lib&#x2F;Select.js:92</code></a>
         
         </p>
 
@@ -1149,6 +1075,79 @@
 
     
 
+    
+
+    
+</div>
+
+                
+                    <div id="method_finishInput" class="method item">
+    <h3 class="name">finishInput</h3>
+    <code>
+    finishInput
+    
+        <span class="paren">()</span>
+    
+    </code>
+
+    
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_Select.js.html#l188"><code>lib&#x2F;Select.js:188</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"><p>失去焦点事件</p>
+</div>
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                    <p>null</p>
+
+                
+            </div>
+        </div>
     
 
     
@@ -1193,7 +1192,7 @@
             
         
         
-        <a href="../files/lib_Select.js.html#l198"><code>lib&#x2F;Select.js:198</code></a>
+        <a href="../files/lib_Select.js.html#l216"><code>lib&#x2F;Select.js:216</code></a>
         
         </p>
 
@@ -1276,7 +1275,7 @@
             
         
         
-        <a href="../files/lib_Select.js.html#l174"><code>lib&#x2F;Select.js:174</code></a>
+        <a href="../files/lib_Select.js.html#l249"><code>lib&#x2F;Select.js:249</code></a>
         
         </p>
 
@@ -1374,7 +1373,7 @@
             
         
         
-        <a href="../files/lib_Select.js.html#l230"><code>lib&#x2F;Select.js:230</code></a>
+        <a href="../files/lib_Select.js.html#l176"><code>lib&#x2F;Select.js:176</code></a>
         
         </p>
 
@@ -1447,7 +1446,7 @@
             
         
         
-        <a href="../files/lib_Select.js.html#l156"><code>lib&#x2F;Select.js:156</code></a>
+        <a href="../files/lib_Select.js.html#l231"><code>lib&#x2F;Select.js:231</code></a>
         
         </p>
 
@@ -1538,7 +1537,7 @@
             
         
         
-        <a href="../files/lib_Select.js.html#l85"><code>lib&#x2F;Select.js:85</code></a>
+        <a href="../files/lib_Select.js.html#l132"><code>lib&#x2F;Select.js:132</code></a>
         
         </p>
 
@@ -1662,7 +1661,7 @@
             
         
         
-        <a href="../files/lib_Select.js.html#l265"><code>lib&#x2F;Select.js:265</code></a>
+        <a href="../files/lib_Select.js.html#l304"><code>lib&#x2F;Select.js:304</code></a>
         
         </p>
 
@@ -1770,7 +1769,7 @@
             
         
         
-        <a href="../files/lib_Select.js.html#l329"><code>lib&#x2F;Select.js:329</code></a>
+        <a href="../files/lib_Select.js.html#l365"><code>lib&#x2F;Select.js:365</code></a>
         
         </p>
 
@@ -1884,7 +1883,7 @@
             
         
         
-        <a href="../files/lib_Select.js.html#l243"><code>lib&#x2F;Select.js:243</code></a>
+        <a href="../files/lib_Select.js.html#l281"><code>lib&#x2F;Select.js:281</code></a>
         
         </p>
 
@@ -1998,7 +1997,7 @@
             
         
         
-        <a href="../files/lib_Select.js.html#l427"><code>lib&#x2F;Select.js:427</code></a>
+        <a href="../files/lib_Select.js.html#l437"><code>lib&#x2F;Select.js:437</code></a>
         
         </p>
 
@@ -2022,81 +2021,20 @@
             <div class="returns-description">
                 
                     
-                        <span class="type">ReactElement</span>:
+                        [<span class="type">ReactElement</span>]
                     
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-                
-                    <div id="method_renderAuto" class="method item">
-    <h3 class="name">renderAuto</h3>
-    <code>
-    renderAuto
-    
-        <span class="paren">()</span>
-    
-    </code>
-
-    
-        <span class="returns-inline">
-            <span class="type">ReactElement</span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/lib_Select.js.html#l403"><code>lib&#x2F;Select.js:403</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description well well-small sign-left3">
-        <div class="stdoc-code"><p>渲染自动补全的输入框</p>
-</div>
-    </div>
-
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                
-                    
-                        <span class="type">ReactElement</span>:
-                    
+                    <p>setValues(key){
+     this.setState({</p>
+<pre><code>     [key]:e.target.value
+ })</code></pre>
+<p>}</p>
+<p><Input value={this.state.inputValue} onChange={::this.setValues(inputValue)}/>
+getValue(value,key){</p>
+<p>}</p>
+<Select onChangeCallback={::this.getValue}>
+    <option value="1">xxx</option>
+    <option value="1">xxx</option>
+</Select>
                 
             </div>
         </div>
@@ -2144,7 +2082,7 @@
             
         
         
-        <a href="../files/lib_Select.js.html#l342"><code>lib&#x2F;Select.js:342</code></a>
+        <a href="../files/lib_Select.js.html#l378"><code>lib&#x2F;Select.js:378</code></a>
         
         </p>
 
@@ -2220,7 +2158,7 @@ this.state.autoVal 为input输入值，初始为.*匹配任意</p>
             
         
         
-        <a href="../files/lib_Select.js.html#l366"><code>lib&#x2F;Select.js:366</code></a>
+        <a href="../files/lib_Select.js.html#l406"><code>lib&#x2F;Select.js:406</code></a>
         
         </p>
 
@@ -2246,114 +2184,6 @@ this.state.autoVal 为input输入值，初始为.*匹配任意</p>
                     
                         <span class="type">ReactElement</span>:
                     
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-                
-                    <div id="method_showAutoUl" class="method item">
-    <h3 class="name">showAutoUl</h3>
-    <code>
-    showAutoUl
-    
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        event
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
-    
-    </code>
-
-    
-        <span class="returns-inline">
-            <span class="type"></span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/lib_Select.js.html#l113"><code>lib&#x2F;Select.js:113</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description well well-small sign-left3">
-        <div class="stdoc-code"><p>显示auto自动补充选项列表</p>
-</div>
-    </div>
-
-    
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <table class="table table-bordered">
-            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
-            
-                <tr class="param">
-                    
-                       <td> <code class="param-name">event</code>
-                       <td> <span class="type">Object</span>
-                       <td>
-                    
-
-                    
-                    </td>
-                    <td><div class="param-description">
-                         
-                    </div>
-
-                    
-                </tr>
-            
-            </table>
-        </div>
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                
-                    
-                    <p>null</p>
-
                 
             </div>
         </div>
@@ -2401,7 +2231,7 @@ this.state.autoVal 为input输入值，初始为.*匹配任意</p>
             
         
         
-        <a href="../files/lib_Select.js.html#l101"><code>lib&#x2F;Select.js:101</code></a>
+        <a href="../files/lib_Select.js.html#l148"><code>lib&#x2F;Select.js:148</code></a>
         
         </p>
 
@@ -2426,115 +2256,6 @@ this.state.autoVal 为input输入值，初始为.*匹配任意</p>
                 
                     
                     <p>null</p>
-
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-                
-                    <div id="method_submit search" class="method item">
-    <h3 class="name">submit search</h3>
-    <code>
-    submit search
-    
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        none
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
-    
-    </code>
-
-    
-        <span class="returns-inline">
-            <span class="type"></span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                    <p>Provided by the <a href="../modules/grid.html">grid</a> module.</p>
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/lib_Search.js.html#l66"><code>lib&#x2F;Search.js:66</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description well well-small sign-left3">
-        <div class="stdoc-code"></div>
-    </div>
-
-    
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <table class="table table-bordered">
-            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
-            
-                <tr class="param">
-                    
-                       <td> <code class="param-name">none</code>
-                       <td> <span class="type">Object</span>
-                       <td>
-                    
-
-                    
-                    </td>
-                    <td><div class="param-description">
-                         
-                    </div>
-
-                    
-                </tr>
-            
-            </table>
-        </div>
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                
-                    
-                    <p>get value calback if exist</p>
 
                 
             </div>
@@ -2583,7 +2304,7 @@ this.state.autoVal 为input输入值，初始为.*匹配任意</p>
             
         
         
-        <a href="../files/lib_Select.js.html#l130"><code>lib&#x2F;Select.js:130</code></a>
+        <a href="../files/lib_Select.js.html#l161"><code>lib&#x2F;Select.js:161</code></a>
         
         </p>
 
@@ -2651,7 +2372,7 @@ this.state.autoVal 为input输入值，初始为.*匹配任意</p>
             
         
         
-        <a href="../files/lib_Select.js.html#l50"><code>lib&#x2F;Select.js:50</code></a>
+        <a href="../files/lib_Select.js.html#l49"><code>lib&#x2F;Select.js:49</code></a>
         
         </p>
 
@@ -2696,7 +2417,7 @@ this.state.autoVal 为input输入值，初始为.*匹配任意</p>
             
         
         
-        <a href="../files/lib_Select.js.html#l26"><code>lib&#x2F;Select.js:26</code></a>
+        <a href="../files/lib_Select.js.html#l25"><code>lib&#x2F;Select.js:25</code></a>
         
         </p>
 
@@ -2744,7 +2465,7 @@ this.state.autoVal 为input输入值，初始为.*匹配任意</p>
             
         
         
-        <a href="../files/lib_Select.js.html#l33"><code>lib&#x2F;Select.js:33</code></a>
+        <a href="../files/lib_Select.js.html#l32"><code>lib&#x2F;Select.js:32</code></a>
         
         </p>
 
@@ -2791,7 +2512,7 @@ this.state.autoVal 为input输入值，初始为.*匹配任意</p>
             
         
         
-        <a href="../files/lib_Select.js.html#l42"><code>lib&#x2F;Select.js:42</code></a>
+        <a href="../files/lib_Select.js.html#l41"><code>lib&#x2F;Select.js:41</code></a>
         
         </p>
 

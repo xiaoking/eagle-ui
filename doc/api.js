@@ -5,8 +5,10 @@ YUI.add("yuidoc-meta", function(Y) {
         "ButtonGroup",
         "Calendar",
         "CalendarPanel",
+        "CheckboxGroup",
         "Col",
         "Grid",
+        "Input",
         "Item",
         "Label",
         "LabelGroup",
@@ -18,6 +20,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "PanelHeader",
         "RadioGroup",
         "Row",
+        "Search",
         "Select",
         "Tab",
         "Table",
@@ -25,6 +28,8 @@ YUI.add("yuidoc-meta", function(Y) {
         "Td",
         "Th",
         "Toast",
+        "Tooltip",
+        "TooltipPanel",
         "Tr",
         "ValidatorPanel",
         "crumb",
@@ -41,8 +46,14 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "form",
             "name": "form",
-            "description": "表单验证组件<br />\n默认规则有<br/>\n<pre>\n    required：是否必填\n    date：日期格式验证\n    number：是否是有效的号码\n    url：url规则验证\n    dateISO：日期ISO验证\n    digits：是否是数字\n    equalTo：值对比\n    minlength：最少输入\n    maxlength：最大输入\n    email：邮箱验证\n    rangelength：字符大小需在某个区间之内\n    min：输入的值需要大于等于此规则定义的值\n    max：输入的值需要小于等于此规则定义的值\n    range：一个区间取值范围\n\n</pre>",
+            "description": "表单验证组件<br />\n在需要验证的表单元素上添加data-validate属性，<!--表单元素初始化值请绑定上data-field=“fieldName”,fieldName对应数据字段名称--> <br />\n默认规则有<br/>\n<pre>\n    required：是否必填\n    date：日期格式验证\n    number：是否是有效的号码\n    url：url规则验证\n    dateISO：日期ISO验证\n    digits：是否是数字\n    equalTo：值对比\n    minlength：最少输入\n    maxlength：最大输入\n    email：邮箱验证\n    rangelength：字符大小需在某个区间之内\n    min：输入的值需要大于等于此规则定义的值\n    max：输入的值需要小于等于此规则定义的值\n    range：一个区间取值范围\n\n</pre>",
             "classes": [
+                {
+                    "name": "CheckboxGroup"
+                },
+                {
+                    "name": "Input"
+                },
                 {
                     "name": "RadioGroup"
                 },
@@ -101,13 +112,13 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "表格组件",
             "classes": [
                 {
+                    "name": "Th"
+                },
+                {
                     "name": "Table"
                 },
                 {
                     "name": "Td"
-                },
-                {
-                    "name": "Th"
                 },
                 {
                     "name": "Tr"
@@ -124,6 +135,9 @@ YUI.add("yuidoc-meta", function(Y) {
                 },
                 {
                     "name": "Item"
+                },
+                {
+                    "name": "Search"
                 },
                 {
                     "name": "Tab"
@@ -150,10 +164,16 @@ YUI.add("yuidoc-meta", function(Y) {
                     "name": "Paging"
                 },
                 {
+                    "name": "Tooltip"
+                },
+                {
                     "name": "Tabset"
                 },
                 {
                     "name": "Toast"
+                },
+                {
+                    "name": "TooltipPanel"
                 }
             ]
         }

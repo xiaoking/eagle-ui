@@ -10,6 +10,7 @@
     padding: 10px;
     color: @black-33;
     width: 100%;
+    outline-color: @orange-btn;
     &:disabled{
         background: @gray-ee;
         color:@black-99;
@@ -18,8 +19,8 @@
 .eg-input-checkbox,.eg-input-radio{
     position: relative;
     text-align: left;
-    margin-bottom: 10px;
-    margin-right: 10px;
+    //margin-bottom: 10px;
+    //margin-right: 10px;
     min-height: 24px;
     display: inline-block;
     input[type="checkbox"],input[type="radio"]{
@@ -34,6 +35,9 @@
         opacity: 0;
         z-index: 2;
         left: 0;
+        &:hover{
+            border-color: @orange-btn;
+        }
     }
     .box{
         transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
@@ -177,6 +181,19 @@
             color:@black-99;
 
         }
+    }
+}
+.eg-input-group{
+    overflow: hidden;
+    .eg-input-radio,.eg-input-checkbox{
+        margin-top: 10px;
+        margin-right: 10px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    .eg-input-group-container{
+        margin-top: -10px;
     }
 }
 .eg-icon-container{

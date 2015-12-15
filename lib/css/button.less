@@ -84,7 +84,7 @@
     cursor: pointer;
     outline: 0;
     text-decoration: none;
-    &:hover{
+    &:hover,&.eg-btn-active{
         background: @red-btn;
         text-decoration: none;
     }
@@ -132,7 +132,7 @@
 .eg-btn-success{
     background-color:@green-strong;
     //60b5f0
-    &:hover{
+    &:hover,&.eg-btn-active{
         background: @green-hover;
     }
     &.eg-btn-disabled{
@@ -150,7 +150,7 @@
     border:none;
     color:@black-64;
     background-color: transparent;
-    &:hover{
+    &:hover,&.eg-btn-active{
         color:@black-64;
         background:transparent;
         text-decoration: underline;
@@ -167,7 +167,7 @@
     background-color:@gray-d4;
 
     color:@black-33;
-    &:hover{
+    &:hover,&.eg-btn-active{
         background: @gray-cc;
 
     }
@@ -180,7 +180,7 @@
     background: @white;
     border-color: #dbdad9;
     color: @black;
-    &:hover{
+    &:hover,&.eg-btn-active{
         background: @gray-f8;
     }
     &.eg-btn-disabled{

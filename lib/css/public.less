@@ -1,4 +1,19 @@
 @import "color.less";
+/*兼容性*/
+.transform(@num){
+    transform:@num;
+    -webkit-transform:@num;
+    -moz-transform:@num;
+    -ms-transform:@num;
+    -o-transform: @num;
+}
+.border-radius (@radius) {
+    border-radius: @radius;
+    -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -ms-border-radius:@radius;
+    -o-border-radius:@radius;
+}
 /**清除浮动*/
 .clearfix:before, .clearfix:after {
     display: table;
@@ -39,7 +54,7 @@
     &:after{
         height: 7px;
         width: 2px;
-        transform: rotate(-45deg);
+        .transform(rotate(-45deg));
         top: 22px;
         left: 16px;
         background: @gray-b2;
@@ -48,9 +63,7 @@
 
 /**圆角*/
 .eg-radius{
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
+    .border-radius(4px);
 }
 //选中背景色
 .eg-active{
@@ -73,7 +86,7 @@
     background: @lighet-green;
     width: 30px;
     height: 30px;
-    border-radius: 30px;
+    .border-radius(30px);
     display: inline-block;
     position: relative;
 }
@@ -82,7 +95,7 @@
     background: @danger;
     width: 30px;
     height: 30px;
-    border-radius: 30px;
+    .border-radius(30px);
     display: inline-block;
     position: relative;
     &:before{
@@ -105,7 +118,7 @@
     background: @gray-bb;
     width: 30px;
     height: 30px;
-    border-radius: 30px;
+    .border-radius(30px);
     display: inline-block;
     position: relative;
     &:before{
@@ -115,15 +128,37 @@
         border: 2px solid #fff;
         top: 5.5px;
         left: 5.5px;
-        border-radius: 12px;
+        .border-radius(12px);
         clip: rect(auto,16px,auto,auto);
         animation: 0.5s linear 0s normal none infinite rotate;
+        -webkit-animation: 0.5s linear 0s normal none infinite rotate;
+        -moz-animation: 0.5s linear 0s normal none infinite rotate;
     }
 }
 //旋转动画
 @-webkit-keyframes rotate{
-    from{-webkit-transform:rotate(0deg)}
-    to{-webkit-transform:rotate(360deg)}
+    from{
+        .transform(rotate(0deg));
+        /*   -webkit-transform:rotate(0deg);
+           -moz-transform: rotate(0deg);*/
+    }
+    to{
+        .transform(rotate(360deg));
+        /*   -webkit-transform:rotate(360deg);
+           -moz-transform: rotate(360deg);*/
+    }
+}
+@keyframes rotate {
+    from{
+        .transform(rotate(0deg));
+     /*   -webkit-transform:rotate(0deg);
+        -moz-transform: rotate(0deg);*/
+    }
+    to{
+        .transform(rotate(360deg));
+     /*   -webkit-transform:rotate(360deg);
+        -moz-transform: rotate(360deg);*/
+    }
 }
 .eg-tips-success,.eg-icon-tick,.eg-tips-loading,.eg-tips-error{
     &:before,&:after{
@@ -139,7 +174,7 @@
         background: #fff;
         left: 10px;
         top: 13px;
-        transform: rotate(135deg);
+        .transform(rotate(135deg));
     }
     &:after{
         height: 14px;
@@ -147,7 +182,7 @@
         background: #fff;
         left: 17px;
         top: 8px;
-        transform: rotate(45deg);
+        .transform(rotate(45deg));
     }
 }
 
@@ -245,5 +280,4 @@
         transform: rotate(45deg);
     }
 }
-
 

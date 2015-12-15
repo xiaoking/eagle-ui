@@ -32,6 +32,9 @@
                     <li><a href="">主页</a>
                     </li>
                     
+                    <li><a href="/documents/eagle-ui/examples/">例子</a>
+                    </li>
+                    
                 </ul>
                <div class="navbar-form navbar-right filterAPi" autocomplete="off">
                 <input type="text" id='txtSearchAPI' class="form-control search-query" placeholder="Search for API" />
@@ -54,6 +57,22 @@
                 <dd>
                     <ul>
                    
+                       <li>
+                            
+                           <a href="../classes/CheckboxGroup.html">CheckboxGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Input.html">Input</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
                        <li>
                             
                            <a href="../classes/RadioGroup.html">RadioGroup</a>
@@ -182,6 +201,14 @@
                    
                        <li>
                             
+                           <a href="../classes/Th.html">Th</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Table.html">Table</a>
                            <ul>
                                 
@@ -191,14 +218,6 @@
                        <li>
                             
                            <a href="../classes/Td.html">Td</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Th.html">Th</a>
                            <ul>
                                 
                            </ul>
@@ -233,6 +252,14 @@
                        <li>
                             
                            <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Search.html">Search</a>
                            <ul>
                                 
                            </ul>
@@ -304,6 +331,14 @@
                     
                        <li>
                             
+                           <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Tabset.html">Tabset</a>
                            <ul>
                                 
@@ -313,6 +348,14 @@
                        <li>
                             
                            <a href="../classes/Toast.html">Toast</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/TooltipPanel.html">TooltipPanel</a>
                            <ul>
                                 
                            </ul>
@@ -372,8 +415,7 @@ import Tab from &#x27;./Tab.js&#x27;;
  * @extends Component
  * @constructor
  * @since 0.1.0
- * @demo src/tab.js{js}
- * @demo tab.html
+ * @demo tab.js{js}
  * @show true
  * */
 @ClassNameMixin
@@ -397,11 +439,18 @@ export default class Tabset extends Component{
     constructor(props, context) {
         super(props, context);
         this.state = {
-            active:props.activeTab
+            active:props.activeTab,
+            tabSlider:{
+                left:0,
+                width:0
+            }
         };
         if(this.props.tabCallback){
             this.props.tabCallback(props.activeTab);
         }
+    }
+    componentDidMount(){
+        this.tabItemListMouseLeaveHandler();
     }
     activeHandler(index) {
         if(this.state.active !== index){
@@ -413,6 +462,21 @@ export default class Tabset extends Component{
             }
         }
     }
+    tabItemListMouseLeaveHandler(){
+        let activeTab=React.findDOMNode(this.refs[&#x27;tabItem&#x27;+this.state.active]);
+        this.timeoutObj=setTimeout(function(){
+            this.tabItemMouseEnterHandler(activeTab.offsetLeft,activeTab.offsetWidth);
+        }.bind(this),400);
+    }
+    tabItemMouseEnterHandler(left,width){
+        clearTimeout(this.timeoutObj);
+        this.setState({
+            tabSlider:{
+                left,
+                width
+            }
+        });
+    }
     render(){
         let headings=React.Children.map(this.props.children,(option,index)=&gt;{
             let {
@@ -420,9 +484,11 @@ export default class Tabset extends Component{
                 ...other
             } = option.props;
             return &lt;Tab
+                ref={&#x27;tabItem&#x27;+index}
                 index={index}
                 active={this.state.active === index}
                 clickCallback={::this.activeHandler}
+                mouseEnterCallback={::this.tabItemMouseEnterHandler}
                 {...other}&gt;&lt;/Tab&gt;;
         },this);
         let panes = React.Children.map(this.props.children,(option,index)=&gt;{
@@ -433,8 +499,14 @@ export default class Tabset extends Component{
         },this);
         return (
             &lt;div&gt;
-                &lt;ul&gt;
+                &lt;ul className={classnames(this.getClassName(&#x27;tab-list&#x27;)) }
+                    onMouseLeave={::this.tabItemListMouseLeaveHandler}&gt;
                 {headings}
+                    &lt;li className={classnames(this.getClassName(&#x27;slider-container&#x27;) ) }&gt;
+                        &lt;div className={classnames(this.getClassName(&#x27;slider&#x27;) ) }
+                            style={{width:this.state.tabSlider.width,left:this.state.tabSlider.left}}&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
                 &lt;/ul&gt;
                 &lt;div className={classnames(this.getClassName(&#x27;tab-content&#x27;) ) }&gt;
                 {panes}

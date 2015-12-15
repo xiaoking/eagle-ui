@@ -32,6 +32,9 @@
                     <li><a href="">主页</a>
                     </li>
                     
+                    <li><a href="/documents/eagle-ui/examples/">例子</a>
+                    </li>
+                    
                 </ul>
                <div class="navbar-form navbar-right filterAPi" autocomplete="off">
                 <input type="text" id='txtSearchAPI' class="form-control search-query" placeholder="Search for API" />
@@ -54,6 +57,22 @@
                 <dd>
                     <ul>
                    
+                       <li>
+                            
+                           <a href="../classes/CheckboxGroup.html">CheckboxGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Input.html">Input</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
                        <li>
                             
                            <a href="../classes/RadioGroup.html">RadioGroup</a>
@@ -182,6 +201,14 @@
                    
                        <li>
                             
+                           <a href="../classes/Th.html">Th</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Table.html">Table</a>
                            <ul>
                                 
@@ -191,14 +218,6 @@
                        <li>
                             
                            <a href="../classes/Td.html">Td</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Th.html">Th</a>
                            <ul>
                                 
                            </ul>
@@ -233,6 +252,14 @@
                        <li>
                             
                            <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Search.html">Search</a>
                            <ul>
                                 
                            </ul>
@@ -304,6 +331,14 @@
                     
                        <li>
                             
+                           <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Tabset.html">Tabset</a>
                            <ul>
                                 
@@ -313,6 +348,14 @@
                        <li>
                             
                            <a href="../classes/Toast.html">Toast</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/TooltipPanel.html">TooltipPanel</a>
                            <ul>
                                 
                            </ul>
@@ -369,14 +412,14 @@ import Row from &#x27;./Row.js&#x27;;
 import Col from &#x27;./Col.js&#x27;;
 import Grid from &#x27;./Grid.js&#x27;;
 /**
- * 弹框组件
+ * 弹框组件，dialog类型：分为alert,confirm,dialog,mask 四种。默认alert。
+ * 根据show的存在与否决定弹框展示与否
  * @class dialog
  * @module ui
  * @extends Component
  * @constructor
  * @since 0.1.0
- * @demo src/dialog.js{js}
- * @demo dialog.html
+ * @demo dialog.js{js}
  * @show true
  * */
 @ClassNameMixin
@@ -394,7 +437,7 @@ class Dialog extends Component {
          * 标题
          * @property title
          * @type String
-         * @default 温馨提示
+         * @default &quot;&quot;
          * */
         title: PropTypes.string,
         /**
@@ -431,7 +474,7 @@ class Dialog extends Component {
         successCallback: null,//success回掉函数
         cancelCallback: null,//cancel回调函数
         close: false,//是否有x图标
-        title: &#x27;温馨提示&#x27;,//标题
+        title: &#x27;&#x27;,//标题
         type: &#x27;alert&#x27;,
         classPrefix: &#x27;dialog&#x27;,
         componentTag: &#x27;div&#x27;
@@ -439,8 +482,10 @@ class Dialog extends Component {
 
     constructor(props, context) {
         super(props, context);
+        this.flag = true;
         this.state = {
-            show: this.props.show
+            show: this.props.show,
+            init: true
         };
     }
     /**
@@ -448,10 +493,16 @@ class Dialog extends Component {
      * 生命周期方法
      * @method componentWillReceiveProps
      * */
-    componentWillReceiveProps(nextProps) {
-        this.setState({
-            show: nextProps.show ? nextProps.show : this.state.show
-        });
+    componentDidMount(){
+        //this.flag = false;
+    }
+    componentWillReceiveProps (nextProps) {
+        if(nextProps.show ){
+            this.flag = false;
+            this.setState({
+                show:nextProps.show
+            });
+        }
 
     }
     /**
@@ -459,18 +510,38 @@ class Dialog extends Component {
      * @return {ReactElement}
      * */
     render() {
+        let showOrHide = this.props.cancelCallback?this.props.show:this.state.show;
         return (
-            &lt;Grid className={classnames(
+            &lt;Grid ref = &#x27;container&#x27; className={classnames(
                 this.getClassName(&#x27;container&#x27;),
-                {
-                    [&#x27;fadein&#x27;]: this.props.cancelCallback?this.props.show:this.state.show,
-                    [&#x27;fadeout&#x27;]: !(this.props.cancelCallback?this.props.show:this.state.show)
-                }
+                this.flag ? &#x27;&#x27;:showOrHide?&#x27;fadein&#x27;:&#x27;fadeout&#x27;
                 )}&gt;
+                {!this.flag &amp;&amp; !(this.props.cancelCallback?this.props.show:this.state.show)?this.displayNone():null}
                 {this[this.props.type.toLowerCase()]()}
                 {this.showOverlay(this.props.tips)}
             &lt;/Grid&gt;
         );
+    }
+    /**
+     * 改变display形态
+     * */
+    displayNone(){
+        let _this =this;
+        clearTimeout(this.timer);
+        this.timer = setTimeout(function(){this.removeClass( React.findDOMNode(_this.refs.container),&#x27;fadeout&#x27;)}.bind(this),400);
+    }
+
+    close(callbackId){
+        callbackId = this.props[&#x60;${callbackId}Callback&#x60;];
+        if(callbackId){
+           callbackId();
+           return this;
+        }
+
+        this.flag = false;
+        this.setState({
+            show: false
+        });
     }
     /**
      * 点击X，调用cancelCallback（如果存在），否则通过改变自身state来关闭
@@ -478,12 +549,7 @@ class Dialog extends Component {
      * @return null
      * */
     closeDialog() {
-        this.props.cancelCallback &amp;&amp; this.props.cancelCallback();
-        if (!this.props.cancelCallback) {
-            this.setState({
-                show: false
-            });
-        }
+        this.close(&#x27;cancel&#x27;);
     }
 
     /**
@@ -492,13 +558,7 @@ class Dialog extends Component {
      * @return null;
      * */
     submitForm() {
-
-        this.props.successCallback &amp;&amp; this.props.successCallback();
-        if (!this.props.successCallback) {
-            this.setState({
-                show: false
-            });
-        }
+        this.close(&#x27;success&#x27;);
     }
     /**
      * 点击取消按钮，调用cancelCallback（如果存在），否则通过改变自身state来关闭
@@ -506,12 +566,7 @@ class Dialog extends Component {
      * @return null;
      * */
     cancleDialog() {
-        this.props.cancelCallback &amp;&amp; this.props.cancelCallback();
-        if (!this.props.cancelCallback) {
-            this.setState({
-                show: false
-            });
-        }
+        this.close(&#x27;cancel&#x27;);
     }
 
     /**
@@ -540,15 +595,15 @@ class Dialog extends Component {
         return (
             &lt;Row className={ classnames(
                     this.getClassNamesForArguments(&#x27;dialog&#x27;)
-                )} style={{width:&#x27;300px&#x27;}}&gt;
+                )} style={{width:&#x27;500px&#x27;}}&gt;
                 &lt;Col&gt;
                     &lt;Row className={classnames(
                    this.getClassNamesForArguments(&#x27;title&#x27;)
-                )}&gt;
+                )} style={{textAlign:&#x27;center&#x27;}}&gt;
                             {this.props.title}
                     &lt;/Row&gt;
                     &lt;Row className={ classnames(
-                    this.getClassNamesForArguments(&#x27;content&#x27;))}&gt;
+                    this.getClassNamesForArguments(&#x27;content&#x27;))} style={{textAlign:&#x27;center&#x27;}}&gt;
                         &lt;Col&gt;
                             {this.props.children}
                         &lt;/Col&gt;
@@ -574,11 +629,11 @@ class Dialog extends Component {
         return (
             &lt;Row className={ classnames(
                     this.getClassNamesForArguments(&#x27;dialog&#x27;)
-                )} style={{width:&#x27;300px&#x27;}}&gt;
+                )} style={{width:&#x27;500px&#x27;}}&gt;
                 &lt;Col&gt;
                     &lt;Row className={classnames(
                    this.getClassNamesForArguments(&#x27;title&#x27;)
-                )}&gt;
+                )} style={{textAlign:&#x27;center&#x27;}}&gt;
                             {this.props.title}
                             &lt;div className={classnames(
                     this.getClassNamesForArguments(&#x27;close&#x27;)
@@ -586,7 +641,7 @@ class Dialog extends Component {
                             &lt;/div&gt;
                     &lt;/Row&gt;
                     &lt;Row className={ classnames(
-                    this.getClassNamesForArguments(&#x27;content&#x27;))}&gt;
+                    this.getClassNamesForArguments(&#x27;content&#x27;))} style={{textAlign:&#x27;center&#x27;}}&gt;
                         &lt;Col&gt;
                             {this.props.children?this.props.children:&#x27;请快乐的修bug&#x27;}
                         &lt;/Col&gt;
@@ -655,7 +710,8 @@ class Dialog extends Component {
                 )}&gt;
                 &lt;Col&gt;
                     &lt;Row className={classnames(
-                   this.getClassNamesForArguments(&#x27;title&#x27;)
+                   this.getClassNamesForArguments(&#x27;title&#x27;,&#x27;mask-title&#x27;)
+
                 )}&gt;
                             {this.props.title}
                             &lt;div className={classnames(
@@ -664,7 +720,7 @@ class Dialog extends Component {
                             &lt;/div&gt;
                     &lt;/Row&gt;
                     &lt;Row className={ classnames(
-                    this.getClassNamesForArguments(&#x27;content&#x27;))}&gt;
+                    this.getClassNamesForArguments(&#x27;content&#x27;))} style={{marginTop:&#x27;10px&#x27;}}&gt;
                         &lt;Col&gt;
                             {this.props.children}
                         &lt;/Col&gt;

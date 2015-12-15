@@ -32,6 +32,9 @@
                     <li><a href="">主页</a>
                     </li>
                     
+                    <li><a href="/documents/eagle-ui/examples/">例子</a>
+                    </li>
+                    
                 </ul>
                <div class="navbar-form navbar-right filterAPi" autocomplete="off">
                 <input type="text" id='txtSearchAPI' class="form-control search-query" placeholder="Search for API" />
@@ -54,6 +57,22 @@
                 <dd>
                     <ul>
                    
+                       <li>
+                            
+                           <a href="../classes/CheckboxGroup.html">CheckboxGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Input.html">Input</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
                        <li>
                             
                            <a href="../classes/RadioGroup.html">RadioGroup</a>
@@ -182,6 +201,14 @@
                    
                        <li>
                             
+                           <a href="../classes/Th.html">Th</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Table.html">Table</a>
                            <ul>
                                 
@@ -191,14 +218,6 @@
                        <li>
                             
                            <a href="../classes/Td.html">Td</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Th.html">Th</a>
                            <ul>
                                 
                            </ul>
@@ -233,6 +252,14 @@
                        <li>
                             
                            <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Search.html">Search</a>
                            <ul>
                                 
                            </ul>
@@ -304,6 +331,14 @@
                     
                        <li>
                             
+                           <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Tabset.html">Tabset</a>
                            <ul>
                                 
@@ -313,6 +348,14 @@
                        <li>
                             
                            <a href="../classes/Toast.html">Toast</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/TooltipPanel.html">TooltipPanel</a>
                            <ul>
                                 
                            </ul>
@@ -370,8 +413,7 @@ import ClassNameMixin from &#x27;./utils/ClassNameMixin.js&#x27;;
  * @extends Component
  * @constructor
  * @since 0.1.0
- * @demo src/calendar.js {js}
- * @demo calendar.html {html}
+ * @demo calendar.js {js}
  * @show true
  * */
 @ClassNameMixin
@@ -489,7 +531,7 @@ export default class Calendar extends Component{
                         &#x27;no-hover&#x27;:d==&#x27; &#x27;,
                         [this.getClassName(&#x27;selected&#x27;)]:(this.isOptionSelect(selectedDate,defaultDate) &amp;&amp; defaultDate.getDate()==d &amp;&amp;!disabled )
                     })
-                } onClick={disabled ||d==&#x27; &#x27;? &#x27;&#x27;:_this.dateClick.bind(_this,&#x60;${year}/${month+1}/${d}&#x60;)} &gt;{d}&lt;/span&gt;&lt;/td&gt; );
+                } onMouseDown={disabled ||d==&#x27; &#x27;? &#x27;&#x27;:_this.dateClick.bind(_this,&#x60;${year}/${month+1}/${d}&#x60;)} &gt;{d}&lt;/span&gt;&lt;/td&gt; );
             }
         }
         return dom;
@@ -589,6 +631,8 @@ export default class Calendar extends Component{
             selectedDate:this.today,
             currentDate:this.today
         });
+        this.switchWindow(0);
+       // this.dateClick(&#x60;${this.today.getFullYear()}/${this.getMonth(this.today.getMonth() )}/${this.today.getDate()}&#x60;);
     }
 
     isParent (obj,parentObj){
@@ -631,7 +675,7 @@ export default class Calendar extends Component{
                     &lt;span&gt;&lt;i className={classnames({
                                     [_this.getClassName(&#x27;selected&#x27;,false)]:sYear == y,
                                     old:i == -1 || i == 10
-                                })} onClick={_this.switchYear.bind(this,y)}&gt;{y}&lt;/i&gt;&lt;/span&gt;
+                                })} onMouseDown={_this.switchYear.bind(this,y)}&gt;{y}&lt;/i&gt;&lt;/span&gt;
                 );
                 y += 1;
             }
@@ -643,13 +687,13 @@ export default class Calendar extends Component{
             &lt;table className=&quot;calendar&quot;&gt;
                 &lt;thead className=&quot;eg-calendar-header&quot;&gt;
                 &lt;th&gt;
-                    &lt;div className={this.getClassName(&#x27;icon-prev&#x27;,false)} onClick={this.switchYearForInterval.bind(this,year-1,true)}&gt;&lt;/div&gt;
+                    &lt;div className={this.getClassName(&#x27;icon-prev&#x27;,false)} onMouseDown={this.switchYearForInterval.bind(this,year-1,true)}&gt;&lt;/div&gt;
                 &lt;/th&gt;
                 &lt;th colSpan=&quot;5&quot;&gt;
                     &lt;div className=&quot;title&quot;&gt;{&#x60;${year}年-${year + 9}年&#x60;}&lt;/div&gt;
                 &lt;/th&gt;
                 &lt;th&gt;
-                    &lt;div className={this.getClassName(&#x27;icon-next&#x27;,false)} onClick={this.switchYearForInterval.bind(this,year+10,true)}&gt;&lt;/div&gt;
+                    &lt;div className={this.getClassName(&#x27;icon-next&#x27;,false)} onMouseDown={this.switchYearForInterval.bind(this,year+10,true)}&gt;&lt;/div&gt;
                 &lt;/th&gt;
                 &lt;/thead&gt;
                 &lt;tbody&gt;
@@ -673,13 +717,13 @@ export default class Calendar extends Component{
             &lt;table className=&quot;calendar&quot;&gt;
                 &lt;thead className=&quot;eg-calendar-header&quot;&gt;
                 &lt;th&gt;
-                    &lt;div className={this.getClassName(&#x27;icon-prev&#x27;,false)} onClick={this.switchYear.bind(this,&#x27;-1&#x27;)}&gt;&lt;/div&gt;
+                    &lt;div className={this.getClassName(&#x27;icon-prev&#x27;,false)} onMouseDown={this.switchYear.bind(this,&#x27;-1&#x27;)}&gt;&lt;/div&gt;
                 &lt;/th&gt;
                 &lt;th colSpan=&quot;5&quot;&gt;
-                    &lt;div className=&quot;title&quot; onClick={::this.switchWindow.bind(this,2)}&gt;{&#x60;${selectDate.year}年&#x60;}&lt;/div&gt;
+                    &lt;div className=&quot;title&quot; onMouseDown={::this.switchWindow.bind(this,2)}&gt;{&#x60;${selectDate.year}年&#x60;}&lt;/div&gt;
                 &lt;/th&gt;
                 &lt;th&gt;
-                    &lt;div className={this.getClassName(&#x27;icon-next&#x27;,false)} onClick={this.switchYear.bind(this,&#x27;+1&#x27;)}&gt;&lt;/div&gt;
+                    &lt;div className={this.getClassName(&#x27;icon-next&#x27;,false)} onMouseDown={this.switchYear.bind(this,&#x27;+1&#x27;)}&gt;&lt;/div&gt;
                 &lt;/th&gt;
                 &lt;/thead&gt;
                 &lt;tbody&gt;
@@ -689,7 +733,7 @@ export default class Calendar extends Component{
                             this.month.map(function(item){
                                 return &lt;span&gt;&lt;i className={classnames({
                                     [_this.getClassName(&#x27;selected&#x27;,false)]:selectDate.month == item
-                                })} onClick={_this.switchMonth.bind(_this,item*1-1)}&gt;{item+&#x27;月&#x27;}&lt;/i&gt;&lt;/span&gt;;
+                                })} onMouseDown={_this.switchMonth.bind(_this,item*1-1)}&gt;{item+&#x27;月&#x27;}&lt;/i&gt;&lt;/span&gt;;
                             })
                         }
                         &lt;/td&gt;
@@ -711,13 +755,13 @@ export default class Calendar extends Component{
             &lt;table className=&quot;calendar&quot;&gt;
                 &lt;thead className=&quot;eg-calendar-header&quot;&gt;
                 &lt;th&gt;
-                    &lt;div className={this.getClassName(&#x27;icon-prev&#x27;,false)} onClick={this.switchMonth.bind(this,&#x27;-1&#x27;)}&gt;&lt;/div&gt;
+                    &lt;div className={this.getClassName(&#x27;icon-prev&#x27;,false)} onMouseDown={this.switchMonth.bind(this,&#x27;-1&#x27;)}&gt;&lt;/div&gt;
                 &lt;/th&gt;
                 &lt;th colSpan=&quot;5&quot;&gt;
-                    &lt;div className=&quot;title&quot; onClick={::this.switchWindow.bind(this,1)}&gt;{&#x60;${selectDate.year}年${selectDate.month}月&#x60;}&lt;/div&gt;
+                    &lt;div className=&quot;title&quot; onMouseDown={::this.switchWindow.bind(this,1)}&gt;{&#x60;${selectDate.year}年${selectDate.month}月&#x60;}&lt;/div&gt;
                 &lt;/th&gt;
                 &lt;th&gt;
-                    &lt;div className={this.getClassName(&#x27;icon-next&#x27;,false)}  onClick={this.switchMonth.bind(this,&#x27;+1&#x27;)}&gt;&lt;/div&gt;
+                    &lt;div className={this.getClassName(&#x27;icon-next&#x27;,false)}  onMouseDown={this.switchMonth.bind(this,&#x27;+1&#x27;)}&gt;&lt;/div&gt;
                 &lt;/th&gt;
                 &lt;/thead&gt;
                 &lt;tbody&gt;
@@ -805,7 +849,13 @@ export default class Calendar extends Component{
 
                         &lt;div className=&quot;eg-calendar-body&quot;&gt;
                             {this[windowType]()}
-
+                            &lt;div style={{
+                                textAlign:&#x27;right&#x27;
+                            }}&gt;
+                                &lt;span style={{
+                                    cursor:&#x27;pointer&#x27;
+                                }} onClick={::this.todayHandler}&gt;今天&lt;/span&gt;
+                            &lt;/div&gt;
                         &lt;/div&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;

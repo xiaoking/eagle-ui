@@ -157,151 +157,157 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	exports.ButtonGroup = _libButtonGroup2['default'];
 
-	var _libInputJs = __webpack_require__(38);
+	var _libCheckboxGroupJs = __webpack_require__(38);
+
+	var _libCheckboxGroupJs2 = _interopRequireDefault(_libCheckboxGroupJs);
+
+	exports.CheckboxGroup = _libCheckboxGroupJs2['default'];
+
+	var _libInputJs = __webpack_require__(39);
 
 	var _libInputJs2 = _interopRequireDefault(_libInputJs);
 
 	exports.Input = _libInputJs2['default'];
 
-	var _libRadioGroupJs = __webpack_require__(39);
+	var _libRadioGroupJs = __webpack_require__(40);
 
 	var _libRadioGroupJs2 = _interopRequireDefault(_libRadioGroupJs);
 
 	exports.RadioGroup = _libRadioGroupJs2['default'];
 
-	var _libLabelJs = __webpack_require__(40);
+	var _libLabelJs = __webpack_require__(41);
 
 	var _libLabelJs2 = _interopRequireDefault(_libLabelJs);
 
 	exports.Label = _libLabelJs2['default'];
 
-	var _libCrumbJs = __webpack_require__(41);
+	var _libCrumbJs = __webpack_require__(42);
 
 	var _libCrumbJs2 = _interopRequireDefault(_libCrumbJs);
 
 	exports.Crumb = _libCrumbJs2['default'];
 
-	var _libSearchJs = __webpack_require__(42);
+	var _libSearchJs = __webpack_require__(43);
 
 	var _libSearchJs2 = _interopRequireDefault(_libSearchJs);
 
 	exports.Search = _libSearchJs2['default'];
 
-	var _libSelectJs = __webpack_require__(43);
+	var _libSelectJs = __webpack_require__(44);
 
 	var _libSelectJs2 = _interopRequireDefault(_libSelectJs);
 
 	exports.Select = _libSelectJs2['default'];
 
-	var _libLabelGroupJs = __webpack_require__(44);
+	var _libLabelGroupJs = __webpack_require__(45);
 
 	var _libLabelGroupJs2 = _interopRequireDefault(_libLabelGroupJs);
 
 	exports.LabelGroup = _libLabelGroupJs2['default'];
 
-	var _libToastJs = __webpack_require__(45);
+	var _libToastJs = __webpack_require__(46);
 
 	var _libToastJs2 = _interopRequireDefault(_libToastJs);
 
 	exports.Toast = _libToastJs2['default'];
 
-	var _libPagingJs = __webpack_require__(46);
+	var _libPagingJs = __webpack_require__(47);
 
 	var _libPagingJs2 = _interopRequireDefault(_libPagingJs);
 
 	exports.Paging = _libPagingJs2['default'];
 
-	var _libCalendar = __webpack_require__(47);
+	var _libCalendar = __webpack_require__(48);
 
 	var _libCalendar2 = _interopRequireDefault(_libCalendar);
 
 	exports.Calendar = _libCalendar2['default'];
 
-	var _libTabJs = __webpack_require__(48);
+	var _libTabJs = __webpack_require__(49);
 
 	var _libTabJs2 = _interopRequireDefault(_libTabJs);
 
 	exports.Tab = _libTabJs2['default'];
 
-	var _libTabsetJs = __webpack_require__(49);
+	var _libTabsetJs = __webpack_require__(50);
 
 	var _libTabsetJs2 = _interopRequireDefault(_libTabsetJs);
 
 	exports.Tabset = _libTabsetJs2['default'];
 
-	var _libDialogJs = __webpack_require__(50);
+	var _libDialogJs = __webpack_require__(51);
 
 	var _libDialogJs2 = _interopRequireDefault(_libDialogJs);
 
 	exports.Dialog = _libDialogJs2['default'];
 
-	var _libTooltipJs = __webpack_require__(51);
+	var _libTooltipJs = __webpack_require__(52);
 
 	var _libTooltipJs2 = _interopRequireDefault(_libTooltipJs);
 
 	exports.Tooltip = _libTooltipJs2['default'];
 
-	var _libPanelPanelJs = __webpack_require__(52);
+	var _libPanelPanelJs = __webpack_require__(53);
 
 	var _libPanelPanelJs2 = _interopRequireDefault(_libPanelPanelJs);
 
 	exports.Panel = _libPanelPanelJs2['default'];
 
-	var _libPanelPanelContentJs = __webpack_require__(53);
+	var _libPanelPanelContentJs = __webpack_require__(54);
 
 	var _libPanelPanelContentJs2 = _interopRequireDefault(_libPanelPanelContentJs);
 
 	exports.PanelContent = _libPanelPanelContentJs2['default'];
 
-	var _libPanelPanelFooterJs = __webpack_require__(54);
+	var _libPanelPanelFooterJs = __webpack_require__(55);
 
 	var _libPanelPanelFooterJs2 = _interopRequireDefault(_libPanelPanelFooterJs);
 
 	exports.PanelFooter = _libPanelPanelFooterJs2['default'];
 
-	var _libPanelPanelHeaderJs = __webpack_require__(55);
+	var _libPanelPanelHeaderJs = __webpack_require__(56);
 
 	var _libPanelPanelHeaderJs2 = _interopRequireDefault(_libPanelPanelHeaderJs);
 
 	exports.PanelHeader = _libPanelPanelHeaderJs2['default'];
 
-	var _libListJs = __webpack_require__(56);
+	var _libListJs = __webpack_require__(57);
 
 	var _libListJs2 = _interopRequireDefault(_libListJs);
 
 	exports.List = _libListJs2['default'];
 
-	var _libItemJs = __webpack_require__(57);
+	var _libItemJs = __webpack_require__(58);
 
 	var _libItemJs2 = _interopRequireDefault(_libItemJs);
 
 	exports.Item = _libItemJs2['default'];
 
-	var _libValidatorPanel = __webpack_require__(58);
+	var _libValidatorPanel = __webpack_require__(59);
 
 	var _libValidatorPanel2 = _interopRequireDefault(_libValidatorPanel);
 
 	exports.ValidatorPanel = _libValidatorPanel2['default'];
 
-	var _libTableTableJs = __webpack_require__(59);
+	var _libTableTableJs = __webpack_require__(60);
 
 	var _libTableTableJs2 = _interopRequireDefault(_libTableTableJs);
 
 	exports.Table = _libTableTableJs2['default'];
 
-	var _libTableTrJs = __webpack_require__(60);
+	var _libTableTrJs = __webpack_require__(63);
 
 	var _libTableTrJs2 = _interopRequireDefault(_libTableTrJs);
 
 	exports.Tr = _libTableTrJs2['default'];
 
-	var _libTableTdJs = __webpack_require__(61);
+	var _libTableTdJs = __webpack_require__(62);
 
 	var _libTableTdJs2 = _interopRequireDefault(_libTableTdJs);
 
 	exports.Td = _libTableTdJs2['default'];
 
-	var _libTableThJs = __webpack_require__(62);
+	var _libTableThJs = __webpack_require__(61);
 
 	var _libTableThJs2 = _interopRequireDefault(_libTableThJs);
 
@@ -309,7 +315,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	window['Eagleui'] = {};
 
-	['Grid', 'Col', 'Row', 'Button', 'ButtonGroup', 'Input', 'RadioGroup', 'Label', 'ValidatorPanel', 'Crumb', 'Search', 'Select', 'LabelGroup', 'Toast', 'Paging', 'Calendar', 'Tab', 'Tabset', 'Dialog', 'Tooltip', 'Panel', 'PanelContent', 'PanelFooter', 'PanelHeader', 'List', 'Item', 'Table', 'Tr', 'Td', 'Th'].forEach(function (clazzName) {
+	['Grid', 'Col', 'Row', 'Button', 'ButtonGroup', 'CheckboxGroup', 'Input', 'RadioGroup', 'Label', 'ValidatorPanel', 'Crumb', 'Search', 'Select', 'LabelGroup', 'Toast', 'Paging', 'Calendar', 'Tab', 'Tabset', 'Dialog', 'Tooltip', 'Panel', 'PanelContent', 'PanelFooter', 'PanelHeader', 'List', 'Item', 'Table', 'Tr', 'Td', 'Th'].forEach(function (clazzName) {
 	    Eagleui[clazzName] = exports[clazzName];
 	});
 
@@ -348,7 +354,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	// module
-	exports.push([module.id, ".red {\n  color: #ff717d;\n}\n* {\n  padding: 0px;\n  margin: 0px;\n  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);\n  -webkit-backface-visibility: hidden;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nnav,\nsection,\nsummary {\n  display: block;\n}\nhtml {\n  /*width: 100%;\n    min-height: 100%;*/\n}\nbody {\n  font: normal 14px \"Microsoft YaHei\", \"helvetica regular\", \"Helvetica Neue\", Arial, Helvetica, STHeiTi, sans-serif;\n  color: #333333;\n  -webkit-text-size-adjust: none;\n  text-size-adjust: none;\n  background-color: #f1f1f1;\n}\nul,\nol {\n  list-style: none;\n}\na {\n  text-decoration: none;\n  outline: none;\n  color: #333333;\n}\na:hover {\n  text-decoration: underline;\n}\naddress {\n  font-style: normal;\n}\n/**重置h1-h6的字体大小*/\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-weight: normal;\n}\nh1 {\n  font-size: 22px;\n}\nh2 {\n  font-size: 20px;\n}\nh3 {\n  font-size: 18px;\n}\nh4 {\n  font-size: 16px;\n}\nh5 {\n  font-size: 14px;\n}\nh6 {\n  font-size: 12px;\n}\n/**清除浮动*/\n.clearfix:before,\n.clearfix:after {\n  display: table;\n  line-height: 0;\n  content: \"\";\n}\n.clearfix:after {\n  clear: both;\n}\n/**控制块级、内敛*/\n.inline-block {\n  display: inline-block !important;\n}\n.inline {\n  display: inline !important;\n}\n.block {\n  display: block !important;\n}\n/**搜索图标*/\n.eg-search-icon {\n  position: relative;\n}\n.eg-search-icon:before,\n.eg-search-icon:after {\n  content: '';\n  position: absolute;\n  display: inline-block;\n  z-index: 10;\n}\n.eg-search-icon:before {\n  border: 2px solid #b2b2b2;\n  height: 10px;\n  width: 10px;\n  border-radius: 7px;\n  top: 11px;\n  left: 3px;\n}\n.eg-search-icon:after {\n  height: 7px;\n  width: 2px;\n  transform: rotate(-45deg);\n  top: 22px;\n  left: 16px;\n  background: #b2b2b2;\n}\n/**圆角*/\n.eg-radius {\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-active {\n  color: #ee5511;\n}\n.eg-selected {\n  color: #ffffff;\n  background: #ee5511;\n}\n/**显示*/\n.eg-hide,\n.show {\n  display: none;\n}\n.eg-show.show {\n  display: block;\n}\n/**成功图标*/\n.eg-tips-success {\n  background: #4fd564;\n  width: 30px;\n  height: 30px;\n  border-radius: 30px;\n  display: inline-block;\n  position: relative;\n}\n/**出错提示*/\n.eg-tips-error {\n  background: #dd514c;\n  width: 30px;\n  height: 30px;\n  border-radius: 30px;\n  display: inline-block;\n  position: relative;\n}\n.eg-tips-error:before {\n  height: 2px;\n  width: 2px;\n  background: #fff;\n  left: 14px;\n  top: 19px;\n}\n.eg-tips-error:after {\n  height: 10px;\n  width: 2px;\n  background: #fff;\n  left: 14px;\n  top: 6px;\n}\n/**加载中*/\n.eg-tips-loading {\n  background: #bbbbbb;\n  width: 30px;\n  height: 30px;\n  border-radius: 30px;\n  display: inline-block;\n  position: relative;\n}\n.eg-tips-loading:before {\n  width: 15px;\n  height: 15px;\n  background: transparent;\n  border: 2px solid #fff;\n  top: 5.5px;\n  left: 5.5px;\n  border-radius: 12px;\n  clip: rect(auto, 16px, auto, auto);\n  animation: 0.5s linear 0s normal none infinite rotate;\n}\n@-webkit-keyframes rotate {\n  from {\n    -webkit-transform: rotate(0deg);\n  }\n  to {\n    -webkit-transform: rotate(360deg);\n  }\n}\n.eg-tips-success:before,\n.eg-icon-tick:before,\n.eg-tips-loading:before,\n.eg-tips-error:before,\n.eg-tips-success:after,\n.eg-icon-tick:after,\n.eg-tips-loading:after,\n.eg-tips-error:after {\n  display: inline-block;\n  position: absolute;\n  content: \"\";\n}\n.eg-tips-success:before,\n.eg-icon-tick:before {\n  height: 8px;\n  width: 2px;\n  background: #fff;\n  left: 10px;\n  top: 13px;\n  transform: rotate(135deg);\n}\n.eg-tips-success:after,\n.eg-icon-tick:after {\n  height: 14px;\n  width: 2px;\n  background: #fff;\n  left: 17px;\n  top: 8px;\n  transform: rotate(45deg);\n}\n/*icon*/\n.eg-arrow-up::before,\n.eg-arrow-down::before {\n  content: '';\n  display: inline-block;\n  width: 6px;\n  height: 9px;\n  position: absolute;\n  top: 50%;\n  margin-left: 9px;\n}\n.eg-arrow-up::after,\n.eg-arrow-down::after {\n  content: '';\n  display: inline-block;\n  border-width: 7px;\n  border-style: solid;\n  margin-left: 5px;\n  position: relative;\n}\n/*向上箭头*/\n.eg-arrow-up::before {\n  background: #38bd7c;\n  margin-top: -1px;\n  border-radius: 0px 0px 1px 1px;\n}\n.eg-arrow-up::after {\n  border-color: transparent transparent #38bd7c transparent;\n  top: -6px;\n}\n/*向下箭头*/\n.eg-arrow-down::before {\n  background: #fa3739;\n  margin-top: -8px;\n  border-radius: 1px 1px 0px 0px;\n}\n.eg-arrow-down::after {\n  border-color: #fa3739 transparent transparent transparent;\n  top: 10px;\n}\n/**图标*/\n.icon-input-right {\n  height: 16px;\n  width: 16px;\n  position: absolute;\n  display: block;\n  right: 10px;\n  top: 50%;\n  margin-top: -8px;\n}\n.icon-calendar {\n  background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJViUEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4MUU4N0VFRjdCODYxMUU1QUY5NkM3NDVDRjI5NkNEQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4MUU4N0VGMDdCODYxMUU1QUY5NkM3NDVDRjI5NkNEQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjgxRTg3RUVEN0I4NjExRTVBRjk2Qzc0NUNGMjk2Q0RDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjgxRTg3RUVFN0I4NjExRTVBRjk2Qzc0NUNGMjk2Q0RDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Q96nFgAAAIpJREFUeNpi/P//PwMIzJo1C0RBOAwMjCAiLS0NJo4iBxIHM2bOnMmABFA0owEMOSYgFgXi80iSMIXoGFkOpF4UpHkXEBswkAZA6ncxkaERbgATAwWABcaAhSAxABYDFNlMHWcTciI27w2cs2nrZ3xRCNJ8AZRa0AOGCHAJ5Gw3EINEjWeB2AUgwADA4SbftT6JBAAAAABJRU5ErkJggg==\") no-repeat center center;\n}\n/**左箭头*/\n.eg-icon-prev,\n.eg-icon-next {\n  width: 100%;\n  height: 100%;\n  text-align: center;\n  cursor: pointer;\n}\n.eg-icon-prev:after,\n.eg-icon-next:after {\n  content: '';\n  display: inline-block;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  width: 12px;\n  height: 12px;\n  border-top: 2px solid #999;\n  border-left: 2px solid #999;\n  -webkit-transform: rotate(-45deg);\n  -moz-transform: rotate(-45deg);\n  -ms-transform: rotate(-45deg);\n  -o-transform: rotate(-45deg);\n  transform: rotate(-45deg);\n}\n.eg-icon-next:after {\n  border-left: none;\n  border-right: 2px solid #999;\n  -webkit-transform: rotate(45deg);\n  -moz-transform: rotate(45deg);\n  -ms-transform: rotate(45deg);\n  -o-transform: rotate(45deg);\n  transform: rotate(45deg);\n}\n/**字体大小*/\n.small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-12 {\n  font-size: 12px;\n}\n.ft-12 small,\n.ft-12 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-14 {\n  font-size: 14px;\n}\n.ft-14 small,\n.ft-14 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-16 {\n  font-size: 16px;\n}\n.ft-16 small,\n.ft-16 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-18 {\n  font-size: 18px;\n}\n.ft-18 small,\n.ft-18 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-20 {\n  font-size: 20px;\n}\n.ft-20 small,\n.ft-20 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-22 {\n  font-size: 22px;\n}\n.ft-22 small,\n.ft-22 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n/**晃动*/\n@-webkit-keyframes shake {\n  0%,\n  100% {\n    -webkit-transform: translate3d(0, 0, 0);\n    transform: translate3d(0, 0, 0);\n  }\n  10%,\n  30%,\n  50%,\n  70%,\n  90% {\n    -webkit-transform: translate3d(-10px, 0, 0);\n    transform: translate3d(-10px, 0, 0);\n  }\n  20%,\n  40%,\n  60%,\n  80% {\n    -webkit-transform: translate3d(10px, 0, 0);\n    transform: translate3d(10px, 0, 0);\n  }\n}\n@keyframes shake {\n  0%,\n  100% {\n    -webkit-transform: translate3d(0, 0, 0);\n    transform: translate3d(0, 0, 0);\n  }\n  10%,\n  30%,\n  50%,\n  70%,\n  90% {\n    -webkit-transform: translate3d(-10px, 0, 0);\n    transform: translate3d(-10px, 0, 0);\n  }\n  20%,\n  40%,\n  60%,\n  80% {\n    -webkit-transform: translate3d(10px, 0, 0);\n    transform: translate3d(10px, 0, 0);\n  }\n}\n.shake {\n  -webkit-animation-name: shake;\n  animation-name: shake;\n}\n.animated {\n  -webkit-animation-duration: .8s;\n  animation-duration: .8s;\n  -webkit-animation-fill-mode: both;\n  animation-fill-mode: both;\n}\n/**淡入淡出*/\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0;\n  }\n  50% {\n    opacity: 0.5;\n  }\n  100% {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  0% {\n    opacity: 0;\n  }\n  50% {\n    opacity: 0.5;\n  }\n  100% {\n    opacity: 1;\n  }\n}\n.fadein {\n  display: block !important;\n  -webkit-animation-name: fadeIn;\n  animation-name: fadeIn;\n  -webkit-animation-duration: .4s;\n  animation-duration: .4s;\n}\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 1;\n  }\n  50% {\n    opacity: 0.5;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  0% {\n    opacity: 1;\n  }\n  50% {\n    opacity: 0.5;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n.fadeout {\n  display: block !important;\n  -webkit-animation-name: fadeOut;\n  animation-name: fadeOut;\n  -webkit-animation-duration: .4s;\n  animation-duration: .4s;\n  animation-fill-mode: forwards;\n  -webkit-animation-fill-mode: forwards;\n}\n/**按钮组*/\n.eg-btn-group {\n  position: relative;\n  display: inline-block;\n  vertical-align: middle;\n}\n.eg-btn-group .eg-btn {\n  position: relative;\n  float: left;\n  margin-left: -1px;\n}\n.eg-btn-group .eg-btn:not(:first-child):not(:last-child) {\n  border-radius: 0;\n}\n.eg-btn-group .eg-btn:first-child:not(:last-child) {\n  border-bottom-right-radius: 0;\n  border-top-right-radius: 0;\n}\n.eg-btn-group .eg-btn:last-child:not(:first-child) {\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n}\n.eg-btn-group-tacked .eg-btn {\n  float: none;\n  display: block;\n  margin-left: 0;\n  margin-top: -1px;\n}\n.eg-btn-group-tacked .eg-btn:first-child:not(:last-child) {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.eg-btn-group-tacked .eg-btn:last-child:not(:first-child) {\n  border-bottom-left-radius: 0;\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n}\n.eg-btn-group-justify {\n  width: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n}\n.eg-btn-group-justify .eg-btn {\n  float: none;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n}\n/**按钮*/\n.eg-btn {\n  display: inline-block;\n  text-align: center;\n  padding: 10px 15px;\n  color: #ffffff;\n  background: #ee5511;\n  border: 1px solid transparent;\n  cursor: pointer;\n  outline: 0;\n  text-decoration: none;\n}\n.eg-btn:hover {\n  background: #d94000;\n  text-decoration: none;\n}\n.eg-btn.eg-btn-disabled {\n  color: #f8c1a8;\n  background-color: #f49462;\n}\n.eg-btn-block {\n  display: block;\n  width: 100%;\n}\n.eg-btn-block + .eg-btn-block {\n  margin-top: 5px;\n}\n.eg-btn-radius {\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-btn-round {\n  -webkit-border-radius: 1000px;\n  -moz-border-radius: 1000px;\n  border-radius: 1000px;\n}\n.eg-btn-xs {\n  font-size: 12px;\n}\n.eg-btn-sm {\n  font-size: 14px;\n}\n.eg-btn-default {\n  font-size: 16px;\n}\n.eg-btn-lg {\n  font-size: 18px;\n}\n.eg-btn-xl {\n  font-size: 20px;\n}\n.eg-btn-error {\n  background-color: #d94000;\n}\n.eg-btn-success {\n  background-color: #38bd7c;\n}\n.eg-btn-success:hover {\n  background: #0da45a;\n}\n.eg-btn-success.eg-btn-disabled {\n  color: #cccccc;\n  background: #5dce97;\n}\n.eg-btn-warning {\n  background-color: #e0690c;\n}\n.eg-btn-danger {\n  background-color: #e0690c;\n}\n.eg-btn-link {\n  border: none;\n  color: #646464;\n  background-color: transparent;\n}\n.eg-btn-link:hover {\n  color: #646464;\n  background: transparent;\n  text-decoration: underline;\n}\n.eg-btn-link .eg-btn-disabled {\n  color: #cccccc;\n}\n.eg-btn-disabled {\n  color: #cccccc;\n  background-color: #f3f3f3;\n}\n.eg-btn-gray {\n  background-color: #d4d4d4;\n  color: #333333;\n}\n.eg-btn-gray:hover {\n  background: #cccccc;\n}\n.eg-btn-gray.eg-btn-disabled {\n  color: #999;\n  background-color: #e1e1e1;\n}\n.eg-btn-white {\n  background: #ffffff;\n  border-color: #dbdad9;\n  color: #000000;\n}\n.eg-btn-white:hover {\n  background: #f8f8f8;\n}\n.eg-btn-white.eg-btn-disabled {\n  color: #f2f2f2;\n  background-color: #cccccc;\n}\n.eg-btn-disabled {\n  cursor: auto;\n}\n.eg-input-text {\n  border: 1px solid #dddddd;\n  font-size: 14px;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n  background-color: #ffffff;\n  padding: 10px;\n  color: #333333;\n  width: 100%;\n}\n.eg-input-text:disabled {\n  background: #eeeeee;\n  color: #999;\n}\n.eg-input-checkbox,\n.eg-input-radio {\n  position: relative;\n  text-align: left;\n  margin-bottom: 10px;\n  margin-right: 10px;\n  min-height: 24px;\n  display: inline-block;\n}\n.eg-input-checkbox input[type=\"checkbox\"],\n.eg-input-radio input[type=\"checkbox\"],\n.eg-input-checkbox input[type=\"radio\"],\n.eg-input-radio input[type=\"radio\"] {\n  /*width: 14px;\n        height: 14px;\n        border: 1px solid @black-99;*/\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  cursor: pointer;\n  pointer-events: all;\n  opacity: 0;\n  z-index: 2;\n  left: 0;\n}\n.eg-input-checkbox .box,\n.eg-input-radio .box {\n  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;\n  float: left;\n  position: relative;\n  display: block;\n  width: 16px;\n  margin-right: 10px;\n  margin-left: 0;\n  height: 24px;\n}\n.eg-input-checkbox .box .checkbox,\n.eg-input-radio .box .checkbox {\n  width: 14px;\n  height: 14px;\n  border: 1px solid #999;\n  position: relative;\n  top: 5px;\n  left: 1px;\n  -webkit-border-radius: 2px;\n  -moz-border-radius: 2px;\n  border-radius: 2px;\n  background: #ffffff;\n}\n.eg-input-checkbox .box .checkbox .round,\n.eg-input-radio .box .checkbox .round {\n  display: none;\n}\n.eg-input-checkbox label,\n.eg-input-radio label {\n  float: left;\n  position: relative;\n  display: block;\n  line-height: 24px;\n}\n/*图片*/\n.checkbox-back {\n  background-position: center center;\n  background-repeat: no-repeat;\n}\n.eg-input-checkbox-active .box .checkbox {\n  background: #ee5511;\n  border-color: #ee5511;\n  background-position: center center;\n  background-repeat: no-repeat;\n}\n.eg-input-checkbox-active .box .eg-icon-tick:before {\n  height: 5px;\n  width: 2px;\n  left: 3px;\n  top: 5px;\n}\n.eg-input-checkbox-active .box .eg-icon-tick:after {\n  height: 8px;\n  width: 2px;\n  left: 7px;\n  top: 2px;\n}\n.eg-input-radio .box .checkbox {\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  border-radius: 50%;\n}\n.eg-input-radio .box .checkbox .round {\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  border-radius: 50%;\n  background: #ee5511;\n  margin: 4px;\n  width: 8px;\n  height: 8px;\n  margin: 2px;\n}\n.eg-input-radio-active .box .checkbox {\n  border-color: #ee5511;\n}\n.eg-input-radio-active .box .checkbox .round {\n  display: block;\n}\n.eg-input-radio-disabled .box .checkbox {\n  background: #eeeeee;\n  color: #999;\n  border: 1px solid #999;\n}\n.eg-input-radio-disabled .box .checkbox .round {\n  background: #cccccc;\n}\n.eg-input-radio-disabled label {\n  color: #999;\n}\n.eg-input-checkbox-disabled .box .checkbox {\n  background: #eeeeee;\n  color: #999;\n  border-color: #cccccc;\n}\n.eg-input-checkbox-disabled .box .eg-icon-tick:before {\n  background-color: #fefefe;\n}\n.eg-input-checkbox-disabled .box .eg-icon-tick:after {\n  background-color: #fefefe;\n}\n.eg-input-checkbox-disabled label {\n  color: #999;\n}\n.eg-input-checkbox-active.eg-input-checkbox-disabled .box .checkbox {\n  background: #cccccc;\n  color: #999;\n}\n.eg-icon-container {\n  position: relative;\n  display: inline-block;\n}\n.eg-icon-container .eg-input-text {\n  padding-right: 30px;\n}\n.eg-grid .eg-row {\n  margin-left: -15px;\n  margin-right: -15px;\n}\n.eg-sm-1 {\n  width: 8.33333333%;\n}\n.eg-sm-2 {\n  width: 16.66666667%;\n}\n.eg-sm-3 {\n  width: 25%;\n}\n.eg-sm-4 {\n  width: 33.33333333%;\n}\n.eg-sm-5 {\n  width: 41.66666667%;\n}\n.eg-sm-6 {\n  width: 50%;\n}\n.eg-sm-7 {\n  width: 58.33333333%;\n}\n.eg-sm-8 {\n  width: 66.66666667%;\n}\n.eg-sm-9 {\n  width: 75%;\n}\n.eg-sm-10 {\n  width: 83.33333333%;\n}\n.eg-sm-11 {\n  width: 91.66666667%;\n}\n.eg-sm-12 {\n  width: 100%;\n}\n[class*='eg-sm-'] {\n  padding: 5px 15px;\n  float: left;\n}\n[class*='eg-sm-']:last-child {\n  float: right;\n}\n[class*='eg-sm-'].eg-end {\n  float: left;\n}\n/**\n   带边框的样式\n*/\n.eg-sm-border {\n  border: 1px solid #e1e1e1;\n}\n.eg-dialog-container,\n.eg-tips-container {\n  display: none;\n}\n.eg-dialog-overlay,\n.eg-tips-overlay {\n  position: fixed;\n  left: 0px;\n  top: 0px;\n  z-index: 8900;\n  background-color: #000000;\n  opacity: 0.4;\n  width: 100%;\n  height: 100%;\n}\n.eg-dialog-close,\n.eg-tips-close {\n  display: inline-block;\n  float: right;\n  cursor: pointer;\n  font-size: 17px;\n  margin-top: -10px;\n  padding-right: 5px;\n}\n.eg-dialog,\n.eg-tips {\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n  opacity: 1;\n  background: #fff;\n  text-align: center;\n  padding: 10px;\n  border-radius: 3px;\n  z-index: 9000;\n}\n.eg-tips-container {\n  z-index: 9001;\n}\n.eg-dialog-button,\n.eg-tips-button {\n  text-align: center;\n  padding: 5px 50px;\n}\n.eg-dialog-content,\n.eg-tips-content {\n  text-align: center;\n  margin-top: 10px;\n  padding: 10px 30px;\n}\n.eg-dialog-submit,\n.eg-dialog-cancel,\n.eg-tips-submit,\n.eg-tips-cancel {\n  margin: 5px;\n  border-radius: 4px;\n}\n.eg-submit {\n  color: #fff;\n  background: #d94000;\n}\n.eg-dialog-title,\n.eg-tips-title {\n  margin-top: 10px;\n  font-size: 18px;\n}\n.eg-dialog-show,\n.eg-tips-show {\n  display: block;\n}\n.eg-crumb ul li {\n  float: left;\n  position: relative;\n  margin: 10px;\n  cursor: pointer;\n}\n.eg-crumb ul li a {\n  display: block;\n  float: left;\n  background: transparent;\n  color: #000000;\n}\n.eg-crumb ul li a:after,\n.eg-crumb ul li a:before {\n  display: inline-block;\n  background-color: #a0a0a0;\n  position: absolute;\n  content: \"\";\n  right: -12px;\n  height: 8px;\n  width: 1px;\n}\n.eg-crumb ul li a:after {\n  top: 9px;\n  transform: rotate(45deg);\n}\n.eg-crumb ul li a:before {\n  top: 4px;\n  transform: rotate(135deg);\n}\n.eg-crumb ul li:last-child {\n  cursor: default;\n  color: #bbbbbb;\n}\n.eg-crumb ul li:last-child a:before,\n.eg-crumb ul li:last-child a:after {\n  display: none;\n}\n.eg-search-wrapper {\n  width: 100%;\n  position: relative;\n  display: box;\n  /* OLD - Android 4.4- */\n  display: -webkit-box;\n  /* OLD - iOS 6-, Safari 3.1-6 */\n  display: -moz-box;\n  /* OLD - Firefox 19- (buggy but mostly works) */\n  display: -ms-flexbox;\n  /* TWEENER - IE 10 */\n  display: -webkit-flex;\n  /* NEW - Chrome */\n  display: flex;\n  margin-right: 15px;\n}\n.eg-search-wrapper input {\n  text-indent: 15px;\n}\n.eg-search-wrapper .eg-search-content {\n  display: -webkit-box;\n  -webkit-box-flex: 1;\n  /* OLD - iOS 6-, Safari 3.1-6 */\n  -moz-box-flex: 1;\n  /* OLD - Firefox 19- */\n  -webkit-flex: 1;\n  /* Chrome */\n  -ms-flex: 1;\n  flex: 1.0;\n}\n.eg-search-wrapper .eg-search-icon {\n  position: relative;\n}\n.eg-label-item {\n  padding: 2px 4px;\n  display: inline-block;\n  -webkit-border-radius: 2px;\n  -moz-border-radius: 2px;\n  border-radius: 2px;\n}\n.eg-label-item:hover {\n  text-decoration: none;\n}\n.eg-label-all {\n  margin-right: 45px;\n}\n.eg-label-title {\n  padding: 2px 0;\n  color: #999;\n}\n.eg-label-active {\n  background: #ee5511;\n  color: #ffffff;\n}\n.eg-label-group-simple .eg-label-item {\n  border-right: 1px solid #cccccc;\n  border-radius: 0px;\n  padding: 0px 15px 0px 0px;\n  margin-right: 15px;\n  line-height: 14px;\n}\n.eg-label-group-simple .eg-label-item:last-child {\n  border-right: none;\n}\n.eg-label-group {\n  margin-bottom: 15px;\n}\n.eg-label-group .eg-row {\n  padding: 0px;\n}\n.eg-label-group .eg-row div[class*='eg-sm-'] {\n  padding: 0px 15px;\n}\n.eg-label-group .eg-row div[class*='eg-sm-'].eg-end {\n  margin-bottom: -10px;\n}\n.eg-label-group .eg-label-item {\n  margin: 0 15px 10px;\n}\n.eg-label-group .eg-label-all {\n  margin-right: 45px;\n}\n.eg-label-radius {\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-label-success {\n  background: #6bcb72;\n  color: #ffffff;\n}\n.eg-label-error {\n  background: #ff717d;\n  color: #ffffff;\n}\n.eg-label-disabled {\n  background: #cccccc;\n  color: #ffffff;\n}\n.eg-label-end {\n  margin-bottom: 0;\n}\n/**按钮组*/\n.eg-paging-container {\n  text-align: right;\n  padding: 10px 0;\n  /*.current{\n        color: @orange-btn;\n    }*/\n}\n.eg-paging-container a,\n.eg-paging-container .page {\n  padding: 5px;\n  margin: 0 5px;\n}\n.eg-paging-container .info {\n  font-size: 12px;\n  color: #999;\n  margin-left: 20px;\n}\n.eg-paging-active {\n  color: #ee5511;\n}\n.eg-paging-disabled {\n  color: #cccccc;\n  cursor: default;\n}\n.eg-calendar-container {\n  position: absolute;\n  z-index: 9011;\n  border: 1px solid #eee;\n  box-shadow: 0 0 5px #eee;\n  background: #fff;\n  -webkit-box-shadow: 0px 0px 8px 1px #cccccc;\n  webkit-box-shadow: 0px 0px 8px 1px #cccccc;\n}\n.eg-calendar-container .eg-calendar-item:not(.no-hover) {\n  cursor: pointer;\n}\n.eg-calendar-container .eg-calendar-box .eg-calendar-selected {\n  color: #ffffff !important;\n  background: #ee5511;\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  border-radius: 50%;\n}\n.eg-calendar-container .eg-calendar-box .eg-calendar-disabled {\n  color: #cccccc;\n  cursor: default;\n}\n.eg-calendar-box {\n  background: #ffffff;\n  width: 270px;\n}\n.eg-calendar-box .box {\n  padding: 15px;\n}\n.eg-calendar-header {\n  line-height: 28px;\n  margin-bottom: 10px;\n}\n.eg-calendar-header .options {\n  border: 1px solid #cccccc;\n  height: 28px;\n  vertical-align: middle;\n  margin-right: 30px;\n}\n.eg-calendar-header .today {\n  cursor: pointer;\n  position: relative;\n  top: 2px;\n}\n.eg-calendar-header th {\n  padding-bottom: 10px;\n}\n.eg-calendar-header .title {\n  width: 100%;\n  height: 100%;\n  cursor: pointer;\n}\n.eg-calendar-header .title:hover {\n  background: #f0f0f0;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-calendar-body .calendar {\n  width: 100%;\n  text-align: center;\n}\n.eg-calendar-body .calendar tr.body td,\n.eg-calendar-body .calendar tr.head td {\n  height: 25px;\n  vertical-align: middle;\n}\n.eg-calendar-body .calendar tr.body td span,\n.eg-calendar-body .calendar tr.head td span {\n  width: 30px;\n  height: 30px;\n  line-height: 30px;\n  display: inline-block;\n}\n.eg-calendar-body .calendar tr.body td span:hover:not(.eg-calendar-selected):not(.eg-calendar-disabled):not(.no-hover),\n.eg-calendar-body .calendar tr.head td span:hover:not(.eg-calendar-selected):not(.eg-calendar-disabled):not(.no-hover) {\n  background: #f0f0f0;\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  border-radius: 50%;\n}\n.eg-calendar-body .calendar .month-list span {\n  display: inline-block;\n  zoom: 1;\n  width: 25%;\n  text-align: center;\n  height: 55px;\n  line-height: 55px;\n}\n.eg-calendar-body .calendar .month-list span i {\n  font-style: normal;\n  padding: 4px 9px;\n  -webkit-border-radius: 500px;\n  -moz-border-radius: 500px;\n  border-radius: 500px;\n  cursor: pointer;\n}\n.eg-calendar-body .calendar .month-list span i:hover:not(.eg-selected) {\n  background: #f0f0f0;\n}\n.eg-calendar-body .old {\n  color: #cccccc;\n}\n.eg-calendar-body .head {\n  color: #999;\n}\n.eg-icon-prev:hover,\n.eg-icon-next:hover {\n  background: #f0f0f0;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-table {\n  background: #ffffff;\n  border-spacing: 0px;\n  border-collapse: separate;\n  padding: 0px 20px 10px 20px;\n  font-size: 14px;\n  width: 100%;\n}\n.eg-table tr {\n  /*td[rowspan]{\n      border-bottom: 1px solid @tr-split-line;\n    }*/\n}\n.eg-table tr.eg-tr-split td {\n  border-bottom: 1px solid #dddddd;\n}\n.eg-table tr td,\n.eg-table tr th {\n  padding: 10px 15px;\n  text-align: left;\n  position: relative;\n}\n.eg-table tr th {\n  color: #999;\n}\n.eg-table tr td {\n  color: #333333;\n}\n.eg-table thead th {\n  border-bottom: 2px solid #dddddd;\n}\n.eg-table tbody tr:nth-of-type(2n) {\n  background: #f7f7f7;\n}\n/**面板*/\n.eg-panel {\n  margin-bottom: 20px;\n  background-color: #fff;\n  border: 1px solid #dddddd;\n  border-radius: 4px;\n  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);\n  overflow-x: hidden;\n}\n.eg-panel .eg-panel-header {\n  padding: 10px 15px;\n  border-bottom: 1px solid transparent;\n  border-radius: 3px 3px 0px 0px;\n  color: #333;\n  background-color: #fff;\n  border-color: #ddd;\n}\n.eg-panel .eg-panel-footer {\n  background-color: #fff;\n  border-top: 1px solid #ddd;\n  border-radius: 0px 0px 3px 3px;\n}\n/**添加padding*/\n.eg-panel-padding {\n  padding: 10px 15px;\n}\n.eg-tab-item {\n  cursor: pointer;\n  display: inline-block;\n  min-width: 100px;\n  box-sizing: border-box;\n  padding: 5px 15px;\n  text-align: center;\n  border-bottom: 1px solid #dddddd;\n}\n.eg-tab-item:hover {\n  text-decoration: none;\n  color: #f25300;\n  background: #dddddd;\n  border-bottom: 1px solid #dddddd;\n}\n.eg-tab-item.eg-tab-active {\n  color: #f25300;\n  border-bottom: 1px solid #f25300;\n  box-shadow: 0px -3px 0px 0px #f25300 inset;\n  cursor: default;\n}\n.eg-tab-item.eg-tab-active:hover {\n  background: transparent;\n  border-bottom: 1px solid #f25300;\n}\n.eg-select-container {\n  width: 300px;\n  position: relative;\n  display: inline-block;\n  margin-right: 15px;\n  /*箭头*/\n}\n.eg-select-container ul {\n  background: #fff;\n  display: none;\n  position: absolute;\n  width: inherit;\n  top: 39px;\n  left: 0px;\n  border: #dadbdd solid 1px;\n  border-radius: 0px 0px 4px 4px;\n  max-height: 150px;\n  overflow: auto;\n}\n.eg-select-container ul li {\n  text-indent: 10px;\n  padding: 5px 0;\n  cursor: pointer;\n}\n.eg-select-container ul li:hover,\n.eg-select-container ul li:focus {\n  color: #ee5511;\n}\n.eg-select-container ul li.active {\n  color: #ee5511;\n}\n.eg-select-container .eg-select-show {\n  display: block;\n}\n.eg-select-container .eg-select-arrow-up,\n.eg-select-container .eg-select-arrow-down {\n  position: absolute;\n  right: 10px;\n  display: inline-block;\n  cursor: pointer;\n  z-index: 10;\n  border-top: 5px solid transparent;\n  border-right: 5px solid transparent;\n  border-left: 5px solid #bbbbbb;\n  border-bottom: 5px solid #bbbbbb;\n}\n.eg-select-container .eg-select-arrow-down {\n  transform: rotate(-45deg);\n  top: 12px;\n}\n.eg-select-container .eg-select-arrow-up {\n  transform: rotate(135deg);\n  top: 13px;\n}\n.eg-tooltip-container {\n  display: inline-block;\n  position: relative;\n}\n.eg-tooltip-container .eg-tooltip-wraper {\n  display: none;\n  position: absolute;\n  z-index: 9001;\n  background: #000;\n  opacity: 0.4;\n  color: #fff;\n  max-width: 300px;\n  font-size: 13px;\n  padding: 5px;\n  text-align: left;\n  border-radius: 3px;\n  box-shadow: 0px 1px 5px 2px #bbbbbb;\n  margin: 5px 0px;\n}\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip {\n  position: relative;\n}\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip .eg-tooltip-arrow-down,\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip .eg-tooltip-arrow-up,\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip .eg-tooltip-arrow-left,\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip .eg-tooltip-arrow-right {\n  border-width: 5px;\n  border-style: dashed;\n  position: absolute;\n  height: 0;\n  width: 0;\n  line-height: 0;\n}\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip .eg-tooltip-arrow-down {\n  border-color: transparent transparent #000 transparent;\n  left: 32px;\n  top: -15px;\n}\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip .eg-tooltip-arrow-up {\n  border-color: #000 transparent transparent transparent;\n  left: 32px;\n  bottom: -15px;\n}\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip .eg-tooltip-arrow-left {\n  border-color: transparent transparent transparent #000;\n  right: 0px;\n}\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip .eg-tooltip-arrow-right {\n  border-color: transparent #000 transparent transparent;\n  left: 0px;\n}\n.eg-tooltip-container .eg-tooltip-show {\n  display: block;\n}\n.eg-marquee-container {\n  position: relative;\n  display: inline-block;\n  width: 380px;\n  height: auto;\n  padding: 0px 0px;\n  border: #cc3333 2px solid;\n  overflow: hidden;\n  border-radius: 3px;\n  background: #fff;\n}\n.eg-marquee-container .eg-marquee-new-tip {\n  position: absolute;\n  top: -26px;\n  left: -24px;\n  z-index: 90001;\n  background: #4fd564;\n  color: #fff;\n  width: 50px;\n  height: 61px;\n  transform: rotate(45deg);\n}\n.eg-marquee-container .eg-marquee-new-tip .eg-marquee-new {\n  display: inline-block;\n  position: relative;\n  top: 20px;\n  left: 31px;\n  transform: rotate(-45deg);\n}\n.eg-marquee-container .eg-marquee-check {\n  position: absolute;\n  right: 0px;\n  top: 0px;\n  z-index: 90001;\n}\n.eg-marquee-container img {\n  width: 100%;\n  height: auto;\n}\n.eg-marquee-container .eg-marquee-title {\n  color: #333333;\n  font-size: 16px;\n  font-weight: bolder;\n  line-height: 17px;\n  margin: 15px 10px 5px 10px;\n}\n.eg-marquee-container .eg-marquee-content {\n  color: #999;\n  font-size: 14px;\n  line-height: 15px;\n  margin: 10px 10px;\n}\n.eg-marquee-container .eg-marquee-tips {\n  position: relative;\n  color: #999;\n  font-size: 14px;\n  margin: 15px 10px 5px 10px;\n}\n.eg-marquee-container .eg-bars {\n  position: relative;\n  display: inline-block;\n  background: #999;\n  padding: 5px;\n  margin-right: 10px;\n}\n.eg-marquee-container .eg-bars:before,\n.eg-marquee-container .eg-bars:after {\n  position: absolute;\n  content: '';\n  display: inline-block;\n}\n.eg-marquee-container .eg-bars:before {\n  top: 0px;\n  left: 10px;\n  border-width: 5px;\n  border-style: dashed dashed solid;\n  border-color: transparent transparent transparent #999;\n}\n.eg-marquee-container .eg-bars:after {\n  top: 4px;\n  left: 7.5px;\n  z-index: 10;\n  border: 1.5px solid #fff;\n  border-radius: 5px;\n}\n.eg-input-checkboxs {\n  position: relative;\n  height: 35px;\n  top: -5px;\n  width: 35px;\n  display: inline-block;\n}\n.eg-input-checkboxs input[type=\"checkbox\"] {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  cursor: pointer;\n  pointer-events: all;\n  opacity: 0;\n  z-index: 2;\n  left: 0;\n}\n.eg-input-checkboxs .box {\n  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;\n  float: left;\n  position: relative;\n  display: block;\n  width: 16px;\n  margin-right: 10px;\n  margin-left: 0;\n  height: 24px;\n}\n.eg-input-checkboxs .box .checkbox {\n  width: 35px;\n  height: 35px;\n  border: 1px solid #999;\n  position: relative;\n  top: 5px;\n  left: 1px;\n  -webkit-border-radius: 2px;\n  -moz-border-radius: 2px;\n  border-radius: 2px;\n  background: #ffffff;\n}\n.eg-input-checkboxs .box .checkbox .round {\n  display: none;\n}\n.eg-input-checkboxs label {\n  float: left;\n  position: relative;\n  display: block;\n  line-height: 24px;\n}\n.eg-input-checkboxs-active .box .checkbox {\n  background: #ee5511;\n  border-color: #ee5511;\n}\n.eg-input-checkboxs-active .box .eg-icon-tick:before {\n  height: 9px;\n  width: 2px;\n  left: 11px;\n  top: 13px;\n}\n.eg-input-checkboxs-active .box .eg-icon-tick:after {\n  height: 17px;\n  width: 2px;\n  left: 19px;\n  top: 6px;\n}\n.eg-input-checkboxs-disabled .box .checkbox {\n  background: #eeeeee;\n  color: #999;\n  border-color: #cccccc;\n}\n.eg-input-checkboxs-disabled .box .eg-icon-tick:before {\n  background-color: #fefefe;\n}\n.eg-input-checkboxs-disabled .box .eg-icon-tick:after {\n  background-color: #fefefe;\n}\n.eg-input-checkboxs-disabled label {\n  color: #999;\n}\n.eg-input-checkboxs-disabled .box .checkbox {\n  background: #cccccc;\n  color: #999;\n}\n.eg-list .eg-item {\n  background-color: #ffffff;\n  color: #333333;\n  position: relative;\n  display: block;\n  padding: 10px 15px;\n  border-bottom: 1px solid #dddddd;\n  font-size: 14px;\n}\n.eg-list .eg-item:last-child {\n  border-bottom: none;\n}\n/**按钮组*/\n.eg-validate .eg-validate-error {\n  outline: none;\n  border-color: #dd514c;\n}\n.eg-validate .eg-validate-tips {\n  position: absolute;\n  left: -9999rem;\n  padding: 0px 10px 0 22px;\n  z-index: 9010;\n  background-color: transparent;\n}\n.eg-validate .eg-validate-tips i {\n  border-radius: 50%;\n  display: inline-block;\n  background: #dd514c;\n  width: 18px;\n  height: 18px;\n  top: 50%;\n  left: 0;\n  margin-top: -10px;\n  position: absolute;\n}\n.eg-validate .eg-validate-tips i:before {\n  height: 2px;\n  width: 2px;\n  background: #fff;\n  left: 8px;\n  top: 13px;\n  position: absolute;\n  content: \"\";\n  opacity: 0.9;\n}\n.eg-validate .eg-validate-tips i:after {\n  height: 8px;\n  width: 2px;\n  background: #fff;\n  left: 8px;\n  top: 4px;\n  position: absolute;\n  content: \"\";\n}\n.eg-validate .eg-validate-tips.bottom {\n  background: rgba(51, 51, 51, 0.8);\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n  color: #fff;\n  height: auto;\n  line-height: normal;\n  padding: 10px 10px 10px 32px;\n}\n.eg-validate .eg-validate-tips.bottom i {\n  left: 10px;\n}\n", ""]);
+	exports.push([module.id, ".red {\n  color: #ff717d;\n}\n* {\n  padding: 0px;\n  margin: 0px;\n  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);\n  -webkit-backface-visibility: hidden;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmain,\nnav,\nsection,\nsummary {\n  display: block;\n}\nhtml {\n  /*width: 100%;\n    min-height: 100%;*/\n}\nbody {\n  font: normal 14px \"Microsoft YaHei\", \"helvetica regular\", \"Helvetica Neue\", Arial, Helvetica, STHeiTi, sans-serif;\n  color: #333333;\n  -webkit-text-size-adjust: none;\n  text-size-adjust: none;\n  background-color: #f1f1f1;\n}\nul,\nol {\n  list-style: none;\n}\na {\n  text-decoration: none;\n  outline: none;\n  color: #333333;\n}\na:hover {\n  text-decoration: underline;\n}\naddress {\n  font-style: normal;\n}\n/**重置h1-h6的字体大小*/\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  font-weight: normal;\n}\nh1 {\n  font-size: 22px;\n}\nh2 {\n  font-size: 20px;\n}\nh3 {\n  font-size: 18px;\n}\nh4 {\n  font-size: 16px;\n}\nh5 {\n  font-size: 14px;\n}\nh6 {\n  font-size: 12px;\n}\n/*兼容性*/\n/**清除浮动*/\n.clearfix:before,\n.clearfix:after {\n  display: table;\n  line-height: 0;\n  content: \"\";\n}\n.clearfix:after {\n  clear: both;\n}\n/**控制块级、内敛*/\n.inline-block {\n  display: inline-block !important;\n}\n.inline {\n  display: inline !important;\n}\n.block {\n  display: block !important;\n}\n/**搜索图标*/\n.eg-search-icon {\n  position: relative;\n}\n.eg-search-icon:before,\n.eg-search-icon:after {\n  content: '';\n  position: absolute;\n  display: inline-block;\n  z-index: 10;\n}\n.eg-search-icon:before {\n  border: 2px solid #b2b2b2;\n  height: 10px;\n  width: 10px;\n  border-radius: 7px;\n  top: 11px;\n  left: 3px;\n}\n.eg-search-icon:after {\n  height: 7px;\n  width: 2px;\n  transform: rotate(-45deg);\n  -webkit-transform: rotate(-45deg);\n  -moz-transform: rotate(-45deg);\n  -ms-transform: rotate(-45deg);\n  -o-transform: rotate(-45deg);\n  top: 22px;\n  left: 16px;\n  background: #b2b2b2;\n}\n/**圆角*/\n.eg-radius {\n  border-radius: 4px;\n  -moz-border-radius: 4px;\n  -webkit-border-radius: 4px;\n  -ms-border-radius: 4px;\n  -o-border-radius: 4px;\n}\n.eg-active {\n  color: #ee5511;\n}\n.eg-selected {\n  color: #ffffff;\n  background: #ee5511;\n}\n/**显示*/\n.eg-hide,\n.show {\n  display: none;\n}\n.eg-show.show {\n  display: block;\n}\n/**成功图标*/\n.eg-tips-success {\n  background: #4fd564;\n  width: 30px;\n  height: 30px;\n  border-radius: 30px;\n  -moz-border-radius: 30px;\n  -webkit-border-radius: 30px;\n  -ms-border-radius: 30px;\n  -o-border-radius: 30px;\n  display: inline-block;\n  position: relative;\n}\n/**出错提示*/\n.eg-tips-error {\n  background: #dd514c;\n  width: 30px;\n  height: 30px;\n  border-radius: 30px;\n  -moz-border-radius: 30px;\n  -webkit-border-radius: 30px;\n  -ms-border-radius: 30px;\n  -o-border-radius: 30px;\n  display: inline-block;\n  position: relative;\n}\n.eg-tips-error:before {\n  height: 2px;\n  width: 2px;\n  background: #fff;\n  left: 14px;\n  top: 19px;\n}\n.eg-tips-error:after {\n  height: 10px;\n  width: 2px;\n  background: #fff;\n  left: 14px;\n  top: 6px;\n}\n/**加载中*/\n.eg-tips-loading {\n  background: #bbbbbb;\n  width: 30px;\n  height: 30px;\n  border-radius: 30px;\n  -moz-border-radius: 30px;\n  -webkit-border-radius: 30px;\n  -ms-border-radius: 30px;\n  -o-border-radius: 30px;\n  display: inline-block;\n  position: relative;\n}\n.eg-tips-loading:before {\n  width: 15px;\n  height: 15px;\n  background: transparent;\n  border: 2px solid #fff;\n  top: 5.5px;\n  left: 5.5px;\n  border-radius: 12px;\n  -moz-border-radius: 12px;\n  -webkit-border-radius: 12px;\n  -ms-border-radius: 12px;\n  -o-border-radius: 12px;\n  clip: rect(auto, 16px, auto, auto);\n  animation: 0.5s linear 0s normal none infinite rotate;\n  -webkit-animation: 0.5s linear 0s normal none infinite rotate;\n  -moz-animation: 0.5s linear 0s normal none infinite rotate;\n}\n@-webkit-keyframes rotate {\n  from {\n    transform: rotate(0deg);\n    -webkit-transform: rotate(0deg);\n    -moz-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    -o-transform: rotate(0deg);\n    /*   -webkit-transform:rotate(0deg);\n           -moz-transform: rotate(0deg);*/\n  }\n  to {\n    transform: rotate(360deg);\n    -webkit-transform: rotate(360deg);\n    -moz-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    -o-transform: rotate(360deg);\n    /*   -webkit-transform:rotate(360deg);\n           -moz-transform: rotate(360deg);*/\n  }\n}\n@keyframes rotate {\n  from {\n    transform: rotate(0deg);\n    -webkit-transform: rotate(0deg);\n    -moz-transform: rotate(0deg);\n    -ms-transform: rotate(0deg);\n    -o-transform: rotate(0deg);\n    /*   -webkit-transform:rotate(0deg);\n        -moz-transform: rotate(0deg);*/\n  }\n  to {\n    transform: rotate(360deg);\n    -webkit-transform: rotate(360deg);\n    -moz-transform: rotate(360deg);\n    -ms-transform: rotate(360deg);\n    -o-transform: rotate(360deg);\n    /*   -webkit-transform:rotate(360deg);\n        -moz-transform: rotate(360deg);*/\n  }\n}\n.eg-tips-success:before,\n.eg-icon-tick:before,\n.eg-tips-loading:before,\n.eg-tips-error:before,\n.eg-tips-success:after,\n.eg-icon-tick:after,\n.eg-tips-loading:after,\n.eg-tips-error:after {\n  display: inline-block;\n  position: absolute;\n  content: \"\";\n}\n.eg-tips-success:before,\n.eg-icon-tick:before {\n  height: 8px;\n  width: 2px;\n  background: #fff;\n  left: 10px;\n  top: 13px;\n  transform: rotate(135deg);\n  -webkit-transform: rotate(135deg);\n  -moz-transform: rotate(135deg);\n  -ms-transform: rotate(135deg);\n  -o-transform: rotate(135deg);\n}\n.eg-tips-success:after,\n.eg-icon-tick:after {\n  height: 14px;\n  width: 2px;\n  background: #fff;\n  left: 17px;\n  top: 8px;\n  transform: rotate(45deg);\n  -webkit-transform: rotate(45deg);\n  -moz-transform: rotate(45deg);\n  -ms-transform: rotate(45deg);\n  -o-transform: rotate(45deg);\n}\n/*icon*/\n.eg-arrow-up::before,\n.eg-arrow-down::before {\n  content: '';\n  display: inline-block;\n  width: 6px;\n  height: 9px;\n  position: absolute;\n  top: 50%;\n  margin-left: 9px;\n}\n.eg-arrow-up::after,\n.eg-arrow-down::after {\n  content: '';\n  display: inline-block;\n  border-width: 7px;\n  border-style: solid;\n  margin-left: 5px;\n  position: relative;\n}\n/*向上箭头*/\n.eg-arrow-up::before {\n  background: #38bd7c;\n  margin-top: -1px;\n  border-radius: 0px 0px 1px 1px;\n}\n.eg-arrow-up::after {\n  border-color: transparent transparent #38bd7c transparent;\n  top: -6px;\n}\n/*向下箭头*/\n.eg-arrow-down::before {\n  background: #fa3739;\n  margin-top: -8px;\n  border-radius: 1px 1px 0px 0px;\n}\n.eg-arrow-down::after {\n  border-color: #fa3739 transparent transparent transparent;\n  top: 10px;\n}\n/**图标*/\n.icon-input-right {\n  height: 16px;\n  width: 16px;\n  position: absolute;\n  display: block;\n  right: 10px;\n  top: 50%;\n  margin-top: -8px;\n}\n.icon-calendar {\n  background: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJViUEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo4MUU4N0VFRjdCODYxMUU1QUY5NkM3NDVDRjI5NkNEQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo4MUU4N0VGMDdCODYxMUU1QUY5NkM3NDVDRjI5NkNEQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjgxRTg3RUVEN0I4NjExRTVBRjk2Qzc0NUNGMjk2Q0RDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjgxRTg3RUVFN0I4NjExRTVBRjk2Qzc0NUNGMjk2Q0RDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Q96nFgAAAIpJREFUeNpi/P//PwMIzJo1C0RBOAwMjCAiLS0NJo4iBxIHM2bOnMmABFA0owEMOSYgFgXi80iSMIXoGFkOpF4UpHkXEBswkAZA6ncxkaERbgATAwWABcaAhSAxABYDFNlMHWcTciI27w2cs2nrZ3xRCNJ8AZRa0AOGCHAJ5Gw3EINEjWeB2AUgwADA4SbftT6JBAAAAABJRU5ErkJggg==\") no-repeat center center;\n}\n/**左箭头*/\n.eg-icon-prev,\n.eg-icon-next {\n  width: 100%;\n  height: 100%;\n  text-align: center;\n  cursor: pointer;\n}\n.eg-icon-prev:after,\n.eg-icon-next:after {\n  content: '';\n  display: inline-block;\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  width: 12px;\n  height: 12px;\n  border-top: 2px solid #999;\n  border-left: 2px solid #999;\n  -webkit-transform: rotate(-45deg);\n  -moz-transform: rotate(-45deg);\n  -ms-transform: rotate(-45deg);\n  -o-transform: rotate(-45deg);\n  transform: rotate(-45deg);\n}\n.eg-icon-next:after {\n  border-left: none;\n  border-right: 2px solid #999;\n  -webkit-transform: rotate(45deg);\n  -moz-transform: rotate(45deg);\n  -ms-transform: rotate(45deg);\n  -o-transform: rotate(45deg);\n  transform: rotate(45deg);\n}\n/**字体大小*/\n.small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-12 {\n  font-size: 12px;\n}\n.ft-12 small,\n.ft-12 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-14 {\n  font-size: 14px;\n}\n.ft-14 small,\n.ft-14 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-16 {\n  font-size: 16px;\n}\n.ft-16 small,\n.ft-16 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-18 {\n  font-size: 18px;\n}\n.ft-18 small,\n.ft-18 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-20 {\n  font-size: 20px;\n}\n.ft-20 small,\n.ft-20 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n.ft-22 {\n  font-size: 22px;\n}\n.ft-22 small,\n.ft-22 .small {\n  font-size: 65%;\n  font-weight: 400;\n  line-height: 1;\n  color: #777;\n}\n/**晃动*/\n@-webkit-keyframes shake {\n  0%,\n  100% {\n    -webkit-transform: translate3d(0, 0, 0);\n    transform: translate3d(0, 0, 0);\n  }\n  10%,\n  30%,\n  50%,\n  70%,\n  90% {\n    -webkit-transform: translate3d(-10px, 0, 0);\n    transform: translate3d(-10px, 0, 0);\n  }\n  20%,\n  40%,\n  60%,\n  80% {\n    -webkit-transform: translate3d(10px, 0, 0);\n    transform: translate3d(10px, 0, 0);\n  }\n}\n@keyframes shake {\n  0%,\n  100% {\n    -webkit-transform: translate3d(0, 0, 0);\n    transform: translate3d(0, 0, 0);\n  }\n  10%,\n  30%,\n  50%,\n  70%,\n  90% {\n    -webkit-transform: translate3d(-10px, 0, 0);\n    transform: translate3d(-10px, 0, 0);\n  }\n  20%,\n  40%,\n  60%,\n  80% {\n    -webkit-transform: translate3d(10px, 0, 0);\n    transform: translate3d(10px, 0, 0);\n  }\n}\n.shake {\n  -webkit-animation-name: shake;\n  animation-name: shake;\n}\n.animated {\n  -webkit-animation-duration: .8s;\n  animation-duration: .8s;\n  -webkit-animation-fill-mode: both;\n  animation-fill-mode: both;\n}\n/**淡入淡出*/\n@-webkit-keyframes fadeIn {\n  0% {\n    opacity: 0;\n  }\n  50% {\n    opacity: 0.5;\n  }\n  100% {\n    opacity: 1;\n  }\n}\n@keyframes fadeIn {\n  0% {\n    opacity: 0;\n  }\n  50% {\n    opacity: 0.5;\n  }\n  100% {\n    opacity: 1;\n  }\n}\n.fadein {\n  display: block !important;\n  -webkit-animation-name: fadeIn;\n  animation-name: fadeIn;\n  -webkit-animation-duration: .4s;\n  animation-duration: .4s;\n}\n@-webkit-keyframes fadeOut {\n  0% {\n    opacity: 1;\n  }\n  50% {\n    opacity: 0.5;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n@keyframes fadeOut {\n  0% {\n    opacity: 1;\n  }\n  50% {\n    opacity: 0.5;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n.fadeout {\n  display: block !important;\n  -webkit-animation-name: fadeOut;\n  animation-name: fadeOut;\n  -webkit-animation-duration: .4s;\n  animation-duration: .4s;\n  animation-fill-mode: forwards;\n  -webkit-animation-fill-mode: forwards;\n}\n/**按钮组*/\n.eg-btn-group {\n  position: relative;\n  display: inline-block;\n  vertical-align: middle;\n}\n.eg-btn-group .eg-btn {\n  position: relative;\n  float: left;\n  margin-left: -1px;\n}\n.eg-btn-group .eg-btn:not(:first-child):not(:last-child) {\n  border-radius: 0;\n}\n.eg-btn-group .eg-btn:first-child:not(:last-child) {\n  border-bottom-right-radius: 0;\n  border-top-right-radius: 0;\n}\n.eg-btn-group .eg-btn:last-child:not(:first-child) {\n  border-bottom-left-radius: 0;\n  border-top-left-radius: 0;\n}\n.eg-btn-group-tacked .eg-btn {\n  float: none;\n  display: block;\n  margin-left: 0;\n  margin-top: -1px;\n}\n.eg-btn-group-tacked .eg-btn:first-child:not(:last-child) {\n  border-top-right-radius: 0;\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.eg-btn-group-tacked .eg-btn:last-child:not(:first-child) {\n  border-bottom-left-radius: 0;\n  border-top-right-radius: 0;\n  border-top-left-radius: 0;\n}\n.eg-btn-group-justify {\n  width: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n}\n.eg-btn-group-justify .eg-btn {\n  float: none;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n  -ms-flex: 1;\n  flex: 1;\n}\n/**按钮*/\n.eg-btn {\n  display: inline-block;\n  text-align: center;\n  padding: 10px 15px;\n  color: #ffffff;\n  background: #ee5511;\n  border: 1px solid transparent;\n  cursor: pointer;\n  outline: 0;\n  text-decoration: none;\n}\n.eg-btn:hover,\n.eg-btn.eg-btn-active {\n  background: #d94000;\n  text-decoration: none;\n}\n.eg-btn.eg-btn-disabled {\n  color: #f8c1a8;\n  background-color: #f49462;\n}\n.eg-btn-block {\n  display: block;\n  width: 100%;\n}\n.eg-btn-block + .eg-btn-block {\n  margin-top: 5px;\n}\n.eg-btn-radius {\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-btn-round {\n  -webkit-border-radius: 1000px;\n  -moz-border-radius: 1000px;\n  border-radius: 1000px;\n}\n.eg-btn-xs {\n  font-size: 12px;\n}\n.eg-btn-sm {\n  font-size: 14px;\n}\n.eg-btn-default {\n  font-size: 16px;\n}\n.eg-btn-lg {\n  font-size: 18px;\n}\n.eg-btn-xl {\n  font-size: 20px;\n}\n.eg-btn-error {\n  background-color: #d94000;\n}\n.eg-btn-success {\n  background-color: #38bd7c;\n}\n.eg-btn-success:hover,\n.eg-btn-success.eg-btn-active {\n  background: #0da45a;\n}\n.eg-btn-success.eg-btn-disabled {\n  color: #cccccc;\n  background: #5dce97;\n}\n.eg-btn-warning {\n  background-color: #e0690c;\n}\n.eg-btn-danger {\n  background-color: #e0690c;\n}\n.eg-btn-link {\n  border: none;\n  color: #646464;\n  background-color: transparent;\n}\n.eg-btn-link:hover,\n.eg-btn-link.eg-btn-active {\n  color: #646464;\n  background: transparent;\n  text-decoration: underline;\n}\n.eg-btn-link .eg-btn-disabled {\n  color: #cccccc;\n}\n.eg-btn-disabled {\n  color: #cccccc;\n  background-color: #f3f3f3;\n}\n.eg-btn-gray {\n  background-color: #d4d4d4;\n  color: #333333;\n}\n.eg-btn-gray:hover,\n.eg-btn-gray.eg-btn-active {\n  background: #cccccc;\n}\n.eg-btn-gray.eg-btn-disabled {\n  color: #999;\n  background-color: #e1e1e1;\n}\n.eg-btn-white {\n  background: #ffffff;\n  border-color: #dbdad9;\n  color: #000000;\n}\n.eg-btn-white:hover,\n.eg-btn-white.eg-btn-active {\n  background: #f8f8f8;\n}\n.eg-btn-white.eg-btn-disabled {\n  color: #f2f2f2;\n  background-color: #cccccc;\n}\n.eg-btn-disabled {\n  cursor: auto;\n}\n.eg-input-text {\n  border: 1px solid #dddddd;\n  font-size: 14px;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n  background-color: #ffffff;\n  padding: 10px;\n  color: #333333;\n  width: 100%;\n  outline-color: #ee5511;\n}\n.eg-input-text:disabled {\n  background: #eeeeee;\n  color: #999;\n}\n.eg-input-checkbox,\n.eg-input-radio {\n  position: relative;\n  text-align: left;\n  min-height: 24px;\n  display: inline-block;\n}\n.eg-input-checkbox input[type=\"checkbox\"],\n.eg-input-radio input[type=\"checkbox\"],\n.eg-input-checkbox input[type=\"radio\"],\n.eg-input-radio input[type=\"radio\"] {\n  /*width: 14px;\n        height: 14px;\n        border: 1px solid @black-99;*/\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  cursor: pointer;\n  pointer-events: all;\n  opacity: 0;\n  z-index: 2;\n  left: 0;\n}\n.eg-input-checkbox input[type=\"checkbox\"]:hover,\n.eg-input-radio input[type=\"checkbox\"]:hover,\n.eg-input-checkbox input[type=\"radio\"]:hover,\n.eg-input-radio input[type=\"radio\"]:hover {\n  border-color: #ee5511;\n}\n.eg-input-checkbox .box,\n.eg-input-radio .box {\n  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;\n  float: left;\n  position: relative;\n  display: block;\n  width: 16px;\n  margin-right: 10px;\n  margin-left: 0;\n  height: 24px;\n}\n.eg-input-checkbox .box .checkbox,\n.eg-input-radio .box .checkbox {\n  width: 14px;\n  height: 14px;\n  border: 1px solid #999;\n  position: relative;\n  top: 5px;\n  left: 1px;\n  -webkit-border-radius: 2px;\n  -moz-border-radius: 2px;\n  border-radius: 2px;\n  background: #ffffff;\n}\n.eg-input-checkbox .box .checkbox .round,\n.eg-input-radio .box .checkbox .round {\n  display: none;\n}\n.eg-input-checkbox label,\n.eg-input-radio label {\n  float: left;\n  position: relative;\n  display: block;\n  line-height: 24px;\n}\n/*图片*/\n.checkbox-back {\n  background-position: center center;\n  background-repeat: no-repeat;\n}\n.eg-input-checkbox-active .box .checkbox {\n  background: #ee5511;\n  border-color: #ee5511;\n  background-position: center center;\n  background-repeat: no-repeat;\n}\n.eg-input-checkbox-active .box .eg-icon-tick:before {\n  height: 5px;\n  width: 2px;\n  left: 3px;\n  top: 5px;\n}\n.eg-input-checkbox-active .box .eg-icon-tick:after {\n  height: 8px;\n  width: 2px;\n  left: 7px;\n  top: 2px;\n}\n.eg-input-radio .box .checkbox {\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  border-radius: 50%;\n}\n.eg-input-radio .box .checkbox .round {\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  border-radius: 50%;\n  background: #ee5511;\n  margin: 4px;\n  width: 8px;\n  height: 8px;\n  margin: 2px;\n}\n.eg-input-radio-active .box .checkbox {\n  border-color: #ee5511;\n}\n.eg-input-radio-active .box .checkbox .round {\n  display: block;\n}\n.eg-input-radio-disabled .box .checkbox {\n  background: #eeeeee;\n  color: #999;\n  border: 1px solid #999;\n}\n.eg-input-radio-disabled .box .checkbox .round {\n  background: #cccccc;\n}\n.eg-input-radio-disabled label {\n  color: #999;\n}\n.eg-input-checkbox-disabled .box .checkbox {\n  background: #eeeeee;\n  color: #999;\n  border-color: #cccccc;\n}\n.eg-input-checkbox-disabled .box .eg-icon-tick:before {\n  background-color: #fefefe;\n}\n.eg-input-checkbox-disabled .box .eg-icon-tick:after {\n  background-color: #fefefe;\n}\n.eg-input-checkbox-disabled label {\n  color: #999;\n}\n.eg-input-checkbox-active.eg-input-checkbox-disabled .box .checkbox {\n  background: #cccccc;\n  color: #999;\n}\n.eg-input-group {\n  overflow: hidden;\n}\n.eg-input-group .eg-input-radio,\n.eg-input-group .eg-input-checkbox {\n  margin-top: 10px;\n  margin-right: 10px;\n}\n.eg-input-group .eg-input-radio:last-child,\n.eg-input-group .eg-input-checkbox:last-child {\n  margin-right: 0;\n}\n.eg-input-group .eg-input-group-container {\n  margin-top: -10px;\n}\n.eg-icon-container {\n  position: relative;\n  display: inline-block;\n}\n.eg-icon-container .eg-input-text {\n  padding-right: 30px;\n}\n.eg-grid .eg-row {\n  margin-left: -15px;\n  margin-right: -15px;\n}\n.eg-sm-1 {\n  width: 8.33333333%;\n}\n.eg-sm-2 {\n  width: 16.66666667%;\n}\n.eg-sm-3 {\n  width: 25%;\n}\n.eg-sm-4 {\n  width: 33.33333333%;\n}\n.eg-sm-5 {\n  width: 41.66666667%;\n}\n.eg-sm-6 {\n  width: 50%;\n}\n.eg-sm-7 {\n  width: 58.33333333%;\n}\n.eg-sm-8 {\n  width: 66.66666667%;\n}\n.eg-sm-9 {\n  width: 75%;\n}\n.eg-sm-10 {\n  width: 83.33333333%;\n}\n.eg-sm-11 {\n  width: 91.66666667%;\n}\n.eg-sm-12 {\n  width: 100%;\n}\n[class*='eg-sm-'] {\n  padding: 5px 15px;\n  float: left;\n}\n[class*='eg-sm-']:last-child {\n  float: right;\n}\n[class*='eg-sm-'].eg-end {\n  float: left;\n}\n/**\n   带边框的样式\n*/\n.eg-sm-border {\n  border: 1px solid #e1e1e1;\n}\n.eg-dialog-container,\n.eg-tips-container {\n  display: none;\n  position: fixed;\n  left: 0px;\n  top: 0px;\n  right: 0;\n  bottom: 0;\n  z-index: 8900;\n  background: rgba(0, 0, 0, 0.6);\n  width: 100%;\n  height: 100%;\n}\n.eg-dialog-close,\n.eg-tips-close {\n  display: inline-block;\n  float: right;\n  cursor: pointer;\n  font-size: 17px;\n  margin-top: -5px;\n  padding-right: 5px;\n}\n.eg-dialog,\n.eg-tips {\n  transform: translate(-50%, -50%);\n  -webkit-transform: translate(-50%, -50%);\n  -moz-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  -o-transform: translate(-50%, -50%);\n  border-radius: 3px;\n  -moz-border-radius: 3px;\n  -webkit-border-radius: 3px;\n  -ms-border-radius: 3px;\n  -o-border-radius: 3px;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  opacity: 1;\n  background: #fff;\n  padding: 10px;\n  z-index: 9000;\n}\n.eg-tips-container,\n.eg-tips-wapper {\n  z-index: 9001;\n  display: none;\n}\n.eg-dialog-button,\n.eg-tips-button {\n  text-align: center;\n  padding: 5px 50px;\n}\n.eg-tips-content {\n  margin-top: 10px;\n  padding: 10px 30px;\n}\n.eg-dialog-submit,\n.eg-dialog-cancel,\n.eg-tips-submit,\n.eg-tips-cancel {\n  margin: 5px;\n  border-radius: 4px;\n  -moz-border-radius: 4px;\n  -webkit-border-radius: 4px;\n  -ms-border-radius: 4px;\n  -o-border-radius: 4px;\n}\n.eg-submit {\n  color: #fff;\n  background: #d94000;\n}\n.eg-dialog-title,\n.eg-tips-title,\n.eg-dialog-mask-title {\n  font-size: 16px;\n  margin: -15px -25px 0 !important;\n  padding: 20px;\n}\n.eg-dialog-mask-title {\n  background: #eee;\n}\n.eg-dialog-show,\n.eg-tips-show {\n  display: block;\n}\n.eg-crumb ul li {\n  float: left;\n  position: relative;\n  margin: 10px;\n  cursor: pointer;\n}\n.eg-crumb ul li a {\n  display: block;\n  float: left;\n  background: transparent;\n  color: #000000;\n}\n.eg-crumb ul li a:after,\n.eg-crumb ul li a:before {\n  display: inline-block;\n  background-color: #a0a0a0;\n  position: absolute;\n  content: \"\";\n  right: -12px;\n  height: 8px;\n  width: 1px;\n}\n.eg-crumb ul li a:after {\n  top: 9px;\n  transform: rotate(45deg);\n  -webkit-transform: rotate(45deg);\n  -moz-transform: rotate(45deg);\n  -ms-transform: rotate(45deg);\n  -o-transform: rotate(45deg);\n}\n.eg-crumb ul li a:before {\n  top: 4px;\n  transform: rotate(135deg);\n  -webkit-transform: rotate(135deg);\n  -moz-transform: rotate(135deg);\n  -ms-transform: rotate(135deg);\n  -o-transform: rotate(135deg);\n}\n.eg-crumb ul li:last-child {\n  cursor: default;\n  color: #bbbbbb;\n}\n.eg-crumb ul li:last-child a:before,\n.eg-crumb ul li:last-child a:after {\n  display: none;\n}\n.eg-search-wrapper {\n  width: 100%;\n  position: relative;\n  display: box;\n  /* OLD - Android 4.4- */\n  display: -webkit-box;\n  /* OLD - iOS 6-, Safari 3.1-6 */\n  display: -moz-box;\n  /* OLD - Firefox 19- (buggy but mostly works) */\n  display: -ms-flexbox;\n  /* TWEENER - IE 10 */\n  display: -webkit-flex;\n  /* NEW - Chrome */\n  display: flex;\n  margin-right: 15px;\n}\n.eg-search-wrapper input {\n  text-indent: 15px;\n}\n.eg-search-wrapper .eg-search-content {\n  display: -webkit-box;\n  -webkit-box-flex: 1;\n  /* OLD - iOS 6-, Safari 3.1-6 */\n  -moz-box-flex: 1;\n  /* OLD - Firefox 19- */\n  -webkit-flex: 1;\n  /* Chrome */\n  -ms-flex: 1;\n  flex: 1.0;\n}\n.eg-search-wrapper .eg-search-icon {\n  position: relative;\n}\n.eg-label-item {\n  padding: 2px 4px;\n  display: inline-block;\n  -webkit-border-radius: 2px;\n  -moz-border-radius: 2px;\n  border-radius: 2px;\n}\n.eg-label-all {\n  margin-right: 45px;\n}\n.eg-label-title {\n  padding: 2px 0;\n  color: #999;\n}\n.eg-label-active {\n  background: #ee5511;\n  color: #ffffff;\n}\n.eg-label-group-simple .eg-label-item {\n  border-right: 1px solid #cccccc;\n  border-radius: 0px;\n  padding: 0px 15px 0px 0px;\n  margin-right: 15px;\n  line-height: 14px;\n}\n.eg-label-group-simple .eg-label-item:hover {\n  text-decoration: underline;\n}\n.eg-label-group-simple .eg-label-item:last-child {\n  border-right: none;\n}\n.eg-label-group {\n  margin-bottom: 15px;\n}\n.eg-label-group .eg-row {\n  padding: 0px;\n}\n.eg-label-group .eg-row div[class*='eg-sm-'] {\n  padding: 0px 15px;\n}\n.eg-label-group .eg-row div[class*='eg-sm-'].eg-end {\n  margin-bottom: -10px;\n}\n.eg-label-group .eg-label-item {\n  margin: 0 15px 10px;\n}\n.eg-label-group .eg-label-all {\n  margin-right: 45px;\n}\n.eg-label-radius {\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-label-success {\n  background: #6bcb72;\n  color: #ffffff;\n}\n.eg-label-error {\n  background: #ff717d;\n  color: #ffffff;\n}\n.eg-label-disabled {\n  background: #cccccc;\n  color: #ffffff;\n}\n.eg-label-end {\n  margin-bottom: 0;\n}\n/**按钮组*/\n.eg-paging-container {\n  text-align: right;\n  padding: 10px 0;\n  /*.current{\n        color: @orange-btn;\n    }*/\n}\n.eg-paging-container a,\n.eg-paging-container .page {\n  padding: 5px;\n  margin: 0 5px;\n}\n.eg-paging-container .info {\n  font-size: 12px;\n  color: #999;\n  margin-left: 20px;\n}\n.eg-paging-active {\n  color: #ee5511;\n}\n.eg-paging-disabled {\n  color: #cccccc;\n  cursor: default;\n}\n.eg-calendar-container {\n  position: absolute;\n  z-index: 9011;\n  border: 1px solid #eee;\n  box-shadow: 0 0 5px #eee;\n  background: #fff;\n  -webkit-box-shadow: 0px 0px 8px 1px #cccccc;\n  webkit-box-shadow: 0px 0px 8px 1px #cccccc;\n}\n.eg-calendar-container .eg-calendar-item:not(.no-hover) {\n  cursor: pointer;\n}\n.eg-calendar-container .eg-calendar-box .eg-calendar-selected {\n  color: #ffffff !important;\n  background: #ee5511;\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  border-radius: 50%;\n}\n.eg-calendar-container .eg-calendar-box .eg-calendar-disabled {\n  color: #cccccc;\n  cursor: default;\n}\n.eg-calendar-box {\n  background: #ffffff;\n  width: 270px;\n}\n.eg-calendar-box .box {\n  padding: 15px;\n}\n.eg-calendar-header {\n  line-height: 28px;\n  margin-bottom: 10px;\n}\n.eg-calendar-header .options {\n  border: 1px solid #cccccc;\n  height: 28px;\n  vertical-align: middle;\n  margin-right: 30px;\n}\n.eg-calendar-header .today {\n  cursor: pointer;\n  position: relative;\n  top: 2px;\n}\n.eg-calendar-header th {\n  padding-bottom: 10px;\n}\n.eg-calendar-header .title {\n  width: 100%;\n  height: 100%;\n  cursor: pointer;\n}\n.eg-calendar-header .title:hover {\n  background: #f0f0f0;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-calendar-body .calendar {\n  width: 100%;\n  text-align: center;\n}\n.eg-calendar-body .calendar tr.body td,\n.eg-calendar-body .calendar tr.head td {\n  height: 25px;\n  vertical-align: middle;\n}\n.eg-calendar-body .calendar tr.body td span,\n.eg-calendar-body .calendar tr.head td span {\n  width: 30px;\n  height: 30px;\n  line-height: 30px;\n  display: inline-block;\n}\n.eg-calendar-body .calendar tr.body td span:hover:not(.eg-calendar-selected):not(.eg-calendar-disabled):not(.no-hover),\n.eg-calendar-body .calendar tr.head td span:hover:not(.eg-calendar-selected):not(.eg-calendar-disabled):not(.no-hover) {\n  background: #f0f0f0;\n  -webkit-border-radius: 50%;\n  -moz-border-radius: 50%;\n  border-radius: 50%;\n}\n.eg-calendar-body .calendar .month-list span {\n  display: inline-block;\n  zoom: 1;\n  width: 25%;\n  text-align: center;\n  height: 55px;\n  line-height: 55px;\n}\n.eg-calendar-body .calendar .month-list span i {\n  font-style: normal;\n  padding: 4px 9px;\n  -webkit-border-radius: 500px;\n  -moz-border-radius: 500px;\n  border-radius: 500px;\n  cursor: pointer;\n}\n.eg-calendar-body .calendar .month-list span i:hover:not(.eg-selected) {\n  background: #f0f0f0;\n}\n.eg-calendar-body .old {\n  color: #cccccc;\n}\n.eg-calendar-body .head {\n  color: #999;\n}\n.eg-icon-prev:hover,\n.eg-icon-next:hover {\n  background: #f0f0f0;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-table {\n  background: #ffffff;\n  border-spacing: 0px;\n  border-collapse: separate;\n  font-size: 14px;\n  width: 100%;\n}\n.eg-table tr {\n  /*td[rowspan]{\n      border-bottom: 1px solid @tr-split-line;\n    }*/\n}\n.eg-table tr.eg-tr-split td {\n  border-bottom: 1px solid #dddddd;\n}\n.eg-table tr td,\n.eg-table tr th {\n  padding: 10px 15px;\n  text-align: left;\n  position: relative;\n}\n.eg-table tr th {\n  color: #999;\n}\n.eg-table tr td {\n  color: #333333;\n}\n.eg-table thead th {\n  border-bottom: 2px solid #dddddd;\n}\n.eg-table tbody tr:nth-of-type(2n) {\n  background: #f7f7f7;\n}\n/**面板*/\n.eg-panel {\n  margin-bottom: 20px;\n  background-color: #fff;\n  border: 1px solid #dddddd;\n  border-radius: 4px;\n  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);\n}\n.eg-panel .eg-panel-header {\n  padding: 10px 15px;\n  border-bottom: 1px solid transparent;\n  border-radius: 3px 3px 0px 0px;\n  color: #333;\n  background-color: #f8f7f7;\n  border-color: #ddd;\n}\n.eg-panel .eg-panel-footer {\n  background-color: #f8f7f7;\n  border-top: 1px solid #ddd;\n  border-radius: 0px 0px 3px 3px;\n}\n/**添加padding*/\n.eg-panel-padding {\n  padding: 10px 15px;\n}\n.eg-tab-item {\n  cursor: pointer;\n  display: inline-block;\n  min-width: 100px;\n  box-sizing: border-box;\n  padding: 5px 15px 9px 15px;\n  text-align: center;\n  border-bottom: 1px solid #dddddd;\n}\n.eg-tab-item:hover {\n  text-decoration: none;\n}\n.eg-tab-item.eg-tab-active {\n  color: #f25300;\n  cursor: default;\n}\n.eg-tabset-tab-list {\n  position: relative;\n}\n.eg-tabset-slider-container {\n  width: 100%;\n  height: 4px;\n  position: absolute;\n  bottom: 0px;\n}\n.eg-tabset-slider-container .eg-tabset-slider {\n  border-bottom: solid 4px #f25300;\n  height: 0px;\n  width: 85px;\n  position: absolute;\n  left: 0;\n  top: 0;\n  z-index: 1;\n  -webkit-transition: all cubic-bezier(0.2, 0.2, 0.45, 1.5) 0.44s;\n  -moz-transition: all cubic-bezier(0.2, 0.2, 0.45, 1.5) 0.44s;\n  -ms-transition: all cubic-bezier(0.2, 0.2, 0.45, 1.5) 0.44s;\n  transition: all cubic-bezier(0.2, 0.2, 0.45, 1.5) 0.44s;\n}\n.eg-select-container {\n  width: 300px;\n  position: relative;\n  display: inline-block;\n  margin-right: 15px;\n  /*箭头*/\n}\n.eg-select-container ul {\n  background: #fff;\n  visibility: hidden;\n  position: absolute;\n  width: inherit;\n  top: 39px;\n  left: -999rem;\n  transition: height 400ms;\n  -webkit-transition: height 400ms;\n  -moz-transition: height 400ms;\n  -ms-transition: height 400ms;\n  -o-transition: height 400ms;\n  border: #dadbdd solid 1px;\n  border-radius: 0px 0px 4px 4px;\n  -moz-border-radius: 0px 0px 4px 4px;\n  -webkit-border-radius: 0px 0px 4px 4px;\n  -ms-border-radius: 0px 0px 4px 4px;\n  -o-border-radius: 0px 0px 4px 4px;\n  max-height: 150px;\n  overflow: auto;\n}\n.eg-select-container ul li {\n  text-indent: 10px;\n  padding: 5px 0;\n  cursor: pointer;\n}\n.eg-select-container ul li:hover,\n.eg-select-container ul li:focus {\n  color: #ee5511;\n}\n.eg-select-container ul li.active {\n  color: #ee5511;\n}\n.eg-select-container ul.height-none {\n  left: 0;\n  visibility: visible;\n  overflow: hidden;\n  transition: height 400ms;\n  -webkit-transition: height 400ms;\n  -moz-transition: height 400ms;\n  -ms-transition: height 400ms;\n  -o-transition: height 400ms;\n}\n.eg-select-container .eg-select-show {\n  visibility: visible;\n  left: 0px;\n}\n.eg-select-container .eg-select-arrow-up,\n.eg-select-container .eg-select-arrow-down {\n  position: absolute;\n  right: 10px;\n  display: inline-block;\n  cursor: pointer;\n  z-index: 10;\n  border-top: 5px solid transparent;\n  border-right: 5px solid transparent;\n  border-left: 5px solid #bbbbbb;\n  border-bottom: 5px solid #bbbbbb;\n}\n.eg-select-container .eg-select-arrow-down {\n  transform: rotate(-45deg);\n  -webkit-transform: rotate(-45deg);\n  -moz-transform: rotate(-45deg);\n  -ms-transform: rotate(-45deg);\n  -o-transform: rotate(-45deg);\n  top: 12px;\n}\n.eg-select-container .eg-select-arrow-up {\n  transform: rotate(135deg);\n  -webkit-transform: rotate(135deg);\n  -moz-transform: rotate(135deg);\n  -ms-transform: rotate(135deg);\n  -o-transform: rotate(135deg);\n  top: 13px;\n}\n.eg-tooltip-container {\n  display: inline-block;\n  position: relative;\n}\n.eg-tooltip-container .eg-tooltip-wraper {\n  visibility: hidden;\n  display: block;\n  position: absolute;\n  left: -999rem;\n  min-width: 90px;\n  max-width: 150px;\n  z-index: 9001;\n  margin: 5px 0;\n  background: rgba(0, 0, 0, 0.6);\n  color: #fff;\n  font-size: 13px;\n  text-align: left;\n  border-radius: 3px;\n  -moz-border-radius: 3px;\n  -webkit-border-radius: 3px;\n  -ms-border-radius: 3px;\n  -o-border-radius: 3px;\n}\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip-content {\n  text-align: center;\n  padding: 5px;\n  color: #fff;\n  min-width: 90px;\n  max-width: 100px;\n}\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip-arrow-down,\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip-arrow-top,\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip-arrow-left,\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip-arrow-right {\n  border-style: solid;\n  position: absolute;\n  height: 0;\n  width: 0;\n  line-height: 0;\n  opacity: 0.6;\n}\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip-arrow-down {\n  border-color: transparent transparent #000 transparent;\n  left: 43%;\n  top: -5px;\n  border-width: 0 5px 5px;\n}\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip-arrow-top {\n  border-color: #000 transparent transparent transparent;\n  left: 43%;\n  bottom: -5px;\n  border-width: 5px 5px 0;\n}\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip-arrow-left {\n  border-color: transparent transparent transparent #000;\n  right: -5px;\n  top: 43%;\n  border-width: 5px 0 5px 5px;\n}\n.eg-tooltip-container .eg-tooltip-wraper .eg-tooltip-arrow-right {\n  border-color: transparent #000 transparent transparent;\n  left: -10px;\n  top: 43%;\n  border-width: 5px;\n}\n.eg-tooltip-container .eg-tooltip-show {\n  visibility: visible;\n}\n.eg-marquee-container {\n  position: relative;\n  display: inline-block;\n  width: 380px;\n  height: auto;\n  padding: 0px 0px;\n  border: #cc3333 2px solid;\n  overflow: hidden;\n  border-radius: 3px;\n  -moz-border-radius: 3px;\n  -webkit-border-radius: 3px;\n  -ms-border-radius: 3px;\n  -o-border-radius: 3px;\n  background: #fff;\n}\n.eg-marquee-container .eg-marquee-new-tip {\n  position: absolute;\n  top: -26px;\n  left: -24px;\n  z-index: 90001;\n  background: #4fd564;\n  color: #fff;\n  width: 50px;\n  height: 61px;\n  transform: rotate(45deg);\n  -webkit-transform: rotate(45deg);\n  -moz-transform: rotate(45deg);\n  -ms-transform: rotate(45deg);\n  -o-transform: rotate(45deg);\n}\n.eg-marquee-container .eg-marquee-new-tip .eg-marquee-new {\n  display: inline-block;\n  position: relative;\n  top: 20px;\n  left: 31px;\n  transform: rotate(-45deg);\n  -webkit-transform: rotate(-45deg);\n  -moz-transform: rotate(-45deg);\n  -ms-transform: rotate(-45deg);\n  -o-transform: rotate(-45deg);\n}\n.eg-marquee-container .eg-marquee-check {\n  position: absolute;\n  right: 0px;\n  top: 0px;\n  z-index: 90001;\n}\n.eg-marquee-container img {\n  width: 100%;\n  height: auto;\n}\n.eg-marquee-container .eg-marquee-title {\n  color: #333333;\n  font-size: 16px;\n  font-weight: bolder;\n  line-height: 17px;\n  margin: 15px 10px 5px 10px;\n}\n.eg-marquee-container .eg-marquee-content {\n  color: #999;\n  font-size: 14px;\n  line-height: 15px;\n  margin: 10px 10px;\n}\n.eg-marquee-container .eg-marquee-tips {\n  position: relative;\n  color: #999;\n  font-size: 14px;\n  margin: 15px 10px 5px 10px;\n}\n.eg-marquee-container .eg-bars {\n  position: relative;\n  display: inline-block;\n  background: #999;\n  padding: 5px;\n  margin-right: 10px;\n}\n.eg-marquee-container .eg-bars:before,\n.eg-marquee-container .eg-bars:after {\n  position: absolute;\n  content: '';\n  display: inline-block;\n}\n.eg-marquee-container .eg-bars:before {\n  top: 0px;\n  left: 10px;\n  border-width: 5px;\n  border-style: dashed dashed solid;\n  border-color: transparent transparent transparent #999;\n}\n.eg-marquee-container .eg-bars:after {\n  top: 4px;\n  left: 7.5px;\n  z-index: 10;\n  border: 1.5px solid #fff;\n  border-radius: 5px;\n  -moz-border-radius: 5px;\n  -webkit-border-radius: 5px;\n  -ms-border-radius: 5px;\n  -o-border-radius: 5px;\n}\n.eg-input-checkboxs {\n  position: relative;\n  height: 35px;\n  top: -5px;\n  width: 35px;\n  display: inline-block;\n}\n.eg-input-checkboxs input[type=\"checkbox\"] {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  cursor: pointer;\n  pointer-events: all;\n  opacity: 0;\n  z-index: 2;\n  left: 0;\n}\n.eg-input-checkboxs .box {\n  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;\n  float: left;\n  position: relative;\n  display: block;\n  width: 16px;\n  margin-right: 10px;\n  margin-left: 0;\n  height: 24px;\n}\n.eg-input-checkboxs .box .checkbox {\n  width: 35px;\n  height: 35px;\n  border: 1px solid #999;\n  position: relative;\n  top: 5px;\n  left: 1px;\n  border-radius: 2px;\n  -moz-border-radius: 2px;\n  -webkit-border-radius: 2px;\n  -ms-border-radius: 2px;\n  -o-border-radius: 2px;\n  background: #ffffff;\n}\n.eg-input-checkboxs .box .checkbox .round {\n  display: none;\n}\n.eg-input-checkboxs label {\n  float: left;\n  position: relative;\n  display: block;\n  line-height: 24px;\n}\n.eg-input-checkboxs-active .box .checkbox {\n  background: #ee5511;\n  border-color: #ee5511;\n}\n.eg-input-checkboxs-active .box .eg-icon-tick:before {\n  height: 9px;\n  width: 2px;\n  left: 11px;\n  top: 13px;\n}\n.eg-input-checkboxs-active .box .eg-icon-tick:after {\n  height: 17px;\n  width: 2px;\n  left: 19px;\n  top: 6px;\n}\n.eg-input-checkboxs-disabled .box .checkbox {\n  background: #eeeeee;\n  color: #999;\n  border-color: #cccccc;\n}\n.eg-input-checkboxs-disabled .box .eg-icon-tick:before {\n  background-color: #fefefe;\n}\n.eg-input-checkboxs-disabled .box .eg-icon-tick:after {\n  background-color: #fefefe;\n}\n.eg-input-checkboxs-disabled label {\n  color: #999;\n}\n.eg-input-checkboxs-disabled .box .checkbox {\n  background: #cccccc;\n  color: #999;\n}\n.eg-list .eg-item {\n  background-color: #ffffff;\n  color: #333333;\n  position: relative;\n  display: block;\n  padding: 10px 15px;\n  border-bottom: 1px solid #dddddd;\n  font-size: 14px;\n}\n.eg-list .eg-item:last-child {\n  border-bottom: none;\n}\n/**按钮组*/\n.eg-validate {\n  position: relative;\n}\n.eg-validate .eg-validate-error {\n  outline: none;\n  border-color: #dd514c;\n}\n.eg-validate .eg-validate-tips {\n  display: none;\n  position: absolute;\n  left: -9999rem;\n  padding: 10px 10px;\n  z-index: 9010;\n  background: rgba(255, 255, 255, 0.8);\n  min-width: 300px;\n  text-align: left;\n  -webkit-border-radius: 4px;\n  -moz-border-radius: 4px;\n  border-radius: 4px;\n}\n.eg-validate .eg-validate-tips i {\n  border-radius: 50%;\n  display: inline-block;\n  background: #dd514c;\n  width: 18px;\n  height: 18px;\n  left: 0;\n  float: left;\n  position: relative;\n  margin-right: 8px;\n}\n.eg-validate .eg-validate-tips i:before {\n  height: 2px;\n  width: 2px;\n  background: #fff;\n  left: 8px;\n  top: 13px;\n  position: absolute;\n  content: \"\";\n  opacity: 0.9;\n}\n.eg-validate .eg-validate-tips i:after {\n  height: 8px;\n  width: 2px;\n  background: #fff;\n  left: 8px;\n  top: 4px;\n  position: absolute;\n  content: \"\";\n}\n.eg-validate .eg-validate-tips.bottom {\n  background: rgba(51, 51, 51, 0.8);\n  color: #fff;\n}\n", ""]);
 
 	// exports
 
@@ -716,7 +722,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 	  Copyright (c) 2015 Jed Watson.
 	  Licensed under the MIT License (MIT), see
 	  http://jedwatson.github.io/classnames
@@ -757,9 +763,9 @@ return /******/ (function(modules) { // webpackBootstrap
 			module.exports = classNames;
 		} else if (true) {
 			// register as 'classnames', consistent with npm package name
-			!(__WEBPACK_AMD_DEFINE_RESULT__ = function () {
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
 				return classNames;
-			}.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 			window.classNames = classNames;
 		}
@@ -1166,8 +1172,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @extends Component
 	 * @constructor
 	 * @since 0.1.0
-	 * @demo src/button.js {js}
-	 * @demo button.html {html}
+	 * @demo button.js {js}
 	 * @show true
 	 * */
 
@@ -1342,8 +1347,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @extends Component
 	 * @constructor
 	 * @since 0.1.0
-	 * @demo src/button.js {js}
-	 * @demo button.html {html}
+	 * @demo button.js {js}
 	 * @show true
 	 * */
 
@@ -1388,15 +1392,36 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        _Component.call(this, props, context);
 	        //this.classNameMixin = new ClassNameMixin(this.props);
+
+	        this.state = {
+	            active: this.props.active
+	        };
 	    }
 
+	    ButtonGroup.prototype.mouseDownHandler = function mouseDownHandler(e) {
+	        this.setState({
+	            active: e.target.innerHTML
+	        });
+	    };
+
 	    ButtonGroup.prototype.render = function render() {
+	        var _this = this;
+
 	        var Component = this.props.componentTag;
+
+	        var options = _react2['default'].Children.map(this.props.children, function (option) {
+
+	            var opt = _react2['default'].cloneElement(option, {
+	                onMouseDown: _this.mouseDownHandler.bind(_this),
+	                active: _this.state.active == option.props.children
+	            });
+	            return opt;
+	        }, this);
 
 	        return _react2['default'].createElement(
 	            Component,
 	            _extends({}, this.props, { className: _classnames2['default'](this.getClassNamesForArguments('btn-group'), 'clearfix', this.getClassNames(this.props)) }),
-	            this.props.children
+	            options
 	        );
 	    };
 
@@ -1410,6 +1435,91 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 38 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Created by mac on 15/9/7.
+	 */
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(30);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _classnames = __webpack_require__(31);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var _utilsClassNameMixin = __webpack_require__(32);
+
+	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+
+	var _InputJs = __webpack_require__(39);
+
+	var _InputJs2 = _interopRequireDefault(_InputJs);
+
+	/**
+	 * 多选按钮组组件
+	 * @class CheckboxGroup
+	 * @module form
+	 * @extends Component
+	 * @constructor
+	 * @since 0.1.0
+	 * @demo input.js {js}
+	 * @show true
+	 * */
+
+	var CheckboxGroup = (function (_Component) {
+	    _inherits(CheckboxGroup, _Component);
+
+	    _createClass(CheckboxGroup, null, [{
+	        key: 'propTypes',
+	        value: {},
+	        enumerable: true
+	    }]);
+
+	    function CheckboxGroup(props, context) {
+	        _classCallCheck(this, _CheckboxGroup);
+
+	        _Component.call(this, props, context);
+	    }
+
+	    CheckboxGroup.prototype.componentDidMount = function componentDidMount() {};
+
+	    CheckboxGroup.prototype.render = function render() {
+
+	        return _react2['default'].createElement(
+	            'div',
+	            { style: this.props.style,
+	                className: _classnames2['default'](this.getClassName('input-group'), this.props.className || '') },
+	            _react2['default'].createElement(
+	                'div',
+	                { className: this.getClassName('input-group-container') },
+	                this.props.children
+	            )
+	        );
+	    };
+
+	    var _CheckboxGroup = CheckboxGroup;
+	    CheckboxGroup = _utilsClassNameMixin2['default'](CheckboxGroup) || CheckboxGroup;
+	    return CheckboxGroup;
+	})(_react.Component);
+
+	exports['default'] = CheckboxGroup;
+	module.exports = exports['default'];
+
+/***/ },
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1439,7 +1549,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _classnames11 = _interopRequireDefault(_classnames10);
 
 	/**
-	 * input组件
+	 * input表单组件<br />
+	 * 通过type可以生成radio、checkbox、input等元素标签
+	 * @class Input
+	 * @module form
+	 * @extends Component
+	 * @constructor
+	 * @since 0.1.0
+	 * @demo input.js{js}
+	 * @show true
 	 * */
 
 	var Input = (function (_Component) {
@@ -1454,8 +1572,23 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        //onClickCallback:PrgiopTypes.fun
 	        value: {
+	            /**
+	             * 生成不同的元素标签
+	             * @property type
+	             * @type String
+	             * */
 	            type: 'text',
+	            /**
+	             * 默认输入提示
+	             * @property autoComplete
+	             * @type String
+	             * */
 	            autoComplete: 'off',
+	            /**
+	             * type为radio或checkbox时，需要显示的标签信息
+	             * @property label
+	             * @type String
+	             * */
 	            label: '请选择'
 	        },
 	        enumerable: true
@@ -1578,8 +1711,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 
 	    Input.prototype.render = function render() {
+	        var type = this.props.type;
+
+	        type = type.toLowerCase();
+
+	        if (type != 'radio' && type != 'checkbox') {
+	            type = 'text';
+	        }
 	        //const {name,id,value,placeholder,autocomplete,disabled,type} = this.props;
-	        return this[this.props.type.toLowerCase()]();
+	        return this[type]();
 	    };
 
 	    var _Input = Input;
@@ -1591,7 +1731,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 39 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1617,7 +1757,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _InputJs = __webpack_require__(38);
+	var _classnames = __webpack_require__(31);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var _utilsClassNameMixin = __webpack_require__(32);
+
+	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+
+	var _InputJs = __webpack_require__(39);
 
 	var _InputJs2 = _interopRequireDefault(_InputJs);
 
@@ -1628,8 +1776,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @extends Component
 	 * @constructor
 	 * @since 0.1.0
-	 * @demo src/input.js {js}
-	 * @demo input.html {html}
+	 * @demo input.js {js}
 	 * @show true
 	 * */
 
@@ -1662,7 +1809,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }]);
 
 	    function RadioGroup(props, context) {
-	        _classCallCheck(this, RadioGroup);
+	        _classCallCheck(this, _RadioGroup);
 
 	        _Component.call(this, props, context);
 
@@ -1715,11 +1862,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return _react2['default'].createElement(
 	            'div',
 	            { style: this.props.style,
-	                className: this.props.className || '' },
-	            options
+	                className: _classnames2['default'](this.getClassName('input-group'), this.props.className || '') },
+	            _react2['default'].createElement(
+	                'div',
+	                { className: this.getClassName('input-group-container') },
+	                options
+	            )
 	        );
 	    };
 
+	    var _RadioGroup = RadioGroup;
+	    RadioGroup = _utilsClassNameMixin2['default'](RadioGroup) || RadioGroup;
 	    return RadioGroup;
 	})(_react.Component);
 
@@ -1727,7 +1880,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 40 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1766,8 +1919,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @extends Component
 	 * @constructor
 	 * @since 0.1.0
-	 * @demo src/label.js {js}
-	 * @demo label.html {html}
+	 * @demo label.js {js}
 	 * @show true
 	 * */
 
@@ -1836,7 +1988,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 41 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1881,8 +2033,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @extends Component
 	 * @constructor
 	 * @since 0.1.0
-	 * @demo src/crumb.js{js}
-	 * @demo crumb.html
+	 * @demo crumb.js{js}
 	 * @show true
 	 * */
 
@@ -1962,7 +2113,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 42 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1989,7 +2140,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _InputJs = __webpack_require__(38);
+	var _InputJs = __webpack_require__(39);
 
 	var _InputJs2 = _interopRequireDefault(_InputJs);
 
@@ -2012,17 +2163,50 @@ return /******/ (function(modules) { // webpackBootstrap
 	/**
 	 * 搜索按钮组件
 	 * 参数： id/callBack/placeholder 均可不传
+	 * @class Search
+	 * @module ui
+	 * @constructor
+	 * @since 0.1.0
+	 * @demo search.js{js}
+	 * @show true
 	 * @class Select
+	 * */
+	/**
+	 * tips组件
+	 * 只是从tooltipPanel获得props渲染，其他操作均在tooltipPanel中
+	 * @class Tooltip
+
 	 * */
 
 	var Search = (function (_Component) {
 	    _inherits(Search, _Component);
 
 	    _createClass(Search, null, [{
+	        key: 'propType',
+	        value: {
+	            /**
+	             *
+	             * @property id
+	             * @type String
+	             * @default ''
+	             * */
+	            id: _react.PropTypes.string,
+	            /**
+	             * 回调方法
+	             * @property callback
+	             * @type Function
+	             * @default null
+	             * */
+	            callback: _react.PropTypes.func,
+	            classPrefix: _react.PropTypes.string,
+	            componentTag: _react.PropTypes.string
+	        },
+	        enumerable: true
+	    }, {
 	        key: 'defaultProps',
 	        value: {
 	            id: '1',
-	            callBack: null,
+	            callback: null,
 	            placeholder: '请输入',
 	            classPrefix: 'search', //类名前前缀
 	            componentTag: 'div'
@@ -2038,6 +2222,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	            value: this.props.value
 	        };
 	    }
+
+	    /**
+	     * 渲染元素
+	     * @method render
+	     * @return {ReactElement}
+	     * */
 
 	    Search.prototype.render = function render() {
 	        return _react2['default'].createElement(
@@ -2077,12 +2267,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        });
 	    };
 
-	    Search.prototype.keyIn = function keyIn(event) {
-	        if (event.keyCode == 13) {
-	            this.changeValue();
-	        }
-	    };
-
 	    /**
 	     * @method submit search
 	     * @param none
@@ -2091,7 +2275,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    Search.prototype.submitSearch = function submitSearch() {
 	        var val = this.state.value;
-	        this.props.callBack && this.props.callBack(val);
+	        this.props.callback && this.props.callback(val);
 	    };
 
 	    Search.prototype.keyIn = function keyIn(event) {
@@ -2109,7 +2293,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 43 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2118,6 +2302,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	exports.__esModule = true;
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
@@ -2135,11 +2321,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames2 = __webpack_require__(31);
+	var _classnames = __webpack_require__(31);
 
-	var _classnames3 = _interopRequireDefault(_classnames2);
+	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _InputJs = __webpack_require__(38);
+	var _InputJs = __webpack_require__(39);
 
 	var _InputJs2 = _interopRequireDefault(_InputJs);
 
@@ -2157,14 +2343,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	/**
 	 * 下拉选择框组件。
-	 * 有input参数可以自由输入，否则不在列表中的输入改变为第一个item
+	 * 有input参数可以自由输入，否则不在列表中的输入值将改变为第一个item
 	 * @Class Select
 	 * @Module form
-	 * @extends Coponent
+	 * @constructor
+	 * @extends Component
 	 * @since 0.1.0
-	 * @demo src/select.js{js}
-	 * @demo select.html{html}
-	 * @show true
+	 * @demo select.js {js}
 	 * */
 
 	var Select = (function (_Component) {
@@ -2211,18 +2396,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	        _classCallCheck(this, _Select);
 
 	        _Component.call(this, props, context);
+	        this.heightTag = 0;
+	        var keys = this.getDefaultKey(this.props.keys);
 	        this.state = {
 	            show: this.props.show,
 	            /**
 	             * item content文本值
 	             * @type {String}
 	             * */
-	            value: this.props.value,
+	            //value:this.props.keys == ''?this.props.value:this.props.children[this.props.keys].props.children,
+	            value: keys,
 	            /**
 	             * item value值
 	             * @type {String}
 	             * */
-	            key: this.props.key,
+	            keys: this.props.keys,
 	            /**
 	             * 是否可以自由输入
 	             * @type {Boolean}
@@ -2230,6 +2418,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	            input: this.props.input
 	        };
 	    }
+
+	    Select.prototype.getDefaultKey = function getDefaultKey(keys) {
+	        var deKey = this.props.value;
+	        if (keys != '') {
+	            this.props.children.forEach(function (item, index) {
+	                if (item.props.value == keys) {
+	                    deKey = item.props.children;
+	                }
+	            });
+	        }
+	        return deKey;
+	    };
 
 	    /**
 	     * 第一次渲染完成后执行,为document添加点击监听事件，判断是否关闭ul
@@ -2239,7 +2439,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    Select.prototype.componentDidMount = function componentDidMount() {
 	        var _this = this;
-	        var selectContair = ReactDOM.findDOMNode(this.refs.selectContair);
+	        var selectContair = _react2['default'].findDOMNode(this.refs.selectContair);
+	        var selectUl = _react2['default'].findDOMNode(this.refs.selectUl);
 	        document.addEventListener('click', function (e) {
 	            if (_this.isParent(e.target, selectContair)) {
 	                //console.dir('不要动');
@@ -2249,6 +2450,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    }
 	                }
 	        }, false);
+	        this.heightTag = selectUl.offsetHeight;
+	        selectUl.style.height = '0';
+	        if (!this.state.show) {
+	            this.removeClass(selectUl, 'height-none');
+	        }
+	    };
+
+	    Select.prototype.componentDidUpdate = function componentDidUpdate() {
+	        var selectUl = _react2['default'].findDOMNode(this.refs.selectUl);
+	        //this.heightTag = selectUl.offsetHeight;
+	        var length = selectUl.children.length;
+	        if (this.state.show) {
+	            if (length < 5) {
+	                selectUl.style.height = length * 29 + 2 + 'px';
+	            } else {
+	                selectUl.style.height = '150px';
+	            }
+	        } else {
+	            selectUl.style.height = '0';
+	            clearTimeout(this.timer);
+	            this.timer = setTimeout((function () {
+	                this.removeClass(selectUl, 'height-none');
+	            }).bind(this), 400);
+	        }
 	    };
 
 	    /**
@@ -2280,6 +2505,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            this.setState({
 	                show: true
 	            });
+	            _react2['default'].findDOMNode(this.refs.selectUl).style.height = this.heightTag + 'px';
 	        }
 	    };
 
@@ -2293,6 +2519,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.setState({
 	            show: !this.state.show
 	        });
+	        if (this.state.show) {
+	            _react2['default'].findDOMNode(this.refs.selectUl).style.height = '0';
+	        } else {
+	            _react2['default'].findDOMNode(this.refs.selectUl).style.height = this.heightTag + 'px';
+	        }
 	    };
 
 	    /**
@@ -2331,13 +2562,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	            this.getTrueVal();
 	        }
 	        var val = this.state.value;
-	        var key = this.state.key;
+	        var key = this.state.keys;
 	        if (this.state.show) {
-	            this.setState({
+	            /*this.setState({
 	                show: false
-	            });
+	            })*/
+	            this.hideUl();
 	        }
-	        console.log(ReactDOM.findDOMNode(this.refs.test).value);
 	        this.props.callback && this.props.callback(val, key);
 	    };
 
@@ -2352,7 +2583,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        if (!target) {
 	            this.setState({
 	                value: this.props.children[0].props.children,
-	                key: this.props.children[0].props.value,
+	                keys: this.props.children[0].props.value,
 	                autoVal: this.props.children[0].props.children
 	            });
 	        }
@@ -2385,12 +2616,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * */
 
 	    Select.prototype.handlerValue = function handlerValue(event) {
-	        //console.log(event.target.value);
 	        var val = event.target.value;
 	        this.setState({
 	            value: val,
 	            autoVal: val
 	        });
+	        this.showUl();
 	    };
 
 	    /**
@@ -2401,14 +2632,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * */
 
 	    Select.prototype.chooseItem = function chooseItem(event) {
-	        var ulChildren = ReactDOM.findDOMNode(this.refs.selectUl).children;
-	        //let inputObj = ReactDOM.findDOMNode(this.refs.select);
+	        var ulChildren = _react2['default'].findDOMNode(this.refs.selectUl).children;
 	        this.removeAllActive(ulChildren);
 	        event.target.classList.add('active');
+	        this.hideUl();
 	        this.setState({
-	            show: !this.state.show,
+	            //show: !this.state.show,
 	            value: event.target.textContent,
-	            key: event.target.value
+	            keys: event.target.value
 	        });
 	        //inputObj.focus();
 	    };
@@ -2429,7 +2660,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	                if (target) {
 	                    _this2.setState({
 	                        value: item.textContent,
-	                        key: item.value
+	                        keys: item.value,
+	                        autoVal: item.textContent
 	                    });
 	                } else {
 	                    item.classList.remove('active');
@@ -2446,9 +2678,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    * */
 
 	    Select.prototype.keyIn = function keyIn(event) {
-	        var selectUl = ReactDOM.findDOMNode(this.refs.selectUl);
-	        var ulChildren = ReactDOM.findDOMNode(this.refs.selectUl).children;
+	        var selectUl = _react2['default'].findDOMNode(this.refs.selectUl);
+	        var ulChildren = _react2['default'].findDOMNode(this.refs.selectUl).children;
 	        var ulArrey = Array.prototype.slice.call(ulChildren);
+	        var inputObj = _react2['default'].findDOMNode(this.refs.select).children[0];
 	        var i = -1;
 	        var obj = ulChildren[0];
 	        if (event.keyCode == 40 || event.keyCode == 38) {
@@ -2456,38 +2689,35 @@ return /******/ (function(modules) { // webpackBootstrap
 	             * 当ul显示时，方向键移动起作用
 	             * 遍历寻找当前active元素的位置，并移除active
 	             * */
-	            if (this.state.show) {
-	                ulArrey.map(function (item, index) {
-	                    if (item.className.indexOf('active') > -1) {
-	                        i = index;
-	                        item.classList.remove('active');
-	                    }
-	                });
-	                if (event.keyCode == 40) {
-	                    /**
-	                     * 下方向键，判断active元素是否为最后一个，是则不再向下否则i+1
-	                     * */
-	                    obj = i == ulChildren.length - 1 ? ulChildren[i] : ulChildren[i + 1];
-	                } else {
-	                    /**
-	                     * 上方向键，判断active元素是否为第一个，是则不再向上否则i－1
-	                     * */
-	                    obj = i == 0 ? ulChildren[i] : ulChildren[i - 1];
+	            ulArrey.map(function (item, index) {
+	                if (item.className.indexOf('active') > -1) {
+	                    i = index;
+	                    item.classList.remove('active');
 	                }
-	                obj.classList.add('active');
+	            });
+	            if (event.keyCode == 40) {
 	                /**
-	                 * 如果active为第五个元素之前的元素，则scrollTop不变，否则每向下一个，scrollTop加30
+	                 * 下方向键，判断active元素是否为最后一个，是则不再向下否则i+1
 	                 * */
-	                selectUl.scrollTop = i < 4 ? 0 : (i - 3) * 30;
+	                obj = i == ulChildren.length - 1 ? ulChildren[i] : ulChildren[i + 1];
+	            } else {
+	                /**
+	                 * 上方向键，判断active元素是否为第一个，是则不再向上否则i－1
+	                 * */
+	                obj = i == 0 ? ulChildren[i] : ulChildren[i - 1];
 	            }
+	            obj.classList.add('active');
+	            /**
+	             * 如果active为第五个元素之前的元素，则scrollTop不变，否则每向下一个，scrollTop加30
+	             * */
+	            selectUl.scrollTop = i < 4 ? 0 : (i - 3) * 30;
 	        } else if (event.keyCode == 13) {
 	            /**
 	             * enter键，取得当前元素值
 	             * */
-	            this.setState({
-	                show: false
-	            });
+	            this.hideUl();
 	            this.removeAllActive(ulChildren, true);
+	            inputObj.blur();
 	        }
 	    };
 
@@ -2500,7 +2730,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    Select.prototype.addActive = function addActive(event) {
 	        var obj = event.target;
-	        var ulChildren = ReactDOM.findDOMNode(this.refs.selectUl).children;
+	        var ulChildren = _react2['default'].findDOMNode(this.refs.selectUl).children;
 	        this.removeAllActive(ulChildren, false);
 	        obj.classList.add('active');
 	    };
@@ -2531,14 +2761,23 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        var autoVal = this.state.autoVal == '' ? '.*' : this.state.autoVal;
 	        var reg = new RegExp(autoVal, "g");
-	        var li = _react2['default'].Children.map(this.props.children, function (item) {
+	        var li = _react2['default'].Children.map(this.props.children, function (item, index) {
 	            if (reg.test(item.props.children)) {
-	                return _react2['default'].createElement(
-	                    'li',
-	                    { value: item.props.value, onMouseOver: _this3.addActive.bind(_this3), onClick: _this3.removeActive.bind(_this3), onMouseDown: _this3.chooseItem.bind(_this3) },
-	                    item.props.children
-	                );
+	                if (_this3.state.keys == item.props.value) {
+	                    return _react2['default'].createElement(
+	                        'li',
+	                        { className: 'active', value: item.props.value, onMouseOver: _this3.addActive.bind(_this3), onMouseLeave: _this3.removeActive.bind(_this3), onMouseDown: _this3.chooseItem.bind(_this3) },
+	                        item.props.children
+	                    );
+	                } else {
+	                    return _react2['default'].createElement(
+	                        'li',
+	                        { value: item.props.value, onMouseOver: _this3.addActive.bind(_this3), onMouseLeave: _this3.removeActive.bind(_this3), onMouseDown: _this3.chooseItem.bind(_this3) },
+	                        item.props.children
+	                    );
+	                }
 	            }
+	            item.props.children;
 	        }, this);
 
 	        return li;
@@ -2562,21 +2801,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * */
 
 	    Select.prototype.renderSelect = function renderSelect() {
-	        var _classnames;
-
 	        return _react2['default'].createElement(
 	            _GridJs2['default'],
-	            { ref: 'selectContair', className: _classnames3['default'](this.getClassNamesForArguments('container')), value: this.state.value },
+	            { ref: 'selectContair', className: _classnames2['default'](this.getClassNamesForArguments('container')), value: this.state.value },
 	            _react2['default'].createElement(
 	                'select',
-	                { ref: 'test', value: this.state.key, style: { display: 'none' } },
+	                _extends({ ref: 'test' }, this.props, { defaultValue: this.state.keys, style: { display: 'none' } }),
 	                this.renderOption()
 	            ),
 	            _react2['default'].createElement(_InputJs2['default'], { ref: 'select', value: this.state.value, onClick: this.showUl.bind(this), onChange: this.handlerValue.bind(this), onKeyDown: this.keyIn.bind(this), onBlur: this.finishInput.bind(this) }),
-	            _react2['default'].createElement('i', { className: _classnames3['default'](this.getClassName('arrow-down')), onClick: this.toogleUl.bind(this) }),
+	            _react2['default'].createElement('i', { className: _classnames2['default'](this.getClassName('arrow-down')), onClick: this.toogleUl.bind(this) }),
 	            _react2['default'].createElement(
 	                'ul',
-	                { ref: 'selectUl', className: _classnames3['default'](this.getClassNamesForArguments('ul'), (_classnames = {}, _classnames[this.getClassName('show')] = this.state.show, _classnames)) },
+	                { ref: 'selectUl', className: _classnames2['default'](this.getClassNamesForArguments('ul'), this.state.show ? this.getClassName('show') : 'height-none') },
 	                this.renderLi()
 	            )
 	        );
@@ -2614,7 +2851,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 44 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2660,7 +2897,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _ColJs2 = _interopRequireDefault(_ColJs);
 
-	var _LabelJs = __webpack_require__(40);
+	var _LabelJs = __webpack_require__(41);
 
 	var _LabelJs2 = _interopRequireDefault(_LabelJs);
 
@@ -2671,8 +2908,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @extends Component
 	 * @constructor
 	 * @since 0.1.0
-	 * @demo src/label.js {js}
-	 * @demo label.html {html}
+	 * @demo label.js {js}
 	 * @show true
 	 * */
 
@@ -2794,7 +3030,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 45 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2842,13 +3078,14 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	/**
 	 * 提示组件
+	 * 类型：分为success,error,loading 三种。默认success
+	 * overalay是否显示遮罩，默认false不显示
 	 * @class Toast
 	 * @module ui
 	 * @extends Component
 	 * @constructor
 	 * @since 0.1.0
-	 * @demo src/toast.js{js}
-	 * @demo toast.html
+	 * @demo toast.js{js}
 	 * @show true
 	 * */
 
@@ -2873,10 +3110,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	             * */
 	            msg: _react.PropTypes.string,
 	            /**
-	             * tips n秒后消失 默认4秒
+	             * tips n秒后消失 默认2秒
 	             * @property seconds
 	             * @type Integer
-	             * @default 4
+	             * @default 2
 	             * */
 	            seconds: _react.PropTypes.number,
 	            /**
@@ -2908,7 +3145,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        value: {
 	            type: 'sucess-tips',
 	            msg: '保存成功',
-	            seconds: 4,
+	            seconds: 2,
 	            overlay: false,
 	            classPrefix: 'tips',
 	            componentTag: 'div'
@@ -2965,10 +3202,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.setTimeoutForClose();
 	        return _react2['default'].createElement(
 	            _GridJs2['default'],
-	            { ref: 'container', className: _classnames3['default'](this.getClassName('container'), (_classnames = {}, _classnames['fadein'] = this.state.show, _classnames['fadeout'] = this.flag ? false : !this.state.show, _classnames)) },
+	            { ref: 'container', className: _classnames3['default'](this.getClassName(this.props.overlay ? 'container' : 'wapper'), (_classnames = {}, _classnames['fadein'] = this.state.show, _classnames['fadeout'] = this.flag ? false : !this.state.show, _classnames)) },
 	            !this.flag && !this.state.show ? this.displayNone() : null,
-	            this.toast(),
-	            this.showOverlay(this.props.overlay)
+	            this.toast()
 	        );
 	    };
 
@@ -2980,23 +3216,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var _this = this;
 	        clearTimeout(this.timer);
 	        this.timer = setTimeout((function () {
-	            this.removeClass(ReactDOM.findDOMNode(_this.refs.container), 'fadeout');
+	            this.removeClass(_react2['default'].findDOMNode(_this.refs.container), 'fadeout');
 	        }).bind(this), 400);
-	    };
-
-	    /**
-	     * 是否展示遮罩层
-	     * @method showOverlay
-	     * @param target {Boolean}
-	     * return {ReactElement}
-	     * */
-
-	    Toast.prototype.showOverlay = function showOverlay(target) {
-	        if (target) {
-	            return _react2['default'].createElement(_GridJs2['default'], { className: _classnames3['default'](this.getClassNamesForArguments('overlay'), 'clearfix') });
-	        } else {
-	            return _react2['default'].createElement(_GridJs2['default'], null);
-	        }
 	    };
 
 	    /**
@@ -3062,7 +3283,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 46 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3097,8 +3318,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @extends Component
 	 * @requires React classnames
 	 * @since 0.1.0
-	 * @demo src/paging.js {js}
-	 * @demo paging.html {html}
+	 * @demo paging.js {js}
 	 * @show true
 	 * @author min.xiao@dianping.com
 	 * */
@@ -3143,7 +3363,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	             * */
 	            activeClass: _react.PropTypes.string,
 	            classPrefix: _react.PropTypes.string,
-	            componentTag: _react.PropTypes.string
+	            componentTag: _react.PropTypes.string,
+	            /**
+	             * 开启选择每页显示数量选项
+	             * @property showItemsNumber
+	             * @type Boolean
+	             * */
+	            showItemsNumber: _react.PropTypes.bool
 	        },
 	        enumerable: true
 	    }, {
@@ -3153,7 +3379,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	            currentPage: 1,
 	            pageSize: 20,
 	            classPrefix: 'paging',
-	            componentTag: 'div'
+	            componentTag: 'div',
+	            /**
+	             * 跟showItemsNumber一起使用 arguments{pageSize}
+	             * @property loadPageCallback
+	             * */
+	            loadPageCallback: function loadPageCallback() {
+	                console.warn('Is not defined loadPageCallback');
+	            }
 	        },
 
 	        /**
@@ -3191,7 +3424,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	             * 当前页
 	             * @type Integer
 	             * */
-	            currentPage: this.props.currentPage
+	            currentPage: this.props.currentPage,
+	            defaultNumber: this.props.pageSize
 	        };
 	    }
 
@@ -3348,6 +3582,43 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return htmlList;
 	    };
 
+	    Paging.prototype.changePageSizeHandler = function changePageSizeHandler(e) {
+	        var val = e.target.value;
+	        //this.setState({
+	        //    defaultNumber:val*1
+	        //});
+	        var loadPageCallback = this.props.loadPageCallback;
+
+	        loadPageCallback && loadPageCallback(val);
+	    };
+
+	    Paging.prototype.accordingNumber = function accordingNumber() {
+	        var opts = [],
+	            num = 10;
+
+	        for (var i = 1; i < 11; i++) {
+	            opts.push(_react2['default'].createElement(
+	                'option',
+	                { value: num * i },
+	                num * i
+	            ));
+	        }
+
+	        return _react2['default'].createElement(
+	            'span',
+	            { style: {
+	                    marginRight: '20px'
+	                } },
+	            '每页显示  ',
+	            _react2['default'].createElement(
+	                'select',
+	                { defaultValue: this.state.defaultNumber, onChange: this.changePageSizeHandler.bind(this) },
+	                opts
+	            ),
+	            '  页'
+	        );
+	    };
+
 	    /**
 	     * @method render
 	     * @return {ReactElement}
@@ -3357,10 +3628,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var _props2 = this.props;
 	        var Component = _props2.componentTag;
 	        var activeClass = _props2.activeClass;
+	        var showItemsNumber = _props2.showItemsNumber;
 
 	        return _react2['default'].createElement(
 	            Component,
 	            { className: _classnames3['default'](this.getClassName('container')) },
+	            showItemsNumber ? this.accordingNumber() : null,
 	            this.goto(),
 	            _react2['default'].createElement(
 	                'span',
@@ -3388,7 +3661,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 47 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3423,8 +3696,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @extends Component
 	 * @constructor
 	 * @since 0.1.0
-	 * @demo src/calendar.js {js}
-	 * @demo calendar.html {html}
+	 * @demo calendar.js {js}
 	 * @show true
 	 * */
 
@@ -3668,6 +3940,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	            selectedDate: this.today,
 	            currentDate: this.today
 	        });
+	        this.switchWindow(0);
+	        // this.dateClick(`${this.today.getFullYear()}/${this.getMonth(this.today.getMonth() )}/${this.today.getDate()}`);
 	    };
 
 	    Calendar.prototype.isParent = function isParent(obj, parentObj) {
@@ -3951,7 +4225,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	                    _react2['default'].createElement(
 	                        'div',
 	                        { className: 'eg-calendar-body' },
-	                        this[windowType]()
+	                        this[windowType](),
+	                        _react2['default'].createElement(
+	                            'div',
+	                            { style: {
+	                                    textAlign: 'right'
+	                                } },
+	                            _react2['default'].createElement(
+	                                'span',
+	                                { style: {
+	                                        cursor: 'pointer'
+	                                    }, onClick: this.todayHandler.bind(this) },
+	                                '今天'
+	                            )
+	                        )
 	                    )
 	                )
 	            )
@@ -3967,7 +4254,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 48 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -4006,8 +4293,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @extends Component
 	 * @constructor
 	 * @since 0.1.0
-	 * @demo src/tab.js{js}
-	 * @demo tab.html
+	 * @demo tab.js{js}
 	 * @show true
 	 * */
 
@@ -4024,13 +4310,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.props.clickCallback(this.props.index);
 	    };
 
+	    Tab.prototype.handleMouseEnter = function handleMouseEnter(e) {
+	        this.props.mouseEnterCallback(e.target.offsetLeft, e.target.offsetWidth);
+	    };
+
 	    Tab.prototype.render = function render() {
 
 	        return _react2['default'].createElement(
 	            'a',
 	            _extends({ className: _classnames2['default'](this.getClassName('item'), this.getClassNames(this.props))
 	            }, this.props, {
-	                onClick: this.handlerClick.bind(this) }),
+	                onClick: this.handlerClick.bind(this),
+	                onMouseEnter: this.handleMouseEnter.bind(this) }),
 	            this.props.heading
 	        );
 	    };
@@ -4052,7 +4343,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 49 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -4086,7 +4377,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _TabJs = __webpack_require__(48);
+	var _TabJs = __webpack_require__(49);
 
 	var _TabJs2 = _interopRequireDefault(_TabJs);
 
@@ -4097,8 +4388,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @extends Component
 	 * @constructor
 	 * @since 0.1.0
-	 * @demo src/tab.js{js}
-	 * @demo tab.html
+	 * @demo tab.js{js}
 	 * @show true
 	 * */
 
@@ -4131,12 +4421,20 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        _Component.call(this, props, context);
 	        this.state = {
-	            active: props.activeTab
+	            active: props.activeTab,
+	            tabSlider: {
+	                left: 0,
+	                width: 0
+	            }
 	        };
 	        if (this.props.tabCallback) {
 	            this.props.tabCallback(props.activeTab);
 	        }
 	    }
+
+	    Tabset.prototype.componentDidMount = function componentDidMount() {
+	        this.tabItemListMouseLeaveHandler();
+	    };
 
 	    Tabset.prototype.activeHandler = function activeHandler(index) {
 	        if (this.state.active !== index) {
@@ -4149,6 +4447,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }
 	    };
 
+	    Tabset.prototype.tabItemListMouseLeaveHandler = function tabItemListMouseLeaveHandler() {
+	        var activeTab = _react2['default'].findDOMNode(this.refs['tabItem' + this.state.active]);
+	        this.timeoutObj = setTimeout((function () {
+	            this.tabItemMouseEnterHandler(activeTab.offsetLeft, activeTab.offsetWidth);
+	        }).bind(this), 400);
+	    };
+
+	    Tabset.prototype.tabItemMouseEnterHandler = function tabItemMouseEnterHandler(left, width) {
+	        clearTimeout(this.timeoutObj);
+	        this.setState({
+	            tabSlider: {
+	                left: left,
+	                width: width
+	            }
+	        });
+	    };
+
 	    Tabset.prototype.render = function render() {
 	        var _this = this;
 
@@ -4159,9 +4474,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	            var other = _objectWithoutProperties(_option$props, ['tabCallback']);
 
 	            return _react2['default'].createElement(_TabJs2['default'], _extends({
+	                ref: 'tabItem' + index,
 	                index: index,
 	                active: _this.state.active === index,
-	                clickCallback: _this.activeHandler.bind(_this)
+	                clickCallback: _this.activeHandler.bind(_this),
+	                mouseEnterCallback: _this.tabItemMouseEnterHandler.bind(_this)
 	            }, other));
 	        }, this);
 	        var panes = _react2['default'].Children.map(this.props.children, function (option, index) {
@@ -4179,8 +4496,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	            null,
 	            _react2['default'].createElement(
 	                'ul',
-	                null,
-	                headings
+	                { className: _classnames2['default'](this.getClassName('tab-list')),
+	                    onMouseLeave: this.tabItemListMouseLeaveHandler.bind(this) },
+	                headings,
+	                _react2['default'].createElement(
+	                    'li',
+	                    { className: _classnames2['default'](this.getClassName('slider-container')) },
+	                    _react2['default'].createElement('div', { className: _classnames2['default'](this.getClassName('slider')),
+	                        style: { width: this.state.tabSlider.width, left: this.state.tabSlider.left } })
+	                )
 	            ),
 	            _react2['default'].createElement(
 	                'div',
@@ -4199,7 +4523,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 50 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -4225,9 +4549,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-	var _classnames2 = __webpack_require__(31);
+	var _classnames = __webpack_require__(31);
 
-	var _classnames3 = _interopRequireDefault(_classnames2);
+	var _classnames2 = _interopRequireDefault(_classnames);
 
 	var _ButtonJs = __webpack_require__(36);
 
@@ -4246,14 +4570,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _GridJs2 = _interopRequireDefault(_GridJs);
 
 	/**
-	 * 弹框组件
+	 * 弹框组件，dialog类型：分为alert,confirm,dialog,mask 四种。默认alert。
+	 * 根据show的存在与否决定弹框展示与否
 	 * @class dialog
 	 * @module ui
 	 * @extends Component
 	 * @constructor
 	 * @since 0.1.0
-	 * @demo src/dialog.js{js}
-	 * @demo dialog.html
+	 * @demo dialog.js{js}
 	 * @show true
 	 * */
 
@@ -4274,7 +4598,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	             * 标题
 	             * @property title
 	             * @type String
-	             * @default 温馨提示
+	             * @default ""
 	             * */
 	            title: _react.PropTypes.string,
 	            /**
@@ -4314,7 +4638,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            successCallback: null, //success回掉函数
 	            cancelCallback: null, //cancel回调函数
 	            close: false, //是否有x图标
-	            title: '温馨提示', //标题
+	            title: '', //标题
 	            type: 'alert',
 	            classPrefix: 'dialog',
 	            componentTag: 'div'
@@ -4339,18 +4663,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @method componentWillReceiveProps
 	     * */
 
-	    Dialog.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
-	        this.setState({
-	            show: nextProps.show ? nextProps.show : this.state.show
-	        });
+	    Dialog.prototype.componentDidMount = function componentDidMount() {
+	        //this.flag = false;
 	    };
 
-	    /**
-	     * change flag状态，即非第一次
-	     * */
-
-	    Dialog.prototype.componentDidMount = function componentDidMount() {
-	        this.flag = false;
+	    Dialog.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+	        if (nextProps.show) {
+	            this.flag = false;
+	            this.setState({
+	                show: nextProps.show
+	            });
+	        }
 	    };
 
 	    /**
@@ -4359,11 +4682,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * */
 
 	    Dialog.prototype.render = function render() {
-	        var _classnames;
-
+	        var showOrHide = this.props.cancelCallback ? this.props.show : this.state.show;
 	        return _react2['default'].createElement(
 	            _GridJs2['default'],
-	            { ref: 'container', className: _classnames3['default'](this.getClassName('container'), (_classnames = {}, _classnames['fadein'] = this.props.cancelCallback ? this.props.show : this.state.show, _classnames['fadeout'] = this.flag ? false : !(this.props.cancelCallback ? this.props.show : this.state.show), _classnames)) },
+	            { ref: 'container', className: _classnames2['default'](this.getClassName('container'), this.flag ? '' : showOrHide ? 'fadein' : 'fadeout') },
 	            !this.flag && !(this.props.cancelCallback ? this.props.show : this.state.show) ? this.displayNone() : null,
 	            this[this.props.type.toLowerCase()](),
 	            this.showOverlay(this.props.tips)
@@ -4378,8 +4700,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	        var _this = this;
 	        clearTimeout(this.timer);
 	        this.timer = setTimeout((function () {
-	            this.removeClass(ReactDOM.findDOMNode(_this.refs.container), 'fadeout');
+	            this.removeClass(_react2['default'].findDOMNode(_this.refs.container), 'fadeout');
 	        }).bind(this), 400);
+	    };
+
+	    Dialog.prototype.close = function close(callbackId) {
+	        callbackId = this.props[callbackId + 'Callback'];
+	        if (callbackId) {
+	            callbackId();
+	            return this;
+	        }
+
+	        this.flag = false;
+	        this.setState({
+	            show: false
+	        });
 	    };
 
 	    /**
@@ -4389,12 +4724,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * */
 
 	    Dialog.prototype.closeDialog = function closeDialog() {
-	        this.props.cancelCallback && this.props.cancelCallback();
-	        if (!this.props.cancelCallback) {
-	            this.setState({
-	                show: false
-	            });
-	        }
+	        this.close('cancel');
 	    };
 
 	    /**
@@ -4404,13 +4734,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * */
 
 	    Dialog.prototype.submitForm = function submitForm() {
-
-	        this.props.successCallback && this.props.successCallback();
-	        if (!this.props.successCallback) {
-	            this.setState({
-	                show: false
-	            });
-	        }
+	        this.close('success');
 	    };
 
 	    /**
@@ -4420,12 +4744,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * */
 
 	    Dialog.prototype.cancleDialog = function cancleDialog() {
-	        this.props.cancelCallback && this.props.cancelCallback();
-	        if (!this.props.cancelCallback) {
-	            this.setState({
-	                show: false
-	            });
-	        }
+	        this.close('cancel');
 	    };
 
 	    /**
@@ -4435,7 +4754,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * */
 
 	    Dialog.prototype.showOverlay = function showOverlay() {
-	        return _react2['default'].createElement(_GridJs2['default'], { className: _classnames3['default'](this.getClassNamesForArguments('overlay')) });
+	        return _react2['default'].createElement(_GridJs2['default'], { className: _classnames2['default'](this.getClassNamesForArguments('overlay')) });
 	    };
 
 	    /**
@@ -4447,18 +4766,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	    Dialog.prototype.alert = function alert() {
 	        return _react2['default'].createElement(
 	            _RowJs2['default'],
-	            { className: _classnames3['default'](this.getClassNamesForArguments('dialog')), style: { width: '300px' } },
+	            { className: _classnames2['default'](this.getClassNamesForArguments('dialog')), style: { width: '500px' } },
 	            _react2['default'].createElement(
 	                _ColJs2['default'],
 	                null,
 	                _react2['default'].createElement(
 	                    _RowJs2['default'],
-	                    { className: _classnames3['default'](this.getClassNamesForArguments('title')) },
+	                    { className: _classnames2['default'](this.getClassNamesForArguments('title')), style: { textAlign: 'center' } },
 	                    this.props.title
 	                ),
 	                _react2['default'].createElement(
 	                    _RowJs2['default'],
-	                    { className: _classnames3['default'](this.getClassNamesForArguments('content')) },
+	                    { className: _classnames2['default'](this.getClassNamesForArguments('content')), style: { textAlign: 'center' } },
 	                    _react2['default'].createElement(
 	                        _ColJs2['default'],
 	                        null,
@@ -4467,7 +4786,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                ),
 	                _react2['default'].createElement(
 	                    _RowJs2['default'],
-	                    { className: _classnames3['default'](this.getClassNamesForArguments('button')) },
+	                    { className: _classnames2['default'](this.getClassNamesForArguments('button')) },
 	                    _react2['default'].createElement(
 	                        _ColJs2['default'],
 	                        { sm: 12 },
@@ -4491,23 +4810,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	    Dialog.prototype.confirm = function confirm() {
 	        return _react2['default'].createElement(
 	            _RowJs2['default'],
-	            { className: _classnames3['default'](this.getClassNamesForArguments('dialog')), style: { width: '300px' } },
+	            { className: _classnames2['default'](this.getClassNamesForArguments('dialog')), style: { width: '500px' } },
 	            _react2['default'].createElement(
 	                _ColJs2['default'],
 	                null,
 	                _react2['default'].createElement(
 	                    _RowJs2['default'],
-	                    { className: _classnames3['default'](this.getClassNamesForArguments('title')) },
+	                    { className: _classnames2['default'](this.getClassNamesForArguments('title')), style: { textAlign: 'center' } },
 	                    this.props.title,
 	                    _react2['default'].createElement(
 	                        'div',
-	                        { className: _classnames3['default'](this.getClassNamesForArguments('close')), onClick: this.closeDialog.bind(this) },
+	                        { className: _classnames2['default'](this.getClassNamesForArguments('close')), onClick: this.closeDialog.bind(this) },
 	                        'x'
 	                    )
 	                ),
 	                _react2['default'].createElement(
 	                    _RowJs2['default'],
-	                    { className: _classnames3['default'](this.getClassNamesForArguments('content')) },
+	                    { className: _classnames2['default'](this.getClassNamesForArguments('content')), style: { textAlign: 'center' } },
 	                    _react2['default'].createElement(
 	                        _ColJs2['default'],
 	                        null,
@@ -4516,7 +4835,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                ),
 	                _react2['default'].createElement(
 	                    _RowJs2['default'],
-	                    { className: _classnames3['default'](this.getClassNamesForArguments('button')) },
+	                    { className: _classnames2['default'](this.getClassNamesForArguments('button')) },
 	                    _react2['default'].createElement(
 	                        _ColJs2['default'],
 	                        { sm: 12 },
@@ -4545,23 +4864,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	    Dialog.prototype.dialog = function dialog() {
 	        return _react2['default'].createElement(
 	            _RowJs2['default'],
-	            { className: _classnames3['default'](this.getClassNamesForArguments('dialog')) },
+	            { className: _classnames2['default'](this.getClassNamesForArguments('dialog')) },
 	            _react2['default'].createElement(
 	                _ColJs2['default'],
 	                null,
 	                _react2['default'].createElement(
 	                    _RowJs2['default'],
-	                    { className: _classnames3['default'](this.getClassNamesForArguments('title')) },
+	                    { className: _classnames2['default'](this.getClassNamesForArguments('title')) },
 	                    this.props.title,
 	                    _react2['default'].createElement(
 	                        'div',
-	                        { className: _classnames3['default'](this.getClassNamesForArguments('close')), onClick: this.closeDialog.bind(this) },
+	                        { className: _classnames2['default'](this.getClassNamesForArguments('close')), onClick: this.closeDialog.bind(this) },
 	                        'x'
 	                    )
 	                ),
 	                _react2['default'].createElement(
 	                    _RowJs2['default'],
-	                    { className: _classnames3['default'](this.getClassNamesForArguments('content')) },
+	                    { className: _classnames2['default'](this.getClassNamesForArguments('content')) },
 	                    _react2['default'].createElement(
 	                        _ColJs2['default'],
 	                        null,
@@ -4570,7 +4889,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                ),
 	                _react2['default'].createElement(
 	                    _RowJs2['default'],
-	                    { className: _classnames3['default'](this.getClassNamesForArguments('button')) },
+	                    { className: _classnames2['default'](this.getClassNamesForArguments('button')) },
 	                    _react2['default'].createElement(
 	                        _ColJs2['default'],
 	                        { sm: 12 },
@@ -4599,23 +4918,23 @@ return /******/ (function(modules) { // webpackBootstrap
 	    Dialog.prototype.mask = function mask() {
 	        return _react2['default'].createElement(
 	            _RowJs2['default'],
-	            { className: _classnames3['default'](this.getClassNamesForArguments('dialog')) },
+	            { className: _classnames2['default'](this.getClassNamesForArguments('dialog')) },
 	            _react2['default'].createElement(
 	                _ColJs2['default'],
 	                null,
 	                _react2['default'].createElement(
 	                    _RowJs2['default'],
-	                    { className: _classnames3['default'](this.getClassNamesForArguments('title')) },
+	                    { className: _classnames2['default'](this.getClassNamesForArguments('title', 'mask-title')) },
 	                    this.props.title,
 	                    _react2['default'].createElement(
 	                        'div',
-	                        { className: _classnames3['default'](this.getClassNamesForArguments('close')), onClick: this.closeDialog.bind(this) },
+	                        { className: _classnames2['default'](this.getClassNamesForArguments('close')), onClick: this.closeDialog.bind(this) },
 	                        'x'
 	                    )
 	                ),
 	                _react2['default'].createElement(
 	                    _RowJs2['default'],
-	                    { className: _classnames3['default'](this.getClassNamesForArguments('content')) },
+	                    { className: _classnames2['default'](this.getClassNamesForArguments('content')), style: { marginTop: '10px' } },
 	                    _react2['default'].createElement(
 	                        _ColJs2['default'],
 	                        null,
@@ -4635,7 +4954,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 51 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -4681,17 +5000,46 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _GridJs2 = _interopRequireDefault(_GridJs);
 
+	/**
+	 * tips组件
+	 * 只是从tooltipPanel获得props渲染，其他操作均在tooltipPanel中
+	 * @class Tooltip
+	 * @moudle ui
+	 * @constructor
+	 * @since 0.1.0
+	 * @demo tooltip.js{js}
+	 * @show false
+	 * */
+
 	var Tooltip = (function (_Component) {
 	    _inherits(Tooltip, _Component);
 
 	    _createClass(Tooltip, null, [{
-	        key: 'defaultProps',
+	        key: 'propType',
 	        value: {
-	            show: false,
-	            direction: 'down',
-	            msg: '我也不知道这个tips这么麻烦',
-	            classPrefix: 'tooltip',
-	            conponentTag: 'div'
+	            /**
+	             * 提示是否展示
+	             * @property show
+	             * @type Boolean
+	             * @default null
+	             * */
+	            show: _react.PropTypes.boolean,
+	            /**
+	             * 提示内容
+	             * @property msg
+	             * @type String
+	             * @default null
+	             * */
+	            msg: _react.PropTypes.string,
+	            /**
+	             * 提示方向
+	             * @property direction
+	             * @type String
+	             * @default null
+	             * */
+	            direction: _react.PropTypes.string,
+	            classPrefix: _react.PropTypes.string,
+	            componentTag: _react.PropTypes.string
 	        },
 	        enumerable: true
 	    }]);
@@ -4706,6 +5054,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	        };
 	    }
 
+	    /**
+	     * 接收到新props时执行,state.show变为nextProps.show
+	     * 接收到新props时执行,state.show变为nextProps.show
+	     * 实现隐藏与显示
+	     * @method componentWillReceiveProps
+	     * @return null
+	     * */
+
 	    Tooltip.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
 	        this.setState({
 	            show: nextProps.show
@@ -4718,19 +5074,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return _react2['default'].createElement(
 	            _GridJs2['default'],
 	            { ref: this.props.ref, className: _classnames3['default'](this.getClassName('wraper'), (_classnames = {}, _classnames[this.getClassName('show')] = this.state.show, _classnames)) },
+	            _react2['default'].createElement('div', { className: _classnames3['default'](this.getClassName('arrow-' + this.props.direction)) }),
 	            _react2['default'].createElement(
-	                _RowJs2['default'],
-	                { className: _classnames3['default'](this.getClassName('tooltip')) },
-	                _react2['default'].createElement(
-	                    _ColJs2['default'],
-	                    null,
-	                    _react2['default'].createElement('div', { className: _classnames3['default'](this.getClassName('arrow-' + this.props.direction)) }),
-	                    _react2['default'].createElement(
-	                        'div',
-	                        { className: _classnames3['default'](this.getClassName('content')) },
-	                        this.props.msg
-	                    )
-	                )
+	                'div',
+	                { className: _classnames3['default'](this.getClassName('content')) },
+	                this.props.msg
 	            )
 	        );
 	    };
@@ -4743,8 +5091,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports['default'] = Tooltip;
 	module.exports = exports['default'];
 
+	//[this.getClassName('show')]: true
+
 /***/ },
-/* 52 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4781,8 +5131,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @extends Component
 	 * @requires React classnames
 	 * @since 0.1.0
-	 * @demo src/panel.js {js}
-	 * @demo panel.html {html}
+	 * @demo panel.js {js}
 	 * @author bo.an@dianping.com
 	 * */
 
@@ -4827,7 +5176,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 53 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4862,8 +5211,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @extends Component
 	 * @requires React classnames
 	 * @since 0.1.0
-	 * @demo src/panel.js {js}
-	 * @demo panel.html {html}
+	 * @demo panel.js {js}
 	 * @author bo.an@dianping.com
 	 * */
 
@@ -4919,7 +5267,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 54 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4954,8 +5302,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @extends Component
 	 * @requires React classnames
 	 * @since 0.1.0
-	 * @demo src/panel.js {js}
-	 * @demo panel.html {html}
+	 * @demo panel.js {js}
 	 * @author bo.an@dianping.com
 	 * */
 
@@ -5011,7 +5358,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 55 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5094,7 +5441,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 56 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5173,7 +5520,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 57 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5252,7 +5599,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 58 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5283,6 +5630,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	/**
 	 * 表单验证组件<br />
+	 * 在需要验证的表单元素上添加data-validate属性，<!--表单元素初始化值请绑定上data-field=“fieldName”,fieldName对应数据字段名称--> <br />
 	 * 默认规则有<br/>
 	 * <pre>
 	 *     required：是否必填
@@ -5306,8 +5654,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @extends Component
 	 * @constructor
 	 * @since 0.1.0
-	 * @demo src/validate.js {js}
-	 * @demo validate.html {html}
+	 * @demo validate.js {js}
 	 * @show true
 	 * */
 
@@ -5319,7 +5666,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	        value: {
 	            //触发点，change blur  manual（手动）
 	            trigger: _react.PropTypes.string,
-	            submitCallback: _react.PropTypes.func
+	            submitCallback: _react.PropTypes.func,
+	            /**
+	             * 需要初始化的表单元素默认值(废弃)
+	             * @property values
+	             * @type Object
+	             * */
+	            values: _react.PropTypes.object,
+	            /**
+	             * 每次验证时值被改变后都会被触发，会回传当前data-field字段、值和所有值对象
+	             * @property getValueCallback
+	             * @type Function
+	             * */
+	            getValueCallback: _react.PropTypes.func
 	        },
 	        enumerable: true
 	    }, {
@@ -5342,7 +5701,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	            /**
 	             * 默认规则提示文案
 	             * @property message
-	             * @type String
+	             * @type Object
 	             * @default
 	             *       required: '不能为空',
 	                     date: '请正确填写日期',
@@ -5451,6 +5810,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.isUpdate = false;
 
 	        this.vals = {};
+	        this.valueLink = 'data-field';
 
 	        this.state = {
 	            message: '',
@@ -5469,6 +5829,26 @@ return /******/ (function(modules) { // webpackBootstrap
 	            return true;
 	        }
 	        return false;
+	    };
+
+	    ValidatorPanel.prototype.initVals = function initVals() {
+	        var elms = this.elements,
+	            val = '',
+	            name = null,
+	            vals = this.vals;
+
+	        var values = this.props.values;
+
+	        if (values) {
+	            for (var element in elms) {
+	                name = this.getField(element);
+	                val = values[name];
+	                if (val) {
+	                    this.setValue(element, val);
+	                    vals[name] = val;
+	                }
+	            }
+	        }
 	    };
 
 	    ValidatorPanel.prototype.optional = function optional(element) {
@@ -5626,6 +6006,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return val;
 	    };
 
+	    ValidatorPanel.prototype.setValue = function setValue(element, val) {};
+
 	    //循环验证单个input上的规则
 
 	    ValidatorPanel.prototype.check = function check(element) {
@@ -5654,7 +6036,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                }
 	            }
 	        }*/
-	        this.vals[element.name] = val;
+	        this.vals[this.getField(element)] = val;
 	        for (var rule in rules) {
 
 	            text = rules[rule];
@@ -5721,9 +6103,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return true;
 	    };
 
+	    ValidatorPanel.prototype.getField = function getField(element) {
+	        var attr = element.getAttribute(this.valueLink);
+	        return attr ? attr : element.name;
+	    };
+
 	    ValidatorPanel.prototype.validateHandler = function validateHandler(e) {
+	        var getValueCallback = this.props.getValueCallback;var target = e.target;
+
 	        clearTimeout(this.vaTimeout);
-	        this.vaTimeout = setTimeout(this.validate.bind(this, e.target), 400);
+	        this.vaTimeout = setTimeout((function () {
+	            var b = this.validate(target);
+	            b && getValueCallback && getValueCallback(this.getField(target), this.getValue(target), this.vals);
+	        }).bind(this), 400);
 	    };
 
 	    ValidatorPanel.prototype.submit = function submit(e) {
@@ -5784,11 +6176,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	            d = this.props.direction,
 	            tb = d === "bottom" || d === "top",
 	            tip = this.getTip(),
+	            tag = this.props.componentTag,
 	            w = element.offsetLeft,
 	            t = element.offsetTop,
 	            h = element.offsetHeight;
 
-	        while (element && (element.nodeType !== 1 || element.nodeName.toLowerCase() != this.props.componentTag)) {
+	        while (element && (element.nodeType !== 1 || element.nodeName.toLowerCase() != tag)) {
 	            element = element.parentNode;
 	        }
 
@@ -5800,7 +6193,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	            w = element.offsetLeft;
 	            t = element.offsetTop;
 	            node = element.offsetParent;
-	            while (node) {
+
+	            while (node && node.nodeName.toLowerCase() != tag) {
 	                t += node.offsetTop;
 	                w += node.offsetLeft;
 	                node = node.offsetParent;
@@ -5813,9 +6207,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	            setTimeout((function () {
 	                if (tb) {
 
-	                    tip.style.cssText = 'left:' + w + 'px;top:' + (d === "bottom" ? t + element.offsetHeight : t - tip.offsetHeight) + 'px;';
+	                    tip.style.cssText = 'left:' + w + 'px;top:' + (d === "bottom" ? t + element.offsetHeight : t - tip.offsetHeight) + 'px;width:' + element.offsetWidth + 'px';
 	                } else {
-	                    tip.style.cssText = 'left:' + (w + (d === "right" ? element.offsetWidth + 15 : 0)) + 'px;top:' + t + 'px;height:' + h + 'px;line-height:' + h + 'px;';
+	                    //height:${h}px;line-height:${h}px;
+	                    tip.style.cssText = 'left:' + (w + (d === "right" ? element.offsetWidth + 10 : 0)) + 'px;top:' + (t + (element.offsetHeight / 2 - tip.offsetHeight / 2)) + 'px;';
 	                }
 	            }).bind(this));
 	        } else {
@@ -5937,7 +6332,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        clearTimeout(this.fadeoutTimeObj);
 	        this.fadeoutTimeObj = setTimeout((function () {
 	            if (!this.state.show && !this.init && this.state.fadeShow != 'none') {
-	                this.getTip().style.display = 'none';
+	                this.removeClass(this.getTip(), 'fadeout');
 	            }
 	        }).bind(this), 400);
 	    };
@@ -5971,7 +6366,193 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 59 */
+/* 60 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(30);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _classnames = __webpack_require__(31);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var _utilsClassNameMixinJs = __webpack_require__(32);
+
+	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
+
+	var _ThJs = __webpack_require__(61);
+
+	var _ThJs2 = _interopRequireDefault(_ThJs);
+
+	var _TdJs = __webpack_require__(62);
+
+	var _TdJs2 = _interopRequireDefault(_TdJs);
+
+	var _TrJs = __webpack_require__(63);
+
+	var _TrJs2 = _interopRequireDefault(_TrJs);
+
+	/**
+	 * 表格组件
+	 * @class Table
+	 * @constructor
+	 * @module table
+	 * @extends Component
+	 * @requires React classnames
+	 * @since 0.1.0
+	 * @demo table.js {js}
+	 * @show true
+	 * @author bo.an@dianping.com
+	 * */
+
+	var Table = (function (_Component) {
+	    _inherits(Table, _Component);
+
+	    _createClass(Table, null, [{
+	        key: 'propTypes',
+	        value: {
+	            /**
+	             * 用来渲染表格的数组，可选参数，如果传入data，会更具table下的column标签绑定的属性进行渲染
+	             * @property data
+	             * @type Array
+	             * */
+	            data: _react.PropTypes.array
+
+	        },
+	        enumerable: true
+	    }, {
+	        key: 'defaultProps',
+	        value: {},
+	        enumerable: true
+	    }]);
+
+	    function Table(props, context) {
+	        _classCallCheck(this, _Table);
+
+	        _Component.call(this, props, context);
+	        var tableData = [];
+	        Object.assign(tableData, props.data);
+
+	        this.state = {
+	            tableData: tableData,
+	            sortField: {}
+	        };
+	    }
+
+	    Table.prototype.sort = function sort(field, method) {
+	        if (method === 'asc') {
+	            this.state.tableData.sort(function (pre, cur) {
+	                if (pre[field] > cur[field]) {
+	                    return true;
+	                } else {
+	                    return false;
+	                }
+	            });
+	        } else {
+	            this.state.tableData.sort(function (pre, cur) {
+	                if (pre[field] < cur[field]) {
+	                    return true;
+	                } else {
+	                    return false;
+	                }
+	            });
+	        }
+	        var sortFiled = this.state.sortField;
+	        for (var key in sortFiled) {
+	            sortFiled[key] = null;
+	        };
+	        sortFiled[field] = method;
+	        this.setState({
+	            tableData: this.state.tableData,
+	            sortFiled: sortFiled
+	        });
+	    };
+
+	    /**
+	     * @method render
+	     * @return {ReactElement}
+	     * */
+
+	    Table.prototype.render = function render() {
+	        var _this = this;
+
+	        if (!this.props.data) {
+	            return _react2['default'].createElement(
+	                'table',
+	                { className: _classnames2['default'](this.getClassName('table')) },
+	                this.props.children
+	            );
+	        };
+	        var self = this;
+	        var thList = _react2['default'].Children.map(self.props.children, function (Column, thIndex) {
+	            return _react2['default'].createElement(
+	                _ThJs2['default'],
+	                _extends({}, Column.props, {
+	                    key: 'th-' + thIndex,
+	                    sort: _this.state.sortField[Column.props.field],
+	                    clickCallback: _this.sort.bind(_this)
+	                }),
+	                Column.props.header
+	            );
+	        }, self);
+	        var trList = this.state.tableData.map(function (rowData, trIndex) {
+	            return _react2['default'].createElement(
+	                _TrJs2['default'],
+	                { key: 'tr-' + trIndex },
+	                _react2['default'].Children.map(self.props.children, function (Column, tdIndex) {
+	                    return _react2['default'].createElement(
+	                        _TdJs2['default'],
+	                        { key: 'td-' + trIndex + '-' + tdIndex },
+	                        self.state.tableData[trIndex][Column.props.field]
+	                    );
+	                }, self)
+	            );
+	        });
+	        return _react2['default'].createElement(
+	            'table',
+	            { className: _classnames2['default'](this.getClassName('table')) },
+	            _react2['default'].createElement(
+	                'thead',
+	                null,
+	                _react2['default'].createElement(
+	                    _TrJs2['default'],
+	                    null,
+	                    thList
+	                )
+	            ),
+	            _react2['default'].createElement(
+	                'tbody',
+	                null,
+	                trList
+	            )
+	        );
+	    };
+
+	    var _Table = Table;
+	    Table = _utilsClassNameMixinJs2['default'](Table) || Table;
+	    return Table;
+	})(_react.Component);
+
+	exports['default'] = Table;
+	module.exports = exports['default'];
+
+/***/ },
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6000,42 +6581,21 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	/**
 	 * 表格组件
-	 * @class Table
+	 * @class Th
 	 * @constructor
 	 * @module table
 	 * @extends Component
 	 * @requires React classnames
 	 * @since 0.1.0
-	 * @demo src/table.js {js}
-	 * @demo table.html {html}
+	 * @demo table.js {js}
 	 * @show true
 	 * @author bo.an@dianping.com
 	 * */
 
-	var Table = (function (_Component) {
-	    _inherits(Table, _Component);
+	var Th = (function (_Component) {
+	    _inherits(Th, _Component);
 
-	    function Table() {
-	        _classCallCheck(this, _Table);
-
-	        _Component.apply(this, arguments);
-	    }
-
-	    /**
-	     * @method render
-	     * @return {ReactElement}
-	     * */
-
-	    Table.prototype.render = function render() {
-	        console.debug('table');
-	        return _react2['default'].createElement(
-	            'table',
-	            { className: _classnames2['default'](this.getClassName('table')) },
-	            this.props.children
-	        );
-	    };
-
-	    _createClass(Table, null, [{
+	    _createClass(Th, null, [{
 	        key: 'propTypes',
 	        value: {},
 	        enumerable: true
@@ -6045,16 +6605,137 @@ return /******/ (function(modules) { // webpackBootstrap
 	        enumerable: true
 	    }]);
 
-	    var _Table = Table;
-	    Table = _utilsClassNameMixinJs2['default'](Table) || Table;
-	    return Table;
+	    function Th(props, context) {
+	        _classCallCheck(this, _Th);
+
+	        _Component.call(this, props, context);
+	    }
+
+	    Th.prototype.sortHandler = function sortHandler() {
+	        var sortMethod = this.props.sort;
+	        if (!sortMethod || sortMethod === 'asc') {
+	            sortMethod = 'des';
+	        } else {
+	            sortMethod = 'asc';
+	        }
+	        this.props.clickCallback(this.props.field, sortMethod);
+	    };
+
+	    /**
+	     * @method render
+	     * @return {ReactElement}
+	     * */
+
+	    Th.prototype.render = function render() {
+	        return _react2['default'].createElement(
+	            'th',
+	            {
+	                onClick: this.sortHandler.bind(this) },
+	            this.props.children,
+	            this.props.sort === 'des' ? _react2['default'].createElement(
+	                'span',
+	                null,
+	                '↓'
+	            ) : this.props.sort === 'asc' ? _react2['default'].createElement(
+	                'span',
+	                null,
+	                '↑'
+	            ) : null
+	        );
+	    };
+
+	    var _Th = Th;
+	    Th = _utilsClassNameMixinJs2['default'](Th) || Th;
+	    return Th;
 	})(_react.Component);
 
-	exports['default'] = Table;
+	exports['default'] = Th;
 	module.exports = exports['default'];
 
 /***/ },
-/* 60 */
+/* 62 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	exports.__esModule = true;
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(30);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _classnames = __webpack_require__(31);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var _utilsClassNameMixinJs = __webpack_require__(32);
+
+	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
+
+	/**
+	 * 表格组件
+	 * @class Td
+	 * @constructor
+	 * @module table
+	 * @extends Component
+	 * @requires React classnames
+	 * @since 0.1.0
+	 * @demo table.js {js}
+	 * @show true
+	 * @author bo.an@dianping.com
+	 * */
+
+	var Td = (function (_Component) {
+	    _inherits(Td, _Component);
+
+	    function Td() {
+	        _classCallCheck(this, _Td);
+
+	        _Component.apply(this, arguments);
+	    }
+
+	    /**
+	     * @method render
+	     * @return {ReactElement}
+	     * */
+
+	    Td.prototype.render = function render() {
+	        return _react2['default'].createElement(
+	            'td',
+	            this.props,
+	            this.props.children,
+	            _classnames2['default'](this.getClassNames(this.props)) === '' ? null : _react2['default'].createElement('span', { className: _classnames2['default'](this.getClassNames(this.props)) })
+	        );
+	    };
+
+	    _createClass(Td, null, [{
+	        key: 'propTypes',
+	        value: {},
+	        enumerable: true
+	    }, {
+	        key: 'defaultProps',
+	        value: {},
+	        enumerable: true
+	    }]);
+
+	    var _Td = Td;
+	    Td = _utilsClassNameMixinJs2['default'](Td) || Td;
+	    return Td;
+	})(_react.Component);
+
+	exports['default'] = Td;
+	module.exports = exports['default'];
+
+/***/ },
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6089,8 +6770,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @extends Component
 	 * @requires React classnames
 	 * @since 0.1.0
-	 * @demo src/table.js {js}
-	 * @demo table.html {html}
+	 * @demo table.js {js}
 	 * @show true
 	 * @author bo.an@dianping.com
 	 * */
@@ -6143,173 +6823,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	})(_react.Component);
 
 	exports['default'] = Tr;
-	module.exports = exports['default'];
-
-/***/ },
-/* 61 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	exports.__esModule = true;
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var _react = __webpack_require__(30);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _classnames = __webpack_require__(31);
-
-	var _classnames2 = _interopRequireDefault(_classnames);
-
-	var _utilsClassNameMixinJs = __webpack_require__(32);
-
-	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
-
-	/**
-	 * 表格组件
-	 * @class Td
-	 * @constructor
-	 * @module table
-	 * @extends Component
-	 * @requires React classnames
-	 * @since 0.1.0
-	 * @demo src/table.js {js}
-	 * @demo table.html {html}
-	 * @show true
-	 * @author bo.an@dianping.com
-	 * */
-
-	var Td = (function (_Component) {
-	    _inherits(Td, _Component);
-
-	    function Td() {
-	        _classCallCheck(this, _Td);
-
-	        _Component.apply(this, arguments);
-	    }
-
-	    /**
-	     * @method render
-	     * @return {ReactElement}
-	     * */
-
-	    Td.prototype.render = function render() {
-	        console.debug('td');
-	        return _react2['default'].createElement(
-	            'td',
-	            this.props,
-	            this.props.children,
-	            _classnames2['default'](this.getClassNames(this.props)) === '' ? null : _react2['default'].createElement('span', { className: _classnames2['default'](this.getClassNames(this.props)) })
-	        );
-	    };
-
-	    _createClass(Td, null, [{
-	        key: 'propTypes',
-	        value: {},
-	        enumerable: true
-	    }, {
-	        key: 'defaultProps',
-	        value: {},
-	        enumerable: true
-	    }]);
-
-	    var _Td = Td;
-	    Td = _utilsClassNameMixinJs2['default'](Td) || Td;
-	    return Td;
-	})(_react.Component);
-
-	exports['default'] = Td;
-	module.exports = exports['default'];
-
-/***/ },
-/* 62 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	exports.__esModule = true;
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var _react = __webpack_require__(30);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _classnames = __webpack_require__(31);
-
-	var _classnames2 = _interopRequireDefault(_classnames);
-
-	var _utilsClassNameMixinJs = __webpack_require__(32);
-
-	var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
-
-	/**
-	 * 表格组件
-	 * @class Th
-	 * @constructor
-	 * @module table
-	 * @extends Component
-	 * @requires React classnames
-	 * @since 0.1.0
-	 * @demo src/table.js {js}
-	 * @demo table.html {html}
-	 * @show true
-	 * @author bo.an@dianping.com
-	 * */
-
-	var Th = (function (_Component) {
-	    _inherits(Th, _Component);
-
-	    function Th() {
-	        _classCallCheck(this, _Th);
-
-	        _Component.apply(this, arguments);
-	    }
-
-	    /**
-	     * @method render
-	     * @return {ReactElement}
-	     * */
-
-	    Th.prototype.render = function render() {
-	        console.debug('th');
-	        return _react2['default'].createElement(
-	            'th',
-	            null,
-	            this.props.children
-	        );
-	    };
-
-	    _createClass(Th, null, [{
-	        key: 'propTypes',
-	        value: {},
-	        enumerable: true
-	    }, {
-	        key: 'defaultProps',
-	        value: {},
-	        enumerable: true
-	    }]);
-
-	    var _Th = Th;
-	    Th = _utilsClassNameMixinJs2['default'](Th) || Th;
-	    return Th;
-	})(_react.Component);
-
-	exports['default'] = Th;
 	module.exports = exports['default'];
 
 /***/ }

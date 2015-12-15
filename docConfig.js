@@ -1,7 +1,7 @@
 module.exports = {
     //扫描的文件路径
     paths: ['lib/'],
-    demoDir:"examples/",
+    demoDir:"examples/src/modules/",
     //文档页面输出路径
     outdir: 'doc/',
     //内置主题
@@ -25,10 +25,16 @@ module.exports = {
         //logo:'dp-logo.png',
 
         //导航信息
-        navs: [{
-            name: "主页",
-            url: ""
-        }]
+        navs: [
+            {
+                name: "主页",
+                url: ""
+            },
+            {
+                name: "例子",
+                url: "/documents/eagle-ui/examples/"
+            }
+        ]
     },
     //demo页面需要加载的js库
     demo: {

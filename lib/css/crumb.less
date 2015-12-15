@@ -1,3 +1,4 @@
+@import "public.less";
 .eg-crumb {
   ul {
     li {
@@ -21,12 +22,11 @@
         }
         &:after {
           top: 9px;
-          transform: rotate(45deg);
-
+          .transform(rotate(45deg));
         }
         &:before {
           top: 4px;
-          transform: rotate(135deg);
+          .transform(rotate(135deg));
 
         }
       }

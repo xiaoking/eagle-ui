@@ -32,6 +32,9 @@
                     <li><a href="">主页</a>
                     </li>
                     
+                    <li><a href="/documents/eagle-ui/examples/">例子</a>
+                    </li>
+                    
                 </ul>
                <div class="navbar-form navbar-right filterAPi" autocomplete="off">
                 <input type="text" id='txtSearchAPI' class="form-control search-query" placeholder="Search for API" />
@@ -54,6 +57,22 @@
                 <dd>
                     <ul>
                    
+                       <li>
+                            
+                           <a href="../classes/CheckboxGroup.html">CheckboxGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Input.html">Input</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
                        <li>
                             
                            <a href="../classes/RadioGroup.html">RadioGroup</a>
@@ -182,6 +201,14 @@
                    
                        <li>
                             
+                           <a href="../classes/Th.html">Th</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Table.html">Table</a>
                            <ul>
                                 
@@ -191,14 +218,6 @@
                        <li>
                             
                            <a href="../classes/Td.html">Td</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Th.html">Th</a>
                            <ul>
                                 
                            </ul>
@@ -233,6 +252,14 @@
                        <li>
                             
                            <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Search.html">Search</a>
                            <ul>
                                 
                            </ul>
@@ -304,6 +331,14 @@
                     
                        <li>
                             
+                           <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Tabset.html">Tabset</a>
                            <ul>
                                 
@@ -313,6 +348,14 @@
                        <li>
                             
                            <a href="../classes/Toast.html">Toast</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/TooltipPanel.html">TooltipPanel</a>
                            <ul>
                                 
                            </ul>
@@ -370,8 +413,7 @@ import ClassNameMixin from &#x27;./utils/ClassNameMixin.js&#x27;;
  * @extends Component
  * @requires React classnames
  * @since 0.1.0
- * @demo src/paging.js {js}
- * @demo paging.html {html}
+ * @demo paging.js {js}
  * @show true
  * @author min.xiao@dianping.com
  * */
@@ -385,43 +427,55 @@ export default class Paging extends Component{
          * @type Integer
          * @default 1
          * */
-        currentPage:PropTypes.number.isRequired,
+        currentPage: PropTypes.number.isRequired,
         /**
          * 每页显示多少条数据
          * @property pageSize
          * @type Integer
          * @default 20
          * */
-        pageSize:PropTypes.number.isRequired,
+        pageSize: PropTypes.number.isRequired,
         /**
          * 数据总数
          * @property total
          * @type Integer
          * */
-        total:PropTypes.number.isRequired,
+        total: PropTypes.number.isRequired,
         /**
          * 点击分页回调
          * @property pageCallback
          * @type Function
          * */
-        pageCallback:PropTypes.func,
+        pageCallback: PropTypes.func,
         /**
          *
          * @property activeClass
          * @type String
          * @default active
          * */
-        activeClass:PropTypes.string,
-        classPrefix:PropTypes.string,
-        componentTag:PropTypes.string
-    };
-
+        activeClass: PropTypes.string,
+        classPrefix: PropTypes.string,
+        componentTag: PropTypes.string,
+        /**
+         * 开启选择每页显示数量选项
+         * @property showItemsNumber
+         * @type Boolean
+         * */
+        showItemsNumber:PropTypes.bool
+    }
     static defaultProps = {
         activeClass:&#x27;active&#x27;,
         currentPage:1,
         pageSize:20,
         classPrefix:&#x27;paging&#x27;,
-        componentTag:&#x27;div&#x27;
+        componentTag:&#x27;div&#x27;,
+        /**
+         * 跟showItemsNumber一起使用 arguments{pageSize}
+         * @property loadPageCallback
+         * */
+        loadPageCallback:function(){
+            console.warn(&#x27;Is not defined loadPageCallback&#x27;);
+        }
     };
 
     /**
@@ -455,7 +509,8 @@ export default class Paging extends Component{
              * 当前页
              * @type Integer
              * */
-            currentPage:this.props.currentPage
+            currentPage:this.props.currentPage,
+            defaultNumber:this.props.pageSize
         };
     }
 
@@ -573,17 +628,50 @@ export default class Paging extends Component{
 
     }
 
+    changePageSizeHandler(e){
+        let val = e.target.value;
+        //this.setState({
+        //    defaultNumber:val*1
+        //});
+        let {loadPageCallback} = this.props;
+
+        loadPageCallback &amp;&amp; (loadPageCallback(val) );
+    }
+
+    accordingNumber(){
+        let opts = [],num=10;
+
+        for(let i=1;i&lt;11;i++){
+            opts.push(&lt;option value={num*i}&gt;{num*i}&lt;/option&gt;);
+        }
+
+        return (
+            &lt;span style={{
+                marginRight:&#x27;20px&#x27;
+            }}&gt;
+                每页显示&amp;nbsp;&amp;nbsp;
+                &lt;select defaultValue={this.state.defaultNumber} onChange={::this.changePageSizeHandler}&gt;
+                    {
+                        opts
+                    }
+                &lt;/select&gt;
+                &amp;nbsp;&amp;nbsp;页
+            &lt;/span&gt;
+        );
+    }
+
     /**
      * @method render
      * @return {ReactElement}
      * */
     render(){
 
-        const {componentTag:Component,activeClass} = this.props;
+        const {componentTag:Component,activeClass,showItemsNumber} = this.props;
 
         return (
 
             &lt;Component className={classnames(this.getClassName(&#x27;container&#x27;)) }&gt;
+                {showItemsNumber ? this.accordingNumber():null}
                 {this.goto() }
                 &lt;span className=&#x27;info&#x27;&gt;
                     &lt;span className={classnames(this.getClassName(activeClass)) }&gt;

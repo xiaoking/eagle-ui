@@ -32,6 +32,9 @@
                     <li><a href="">主页</a>
                     </li>
                     
+                    <li><a href="/documents/eagle-ui/examples/">例子</a>
+                    </li>
+                    
                 </ul>
                <div class="navbar-form navbar-right filterAPi" autocomplete="off">
                 <input type="text" id='txtSearchAPI' class="form-control search-query" placeholder="Search for API" />
@@ -54,6 +57,22 @@
                 <dd>
                     <ul>
                    
+                       <li>
+                            
+                           <a href="../classes/CheckboxGroup.html">CheckboxGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Input.html">Input</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
                        <li>
                             
                            <a href="../classes/RadioGroup.html">RadioGroup</a>
@@ -182,6 +201,14 @@
                    
                        <li>
                             
+                           <a href="../classes/Th.html">Th</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Table.html">Table</a>
                            <ul>
                                 
@@ -191,14 +218,6 @@
                        <li>
                             
                            <a href="../classes/Td.html">Td</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Th.html">Th</a>
                            <ul>
                                 
                            </ul>
@@ -233,6 +252,14 @@
                        <li>
                             
                            <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Search.html">Search</a>
                            <ul>
                                 
                            </ul>
@@ -304,6 +331,14 @@
                     
                        <li>
                             
+                           <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Tabset.html">Tabset</a>
                            <ul>
                                 
@@ -313,6 +348,14 @@
                        <li>
                             
                            <a href="../classes/Toast.html">Toast</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/TooltipPanel.html">TooltipPanel</a>
                            <ul>
                                 
                            </ul>
@@ -356,7 +399,8 @@
     <h1>dialog <small>Class</small></h1>
 </div>
  <div class="well well-small sign-left3">
-      <div class="stdoc-code"><p>弹框组件</p>
+      <div class="stdoc-code"><p>弹框组件，dialog类型：分为alert,confirm,dialog,mask 四种。默认alert。
+根据show的存在与否决定弹框展示与否</p>
 </div>
  </div>
 
@@ -605,56 +649,83 @@
                 
                 <li role="presentation"  class="active"  _no='0'> <a>js</a></li>
                 
-                <li role="presentation"   _no='1'> <a>dialog</a></li>
-                
             </ul>
 
             <div class="example-content  showdemo ">
                 <div class="stdoc-code"><pre class="code prettyprint"><code>/**
  * Created by panqianjin on 15/11/4.
  */
-import css from &#39;../../lib/_include.less&#39;;
 import React,{Component} from &#39;react&#39;;
-import Dialog from &#39;../../lib/Dialog.js&#39;;
-
+import Dialog from &#39;../../../lib/Dialog.js&#39;;
+import Button from &#39;../../../lib/Button.js&#39;;
+import Grid from &#39;../../../lib/Grid.js&#39;;
+import Row from &#39;../../../lib/Row.js&#39;;
+import Col from &#39;../../../lib/Col.js&#39;;
 let Demo= class Demo extends Component{
 
-    static propTypes={
+    static defaultProps = {
+        show: false,
+        type: "alert"
+    }
 
-    };
-
+    constructor(props, context) {
+        super(props, context);
+        this.state = {
+            show: this.props.show,
+            type: this.props.type,
+            title:&#39;这是个提示&#39;
+        }
+    }
     render(){
         return (
-            &lt;Dialog type=&#39;dialog&#39; show&gt;
+         &lt;Grid&gt;
+        &lt;Row&gt;
+            &lt;Col sm={3}&gt;&lt;Button block radius egSize="sm" onClick={::this.showDialog}&gt;dialog&lt;/Button&gt;&lt;/Col&gt;
+            &lt;Col sm={3}&gt;&lt;Button block radius egSize="sm" onClick={::this.showAlert}&gt;alert&lt;/Button&gt;&lt;/Col&gt;
+            &lt;Col sm={3}&gt;&lt;Button block radius egSize="sm" onClick={::this.showConfirm}&gt;confirm&lt;/Button&gt;&lt;/Col&gt;
+            &lt;Col sm={3}&gt;&lt;Button block radius egSize="sm" onClick={::this.showMsak}&gt;mask&lt;/Button&gt;&lt;/Col&gt;
+        &lt;/Row&gt;
+            &lt;Dialog type={this.state.type} show={this.state.show} title={this.state.title}&gt;
             ahflaskdjflajsflajsdlf;jkasdfk
                 adfkjasd;fkjas;dlf
                 asdfkn;askdfnas
             &lt;/Dialog&gt;
+           &lt;/Grid&gt;
         );
     }
-}
+    showDialog(){
+        this.setState({
+            show: true,
+            type: &#39;dialog&#39;
+        })
+    }
+    showAlert(){
+        this.setState({
+            show: true,
+            type: &#39;alert&#39;
+        })
+    }
+    showConfirm(){
+        this.setState({
+            show: true,
+            type: &#39;confirm&#39;
+        })
+    }
+    showMsak(){
+        this.setState({
+            show: true,
+            type: &#39;mask&#39;
+        })
+    }
+};
 
-ReactDOM.render(
-        &lt;Demo  /&gt;
-    ,document.getElementById(&#39;root&#39;));</code></pre>
-</div><div class="stdoc-code"><pre class="code prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;弹框&lt;/title&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"&gt;
-    &lt;link rel="stylesheet" type="text/css" href="./eagle-ui.css" /&gt;
-
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div id="root"&gt;&lt;/div&gt;
-
-&lt;script src="../bower_components/react/react.js"&gt;&lt;/script&gt;
-&lt;script src="../bower_components/react/react-dom.js"&gt;&lt;/script&gt;
-&lt;script src="./js/dialog.js"&gt;&lt;/script&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+export default class DialogCls extends Component{
+    render(){
+        return (
+            &lt;Demo  /&gt;
+        );
+    }
+}</code></pre>
 </div>
             </div>
 
@@ -711,7 +782,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Dialog.js.html#l174"><code>lib&#x2F;Dialog.js:174</code></a>
+        <a href="../files/lib_Dialog.js.html#l186"><code>lib&#x2F;Dialog.js:186</code></a>
         
         </p>
 
@@ -784,7 +855,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Dialog.js.html#l143"><code>lib&#x2F;Dialog.js:143</code></a>
+        <a href="../files/lib_Dialog.js.html#l160"><code>lib&#x2F;Dialog.js:160</code></a>
         
         </p>
 
@@ -857,7 +928,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Dialog.js.html#l115"><code>lib&#x2F;Dialog.js:115</code></a>
+        <a href="../files/lib_Dialog.js.html#l143"><code>lib&#x2F;Dialog.js:143</code></a>
         
         </p>
 
@@ -926,7 +997,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Dialog.js.html#l86"><code>lib&#x2F;Dialog.js:86</code></a>
+        <a href="../files/lib_Dialog.js.html#l88"><code>lib&#x2F;Dialog.js:88</code></a>
         
         </p>
 
@@ -988,7 +1059,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Dialog.js.html#l207"><code>lib&#x2F;Dialog.js:207</code></a>
+        <a href="../files/lib_Dialog.js.html#l219"><code>lib&#x2F;Dialog.js:219</code></a>
         
         </p>
 
@@ -1061,7 +1132,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Dialog.js.html#l247"><code>lib&#x2F;Dialog.js:247</code></a>
+        <a href="../files/lib_Dialog.js.html#l259"><code>lib&#x2F;Dialog.js:259</code></a>
         
         </p>
 
@@ -1134,7 +1205,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Dialog.js.html#l285"><code>lib&#x2F;Dialog.js:285</code></a>
+        <a href="../files/lib_Dialog.js.html#l297"><code>lib&#x2F;Dialog.js:297</code></a>
         
         </p>
 
@@ -1207,7 +1278,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Dialog.js.html#l97"><code>lib&#x2F;Dialog.js:97</code></a>
+        <a href="../files/lib_Dialog.js.html#l105"><code>lib&#x2F;Dialog.js:105</code></a>
         
         </p>
 
@@ -1279,7 +1350,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Dialog.js.html#l157"><code>lib&#x2F;Dialog.js:157</code></a>
+        <a href="../files/lib_Dialog.js.html#l169"><code>lib&#x2F;Dialog.js:169</code></a>
         
         </p>
 
@@ -1352,7 +1423,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Dialog.js.html#l129"><code>lib&#x2F;Dialog.js:129</code></a>
+        <a href="../files/lib_Dialog.js.html#l152"><code>lib&#x2F;Dialog.js:152</code></a>
         
         </p>
 
@@ -1626,7 +1697,7 @@ ReactDOM.render(
 
     
         <p><strong>Default:</strong></p>
-         <code> 温馨提示</code>
+         <code> &quot;&quot;</code>
     
 
     

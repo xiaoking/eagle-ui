@@ -32,6 +32,9 @@
                     <li><a href="">主页</a>
                     </li>
                     
+                    <li><a href="/documents/eagle-ui/examples/">例子</a>
+                    </li>
+                    
                 </ul>
                <div class="navbar-form navbar-right filterAPi" autocomplete="off">
                 <input type="text" id='txtSearchAPI' class="form-control search-query" placeholder="Search for API" />
@@ -54,6 +57,22 @@
                 <dd>
                     <ul>
                    
+                       <li>
+                            
+                           <a href="../classes/CheckboxGroup.html">CheckboxGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Input.html">Input</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
                        <li>
                             
                            <a href="../classes/RadioGroup.html">RadioGroup</a>
@@ -182,6 +201,14 @@
                    
                        <li>
                             
+                           <a href="../classes/Th.html">Th</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Table.html">Table</a>
                            <ul>
                                 
@@ -191,14 +218,6 @@
                        <li>
                             
                            <a href="../classes/Td.html">Td</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Th.html">Th</a>
                            <ul>
                                 
                            </ul>
@@ -233,6 +252,14 @@
                        <li>
                             
                            <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Search.html">Search</a>
                            <ul>
                                 
                            </ul>
@@ -304,6 +331,14 @@
                     
                        <li>
                             
+                           <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Tabset.html">Tabset</a>
                            <ul>
                                 
@@ -313,6 +348,14 @@
                        <li>
                             
                            <a href="../classes/Toast.html">Toast</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/TooltipPanel.html">TooltipPanel</a>
                            <ul>
                                 
                            </ul>
@@ -494,18 +537,15 @@
                 
                 <li role="presentation"  class="active"  _no='0'> <a>js</a></li>
                 
-                <li role="presentation"   _no='1'> <a>tab</a></li>
-                
             </ul>
 
             <div class="example-content  showdemo ">
                 <div class="stdoc-code"><pre class="code prettyprint"><code>/**
  * Created by mac on 15/11/4.
  */
-import css from &#39;../../lib/_include.less&#39;;
 import React,{Component} from &#39;react&#39;;
-import Tab from &#39;../../lib/Tab.js&#39;;
-import Tabset from &#39;../../lib/Tabset.js&#39;;
+import Tab from &#39;../../../lib/Tab.js&#39;;
+import Tabset from &#39;../../../lib/Tabset.js&#39;;
 
 let Demo = class Demo extends Component{
 
@@ -513,7 +553,7 @@ let Demo = class Demo extends Component{
         super(props,context);
 
         this.state={
-            tabIndex:0
+            tabIndex:2
         };
     }
 
@@ -551,34 +591,21 @@ let Demo = class Demo extends Component{
                 &lt;Tab heading=&#39;tab2&#39;&gt;
                     {::this.tab2()}
                 &lt;/Tab&gt;
-                &lt;Tab heading=&#39;tab3&#39;&gt;
+                &lt;Tab heading=&#39;tabasjdfnl;adfnaf;adlkf3&#39;&gt;
                     {::this.tab3()}
+                &lt;/Tab&gt;
+                &lt;Tab heading=&#39;tabasjdfnl;adfnaf;adlkf3&#39;&gt;
+                    nadkfnpasknfsaknf
+                &lt;/Tab&gt;
+                &lt;Tab heading=&#39;tabasjdfnl;adfnaf;adlkf3&#39;&gt;
+                    nadkfnpasknfsaknf
                 &lt;/Tab&gt;
             &lt;/Tabset&gt;
         );
     }
 }
 
-ReactDOM.render(
-    &lt;Demo /&gt;
-    ,document.getElementById(&#39;root&#39;));</code></pre>
-</div><div class="stdoc-code"><pre class="code prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;分页组件&lt;/title&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"&gt;
-    &lt;link rel="stylesheet" type="text/css" href="./eagle-ui.css" /&gt;
-
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div id="root"&gt;&lt;/div&gt;
-
-&lt;script src="../bower_components/react/react.js"&gt;&lt;/script&gt;
-&lt;script src="../bower_components/react/react-dom.js"&gt;&lt;/script&gt;
-&lt;script src="js/tab.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+export default Demo;</code></pre>
 </div>
             </div>
 
@@ -622,7 +649,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Tabset.js.html#l28"><code>lib&#x2F;Tabset.js:28</code></a>
+        <a href="../files/lib_Tabset.js.html#l27"><code>lib&#x2F;Tabset.js:27</code></a>
         
         </p>
 

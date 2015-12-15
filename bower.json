@@ -14,7 +14,6 @@
     "tests"
   ],
   "dependencies": {
-    "react": "~0.14.0",
-    "seajs": "~3.0.0"
+    "react": "~0.14.0"
   }
 }

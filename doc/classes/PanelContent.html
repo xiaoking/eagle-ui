@@ -32,6 +32,9 @@
                     <li><a href="">主页</a>
                     </li>
                     
+                    <li><a href="/documents/eagle-ui/examples/">例子</a>
+                    </li>
+                    
                 </ul>
                <div class="navbar-form navbar-right filterAPi" autocomplete="off">
                 <input type="text" id='txtSearchAPI' class="form-control search-query" placeholder="Search for API" />
@@ -54,6 +57,22 @@
                 <dd>
                     <ul>
                    
+                       <li>
+                            
+                           <a href="../classes/CheckboxGroup.html">CheckboxGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Input.html">Input</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
                        <li>
                             
                            <a href="../classes/RadioGroup.html">RadioGroup</a>
@@ -182,6 +201,14 @@
                    
                        <li>
                             
+                           <a href="../classes/Th.html">Th</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Table.html">Table</a>
                            <ul>
                                 
@@ -191,14 +218,6 @@
                        <li>
                             
                            <a href="../classes/Td.html">Td</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Th.html">Th</a>
                            <ul>
                                 
                            </ul>
@@ -233,6 +252,14 @@
                        <li>
                             
                            <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Search.html">Search</a>
                            <ul>
                                 
                            </ul>
@@ -304,6 +331,14 @@
                     
                        <li>
                             
+                           <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Tabset.html">Tabset</a>
                            <ul>
                                 
@@ -313,6 +348,14 @@
                        <li>
                             
                            <a href="../classes/Toast.html">Toast</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/TooltipPanel.html">TooltipPanel</a>
                            <ul>
                                 
                            </ul>
@@ -501,6 +544,137 @@
     
 
     
+        <div class="example">
+            <h4>Example:</h4>
+            <ul class="nav nav-tabs example-list">
+                
+                <li role="presentation"  class="active"  _no='0'> <a>js</a></li>
+                
+            </ul>
+
+            <div class="example-content ">
+                <div class="stdoc-code"><pre class="code prettyprint"><code>/**
+ * Created by mac on 15/11/4.
+ */
+import React,{Component} from &#39;react&#39;;
+
+import Input from &#39;../../../lib/Input.js&#39;;
+import Label from &#39;../../../lib/Label.js&#39;;
+import LabelGroup from &#39;../../../lib/LabelGroup.js&#39;;
+
+
+import Grid from &#39;../../../lib/Grid.js&#39;;
+import Row from &#39;../../../lib/Row.js&#39;;
+import Col from &#39;../../../lib/Col.js&#39;;
+
+import Panel from &#39;../../../lib/Panel/Panel.js&#39;;
+import PanelHeader from &#39;../../../lib/Panel/PanelHeader.js&#39;;
+import PanelFooter from &#39;../../../lib/Panel/PanelFooter.js&#39;;
+import PanelContent from &#39;../../../lib/Panel/PanelContent.js&#39;;
+
+
+let Demo = class Demo extends Component{
+
+    constructor(props,context){
+        super(props,context);
+
+    }
+
+    show(){
+        console.debug(1);
+    }
+    render(){
+        return (
+            &lt;Panel&gt;
+                &lt;PanelHeader&gt;title&lt;/PanelHeader&gt;
+                &lt;PanelContent&gt;
+                    &lt;Grid&gt;
+                        &lt;Row&gt;
+                            &lt;Col sm={1}&gt;
+                                &lt;Input label=&#39;&#39;  type="checkbox"  /&gt;
+                            &lt;/Col&gt;
+                            &lt;Col sm={10}&gt;
+                                &lt;div className=&#39;shop-card&#39;&gt;
+                                    &lt;h1 className=&#39;shop-card-title inline-block&#39;&gt;
+                                        西贝莜面村（中山公园店）
+
+                                    &lt;/h1&gt;
+                                    &lt;Label error radius&gt;运营下线&lt;/Label&gt;
+                                    &lt;div&gt;
+                                        &lt;span className=&#39;row-key&#39;&gt;方案ID：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;21355&lt;/span&gt;
+                                        &lt;span className=&#39;row-key&#39;&gt;负责人：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;张三丰&lt;/span&gt;
+                                        &lt;span className=&#39;row-key&#39;&gt;城市：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;上海&lt;/span&gt;
+                                        &lt;span className=&#39;row-key&#39;&gt;售卖时间：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;2014-2015&lt;/span&gt;
+                                        &lt;span className=&#39;row-key&#39;&gt;售卖量：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;0&lt;/span&gt;
+                                    &lt;/div&gt;
+                                    &lt;div&gt;
+                                        &lt;span className=&#39;row-key&#39;&gt;客户：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;&lt;/span&gt;
+                                        &lt;span className=&#39;row-key&#39;&gt;已分配（王卓轩 2015-02-01 14:22）&lt;/span&gt;
+                                    &lt;/div&gt;
+                                    &lt;div&gt;
+                                        &lt;LabelGroup simple clickCallback={this.show} &gt;
+                                            &lt;Label&gt;流程历史&lt;/Label&gt;
+                                            &lt;Label&gt;编辑&lt;/Label&gt;
+                                            &lt;Label&gt;删除&lt;/Label&gt;
+                                            &lt;Label&gt;复制&lt;/Label&gt;
+                                        &lt;/LabelGroup&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/Col&gt;
+                            &lt;Col sm={1}&gt;审批通过&lt;/Col&gt;
+                        &lt;/Row&gt;
+                        &lt;Row&gt;
+                            &lt;Col sm={1}&gt;
+                                &lt;Input label=&#39;&#39;  type="checkbox" checked  /&gt;
+                            &lt;/Col&gt;
+                            &lt;Col sm={10}&gt;
+                                &lt;div className=&#39;shop-card&#39;&gt;
+                                    &lt;h1 className=&#39;shop-card-title inline-block&#39;&gt;
+                                        西贝莜面村（中山公园店）
+
+                                    &lt;/h1&gt;
+                                    &lt;Label success radius&gt;售卖中&lt;/Label&gt;
+                                    &lt;div&gt;
+                                        &lt;span className=&#39;row-key&#39;&gt;方案ID：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;21355&lt;/span&gt;
+                                        &lt;span className=&#39;row-key&#39;&gt;负责人：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;张三丰&lt;/span&gt;
+                                        &lt;span className=&#39;row-key&#39;&gt;城市：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;上海&lt;/span&gt;
+                                        &lt;span className=&#39;row-key&#39;&gt;售卖时间：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;2014-2015&lt;/span&gt;
+                                        &lt;span className=&#39;row-key&#39;&gt;售卖量：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;0&lt;/span&gt;
+                                    &lt;/div&gt;
+                                    &lt;div&gt;
+                                        &lt;span className=&#39;row-key&#39;&gt;客户：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;&lt;/span&gt;
+                                        &lt;span className=&#39;row-key&#39;&gt;已分配（王卓轩 2015-02-01 14:22）&lt;/span&gt;
+                                    &lt;/div&gt;
+                                    &lt;div&gt;
+                                        &lt;LabelGroup simple clickCallback={this.show} &gt;
+                                            &lt;Label&gt;流程历史&lt;/Label&gt;
+                                            &lt;Label&gt;编辑&lt;/Label&gt;
+                                            &lt;Label&gt;删除&lt;/Label&gt;
+                                            &lt;Label&gt;复制&lt;/Label&gt;
+                                        &lt;/LabelGroup&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/Col&gt;
+                            &lt;Col sm={1}&gt;审批通过&lt;/Col&gt;
+                        &lt;/Row&gt;
+
+                    &lt;/Grid&gt;
+                &lt;/PanelContent&gt;
+                &lt;PanelFooter&gt;heiheihei&lt;/PanelFooter&gt;
+            &lt;/Panel&gt;
+
+        );
+    }
+};
+
+export default Demo;</code></pre>
+</div>
+            </div>
+
+             <button class="btn btn-info btn-viewDemo" type="button">view demo</button>
+            <button class="btn btn-info btn-editDemo" type="button">edit code</button>
+        </div>
+    
 </div>
 
                 </div>
@@ -550,7 +724,7 @@
             
         
         
-        <a href="../files/lib_Panel_PanelContent.js.html#l37"><code>lib&#x2F;Panel&#x2F;PanelContent.js:37</code></a>
+        <a href="../files/lib_Panel_PanelContent.js.html#l36"><code>lib&#x2F;Panel&#x2F;PanelContent.js:36</code></a>
         
         </p>
 
@@ -615,7 +789,7 @@
             
         
         
-        <a href="../files/lib_Panel_PanelContent.js.html#l21"><code>lib&#x2F;Panel&#x2F;PanelContent.js:21</code></a>
+        <a href="../files/lib_Panel_PanelContent.js.html#l20"><code>lib&#x2F;Panel&#x2F;PanelContent.js:20</code></a>
         
         </p>
 

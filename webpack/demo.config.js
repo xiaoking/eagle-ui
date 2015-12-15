@@ -23,13 +23,15 @@ var getEntry =function() {
 };
 
 module.exports =extend({}, {
-    entry:getEntry(),
+    entry:[
+        './examples/src/index.js'
+    ],
     output:{
         libraryTarget: 'umd',
         path:path.join(process.cwd(),'examples/js'),
-        filename:'[name]'
+        filename:'examples.js'
     },
-    externals:[{
+    /*externals:[{
         'react': {
             root: 'React',
             commonjs2: 'react',
@@ -42,7 +44,7 @@ module.exports =extend({}, {
             commonjs: 'Eagleui',
             amd: 'Eagleui'
         }
-    }],
+    }],*/
     module:{
         loaders:[
             {

@@ -32,6 +32,9 @@
                     <li><a href="">主页</a>
                     </li>
                     
+                    <li><a href="/documents/eagle-ui/examples/">例子</a>
+                    </li>
+                    
                 </ul>
                <div class="navbar-form navbar-right filterAPi" autocomplete="off">
                 <input type="text" id='txtSearchAPI' class="form-control search-query" placeholder="Search for API" />
@@ -54,6 +57,22 @@
                 <dd>
                     <ul>
                    
+                       <li>
+                            
+                           <a href="../classes/CheckboxGroup.html">CheckboxGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Input.html">Input</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
                        <li>
                             
                            <a href="../classes/RadioGroup.html">RadioGroup</a>
@@ -182,6 +201,14 @@
                    
                        <li>
                             
+                           <a href="../classes/Th.html">Th</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Table.html">Table</a>
                            <ul>
                                 
@@ -191,14 +218,6 @@
                        <li>
                             
                            <a href="../classes/Td.html">Td</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Th.html">Th</a>
                            <ul>
                                 
                            </ul>
@@ -233,6 +252,14 @@
                        <li>
                             
                            <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Search.html">Search</a>
                            <ul>
                                 
                            </ul>
@@ -304,6 +331,14 @@
                     
                        <li>
                             
+                           <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Tabset.html">Tabset</a>
                            <ul>
                                 
@@ -313,6 +348,14 @@
                        <li>
                             
                            <a href="../classes/Toast.html">Toast</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/TooltipPanel.html">TooltipPanel</a>
                            <ul>
                                 
                            </ul>
@@ -370,8 +413,7 @@ import ClassNameMixin from &#x27;../utils/ClassNameMixin.js&#x27;;
  * @extends Component
  * @requires React classnames
  * @since 0.1.0
- * @demo src/table.js {js}
- * @demo table.html {html}
+ * @demo table.js {js}
  * @show true
  * @author bo.an@dianping.com
  * */
@@ -385,18 +427,29 @@ export default class Th extends Component{
     static defaultProps = {
 
     };
+    constructor(props, context) {
+        super(props, context);
+    }
 
-
-
+    sortHandler(){
+        var sortMethod=this.props.sort;
+        if(!sortMethod || sortMethod===&#x27;asc&#x27;){
+            sortMethod=&#x27;des&#x27;;
+        }else{
+            sortMethod=&#x27;asc&#x27;;
+        }
+        this.props.clickCallback(this.props.field,sortMethod);
+    }
     /**
      * @method render
      * @return {ReactElement}
      * */
     render(){
-        console.debug(&#x27;th&#x27;);
         return (
-            &lt;th&gt;
+            &lt;th
+                onClick={::this.sortHandler}&gt;
                 {this.props.children}
+                {this.props.sort===&#x27;des&#x27;? &lt;span&gt;↓&lt;/span&gt;:this.props.sort===&#x27;asc&#x27;?&lt;span&gt;↑&lt;/span&gt;:null}
             &lt;/th&gt;
         );
 

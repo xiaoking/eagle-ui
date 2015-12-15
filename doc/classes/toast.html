@@ -32,6 +32,9 @@
                     <li><a href="">主页</a>
                     </li>
                     
+                    <li><a href="/documents/eagle-ui/examples/">例子</a>
+                    </li>
+                    
                 </ul>
                <div class="navbar-form navbar-right filterAPi" autocomplete="off">
                 <input type="text" id='txtSearchAPI' class="form-control search-query" placeholder="Search for API" />
@@ -54,6 +57,22 @@
                 <dd>
                     <ul>
                    
+                       <li>
+                            
+                           <a href="../classes/CheckboxGroup.html">CheckboxGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Input.html">Input</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
                        <li>
                             
                            <a href="../classes/RadioGroup.html">RadioGroup</a>
@@ -182,6 +201,14 @@
                    
                        <li>
                             
+                           <a href="../classes/Th.html">Th</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Table.html">Table</a>
                            <ul>
                                 
@@ -191,14 +218,6 @@
                        <li>
                             
                            <a href="../classes/Td.html">Td</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Th.html">Th</a>
                            <ul>
                                 
                            </ul>
@@ -233,6 +252,14 @@
                        <li>
                             
                            <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Search.html">Search</a>
                            <ul>
                                 
                            </ul>
@@ -304,6 +331,14 @@
                     
                        <li>
                             
+                           <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Tabset.html">Tabset</a>
                            <ul>
                                 
@@ -313,6 +348,14 @@
                        <li>
                             
                            <a href="../classes/Toast.html">Toast</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/TooltipPanel.html">TooltipPanel</a>
                            <ul>
                                 
                            </ul>
@@ -356,7 +399,9 @@
     <h1>Toast <small>Class</small></h1>
 </div>
  <div class="well well-small sign-left3">
-      <div class="stdoc-code"><p>提示组件</p>
+      <div class="stdoc-code"><p>提示组件
+类型：分为success,error,loading 三种。默认success
+overalay是否显示遮罩，默认false不显示</p>
 </div>
  </div>
 
@@ -391,13 +436,6 @@
                 
                     <li class="index-item method">
                         <a href="#" data-tabid="#method" data-anchor="#method_setTimeoutForClose" data-tablink="setTimeoutForClose">setTimeoutForClose</a>
-
-                        
-                        
-                    </li>
-                
-                    <li class="index-item method">
-                        <a href="#" data-tabid="#method" data-anchor="#method_showOverlay" data-tablink="showOverlay">showOverlay</a>
 
                         
                         
@@ -577,39 +615,67 @@
                 
                 <li role="presentation"  class="active"  _no='0'> <a>js</a></li>
                 
-                <li role="presentation"   _no='1'> <a>toast</a></li>
-                
             </ul>
 
             <div class="example-content  showdemo ">
                 <div class="stdoc-code"><pre class="code prettyprint"><code>/**
  * Created by panqianjin on 15/11/4.
  */
-import css from &#39;../../lib/_include.less&#39;;
-import React from &#39;react&#39;;
-import Toast from &#39;../../lib/Toast.js&#39;;
-ReactDOM.render(
-    &lt;Toast type=&#39;error&#39; msg=&#39;保存成功&#39; seconds=&#39;3&#39; show overlay&gt;
-    &lt;/Toast&gt;
-    ,document.getElementById(&#39;root&#39;));</code></pre>
-</div><div class="stdoc-code"><pre class="code prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;提示&lt;/title&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"&gt;
-    &lt;link rel="stylesheet" type="text/css" href="./eagle-ui.css" /&gt;
+import React,{Component} from &#39;react&#39;;
+import Toast from &#39;../../../lib/Toast.js&#39;;
+import Button from &#39;../../../lib/Button.js&#39;;
+import Grid from &#39;../../../lib/Grid.js&#39;;
+import Row from &#39;../../../lib/Row.js&#39;;
+import Col from &#39;../../../lib/Col.js&#39;;
+let Demo= class Demo extends Component{
 
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div id="root"&gt;&lt;/div&gt;
+    static defaultProps = {
+        show: false,
+        type: "success"
+    }
 
-&lt;script src="../bower_components/react/react.js"&gt;&lt;/script&gt;
-&lt;script src="../bower_components/react/react-dom.js"&gt;&lt;/script&gt;
-&lt;script src="./js/toast.js"&gt;&lt;/script&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+    constructor(props, context) {
+        super(props, context);
+        this.state = {
+            show: this.props.show,
+            type: this.props.type,
+            overlay: true
+        }
+    }
+    render(){
+        return (
+            &lt;Grid&gt;
+                &lt;Row&gt;
+                    &lt;Col sm={4}&gt;&lt;Button block radius egSize="sm" onClick={::this.showSuccess}&gt;success&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={4}&gt;&lt;Button block radius egSize="sm" onClick={::this.showError}&gt;error&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={4}&gt;&lt;Button block radius egSize="sm" onClick={::this.showLoading}&gt;loading&lt;/Button&gt;&lt;/Col&gt;
+                &lt;/Row&gt;
+                &lt;Toast type={this.state.type} show={this.state.show} overlay={this.state.overlay}&gt;
+                &lt;/Toast&gt;
+            &lt;/Grid&gt;
+        );
+    }
+    showSuccess(){
+        this.setState({
+            show: true,
+            type: &#39;success&#39;
+        })
+    }
+    showError(){
+        this.setState({
+            show: true,
+            type: &#39;error&#39;,
+            overlay: false
+        })
+    }
+    showLoading(){
+        this.setState({
+            show: true,
+            type: &#39;loading&#39;
+        })
+    }
+};
+export default Demo;</code></pre>
 </div>
             </div>
 
@@ -666,7 +732,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Toast.js.html#l187"><code>lib&#x2F;Toast.js:187</code></a>
+        <a href="../files/lib_Toast.js.html#l182"><code>lib&#x2F;Toast.js:182</code></a>
         
         </p>
 
@@ -735,7 +801,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Toast.js.html#l89"><code>lib&#x2F;Toast.js:89</code></a>
+        <a href="../files/lib_Toast.js.html#l91"><code>lib&#x2F;Toast.js:91</code></a>
         
         </p>
 
@@ -796,7 +862,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Toast.js.html#l104"><code>lib&#x2F;Toast.js:104</code></a>
+        <a href="../files/lib_Toast.js.html#l112"><code>lib&#x2F;Toast.js:112</code></a>
         
         </p>
 
@@ -868,7 +934,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Toast.js.html#l173"><code>lib&#x2F;Toast.js:173</code></a>
+        <a href="../files/lib_Toast.js.html#l168"><code>lib&#x2F;Toast.js:168</code></a>
         
         </p>
 
@@ -897,99 +963,6 @@ ReactDOM.render(
                 
             </div>
         </div>
-    
-
-    
-</div>
-
-                
-                    <div id="method_showOverlay" class="method item">
-    <h3 class="name">showOverlay</h3>
-    <code>
-    showOverlay
-    
-        <div class="args">
-            <span class="paren">(</span><ul class="args-list inline commas">
-            
-                <li class="arg">
-                    
-                        target
-                    
-                </li>
-            
-            </ul><span class="paren">)</span>
-        </div>
-    
-    </code>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/lib_Toast.js.html#l123"><code>lib&#x2F;Toast.js:123</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description well well-small sign-left3">
-        <div class="stdoc-code"><p>是否展示遮罩层</p>
-</div>
-    </div>
-
-    
-        <div class="params">
-            <h4>Parameters:</h4>
-
-            <table class="table table-bordered">
-            <tr class='active'><th>name</th><th>type</th><th>flag</th><th>description</th></tr>
-            
-                <tr class="param">
-                    
-                       <td> <code class="param-name">target</code>
-                       <td> <span class="type">Boolean</span>
-                       <td>
-                    
-
-                    
-                    </td>
-                    <td><div class="param-description">
-                        <p>return {ReactElement}</p>
-
-                    </div>
-
-                    
-                </tr>
-            
-            </table>
-        </div>
-    
-
     
 
     
@@ -1034,7 +1007,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Toast.js.html#l145"><code>lib&#x2F;Toast.js:145</code></a>
+        <a href="../files/lib_Toast.js.html#l140"><code>lib&#x2F;Toast.js:140</code></a>
         
         </p>
 
@@ -1100,7 +1073,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Toast.js.html#l54"><code>lib&#x2F;Toast.js:54</code></a>
+        <a href="../files/lib_Toast.js.html#l55"><code>lib&#x2F;Toast.js:55</code></a>
         
         </p>
 
@@ -1148,7 +1121,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Toast.js.html#l61"><code>lib&#x2F;Toast.js:61</code></a>
+        <a href="../files/lib_Toast.js.html#l62"><code>lib&#x2F;Toast.js:62</code></a>
         
         </p>
 
@@ -1196,7 +1169,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Toast.js.html#l33"><code>lib&#x2F;Toast.js:33</code></a>
+        <a href="../files/lib_Toast.js.html#l34"><code>lib&#x2F;Toast.js:34</code></a>
         
         </p>
 
@@ -1244,7 +1217,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Toast.js.html#l47"><code>lib&#x2F;Toast.js:47</code></a>
+        <a href="../files/lib_Toast.js.html#l48"><code>lib&#x2F;Toast.js:48</code></a>
         
         </p>
 
@@ -1292,7 +1265,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Toast.js.html#l40"><code>lib&#x2F;Toast.js:40</code></a>
+        <a href="../files/lib_Toast.js.html#l41"><code>lib&#x2F;Toast.js:41</code></a>
         
         </p>
 
@@ -1302,13 +1275,13 @@ ReactDOM.render(
     </div>
 
     <div class="description">
-        <div class="stdoc-code"><p>tips n秒后消失 默认4秒</p>
+        <div class="stdoc-code"><p>tips n秒后消失 默认2秒</p>
 </div>
     </div>
 
     
         <p><strong>Default:</strong></p>
-         <code> 4</code>
+         <code> 2</code>
     
 
     
@@ -1340,7 +1313,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_Toast.js.html#l26"><code>lib&#x2F;Toast.js:26</code></a>
+        <a href="../files/lib_Toast.js.html#l27"><code>lib&#x2F;Toast.js:27</code></a>
         
         </p>
 

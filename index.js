@@ -41,6 +41,7 @@ export Col from './lib/Col';
 export Row from './lib/Row';
 export Button from './lib/Button';
 export ButtonGroup from './lib/ButtonGroup';
+export CheckboxGroup from './lib/CheckboxGroup.js';
 export Input from './lib/Input.js';
 export RadioGroup from './lib/RadioGroup.js';
 export Label from './lib/Label.js';
@@ -74,7 +75,7 @@ window['Eagleui'] = {};
 
 [
     'Grid','Col','Row',
-    'Button','ButtonGroup','Input','RadioGroup','Label','ValidatorPanel',
+    'Button','ButtonGroup','CheckboxGroup','Input','RadioGroup','Label','ValidatorPanel',
     'Crumb','Search','Select','LabelGroup','Toast','Paging','Calendar','Tab','Tabset','Dialog','Tooltip',
     'Panel','PanelContent','PanelFooter','PanelHeader','List','Item',
     'Table','Tr','Td','Th'

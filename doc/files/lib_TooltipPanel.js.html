@@ -32,6 +32,9 @@
                     <li><a href="">主页</a>
                     </li>
                     
+                    <li><a href="/documents/eagle-ui/examples/">例子</a>
+                    </li>
+                    
                 </ul>
                <div class="navbar-form navbar-right filterAPi" autocomplete="off">
                 <input type="text" id='txtSearchAPI' class="form-control search-query" placeholder="Search for API" />
@@ -54,6 +57,22 @@
                 <dd>
                     <ul>
                    
+                       <li>
+                            
+                           <a href="../classes/CheckboxGroup.html">CheckboxGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Input.html">Input</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
                        <li>
                             
                            <a href="../classes/RadioGroup.html">RadioGroup</a>
@@ -182,6 +201,14 @@
                    
                        <li>
                             
+                           <a href="../classes/Th.html">Th</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Table.html">Table</a>
                            <ul>
                                 
@@ -191,14 +218,6 @@
                        <li>
                             
                            <a href="../classes/Td.html">Td</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Th.html">Th</a>
                            <ul>
                                 
                            </ul>
@@ -233,6 +252,14 @@
                        <li>
                             
                            <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Search.html">Search</a>
                            <ul>
                                 
                            </ul>
@@ -304,6 +331,14 @@
                     
                        <li>
                             
+                           <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Tabset.html">Tabset</a>
                            <ul>
                                 
@@ -313,6 +348,14 @@
                        <li>
                             
                            <a href="../classes/Toast.html">Toast</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/TooltipPanel.html">TooltipPanel</a>
                            <ul>
                                 
                            </ul>
@@ -369,12 +412,49 @@ import Button from &#x27;./Button.js&#x27;;
 import Row from &#x27;./Row.js&#x27;;
 import Col from &#x27;./Col.js&#x27;;
 import Grid from &#x27;./Grid.js&#x27;;
+/**
+ * tipsPanel组件
+ * 方向可选：top,down,left,right.默认down
+ * 存在边界判断，若指定方向容纳不了提示，会转为默认
+ * @class TooltipPanel
+ * @moudle ui
+ * @constructor
+ * @since 0.1.0
+ * @demo tooltip.js{js}
+ * @show false
+ * */
 @ClassNameMixin
 export default
 class TooltipPanel extends Component {
+    static propType={
+        /**
+         * 提示是否展示
+         * @property show
+         * @type Boolean
+         * @default false
+         * */
+        show: PropTypes.boolean,
+        /**
+         * 提示内容
+         * @property msg
+         * @type String
+         * @default 这是个提示
+         * */
+        msg: PropTypes.string,
+        /**
+         * 提示方向
+         * @property direction
+         * @type String
+         * @default down
+         * */
+        direction: PropTypes.string,
+        classPrefix: PropTypes.string,
+        componentTag:PropTypes.string
+    }
     static defaultProps = {
         show: false,
-        msg: &quot;这真是令人心碎的组件&quot;,
+        msg: &quot;这是个提示这是个提示这是个提示这是个提示这是个提示这是个提示这是个提示这是个提示这是个提示&quot;,
+        direction: &#x27;down&#x27;,
         classPrefix: &#x27;tooltip&#x27;,
         componentTag: &#x27;div&#x27;
     }
@@ -382,33 +462,168 @@ class TooltipPanel extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
+            /**
+             * 显示与否由父组件控制
+             * @type Boolean
+             * */
             show: this.props.show
         }
     }
+    /**
+     * 渲染完成时进行方向和边界判断，调整tips的位置
+     * @method componentDidMount
+     * @return null
+     * */
+    componentDidMount(){
+        this.changeStyle(this.props.direction);
+    }
+    /**
+     * @method render
+     * @return ReactElement
+     * */
     render() {
         let {componentTag} = this.props.children.props;
+        //  &lt;componentTag {...this.props} onMouseEnter={::this.showTips} onMouseOut={::this.hideTips}/&gt;
         return (
-            &lt;Grid className={classnames(
-                this.getClassName(&#x27;container&#x27;))}&gt;
-                &lt;Row &gt;
-                    &lt;componentTag {...this.props} onMouseEnter={::this.showTips} onMouseOut={::this.hideTips}/&gt;
-                &lt;/Row&gt;
-                &lt;Tooltip msg={this.props.msg} show={this.state.show}/&gt;
+            &lt;Grid  {...this.props} className={classnames(
+                this.getClassName(&#x27;container&#x27;))} ref=&#x27;container&#x27; &gt;
+                    {React.cloneElement(this.props.children,{
+                        onMouseEnter: ::this.showTips,
+                        onMouseOut: ::this.hideTips
+                        }) }
+                    &lt;Tooltip ref=&#x27;tips&#x27; {...this.props} show={this.state.show} /&gt;
             &lt;/Grid&gt;
         );
     }
-
+   /**
+    * 鼠标over，set show true,tips显示
+    * @method showTips
+    * @return null
+    * */
     showTips() {
         this.setState({
             show: true
         });
     }
-
+    /**
+     * 鼠标leave，set show false, tips隐藏
+     * @method hideTips
+     * @return null
+     * */
     hideTips() {
         this.setState({
             show: false
         });
     }
+    /**
+     * tips方向和边界判断，调整tips的位置
+     * @method changeStyle
+     * @param direction {String}
+     * @return null
+     * */
+    changeStyle(direction){
+        let dir = direction;
+        let [dbody,delement,tipNode,eleNode] = [document.body,document.documentElement,React.findDOMNode(this.refs.tips),React.findDOMNode(this.refs.container).children[0]];
+        let bodys = {
+            height: dbody.clientHeight,
+            width: dbody.clientWidth
+        };
+        let doc = {
+            height: delement.clientHeight,
+            width: delement.clientWidth
+        };
+        let tips = {
+            height: tipNode.offsetHeight,
+            width: tipNode.offsetWidth
+        };
+        let element = {
+            height: eleNode.offsetHeight,
+            width: eleNode.offsetWidth,
+            left: eleNode.parentNode.offsetLeft,
+            top: eleNode.parentNode.offsetTop
+        }
+        let maxBody = this.getMaxBody(bodys,doc);
+        let validate = this.isValidate(dir,tips,element,maxBody);
+        if(!validate){
+            let arrow = tipNode.children[0];
+            this.removeClass(arrow,classnames(
+                this.getClassName(&#x27;arrow-&#x27;+dir)
+            ));
+            this.addClass(arrow,classnames(
+                this.getClassName(&#x27;arrow-down&#x27;)
+            ));
+            dir = &#x27;down&#x27;;
+        }
+        switch(dir){
+            case &#x27;down&#x27;:
+                tipNode.style.left = &#x27;0&#x27;;
+                break;
+            case &#x27;top&#x27;:
+                tipNode.style.top = &#x27;-&#x27;+(tips.height + 10)+&#x27;px&#x27;;
+                tipNode.style.left = &#x27;0&#x27;;
+                break;
+            case &#x27;left&#x27;:
+                tipNode.style.left = &#x27;-&#x27;+(tips.width+5)+&#x27;px&#x27;;
+                tipNode.style.top = ((element.height - tips.height)/2 - 5)+&#x27;px&#x27;;
+                break;
+            case &#x27;right&#x27;:
+                tipNode.style.left = &#x27;auto&#x27;;
+                tipNode.style.right = &#x27;-&#x27;+(tips.width+5)+&#x27;px&#x27;;
+                tipNode.style.top = ((element.height - tips.height)/2 - 5)+&#x27;px&#x27;;
+                break;
+            default :
+                break;
+        }
+    }
+    /**
+     * 获得浏览器的边界大小
+     * @method getMaxBody
+     * @param body {Object}
+     * @param doc {Object}
+     * @return maxBody {Object}
+     * */
+    getMaxBody(body,doc){
+        let maxBody = {
+            height: body.height &gt; doc.height ? body.height : doc.height,
+            width: body.width &gt; doc.width ? body.width : doc.width,
+
+        };
+        return maxBody;
+    }
+    /**
+     * 判断是否满足边界条件,是返回true否返回false
+     * @method isValidate
+     * @param dir {String}
+     * @param tips {Object}
+     * @param ele {Object}
+     * @param maxBody {Object}
+     * @return flag {Boolean}
+     * */
+    isValidate(dir,tips,ele,maxBody){
+        let flag = false;
+        switch(dir){
+            case &#x27;down&#x27;:
+                flag = (maxBody.height - ele.top) &gt; (ele.height + tips.height) ? true :false;
+                return flag;
+                break;
+            case &#x27;top&#x27;:
+                flag = ele.top &gt; tips.height ? true :false;
+                return flag;
+                break;
+            case &#x27;left&#x27;:
+                flag = ele.left &gt; tips.width ? true :false;
+                return flag;
+                break;
+            case &#x27;right&#x27;:
+                flag = (maxBody.width - ele.left) &gt; (ele.width + tips.width) ? true :false;
+                return flag;
+                break;
+            default :
+                return flag;
+                break;
+        }
+    }
+
 }
     </pre>
 </div>

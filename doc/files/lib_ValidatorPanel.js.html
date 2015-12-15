@@ -32,6 +32,9 @@
                     <li><a href="">主页</a>
                     </li>
                     
+                    <li><a href="/documents/eagle-ui/examples/">例子</a>
+                    </li>
+                    
                 </ul>
                <div class="navbar-form navbar-right filterAPi" autocomplete="off">
                 <input type="text" id='txtSearchAPI' class="form-control search-query" placeholder="Search for API" />
@@ -54,6 +57,22 @@
                 <dd>
                     <ul>
                    
+                       <li>
+                            
+                           <a href="../classes/CheckboxGroup.html">CheckboxGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Input.html">Input</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
                        <li>
                             
                            <a href="../classes/RadioGroup.html">RadioGroup</a>
@@ -182,6 +201,14 @@
                    
                        <li>
                             
+                           <a href="../classes/Th.html">Th</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Table.html">Table</a>
                            <ul>
                                 
@@ -191,14 +218,6 @@
                        <li>
                             
                            <a href="../classes/Td.html">Td</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Th.html">Th</a>
                            <ul>
                                 
                            </ul>
@@ -233,6 +252,14 @@
                        <li>
                             
                            <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Search.html">Search</a>
                            <ul>
                                 
                            </ul>
@@ -304,6 +331,14 @@
                     
                        <li>
                             
+                           <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Tabset.html">Tabset</a>
                            <ul>
                                 
@@ -313,6 +348,14 @@
                        <li>
                             
                            <a href="../classes/Toast.html">Toast</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/TooltipPanel.html">TooltipPanel</a>
                            <ul>
                                 
                            </ul>
@@ -364,6 +407,7 @@ import classnames from &#x27;classnames&#x27;;
 
 /**
  * 表单验证组件&lt;br /&gt;
+ * 在需要验证的表单元素上添加data-validate属性，&lt;!--表单元素初始化值请绑定上data-field=“fieldName”,fieldName对应数据字段名称--&gt; &lt;br /&gt;
  * 默认规则有&lt;br/&gt;
  * &lt;pre&gt;
  *     required：是否必填
@@ -387,8 +431,7 @@ import classnames from &#x27;classnames&#x27;;
  * @extends Component
  * @constructor
  * @since 0.1.0
- * @demo src/validate.js {js}
- * @demo validate.html {html}
+ * @demo validate.js {js}
  * @show true
  * */
 @ClassNameMixin
@@ -396,7 +439,19 @@ export default class ValidatorPanel extends Component {
     static propTypes = {
         //触发点，change blur  manual（手动）
         trigger:PropTypes.string,
-        submitCallback:PropTypes.func
+        submitCallback:PropTypes.func,
+        /**
+         * 需要初始化的表单元素默认值(废弃)
+         * @property values
+         * @type Object
+         * */
+        values:PropTypes.object,
+        /**
+         * 每次验证时值被改变后都会被触发，会回传当前data-field字段、值和所有值对象
+         * @property getValueCallback
+         * @type Function
+         * */
+        getValueCallback:PropTypes.func
     };
 
     static defaultProps = {
@@ -417,7 +472,7 @@ export default class ValidatorPanel extends Component {
         /**
          * 默认规则提示文案
          * @property message
-         * @type String
+         * @type Object
          * @default
          *       required: &#x27;不能为空&#x27;,
                  date: &#x27;请正确填写日期&#x27;,
@@ -522,6 +577,7 @@ export default class ValidatorPanel extends Component {
         this.isUpdate = false;
 
         this.vals={};
+        this.valueLink = &#x27;data-field&#x27;;
 
         this.state = {
             message:&#x27;&#x27;,
@@ -546,6 +602,26 @@ export default class ValidatorPanel extends Component {
             return true;
         }
         return false;
+    }
+
+    initVals(){
+        let elms = this.elements,
+            val = &#x27;&#x27;,
+            name=null,
+            vals= this.vals;
+
+        let {values} = this.props;
+        if(values){
+            for(let element in elms){
+                name = this.getField(element);
+                val = values[name];
+                if(val){
+                    this.setValue(element,val);
+                    vals[name] = val;
+                }
+            }
+        }
+
     }
 
     optional(element) {
@@ -689,6 +765,10 @@ export default class ValidatorPanel extends Component {
         }
         return val;
     }
+
+    setValue(element,val){
+
+    }
     //循环验证单个input上的规则
     check(element){
 
@@ -715,7 +795,7 @@ export default class ValidatorPanel extends Component {
                 }
             }
         }*/
-        this.vals[element.name]=val;
+        this.vals[this.getField(element)]=val;
         for(let rule in rules){
 
             text = rules[rule];
@@ -781,9 +861,20 @@ export default class ValidatorPanel extends Component {
         return true;
     }
 
+    getField(element){
+        let attr = element.getAttribute(this.valueLink);
+        return attr ? attr : element.name;
+    }
+
     validateHandler(e){
+        let {getValueCallback} = this.props,target = e.target;
+
         clearTimeout(this.vaTimeout);
-        this.vaTimeout = setTimeout(this.validate.bind(this,e.target),400 );
+        this.vaTimeout = setTimeout(function(){
+            let b = this.validate(target);
+            b &amp;&amp; getValueCallback &amp;&amp;(getValueCallback(this.getField(target),this.getValue(target),this.vals ) );
+
+        }.bind(this),400 );
     }
 
     submit(e){
@@ -842,11 +933,12 @@ export default class ValidatorPanel extends Component {
             d = this.props.direction,
             tb=d===&quot;bottom&quot; || d===&quot;top&quot;,
             tip =this.getTip(),
+            tag = this.props.componentTag,
             w = element.offsetLeft,
             t = element.offsetTop,
             h = element.offsetHeight;
 
-        while(element &amp;&amp; (element.nodeType!==1 || element.nodeName.toLowerCase()!=this.props.componentTag) ){
+        while(element &amp;&amp; (element.nodeType!==1 || element.nodeName.toLowerCase()!=tag) ){
             element = element.parentNode;
         }
 
@@ -858,7 +950,8 @@ export default class ValidatorPanel extends Component {
             w = element.offsetLeft;
             t = element.offsetTop;
             node = element.offsetParent;
-            while(node) {
+
+            while(node &amp;&amp; node.nodeName.toLowerCase()!=tag) {
                 t+=node.offsetTop;
                 w+=node.offsetLeft;
                 node = node.offsetParent;
@@ -872,9 +965,10 @@ export default class ValidatorPanel extends Component {
             setTimeout(function(){
                 if(tb){
 
-                    tip.style.cssText=&#x60;left:${w}px;top:${(d===&quot;bottom&quot;?t+element.offsetHeight:t-tip.offsetHeight)}px;&#x60;;
+                    tip.style.cssText=&#x60;left:${w}px;top:${(d===&quot;bottom&quot;?t+element.offsetHeight:t-tip.offsetHeight)}px;width:${element.offsetWidth}px&#x60;;
                 }else{
-                    tip.style.cssText = &#x60;left:${w+(d===&quot;right&quot;?element.offsetWidth+15:0)}px;top:${t}px;height:${h}px;line-height:${h}px;&#x60;;
+                    //height:${h}px;line-height:${h}px;
+                    tip.style.cssText = &#x60;left:${w+(d===&quot;right&quot;?element.offsetWidth+10:0)}px;top:${t+(element.offsetHeight/2-(tip.offsetHeight/2) )}px;&#x60;;
                 }
             }.bind(this));
         }else{
@@ -984,7 +1078,8 @@ export default class ValidatorPanel extends Component {
         clearTimeout(this.fadeoutTimeObj);
         this.fadeoutTimeObj=setTimeout(function(){
             if(!this.state.show &amp;&amp;!this.init &amp;&amp; this.state.fadeShow!=&#x27;none&#x27;){
-                this.getTip().style.display=&#x27;none&#x27;;
+                this.removeClass(this.getTip(),&#x27;fadeout&#x27;);
+
             }
         }.bind(this),400 );
     }

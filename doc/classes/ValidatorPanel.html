@@ -32,6 +32,9 @@
                     <li><a href="">主页</a>
                     </li>
                     
+                    <li><a href="/documents/eagle-ui/examples/">例子</a>
+                    </li>
+                    
                 </ul>
                <div class="navbar-form navbar-right filterAPi" autocomplete="off">
                 <input type="text" id='txtSearchAPI' class="form-control search-query" placeholder="Search for API" />
@@ -54,6 +57,22 @@
                 <dd>
                     <ul>
                    
+                       <li>
+                            
+                           <a href="../classes/CheckboxGroup.html">CheckboxGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Input.html">Input</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
                        <li>
                             
                            <a href="../classes/RadioGroup.html">RadioGroup</a>
@@ -182,6 +201,14 @@
                    
                        <li>
                             
+                           <a href="../classes/Th.html">Th</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Table.html">Table</a>
                            <ul>
                                 
@@ -191,14 +218,6 @@
                        <li>
                             
                            <a href="../classes/Td.html">Td</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Th.html">Th</a>
                            <ul>
                                 
                            </ul>
@@ -233,6 +252,14 @@
                        <li>
                             
                            <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Search.html">Search</a>
                            <ul>
                                 
                            </ul>
@@ -304,6 +331,14 @@
                     
                        <li>
                             
+                           <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Tabset.html">Tabset</a>
                            <ul>
                                 
@@ -313,6 +348,14 @@
                        <li>
                             
                            <a href="../classes/Toast.html">Toast</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/TooltipPanel.html">TooltipPanel</a>
                            <ul>
                                 
                            </ul>
@@ -357,6 +400,7 @@
 </div>
  <div class="well well-small sign-left3">
       <div class="stdoc-code"><p>表单验证组件<br />
+在需要验证的表单元素上添加data-validate属性，<!--表单元素初始化值请绑定上data-field=“fieldName”,fieldName对应数据字段名称--> <br />
 默认规则有<br/></p>
 <pre>
     required：是否必填
@@ -399,6 +443,13 @@
                 
                     <li class="index-item property">
                         <a href="#" data-tabid="#property" data-anchor="#property_direction" data-tablink="direction">direction</a>
+
+                        
+                        
+                    </li>
+                
+                    <li class="index-item property">
+                        <a href="#" data-tabid="#property" data-anchor="#property_getValueCallback" data-tablink="getValueCallback">getValueCallback</a>
 
                         
                         
@@ -462,6 +513,13 @@
                 
                     <li class="index-item property">
                         <a href="#" data-tabid="#property" data-anchor="#property_validateCallback" data-tablink="validateCallback">validateCallback</a>
+
+                        
+                        
+                    </li>
+                
+                    <li class="index-item property">
+                        <a href="#" data-tabid="#property" data-anchor="#property_values" data-tablink="values">values</a>
 
                         
                         
@@ -581,25 +639,26 @@
                 
                 <li role="presentation"  class="active"  _no='0'> <a>js</a></li>
                 
-                <li role="presentation"   _no='1'> <a>html</a></li>
-                
             </ul>
 
             <div class="example-content  showdemo ">
                 <div class="stdoc-code"><pre class="code prettyprint"><code>/**
  * Created by mac on 15/11/4.
  */
-import css from &#39;../../lib/_include.less&#39;;
 import React,{Component} from &#39;react&#39;;
-import Input from &#39;../../lib/Input.js&#39;;
-import Button from &#39;../../lib/Button.js&#39;;
-import Row from &#39;../../lib/Row.js&#39;;
-import Panel from &#39;../../lib/panel/Panel.js&#39;;
-import PanelContent from &#39;../../lib/panel/PanelContent.js&#39;;
-import Col from &#39;../../lib/Col.js&#39;;
-import Grid from &#39;../../lib/Grid.js&#39;;
-import RadioGroup from &#39;../../lib/RadioGroup.js&#39;;
-import ValidatorPanel from &#39;../../lib/ValidatorPanel.js&#39;;
+import Input from &#39;../../../lib/Input.js&#39;;
+import Button from &#39;../../../lib/Button.js&#39;;
+import Row from &#39;../../../lib/Row.js&#39;;
+import Panel from &#39;../../../lib/panel/Panel.js&#39;;
+import PanelContent from &#39;../../../lib/panel/PanelContent.js&#39;;
+import Col from &#39;../../../lib/Col.js&#39;;
+import Grid from &#39;../../../lib/Grid.js&#39;;
+import RadioGroup from &#39;../../../lib/RadioGroup.js&#39;;
+import ValidatorPanel from &#39;../../../lib/ValidatorPanel.js&#39;;
+import CalendarPanel from &#39;../../../lib/CalendarPanel.js&#39;;
+import Tab from &#39;../../../lib/Tab.js&#39;;
+import Tabset from &#39;../../../lib/Tabset.js&#39;;
+import Dialog from &#39;../../../lib/Dialog.js&#39;;
 
 let Demo = class Demo extends Component{
 
@@ -656,7 +715,8 @@ let Demo = class Demo extends Component{
 
         this.state={
             showTab:0,
-            update:&#39;uid&#39;
+            update:&#39;uid&#39;,
+            show:false
         };
 
     }
@@ -668,12 +728,19 @@ let Demo = class Demo extends Component{
     change(value){
        this.setState({
            showTab:value,
-           update:&#39;uid&#39;+(+new Date())
+           update:&#39;uid&#39;+(+new Date()),
+           show:false
        });
     }
 
     submit(vals){
         alert(&#39;验证成功&#39;+JSON.stringify(vals));
+    }
+
+    showMask(){
+        this.setState({
+            show:true
+        });
     }
 
     checktab(){
@@ -706,86 +773,120 @@ let Demo = class Demo extends Component{
             &lt;Panel&gt;
 
                     &lt;Grid&gt;
-                        &lt;Row&gt;
-                            &lt;Col&gt;
+                        &lt;Tabset&gt;
+                            &lt;Tab heading="demo1"&gt;
+                                &lt;Row&gt;
+                                    &lt;Col&gt;
+                                        &lt;PanelContent&gt;
+                                            &lt;RadioGroup defaultChecked={this.state.showTab+&#39;&#39;} name="radio-foot" getValueCallback={::this.change}&gt;
+                                                &lt;Input  type="radio"  label="显示第一个表单元素" value="0"  /&gt;
+                                                &lt;Input  type="radio"  label="显示第二个表单元素" value="1"   /&gt;
+                                            &lt;/RadioGroup&gt;
+                                        &lt;/PanelContent&gt;
+                                    &lt;/Col&gt;
+                                &lt;/Row&gt;
+                                &lt;Row&gt;
+                                    &lt;Col sm={5} end&gt;
+                                        &lt;ValidatorPanel rules={this.rules} submitElement="#submit" direction="right" id="testFrom" update={this.state.update} submitCallback={::this.submit}&gt;
+                                            &lt;Row&gt;
+                                                &lt;Col&gt;
+                                                    &lt;PanelContent&gt;
+                                                        &lt;Row&gt;
+                                                            &lt;Col&gt;
+                                                                &lt;CalendarPanel&gt;
+                                                                    &lt;Input placeholder="请选择日期" icon="calendar" name="date" style={{width:&#39;150px&#39;}} data-validate /&gt;
+                                                                &lt;/CalendarPanel&gt;
+
+                                                            &lt;/Col&gt;
+                                                        &lt;/Row&gt;
+                                                        {this.checktab()}
+                                                        &lt;Row&gt;
+                                                            &lt;Col&gt;
+                                                                &lt;Input placeholder="请输入有效的号码" name="number" data-validate /&gt;
+                                                            &lt;/Col&gt;
+                                                        &lt;/Row&gt;
+                                                        &lt;Row&gt;
+                                                            &lt;Col&gt;
+                                                                &lt;Input placeholder="请输入有效的号码" name="equalTo" data-validate /&gt;
+                                                            &lt;/Col&gt;
+                                                        &lt;/Row&gt;
+                                                        &lt;Row&gt;
+                                                            &lt;Col&gt;
+                                                                &lt;Input placeholder="最大最小字符10-15" name="minlength" data-validate /&gt;
+                                                            &lt;/Col&gt;
+                                                        &lt;/Row&gt;
+                                                        &lt;Row&gt;
+                                                            &lt;Col&gt;
+                                                                &lt;Input placeholder="请输入您的email" name="email" data-validate /&gt;
+                                                            &lt;/Col&gt;
+                                                        &lt;/Row&gt;
+                                                        &lt;Row&gt;
+                                                            &lt;Col&gt;
+                                                                &lt;Button radius egSize="xs" id="submit" &gt;点我提交表单&lt;/Button&gt;
+                                                            &lt;/Col&gt;
+                                                        &lt;/Row&gt;
+                                                    &lt;/PanelContent&gt;
+                                                &lt;/Col&gt;
+                                            &lt;/Row&gt;
+
+                                        &lt;/ValidatorPanel&gt;
+                                    &lt;/Col&gt;
+                                &lt;/Row&gt;
+                            &lt;/Tab&gt;
+                            &lt;Tab heading="demo2"&gt;
                                 &lt;PanelContent&gt;
-                                    &lt;RadioGroup defaultChecked={this.state.showTab+&#39;&#39;} name="radio-foot" getValueCallback={::this.change}&gt;
-                                        &lt;Input  type="radio"  label="显示第一个表单元素" value="0"  /&gt;
-                                        &lt;Input  type="radio"  label="显示第二个表单元素" value="1"   /&gt;
-                                    &lt;/RadioGroup&gt;
-                                &lt;/PanelContent&gt;
-                            &lt;/Col&gt;
-                        &lt;/Row&gt;
-                        &lt;Row&gt;
-                            &lt;Col sm={5} end&gt;
-                                &lt;ValidatorPanel rules={this.rules} submitElement="#submit" direction="right" id="testFrom" update={this.state.update} submitCallback={::this.submit}&gt;
                                     &lt;Row&gt;
                                         &lt;Col&gt;
-                                            &lt;PanelContent&gt;
-                                                &lt;Row&gt;
-                                                    &lt;Col&gt;
-                                                        &lt;Input placeholder="请输入日期" icon="calendar" name="date" data-validate /&gt;
-                                                    &lt;/Col&gt;
-                                                &lt;/Row&gt;
-                                                {this.checktab()}
-                                                &lt;Row&gt;
-                                                    &lt;Col&gt;
-                                                        &lt;Input placeholder="请输入有效的号码" name="number" data-validate /&gt;
-                                                    &lt;/Col&gt;
-                                                &lt;/Row&gt;
-                                                &lt;Row&gt;
-                                                    &lt;Col&gt;
-                                                        &lt;Input placeholder="请输入有效的号码" name="equalTo" data-validate /&gt;
-                                                    &lt;/Col&gt;
-                                                &lt;/Row&gt;
-                                                &lt;Row&gt;
-                                                    &lt;Col&gt;
-                                                        &lt;Input placeholder="最大最小字符10-15" name="minlength" data-validate /&gt;
-                                                    &lt;/Col&gt;
-                                                &lt;/Row&gt;
-                                                &lt;Row&gt;
-                                                    &lt;Col&gt;
-                                                        &lt;Input placeholder="请输入您的email" name="email" data-validate /&gt;
-                                                    &lt;/Col&gt;
-                                                &lt;/Row&gt;
-                                                &lt;Row&gt;
-                                                    &lt;Col&gt;
-                                                        &lt;Button radius egSize="xs" id="submit" &gt;点我提交表单&lt;/Button&gt;
-                                                    &lt;/Col&gt;
-                                                &lt;/Row&gt;
-                                            &lt;/PanelContent&gt;
+                                            &lt;Button onClick={::this.showMask}&gt;弹出验证表单&lt;/Button&gt;
                                         &lt;/Col&gt;
                                     &lt;/Row&gt;
-
-                                &lt;/ValidatorPanel&gt;
-                            &lt;/Col&gt;
-                        &lt;/Row&gt;
+                                &lt;/PanelContent&gt;
+                            &lt;/Tab&gt;
+                        &lt;/Tabset&gt;
                     &lt;/Grid&gt;
+                    &lt;Dialog type={&#39;mask&#39;} show={this.state.show}&gt;
+                        &lt;Grid style={{width:&#39;300px&#39;}}&gt;
+                            &lt;ValidatorPanel rules={this.rules} submitElement="#ssubmit" direction="top" id="testDialogFrom" submitCallback={::this.submit}&gt;
+                                &lt;Row&gt;
+                                    &lt;Col&gt;
+                                        &lt;Input placeholder="请输入姓名"  name="userName" data-validate /&gt;
 
+                                    &lt;/Col&gt;
+                                &lt;/Row&gt;
+                                &lt;Row&gt;
+                                    &lt;Col&gt;
+                                        &lt;Input placeholder="请输入有效的号码" name="number" data-validate /&gt;
+                                    &lt;/Col&gt;
+                                &lt;/Row&gt;
+                                &lt;Row&gt;
+                                    &lt;Col&gt;
+                                        &lt;Input placeholder="请输入有效的号码" name="equalTo" data-validate /&gt;
+                                    &lt;/Col&gt;
+                                &lt;/Row&gt;
+                                &lt;Row&gt;
+                                    &lt;Col&gt;
+                                        &lt;Input placeholder="最大最小字符10-15" name="minlength" data-validate /&gt;
+                                    &lt;/Col&gt;
+                                &lt;/Row&gt;
+                                &lt;Row&gt;
+                                    &lt;Col&gt;
+                                        &lt;Input placeholder="请输入您的email" name="email" data-validate /&gt;
+                                    &lt;/Col&gt;
+                                &lt;/Row&gt;
+                                &lt;Row&gt;
+                                    &lt;Col&gt;
+                                        &lt;Button radius egSize="xs" id="ssubmit" &gt;点我提交表单&lt;/Button&gt;
+                                    &lt;/Col&gt;
+                                &lt;/Row&gt;
+                            &lt;/ValidatorPanel&gt;
+                        &lt;/Grid&gt;
+                    &lt;/Dialog&gt;
             &lt;/Panel&gt;
+
         );
     }
-}
-
-ReactDOM.render(
-    &lt;Demo /&gt;
-    ,document.getElementById(&#39;root&#39;));</code></pre>
-</div><div class="stdoc-code"><pre class="code prettyprint"><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;验证组件&lt;/title&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"&gt;
-    &lt;link rel="stylesheet" type="text/css" href="./eagle-ui.css" /&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div id="root"&gt;&lt;/div&gt;
-
-&lt;script src="../bower_components/react/react.js"&gt;&lt;/script&gt;
-&lt;script src="../bower_components/react/react-dom.js"&gt;&lt;/script&gt;
-&lt;script src="js/validate.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+};
+export default Demo;</code></pre>
 </div>
             </div>
 
@@ -829,7 +930,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l43"><code>lib&#x2F;ValidatorPanel.js:43</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l55"><code>lib&#x2F;ValidatorPanel.js:55</code></a>
         
         </p>
 
@@ -877,7 +978,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l136"><code>lib&#x2F;ValidatorPanel.js:136</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l148"><code>lib&#x2F;ValidatorPanel.js:148</code></a>
         
         </p>
 
@@ -902,9 +1003,9 @@ ReactDOM.render(
 </div>
 
                 
-                    <div id="property_message" class="property item">
-    <h3 class="name"><code>message</code></h3>
-    <span class="type">String</span>
+                    <div id="property_getValueCallback" class="property item">
+    <h3 class="name"><code>getValueCallback</code></h3>
+    <span class="type">Function</span>
 
     
 
@@ -925,7 +1026,52 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l57"><code>lib&#x2F;ValidatorPanel.js:57</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l46"><code>lib&#x2F;ValidatorPanel.js:46</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <div class="stdoc-code"><p>每次验证时值被改变后都会被触发，会回传当前data-field字段、值和所有值对象</p>
+</div>
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_message" class="property item">
+    <h3 class="name"><code>message</code></h3>
+    <span class="type">Object</span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_ValidatorPanel.js.html#l69"><code>lib&#x2F;ValidatorPanel.js:69</code></a>
         
         </p>
 
@@ -986,7 +1132,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l130"><code>lib&#x2F;ValidatorPanel.js:130</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l142"><code>lib&#x2F;ValidatorPanel.js:142</code></a>
         
         </p>
 
@@ -1031,7 +1177,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l123"><code>lib&#x2F;ValidatorPanel.js:123</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l135"><code>lib&#x2F;ValidatorPanel.js:135</code></a>
         
         </p>
 
@@ -1079,7 +1225,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l94"><code>lib&#x2F;ValidatorPanel.js:94</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l106"><code>lib&#x2F;ValidatorPanel.js:106</code></a>
         
         </p>
 
@@ -1124,7 +1270,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l117"><code>lib&#x2F;ValidatorPanel.js:117</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l129"><code>lib&#x2F;ValidatorPanel.js:129</code></a>
         
         </p>
 
@@ -1169,7 +1315,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l110"><code>lib&#x2F;ValidatorPanel.js:110</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l122"><code>lib&#x2F;ValidatorPanel.js:122</code></a>
         
         </p>
 
@@ -1217,7 +1363,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l50"><code>lib&#x2F;ValidatorPanel.js:50</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l62"><code>lib&#x2F;ValidatorPanel.js:62</code></a>
         
         </p>
 
@@ -1265,7 +1411,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l143"><code>lib&#x2F;ValidatorPanel.js:143</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l155"><code>lib&#x2F;ValidatorPanel.js:155</code></a>
         
         </p>
 
@@ -1313,7 +1459,7 @@ ReactDOM.render(
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l102"><code>lib&#x2F;ValidatorPanel.js:102</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l114"><code>lib&#x2F;ValidatorPanel.js:114</code></a>
         
         </p>
 
@@ -1324,6 +1470,51 @@ ReactDOM.render(
 
     <div class="description">
         <div class="stdoc-code"><p>在提交时除验证规则之外的其他逻辑</p>
+</div>
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_values" class="property item">
+    <h3 class="name"><code>values</code></h3>
+    <span class="type">Object</span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_ValidatorPanel.js.html#l40"><code>lib&#x2F;ValidatorPanel.js:40</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <div class="stdoc-code"><p>需要初始化的表单元素默认值(废弃)</p>
 </div>
     </div>
 

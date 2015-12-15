@@ -1,3 +1,4 @@
+@import "public.less";
 @import 'color.less';
 
 .eg-marquee-container {
@@ -8,7 +9,7 @@
   padding: 0px 0px;
   border: @red-border 2px solid;
   overflow: hidden;
-  border-radius: 3px;
+  .border-radius(3px);
   background: #fff;
   .eg-marquee-new-tip {
     position: absolute;
@@ -19,13 +20,13 @@
     color: #fff;
     width: 50px;
     height: 61px;
-    transform: rotate(45deg);
+    .transform(rotate(45deg));
     .eg-marquee-new{
       display: inline-block;
       position: relative;
       top: 20px;
       left: 31px;
-      transform: rotate(-45deg);
+      .transform(rotate(-45deg));
     }
   }
   .eg-marquee-check {
@@ -83,7 +84,7 @@
     left: 7.5px;
     z-index: 10;
     border: 1.5px solid #fff;
-    border-radius: 5px;
+    .border-radius(5px);
   }
 }
 //此例中仅仅用来显示选择按钮
@@ -119,9 +120,7 @@
       position: relative;
       top: 5px;
       left: 1px;
-      -webkit-border-radius: 2px;
-      -moz-border-radius: 2px;
-      border-radius: 2px;
+      .border-radius(2px);
       background: @white;
       .round{
         display: none;

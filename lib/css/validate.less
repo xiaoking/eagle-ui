@@ -2,26 +2,35 @@
 /**按钮组*/
 
 .eg-validate{
+    position: relative;
     .eg-validate-error{
         outline:none;
         border-color: @danger;
     }
     .eg-validate-tips{
+        display: none;
         position: absolute;
         left:-9999rem;
-        padding:0px 10px 0 22px;
+        padding: 10px 10px;
         z-index:9010;
-        background-color:transparent;
+        background: rgba(255,255,255,0.8);
+        min-width: 300px;
+        text-align: left;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
         i{
             border-radius: 50%;
             display: inline-block;
             background: @danger;
             width: 18px;
             height: 18px;
-            top: 50%;
+            //top: 50%;
             left: 0;
-            margin-top: -10px;
-            position: absolute;
+            //margin-top: -10px;
+            float: left;
+            position: relative;
+            margin-right: 8px;
             &:before{
                 height: 2px;
                 width: 2px;
@@ -44,16 +53,8 @@
         }
         &.bottom{
             background: rgba(51,51,51,0.8);
-            -webkit-border-radius: 4px;
-            -moz-border-radius: 4px;
-            border-radius: 4px;
             color: #fff;
-            height: auto;
-            line-height: normal;
-            padding:10px 10px 10px 32px;
-            i{
-                left: 10px;
-            }
+
         }
     }
 }

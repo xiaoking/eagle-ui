@@ -32,6 +32,9 @@
                     <li><a href="">主页</a>
                     </li>
                     
+                    <li><a href="/documents/eagle-ui/examples/">例子</a>
+                    </li>
+                    
                 </ul>
                <div class="navbar-form navbar-right filterAPi" autocomplete="off">
                 <input type="text" id='txtSearchAPI' class="form-control search-query" placeholder="Search for API" />
@@ -54,6 +57,22 @@
                 <dd>
                     <ul>
                    
+                       <li>
+                            
+                           <a href="../classes/CheckboxGroup.html">CheckboxGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Input.html">Input</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
                        <li>
                             
                            <a href="../classes/RadioGroup.html">RadioGroup</a>
@@ -182,6 +201,14 @@
                    
                        <li>
                             
+                           <a href="../classes/Th.html">Th</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Table.html">Table</a>
                            <ul>
                                 
@@ -191,14 +218,6 @@
                        <li>
                             
                            <a href="../classes/Td.html">Td</a>
-                           <ul>
-                                
-                           </ul>
-                       </li>
-                    
-                       <li>
-                            
-                           <a href="../classes/Th.html">Th</a>
                            <ul>
                                 
                            </ul>
@@ -233,6 +252,14 @@
                        <li>
                             
                            <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Search.html">Search</a>
                            <ul>
                                 
                            </ul>
@@ -304,6 +331,14 @@
                     
                        <li>
                             
+                           <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
                            <a href="../classes/Tabset.html">Tabset</a>
                            <ul>
                                 
@@ -313,6 +348,14 @@
                        <li>
                             
                            <a href="../classes/Toast.html">Toast</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/TooltipPanel.html">TooltipPanel</a>
                            <ul>
                                 
                            </ul>
@@ -368,17 +411,43 @@ import Button from &#x27;./Button.js&#x27;;
 import Row from &#x27;./Row.js&#x27;;
 import Col from &#x27;./Col.js&#x27;;
 import Grid from &#x27;./Grid.js&#x27;;
-
+/**
+ * tips组件
+ * 只是从tooltipPanel获得props渲染，其他操作均在tooltipPanel中
+ * @class Tooltip
+ * @moudle ui
+ * @constructor
+ * @since 0.1.0
+ * @demo tooltip.js{js}
+ * @show false
+ * */
 @ClassNameMixin
 export default class Tooltip extends Component {
-    static defaultProps = {
-        show: false,
-        direction: &#x27;down&#x27;,
-        msg: &#x27;我也不知道这个tips这么麻烦&#x27;,
-        classPrefix: &#x27;tooltip&#x27;,
-        conponentTag: &#x27;div&#x27;
+    static propType={
+        /**
+         * 提示是否展示
+         * @property show
+         * @type Boolean
+         * @default null
+         * */
+        show: PropTypes.boolean,
+        /**
+         * 提示内容
+         * @property msg
+         * @type String
+         * @default null
+         * */
+        msg: PropTypes.string,
+        /**
+         * 提示方向
+         * @property direction
+         * @type String
+         * @default null
+         * */
+        direction: PropTypes.string,
+        classPrefix: PropTypes.string,
+        componentTag:PropTypes.string
     }
-
     constructor(props, context) {
         super(props, context);
         this.state = {
@@ -386,6 +455,13 @@ export default class Tooltip extends Component {
             direction: this.props.direction
         }
     }
+    /**
+     * 接收到新props时执行,state.show变为nextProps.show
+     * 接收到新props时执行,state.show变为nextProps.show
+     * 实现隐藏与显示
+     * @method componentWillReceiveProps
+     * @return null
+     * */
     componentWillReceiveProps(nextProps){
         this.setState({
             show : nextProps.show
@@ -393,26 +469,23 @@ export default class Tooltip extends Component {
     }
     render() {
         return (
-            &lt;Grid className={classnames(
+            &lt;Grid ref= {this.props.ref} className={classnames(
                 this.getClassName(&#x27;wraper&#x27;),
                 {
-                      [this.getClassName(&#x27;show&#x27;)]:this.state.show
+
+                      [this.getClassName(&#x27;show&#x27;)]: this.state.show
+                      //[this.getClassName(&#x27;show&#x27;)]: true
                 }
-            )}&gt;
-                &lt;Row className={classnames(
-                    this.getClassName(&#x27;tooltip&#x27;)
-                )}&gt;
-                    &lt;Col&gt;
+            )} &gt;
                     &lt;div className={classnames(
-                    this.getClassName(&#x27;arrow&#x27;)
+                    this.getClassName(&#x27;arrow-&#x27;+this.props.direction)
                 )}&gt;&lt;/div&gt;
                     &lt;div className={classnames(
                     this.getClassName(&#x27;content&#x27;)
                 )}&gt;
                         {this.props.msg}
                     &lt;/div&gt;
-                        &lt;/Col&gt;
-                &lt;/Row&gt;
+
             &lt;/Grid&gt;
         );
     }

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo演示</title>
+    <link rel="stylesheet" href="eagle-ui.css"/>
+    <style type="text/css">
+        .page-Panel{
+            padding:40px;
+        }
+        .shop-card-panel,.eg-tabset-tab-content{
+            width: 70%;
+        }
+        .shop-card-panel .eg-panel-content{
+            background: #eee;
+        }
+        .shop-card-panel .eg-panel-content .eg-sm-7{
+            background: #ffffff;
+        }
+        .shop-info-item-text{
+            padding: 10px 30px;
+        }
+        .row-key{
+            color: #aaa;
+            margin-right: 30px;
+        }
+        .eg-tabset-panes{
+            padding-top: 20px;
+        }
+
+        .checkboxGroup{
+            margin-bottom: -10px;
+        }
+        .shop-info-item h1{
+            font-size: 16px;
+            margin-right: 20px;
+        }
+        .shop-info-item-footer{
+            border-top: 1px dashed #dddddd;
+            margin-top: 5px;
+            padding-top: 5px;
+        }
+        .shop-info-item-text{
+            color: #999999;
+        }
+
+        .menu{
+            width: 300px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background: #fff;
+            border-right: 1px solid #e2e2e2;
+            overflow-y: scroll;
+        }
+        .menu a{
+            display: block;
+            padding: 10px;
+            width: 100%;
+            padding-left: 100px;
+            border-bottom: 1px solid #e2e2e2;
+        }
+        .content{
+            margin:10px 10px 10px 310px;
+            height: 100%;
+        }
+        .menu .active{
+            background: #d94000;
+            color: #fff;
+        }
+        .menu a.sub{
+            text-align: left;
+            padding-left: 50px;
+        }
+        .menu a:not(.sub):hover{
+            background: #d94000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="">
+    <div class="menu" id="menu">
+        <a class="sub ft-18" href="javascript:void(0);">表单</a>
+        <div class="menu-panel">
+            <a href="#/input" >Input</a>
+            <a href="#/button" >按钮</a>
+            <a href="#/select" >下拉菜单(Select)</a>
+            <a href="#/validate" >验证控件</a>
+        </div>
+        <a class="sub ft-18" href="#/demo1">布局</a>
+        <a class="sub ft-18" href="#/Demo2">面板</a>
+        <a class="sub ft-18" href="#/table">表格</a>
+        <a class="sub ft-18" href="javascript:void(0);">UI</a>
+        <div class="menu-panel">
+            <a href="#/crumb" >面包屑</a>
+            <a href="#/tab" >Tab</a>
+            <a href="#/dialog" >弹出层</a>
+            <a href="#/label" >标签</a>
+            <a href="#/calendar" >日历</a>
+            <a href="#/paging" >分页</a>
+            <a href="#/toast" >Toast</a>
+            <a href="#/toolTip">Tooltips</a>
+        </div>
+    </div>
+    <div class="content">
+        <div id="root"></div>
+    </div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/examples.js"></script>
+<script>
+
+    $('#menu a').click(function(){
+        $(this).parents('.menu').find('.active').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    $('a.sub').click(function(){
+        var panel = $(this).next();
+        if(panel.hasClass('menu-panel')){
+            panel.slideToggle();
+        }
+
+    } );
+
+</script>
+</body>
+</html>
