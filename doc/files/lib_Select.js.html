@@ -404,13 +404,48 @@
 /**
  * Created by panqianjin on 15/11/12.
  */
-import React, {Component, PropTypes} from &#x27;react&#x27;;
-import ClassNameMixin from &#x27;./utils/ClassNameMixin&#x27;;
-import classnames from &#x27;classnames&#x27;;
-import Input from &#x27;./Input.js&#x27;;
-import Row from &#x27;./Row.js&#x27;;
-import Col from &#x27;./Col.js&#x27;;
-import Grid from &#x27;./Grid.js&#x27;;
+&#x27;use strict&#x27;;
+
+exports.__esModule = true;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (&#x27;value&#x27; in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &#x27;default&#x27;: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&#x27;Cannot call a class as a function&#x27;); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== &#x27;function&#x27; &amp;&amp; superClass !== null) { throw new TypeError(&#x27;Super expression must either be null or a function, not &#x27; + typeof superClass); } subClass.prototype = Object.create(superClass &amp;&amp; superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _react = require(&#x27;react&#x27;);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _utilsClassNameMixin = require(&#x27;./utils/ClassNameMixin&#x27;);
+
+var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+
+var _classnames = require(&#x27;classnames&#x27;);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _InputJs = require(&#x27;./Input.js&#x27;);
+
+var _InputJs2 = _interopRequireDefault(_InputJs);
+
+var _RowJs = require(&#x27;./Row.js&#x27;);
+
+var _RowJs2 = _interopRequireDefault(_RowJs);
+
+var _ColJs = require(&#x27;./Col.js&#x27;);
+
+var _ColJs2 = _interopRequireDefault(_ColJs);
+
+var _GridJs = require(&#x27;./Grid.js&#x27;);
+
+var _GridJs2 = _interopRequireDefault(_GridJs);
+
 /**
  * 下拉选择框组件。
  * 有input参数可以自由输入，否则不在列表中的输入值将改变为第一个item
@@ -421,46 +456,53 @@ import Grid from &#x27;./Grid.js&#x27;;
  * @since 0.1.0
  * @demo select.js {js}
  * */
-@ClassNameMixin
-export default
-class Select extends Component {
-    static defaultProps = {
-        /**
-         * 回调方法，主要作用将value传给父级元素。默认为null
-         * @property callback
-         * @type func
-         * @default null
-         * */
-        callback: null,
-        /**
-         * 样式类名前缀
-         * @property classPrefix
-         * @type string
-         *
-         * */
-        classPrefix: &#x27;select&#x27;,
-        componentTag: &#x27;div&#x27;,
-        value: &#x27;&#x27;,
-        /**
-         * option对应的value
-         * @property key
-         * &amp;type String
-         * */
-        key: &#x27;&#x27;,
-        show: false,
-        target: &#x27;0&#x27;,
-        /**
-         * 输入值，用来匹配显示对应列表的内容
-         * @property autoVal
-         * &amp;type String
-         * */
-        autoVal: &#x27;&#x27;
-    }
 
-    constructor(props, context) {
-        super(props, context);
+var Select = (function (_Component) {
+    _inherits(Select, _Component);
+
+    _createClass(Select, null, [{
+        key: &#x27;defaultProps&#x27;,
+        value: {
+            /**
+             * 回调方法，主要作用将value传给父级元素。默认为null
+             * @property callback
+             * @type func
+             * @default null
+             * */
+            callback: null,
+            /**
+             * 样式类名前缀
+             * @property classPrefix
+             * @type string
+             *
+             * */
+            classPrefix: &#x27;select&#x27;,
+            componentTag: &#x27;div&#x27;,
+            value: &#x27;&#x27;,
+            /**
+             * option对应的value
+             * @property key
+             * &amp;type String
+             * */
+            key: &#x27;&#x27;,
+            show: false,
+            target: &#x27;0&#x27;,
+            /**
+             * 输入值，用来匹配显示对应列表的内容
+             * @property autoVal
+             * &amp;type String
+             * */
+            autoVal: &#x27;&#x27;
+        },
+        enumerable: true
+    }]);
+
+    function Select(props, context) {
+        _classCallCheck(this, _Select);
+
+        _Component.call(this, props, context);
         this.heightTag = 0;
-        let keys = this.getDefaultKey(this.props.keys);
+        var keys = this.getDefaultKey(this.props.keys);
         this.state = {
             show: this.props.show,
             /**
@@ -473,65 +515,72 @@ class Select extends Component {
              * item value值
              * @type {String}
              * */
-            keys:this.props.keys,
+            keys: this.props.keys,
             /**
              * 是否可以自由输入
              * @type {Boolean}
              * */
-            input:this.props.input
+            input: this.props.input
         };
     }
-    getDefaultKey(keys){
-        let deKey = this.props.value;
-        if(keys != &#x27;&#x27;){
-            this.props.children.forEach((item,index)=&gt;{
-                if(item.props.value == keys){
+
+    Select.prototype.getDefaultKey = function getDefaultKey(keys) {
+        var deKey = this.props.value;
+        if (keys != &#x27;&#x27;) {
+            this.props.children.forEach(function (item, index) {
+                if (item.props.value == keys) {
                     deKey = item.props.children;
                 }
             });
         }
         return deKey;
-    }
+    };
+
     /**
      * 第一次渲染完成后执行,为document添加点击监听事件，判断是否关闭ul
      * 生命周期方法
      * @method componentDidMount
      * */
-    componentDidMount() {
-        let _this = this;
-        let selectContair = React.findDOMNode(this.refs.selectContair);
-        let selectUl = React.findDOMNode(this.refs.selectUl);
+
+    Select.prototype.componentDidMount = function componentDidMount() {
+        var _this = this;
+        var selectContair = _react2[&#x27;default&#x27;].findDOMNode(this.refs.selectContair);
+        var selectUl = _react2[&#x27;default&#x27;].findDOMNode(this.refs.selectUl);
         document.addEventListener(&#x27;click&#x27;, function (e) {
             if (_this.isParent(e.target, selectContair)) {
                 //console.dir(&#x27;不要动&#x27;);
             } else {
-                if(_this.state.show){
-                    _this.hideUl();
+                    if (_this.state.show) {
+                        _this.hideUl();
+                    }
                 }
-            }
         }, false);
-         this.heightTag = selectUl.offsetHeight;
-         selectUl.style.height = &#x27;0&#x27;;
-        if(!this.state.show){
-            this.removeClass(selectUl,&#x27;height-none&#x27;);
+        this.heightTag = selectUl.offsetHeight;
+        selectUl.style.height = &#x27;0&#x27;;
+        if (!this.state.show) {
+            this.removeClass(selectUl, &#x27;height-none&#x27;);
         }
-    }
-    componentDidUpdate(){
-        let selectUl = React.findDOMNode(this.refs.selectUl);
+    };
+
+    Select.prototype.componentDidUpdate = function componentDidUpdate() {
+        var selectUl = _react2[&#x27;default&#x27;].findDOMNode(this.refs.selectUl);
         //this.heightTag = selectUl.offsetHeight;
-        let length = selectUl.children.length;
-        if(this.state.show){
+        var length = selectUl.children.length;
+        if (this.state.show) {
             if (length &lt; 5) {
-                selectUl.style.height = (length * 29 + 2) + &#x27;px&#x27;;
+                selectUl.style.height = length * 29 + 2 + &#x27;px&#x27;;
             } else {
                 selectUl.style.height = &#x27;150px&#x27;;
             }
-        }else{
+        } else {
             selectUl.style.height = &#x27;0&#x27;;
             clearTimeout(this.timer);
-            this.timer = setTimeout(function(){this.removeClass(selectUl,&#x27;height-none&#x27;)}.bind(this),400);
+            this.timer = setTimeout((function () {
+                this.removeClass(selectUl, &#x27;height-none&#x27;);
+            }).bind(this), 400);
         }
-    }
+    };
+
     /**
      * 判断obj是否为parentObj的子元素
      * @method isParent
@@ -539,7 +588,8 @@ class Select extends Component {
      * @param parentObj {Object}
      * @return {Boolean}
      * */
-    isParent(obj, parentObj) {
+
+    Select.prototype.isParent = function isParent(obj, parentObj) {
         while (obj != undefined &amp;&amp; obj != null) {
             if (obj == parentObj) {
                 return true;
@@ -547,130 +597,147 @@ class Select extends Component {
             obj = obj.parentNode;
         }
         return false;
-    }
+    };
+
     /**
      * 显示选项列表,当ul关闭时才changestate
      * @method showUl
      * @return null
      * */
-    showUl() {
-        if(!this.state.show){
+
+    Select.prototype.showUl = function showUl() {
+        if (!this.state.show) {
             this.setState({
                 show: true
-            })
-            React.findDOMNode(this.refs.selectUl).style.height = this.heightTag+&#x27;px&#x27;;
+            });
+            _react2[&#x27;default&#x27;].findDOMNode(this.refs.selectUl).style.height = this.heightTag + &#x27;px&#x27;;
         }
-    }
+    };
+
     /**
      * 点击icon时，控制ul的显示与否
      * @method toogleUl
      * @return null
      * */
-    toogleUl() {
+
+    Select.prototype.toogleUl = function toogleUl() {
         this.setState({
             show: !this.state.show
-        })
-        if(this.state.show){
-            React.findDOMNode(this.refs.selectUl).style.height = &#x27;0&#x27;;
-        }else{
-            React.findDOMNode(this.refs.selectUl).style.height = this.heightTag+&#x27;px&#x27;;
+        });
+        if (this.state.show) {
+            _react2[&#x27;default&#x27;].findDOMNode(this.refs.selectUl).style.height = &#x27;0&#x27;;
+        } else {
+            _react2[&#x27;default&#x27;].findDOMNode(this.refs.selectUl).style.height = this.heightTag + &#x27;px&#x27;;
         }
-    }
+    };
+
     /**
      * 关闭ul，当前ul显示时起作用
      * @method hideUl
      * @return null
      * */
-    hideUl() {
-        if(this.state.show){
+
+    Select.prototype.hideUl = function hideUl() {
+        if (this.state.show) {
             this.setState({
                 show: false
-            })
+            });
         }
-    }
+    };
+
     /**
      * 失去焦点事件
      * @method finishInput
      * @return null
      * */
-    finishInput(event) {
+
+    Select.prototype.finishInput = function finishInput(event) {
         //让出线程
-        setTimeout(::this.callBacks);
-    }
+        setTimeout(this.callBacks.bind(this));
+    };
+
     /**
      * 取得符合要求的值，父级回调存在的话调用
      * @method callBacks
      * @return null
      * */
-    callBacks() {
-        if(!this.props.input){
+
+    Select.prototype.callBacks = function callBacks() {
+        if (!this.props.input) {
             this.getTrueVal();
         }
-        let val = this.state.value;
-        let key = this.state.keys;
-        if(this.state.show){
+        var val = this.state.value;
+        var key = this.state.keys;
+        if (this.state.show) {
             /*this.setState({
                 show: false
             })*/
             this.hideUl();
         }
-        this.props.callback &amp;&amp; this.props.callback(val,key);
-    }
+        this.props.callback &amp;&amp; this.props.callback(val, key);
+    };
+
     /**
      * 根据当前值是否为select内的值，判断是否改变state的值
      * @method getTrueVal
      * @return null
      * */
-    getTrueVal(){
-        let target = this.isInSelect();
-        if(!target){
+
+    Select.prototype.getTrueVal = function getTrueVal() {
+        var target = this.isInSelect();
+        if (!target) {
             this.setState({
-                value:this.props.children[0].props.children,
+                value: this.props.children[0].props.children,
                 keys: this.props.children[0].props.value,
                 autoVal: this.props.children[0].props.children
             });
         }
-    }
+    };
+
     /**
      * 验证输入值是否为select内容，return true 否则return false
      * @method isInSelect
      * @return flags {Boolean}
      * */
-    isInSelect(){
-        let val = &#x27;^&#x27;+this.state.value+&#x27;$&#x27;;
-        let reg = new RegExp(val,&quot;g&quot;);
-        let flags = false;
-        React.Children.forEach(this.props.children,(item)=&gt;{
-                if(reg.test(item.props.children)){
-                   flags = true;
-                }
-        },this);
+
+    Select.prototype.isInSelect = function isInSelect() {
+        var val = &#x27;^&#x27; + this.state.value + &#x27;$&#x27;;
+        var reg = new RegExp(val, &quot;g&quot;);
+        var flags = false;
+        _react2[&#x27;default&#x27;].Children.forEach(this.props.children, function (item) {
+            if (reg.test(item.props.children)) {
+                flags = true;
+            }
+        }, this);
 
         return flags;
+    };
 
-    }
     /**
      * 改变input的value
      * @method handlerValue
      * @param event {Object}
      * @return null
      * */
-    handlerValue(event){
-        let val = event.target.value;
+
+    Select.prototype.handlerValue = function handlerValue(event) {
+        var val = event.target.value;
         this.setState({
             value: val,
             autoVal: val
-        })
+        });
         this.showUl();
-    }
+    };
+
     /**
      * 点击或者enter键时，选择当前li的值，并关闭ul
      * @method chooseItem
      * @param event {Object}
      * @return null
      * */
-    chooseItem(event) {
-        let ulChildren = React.findDOMNode(this.refs.selectUl).children;
+
+    Select.prototype.chooseItem = function chooseItem(event) {
+        var ulChildren = _react2[&#x27;default&#x27;].findDOMNode(this.refs.selectUl).children;
         this.removeAllActive(ulChildren);
         event.target.classList.add(&#x27;active&#x27;);
         this.hideUl();
@@ -678,9 +745,10 @@ class Select extends Component {
             //show: !this.state.show,
             value: event.target.textContent,
             keys: event.target.value
-        })
+        });
         //inputObj.focus();
-    }
+    };
+
     /**
      * target为flase移除li的active状态，否则将obj子元素的值付给state.value
      * @method removeAllActive
@@ -688,155 +756,174 @@ class Select extends Component {
      * @param target {Boolean}
      * @return null
      * */
-    removeAllActive(obj,target){
-        Array.prototype.slice.call(obj).map((item,index)=&gt;{
-            if(item.className.indexOf(&#x27;active&#x27;)&gt;-1){
-            if(target){
-                this.setState({
-                    value: item.textContent,
-                    keys:item.value,
-                    autoVal: item.textContent
-                });
-            }else{
-                item.classList.remove(&#x27;active&#x27;);
-            }
 
+    Select.prototype.removeAllActive = function removeAllActive(obj, target) {
+        var _this2 = this;
+
+        Array.prototype.slice.call(obj).map(function (item, index) {
+            if (item.className.indexOf(&#x27;active&#x27;) &gt; -1) {
+                if (target) {
+                    _this2.setState({
+                        value: item.textContent,
+                        keys: item.value,
+                        autoVal: item.textContent
+                    });
+                } else {
+                    item.classList.remove(&#x27;active&#x27;);
+                }
             }
         });
-    }
+    };
+
     /**
     * keydown时触发，不通方向键分别对应不同方法
     * @method keyIn
     * @param event {Object}
     * @return null
     * */
-    keyIn(event){
-        let selectUl = React.findDOMNode(this.refs.selectUl);
-        let ulChildren = React.findDOMNode(this.refs.selectUl).children;
-        let ulArrey = Array.prototype.slice.call(ulChildren);
-        let inputObj = React.findDOMNode(this.refs.select).children[0];
-        let i = -1;
-        let obj = ulChildren[0];
-        if(event.keyCode == 40 || event.keyCode == 38){
+
+    Select.prototype.keyIn = function keyIn(event) {
+        var selectUl = _react2[&#x27;default&#x27;].findDOMNode(this.refs.selectUl);
+        var ulChildren = _react2[&#x27;default&#x27;].findDOMNode(this.refs.selectUl).children;
+        var ulArrey = Array.prototype.slice.call(ulChildren);
+        var inputObj = _react2[&#x27;default&#x27;].findDOMNode(this.refs.select).children[0];
+        var i = -1;
+        var obj = ulChildren[0];
+        if (event.keyCode == 40 || event.keyCode == 38) {
             /**
              * 当ul显示时，方向键移动起作用
              * 遍历寻找当前active元素的位置，并移除active
              * */
-                ulArrey.map((item,index)=&gt;{
-                    if(item.className.indexOf(&#x27;active&#x27;)&gt;-1){
+            ulArrey.map(function (item, index) {
+                if (item.className.indexOf(&#x27;active&#x27;) &gt; -1) {
                     i = index;
                     item.classList.remove(&#x27;active&#x27;);
                 }
-                });
-                if(event.keyCode == 40){
-                    /**
-                     * 下方向键，判断active元素是否为最后一个，是则不再向下否则i+1
-                     * */
-                    obj = (i == ulChildren.length - 1)? ulChildren[i]:ulChildren[i+1];
-                }else{
-                    /**
-                     * 上方向键，判断active元素是否为第一个，是则不再向上否则i－1
-                     * */
-                    obj = (i == 0)? ulChildren[i]:ulChildren[i-1];
-                }
-                obj.classList.add(&#x27;active&#x27;);
+            });
+            if (event.keyCode == 40) {
                 /**
-                 * 如果active为第五个元素之前的元素，则scrollTop不变，否则每向下一个，scrollTop加30
+                 * 下方向键，判断active元素是否为最后一个，是则不再向下否则i+1
                  * */
-                selectUl.scrollTop = i &lt; 4 ? 0 : (i-3)*30;
-        }else if(event.keyCode == 13){
+                obj = i == ulChildren.length - 1 ? ulChildren[i] : ulChildren[i + 1];
+            } else {
+                /**
+                 * 上方向键，判断active元素是否为第一个，是则不再向上否则i－1
+                 * */
+                obj = i == 0 ? ulChildren[i] : ulChildren[i - 1];
+            }
+            obj.classList.add(&#x27;active&#x27;);
+            /**
+             * 如果active为第五个元素之前的元素，则scrollTop不变，否则每向下一个，scrollTop加30
+             * */
+            selectUl.scrollTop = i &lt; 4 ? 0 : (i - 3) * 30;
+        } else if (event.keyCode == 13) {
             /**
              * enter键，取得当前元素值
              * */
             this.hideUl();
-            this.removeAllActive(ulChildren,true);
+            this.removeAllActive(ulChildren, true);
             inputObj.blur();
         }
-    }
+    };
+
     /**
      * 为选中li元素增加active class
      * @method addActive
      * @param event {Object}
      * @return null
      * */
-    addActive(event){
-        let obj = event.target;
-        let ulChildren = React.findDOMNode(this.refs.selectUl).children;
-        this.removeAllActive(ulChildren,false);
+
+    Select.prototype.addActive = function addActive(event) {
+        var obj = event.target;
+        var ulChildren = _react2[&#x27;default&#x27;].findDOMNode(this.refs.selectUl).children;
+        this.removeAllActive(ulChildren, false);
         obj.classList.add(&#x27;active&#x27;);
-    }
+    };
+
     /**
      * 为li元素移除active class
      * @method removeActive
      * @param event {Object}
      * @return null
      * */
-    removeActive(event){
-        let obj = event.target;
-        if(this.state.show){
+
+    Select.prototype.removeActive = function removeActive(event) {
+        var obj = event.target;
+        if (this.state.show) {
             obj.classList.remove(&#x27;active&#x27;);
         }
+    };
 
-    }
     /**
      * 渲染li元素，并根据autoVal来匹配获得符合元素
      * this.state.autoVal 为input输入值，初始为.*匹配任意
      * @method renderLi
      * @return li {ReactElement}
      * */
-    renderLi(){
-        let autoVal = this.state.autoVal == &#x27;&#x27;? &#x27;.*&#x27;: this.state.autoVal;
-        let reg = new RegExp(autoVal,&quot;g&quot;);
-        let li =React.Children.map(this.props.children,(item,index)=&gt;{
-            if(reg.test(item.props.children)){
-               if(this.state.keys == item.props.value){
-                   return &lt;li className=&#x27;active&#x27; value={item.props.value}  onMouseOver={::this.addActive} onMouseLeave={::this.removeActive} onMouseDown={::this.chooseItem}&gt;{item.props.children}&lt;/li&gt;
-               }else{
-                   return &lt;li value={item.props.value}  onMouseOver={::this.addActive} onMouseLeave={::this.removeActive} onMouseDown={::this.chooseItem}&gt;{item.props.children}&lt;/li&gt;
-               }
+
+    Select.prototype.renderLi = function renderLi() {
+        var _this3 = this;
+
+        var autoVal = this.state.autoVal == &#x27;&#x27; ? &#x27;.*&#x27; : this.state.autoVal;
+        var reg = new RegExp(autoVal, &quot;g&quot;);
+        var li = _react2[&#x27;default&#x27;].Children.map(this.props.children, function (item, index) {
+            if (reg.test(item.props.children)) {
+                if (_this3.state.keys == item.props.value) {
+                    return _react2[&#x27;default&#x27;].createElement(
+                        &#x27;li&#x27;,
+                        { className: &#x27;active&#x27;, value: item.props.value, onMouseOver: _this3.addActive.bind(_this3), onMouseLeave: _this3.removeActive.bind(_this3), onMouseDown: _this3.chooseItem.bind(_this3) },
+                        item.props.children
+                    );
+                } else {
+                    return _react2[&#x27;default&#x27;].createElement(
+                        &#x27;li&#x27;,
+                        { value: item.props.value, onMouseOver: _this3.addActive.bind(_this3), onMouseLeave: _this3.removeActive.bind(_this3), onMouseDown: _this3.chooseItem.bind(_this3) },
+                        item.props.children
+                    );
+                }
             }
-    item.props.children
-        },this);
+            item.props.children;
+        }, this);
 
         return li;
-    }
-    renderOption(){
-        let option = React.Children.map(this.props.children,(item)=&gt;{
-            return &lt;option value={item.props.value}&gt;{item.props.children}&lt;/option&gt;
-        },this);
+    };
+
+    Select.prototype.renderOption = function renderOption() {
+        var option = _react2[&#x27;default&#x27;].Children.map(this.props.children, function (item) {
+            return _react2[&#x27;default&#x27;].createElement(
+                &#x27;option&#x27;,
+                { value: item.props.value },
+                item.props.children
+            );
+        }, this);
         return option;
-    }
+    };
+
     /**
      * 渲染select
      * @method renderSelect
      * @return {ReactElement}
      * */
-    renderSelect() {
-        return (
-            &lt;Grid ref=&#x27;selectContair&#x27; className={
-                    classnames(
-                        this.getClassNamesForArguments(&#x27;container&#x27;)
-                    )
-                } value={this.state.value}&gt;
-                &lt;select ref=&#x27;test&#x27; {...this.props } defaultValue={this.state.keys} style={{display:&#x27;none&#x27;}}&gt;
-                    {this.renderOption()}
-                &lt;/select&gt;
-                &lt;Input ref=&#x27;select&#x27; value={this.state.value}  onClick={::this.showUl} onChange={::this.handlerValue} onKeyDown={::this.keyIn} onBlur={::this.finishInput}/&gt;
-                &lt;i className={
-                    classnames(
-                        this.getClassName(&#x27;arrow-down&#x27;)
-                    )
-                } onClick={::this.toogleUl}&gt;&lt;/i&gt;
-                &lt;ul ref=&#x27;selectUl&#x27; className={classnames(
-                    this.getClassNamesForArguments(&#x27;ul&#x27;),
-                    this.state.show ?this.getClassName(&#x27;show&#x27;):&#x27;height-none&#x27;
-                    )
-                }&gt;
-                    {this.renderLi()}
-                &lt;/ul&gt;
-            &lt;/Grid&gt;
-        )
-    }
+
+    Select.prototype.renderSelect = function renderSelect() {
+        return _react2[&#x27;default&#x27;].createElement(
+            _GridJs2[&#x27;default&#x27;],
+            { ref: &#x27;selectContair&#x27;, className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;container&#x27;)), value: this.state.value },
+            _react2[&#x27;default&#x27;].createElement(
+                &#x27;select&#x27;,
+                _extends({ ref: &#x27;test&#x27; }, this.props, { defaultValue: this.state.keys, style: { display: &#x27;none&#x27; } }),
+                this.renderOption()
+            ),
+            _react2[&#x27;default&#x27;].createElement(_InputJs2[&#x27;default&#x27;], { ref: &#x27;select&#x27;, value: this.state.value, onClick: this.showUl.bind(this), onChange: this.handlerValue.bind(this), onKeyDown: this.keyIn.bind(this), onBlur: this.finishInput.bind(this) }),
+            _react2[&#x27;default&#x27;].createElement(&#x27;i&#x27;, { className: _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;arrow-down&#x27;)), onClick: this.toogleUl.bind(this) }),
+            _react2[&#x27;default&#x27;].createElement(
+                &#x27;ul&#x27;,
+                { ref: &#x27;selectUl&#x27;, className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;ul&#x27;), this.state.show ? this.getClassName(&#x27;show&#x27;) : &#x27;height-none&#x27;) },
+                this.renderLi()
+            )
+        );
+    };
+
     /**
      * 根据auto存在与否渲染不同类型的元素
      * @method render
@@ -855,12 +942,18 @@ class Select extends Component {
      *     &lt;option value=&quot;1&quot;&gt;xxx&lt;/option&gt;
      * &lt;/Select&gt;
      * */
-    render() {
-        return (
-            this.props.auto ? this.renderAuto() : this.renderSelect()
-        );
-    }
-}
+
+    Select.prototype.render = function render() {
+        return this.props.auto ? this.renderAuto() : this.renderSelect();
+    };
+
+    var _Select = Select;
+    Select = _utilsClassNameMixin2[&#x27;default&#x27;](Select) || Select;
+    return Select;
+})(_react.Component);
+
+exports[&#x27;default&#x27;] = Select;
+module.exports = exports[&#x27;default&#x27;];
     </pre>
 </div>
 

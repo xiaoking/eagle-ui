@@ -2,7 +2,7 @@
  * Created by panqianjin on 15/11/4.
  */
 import React, { Component ,PropTypes} from 'react';
-import Crumb from '../../../lib/Crumb.js';
+import Crumb from '../../../src/Crumb.js';
 
 export default class CrumbCls extends Component {
     render() {

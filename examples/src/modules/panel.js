@@ -3,19 +3,19 @@
  */
 import React,{Component} from 'react';
 
-import Input from '../../../lib/Input.js';
-import Label from '../../../lib/Label.js';
-import LabelGroup from '../../../lib/LabelGroup.js';
+import Input from '../../../src/Input.js';
+import Label from '../../../src/Label.js';
+import LabelGroup from '../../../src/LabelGroup.js';
 
 
-import Grid from '../../../lib/Grid.js';
-import Row from '../../../lib/Row.js';
-import Col from '../../../lib/Col.js';
+import Grid from '../../../src/Grid.js';
+import Row from '../../../src/Row.js';
+import Col from '../../../src/Col.js';
 
-import Panel from '../../../lib/Panel/Panel.js';
-import PanelHeader from '../../../lib/Panel/PanelHeader.js';
-import PanelFooter from '../../../lib/Panel/PanelFooter.js';
-import PanelContent from '../../../lib/Panel/PanelContent.js';
+import Panel from '../../../src/Panel/Panel.js';
+import PanelHeader from '../../../src/Panel/PanelHeader.js';
+import PanelFooter from '../../../src/Panel/PanelFooter.js';
+import PanelContent from '../../../src/Panel/PanelContent.js';
 
 
 let Demo = class Demo extends Component{

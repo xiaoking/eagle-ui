@@ -401,9 +401,29 @@
 
 <div class="file">
     <pre class="prettyprint linenums" id='src_code'>
-import React,{ PropTypes, Component } from &#x27;react&#x27;;
-import classnames from &#x27;classnames&#x27;;
-import ClassNameMixin from &#x27;../utils/ClassNameMixin.js&#x27;;
+&#x27;use strict&#x27;;
+
+exports.__esModule = true;
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (&#x27;value&#x27; in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &#x27;default&#x27;: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&#x27;Cannot call a class as a function&#x27;); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== &#x27;function&#x27; &amp;&amp; superClass !== null) { throw new TypeError(&#x27;Super expression must either be null or a function, not &#x27; + typeof superClass); } subClass.prototype = Object.create(superClass &amp;&amp; superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _react = require(&#x27;react&#x27;);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classnames = require(&#x27;classnames&#x27;);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _utilsClassNameMixinJs = require(&#x27;../utils/ClassNameMixin.js&#x27;);
+
+var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
 
 /**
  * 表格组件
@@ -417,44 +437,66 @@ import ClassNameMixin from &#x27;../utils/ClassNameMixin.js&#x27;;
  * @show true
  * @author bo.an@dianping.com
  * */
-@ClassNameMixin
-export default class Th extends Component{
 
-    static propTypes = {
+var Th = (function (_Component) {
+    _inherits(Th, _Component);
 
-    };
+    _createClass(Th, null, [{
+        key: &#x27;propTypes&#x27;,
+        value: {},
+        enumerable: true
+    }, {
+        key: &#x27;defaultProps&#x27;,
+        value: {},
+        enumerable: true
+    }]);
 
-    static defaultProps = {
+    function Th(props, context) {
+        _classCallCheck(this, _Th);
 
-    };
-    constructor(props, context) {
-        super(props, context);
+        _Component.call(this, props, context);
     }
 
-    sortHandler(){
-        var sortMethod=this.props.sort;
-        if(!sortMethod || sortMethod===&#x27;asc&#x27;){
-            sortMethod=&#x27;des&#x27;;
-        }else{
-            sortMethod=&#x27;asc&#x27;;
+    Th.prototype.sortHandler = function sortHandler() {
+        var sortMethod = this.props.sort;
+        if (!sortMethod || sortMethod === &#x27;asc&#x27;) {
+            sortMethod = &#x27;des&#x27;;
+        } else {
+            sortMethod = &#x27;asc&#x27;;
         }
-        this.props.clickCallback(this.props.field,sortMethod);
-    }
+        this.props.clickCallback(this.props.field, sortMethod);
+    };
+
     /**
      * @method render
      * @return {ReactElement}
      * */
-    render(){
-        return (
-            &lt;th
-                onClick={::this.sortHandler}&gt;
-                {this.props.children}
-                {this.props.sort===&#x27;des&#x27;? &lt;span&gt;↓&lt;/span&gt;:this.props.sort===&#x27;asc&#x27;?&lt;span&gt;↑&lt;/span&gt;:null}
-            &lt;/th&gt;
-        );
 
-    }
-}
+    Th.prototype.render = function render() {
+        return _react2[&#x27;default&#x27;].createElement(
+            &#x27;th&#x27;,
+            {
+                onClick: this.sortHandler.bind(this) },
+            this.props.children,
+            this.props.sort === &#x27;des&#x27; ? _react2[&#x27;default&#x27;].createElement(
+                &#x27;span&#x27;,
+                null,
+                &#x27;↓&#x27;
+            ) : this.props.sort === &#x27;asc&#x27; ? _react2[&#x27;default&#x27;].createElement(
+                &#x27;span&#x27;,
+                null,
+                &#x27;↑&#x27;
+            ) : null
+        );
+    };
+
+    var _Th = Th;
+    Th = _utilsClassNameMixinJs2[&#x27;default&#x27;](Th) || Th;
+    return Th;
+})(_react.Component);
+
+exports[&#x27;default&#x27;] = Th;
+module.exports = exports[&#x27;default&#x27;];
     </pre>
 </div>
 

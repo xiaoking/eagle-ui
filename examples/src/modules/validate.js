@@ -2,19 +2,19 @@
  * Created by mac on 15/11/4.
  */
 import React,{Component} from 'react';
-import Input from '../../../lib/Input.js';
-import Button from '../../../lib/Button.js';
-import Row from '../../../lib/Row.js';
-import Panel from '../../../lib/panel/Panel.js';
-import PanelContent from '../../../lib/panel/PanelContent.js';
-import Col from '../../../lib/Col.js';
-import Grid from '../../../lib/Grid.js';
-import RadioGroup from '../../../lib/RadioGroup.js';
-import ValidatorPanel from '../../../lib/ValidatorPanel.js';
-import CalendarPanel from '../../../lib/CalendarPanel.js';
-import Tab from '../../../lib/Tab.js';
-import Tabset from '../../../lib/Tabset.js';
-import Dialog from '../../../lib/Dialog.js';
+import Input from '../../../src/Input.js';
+import Button from '../../../src/Button.js';
+import Row from '../../../src/Row.js';
+import Panel from '../../../src/panel/Panel.js';
+import PanelContent from '../../../src/panel/PanelContent.js';
+import Col from '../../../src/Col.js';
+import Grid from '../../../src/Grid.js';
+import RadioGroup from '../../../src/RadioGroup.js';
+import ValidatorPanel from '../../../src/ValidatorPanel.js';
+import CalendarPanel from '../../../src/CalendarPanel.js';
+import Tab from '../../../src/Tab.js';
+import Tabset from '../../../src/Tabset.js';
+import Dialog from '../../../src/Dialog.js';
 
 let Demo = class Demo extends Component{
 

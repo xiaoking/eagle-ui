@@ -404,14 +404,52 @@
 /**
  * Created by panqianjin on 15/11/17.
  */
-import React,{Component,PropTypes} from &#x27;react&#x27;;
-import ClassNameMixin from &#x27;./utils/ClassNameMixin&#x27;;
-import classnames from &#x27;classnames&#x27;;
-import Tooltip from &#x27;./Tooltip.js&#x27;;
-import Button from &#x27;./Button.js&#x27;;
-import Row from &#x27;./Row.js&#x27;;
-import Col from &#x27;./Col.js&#x27;;
-import Grid from &#x27;./Grid.js&#x27;;
+&#x27;use strict&#x27;;
+
+exports.__esModule = true;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (&#x27;value&#x27; in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &#x27;default&#x27;: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&#x27;Cannot call a class as a function&#x27;); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== &#x27;function&#x27; &amp;&amp; superClass !== null) { throw new TypeError(&#x27;Super expression must either be null or a function, not &#x27; + typeof superClass); } subClass.prototype = Object.create(superClass &amp;&amp; superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _react = require(&#x27;react&#x27;);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _utilsClassNameMixin = require(&#x27;./utils/ClassNameMixin&#x27;);
+
+var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+
+var _classnames = require(&#x27;classnames&#x27;);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _TooltipJs = require(&#x27;./Tooltip.js&#x27;);
+
+var _TooltipJs2 = _interopRequireDefault(_TooltipJs);
+
+var _ButtonJs = require(&#x27;./Button.js&#x27;);
+
+var _ButtonJs2 = _interopRequireDefault(_ButtonJs);
+
+var _RowJs = require(&#x27;./Row.js&#x27;);
+
+var _RowJs2 = _interopRequireDefault(_RowJs);
+
+var _ColJs = require(&#x27;./Col.js&#x27;);
+
+var _ColJs2 = _interopRequireDefault(_ColJs);
+
+var _GridJs = require(&#x27;./Grid.js&#x27;);
+
+var _GridJs2 = _interopRequireDefault(_GridJs);
+
 /**
  * tipsPanel组件
  * 方向可选：top,down,left,right.默认down
@@ -423,158 +461,181 @@ import Grid from &#x27;./Grid.js&#x27;;
  * @demo tooltip.js{js}
  * @show false
  * */
-@ClassNameMixin
-export default
-class TooltipPanel extends Component {
-    static propType={
-        /**
-         * 提示是否展示
-         * @property show
-         * @type Boolean
-         * @default false
-         * */
-        show: PropTypes.boolean,
-        /**
-         * 提示内容
-         * @property msg
-         * @type String
-         * @default 这是个提示
-         * */
-        msg: PropTypes.string,
-        /**
-         * 提示方向
-         * @property direction
-         * @type String
-         * @default down
-         * */
-        direction: PropTypes.string,
-        classPrefix: PropTypes.string,
-        componentTag:PropTypes.string
-    }
-    static defaultProps = {
-        show: false,
-        msg: &quot;这是个提示这是个提示这是个提示这是个提示这是个提示这是个提示这是个提示这是个提示这是个提示&quot;,
-        direction: &#x27;down&#x27;,
-        classPrefix: &#x27;tooltip&#x27;,
-        componentTag: &#x27;div&#x27;
-    }
 
-    constructor(props, context) {
-        super(props, context);
+var TooltipPanel = (function (_Component) {
+    _inherits(TooltipPanel, _Component);
+
+    _createClass(TooltipPanel, null, [{
+        key: &#x27;propType&#x27;,
+        value: {
+            /**
+             * 提示是否展示
+             * @property show
+             * @type Boolean
+             * @default false
+             * */
+            show: _react.PropTypes.boolean,
+            /**
+             * 提示内容
+             * @property msg
+             * @type String
+             * @default 这是个提示
+             * */
+            msg: _react.PropTypes.string,
+            /**
+             * 提示方向
+             * @property direction
+             * @type String
+             * @default down
+             * */
+            direction: _react.PropTypes.string,
+            classPrefix: _react.PropTypes.string,
+            componentTag: _react.PropTypes.string
+        },
+        enumerable: true
+    }, {
+        key: &#x27;defaultProps&#x27;,
+        value: {
+            show: false,
+            msg: &quot;这是个提示这是个提示这是个提示这是个提示这是个提示这是个提示这是个提示这是个提示这是个提示&quot;,
+            direction: &#x27;down&#x27;,
+            classPrefix: &#x27;tooltip&#x27;,
+            componentTag: &#x27;div&#x27;
+        },
+        enumerable: true
+    }]);
+
+    function TooltipPanel(props, context) {
+        _classCallCheck(this, _TooltipPanel);
+
+        _Component.call(this, props, context);
         this.state = {
             /**
              * 显示与否由父组件控制
              * @type Boolean
              * */
             show: this.props.show
-        }
+        };
     }
+
     /**
      * 渲染完成时进行方向和边界判断，调整tips的位置
      * @method componentDidMount
      * @return null
      * */
-    componentDidMount(){
+
+    TooltipPanel.prototype.componentDidMount = function componentDidMount() {
         this.changeStyle(this.props.direction);
-    }
+    };
+
     /**
      * @method render
      * @return ReactElement
      * */
-    render() {
-        let {componentTag} = this.props.children.props;
+
+    TooltipPanel.prototype.render = function render() {
+        var componentTag = this.props.children.props.componentTag;
+
         //  &lt;componentTag {...this.props} onMouseEnter={::this.showTips} onMouseOut={::this.hideTips}/&gt;
-        return (
-            &lt;Grid  {...this.props} className={classnames(
-                this.getClassName(&#x27;container&#x27;))} ref=&#x27;container&#x27; &gt;
-                    {React.cloneElement(this.props.children,{
-                        onMouseEnter: ::this.showTips,
-                        onMouseOut: ::this.hideTips
-                        }) }
-                    &lt;Tooltip ref=&#x27;tips&#x27; {...this.props} show={this.state.show} /&gt;
-            &lt;/Grid&gt;
+        return _react2[&#x27;default&#x27;].createElement(
+            _GridJs2[&#x27;default&#x27;],
+            _extends({}, this.props, { className: _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;container&#x27;)), ref: &#x27;container&#x27; }),
+            _react2[&#x27;default&#x27;].cloneElement(this.props.children, {
+                onMouseEnter: this.showTips.bind(this),
+                onMouseOut: this.hideTips.bind(this)
+            }),
+            _react2[&#x27;default&#x27;].createElement(_TooltipJs2[&#x27;default&#x27;], _extends({ ref: &#x27;tips&#x27; }, this.props, { show: this.state.show }))
         );
-    }
-   /**
-    * 鼠标over，set show true,tips显示
-    * @method showTips
-    * @return null
-    * */
-    showTips() {
+    };
+
+    /**
+     * 鼠标over，set show true,tips显示
+     * @method showTips
+     * @return null
+     * */
+
+    TooltipPanel.prototype.showTips = function showTips() {
         this.setState({
             show: true
         });
-    }
+    };
+
     /**
      * 鼠标leave，set show false, tips隐藏
      * @method hideTips
      * @return null
      * */
-    hideTips() {
+
+    TooltipPanel.prototype.hideTips = function hideTips() {
         this.setState({
             show: false
         });
-    }
+    };
+
     /**
      * tips方向和边界判断，调整tips的位置
      * @method changeStyle
      * @param direction {String}
      * @return null
      * */
-    changeStyle(direction){
-        let dir = direction;
-        let [dbody,delement,tipNode,eleNode] = [document.body,document.documentElement,React.findDOMNode(this.refs.tips),React.findDOMNode(this.refs.container).children[0]];
-        let bodys = {
+
+    TooltipPanel.prototype.changeStyle = function changeStyle(direction) {
+        var dir = direction;
+        var dbody = document.body;
+        var delement = document.documentElement;
+
+        var tipNode = _react2[&#x27;default&#x27;].findDOMNode(this.refs.tips);
+
+        var eleNode = _react2[&#x27;default&#x27;].findDOMNode(this.refs.container).children[0];
+
+        var bodys = {
             height: dbody.clientHeight,
             width: dbody.clientWidth
         };
-        let doc = {
+        var doc = {
             height: delement.clientHeight,
             width: delement.clientWidth
         };
-        let tips = {
+        var tips = {
             height: tipNode.offsetHeight,
             width: tipNode.offsetWidth
         };
-        let element = {
+        var element = {
             height: eleNode.offsetHeight,
             width: eleNode.offsetWidth,
             left: eleNode.parentNode.offsetLeft,
             top: eleNode.parentNode.offsetTop
-        }
-        let maxBody = this.getMaxBody(bodys,doc);
-        let validate = this.isValidate(dir,tips,element,maxBody);
-        if(!validate){
-            let arrow = tipNode.children[0];
-            this.removeClass(arrow,classnames(
-                this.getClassName(&#x27;arrow-&#x27;+dir)
-            ));
-            this.addClass(arrow,classnames(
-                this.getClassName(&#x27;arrow-down&#x27;)
-            ));
+        };
+        var maxBody = this.getMaxBody(bodys, doc);
+        var validate = this.isValidate(dir, tips, element, maxBody);
+        if (!validate) {
+            var arrow = tipNode.children[0];
+            this.removeClass(arrow, _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;arrow-&#x27; + dir)));
+            this.addClass(arrow, _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;arrow-down&#x27;)));
             dir = &#x27;down&#x27;;
         }
-        switch(dir){
+        switch (dir) {
             case &#x27;down&#x27;:
                 tipNode.style.left = &#x27;0&#x27;;
                 break;
             case &#x27;top&#x27;:
-                tipNode.style.top = &#x27;-&#x27;+(tips.height + 10)+&#x27;px&#x27;;
+                tipNode.style.top = &#x27;-&#x27; + (tips.height + 10) + &#x27;px&#x27;;
                 tipNode.style.left = &#x27;0&#x27;;
                 break;
             case &#x27;left&#x27;:
-                tipNode.style.left = &#x27;-&#x27;+(tips.width+5)+&#x27;px&#x27;;
-                tipNode.style.top = ((element.height - tips.height)/2 - 5)+&#x27;px&#x27;;
+                tipNode.style.left = &#x27;-&#x27; + (tips.width + 5) + &#x27;px&#x27;;
+                tipNode.style.top = (element.height - tips.height) / 2 - 5 + &#x27;px&#x27;;
                 break;
             case &#x27;right&#x27;:
                 tipNode.style.left = &#x27;auto&#x27;;
-                tipNode.style.right = &#x27;-&#x27;+(tips.width+5)+&#x27;px&#x27;;
-                tipNode.style.top = ((element.height - tips.height)/2 - 5)+&#x27;px&#x27;;
+                tipNode.style.right = &#x27;-&#x27; + (tips.width + 5) + &#x27;px&#x27;;
+                tipNode.style.top = (element.height - tips.height) / 2 - 5 + &#x27;px&#x27;;
                 break;
-            default :
+            default:
                 break;
         }
-    }
+    };
+
     /**
      * 获得浏览器的边界大小
      * @method getMaxBody
@@ -582,14 +643,16 @@ class TooltipPanel extends Component {
      * @param doc {Object}
      * @return maxBody {Object}
      * */
-    getMaxBody(body,doc){
-        let maxBody = {
+
+    TooltipPanel.prototype.getMaxBody = function getMaxBody(body, doc) {
+        var maxBody = {
             height: body.height &gt; doc.height ? body.height : doc.height,
-            width: body.width &gt; doc.width ? body.width : doc.width,
+            width: body.width &gt; doc.width ? body.width : doc.width
 
         };
         return maxBody;
-    }
+    };
+
     /**
      * 判断是否满足边界条件,是返回true否返回false
      * @method isValidate
@@ -599,32 +662,39 @@ class TooltipPanel extends Component {
      * @param maxBody {Object}
      * @return flag {Boolean}
      * */
-    isValidate(dir,tips,ele,maxBody){
-        let flag = false;
-        switch(dir){
+
+    TooltipPanel.prototype.isValidate = function isValidate(dir, tips, ele, maxBody) {
+        var flag = false;
+        switch (dir) {
             case &#x27;down&#x27;:
-                flag = (maxBody.height - ele.top) &gt; (ele.height + tips.height) ? true :false;
+                flag = maxBody.height - ele.top &gt; ele.height + tips.height ? true : false;
                 return flag;
                 break;
             case &#x27;top&#x27;:
-                flag = ele.top &gt; tips.height ? true :false;
+                flag = ele.top &gt; tips.height ? true : false;
                 return flag;
                 break;
             case &#x27;left&#x27;:
-                flag = ele.left &gt; tips.width ? true :false;
+                flag = ele.left &gt; tips.width ? true : false;
                 return flag;
                 break;
             case &#x27;right&#x27;:
-                flag = (maxBody.width - ele.left) &gt; (ele.width + tips.width) ? true :false;
+                flag = maxBody.width - ele.left &gt; ele.width + tips.width ? true : false;
                 return flag;
                 break;
-            default :
+            default:
                 return flag;
                 break;
         }
-    }
+    };
 
-}
+    var _TooltipPanel = TooltipPanel;
+    TooltipPanel = _utilsClassNameMixin2[&#x27;default&#x27;](TooltipPanel) || TooltipPanel;
+    return TooltipPanel;
+})(_react.Component);
+
+exports[&#x27;default&#x27;] = TooltipPanel;
+module.exports = exports[&#x27;default&#x27;];
     </pre>
 </div>
 

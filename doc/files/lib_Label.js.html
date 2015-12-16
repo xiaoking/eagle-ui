@@ -404,9 +404,31 @@
 /**
  * Created by mac on 15/9/7.
  */
-import React,{Component,PropTypes} from &#x27;react&#x27;;
-import ClassNameMixin from &#x27;./utils/ClassNameMixin&#x27;;
-import classnames from &#x27;classnames&#x27;;
+&#x27;use strict&#x27;;
+
+exports.__esModule = true;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (&#x27;value&#x27; in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &#x27;default&#x27;: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&#x27;Cannot call a class as a function&#x27;); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== &#x27;function&#x27; &amp;&amp; superClass !== null) { throw new TypeError(&#x27;Super expression must either be null or a function, not &#x27; + typeof superClass); } subClass.prototype = Object.create(superClass &amp;&amp; superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _react = require(&#x27;react&#x27;);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _utilsClassNameMixin = require(&#x27;./utils/ClassNameMixin&#x27;);
+
+var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+
+var _classnames = require(&#x27;classnames&#x27;);
+
+var _classnames2 = _interopRequireDefault(_classnames);
 
 /**
  * 标签
@@ -418,18 +440,30 @@ import classnames from &#x27;classnames&#x27;;
  * @demo label.js {js}
  * @show true
  * */
-@ClassNameMixin
-export default class Label extends Component{
-    static propTypes = {
-        url:PropTypes.string,
-        clickCallback:PropTypes.func
-    };
-    static defaultProps = {
-        classPrefix:&#x27;label&#x27;,
-        url:&#x27;javascript:void(0);&#x27;
-    };
-    constructor(props, context) {
-        super(props, context);
+
+var Label = (function (_Component) {
+    _inherits(Label, _Component);
+
+    _createClass(Label, null, [{
+        key: &#x27;propTypes&#x27;,
+        value: {
+            url: _react.PropTypes.string,
+            clickCallback: _react.PropTypes.func
+        },
+        enumerable: true
+    }, {
+        key: &#x27;defaultProps&#x27;,
+        value: {
+            classPrefix: &#x27;label&#x27;,
+            url: &#x27;javascript:void(0);&#x27;
+        },
+        enumerable: true
+    }]);
+
+    function Label(props, context) {
+        _classCallCheck(this, _Label);
+
+        _Component.call(this, props, context);
 
         //this.state = {
         //    active:this.props.active || false
@@ -439,33 +473,37 @@ export default class Label extends Component{
     /**
      * 点击回调函数
      * */
-    clickHandler(e){
-        let {clickCallback} = this.props,
-            target = e.target;
+
+    Label.prototype.clickHandler = function clickHandler(e) {
+        var clickCallback = this.props.clickCallback;
+        var target = e.target;
         //,
         //     active = !this.state.active;
         //this.setState({
         //    active:active
         //});
-        clickCallback &amp;&amp; clickCallback(target.getAttribute(&#x27;value&#x27;),target.innerHTML,target,!this.props.active,);
-    }
+        clickCallback &amp;&amp; clickCallback(target.getAttribute(&#x27;value&#x27;), target.innerHTML, target, !this.props.active);
+    };
 
-    render(){
-        const {url} = this.props;
-        return (
-            &lt;a href={url} {...this.props} className={
-                classnames(
-                    this.getClassName(&#x27;item&#x27;),
-                    this.getClassNames(this.props),
-                    this.getClassName(this.props.className)
-                    //this.getClassNames(this.state)
-                )
-            } onMouseDown={::this.clickHandler}&gt;
-                {this.props.children}
-            &lt;/a&gt;
+    Label.prototype.render = function render() {
+        var url = this.props.url;
+
+        return _react2[&#x27;default&#x27;].createElement(
+            &#x27;a&#x27;,
+            _extends({ href: url }, this.props, { className: _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;item&#x27;), this.getClassNames(this.props), this.getClassName(this.props.className)
+                //this.getClassNames(this.state)
+                ), onMouseDown: this.clickHandler.bind(this) }),
+            this.props.children
         );
-    }
-}
+    };
+
+    var _Label = Label;
+    Label = _utilsClassNameMixin2[&#x27;default&#x27;](Label) || Label;
+    return Label;
+})(_react.Component);
+
+exports[&#x27;default&#x27;] = Label;
+module.exports = exports[&#x27;default&#x27;];
     </pre>
 </div>
 

@@ -2,7 +2,7 @@
  * Created by mac on 15/11/4.
  */
 import React,{Component} from 'react';
-import {Label,LabelGroup,Panel,Grid,Row,Col,PanelContent} from '../../../index.js';
+import {Label,LabelGroup,Panel,Grid,Row,Col,PanelContent} from '../../../src/index.js';
 
 let Demo = class Demo extends Component{
 

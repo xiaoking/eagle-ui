@@ -404,10 +404,38 @@
 /**
  * Created by mac on 15/9/7.
  */
-import React,{Component,PropTypes} from &#x27;react&#x27;;
-import ClassNameMixin from &#x27;./utils/ClassNameMixin&#x27;;
-import classnames from &#x27;classnames&#x27;;
-import Tab from &#x27;./Tab.js&#x27;;
+&#x27;use strict&#x27;;
+
+exports.__esModule = true;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (&#x27;value&#x27; in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &#x27;default&#x27;: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) &gt;= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&#x27;Cannot call a class as a function&#x27;); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== &#x27;function&#x27; &amp;&amp; superClass !== null) { throw new TypeError(&#x27;Super expression must either be null or a function, not &#x27; + typeof superClass); } subClass.prototype = Object.create(superClass &amp;&amp; superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _react = require(&#x27;react&#x27;);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _utilsClassNameMixin = require(&#x27;./utils/ClassNameMixin&#x27;);
+
+var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+
+var _classnames = require(&#x27;classnames&#x27;);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _TabJs = require(&#x27;./Tab.js&#x27;);
+
+var _TabJs2 = _interopRequireDefault(_TabJs);
+
 /**
  * tab组件
  * @class Tabset
@@ -418,106 +446,136 @@ import Tab from &#x27;./Tab.js&#x27;;
  * @demo tab.js{js}
  * @show true
  * */
-@ClassNameMixin
-export default class Tabset extends Component{
-    static defaultProps = {
-        classPrefix:&#x27;tabset&#x27;,
-        activeTab:0
-    };
 
+var Tabset = (function (_Component) {
+    _inherits(Tabset, _Component);
 
-    static propTypes = {
-        /**
-         * 需要在初始的时候打开第几个tab，默认为0（从0计数，即打开第一个tab）
-         * @property activeTab
-         * @type Number
-         * @default 0
-         * */
-        activeTab:PropTypes.number
-    };
+    _createClass(Tabset, null, [{
+        key: &#x27;defaultProps&#x27;,
+        value: {
+            classPrefix: &#x27;tabset&#x27;,
+            activeTab: 0
+        },
+        enumerable: true
+    }, {
+        key: &#x27;propTypes&#x27;,
+        value: {
+            /**
+             * 需要在初始的时候打开第几个tab，默认为0（从0计数，即打开第一个tab）
+             * @property activeTab
+             * @type Number
+             * @default 0
+             * */
+            activeTab: _react.PropTypes.number
+        },
+        enumerable: true
+    }]);
 
-    constructor(props, context) {
-        super(props, context);
+    function Tabset(props, context) {
+        _classCallCheck(this, _Tabset);
+
+        _Component.call(this, props, context);
         this.state = {
-            active:props.activeTab,
-            tabSlider:{
-                left:0,
-                width:0
+            active: props.activeTab,
+            tabSlider: {
+                left: 0,
+                width: 0
             }
         };
-        if(this.props.tabCallback){
+        if (this.props.tabCallback) {
             this.props.tabCallback(props.activeTab);
         }
     }
-    componentDidMount(){
+
+    Tabset.prototype.componentDidMount = function componentDidMount() {
         this.tabItemListMouseLeaveHandler();
-    }
-    activeHandler(index) {
-        if(this.state.active !== index){
+    };
+
+    Tabset.prototype.activeHandler = function activeHandler(index) {
+        if (this.state.active !== index) {
             this.setState({
-                active:index
+                active: index
             });
-            if(this.props.tabCallback){
+            if (this.props.tabCallback) {
                 this.props.tabCallback(index);
             }
         }
-    }
-    tabItemListMouseLeaveHandler(){
-        let activeTab=React.findDOMNode(this.refs[&#x27;tabItem&#x27;+this.state.active]);
-        this.timeoutObj=setTimeout(function(){
-            this.tabItemMouseEnterHandler(activeTab.offsetLeft,activeTab.offsetWidth);
-        }.bind(this),400);
-    }
-    tabItemMouseEnterHandler(left,width){
+    };
+
+    Tabset.prototype.tabItemListMouseLeaveHandler = function tabItemListMouseLeaveHandler() {
+        var activeTab = _react2[&#x27;default&#x27;].findDOMNode(this.refs[&#x27;tabItem&#x27; + this.state.active]);
+        this.timeoutObj = setTimeout((function () {
+            this.tabItemMouseEnterHandler(activeTab.offsetLeft, activeTab.offsetWidth);
+        }).bind(this), 400);
+    };
+
+    Tabset.prototype.tabItemMouseEnterHandler = function tabItemMouseEnterHandler(left, width) {
         clearTimeout(this.timeoutObj);
         this.setState({
-            tabSlider:{
-                left,
-                width
+            tabSlider: {
+                left: left,
+                width: width
             }
         });
-    }
-    render(){
-        let headings=React.Children.map(this.props.children,(option,index)=&gt;{
-            let {
-                tabCallback,
-                ...other
-            } = option.props;
-            return &lt;Tab
-                ref={&#x27;tabItem&#x27;+index}
-                index={index}
-                active={this.state.active === index}
-                clickCallback={::this.activeHandler}
-                mouseEnterCallback={::this.tabItemMouseEnterHandler}
-                {...other}&gt;&lt;/Tab&gt;;
-        },this);
-        let panes = React.Children.map(this.props.children,(option,index)=&gt;{
-            return &lt;div
-                className={classnames(this.getClassName(&#x27;panes&#x27;) ) }
-                style={{display: this.state.active === index ? null : &#x27;none&#x27;}}
-                &gt;{option.props.children}&lt;/div&gt;;
-        },this);
-        return (
-            &lt;div&gt;
-                &lt;ul className={classnames(this.getClassName(&#x27;tab-list&#x27;)) }
-                    onMouseLeave={::this.tabItemListMouseLeaveHandler}&gt;
-                {headings}
-                    &lt;li className={classnames(this.getClassName(&#x27;slider-container&#x27;) ) }&gt;
-                        &lt;div className={classnames(this.getClassName(&#x27;slider&#x27;) ) }
-                            style={{width:this.state.tabSlider.width,left:this.state.tabSlider.left}}&gt;
-                        &lt;/div&gt;
-                    &lt;/li&gt;
-                &lt;/ul&gt;
-                &lt;div className={classnames(this.getClassName(&#x27;tab-content&#x27;) ) }&gt;
-                {panes}
-                &lt;/div&gt;
-            &lt;/div&gt;
+    };
+
+    Tabset.prototype.render = function render() {
+        var _this = this;
+
+        var headings = _react2[&#x27;default&#x27;].Children.map(this.props.children, function (option, index) {
+            var _option$props = option.props;
+            var tabCallback = _option$props.tabCallback;
+
+            var other = _objectWithoutProperties(_option$props, [&#x27;tabCallback&#x27;]);
+
+            return _react2[&#x27;default&#x27;].createElement(_TabJs2[&#x27;default&#x27;], _extends({
+                ref: &#x27;tabItem&#x27; + index,
+                index: index,
+                active: _this.state.active === index,
+                clickCallback: _this.activeHandler.bind(_this),
+                mouseEnterCallback: _this.tabItemMouseEnterHandler.bind(_this)
+            }, other));
+        }, this);
+        var panes = _react2[&#x27;default&#x27;].Children.map(this.props.children, function (option, index) {
+            return _react2[&#x27;default&#x27;].createElement(
+                &#x27;div&#x27;,
+                {
+                    className: _classnames2[&#x27;default&#x27;](_this.getClassName(&#x27;panes&#x27;)),
+                    style: { display: _this.state.active === index ? null : &#x27;none&#x27; }
+                },
+                option.props.children
+            );
+        }, this);
+        return _react2[&#x27;default&#x27;].createElement(
+            &#x27;div&#x27;,
+            null,
+            _react2[&#x27;default&#x27;].createElement(
+                &#x27;ul&#x27;,
+                { className: _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;tab-list&#x27;)),
+                    onMouseLeave: this.tabItemListMouseLeaveHandler.bind(this) },
+                headings,
+                _react2[&#x27;default&#x27;].createElement(
+                    &#x27;li&#x27;,
+                    { className: _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;slider-container&#x27;)) },
+                    _react2[&#x27;default&#x27;].createElement(&#x27;div&#x27;, { className: _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;slider&#x27;)),
+                        style: { width: this.state.tabSlider.width, left: this.state.tabSlider.left } })
+                )
+            ),
+            _react2[&#x27;default&#x27;].createElement(
+                &#x27;div&#x27;,
+                { className: _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;tab-content&#x27;)) },
+                panes
+            )
         );
-    }
-}
+    };
 
+    var _Tabset = Tabset;
+    Tabset = _utilsClassNameMixin2[&#x27;default&#x27;](Tabset) || Tabset;
+    return Tabset;
+})(_react.Component);
 
-
+exports[&#x27;default&#x27;] = Tabset;
+module.exports = exports[&#x27;default&#x27;];
     </pre>
 </div>
 

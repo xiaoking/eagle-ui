@@ -401,9 +401,31 @@
 
 <div class="file">
     <pre class="prettyprint linenums" id='src_code'>
-import React,{Component,PropTypes} from &#x27;react&#x27;;
-import ClassNameMixin from &#x27;./utils/ClassNameMixin&#x27;;
-import classnames from &#x27;classnames&#x27;;
+&#x27;use strict&#x27;;
+
+exports.__esModule = true;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (&#x27;value&#x27; in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &#x27;default&#x27;: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&#x27;Cannot call a class as a function&#x27;); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== &#x27;function&#x27; &amp;&amp; superClass !== null) { throw new TypeError(&#x27;Super expression must either be null or a function, not &#x27; + typeof superClass); } subClass.prototype = Object.create(superClass &amp;&amp; superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _react = require(&#x27;react&#x27;);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _utilsClassNameMixin = require(&#x27;./utils/ClassNameMixin&#x27;);
+
+var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+
+var _classnames = require(&#x27;classnames&#x27;);
+
+var _classnames2 = _interopRequireDefault(_classnames);
 
 /**
  * 表单验证组件&lt;br /&gt;
@@ -434,138 +456,148 @@ import classnames from &#x27;classnames&#x27;;
  * @demo validate.js {js}
  * @show true
  * */
-@ClassNameMixin
-export default class ValidatorPanel extends Component {
-    static propTypes = {
-        //触发点，change blur  manual（手动）
-        trigger:PropTypes.string,
-        submitCallback:PropTypes.func,
-        /**
-         * 需要初始化的表单元素默认值(废弃)
-         * @property values
-         * @type Object
-         * */
-        values:PropTypes.object,
-        /**
-         * 每次验证时值被改变后都会被触发，会回传当前data-field字段、值和所有值对象
-         * @property getValueCallback
-         * @type Function
-         * */
-        getValueCallback:PropTypes.func
-    };
 
-    static defaultProps = {
-        /**
-         * 包装容器
-         * @property componentTag
-         * @type String
-         * @default form
-         * */
-        componentTag: &#x27;form&#x27;,
-        /**
-         * 触发验证的事件集合
-         * @property trigger
-         * @type String
-         * @default blur keyup focus click
-         * */
-        trigger:&#x27;blur keyup focus click&#x27;,
-        /**
-         * 默认规则提示文案
-         * @property message
-         * @type Object
-         * @default
-         *       required: &#x27;不能为空&#x27;,
-                 date: &#x27;请正确填写日期&#x27;,
-                 number: &#x27;请输入一个有效的号码&#x27;,
-                 url: &#x27;请输入一个有效的URL&#x27;,
-                 email: &#x27;请输入一个有效的电子邮件地址&#x27;,
-                 dateISO: &#x27;请输入一个有效的日期(ISO)&#x27;,
-                 digits: &#x27;请输入数字&#x27;,
-                 equalTo:&#x27;请再次输入相同的值。&#x27;,
-                 minlength: &#x27;请输入至少{0}字符&#x27;,
-                 maxlength: &#x27;请输入不超过{0}字符&#x27;,
-                 rangelength: &#x27;请输入一个值{0}和{1}字符之间&#x27;,
-                 min: &#x27;请输入一个值大于或等于{0}&#x27;,
-                 max: &#x27;请输入一个值小于或等于{0}&#x27;,
-                 range: &#x27;请输入一个值{0} - {1}&#x27;
-         * */
-        message:{
-            required: &#x27;不能为空&#x27;,
-            date: &#x27;请正确填写日期&#x27;,
-            number: &#x27;请输入一个有效的号码&#x27;,
-            url: &#x27;请输入一个有效的URL&#x27;,
-            email: &#x27;请输入一个有效的电子邮件地址&#x27;,
-            dateISO: &#x27;请输入一个有效的日期(ISO)&#x27;,
-            digits: &#x27;请输入数字&#x27;,
-            equalTo:&#x27;请再次输入相同的值。&#x27;,
-            minlength: &#x27;请输入至少{0}字符&#x27;,
-            maxlength: &#x27;请输入不超过{0}字符&#x27;,
-            rangelength: &#x27;请输入一个值{0}和{1}字符之间&#x27;,
-            min: &#x27;请输入一个值大于或等于{0}&#x27;,
-            max: &#x27;请输入一个值小于或等于{0}&#x27;,
-            range: &#x27;请输入一个值{0} - {1}&#x27;
-        },
-        initCallback:function(){},
-        /**
-         * 验证成功后提交表单
-         * @property submitCallback
-         * @type Function
-         * */
-        submitCallback:function(){
-            return true;
-        },
-        /**
-         * 在提交时除验证规则之外的其他逻辑
-         * @property validateCallback
-         * @type Function
-         * */
-        validateCallback:function(){
-            return true;
-        },
-        /**
-         * 提示框消失时间
-         * @property timeout
-         * @type Number
-         * @default 3000
-         * */
-        timeout:3000,
-        /**
-         * 提交按钮id
-         * @property submitElement
-         * @type String
-         * */
-        submitElement:&#x27;&#x27;,
-        /**
-         * 是否增强文本框提示
-         * @property shake
-         * @type Boolean
-         * @default true
-         * */
-        shake:true,
-        /**
-         * 规则验证
-         * @property rules
-         * @type Object
-         * */
-        rules:{},
-        /**
-         * 提示方位
-         * @property direction
-         * @type String
-         * @default right
-         * */
-        direction:&#x27;right&#x27;,
-        /**
-         * 重新更新dom
-         * @property update
-         * @type String
-         * @default +new Date()
-         * */
-        update:+new Date()
-    };
+var ValidatorPanel = (function (_Component) {
+    _inherits(ValidatorPanel, _Component);
 
-    constructor(props, context) {
-        super(props, context);
+    _createClass(ValidatorPanel, null, [{
+        key: &#x27;propTypes&#x27;,
+        value: {
+            //触发点，change blur  manual（手动）
+            trigger: _react.PropTypes.string,
+            submitCallback: _react.PropTypes.func,
+            /**
+             * 需要初始化的表单元素默认值(废弃)
+             * @property values
+             * @type Object
+             * */
+            values: _react.PropTypes.object,
+            /**
+             * 每次验证时值被改变后都会被触发，会回传当前data-field字段、值和所有值对象
+             * @property getValueCallback
+             * @type Function
+             * */
+            getValueCallback: _react.PropTypes.func
+        },
+        enumerable: true
+    }, {
+        key: &#x27;defaultProps&#x27;,
+        value: {
+            /**
+             * 包装容器
+             * @property componentTag
+             * @type String
+             * @default form
+             * */
+            componentTag: &#x27;form&#x27;,
+            /**
+             * 触发验证的事件集合
+             * @property trigger
+             * @type String
+             * @default blur keyup focus click
+             * */
+            trigger: &#x27;blur keyup focus click&#x27;,
+            /**
+             * 默认规则提示文案
+             * @property message
+             * @type Object
+             * @default
+             *       required: &#x27;不能为空&#x27;,
+                     date: &#x27;请正确填写日期&#x27;,
+                     number: &#x27;请输入一个有效的号码&#x27;,
+                     url: &#x27;请输入一个有效的URL&#x27;,
+                     email: &#x27;请输入一个有效的电子邮件地址&#x27;,
+                     dateISO: &#x27;请输入一个有效的日期(ISO)&#x27;,
+                     digits: &#x27;请输入数字&#x27;,
+                     equalTo:&#x27;请再次输入相同的值。&#x27;,
+                     minlength: &#x27;请输入至少{0}字符&#x27;,
+                     maxlength: &#x27;请输入不超过{0}字符&#x27;,
+                     rangelength: &#x27;请输入一个值{0}和{1}字符之间&#x27;,
+                     min: &#x27;请输入一个值大于或等于{0}&#x27;,
+                     max: &#x27;请输入一个值小于或等于{0}&#x27;,
+                     range: &#x27;请输入一个值{0} - {1}&#x27;
+             * */
+            message: {
+                required: &#x27;不能为空&#x27;,
+                date: &#x27;请正确填写日期&#x27;,
+                number: &#x27;请输入一个有效的号码&#x27;,
+                url: &#x27;请输入一个有效的URL&#x27;,
+                email: &#x27;请输入一个有效的电子邮件地址&#x27;,
+                dateISO: &#x27;请输入一个有效的日期(ISO)&#x27;,
+                digits: &#x27;请输入数字&#x27;,
+                equalTo: &#x27;请再次输入相同的值。&#x27;,
+                minlength: &#x27;请输入至少{0}字符&#x27;,
+                maxlength: &#x27;请输入不超过{0}字符&#x27;,
+                rangelength: &#x27;请输入一个值{0}和{1}字符之间&#x27;,
+                min: &#x27;请输入一个值大于或等于{0}&#x27;,
+                max: &#x27;请输入一个值小于或等于{0}&#x27;,
+                range: &#x27;请输入一个值{0} - {1}&#x27;
+            },
+            initCallback: function initCallback() {},
+            /**
+             * 验证成功后提交表单
+             * @property submitCallback
+             * @type Function
+             * */
+            submitCallback: function submitCallback() {
+                return true;
+            },
+            /**
+             * 在提交时除验证规则之外的其他逻辑
+             * @property validateCallback
+             * @type Function
+             * */
+            validateCallback: function validateCallback() {
+                return true;
+            },
+            /**
+             * 提示框消失时间
+             * @property timeout
+             * @type Number
+             * @default 3000
+             * */
+            timeout: 3000,
+            /**
+             * 提交按钮id
+             * @property submitElement
+             * @type String
+             * */
+            submitElement: &#x27;&#x27;,
+            /**
+             * 是否增强文本框提示
+             * @property shake
+             * @type Boolean
+             * @default true
+             * */
+            shake: true,
+            /**
+             * 规则验证
+             * @property rules
+             * @type Object
+             * */
+            rules: {},
+            /**
+             * 提示方位
+             * @property direction
+             * @type String
+             * @default right
+             * */
+            direction: &#x27;right&#x27;,
+            /**
+             * 重新更新dom
+             * @property update
+             * @type String
+             * @default +new Date()
+             * */
+            update: +new Date()
+        },
+        enumerable: true
+    }]);
+
+    function ValidatorPanel(props, context) {
+        _classCallCheck(this, _ValidatorPanel);
+
+        _Component.call(this, props, context);
 
         this.elements = {};
 
@@ -576,211 +608,219 @@ export default class ValidatorPanel extends Component {
 
         this.isUpdate = false;
 
-        this.vals={};
+        this.vals = {};
         this.valueLink = &#x27;data-field&#x27;;
 
         this.state = {
-            message:&#x27;&#x27;,
-            show:&#x27;&#x27;,
-            fadeShow:&#x27;block&#x27;
+            message: &#x27;&#x27;,
+            show: &#x27;&#x27;,
+            fadeShow: &#x27;block&#x27;
         };
     }
 
-    trim(str){
-        return str.replace(/(^\s*)|(\s*$)/g,&quot;&quot;);
-    }
+    ValidatorPanel.prototype.trim = function trim(str) {
+        return str.replace(/(^\s*)|(\s*$)/g, &quot;&quot;);
+    };
 
-    isArray(value){
-        if (value instanceof Array ||
-            (!(value instanceof Object) &amp;&amp;
-            (Object.prototype.toString.call((value)) == &#x27;[object Array]&#x27;) ||
-            typeof value.length == &#x27;number&#x27; &amp;&amp;
-            typeof value.splice != &#x27;undefined&#x27; &amp;&amp;
-            typeof value.propertyIsEnumerable != &#x27;undefined&#x27; &amp;&amp;
-            !value.propertyIsEnumerable(&#x27;splice&#x27;)) ) {
+    ValidatorPanel.prototype.isArray = function isArray(value) {
+        if (value instanceof Array || !(value instanceof Object) &amp;&amp; Object.prototype.toString.call(value) == &#x27;[object Array]&#x27; || typeof value.length == &#x27;number&#x27; &amp;&amp; typeof value.splice != &#x27;undefined&#x27; &amp;&amp; typeof value.propertyIsEnumerable != &#x27;undefined&#x27; &amp;&amp; !value.propertyIsEnumerable(&#x27;splice&#x27;)) {
 
             return true;
         }
         return false;
-    }
+    };
 
-    initVals(){
-        let elms = this.elements,
+    ValidatorPanel.prototype.initVals = function initVals() {
+        var elms = this.elements,
             val = &#x27;&#x27;,
-            name=null,
-            vals= this.vals;
+            name = null,
+            vals = this.vals;
 
-        let {values} = this.props;
-        if(values){
-            for(let element in elms){
+        var values = this.props.values;
+
+        if (values) {
+            for (var element in elms) {
                 name = this.getField(element);
                 val = values[name];
-                if(val){
-                    this.setValue(element,val);
+                if (val) {
+                    this.setValue(element, val);
                     vals[name] = val;
                 }
             }
         }
+    };
 
-    }
+    ValidatorPanel.prototype.optional = function optional(element) {
+        var val = this.getValue(element);
+        return !this.options.defaultRules.required.call(this, val, element);
+    };
 
-    optional(element) {
-        let val = this.getValue(element );
-        return !this.options.defaultRules.required.call( this, val, element );
-    }
+    ValidatorPanel.prototype.required = function required(value, element) {
 
-    required( value, element ) {
-
-        if ( element.nodeName.toLowerCase() === &quot;select&quot; ) {
-            let val = $( element ).val();
+        if (element.nodeName.toLowerCase() === &quot;select&quot;) {
+            var val = $(element).val();
             return val &amp;&amp; val.length &gt; 0;
         }
-        if ( this.checkable( element ) ) {
-            return this.getLength( value, element ) &gt; 0;
+        if (this.checkable(element)) {
+            return this.getLength(value, element) &gt; 0;
         }
-        return this.trim( value ).length &gt; 0;
-    }
+        return this.trim(value).length &gt; 0;
+    };
 
-    date( value, element ) {
-        return this.optional( element ) || !/Invalid|NaN/.test( new Date( value ).toString() );
-    }
+    ValidatorPanel.prototype.date = function date(value, element) {
+        return this.optional(element) || !/Invalid|NaN/.test(new Date(value).toString());
+    };
 
-    number( value, element ) {
-        return this.optional( element ) || /^-?(?:\d+|\d{1,3}(?:,\d{3})+)?(?:\.\d+)?$/.test( value );
-    }
+    ValidatorPanel.prototype.number = function number(value, element) {
+        return this.optional(element) || /^-?(?:\d+|\d{1,3}(?:,\d{3})+)?(?:\.\d+)?$/.test(value);
+    };
 
-    url( value, element ) {
-        return this.optional( element ) ||
-            /^(https?|s?ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&amp;&#x27;\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&amp;&#x27;\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&amp;&#x27;\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&amp;&#x27;\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&amp;&#x27;\(\)\*\+,;=]|:|@)|\/|\?)*)?$/i.test( value );
-    }
-    email( value, element ) {
+    ValidatorPanel.prototype.url = function url(value, element) {
+        return this.optional(element) || /^(https?|s?ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&amp;&#x27;\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&amp;&#x27;\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&amp;&#x27;\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&amp;&#x27;\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&amp;&#x27;\(\)\*\+,;=]|:|@)|\/|\?)*)?$/i.test(value);
+    };
 
-        return this.optional( element ) || /^[a-zA-Z0-9.!#$%&amp;&#x27;*+\/=?^_&#x60;{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test( value );
-    }
-    dateISO( value, element ) {
-        return this.optional( element ) || /^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/.test( value );
-    }
-    digits( value, element ) {
-        return this.optional( element ) || /^\d+$/.test( value );
-    }
-    equalTo( value, element, param ) {
-        let target = document.querySelectorAll(param);
+    ValidatorPanel.prototype.email = function email(value, element) {
+
+        return this.optional(element) || /^[a-zA-Z0-9.!#$%&amp;&#x27;*+\/=?^_&#x60;{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(value);
+    };
+
+    ValidatorPanel.prototype.dateISO = function dateISO(value, element) {
+        return this.optional(element) || /^\d{4}[\/\-](0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])$/.test(value);
+    };
+
+    ValidatorPanel.prototype.digits = function digits(value, element) {
+        return this.optional(element) || /^\d+$/.test(value);
+    };
+
+    ValidatorPanel.prototype.equalTo = function equalTo(value, element, param) {
+        var target = document.querySelectorAll(param);
         /*if ( this.onfocus ) {
             target.off( &quot;.validate-equalTo&quot; ).on( &quot;blur.validate-equalTo&quot;, function() {
                 this.show();
             });
         }*/
-        return this.optional( element ) || value === target[0].value;
-    }
-    minlength( value, element, param ) {
-        let length = this.isArray( value ) ? value.length : this.getLength( value, element );
-        return this.optional( element ) || length &gt;= param;
-    }
-    maxlength( value, element, param ) {
-        let length = this.isArray( value ) ? value.length : this.getLength( value, element );
-        return this.optional( element ) || length &lt;= param;
-    }
-    rangelength( value, element, param ) {
-        let length = this.isArray( value ) ? value.length : this.getLength( value, element );
-        return this.optional( element ) || ( length &gt;= param[ 0 ] &amp;&amp; length &lt;= param[ 1 ] );
-    }
-    min( value, element, param ) {
-        return this.optional( element ) || value &gt;= param;
-    }
-    max( value, element, param ) {
-        return this.optional( element ) || value &lt;= param;
-    }
-    range( value, element, param ) {
-        return this.optional( element ) || ( value &gt;= param[ 0 ] &amp;&amp; value &lt;= param[ 1 ] );
-    }
+        return this.optional(element) || value === target[0].value;
+    };
+
+    ValidatorPanel.prototype.minlength = function minlength(value, element, param) {
+        var length = this.isArray(value) ? value.length : this.getLength(value, element);
+        return this.optional(element) || length &gt;= param;
+    };
+
+    ValidatorPanel.prototype.maxlength = function maxlength(value, element, param) {
+        var length = this.isArray(value) ? value.length : this.getLength(value, element);
+        return this.optional(element) || length &lt;= param;
+    };
+
+    ValidatorPanel.prototype.rangelength = function rangelength(value, element, param) {
+        var length = this.isArray(value) ? value.length : this.getLength(value, element);
+        return this.optional(element) || length &gt;= param[0] &amp;&amp; length &lt;= param[1];
+    };
+
+    ValidatorPanel.prototype.min = function min(value, element, param) {
+        return this.optional(element) || value &gt;= param;
+    };
+
+    ValidatorPanel.prototype.max = function max(value, element, param) {
+        return this.optional(element) || value &lt;= param;
+    };
+
+    ValidatorPanel.prototype.range = function range(value, element, param) {
+        return this.optional(element) || value &gt;= param[0] &amp;&amp; value &lt;= param[1];
+    };
 
     //待改进
-    optional(element) {
-        let val = this.getValue(element );
-        return !this.required.call( this, val, element );
-    }
+
+    ValidatorPanel.prototype.optional = function optional(element) {
+        var val = this.getValue(element);
+        return !this.required.call(this, val, element);
+    };
+
     //高亮
-    highlight(element){
-        if(!this.checkable(element)){
-            this.addClass(element,this.errorClass);
 
-            if(this.props.shake){
+    ValidatorPanel.prototype.highlight = function highlight(element) {
+        if (!this.checkable(element)) {
+            this.addClass(element, this.errorClass);
 
-                this.addClass(element,&#x27;shake animated&#x27;);
-                setTimeout(function(){
-                    this.removeClass(element,&#x27;shake animated&#x27;);
-                }.bind(this),1000 );
+            if (this.props.shake) {
+
+                this.addClass(element, &#x27;shake animated&#x27;);
+                setTimeout((function () {
+                    this.removeClass(element, &#x27;shake animated&#x27;);
+                }).bind(this), 1000);
             }
-
         }
+    };
 
-    }
     //取消高亮
-    unhighlight(element){
-        this.removeClass(element,this.errorClass);
-    }
 
-    checkable( element ) {
-        return ( /radio|checkbox/i ).test( element.type );
-    }
+    ValidatorPanel.prototype.unhighlight = function unhighlight(element) {
+        this.removeClass(element, this.errorClass);
+    };
 
-    getLength( value, element ) {
-        switch ( element.nodeName.toLowerCase() ) {
+    ValidatorPanel.prototype.checkable = function checkable(element) {
+        return (/radio|checkbox/i.test(element.type)
+        );
+    };
+
+    ValidatorPanel.prototype.getLength = function getLength(value, element) {
+        switch (element.nodeName.toLowerCase()) {
             case &quot;select&quot;:
-                return document.querySelectorAll( &quot;option:selected&quot;, element ).length;
+                return document.querySelectorAll(&quot;option:selected&quot;, element).length;
             case &quot;input&quot;:
-                if ( this.checkable( element ) ) {
-                    return document.querySelectorAll(&quot;[name=&#x27;&quot; + element.name + &quot;&#x27;]:checked&quot; ).length;
+                if (this.checkable(element)) {
+                    return document.querySelectorAll(&quot;[name=&#x27;&quot; + element.name + &quot;&#x27;]:checked&quot;).length;
                 }
         }
         return value.length;
-    }
+    };
 
-    formatString(str, options){
+    ValidatorPanel.prototype.formatString = function formatString(str, options) {
 
-        if(!options){
+        if (!options) {
             return str;
         }
 
-        return str.replace(/\{(.+?)\}/ig, function(match, key){
-            let value = typeof(options) != &#x27;object&#x27;?options: options[key];
+        return str.replace(/\{(.+?)\}/ig, function (match, key) {
+            var value = typeof options != &#x27;object&#x27; ? options : options[key];
             return typeof value == &#x27;undefined&#x27; ? match : value;
         });
-    }
+    };
 
-    getValue(element){
-        let val,
+    ValidatorPanel.prototype.getValue = function getValue(element) {
+        var val = undefined,
             type = element.type.toLowerCase();
 
-        if ( type === &quot;radio&quot; || type === &quot;checkbox&quot; ) {
-            let el = document.querySelectorAll( &#x60;input[name=&quot;${element.name}&quot;]:checked&#x60; );
-            return el &amp;&amp; el.length&gt;0? el[0].value:&#x27;&#x27;;
-        } else if ( type === &quot;number&quot; &amp;&amp; typeof element.validity !== &quot;undefined&quot; ) {
+        if (type === &quot;radio&quot; || type === &quot;checkbox&quot;) {
+            var el = document.querySelectorAll(&#x27;input[name=&quot;&#x27; + element.name + &#x27;&quot;]:checked&#x27;);
+            return el &amp;&amp; el.length &gt; 0 ? el[0].value : &#x27;&#x27;;
+        } else if (type === &quot;number&quot; &amp;&amp; typeof element.validity !== &quot;undefined&quot;) {
             return element.validity.badInput ? false : element.value;
         }
 
         val = element.value;
-        if ( typeof val === &quot;string&quot; ) {
-            return val.replace(/\r/g, &quot;&quot; );
+        if (typeof val === &quot;string&quot;) {
+            return val.replace(/\r/g, &quot;&quot;);
         }
         return val;
-    }
+    };
 
-    setValue(element,val){
+    ValidatorPanel.prototype.setValue = function setValue(element, val) {};
 
-    }
     //循环验证单个input上的规则
-    check(element){
+
+    ValidatorPanel.prototype.check = function check(element) {
 
         //从每一项中提取验证规则
-        let {message} = this.props;
-        //let options = extend(true,{},this.options );
-        let val = this.getValue(element),
-        //rule = null,
-            msg = &#x27;&#x27;,
-            text = null,
-            rules = this.props.rules[element.name];//element.getAttribute(&#x27;data-rules&#x27;) ;
+        var message = this.props.message;
 
+        //let options = extend(true,{},this.options );
+        var val = this.getValue(element),
+
+        //rule = null,
+        msg = &#x27;&#x27;,
+            text = null,
+            rules = this.props.rules[element.name]; //element.getAttribute(&#x27;data-rules&#x27;) ;
 
         /*{
             require:true,
@@ -795,21 +835,21 @@ export default class ValidatorPanel extends Component {
                 }
             }
         }*/
-        this.vals[this.getField(element)]=val;
-        for(let rule in rules){
+        this.vals[this.getField(element)] = val;
+        for (var rule in rules) {
 
             text = rules[rule];
             //text =typeof(text)!==&#x27;string&#x27; ? text : {text:text};
-            if(typeof(text) == &#x27;boolean&#x27;){
+            if (typeof text == &#x27;boolean&#x27;) {
                 text = {};
             }
-            if(!text.text){
-                text.text = message[rule ];
+            if (!text.text) {
+                text.text = message[rule];
             }
 
-            let validate = text.rule &amp;&amp; text.rule instanceof  Function ? text.rule:this[rule];
+            var validate = text.rule &amp;&amp; text.rule instanceof Function ? text.rule : this[rule];
 
-            if(!validate.call(this,val,element,text.params ) ){
+            if (!validate.call(this, val, element, text.params)) {
                 msg = text.text;
                 break;
             }
@@ -824,13 +864,14 @@ export default class ValidatorPanel extends Component {
                 break;
             }*/
         }
-        return this.formatString(msg,(text &amp;&amp;text.params) || &#x27;&#x27;);
-    }
+        return this.formatString(msg, text &amp;&amp; text.params || &#x27;&#x27;);
+    };
 
     //验证
-    validate(element){
-        let message = this.check(element) || &#x27;&#x27;;
-        if(message !== &#x27;&#x27; &amp;&amp; element.style.display!=&#x27;none&#x27; &amp;&amp; !this.isUpdate){
+
+    ValidatorPanel.prototype.validate = function validate(element) {
+        var message = this.check(element) || &#x27;&#x27;;
+        if (message !== &#x27;&#x27; &amp;&amp; element.style.display != &#x27;none&#x27; &amp;&amp; !this.isUpdate) {
             //错误提示
             //this.elements[element.name].status=1;
 
@@ -838,58 +879,57 @@ export default class ValidatorPanel extends Component {
 
             //设置错误消息
             this.setState({
-                message:message,
-                show:message
+                message: message,
+                show: message
             });
             //this.highlight(this.parent, this.options.errorClass, this.options.validClass);
-            if(this.props.timeout){
+            if (this.props.timeout) {
                 clearTimeout(this.validateTimeout);
-                this.validateTimeout = setTimeout(function(){
+                this.validateTimeout = setTimeout((function () {
                     this.setState({
-                        show:&#x27;&#x27;
+                        show: &#x27;&#x27;
                     });
-                }.bind(this),this.props.timeout);
+                }).bind(this), this.props.timeout);
             }
             return false;
         }
         this.setState({
-            show:null
+            show: null
         });
         this.unhighlight(element);
         this.isUpdate = false;
         //this.hide();
         return true;
-    }
+    };
 
-    getField(element){
-        let attr = element.getAttribute(this.valueLink);
+    ValidatorPanel.prototype.getField = function getField(element) {
+        var attr = element.getAttribute(this.valueLink);
         return attr ? attr : element.name;
-    }
+    };
 
-    validateHandler(e){
-        let {getValueCallback} = this.props,target = e.target;
+    ValidatorPanel.prototype.validateHandler = function validateHandler(e) {
+        var getValueCallback = this.props.getValueCallback;var target = e.target;
 
         clearTimeout(this.vaTimeout);
-        this.vaTimeout = setTimeout(function(){
-            let b = this.validate(target);
-            b &amp;&amp; getValueCallback &amp;&amp;(getValueCallback(this.getField(target),this.getValue(target),this.vals ) );
+        this.vaTimeout = setTimeout((function () {
+            var b = this.validate(target);
+            b &amp;&amp; getValueCallback &amp;&amp; getValueCallback(this.getField(target), this.getValue(target), this.vals);
+        }).bind(this), 400);
+    };
 
-        }.bind(this),400 );
-    }
-
-    submit(e){
+    ValidatorPanel.prototype.submit = function submit(e) {
         clearTimeout(this.__blurTimeobj);
-        let elements = this.elements,
+        var elements = this.elements,
             element = null,
             isSubmit = true;
-        if(!elements || elements.length&lt;=0 ){
+        if (!elements || elements.length &lt;= 0) {
             return false;
         }
-        for(let item in elements){
-            element = elements[item];//React.findDOMNode(this.props.refs[item] );
-            if(element &amp;&amp; element.nodeType==1){
-                if(!this.validate(element  ) ){
-                    setTimeout(function(){
+        for (var item in elements) {
+            element = elements[item]; //React.findDOMNode(this.props.refs[item] );
+            if (element &amp;&amp; element.nodeType == 1) {
+                if (!this.validate(element)) {
+                    setTimeout(function () {
                         element.focus();
                     });
                     isSubmit = false;
@@ -898,20 +938,20 @@ export default class ValidatorPanel extends Component {
             }
         }
 
-        if(isSubmit &amp;&amp; this.props.validateCallback(this.vals) ){
-            this.props.submitCallback &amp;&amp;(this.props.submitCallback(this.vals) );
+        if (isSubmit &amp;&amp; this.props.validateCallback(this.vals)) {
+            this.props.submitCallback &amp;&amp; this.props.submitCallback(this.vals);
             return true;
         }
         e.preventDefault();
         e.stopPropagation();
         return false;
-    }
+    };
 
     //隐藏错误提示
-    hide(){
 
-    }
-    parents (ele,str) {
+    ValidatorPanel.prototype.hide = function hide() {};
+
+    ValidatorPanel.prototype.parents = function parents(ele, str) {
         try {
             var tempNode = ele.parentNode;
             while (tempNode &amp;&amp; tempNode.tagName != arguments[0].toUpperCase()) {
@@ -921,190 +961,208 @@ export default class ValidatorPanel extends Component {
         } catch (err) {
             return [];
         }
-    }
+    };
 
-    getTip(){
-        return this.form &amp;&amp; this.form.querySelector(&#x60;.${this.getClassName(&quot;validate-tips&quot;)}&#x60;);
-    }
+    ValidatorPanel.prototype.getTip = function getTip() {
+        return this.form &amp;&amp; this.form.querySelector(&#x27;.&#x27; + this.getClassName(&quot;validate-tips&quot;));
+    };
+
     //设置错误提示框的位置
-    setTipsOffset(element){
-        let node = null,
+
+    ValidatorPanel.prototype.setTipsOffset = function setTipsOffset(element) {
+        var node = null,
             name = element.name,
             d = this.props.direction,
-            tb=d===&quot;bottom&quot; || d===&quot;top&quot;,
-            tip =this.getTip(),
+            tb = d === &quot;bottom&quot; || d === &quot;top&quot;,
+            tip = this.getTip(),
             tag = this.props.componentTag,
             w = element.offsetLeft,
             t = element.offsetTop,
             h = element.offsetHeight;
 
-        while(element &amp;&amp; (element.nodeType!==1 || element.nodeName.toLowerCase()!=tag) ){
+        while (element &amp;&amp; (element.nodeType !== 1 || element.nodeName.toLowerCase() != tag)) {
             element = element.parentNode;
         }
 
-        if(element){
-            element = element.querySelectorAll(&#x60;[name=&quot;${name}&quot;]&#x60;);
+        if (element) {
+            element = element.querySelectorAll(&#x27;[name=&quot;&#x27; + name + &#x27;&quot;]&#x27;);
 
-            element = element[tb ? 0:element.length-1];
+            element = element[tb ? 0 : element.length - 1];
 
             w = element.offsetLeft;
             t = element.offsetTop;
             node = element.offsetParent;
 
-            while(node &amp;&amp; node.nodeName.toLowerCase()!=tag) {
-                t+=node.offsetTop;
-                w+=node.offsetLeft;
+            while (node &amp;&amp; node.nodeName.toLowerCase() != tag) {
+                t += node.offsetTop;
+                w += node.offsetLeft;
                 node = node.offsetParent;
-
             }
-                //w = tip.offsetWidth;
+            //w = tip.offsetWidth;
             this.highlight(element);
 
-            tip.style.display=&quot;block&quot;;
+            tip.style.display = &quot;block&quot;;
 
-            setTimeout(function(){
-                if(tb){
+            setTimeout((function () {
+                if (tb) {
 
-                    tip.style.cssText=&#x60;left:${w}px;top:${(d===&quot;bottom&quot;?t+element.offsetHeight:t-tip.offsetHeight)}px;width:${element.offsetWidth}px&#x60;;
-                }else{
+                    tip.style.cssText = &#x27;left:&#x27; + w + &#x27;px;top:&#x27; + (d === &quot;bottom&quot; ? t + element.offsetHeight : t - tip.offsetHeight) + &#x27;px;width:&#x27; + element.offsetWidth + &#x27;px&#x27;;
+                } else {
                     //height:${h}px;line-height:${h}px;
-                    tip.style.cssText = &#x60;left:${w+(d===&quot;right&quot;?element.offsetWidth+10:0)}px;top:${t+(element.offsetHeight/2-(tip.offsetHeight/2) )}px;&#x60;;
+                    tip.style.cssText = &#x27;left:&#x27; + (w + (d === &quot;right&quot; ? element.offsetWidth + 10 : 0)) + &#x27;px;top:&#x27; + (t + (element.offsetHeight / 2 - tip.offsetHeight / 2)) + &#x27;px;&#x27;;
                 }
-            }.bind(this));
-        }else{
+            }).bind(this));
+        } else {
             //tip.style.display=&#x27;none&#x27;;
         }
-
-    }
+    };
 
     //废弃
-    bindValidate(){
-        //let _this = this;
-        let same = null,showOrhide=&#x27;show&#x27;;
-        let options = React.Children.map(this.props.children,(option)=&gt;{
-            //将validate保存起来，在适当的时候调用
-            let {rules,name} = option.props;
-            if(rules){
 
-                this.elements[name] = {
-                    rules:rules,
-                    status:0
+    ValidatorPanel.prototype.bindValidate = function bindValidate() {
+        var _this2 = this;
+
+        //let _this = this;
+        var same = null,
+            showOrhide = &#x27;show&#x27;;
+        var options = _react2[&#x27;default&#x27;].Children.map(this.props.children, function (option) {
+            //将validate保存起来，在适当的时候调用
+            var _option$props = option.props;
+            var rules = _option$props.rules;
+            var name = _option$props.name;
+
+            if (rules) {
+
+                _this2.elements[name] = {
+                    rules: rules,
+                    status: 0
                 };
 
-                let opt = React.cloneElement(option,{
-                    onBlur:this.validateHandler.bind(this),
-                    onFocus:this.validateHandler.bind(this),
-                    onClick:this.validateHandler.bind(this),
-                    onKeyUp:this.validateHandler.bind(this),
-                    ref:&#x27;ref-&#x27;+name
+                var opt = _react2[&#x27;default&#x27;].cloneElement(option, {
+                    onBlur: _this2.validateHandler.bind(_this2),
+                    onFocus: _this2.validateHandler.bind(_this2),
+                    onClick: _this2.validateHandler.bind(_this2),
+                    onKeyUp: _this2.validateHandler.bind(_this2),
+                    ref: &#x27;ref-&#x27; + name
                 });
 
-                showOrhide =this.state[name] &amp;&amp; same!=name ? &#x27;show&#x27;:&#x27;hide&#x27;;
+                showOrhide = _this2.state[name] &amp;&amp; same != name ? &#x27;show&#x27; : &#x27;hide&#x27;;
                 same = name;
-                return (
-                    {opt}
-                );
+                return { opt: opt };
             }
             return option;
-
-        },this);
+        }, this);
         return options;
-    }
+    };
 
-    getForm(){
-        return React.findDOMNode(this.refs[this.props.id?this.props.id:this.formName]);
-    }
-    getElements(){
-        return this.form.querySelectorAll(&#x60;[data-validate]&#x60;);
-    }
+    ValidatorPanel.prototype.getForm = function getForm() {
+        return _react2[&#x27;default&#x27;].findDOMNode(this.refs[this.props.id ? this.props.id : this.formName]);
+    };
 
-    setDomEvent(){
-        let elements = this.getElements(),_this = this,{trigger,initCallback,submitElement} = this.props;
-        for(let i=0,len=elements.length;i&lt;len;i++){
-            trigger.split(&#x27; &#x27;).forEach((event)=&gt;{
-                elements[i].removeEventListener(event,_this._fun,false);
-                elements[i].addEventListener(event,_this._fun,false);
+    ValidatorPanel.prototype.getElements = function getElements() {
+        return this.form.querySelectorAll(&#x27;[data-validate]&#x27;);
+    };
+
+    ValidatorPanel.prototype.setDomEvent = function setDomEvent() {
+        var elements = this.getElements();var _this = this;var _props = this.props;
+        var trigger = _props.trigger;
+        var initCallback = _props.initCallback;
+        var submitElement = _props.submitElement;
+
+        var _loop = function (i, len) {
+            trigger.split(&#x27; &#x27;).forEach(function (event) {
+                elements[i].removeEventListener(event, _this._fun, false);
+                elements[i].addEventListener(event, _this._fun, false);
             });
+        };
+
+        for (var i = 0, len = elements.length; i &lt; len; i++) {
+            _loop(i, len);
         }
 
         this.elements = elements;
-    }
+    };
 
-    componentDidMount(){
+    ValidatorPanel.prototype.componentDidMount = function componentDidMount() {
 
-        this._fun = function(e){
+        this._fun = (function (e) {
             this.validateHandler(e);
-        }.bind(this);
+        }).bind(this);
 
         this.form = this.getForm();
 
-        let elements = this.getElements(),_this = this,{trigger,initCallback,submitElement} = this.props;
+        var elements = this.getElements();var _this = this;var _props2 = this.props;
+        var trigger = _props2.trigger;
+        var initCallback = _props2.initCallback;
+        var submitElement = _props2.submitElement;
 
         /*for(let i=0,len=elements.length;i&lt;len;i++){
             trigger.split(&#x27; &#x27;).forEach((event)=&gt;{
-
-                elements[i].addEventListener(event,_this.validateHandler.bind(_this),false);
+                 elements[i].addEventListener(event,_this.validateHandler.bind(_this),false);
             });
         }*/
 
         this.setDomEvent();
 
-        initCallback.call(this,this.submit.bind(this));
+        initCallback.call(this, this.submit.bind(this));
 
-        if(submitElement){
-            document.querySelector(submitElement).addEventListener(&#x27;mousedown&#x27;,this.submit.bind(this),false);
+        if (submitElement) {
+            document.querySelector(submitElement).addEventListener(&#x27;mousedown&#x27;, this.submit.bind(this), false);
         }
         //let tip = this.getTip();
 
         this.elements = elements;
         this.init = false;
+    };
 
-    }
-
-    componentDidUpdate(prevProps,prevState){
-        if(this.props.update!=this.update){
+    ValidatorPanel.prototype.componentDidUpdate = function componentDidUpdate(prevProps, prevState) {
+        if (this.props.update != this.update) {
             this.setDomEvent();
 
             this.update = this.props.update;
             this.isUpdate = true;
             this.setState({
-                show:&#x27;&#x27;
+                show: &#x27;&#x27;
             });
         }
-    }
+    };
 
-
-    removeFadeout(){
+    ValidatorPanel.prototype.removeFadeout = function removeFadeout() {
         clearTimeout(this.fadeoutTimeObj);
-        this.fadeoutTimeObj=setTimeout(function(){
-            if(!this.state.show &amp;&amp;!this.init &amp;&amp; this.state.fadeShow!=&#x27;none&#x27;){
-                this.removeClass(this.getTip(),&#x27;fadeout&#x27;);
-
+        this.fadeoutTimeObj = setTimeout((function () {
+            if (!this.state.show &amp;&amp; !this.init &amp;&amp; this.state.fadeShow != &#x27;none&#x27;) {
+                this.removeClass(this.getTip(), &#x27;fadeout&#x27;);
             }
-        }.bind(this),400 );
-    }
+        }).bind(this), 400);
+    };
 
-    render() {
-
-        let {componentTag:Component,direction,id} = this.props;
+    ValidatorPanel.prototype.render = function render() {
+        var _props3 = this.props;
+        var Component = _props3.componentTag;
+        var direction = _props3.direction;
+        var id = _props3.id;
 
         this.removeFadeout();
-        return (
-            &lt;Component {...this.props} ref={id?id:this.formName} className={this.getClassName(&#x27;validate&#x27;)}&gt;
-                {this.props.children}
-                &lt;div ref=&quot;ref-validateTips&quot; className={classnames(
-                            this.getClassName(&#x60;validate-tips&#x60;),&#x27;animated&#x27;,
-                            &#x60;${direction===&quot;bottom&quot;||direction===&quot;top&quot;?&#x27;bottom&#x27;:&#x27;&#x27;}&#x60;,
-                            &#x60;${this.init ? &quot;&quot;:this.state.show ? &quot;fadein&quot; :&quot;fadeout&quot;}&#x60;
-                        )}&gt;
-                    &lt;i&gt;&lt;/i&gt;
-                    {this.state.message}
-                &lt;/div&gt;
-            &lt;/Component&gt;
+        return _react2[&#x27;default&#x27;].createElement(
+            Component,
+            _extends({}, this.props, { ref: id ? id : this.formName, className: this.getClassName(&#x27;validate&#x27;) }),
+            this.props.children,
+            _react2[&#x27;default&#x27;].createElement(
+                &#x27;div&#x27;,
+                { ref: &#x27;ref-validateTips&#x27;, className: _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;validate-tips&#x27;), &#x27;animated&#x27;, &#x27;&#x27; + (direction === &quot;bottom&quot; || direction === &quot;top&quot; ? &#x27;bottom&#x27; : &#x27;&#x27;), &#x27;&#x27; + (this.init ? &quot;&quot; : this.state.show ? &quot;fadein&quot; : &quot;fadeout&quot;)) },
+                _react2[&#x27;default&#x27;].createElement(&#x27;i&#x27;, null),
+                this.state.message
+            )
         );
-    }
+    };
 
-}
+    var _ValidatorPanel = ValidatorPanel;
+    ValidatorPanel = _utilsClassNameMixin2[&#x27;default&#x27;](ValidatorPanel) || ValidatorPanel;
+    return ValidatorPanel;
+})(_react.Component);
+
+exports[&#x27;default&#x27;] = ValidatorPanel;
+module.exports = exports[&#x27;default&#x27;];
     </pre>
 </div>
 

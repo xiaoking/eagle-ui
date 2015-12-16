@@ -401,9 +401,31 @@
 
 <div class="file">
     <pre class="prettyprint linenums" id='src_code'>
-import React, {Component,PropTypes} from &#x27;react&#x27;;
-import ClassNameMixin from &#x27;./utils/ClassNameMixin&#x27;;
-import classnames from &#x27;classnames&#x27;;
+&#x27;use strict&#x27;;
+
+exports.__esModule = true;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (&#x27;value&#x27; in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &#x27;default&#x27;: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&#x27;Cannot call a class as a function&#x27;); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== &#x27;function&#x27; &amp;&amp; superClass !== null) { throw new TypeError(&#x27;Super expression must either be null or a function, not &#x27; + typeof superClass); } subClass.prototype = Object.create(superClass &amp;&amp; superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _react = require(&#x27;react&#x27;);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _utilsClassNameMixin = require(&#x27;./utils/ClassNameMixin&#x27;);
+
+var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+
+var _classnames10 = require(&#x27;classnames&#x27;);
+
+var _classnames11 = _interopRequireDefault(_classnames10);
 
 /**
  * input表单组件&lt;br /&gt;
@@ -416,149 +438,176 @@ import classnames from &#x27;classnames&#x27;;
  * @demo input.js{js}
  * @show true
  * */
-@ClassNameMixin
-export default class Input extends Component{
 
-    static propTypes = {
+var Input = (function (_Component) {
+    _inherits(Input, _Component);
+
+    _createClass(Input, null, [{
+        key: &#x27;propTypes&#x27;,
+        value: {},
+        enumerable: true
+    }, {
+        key: &#x27;defaultProps&#x27;,
+
         //onClickCallback:PrgiopTypes.fun
-    };
+        value: {
+            /**
+             * 生成不同的元素标签
+             * @property type
+             * @type String
+             * */
+            type: &#x27;text&#x27;,
+            /**
+             * 默认输入提示
+             * @property autoComplete
+             * @type String
+             * */
+            autoComplete: &#x27;off&#x27;,
+            /**
+             * type为radio或checkbox时，需要显示的标签信息
+             * @property label
+             * @type String
+             * */
+            label: &#x27;请选择&#x27;
+        },
+        enumerable: true
+    }]);
 
-    static defaultProps = {
-        /**
-         * 生成不同的元素标签
-         * @property type
-         * @type String
-         * */
-        type:&#x27;text&#x27;,
-        /**
-         * 默认输入提示
-         * @property autoComplete
-         * @type String
-         * */
-        autoComplete:&#x27;off&#x27;,
-        /**
-         * type为radio或checkbox时，需要显示的标签信息
-         * @property label
-         * @type String
-         * */
-        label:&#x27;请选择&#x27;
-    };
+    function Input(props, context) {
+        _classCallCheck(this, _Input);
 
-    constructor(props, context) {
-        super(props, context);
+        _Component.call(this, props, context);
 
-        this.className=&#x27;input-&#x27;;
+        this.className = &#x27;input-&#x27;;
 
-        this.state={
-            isActive:this.props.checked
+        this.state = {
+            isActive: this.props.checked
         };
     }
 
-    setCheck(){
+    Input.prototype.setCheck = function setCheck() {
         this.setState({
-            isActive:!this.state.isActive
+            isActive: !this.state.isActive
         });
-    }
+    };
 
-    checkbox(){
-        let checked = typeof(this.props.checked)!=&#x27;undefined&#x27; ? this.props.checked : this.state.isActive;
-        return (
-            &lt;div ref=&quot;&quot; className={
-                classnames(
-                    this.getClassNamesForArguments(&#x60;${this.className}${this.props.type}&#x60; ),
-                    {[&#x27;eg-input-&#x27;+this.props.type+&#x27;-active&#x27;]:checked},
-                    {[&#x27;eg-input-&#x27;+this.props.type+&#x27;-disabled&#x27;]:this.props.disabled}
-                )} onClick={::this.setCheck}&gt;
-                &lt;input type={this.props.type} {...this.props} onChange={::this.onchange}   /&gt;
-                &lt;div className=&quot;box&quot;&gt;
-                    &lt;div className={classnames(&#x27;checkbox&#x27;,{
-                        [this.getClassName(&#x27;icon-tick&#x27;,false)]:checked
-                    })} &gt;
-                        &lt;div className=&quot;round&quot;&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;label&gt;{this.props.label}&lt;/label&gt;
-            &lt;/div&gt;
+    Input.prototype.checkbox = function checkbox() {
+        var _classnames, _classnames2, _classnames3;
+
+        var checked = typeof this.props.checked != &#x27;undefined&#x27; ? this.props.checked : this.state.isActive;
+        return _react2[&#x27;default&#x27;].createElement(
+            &#x27;div&#x27;,
+            { ref: &#x27;&#x27;, className: _classnames11[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;&#x27; + this.className + this.props.type), (_classnames = {}, _classnames[&#x27;eg-input-&#x27; + this.props.type + &#x27;-active&#x27;] = checked, _classnames), (_classnames2 = {}, _classnames2[&#x27;eg-input-&#x27; + this.props.type + &#x27;-disabled&#x27;] = this.props.disabled, _classnames2)), onClick: this.setCheck.bind(this) },
+            _react2[&#x27;default&#x27;].createElement(&#x27;input&#x27;, _extends({ type: this.props.type }, this.props, { onChange: this.onchange.bind(this) })),
+            _react2[&#x27;default&#x27;].createElement(
+                &#x27;div&#x27;,
+                { className: &#x27;box&#x27; },
+                _react2[&#x27;default&#x27;].createElement(
+                    &#x27;div&#x27;,
+                    { className: _classnames11[&#x27;default&#x27;](&#x27;checkbox&#x27;, (_classnames3 = {}, _classnames3[this.getClassName(&#x27;icon-tick&#x27;, false)] = checked, _classnames3)) },
+                    _react2[&#x27;default&#x27;].createElement(&#x27;div&#x27;, { className: &#x27;round&#x27; })
+                )
+            ),
+            _react2[&#x27;default&#x27;].createElement(
+                &#x27;label&#x27;,
+                null,
+                this.props.label
+            )
         );
-    }
+    };
+
     //暂时用在图片片选框
-    checkboxs(){
-        let checked = typeof(this.props.checked)!=&#x27;undefined&#x27; ? this.props.checked : this.state.isActive;
-        return (
-            &lt;div ref=&quot;&quot; className={
-                classnames(
-                    this.getClassNamesForArguments(&#x60;${this.className}${this.props.type}&#x60; ),
-                    {[&#x27;eg-input-&#x27;+this.props.type+&#x27;-active&#x27;]:checked},
-                    {[&#x27;eg-input-&#x27;+this.props.type+&#x27;-disabled&#x27;]:this.props.disabled}
-                )} onClick={::this.setCheck}&gt;
-                &lt;input  {...this.props} type=&#x27;checkbox&#x27; onChange={::this.onchange}   /&gt;
-                &lt;div className=&quot;box&quot;&gt;
-                    &lt;div className={classnames(&#x27;checkbox&#x27;,{
-                        [this.getClassName(&#x27;icon-tick&#x27;,false)]:checked
-                    })} &gt;
-                        &lt;div className=&quot;round&quot;&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;label&gt;{this.props.label}&lt;/label&gt;
-            &lt;/div&gt;
-        );
-    }
 
-    onchange(e){
-        if(this.props.onCheck){
+    Input.prototype.checkboxs = function checkboxs() {
+        var _classnames4, _classnames5, _classnames6;
+
+        var checked = typeof this.props.checked != &#x27;undefined&#x27; ? this.props.checked : this.state.isActive;
+        return _react2[&#x27;default&#x27;].createElement(
+            &#x27;div&#x27;,
+            { ref: &#x27;&#x27;, className: _classnames11[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;&#x27; + this.className + this.props.type), (_classnames4 = {}, _classnames4[&#x27;eg-input-&#x27; + this.props.type + &#x27;-active&#x27;] = checked, _classnames4), (_classnames5 = {}, _classnames5[&#x27;eg-input-&#x27; + this.props.type + &#x27;-disabled&#x27;] = this.props.disabled, _classnames5)), onClick: this.setCheck.bind(this) },
+            _react2[&#x27;default&#x27;].createElement(&#x27;input&#x27;, _extends({}, this.props, { type: &#x27;checkbox&#x27;, onChange: this.onchange.bind(this) })),
+            _react2[&#x27;default&#x27;].createElement(
+                &#x27;div&#x27;,
+                { className: &#x27;box&#x27; },
+                _react2[&#x27;default&#x27;].createElement(
+                    &#x27;div&#x27;,
+                    { className: _classnames11[&#x27;default&#x27;](&#x27;checkbox&#x27;, (_classnames6 = {}, _classnames6[this.getClassName(&#x27;icon-tick&#x27;, false)] = checked, _classnames6)) },
+                    _react2[&#x27;default&#x27;].createElement(&#x27;div&#x27;, { className: &#x27;round&#x27; })
+                )
+            ),
+            _react2[&#x27;default&#x27;].createElement(
+                &#x27;label&#x27;,
+                null,
+                this.props.label
+            )
+        );
+    };
+
+    Input.prototype.onchange = function onchange(e) {
+        if (this.props.onCheck) {
             this.props.onCheck(e.target);
         }
-    }
+    };
 
-    radio(){
-        return (
-            &lt;div className={
-                classnames(
-                    this.getClassNamesForArguments(&#x60;${this.className}${this.props.type}&#x60; ),
-                    {[&#x27;eg-input-&#x27;+this.props.type+&#x27;-active&#x27;]:this.props.checked},
-                    {[&#x27;eg-input-&#x27;+this.props.type+&#x27;-disabled&#x27;]:this.props.disabled}
-                )}&gt;
-                &lt;input type={this.props.type} {...this.props} onChange={::this.onchange}  /&gt;
-                &lt;div className=&quot;box&quot;&gt;
-                    &lt;div className=&quot;checkbox&quot;&gt;
-                        &lt;div className=&quot;round&quot;&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;label&gt;{this.props.label}&lt;/label&gt;
-            &lt;/div&gt;
+    Input.prototype.radio = function radio() {
+        var _classnames7, _classnames8;
+
+        return _react2[&#x27;default&#x27;].createElement(
+            &#x27;div&#x27;,
+            { className: _classnames11[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;&#x27; + this.className + this.props.type), (_classnames7 = {}, _classnames7[&#x27;eg-input-&#x27; + this.props.type + &#x27;-active&#x27;] = this.props.checked, _classnames7), (_classnames8 = {}, _classnames8[&#x27;eg-input-&#x27; + this.props.type + &#x27;-disabled&#x27;] = this.props.disabled, _classnames8)) },
+            _react2[&#x27;default&#x27;].createElement(&#x27;input&#x27;, _extends({ type: this.props.type }, this.props, { onChange: this.onchange.bind(this) })),
+            _react2[&#x27;default&#x27;].createElement(
+                &#x27;div&#x27;,
+                { className: &#x27;box&#x27; },
+                _react2[&#x27;default&#x27;].createElement(
+                    &#x27;div&#x27;,
+                    { className: &#x27;checkbox&#x27; },
+                    _react2[&#x27;default&#x27;].createElement(&#x27;div&#x27;, { className: &#x27;round&#x27; })
+                )
+            ),
+            _react2[&#x27;default&#x27;].createElement(
+                &#x27;label&#x27;,
+                null,
+                this.props.label
+            )
         );
-    }
+    };
 
-    text(){
-        return (
-            &lt;div className={classnames(
-                {
-                    [this.getClassName(&#x27;icon-container&#x27;)]:!!this.props.icon
-                }
-            )}&gt;
-                &lt;input {...this.props} className={classnames(this.getDefaultClass() )} /&gt;
-                &lt;i className={&#x27;icon-input-right icon-&#x27;+this.props.icon} &gt;&lt;/i&gt;
-            &lt;/div&gt;
+    Input.prototype.text = function text() {
+        var _classnames9;
 
+        return _react2[&#x27;default&#x27;].createElement(
+            &#x27;div&#x27;,
+            { className: _classnames11[&#x27;default&#x27;]((_classnames9 = {}, _classnames9[this.getClassName(&#x27;icon-container&#x27;)] = !!this.props.icon, _classnames9)) },
+            _react2[&#x27;default&#x27;].createElement(&#x27;input&#x27;, _extends({}, this.props, { className: _classnames11[&#x27;default&#x27;](this.getDefaultClass()) })),
+            _react2[&#x27;default&#x27;].createElement(&#x27;i&#x27;, { className: &#x27;icon-input-right icon-&#x27; + this.props.icon })
         );
-    }
+    };
 
-    getDefaultClass(){
+    Input.prototype.getDefaultClass = function getDefaultClass() {
         //border:1px solid #fff;
-        return this.getClassName(this.className+this.props.type);
-    }
+        return this.getClassName(this.className + this.props.type);
+    };
 
-    render(){
-        let {type} = this.props;
+    Input.prototype.render = function render() {
+        var type = this.props.type;
+
         type = type.toLowerCase();
 
-        if(type!=&#x27;radio&#x27; &amp;&amp; type!=&#x27;checkbox&#x27;){
+        if (type != &#x27;radio&#x27; &amp;&amp; type != &#x27;checkbox&#x27;) {
             type = &#x27;text&#x27;;
         }
         //const {name,id,value,placeholder,autocomplete,disabled,type} = this.props;
         return this[type]();
-    }
-}
+    };
+
+    var _Input = Input;
+    Input = _utilsClassNameMixin2[&#x27;default&#x27;](Input) || Input;
+    return Input;
+})(_react.Component);
+
+exports[&#x27;default&#x27;] = Input;
+module.exports = exports[&#x27;default&#x27;];
     </pre>
 </div>
 

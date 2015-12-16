@@ -3,7 +3,7 @@
  */
 import React,{Component} from 'react';
 
-import {Search,Select, Input,Label,LabelGroup,Grid,Row,Col,Panel,PanelHeader,PanelFooter,PanelContent,Paging,CheckboxGroup,List,Item} from '../../../index.js';
+import {Search,Select, Input,Label,LabelGroup,Grid,Row,Col,Panel,PanelHeader,PanelFooter,PanelContent,Paging,CheckboxGroup,List,Item} from '../../../src/index.js';
 
 let SearchSec= class SearchSec extends Component{
     constructor(props,context){

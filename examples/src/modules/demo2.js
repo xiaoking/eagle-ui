@@ -5,7 +5,7 @@ import React,{Component} from 'react';
 
 import {Search,Select, Input,Label,LabelGroup,Grid,Row,Col,Panel,PanelHeader,PanelFooter,PanelContent,Paging
     ,Tab,Tabset,Dialog
-    ,Table,Th,Td,Tr} from '../../../index.js';
+    ,Table,Th,Td,Tr} from '../../../src/index.js';
 
 
 let ShopDialog= class ShopDialog extends Component{

@@ -2,14 +2,14 @@
  * Created by mac on 15/11/4.
  */
 import React,{Component} from 'react';
-import Table from '../../../lib/Table/Table.js';
-import Tr from '../../../lib/Table/Tr.js';
-import Td from '../../../lib/Table/Td.js';
-import Th from '../../../lib/Table/Th.js';
-import Column from '../../../lib/Table/Column.js';
+import Table from '../../../src/Table/Table.js';
+import Tr from '../../../src/Table/Tr.js';
+import Td from '../../../src/Table/Td.js';
+import Th from '../../../src/Table/Th.js';
+import Column from '../../../src/Table/Column.js';
 
-import Row from '../../../lib/Row.js';
-import Col from '../../../lib/Col.js';
+import Row from '../../../src/Row.js';
+import Col from '../../../src/Col.js';
 
 var tableData=[
     {name: 'Rylan', email: 'Angelita_Weimann42@gmail.com',score:100},

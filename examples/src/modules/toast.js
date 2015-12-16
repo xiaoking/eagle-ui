@@ -2,11 +2,11 @@
  * Created by panqianjin on 15/11/4.
  */
 import React,{Component} from 'react';
-import Toast from '../../../lib/Toast.js';
-import Button from '../../../lib/Button.js';
-import Grid from '../../../lib/Grid.js';
-import Row from '../../../lib/Row.js';
-import Col from '../../../lib/Col.js';
+import Toast from '../../../src/Toast.js';
+import Button from '../../../src/Button.js';
+import Grid from '../../../src/Grid.js';
+import Row from '../../../src/Row.js';
+import Col from '../../../src/Col.js';
 let Demo= class Demo extends Component{
 
     static defaultProps = {

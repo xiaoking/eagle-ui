@@ -401,9 +401,29 @@
 
 <div class="file">
     <pre class="prettyprint linenums" id='src_code'>
-import React,{ PropTypes, Component } from &#x27;react&#x27;;
-import classnames from &#x27;classnames&#x27;;
-import ClassNameMixin from &#x27;../utils/ClassNameMixin.js&#x27;;
+&#x27;use strict&#x27;;
+
+exports.__esModule = true;
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (&#x27;value&#x27; in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &#x27;default&#x27;: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&#x27;Cannot call a class as a function&#x27;); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== &#x27;function&#x27; &amp;&amp; superClass !== null) { throw new TypeError(&#x27;Super expression must either be null or a function, not &#x27; + typeof superClass); } subClass.prototype = Object.create(superClass &amp;&amp; superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _react = require(&#x27;react&#x27;);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classnames = require(&#x27;classnames&#x27;);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _utilsClassNameMixinJs = require(&#x27;../utils/ClassNameMixin.js&#x27;);
+
+var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
 
 /**
  * PanelContent组件
@@ -416,43 +436,57 @@ import ClassNameMixin from &#x27;../utils/ClassNameMixin.js&#x27;;
  * @demo panel.js {js}
  * @author bo.an@dianping.com
  * */
-@ClassNameMixin
-export default class PanelContent extends Component{
 
-    static propTypes = {
-        /**
-         * 是否加padding
-         * @property padding
-         * @type bool
-         * @default true
-         * */
-        padding:PropTypes.bool
-    };
+var PanelContent = (function (_Component) {
+    _inherits(PanelContent, _Component);
 
-    static defaultProps = {
-        classPrefix:&#x27;panel&#x27;,
-        padding:true
-    };
+    function PanelContent() {
+        _classCallCheck(this, _PanelContent);
 
-
+        _Component.apply(this, arguments);
+    }
 
     /**
      * @method render
      * @return {ReactElement}
      * */
-    render(){
-        return (
-            &lt;div className={
-                classnames(
-                    this.getClassName(&#x27;content&#x27;)
-                    ,this.props.padding?this.getClassName(&#x27;padding&#x27;):&#x27;&#x27;
-                )}&gt;
-                {this.props.children}
-            &lt;/div&gt;
-        );
 
-    }
-}
+    PanelContent.prototype.render = function render() {
+        return _react2[&#x27;default&#x27;].createElement(
+            &#x27;div&#x27;,
+            { className: _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;content&#x27;), this.props.padding ? this.getClassName(&#x27;padding&#x27;) : &#x27;&#x27;) },
+            this.props.children
+        );
+    };
+
+    _createClass(PanelContent, null, [{
+        key: &#x27;propTypes&#x27;,
+        value: {
+            /**
+             * 是否加padding
+             * @property padding
+             * @type bool
+             * @default true
+             * */
+            padding: _react.PropTypes.bool
+        },
+        enumerable: true
+    }, {
+        key: &#x27;defaultProps&#x27;,
+        value: {
+            classPrefix: &#x27;panel&#x27;,
+            padding: true
+        },
+        enumerable: true
+    }]);
+
+    var _PanelContent = PanelContent;
+    PanelContent = _utilsClassNameMixinJs2[&#x27;default&#x27;](PanelContent) || PanelContent;
+    return PanelContent;
+})(_react.Component);
+
+exports[&#x27;default&#x27;] = PanelContent;
+module.exports = exports[&#x27;default&#x27;];
     </pre>
 </div>
 

@@ -401,14 +401,50 @@
 
 <div class="file">
     <pre class="prettyprint linenums" id='src_code'>
-import React,{Component, PropTypes, ReactDOM} from &#x27;react&#x27;;
-import ClassNameMixin from &#x27;./utils/ClassNameMixin&#x27;;
-import classnames from &#x27;classnames&#x27;;
-import Input from &#x27;./Input.js&#x27;;
-import Button from &#x27;./Button.js&#x27;;
-import Row from &#x27;./Row.js&#x27;;
-import Col from &#x27;./Col.js&#x27;;
-import Grid from &#x27;./Grid.js&#x27;;
+&#x27;use strict&#x27;;
+
+exports.__esModule = true;
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (&#x27;value&#x27; in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &#x27;default&#x27;: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&#x27;Cannot call a class as a function&#x27;); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== &#x27;function&#x27; &amp;&amp; superClass !== null) { throw new TypeError(&#x27;Super expression must either be null or a function, not &#x27; + typeof superClass); } subClass.prototype = Object.create(superClass &amp;&amp; superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _react = require(&#x27;react&#x27;);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _utilsClassNameMixin = require(&#x27;./utils/ClassNameMixin&#x27;);
+
+var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+
+var _classnames = require(&#x27;classnames&#x27;);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _InputJs = require(&#x27;./Input.js&#x27;);
+
+var _InputJs2 = _interopRequireDefault(_InputJs);
+
+var _ButtonJs = require(&#x27;./Button.js&#x27;);
+
+var _ButtonJs2 = _interopRequireDefault(_ButtonJs);
+
+var _RowJs = require(&#x27;./Row.js&#x27;);
+
+var _RowJs2 = _interopRequireDefault(_RowJs);
+
+var _ColJs = require(&#x27;./Col.js&#x27;);
+
+var _ColJs2 = _interopRequireDefault(_ColJs);
+
+var _GridJs = require(&#x27;./Grid.js&#x27;);
+
+var _GridJs2 = _interopRequireDefault(_GridJs);
+
 /**
  * 搜索按钮组件
  * 参数： id/callBack/placeholder 均可不传
@@ -426,91 +462,120 @@ import Grid from &#x27;./Grid.js&#x27;;
  * @class Tooltip
 
  * */
-@ClassNameMixin
-export default class Search extends Component {
-    static propType={
-        /**
-         *
-         * @property id
-         * @type String
-         * @default &#x27;&#x27;
-         * */
-        id: PropTypes.string,
-        /**
-         * 回调方法
-         * @property callback
-         * @type Function
-         * @default null
-         * */
-        callback: PropTypes.func,
-        classPrefix: PropTypes.string,
-        componentTag:PropTypes.string
-    }
-    static defaultProps = {
-        id: &#x27;1&#x27;,
-        callback: null,
-        placeholder: &#x27;请输入&#x27;,
-        classPrefix: &#x27;search&#x27;,//类名前前缀
-        componentTag: &#x27;div&#x27;
-    }
-    constructor(props, context) {
-        super(props, context);
+
+var Search = (function (_Component) {
+    _inherits(Search, _Component);
+
+    _createClass(Search, null, [{
+        key: &#x27;propType&#x27;,
+        value: {
+            /**
+             *
+             * @property id
+             * @type String
+             * @default &#x27;&#x27;
+             * */
+            id: _react.PropTypes.string,
+            /**
+             * 回调方法
+             * @property callback
+             * @type Function
+             * @default null
+             * */
+            callback: _react.PropTypes.func,
+            classPrefix: _react.PropTypes.string,
+            componentTag: _react.PropTypes.string
+        },
+        enumerable: true
+    }, {
+        key: &#x27;defaultProps&#x27;,
+        value: {
+            id: &#x27;1&#x27;,
+            callback: null,
+            placeholder: &#x27;请输入&#x27;,
+            classPrefix: &#x27;search&#x27;, //类名前前缀
+            componentTag: &#x27;div&#x27;
+        },
+        enumerable: true
+    }]);
+
+    function Search(props, context) {
+        _classCallCheck(this, _Search);
+
+        _Component.call(this, props, context);
         this.state = {
             value: this.props.value
-        }
+        };
     }
+
     /**
      * 渲染元素
      * @method render
      * @return {ReactElement}
      * */
-    render() {
-        return (
-            &lt;Grid style={{minWidth:&#x27;240px&#x27;}}&gt;
-                &lt;div className={
-                    classnames(
-                        this.getClassNamesForArguments(&#x27;wrapper&#x27;,&#x27;icon&#x27;)
-                        )}&gt;
-                    &lt;div className={
-                    classnames(
-                        this.getClassNamesForArguments(&#x27;content&#x27;)
-                        )}&gt;
-                        &lt;div style={{width:&#x27;100%&#x27;}}&gt;
-                    &lt;Input  ref={this.props.name} id={this.props.id} placeholder={this.props.placeholder}
-                           onChange={::this.changeValue} onKeyPress={::this.keyIn}/&gt;
-                    &lt;/div&gt;
-                        &lt;/div&gt;
-                    &lt;Button radius egSize=&quot;xs&quot; onClick={::this.submitSearch}&gt;搜索&lt;/Button&gt;
-                &lt;/div&gt;
-            &lt;/Grid&gt;
+
+    Search.prototype.render = function render() {
+        return _react2[&#x27;default&#x27;].createElement(
+            _GridJs2[&#x27;default&#x27;],
+            { style: { minWidth: &#x27;240px&#x27; } },
+            _react2[&#x27;default&#x27;].createElement(
+                &#x27;div&#x27;,
+                { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;wrapper&#x27;, &#x27;icon&#x27;)) },
+                _react2[&#x27;default&#x27;].createElement(
+                    &#x27;div&#x27;,
+                    { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;content&#x27;)) },
+                    _react2[&#x27;default&#x27;].createElement(
+                        &#x27;div&#x27;,
+                        { style: { width: &#x27;100%&#x27; } },
+                        _react2[&#x27;default&#x27;].createElement(_InputJs2[&#x27;default&#x27;], { ref: this.props.name, id: this.props.id, placeholder: this.props.placeholder,
+                            onChange: this.changeValue.bind(this), onKeyPress: this.keyIn.bind(this) })
+                    )
+                ),
+                _react2[&#x27;default&#x27;].createElement(
+                    _ButtonJs2[&#x27;default&#x27;],
+                    { radius: true, egSize: &#x27;xs&#x27;, onClick: this.submitSearch.bind(this) },
+                    &#x27;搜索&#x27;
+                )
+            )
         );
-    }
+    };
+
     /**
      * @method change input value
      * @param none
      * @return setState
      * */
-    changeValue(event) {
+
+    Search.prototype.changeValue = function changeValue(event) {
         this.setState({
             value: event.target.value
         });
-    }
+    };
+
     /**
      * @method submit search
      * @param none
      * @return get value calback if exist
      * */
-    submitSearch() {
-        let val = this.state.value;
+
+    Search.prototype.submitSearch = function submitSearch() {
+        var val = this.state.value;
         this.props.callback &amp;&amp; this.props.callback(val);
-    }
-    keyIn(event){
-        if(event.charCode == 13){
+    };
+
+    Search.prototype.keyIn = function keyIn(event) {
+        if (event.charCode == 13) {
             this.submitSearch();
         }
-    }
+    };
 
-}
+    var _Search = Search;
+    Search = _utilsClassNameMixin2[&#x27;default&#x27;](Search) || Search;
+    return Search;
+})(_react.Component);
+
+exports[&#x27;default&#x27;] = Search;
+module.exports = exports[&#x27;default&#x27;];
     </pre>
 </div>
 

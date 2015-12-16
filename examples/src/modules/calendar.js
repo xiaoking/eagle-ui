@@ -2,11 +2,11 @@
  * Created by mac on 15/11/4.
  */
 import React,{Component,PropTypes} from 'react';
-import Input from '../../../lib/Input.js';
-import Row from '../../../lib/Row.js';
-import Col from '../../../lib/Col.js';
-import Grid from '../../../lib/Grid.js';
-import CalendarPanel from '../../../lib/CalendarPanel.js';
+import Input from '../../../src/Input.js';
+import Row from '../../../src/Row.js';
+import Col from '../../../src/Col.js';
+import Grid from '../../../src/Grid.js';
+import CalendarPanel from '../../../src/CalendarPanel.js';
 import querystring from 'querystring';
 
 

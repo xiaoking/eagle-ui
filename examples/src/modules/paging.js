@@ -2,9 +2,9 @@
  * Created by mac on 15/11/4.
  */
 import React, { Component ,PropTypes} from 'react';
-import Paging from '../../../lib/Paging.js';
-import Row from '../../../lib/Row.js';
-import Col from '../../../lib/Col.js';
+import Paging from '../../../src/Paging.js';
+import Row from '../../../src/Row.js';
+import Col from '../../../src/Col.js';
 import querystring from 'querystring';
 
 

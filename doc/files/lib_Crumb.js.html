@@ -404,11 +404,38 @@
 /**
  * Created by panqianjin on 15/11/3.
  */
-import React,{Component,PropTypes} from &#x27;react&#x27;;
-import ClassNameMixin from &#x27;./utils/ClassNameMixin&#x27;;
-import classnames from &#x27;classnames&#x27;;
-import Grid from &#x27;./Grid.js&#x27;;
-import Row from &#x27;./Row.js&#x27;;
+&#x27;use strict&#x27;;
+
+exports.__esModule = true;
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (&#x27;value&#x27; in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &#x27;default&#x27;: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&#x27;Cannot call a class as a function&#x27;); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== &#x27;function&#x27; &amp;&amp; superClass !== null) { throw new TypeError(&#x27;Super expression must either be null or a function, not &#x27; + typeof superClass); } subClass.prototype = Object.create(superClass &amp;&amp; superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _react = require(&#x27;react&#x27;);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _utilsClassNameMixin = require(&#x27;./utils/ClassNameMixin&#x27;);
+
+var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+
+var _classnames = require(&#x27;classnames&#x27;);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _GridJs = require(&#x27;./Grid.js&#x27;);
+
+var _GridJs2 = _interopRequireDefault(_GridJs);
+
+var _RowJs = require(&#x27;./Row.js&#x27;);
+
+var _RowJs2 = _interopRequireDefault(_RowJs);
+
 /**
  * 面包屑组件
  * @class crumb
@@ -419,54 +446,81 @@ import Row from &#x27;./Row.js&#x27;;
  * @demo crumb.js{js}
  * @show true
  * */
-@ClassNameMixin
-export default class Crumb extends Component {
-    static propTypes = {
-        /**
-         * 类名样式前缀
-         * @property classPrefix
-         * @type sting
-         * @default crumb
-         * */
-        classPrefix: PropTypes.string,
-        /**
-         * 标签tagName
-         * @property componentTag
-         * @type String
-         * @default div
-         * */
-        componentTag: PropTypes.string
+
+var Crumb = (function (_Component) {
+    _inherits(Crumb, _Component);
+
+    _createClass(Crumb, null, [{
+        key: &#x27;propTypes&#x27;,
+        value: {
+            /**
+             * 类名样式前缀
+             * @property classPrefix
+             * @type sting
+             * @default crumb
+             * */
+            classPrefix: _react.PropTypes.string,
+            /**
+             * 标签tagName
+             * @property componentTag
+             * @type String
+             * @default div
+             * */
+            componentTag: _react.PropTypes.string
+        },
+        enumerable: true
+    }, {
+        key: &#x27;defaultProps&#x27;,
+        value: {
+            classPrefix: &#x27;crumb&#x27;,
+            componentTag: &#x27;div&#x27;
+        },
+        enumerable: true
+    }]);
+
+    function Crumb(props, context) {
+        _classCallCheck(this, _Crumb);
+
+        _Component.call(this, props, context);
     }
-    static defaultProps = {
-        classPrefix: &#x27;crumb&#x27;,
-        componentTag: &#x27;div&#x27;
-    }
-    constructor(props, context) {
-        super(props, context);
-    }
+
     /**
      * @method render
      * @return {ReactElement}
      */
-    render() {
-        let length = this.props.children.length;
-        let li = this.props.children.map((item,index)=&gt;{
-                return &lt;li&gt;{index &lt; length-1?&lt;a href={item.props.url}&gt;{item.props.children}&lt;/a&gt;:item.props.children}&lt;/li&gt;
-            })
-        return (
-            &lt;Grid className={
-                classnames(
-                    this.getClassNamesForArguments(this.props.classPrefix)
-                )
-            }&gt;
-                &lt;ul&gt;
-                    {li}
-                &lt;/ul&gt;
-                &lt;Row className=&#x27;clearfix&#x27;&gt;&lt;/Row&gt;
-            &lt;/Grid&gt;
-        )
-    }
-}
+
+    Crumb.prototype.render = function render() {
+        var length = this.props.children.length;
+        var li = this.props.children.map(function (item, index) {
+            return _react2[&#x27;default&#x27;].createElement(
+                &#x27;li&#x27;,
+                null,
+                index &lt; length - 1 ? _react2[&#x27;default&#x27;].createElement(
+                    &#x27;a&#x27;,
+                    { href: item.props.url },
+                    item.props.children
+                ) : item.props.children
+            );
+        });
+        return _react2[&#x27;default&#x27;].createElement(
+            _GridJs2[&#x27;default&#x27;],
+            { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(this.props.classPrefix)) },
+            _react2[&#x27;default&#x27;].createElement(
+                &#x27;ul&#x27;,
+                null,
+                li
+            ),
+            _react2[&#x27;default&#x27;].createElement(_RowJs2[&#x27;default&#x27;], { className: &#x27;clearfix&#x27; })
+        );
+    };
+
+    var _Crumb = Crumb;
+    Crumb = _utilsClassNameMixin2[&#x27;default&#x27;](Crumb) || Crumb;
+    return Crumb;
+})(_react.Component);
+
+exports[&#x27;default&#x27;] = Crumb;
+module.exports = exports[&#x27;default&#x27;];
     </pre>
 </div>
 

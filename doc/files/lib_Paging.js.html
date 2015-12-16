@@ -401,9 +401,29 @@
 
 <div class="file">
     <pre class="prettyprint linenums" id='src_code'>
-import React,{ PropTypes, Component } from &#x27;react&#x27;;
-import classnames from &#x27;classnames&#x27;;
-import ClassNameMixin from &#x27;./utils/ClassNameMixin.js&#x27;;
+&#x27;use strict&#x27;;
+
+exports.__esModule = true;
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (&#x27;value&#x27; in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &#x27;default&#x27;: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&#x27;Cannot call a class as a function&#x27;); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== &#x27;function&#x27; &amp;&amp; superClass !== null) { throw new TypeError(&#x27;Super expression must either be null or a function, not &#x27; + typeof superClass); } subClass.prototype = Object.create(superClass &amp;&amp; superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _react = require(&#x27;react&#x27;);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classnames2 = require(&#x27;classnames&#x27;);
+
+var _classnames3 = _interopRequireDefault(_classnames2);
+
+var _utilsClassNameMixinJs = require(&#x27;./utils/ClassNameMixin.js&#x27;);
+
+var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
 
 /**
  * 分页组件
@@ -417,80 +437,91 @@ import ClassNameMixin from &#x27;./utils/ClassNameMixin.js&#x27;;
  * @show true
  * @author min.xiao@dianping.com
  * */
-@ClassNameMixin
-export default class Paging extends Component{
 
-    static propTypes = {
-        /**
-         * 总页数
-         * @property currentPage
-         * @type Integer
-         * @default 1
-         * */
-        currentPage: PropTypes.number.isRequired,
-        /**
-         * 每页显示多少条数据
-         * @property pageSize
-         * @type Integer
-         * @default 20
-         * */
-        pageSize: PropTypes.number.isRequired,
-        /**
-         * 数据总数
-         * @property total
-         * @type Integer
-         * */
-        total: PropTypes.number.isRequired,
-        /**
-         * 点击分页回调
-         * @property pageCallback
-         * @type Function
-         * */
-        pageCallback: PropTypes.func,
-        /**
-         *
-         * @property activeClass
-         * @type String
-         * @default active
-         * */
-        activeClass: PropTypes.string,
-        classPrefix: PropTypes.string,
-        componentTag: PropTypes.string,
-        /**
-         * 开启选择每页显示数量选项
-         * @property showItemsNumber
-         * @type Boolean
-         * */
-        showItemsNumber:PropTypes.bool
-    }
-    static defaultProps = {
-        activeClass:&#x27;active&#x27;,
-        currentPage:1,
-        pageSize:20,
-        classPrefix:&#x27;paging&#x27;,
-        componentTag:&#x27;div&#x27;,
-        /**
-         * 跟showItemsNumber一起使用 arguments{pageSize}
-         * @property loadPageCallback
-         * */
-        loadPageCallback:function(){
-            console.warn(&#x27;Is not defined loadPageCallback&#x27;);
-        }
-    };
+var Paging = (function (_Component) {
+    _inherits(Paging, _Component);
 
-    /**
-     * @constructor
-     * @param props {Object}
-     * @param context {Object}
-     * */
-    constructor(props, context) {
-        super(props, context);
+    _createClass(Paging, null, [{
+        key: &#x27;propTypes&#x27;,
+        value: {
+            /**
+             * 总页数
+             * @property currentPage
+             * @type Integer
+             * @default 1
+             * */
+            currentPage: _react.PropTypes.number.isRequired,
+            /**
+             * 每页显示多少条数据
+             * @property pageSize
+             * @type Integer
+             * @default 20
+             * */
+            pageSize: _react.PropTypes.number.isRequired,
+            /**
+             * 数据总数
+             * @property total
+             * @type Integer
+             * */
+            total: _react.PropTypes.number.isRequired,
+            /**
+             * 点击分页回调
+             * @property pageCallback
+             * @type Function
+             * */
+            pageCallback: _react.PropTypes.func,
+            /**
+             *
+             * @property activeClass
+             * @type String
+             * @default active
+             * */
+            activeClass: _react.PropTypes.string,
+            classPrefix: _react.PropTypes.string,
+            componentTag: _react.PropTypes.string,
+            /**
+             * 开启选择每页显示数量选项
+             * @property showItemsNumber
+             * @type Boolean
+             * */
+            showItemsNumber: _react.PropTypes.bool
+        },
+        enumerable: true
+    }, {
+        key: &#x27;defaultProps&#x27;,
+        value: {
+            activeClass: &#x27;active&#x27;,
+            currentPage: 1,
+            pageSize: 20,
+            classPrefix: &#x27;paging&#x27;,
+            componentTag: &#x27;div&#x27;,
+            /**
+             * 跟showItemsNumber一起使用 arguments{pageSize}
+             * @property loadPageCallback
+             * */
+            loadPageCallback: function loadPageCallback() {
+                console.warn(&#x27;Is not defined loadPageCallback&#x27;);
+            }
+        },
+
+        /**
+         * @constructor
+         * @param props {Object}
+         * @param context {Object}
+         * */
+        enumerable: true
+    }]);
+
+    function Paging(props, context) {
+        _classCallCheck(this, _Paging);
+
+        _Component.call(this, props, context);
 
         /**
          * @type Integer
          * @default
          * */
-        this.pages=this.getPages();
+        this.pages = this.getPages();
 
         this.index = 0;
 
@@ -503,14 +534,13 @@ export default class Paging extends Component{
         this.init = false;
         //总数：this.total
 
-
         this.state = {
             /**
              * 当前页
              * @type Integer
              * */
-            currentPage:this.props.currentPage,
-            defaultNumber:this.props.pageSize
+            currentPage: this.props.currentPage,
+            defaultNumber: this.props.pageSize
         };
     }
 
@@ -518,26 +548,29 @@ export default class Paging extends Component{
      * 上一页
      * @method prev
      * */
-    prev(){
-        this.gotoPage(this.props.currentPage-1 );
-    }
+
+    Paging.prototype.prev = function prev() {
+        this.gotoPage(this.props.currentPage - 1);
+    };
 
     /**
      * 下一页
      * @method prev
      * */
-    next(){
-        this.gotoPage(this.props.currentPage+1);
-    }
+
+    Paging.prototype.next = function next() {
+        this.gotoPage(this.props.currentPage + 1);
+    };
 
     /**
      * 获取页大小
      * @method getPages
      * @return {Integer}
      * */
-    getPages(){
-        return Math.ceil(this.props.total/this.props.pageSize);
-    }
+
+    Paging.prototype.getPages = function getPages() {
+        return Math.ceil(this.props.total / this.props.pageSize);
+    };
 
     /**
      * 跳转至N页
@@ -546,13 +579,15 @@ export default class Paging extends Component{
      * @private
      * @return {Array}
      * */
-    goto(page = this.state.currentPage){
 
-        this.pages=this.getPages();
-        if(page &lt;=1){
+    Paging.prototype.goto = function goto() {
+        var page = arguments.length &lt;= 0 || arguments[0] === undefined ? this.state.currentPage : arguments[0];
+
+        this.pages = this.getPages();
+        if (page &lt;= 1) {
             page = 1;
         }
-        if(page &gt;= this.pages){
+        if (page &gt;= this.pages) {
             page = this.pages;
         }
 
@@ -564,7 +599,7 @@ export default class Paging extends Component{
         }*/
 
         return this.generate();
-    }
+    };
 
     /**
      * 跳转至N页
@@ -572,117 +607,173 @@ export default class Paging extends Component{
      * @param index {Integer} 页码，从1开始
      * @return {Array}
      * */
-    gotoPage(index){
-        this.init=true;
-        this.props.pageCallback &amp;&amp; this.props.pageCallback(index );
+
+    Paging.prototype.gotoPage = function gotoPage(index) {
+        this.init = true;
+        this.props.pageCallback &amp;&amp; this.props.pageCallback(index);
         return this.goto(index);
-    }
+    };
 
     /**
      * 生成页码
      * @method generate
      * @return {Array}
      * */
-    generate(){
-        const {currentPage,activeClass} = this.props;
-        let i=1,
+
+    Paging.prototype.generate = function generate() {
+        var _props = this.props;
+        var currentPage = _props.currentPage;
+        var activeClass = _props.activeClass;
+
+        var i = 1,
             htmlList = [],
             distance = 4,
-            len = currentPage+distance;
+            len = currentPage + distance;
 
+        i = currentPage &lt;= 6 ? i : currentPage - distance;
+        i = i &lt;= 1 ? 1 : i;
 
-        i =currentPage&lt;=6 ? i:currentPage-distance;
-        i = i&lt;=1?1:i;
+        len = len &gt; this.pages ? this.pages : len;
 
-        len = len&gt;this.pages ? this.pages : len;
-
-        if(currentPage&gt;1){
-            htmlList.push(&lt;a href=&quot;javascript:void(0);&quot; className=&quot;&quot; onClick={::this.prev}&gt;上一页&lt;/a&gt;);
+        if (currentPage &gt; 1) {
+            htmlList.push(_react2[&#x27;default&#x27;].createElement(
+                &#x27;a&#x27;,
+                { href: &#x27;javascript:void(0);&#x27;, className: &#x27;&#x27;, onClick: this.prev.bind(this) },
+                &#x27;上一页&#x27;
+            ));
         }
 
         //9     ....4....|.
-        if(currentPage&gt;=7){
-            htmlList.push(&lt;a href=&quot;javascript:void(0);&quot; onClick={::this.gotoPage.bind(this,1)}&gt;{1}&lt;/a&gt;);
-            htmlList.push(&lt;a href=&quot;javascript:void(0);&quot;&gt;...&lt;/a&gt;);
+        if (currentPage &gt;= 7) {
+            var _context;
+
+            htmlList.push(_react2[&#x27;default&#x27;].createElement(
+                &#x27;a&#x27;,
+                { href: &#x27;javascript:void(0);&#x27;, onClick: (_context = this.gotoPage).bind.call(_context, this, 1) },
+                1
+            ));
+            htmlList.push(_react2[&#x27;default&#x27;].createElement(
+                &#x27;a&#x27;,
+                { href: &#x27;javascript:void(0);&#x27; },
+                &#x27;...&#x27;
+            ));
             //i+=1;
         }
 
-        for(;i&lt;=len;i++){
-            htmlList.push(&lt;a href=&quot;javascript:void(0);&quot; onClick={this.gotoPage.bind(this,i)} className={classnames({
-              [this.getClassName(activeClass) ]:  i==currentPage
-            } ) } &gt;{i}&lt;/a&gt; );
+        for (; i &lt;= len; i++) {
+            var _classnames;
+
+            htmlList.push(_react2[&#x27;default&#x27;].createElement(
+                &#x27;a&#x27;,
+                { href: &#x27;javascript:void(0);&#x27;, onClick: this.gotoPage.bind(this, i), className: _classnames3[&#x27;default&#x27;]((_classnames = {}, _classnames[this.getClassName(activeClass)] = i == currentPage, _classnames)) },
+                i
+            ));
         }
         //pages-currentPage =
-        let bt = this.pages-currentPage;
-        if(bt&gt;=7 ){
-            htmlList.push(&lt;a href=&quot;javascript:void(0);&quot;&gt;...&lt;/a&gt;);
-            htmlList.push(&lt;a href=&quot;javascript:void(0);&quot; onClick={::this.gotoPage.bind(this,this.pages)}&gt;{this.pages}&lt;/a&gt;);
+        var bt = this.pages - currentPage;
+        if (bt &gt;= 7) {
+            var _context2;
+
+            htmlList.push(_react2[&#x27;default&#x27;].createElement(
+                &#x27;a&#x27;,
+                { href: &#x27;javascript:void(0);&#x27; },
+                &#x27;...&#x27;
+            ));
+            htmlList.push(_react2[&#x27;default&#x27;].createElement(
+                &#x27;a&#x27;,
+                { href: &#x27;javascript:void(0);&#x27;, onClick: (_context2 = this.gotoPage).bind.call(_context2, this, this.pages) },
+                this.pages
+            ));
         }
 
-        if(this.pages&gt;1 &amp;&amp; currentPage!=this.pages){
-            htmlList.push(&lt;a href=&quot;javascript:void(0);&quot; onClick={::this.next}&gt;下一页&lt;/a&gt;);
-
+        if (this.pages &gt; 1 &amp;&amp; currentPage != this.pages) {
+            htmlList.push(_react2[&#x27;default&#x27;].createElement(
+                &#x27;a&#x27;,
+                { href: &#x27;javascript:void(0);&#x27;, onClick: this.next.bind(this) },
+                &#x27;下一页&#x27;
+            ));
         }
 
         return htmlList;
+    };
 
-    }
-
-    changePageSizeHandler(e){
-        let val = e.target.value;
+    Paging.prototype.changePageSizeHandler = function changePageSizeHandler(e) {
+        var val = e.target.value;
         //this.setState({
         //    defaultNumber:val*1
         //});
-        let {loadPageCallback} = this.props;
+        var loadPageCallback = this.props.loadPageCallback;
 
-        loadPageCallback &amp;&amp; (loadPageCallback(val) );
-    }
+        loadPageCallback &amp;&amp; loadPageCallback(val);
+    };
 
-    accordingNumber(){
-        let opts = [],num=10;
+    Paging.prototype.accordingNumber = function accordingNumber() {
+        var opts = [],
+            num = 10;
 
-        for(let i=1;i&lt;11;i++){
-            opts.push(&lt;option value={num*i}&gt;{num*i}&lt;/option&gt;);
+        for (var i = 1; i &lt; 11; i++) {
+            opts.push(_react2[&#x27;default&#x27;].createElement(
+                &#x27;option&#x27;,
+                { value: num * i },
+                num * i
+            ));
         }
 
-        return (
-            &lt;span style={{
-                marginRight:&#x27;20px&#x27;
-            }}&gt;
-                每页显示&amp;nbsp;&amp;nbsp;
-                &lt;select defaultValue={this.state.defaultNumber} onChange={::this.changePageSizeHandler}&gt;
-                    {
-                        opts
-                    }
-                &lt;/select&gt;
-                &amp;nbsp;&amp;nbsp;页
-            &lt;/span&gt;
+        return _react2[&#x27;default&#x27;].createElement(
+            &#x27;span&#x27;,
+            { style: {
+                    marginRight: &#x27;20px&#x27;
+                } },
+            &#x27;每页显示  &#x27;,
+            _react2[&#x27;default&#x27;].createElement(
+                &#x27;select&#x27;,
+                { defaultValue: this.state.defaultNumber, onChange: this.changePageSizeHandler.bind(this) },
+                opts
+            ),
+            &#x27;  页&#x27;
         );
-    }
+    };
 
     /**
      * @method render
      * @return {ReactElement}
      * */
-    render(){
 
-        const {componentTag:Component,activeClass,showItemsNumber} = this.props;
+    Paging.prototype.render = function render() {
+        var _props2 = this.props;
+        var Component = _props2.componentTag;
+        var activeClass = _props2.activeClass;
+        var showItemsNumber = _props2.showItemsNumber;
 
-        return (
-
-            &lt;Component className={classnames(this.getClassName(&#x27;container&#x27;)) }&gt;
-                {showItemsNumber ? this.accordingNumber():null}
-                {this.goto() }
-                &lt;span className=&#x27;info&#x27;&gt;
-                    &lt;span className={classnames(this.getClassName(activeClass)) }&gt;
-                        {this.props.currentPage}
-                    &lt;/span&gt;/{this.getPages()}，共{this.props.total}条
-                &lt;/span&gt;
-            &lt;/Component&gt;
+        return _react2[&#x27;default&#x27;].createElement(
+            Component,
+            { className: _classnames3[&#x27;default&#x27;](this.getClassName(&#x27;container&#x27;)) },
+            showItemsNumber ? this.accordingNumber() : null,
+            this.goto(),
+            _react2[&#x27;default&#x27;].createElement(
+                &#x27;span&#x27;,
+                { className: &#x27;info&#x27; },
+                _react2[&#x27;default&#x27;].createElement(
+                    &#x27;span&#x27;,
+                    { className: _classnames3[&#x27;default&#x27;](this.getClassName(activeClass)) },
+                    this.props.currentPage
+                ),
+                &#x27;/&#x27;,
+                this.getPages(),
+                &#x27;，共&#x27;,
+                this.props.total,
+                &#x27;条&#x27;
+            )
         );
+    };
 
-    }
-}
+    var _Paging = Paging;
+    Paging = _utilsClassNameMixinJs2[&#x27;default&#x27;](Paging) || Paging;
+    return Paging;
+})(_react.Component);
+
+exports[&#x27;default&#x27;] = Paging;
+module.exports = exports[&#x27;default&#x27;];
     </pre>
 </div>
 

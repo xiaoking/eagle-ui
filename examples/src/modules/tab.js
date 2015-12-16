@@ -2,8 +2,8 @@
  * Created by mac on 15/11/4.
  */
 import React,{Component} from 'react';
-import Tab from '../../../lib/Tab.js';
-import Tabset from '../../../lib/Tabset.js';
+import Tab from '../../../src/Tab.js';
+import Tabset from '../../../src/Tabset.js';
 
 let Demo = class Demo extends Component{
 

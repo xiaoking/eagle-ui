@@ -7,6 +7,8 @@ var webpackConfig = require('./webpack/webpack.config');
 var WebpackDevServer = require("webpack-dev-server");
 var open = require('gulp-open');
 
+var babel = require('gulp-babel');
+
 var error = function(e){
   console.error(e);
   if(e.stack){
@@ -15,7 +17,7 @@ var error = function(e){
   process.exit(1);
 }
 
-var devPort = 3005;
+var devPort = 3015;
 
 gulp.task('open', function () {
   gulp.src(__filename)
@@ -117,11 +119,40 @@ gulp.task('min-webpack', function(done) {
   });
 });
 
+gulp.task('babel', function(done){
+  return gulp.src('src/**/*.js')
+      .pipe(babel())
+      .pipe(gulp.dest('lib'));
+});
+
+gulp.task('style-webpack', function(done) {
+
+  var wbpk = Object.create(webpackConfig);
+
+  wbpk.entry = [
+      './src/style.js'
+  ];
+
+  wbpk.output = {
+      path:'lib',
+      filename:'style.js'
+  },
+
+  webpack(wbpk).run(function(err, stats) {
+    if(err) throw new gutil.PluginError("style-webpack", err);
+    gutil.log("[webpack]", stats.toString({
+      // output options
+    }));
+    done();
+  });
+
+});
+
 gulp.task('watch', function () {
   gulp.watch(['./lib/**/*.*'], ['demo']);
 });
 
-gulp.task('default', ['require-webpack','example-webpack'/*, 'html', 'asset'*/]);
+gulp.task('default', ['babel','require-webpack','style-webpack','example-webpack'/*, 'html', 'asset'*/]);
 gulp.task('test',['karma']);
 gulp.task('demo', ['demo-webpack','open']);
 gulp.task('min',['min-webpack']);

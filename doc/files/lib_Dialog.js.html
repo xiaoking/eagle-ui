@@ -404,13 +404,46 @@
 /**
  * Created by panqianjin on 15/10/30.
  */
-import React,{Component,PropTypes} from &#x27;react&#x27;;
-import ClassNameMixin from &#x27;./utils/ClassNameMixin&#x27;;
-import classnames from &#x27;classnames&#x27;;
-import Button from &#x27;./Button.js&#x27;;
-import Row from &#x27;./Row.js&#x27;;
-import Col from &#x27;./Col.js&#x27;;
-import Grid from &#x27;./Grid.js&#x27;;
+&#x27;use strict&#x27;;
+
+exports.__esModule = true;
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (&#x27;value&#x27; in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &#x27;default&#x27;: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&#x27;Cannot call a class as a function&#x27;); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== &#x27;function&#x27; &amp;&amp; superClass !== null) { throw new TypeError(&#x27;Super expression must either be null or a function, not &#x27; + typeof superClass); } subClass.prototype = Object.create(superClass &amp;&amp; superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _react = require(&#x27;react&#x27;);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _utilsClassNameMixin = require(&#x27;./utils/ClassNameMixin&#x27;);
+
+var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+
+var _classnames = require(&#x27;classnames&#x27;);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _ButtonJs = require(&#x27;./Button.js&#x27;);
+
+var _ButtonJs2 = _interopRequireDefault(_ButtonJs);
+
+var _RowJs = require(&#x27;./Row.js&#x27;);
+
+var _RowJs2 = _interopRequireDefault(_RowJs);
+
+var _ColJs = require(&#x27;./Col.js&#x27;);
+
+var _ColJs2 = _interopRequireDefault(_ColJs);
+
+var _GridJs = require(&#x27;./Grid.js&#x27;);
+
+var _GridJs2 = _interopRequireDefault(_GridJs);
+
 /**
  * 弹框组件，dialog类型：分为alert,confirm,dialog,mask 四种。默认alert。
  * 根据show的存在与否决定弹框展示与否
@@ -422,318 +455,378 @@ import Grid from &#x27;./Grid.js&#x27;;
  * @demo dialog.js{js}
  * @show true
  * */
-@ClassNameMixin
-export default
-class Dialog extends Component {
-    static propType = {
-        /**
-         * dialog类型：分为alert,confirm,dialog,mask 四种。默认alert
-         * @property type
-         * @type String
-         * @default alert
-         * */
-        type: PropTypes.string,
-        /**
-         * 标题
-         * @property title
-         * @type String
-         * @default &quot;&quot;
-         * */
-        title: PropTypes.string,
-        /**
-         * 点击确定时，回调方法
-         * @property successCallback
-         * @type Function
-         * @default null
-         * */
-        successCallback: PropTypes.func,
-        /**
-         * 点击取消时，回调方法
-         * @property cancelCallback
-         * @type Function
-         * @default null
-         * */
-        cancelCallback: PropTypes.func,
-        /**
-         * 类名样式前缀
-         * @property classPrefix
-         * @type sting
-         * @default crumb
-         * */
-        classPrefix: PropTypes.string,
-        /**
-         * 标签tagName
-         * @property componentTag
-         * @type String
-         * @default div
-         * */
-        componentTag: PropTypes.string
 
-    }
-    static defaultProps = {
-        successCallback: null,//success回掉函数
-        cancelCallback: null,//cancel回调函数
-        close: false,//是否有x图标
-        title: &#x27;&#x27;,//标题
-        type: &#x27;alert&#x27;,
-        classPrefix: &#x27;dialog&#x27;,
-        componentTag: &#x27;div&#x27;
-    }
+var Dialog = (function (_Component) {
+    _inherits(Dialog, _Component);
 
-    constructor(props, context) {
-        super(props, context);
+    _createClass(Dialog, null, [{
+        key: &#x27;propType&#x27;,
+        value: {
+            /**
+             * dialog类型：分为alert,confirm,dialog,mask 四种。默认alert
+             * @property type
+             * @type String
+             * @default alert
+             * */
+            type: _react.PropTypes.string,
+            /**
+             * 标题
+             * @property title
+             * @type String
+             * @default &quot;&quot;
+             * */
+            title: _react.PropTypes.string,
+            /**
+             * 点击确定时，回调方法
+             * @property successCallback
+             * @type Function
+             * @default null
+             * */
+            successCallback: _react.PropTypes.func,
+            /**
+             * 点击取消时，回调方法
+             * @property cancelCallback
+             * @type Function
+             * @default null
+             * */
+            cancelCallback: _react.PropTypes.func,
+            /**
+             * 类名样式前缀
+             * @property classPrefix
+             * @type sting
+             * @default crumb
+             * */
+            classPrefix: _react.PropTypes.string,
+            /**
+             * 标签tagName
+             * @property componentTag
+             * @type String
+             * @default div
+             * */
+            componentTag: _react.PropTypes.string
+
+        },
+        enumerable: true
+    }, {
+        key: &#x27;defaultProps&#x27;,
+        value: {
+            successCallback: null, //success回掉函数
+            cancelCallback: null, //cancel回调函数
+            close: false, //是否有x图标
+            title: &#x27;&#x27;, //标题
+            type: &#x27;alert&#x27;,
+            classPrefix: &#x27;dialog&#x27;,
+            componentTag: &#x27;div&#x27;
+        },
+        enumerable: true
+    }]);
+
+    function Dialog(props, context) {
+        _classCallCheck(this, _Dialog);
+
+        _Component.call(this, props, context);
         this.flag = true;
         this.state = {
             show: this.props.show,
             init: true
         };
     }
+
     /**
      * 接收到新props时执行,props是否存在show，是改变state.show，否则不变
      * 生命周期方法
      * @method componentWillReceiveProps
      * */
-    componentDidMount(){
+
+    Dialog.prototype.componentDidMount = function componentDidMount() {
         //this.flag = false;
-    }
-    componentWillReceiveProps (nextProps) {
-        if(nextProps.show ){
+    };
+
+    Dialog.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
+        if (nextProps.show) {
             this.flag = false;
             this.setState({
-                show:nextProps.show
+                show: nextProps.show
             });
         }
+    };
 
-    }
     /**
      * @method render
      * @return {ReactElement}
      * */
-    render() {
-        let showOrHide = this.props.cancelCallback?this.props.show:this.state.show;
-        return (
-            &lt;Grid ref = &#x27;container&#x27; className={classnames(
-                this.getClassName(&#x27;container&#x27;),
-                this.flag ? &#x27;&#x27;:showOrHide?&#x27;fadein&#x27;:&#x27;fadeout&#x27;
-                )}&gt;
-                {!this.flag &amp;&amp; !(this.props.cancelCallback?this.props.show:this.state.show)?this.displayNone():null}
-                {this[this.props.type.toLowerCase()]()}
-                {this.showOverlay(this.props.tips)}
-            &lt;/Grid&gt;
+
+    Dialog.prototype.render = function render() {
+        var showOrHide = this.props.cancelCallback ? this.props.show : this.state.show;
+        return _react2[&#x27;default&#x27;].createElement(
+            _GridJs2[&#x27;default&#x27;],
+            { ref: &#x27;container&#x27;, className: _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;container&#x27;), this.flag ? &#x27;&#x27; : showOrHide ? &#x27;fadein&#x27; : &#x27;fadeout&#x27;) },
+            !this.flag &amp;&amp; !(this.props.cancelCallback ? this.props.show : this.state.show) ? this.displayNone() : null,
+            this[this.props.type.toLowerCase()](),
+            this.showOverlay(this.props.tips)
         );
-    }
+    };
+
     /**
      * 改变display形态
      * */
-    displayNone(){
-        let _this =this;
-        clearTimeout(this.timer);
-        this.timer = setTimeout(function(){this.removeClass( React.findDOMNode(_this.refs.container),&#x27;fadeout&#x27;)}.bind(this),400);
-    }
 
-    close(callbackId){
-        callbackId = this.props[&#x60;${callbackId}Callback&#x60;];
-        if(callbackId){
-           callbackId();
-           return this;
+    Dialog.prototype.displayNone = function displayNone() {
+        var _this = this;
+        clearTimeout(this.timer);
+        this.timer = setTimeout((function () {
+            this.removeClass(_react2[&#x27;default&#x27;].findDOMNode(_this.refs.container), &#x27;fadeout&#x27;);
+        }).bind(this), 400);
+    };
+
+    Dialog.prototype.close = function close(callbackId) {
+        callbackId = this.props[callbackId + &#x27;Callback&#x27;];
+        if (callbackId) {
+            callbackId();
+            return this;
         }
 
         this.flag = false;
         this.setState({
             show: false
         });
-    }
+    };
+
     /**
      * 点击X，调用cancelCallback（如果存在），否则通过改变自身state来关闭
      * @method closeDialog
      * @return null
      * */
-    closeDialog() {
+
+    Dialog.prototype.closeDialog = function closeDialog() {
         this.close(&#x27;cancel&#x27;);
-    }
+    };
 
     /**
      * 点击确定按钮，调用successCallback（如果存在），否则通过改变自身state来关闭
      * @method submitForm
      * @return null;
      * */
-    submitForm() {
+
+    Dialog.prototype.submitForm = function submitForm() {
         this.close(&#x27;success&#x27;);
-    }
+    };
+
     /**
      * 点击取消按钮，调用cancelCallback（如果存在），否则通过改变自身state来关闭
      * @method cancleDialog
      * @return null;
      * */
-    cancleDialog() {
+
+    Dialog.prototype.cancleDialog = function cancleDialog() {
         this.close(&#x27;cancel&#x27;);
-    }
+    };
 
     /**
      * 显示遮罩
      * @method showOverlay
      * @return {ReactElement}
      * */
-    showOverlay() {
-        return (
-            &lt;Grid className={
-                classnames(
-                    this.getClassNamesForArguments(&#x27;overlay&#x27;)
-                )
-            }&gt;
-            &lt;/Grid&gt;
-        );
 
-    }
+    Dialog.prototype.showOverlay = function showOverlay() {
+        return _react2[&#x27;default&#x27;].createElement(_GridJs2[&#x27;default&#x27;], { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;overlay&#x27;)) });
+    };
 
     /**
      * 渲染alert
      * @method alert
      * @return  {ReactElement}
      * */
-    alert() {
-        return (
-            &lt;Row className={ classnames(
-                    this.getClassNamesForArguments(&#x27;dialog&#x27;)
-                )} style={{width:&#x27;500px&#x27;}}&gt;
-                &lt;Col&gt;
-                    &lt;Row className={classnames(
-                   this.getClassNamesForArguments(&#x27;title&#x27;)
-                )} style={{textAlign:&#x27;center&#x27;}}&gt;
-                            {this.props.title}
-                    &lt;/Row&gt;
-                    &lt;Row className={ classnames(
-                    this.getClassNamesForArguments(&#x27;content&#x27;))} style={{textAlign:&#x27;center&#x27;}}&gt;
-                        &lt;Col&gt;
-                            {this.props.children}
-                        &lt;/Col&gt;
-                    &lt;/Row&gt;
-                    &lt;Row className={ classnames(
-                    this.getClassNamesForArguments(&#x27;button&#x27;)
-                )}&gt;
-                        &lt;Col sm={12}&gt;
-                            &lt;Button radius egSize=&quot;xs&quot; onClick={::this.submitForm}&gt;确定&lt;/Button&gt;
-                        &lt;/Col&gt;
-                    &lt;/Row&gt;
-                &lt;/Col&gt;
-            &lt;/Row&gt;
+
+    Dialog.prototype.alert = function alert() {
+        return _react2[&#x27;default&#x27;].createElement(
+            _RowJs2[&#x27;default&#x27;],
+            { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;dialog&#x27;)), style: { width: &#x27;500px&#x27; } },
+            _react2[&#x27;default&#x27;].createElement(
+                _ColJs2[&#x27;default&#x27;],
+                null,
+                _react2[&#x27;default&#x27;].createElement(
+                    _RowJs2[&#x27;default&#x27;],
+                    { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;title&#x27;)), style: { textAlign: &#x27;center&#x27; } },
+                    this.props.title
+                ),
+                _react2[&#x27;default&#x27;].createElement(
+                    _RowJs2[&#x27;default&#x27;],
+                    { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;content&#x27;)), style: { textAlign: &#x27;center&#x27; } },
+                    _react2[&#x27;default&#x27;].createElement(
+                        _ColJs2[&#x27;default&#x27;],
+                        null,
+                        this.props.children
+                    )
+                ),
+                _react2[&#x27;default&#x27;].createElement(
+                    _RowJs2[&#x27;default&#x27;],
+                    { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;button&#x27;)) },
+                    _react2[&#x27;default&#x27;].createElement(
+                        _ColJs2[&#x27;default&#x27;],
+                        { sm: 12 },
+                        _react2[&#x27;default&#x27;].createElement(
+                            _ButtonJs2[&#x27;default&#x27;],
+                            { radius: true, egSize: &#x27;xs&#x27;, onClick: this.submitForm.bind(this) },
+                            &#x27;确定&#x27;
+                        )
+                    )
+                )
+            )
         );
-    }
+    };
+
     /**
      * 渲染confirm
      * @method confirm
      * @return  {ReactElement}
      * */
 
-    confirm() {
-        return (
-            &lt;Row className={ classnames(
-                    this.getClassNamesForArguments(&#x27;dialog&#x27;)
-                )} style={{width:&#x27;500px&#x27;}}&gt;
-                &lt;Col&gt;
-                    &lt;Row className={classnames(
-                   this.getClassNamesForArguments(&#x27;title&#x27;)
-                )} style={{textAlign:&#x27;center&#x27;}}&gt;
-                            {this.props.title}
-                            &lt;div className={classnames(
-                    this.getClassNamesForArguments(&#x27;close&#x27;)
-                    )} onClick={::this.closeDialog}&gt;x
-                            &lt;/div&gt;
-                    &lt;/Row&gt;
-                    &lt;Row className={ classnames(
-                    this.getClassNamesForArguments(&#x27;content&#x27;))} style={{textAlign:&#x27;center&#x27;}}&gt;
-                        &lt;Col&gt;
-                            {this.props.children?this.props.children:&#x27;请快乐的修bug&#x27;}
-                        &lt;/Col&gt;
-                    &lt;/Row&gt;
-                    &lt;Row className={ classnames(
-                    this.getClassNamesForArguments(&#x27;button&#x27;))}&gt;
-                        &lt;Col sm={12}&gt;
-                            &lt;Button radius egSize=&quot;xs&quot; style={{marginRight:&#x27;20px&#x27;}} onClick={::this.submitForm}&gt;确定
-                            &lt;/Button&gt;
-                            &lt;Button radius white egSize=&quot;xs&quot; onClick={::this.cancleDialog}&gt;取消&lt;/Button&gt;
-                        &lt;/Col&gt;
-                    &lt;/Row&gt;
-                &lt;/Col&gt;
-            &lt;/Row&gt;
+    Dialog.prototype.confirm = function confirm() {
+        return _react2[&#x27;default&#x27;].createElement(
+            _RowJs2[&#x27;default&#x27;],
+            { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;dialog&#x27;)), style: { width: &#x27;500px&#x27; } },
+            _react2[&#x27;default&#x27;].createElement(
+                _ColJs2[&#x27;default&#x27;],
+                null,
+                _react2[&#x27;default&#x27;].createElement(
+                    _RowJs2[&#x27;default&#x27;],
+                    { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;title&#x27;)), style: { textAlign: &#x27;center&#x27; } },
+                    this.props.title,
+                    _react2[&#x27;default&#x27;].createElement(
+                        &#x27;div&#x27;,
+                        { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;close&#x27;)), onClick: this.closeDialog.bind(this) },
+                        &#x27;x&#x27;
+                    )
+                ),
+                _react2[&#x27;default&#x27;].createElement(
+                    _RowJs2[&#x27;default&#x27;],
+                    { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;content&#x27;)), style: { textAlign: &#x27;center&#x27; } },
+                    _react2[&#x27;default&#x27;].createElement(
+                        _ColJs2[&#x27;default&#x27;],
+                        null,
+                        this.props.children ? this.props.children : &#x27;请快乐的修bug&#x27;
+                    )
+                ),
+                _react2[&#x27;default&#x27;].createElement(
+                    _RowJs2[&#x27;default&#x27;],
+                    { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;button&#x27;)) },
+                    _react2[&#x27;default&#x27;].createElement(
+                        _ColJs2[&#x27;default&#x27;],
+                        { sm: 12 },
+                        _react2[&#x27;default&#x27;].createElement(
+                            _ButtonJs2[&#x27;default&#x27;],
+                            { radius: true, egSize: &#x27;xs&#x27;, style: { marginRight: &#x27;20px&#x27; }, onClick: this.submitForm.bind(this) },
+                            &#x27;确定&#x27;
+                        ),
+                        _react2[&#x27;default&#x27;].createElement(
+                            _ButtonJs2[&#x27;default&#x27;],
+                            { radius: true, white: true, egSize: &#x27;xs&#x27;, onClick: this.cancleDialog.bind(this) },
+                            &#x27;取消&#x27;
+                        )
+                    )
+                )
+            )
         );
-    }
+    };
 
     /**
      * 渲染dialog
      * @method dialog
      * @return  {ReactElement}
      * */
-    dialog() {
-        return (
-            &lt;Row className={ classnames(
-                    this.getClassNamesForArguments(&#x27;dialog&#x27;)
-                )}&gt;
-                &lt;Col&gt;
-                    &lt;Row className={classnames(
-                   this.getClassNamesForArguments(&#x27;title&#x27;)
-                )}&gt;
-                            {this.props.title}
-                            &lt;div className={classnames(
-                    this.getClassNamesForArguments(&#x27;close&#x27;)
-                    )} onClick={::this.closeDialog}&gt;x
-                            &lt;/div&gt;
-                    &lt;/Row&gt;
-                    &lt;Row className={ classnames(
-                    this.getClassNamesForArguments(&#x27;content&#x27;))}&gt;
-                        &lt;Col&gt;
-                            {this.props.children}
-                        &lt;/Col&gt;
-                    &lt;/Row&gt;
-                    &lt;Row className={ classnames(
-                    this.getClassNamesForArguments(&#x27;button&#x27;))}&gt;
-                        &lt;Col sm={12}&gt;
-                            &lt;Button radius egSize=&quot;xs&quot; style={{marginRight:&#x27;20px&#x27;}} onClick={::this.submitForm}&gt;确定
-                            &lt;/Button&gt;
-                            &lt;Button radius white egSize=&quot;xs&quot; onClick={::this.cancleDialog}&gt;取消&lt;/Button&gt;
-                        &lt;/Col&gt;
-                    &lt;/Row&gt;
-                &lt;/Col&gt;
-            &lt;/Row&gt;
+
+    Dialog.prototype.dialog = function dialog() {
+        return _react2[&#x27;default&#x27;].createElement(
+            _RowJs2[&#x27;default&#x27;],
+            { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;dialog&#x27;)) },
+            _react2[&#x27;default&#x27;].createElement(
+                _ColJs2[&#x27;default&#x27;],
+                null,
+                _react2[&#x27;default&#x27;].createElement(
+                    _RowJs2[&#x27;default&#x27;],
+                    { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;title&#x27;)) },
+                    this.props.title,
+                    _react2[&#x27;default&#x27;].createElement(
+                        &#x27;div&#x27;,
+                        { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;close&#x27;)), onClick: this.closeDialog.bind(this) },
+                        &#x27;x&#x27;
+                    )
+                ),
+                _react2[&#x27;default&#x27;].createElement(
+                    _RowJs2[&#x27;default&#x27;],
+                    { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;content&#x27;)) },
+                    _react2[&#x27;default&#x27;].createElement(
+                        _ColJs2[&#x27;default&#x27;],
+                        null,
+                        this.props.children
+                    )
+                ),
+                _react2[&#x27;default&#x27;].createElement(
+                    _RowJs2[&#x27;default&#x27;],
+                    { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;button&#x27;)) },
+                    _react2[&#x27;default&#x27;].createElement(
+                        _ColJs2[&#x27;default&#x27;],
+                        { sm: 12 },
+                        _react2[&#x27;default&#x27;].createElement(
+                            _ButtonJs2[&#x27;default&#x27;],
+                            { radius: true, egSize: &#x27;xs&#x27;, style: { marginRight: &#x27;20px&#x27; }, onClick: this.submitForm.bind(this) },
+                            &#x27;确定&#x27;
+                        ),
+                        _react2[&#x27;default&#x27;].createElement(
+                            _ButtonJs2[&#x27;default&#x27;],
+                            { radius: true, white: true, egSize: &#x27;xs&#x27;, onClick: this.cancleDialog.bind(this) },
+                            &#x27;取消&#x27;
+                        )
+                    )
+                )
+            )
         );
-    }
+    };
+
     /**
      * 渲染mask
      * @method mask
      * @return  {ReactElement}
      * */
 
-    mask() {
-        return (
-            &lt;Row className={ classnames(
-                    this.getClassNamesForArguments(&#x27;dialog&#x27;)
-                )}&gt;
-                &lt;Col&gt;
-                    &lt;Row className={classnames(
-                   this.getClassNamesForArguments(&#x27;title&#x27;,&#x27;mask-title&#x27;)
+    Dialog.prototype.mask = function mask() {
+        return _react2[&#x27;default&#x27;].createElement(
+            _RowJs2[&#x27;default&#x27;],
+            { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;dialog&#x27;)) },
+            _react2[&#x27;default&#x27;].createElement(
+                _ColJs2[&#x27;default&#x27;],
+                null,
+                _react2[&#x27;default&#x27;].createElement(
+                    _RowJs2[&#x27;default&#x27;],
+                    { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;title&#x27;, &#x27;mask-title&#x27;)) },
+                    this.props.title,
+                    _react2[&#x27;default&#x27;].createElement(
+                        &#x27;div&#x27;,
+                        { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;close&#x27;)), onClick: this.closeDialog.bind(this) },
+                        &#x27;x&#x27;
+                    )
+                ),
+                _react2[&#x27;default&#x27;].createElement(
+                    _RowJs2[&#x27;default&#x27;],
+                    { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;content&#x27;)), style: { marginTop: &#x27;10px&#x27; } },
+                    _react2[&#x27;default&#x27;].createElement(
+                        _ColJs2[&#x27;default&#x27;],
+                        null,
+                        this.props.children
+                    )
+                )
+            )
+        );
+    };
 
-                )}&gt;
-                            {this.props.title}
-                            &lt;div className={classnames(
-                    this.getClassNamesForArguments(&#x27;close&#x27;)
-                    )} onClick={::this.closeDialog}&gt;x
-                            &lt;/div&gt;
-                    &lt;/Row&gt;
-                    &lt;Row className={ classnames(
-                    this.getClassNamesForArguments(&#x27;content&#x27;))} style={{marginTop:&#x27;10px&#x27;}}&gt;
-                        &lt;Col&gt;
-                            {this.props.children}
-                        &lt;/Col&gt;
-                    &lt;/Row&gt;
-                &lt;/Col&gt;
-            &lt;/Row&gt;
+    var _Dialog = Dialog;
+    Dialog = _utilsClassNameMixin2[&#x27;default&#x27;](Dialog) || Dialog;
+    return Dialog;
+})(_react.Component);
 
-        )
-    }
-}
-
-
-
+exports[&#x27;default&#x27;] = Dialog;
+module.exports = exports[&#x27;default&#x27;];
     </pre>
 </div>
 

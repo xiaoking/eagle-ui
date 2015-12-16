@@ -21,7 +21,7 @@ import ToolTip from './modules/tooltip';
 import Validate from './modules/validate';
 
 //require('../less/public.less');
-import css from '../../lib/_include.less';
+import css from '../../src/_include.less';
 
 let Index = class Index extends Component{
     render() {

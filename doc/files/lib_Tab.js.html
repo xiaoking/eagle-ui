@@ -404,9 +404,31 @@
 /**
  * Created by mac on 15/9/7.
  */
-import React,{Component,PropTypes} from &#x27;react&#x27;;
-import ClassNameMixin from &#x27;./utils/ClassNameMixin&#x27;;
-import classnames from &#x27;classnames&#x27;;
+&#x27;use strict&#x27;;
+
+exports.__esModule = true;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (&#x27;value&#x27; in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &#x27;default&#x27;: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&#x27;Cannot call a class as a function&#x27;); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== &#x27;function&#x27; &amp;&amp; superClass !== null) { throw new TypeError(&#x27;Super expression must either be null or a function, not &#x27; + typeof superClass); } subClass.prototype = Object.create(superClass &amp;&amp; superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _react = require(&#x27;react&#x27;);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _utilsClassNameMixin = require(&#x27;./utils/ClassNameMixin&#x27;);
+
+var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+
+var _classnames = require(&#x27;classnames&#x27;);
+
+var _classnames2 = _interopRequireDefault(_classnames);
 
 /**
  * tab组件
@@ -418,35 +440,51 @@ import classnames from &#x27;classnames&#x27;;
  * @demo tab.js{js}
  * @show true
  * */
-@ClassNameMixin
-export default class Tab extends Component{
 
-    static defaultProps = {
-        classPrefix:&#x27;tab&#x27;
-    };
-    handlerClick(){
+var Tab = (function (_Component) {
+    _inherits(Tab, _Component);
+
+    function Tab() {
+        _classCallCheck(this, _Tab);
+
+        _Component.apply(this, arguments);
+    }
+
+    Tab.prototype.handlerClick = function handlerClick() {
         this.props.clickCallback(this.props.index);
     };
-    handleMouseEnter(e){
-        this.props.mouseEnterCallback(e.target.offsetLeft,e.target.offsetWidth);
-    };
-    render(){
 
-        return (
-            &lt;a className={
-                classnames(
-                    this.getClassName(&#x27;item&#x27;),
-                    this.getClassNames(this.props)
-                )
-                }
-                {...this.props}
-                onClick={::this.handlerClick}
-                onMouseEnter={::this.handleMouseEnter}&gt;
-                {this.props.heading}
-            &lt;/a&gt;
+    Tab.prototype.handleMouseEnter = function handleMouseEnter(e) {
+        this.props.mouseEnterCallback(e.target.offsetLeft, e.target.offsetWidth);
+    };
+
+    Tab.prototype.render = function render() {
+
+        return _react2[&#x27;default&#x27;].createElement(
+            &#x27;a&#x27;,
+            _extends({ className: _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;item&#x27;), this.getClassNames(this.props))
+            }, this.props, {
+                onClick: this.handlerClick.bind(this),
+                onMouseEnter: this.handleMouseEnter.bind(this) }),
+            this.props.heading
         );
-    }
-}
+    };
+
+    _createClass(Tab, null, [{
+        key: &#x27;defaultProps&#x27;,
+        value: {
+            classPrefix: &#x27;tab&#x27;
+        },
+        enumerable: true
+    }]);
+
+    var _Tab = Tab;
+    Tab = _utilsClassNameMixin2[&#x27;default&#x27;](Tab) || Tab;
+    return Tab;
+})(_react.Component);
+
+exports[&#x27;default&#x27;] = Tab;
+module.exports = exports[&#x27;default&#x27;];
     </pre>
 </div>
 

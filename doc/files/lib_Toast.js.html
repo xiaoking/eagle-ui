@@ -404,13 +404,46 @@
 /**
  * Created by panqianjin on 15/10/30.
  */
-import React,{Component,PropTypes} from &#x27;react&#x27;;
-import ClassNameMixin from &#x27;./utils/ClassNameMixin&#x27;;
-import classnames from &#x27;classnames&#x27;;
-import Button from &#x27;./Button.js&#x27;;
-import Row from &#x27;./Row.js&#x27;;
-import Col from &#x27;./Col.js&#x27;;
-import Grid from &#x27;./Grid.js&#x27;;
+&#x27;use strict&#x27;;
+
+exports.__esModule = true;
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (&#x27;value&#x27; in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &#x27;default&#x27;: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&#x27;Cannot call a class as a function&#x27;); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== &#x27;function&#x27; &amp;&amp; superClass !== null) { throw new TypeError(&#x27;Super expression must either be null or a function, not &#x27; + typeof superClass); } subClass.prototype = Object.create(superClass &amp;&amp; superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _react = require(&#x27;react&#x27;);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _utilsClassNameMixin = require(&#x27;./utils/ClassNameMixin&#x27;);
+
+var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+
+var _classnames2 = require(&#x27;classnames&#x27;);
+
+var _classnames3 = _interopRequireDefault(_classnames2);
+
+var _ButtonJs = require(&#x27;./Button.js&#x27;);
+
+var _ButtonJs2 = _interopRequireDefault(_ButtonJs);
+
+var _RowJs = require(&#x27;./Row.js&#x27;);
+
+var _RowJs2 = _interopRequireDefault(_RowJs);
+
+var _ColJs = require(&#x27;./Col.js&#x27;);
+
+var _ColJs2 = _interopRequireDefault(_ColJs);
+
+var _GridJs = require(&#x27;./Grid.js&#x27;);
+
+var _GridJs2 = _interopRequireDefault(_GridJs);
+
 /**
  * 提示组件
  * 类型：分为success,error,loading 三种。默认success
@@ -423,65 +456,75 @@ import Grid from &#x27;./Grid.js&#x27;;
  * @demo toast.js{js}
  * @show true
  * */
-@ClassNameMixin
-export default
-class Toast extends Component {
-    static propType = {
-        /**
-         * toast类型：分为success,error,loading 三种。默认success
-         * @property type
-         * @type String
-         * @default success
-         * */
-        type: PropTypes.string,
-        /**
-         * 文字信息
-         * @property msg
-         * @type String
-         * @default 保存成功
-         * */
-        msg: PropTypes.string,
-        /**
-         * tips n秒后消失 默认2秒
-         * @property seconds
-         * @type Integer
-         * @default 2
-         * */
-        seconds: PropTypes.number,
-        /**
-         * 是否显示遮罩，默认false
-         * @property overlay
-         * @type Boolean
-         * @default false
-         * */
-        overlay: PropTypes.boolean,
-        /**
-         * 类名样式前缀
-         * @property classPrefix
-         * @type sting
-         * @default crumb
-         * */
-        classPrefix: PropTypes.string,
-        /**
-         * 标签tagName
-         * @property componentTag
-         * @type String
-         * @default div
-         * */
-        componentTag: PropTypes.string
 
-    }
-    static defaultProps = {
-        type: &#x27;sucess-tips&#x27;,
-        msg: &#x27;保存成功&#x27;,
-        seconds: 2,
-        overlay: false,
-        classPrefix: &#x27;tips&#x27;,
-        componentTag: &#x27;div&#x27;
-    }
+var Toast = (function (_Component) {
+    _inherits(Toast, _Component);
 
-    constructor(props, context) {
-        super(props, context);
+    _createClass(Toast, null, [{
+        key: &#x27;propType&#x27;,
+        value: {
+            /**
+             * toast类型：分为success,error,loading 三种。默认success
+             * @property type
+             * @type String
+             * @default success
+             * */
+            type: _react.PropTypes.string,
+            /**
+             * 文字信息
+             * @property msg
+             * @type String
+             * @default 保存成功
+             * */
+            msg: _react.PropTypes.string,
+            /**
+             * tips n秒后消失 默认2秒
+             * @property seconds
+             * @type Integer
+             * @default 2
+             * */
+            seconds: _react.PropTypes.number,
+            /**
+             * 是否显示遮罩，默认false
+             * @property overlay
+             * @type Boolean
+             * @default false
+             * */
+            overlay: _react.PropTypes.boolean,
+            /**
+             * 类名样式前缀
+             * @property classPrefix
+             * @type sting
+             * @default crumb
+             * */
+            classPrefix: _react.PropTypes.string,
+            /**
+             * 标签tagName
+             * @property componentTag
+             * @type String
+             * @default div
+             * */
+            componentTag: _react.PropTypes.string
+
+        },
+        enumerable: true
+    }, {
+        key: &#x27;defaultProps&#x27;,
+        value: {
+            type: &#x27;sucess-tips&#x27;,
+            msg: &#x27;保存成功&#x27;,
+            seconds: 2,
+            overlay: false,
+            classPrefix: &#x27;tips&#x27;,
+            componentTag: &#x27;div&#x27;
+        },
+        enumerable: true
+    }]);
+
+    function Toast(props, context) {
+        _classCallCheck(this, _Toast);
+
+        _Component.call(this, props, context);
         this.flag = true;
         this.state = {
             /**
@@ -491,12 +534,14 @@ class Toast extends Component {
             show: this.props.show
         };
     }
+
     /**
      * 接收到新props时执行,props改变，改变state.show
      * @method componentWillReceiveProps
      *
      * */
-    componentWillReceiveProps(nextProps) {
+
+    Toast.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
         this.setState({
             /**
              * state.show随新的props里的值改变
@@ -504,99 +549,106 @@ class Toast extends Component {
              * */
             show: nextProps.show
         });
+    };
 
-    }
     /**
      * change flag状态，即非第一次
      * */
-    componentDidMount(){
+
+    Toast.prototype.componentDidMount = function componentDidMount() {
         this.flag = false;
-    }
+    };
+
     /**
      * @method render
      * @return {ReactElement}
      * */
-    render() {
+
+    Toast.prototype.render = function render() {
+        var _classnames;
+
         this.setTimeoutForClose();
-        return (
-            &lt;Grid ref=&#x27;container&#x27; className={classnames(
-                    this.getClassName(this.props.overlay?&#x27;container&#x27;:&#x27;wapper&#x27;),
-                    {
-                        [&#x27;fadein&#x27;]:this.state.show,
-                        [&#x27;fadeout&#x27;]: this.flag?false:!this.state.show
-                    }
-                )}&gt;
-                {!this.flag&amp;&amp;!this.state.show?this.displayNone():null}
-                {this.toast()}
-            &lt;/Grid&gt;
+        return _react2[&#x27;default&#x27;].createElement(
+            _GridJs2[&#x27;default&#x27;],
+            { ref: &#x27;container&#x27;, className: _classnames3[&#x27;default&#x27;](this.getClassName(this.props.overlay ? &#x27;container&#x27; : &#x27;wapper&#x27;), (_classnames = {}, _classnames[&#x27;fadein&#x27;] = this.state.show, _classnames[&#x27;fadeout&#x27;] = this.flag ? false : !this.state.show, _classnames)) },
+            !this.flag &amp;&amp; !this.state.show ? this.displayNone() : null,
+            this.toast()
         );
-    }
+    };
+
     /**
      * 改变display形态
      * */
-    displayNone(){
-        let _this =this;
+
+    Toast.prototype.displayNone = function displayNone() {
+        var _this = this;
         clearTimeout(this.timer);
-        this.timer = setTimeout(function(){this.removeClass( React.findDOMNode(_this.refs.container),&#x27;fadeout&#x27;)}.bind(this),400);
-    }
+        this.timer = setTimeout((function () {
+            this.removeClass(_react2[&#x27;default&#x27;].findDOMNode(_this.refs.container), &#x27;fadeout&#x27;);
+        }).bind(this), 400);
+    };
 
     /**
      * 渲染toast主体
      * @method toast
      * @return {ReactElement}
      * */
-    toast() {
-        return (
-            &lt;Row className={
-                 classnames(
-                    this.getClassNamesForArguments(this.props.classPrefix)
-                )}&gt;
-                &lt;Col&gt;
-                    &lt;Row className={classnames(
-                    this.getClassNamesForArguments(&#x27;content&#x27;)
-                )}&gt;
 
-                        &lt;div style={{padding: &#x27;5px 15px&#x27;,float: &#x27;left&#x27;}} className={classnames(
-                            this.getClassNamesForArguments(this.props.type)
-                        )}&gt;
-                        &lt;/div&gt;
-                        &lt;div style={{padding: &#x27;5px 15px&#x27;,float:&#x27;right&#x27;}}&gt;
-                            {this.props.msg}
-                        &lt;/div&gt;
-                    &lt;/Row&gt;
-                &lt;/Col&gt;
-            &lt;/Row&gt;
-        )
-    }
+    Toast.prototype.toast = function toast() {
+        return _react2[&#x27;default&#x27;].createElement(
+            _RowJs2[&#x27;default&#x27;],
+            { className: _classnames3[&#x27;default&#x27;](this.getClassNamesForArguments(this.props.classPrefix)) },
+            _react2[&#x27;default&#x27;].createElement(
+                _ColJs2[&#x27;default&#x27;],
+                null,
+                _react2[&#x27;default&#x27;].createElement(
+                    _RowJs2[&#x27;default&#x27;],
+                    { className: _classnames3[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;content&#x27;)) },
+                    _react2[&#x27;default&#x27;].createElement(&#x27;div&#x27;, { style: { padding: &#x27;5px 15px&#x27;, float: &#x27;left&#x27; }, className: _classnames3[&#x27;default&#x27;](this.getClassNamesForArguments(this.props.type)) }),
+                    _react2[&#x27;default&#x27;].createElement(
+                        &#x27;div&#x27;,
+                        { style: { padding: &#x27;5px 15px&#x27;, float: &#x27;right&#x27; } },
+                        this.props.msg
+                    )
+                )
+            )
+        );
+    };
+
     /**
      * 延时n秒消失
      * @method  setTimeoutForClose
      * @return null
      * */
-    setTimeoutForClose() {
+
+    Toast.prototype.setTimeoutForClose = function setTimeoutForClose() {
         if (this.state.show) {
-            let seconds = this.props.seconds * 1000;
+            var seconds = this.props.seconds * 1000;
             clearTimeout(this.timeout);
-            this.timeout = setTimeout(::this.closeToast, seconds
-        )
-            ;
+            this.timeout = setTimeout(this.closeToast.bind(this), seconds);
         }
-    }
+    };
+
     /**
      * 改变state.show 隐藏tips,并调用回调方法
      * @method closeToast
      * @return null
      * */
-    closeToast() {
-        this.props.closeCallback &amp;&amp; (this.props.closeCallback() );
+
+    Toast.prototype.closeToast = function closeToast() {
+        this.props.closeCallback &amp;&amp; this.props.closeCallback();
         this.setState({
             show: false
         });
-    }
+    };
 
+    var _Toast = Toast;
+    Toast = _utilsClassNameMixin2[&#x27;default&#x27;](Toast) || Toast;
+    return Toast;
+})(_react.Component);
 
-
-}
+exports[&#x27;default&#x27;] = Toast;
+module.exports = exports[&#x27;default&#x27;];
     </pre>
 </div>
 

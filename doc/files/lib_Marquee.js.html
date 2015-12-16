@@ -404,67 +404,118 @@
 /**
  * Created by panqianjin on 15/11/18.
  */
-import React, {Component, PropTypes} from &#x27;react&#x27;;
-import ClassNameMixin from &#x27;./utils/ClassNameMixin&#x27;;
-import classnames from &#x27;classnames&#x27;;
-import Input from &#x27;./Input.js&#x27;;
-import Row from &#x27;./Row.js&#x27;;
-import Col from &#x27;./Col.js&#x27;;
-import Grid from &#x27;./Grid.js&#x27;;
+&#x27;use strict&#x27;;
 
-@ClassNameMixin
-export default class Marquee extends Component {
-    static defaultProps = {
-        isNew: false,
-        isChecked: false,
-        src: &#x27;http://img1.imgtn.bdimg.com/it/u=1825165654,1935296637&amp;fm=21&amp;gp=0.jpg&#x27;,
-        title: &#x27;吃吧小伙伴&#x27;,
-        content: &#x27;安化路492号&#x27;,
-        tips: &#x27;吃喝玩乐&#x27;,
-        classPrefix: &#x27;marquee&#x27;,
-        componentTag: &#x27;div&#x27;
-    }
+exports.__esModule = true;
 
-    constructor(props, context) {
-        super(props, context);
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (&#x27;value&#x27; in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &#x27;default&#x27;: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&#x27;Cannot call a class as a function&#x27;); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== &#x27;function&#x27; &amp;&amp; superClass !== null) { throw new TypeError(&#x27;Super expression must either be null or a function, not &#x27; + typeof superClass); } subClass.prototype = Object.create(superClass &amp;&amp; superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _react = require(&#x27;react&#x27;);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _utilsClassNameMixin = require(&#x27;./utils/ClassNameMixin&#x27;);
+
+var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+
+var _classnames = require(&#x27;classnames&#x27;);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _InputJs = require(&#x27;./Input.js&#x27;);
+
+var _InputJs2 = _interopRequireDefault(_InputJs);
+
+var _RowJs = require(&#x27;./Row.js&#x27;);
+
+var _RowJs2 = _interopRequireDefault(_RowJs);
+
+var _ColJs = require(&#x27;./Col.js&#x27;);
+
+var _ColJs2 = _interopRequireDefault(_ColJs);
+
+var _GridJs = require(&#x27;./Grid.js&#x27;);
+
+var _GridJs2 = _interopRequireDefault(_GridJs);
+
+var Marquee = (function (_Component) {
+    _inherits(Marquee, _Component);
+
+    _createClass(Marquee, null, [{
+        key: &#x27;defaultProps&#x27;,
+        value: {
+            isNew: false,
+            isChecked: false,
+            src: &#x27;http://img1.imgtn.bdimg.com/it/u=1825165654,1935296637&amp;fm=21&amp;gp=0.jpg&#x27;,
+            title: &#x27;吃吧小伙伴&#x27;,
+            content: &#x27;安化路492号&#x27;,
+            tips: &#x27;吃喝玩乐&#x27;,
+            classPrefix: &#x27;marquee&#x27;,
+            componentTag: &#x27;div&#x27;
+        },
+        enumerable: true
+    }]);
+
+    function Marquee(props, context) {
+        _classCallCheck(this, _Marquee);
+
+        _Component.call(this, props, context);
         this.state = {
             isChecked: this.props.isChecked
-        }
+        };
     }
 
-    render() {
-        return (
-            &lt;Grid className={classnames(
-                this.getClassName(&#x27;container&#x27;))}&gt;
-                &lt;div className={classnames(
-                this.getClassName(&#x27;new-tip&#x27;))}&gt;
-                    &lt;span className={classnames(
-                        this.getClassName(&#x27;new&#x27;)
-                    )}&gt;新&lt;/span&gt;
-                &lt;/div&gt;
-                &lt;div className={classnames(
-                this.getClassName(&#x27;check&#x27;))}&gt;
-                    &lt;Input type=&quot;checkboxs&quot; checked label=&#x27;&#x27;/&gt;
-                &lt;/div&gt;
-                &lt;img src={this.props.src} /&gt;
-                &lt;Row className={classnames(
-                this.getClassName(&#x27;title&#x27;) )}&gt;
-                    {this.props.title}
-                &lt;/Row&gt;
-                &lt;Row className={classnames(
-                this.getClassName(&#x27;content&#x27;))}&gt;
-                    {this.props.content}
-                &lt;/Row&gt;
-                &lt;Row className={classnames(
-                    this.getClassName(&#x27;tips&#x27;))}&gt;
-                    &lt;span className={classnames(
-                        this.getClassName(&#x27;bars&#x27;,false))}&gt;
-                    &lt;/span&gt;
-                    {this.props.tips}
-                &lt;/Row&gt;
-            &lt;/Grid&gt;);
-    }
-}
+    Marquee.prototype.render = function render() {
+        return _react2[&#x27;default&#x27;].createElement(
+            _GridJs2[&#x27;default&#x27;],
+            { className: _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;container&#x27;)) },
+            _react2[&#x27;default&#x27;].createElement(
+                &#x27;div&#x27;,
+                { className: _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;new-tip&#x27;)) },
+                _react2[&#x27;default&#x27;].createElement(
+                    &#x27;span&#x27;,
+                    { className: _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;new&#x27;)) },
+                    &#x27;新&#x27;
+                )
+            ),
+            _react2[&#x27;default&#x27;].createElement(
+                &#x27;div&#x27;,
+                { className: _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;check&#x27;)) },
+                _react2[&#x27;default&#x27;].createElement(_InputJs2[&#x27;default&#x27;], { type: &#x27;checkboxs&#x27;, checked: true, label: &#x27;&#x27; })
+            ),
+            _react2[&#x27;default&#x27;].createElement(&#x27;img&#x27;, { src: this.props.src }),
+            _react2[&#x27;default&#x27;].createElement(
+                _RowJs2[&#x27;default&#x27;],
+                { className: _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;title&#x27;)) },
+                this.props.title
+            ),
+            _react2[&#x27;default&#x27;].createElement(
+                _RowJs2[&#x27;default&#x27;],
+                { className: _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;content&#x27;)) },
+                this.props.content
+            ),
+            _react2[&#x27;default&#x27;].createElement(
+                _RowJs2[&#x27;default&#x27;],
+                { className: _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;tips&#x27;)) },
+                _react2[&#x27;default&#x27;].createElement(&#x27;span&#x27;, { className: _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;bars&#x27;, false)) }),
+                this.props.tips
+            )
+        );
+    };
+
+    var _Marquee = Marquee;
+    Marquee = _utilsClassNameMixin2[&#x27;default&#x27;](Marquee) || Marquee;
+    return Marquee;
+})(_react.Component);
+
+exports[&#x27;default&#x27;] = Marquee;
+module.exports = exports[&#x27;default&#x27;];
     </pre>
 </div>
 

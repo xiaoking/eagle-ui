@@ -404,11 +404,33 @@
 /**
  * Created by mac on 15/9/7.
  */
-import React,{ PropTypes, Component } from &#x27;react&#x27;;
-import classnames from &#x27;classnames&#x27;;
+&#x27;use strict&#x27;;
 
-import ClassNameMixin from &#x27;./utils/ClassNameMixin&#x27;;
-import Input from &#x27;./Input.js&#x27;;
+exports.__esModule = true;
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (&#x27;value&#x27; in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &#x27;default&#x27;: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&#x27;Cannot call a class as a function&#x27;); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== &#x27;function&#x27; &amp;&amp; superClass !== null) { throw new TypeError(&#x27;Super expression must either be null or a function, not &#x27; + typeof superClass); } subClass.prototype = Object.create(superClass &amp;&amp; superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _react = require(&#x27;react&#x27;);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classnames = require(&#x27;classnames&#x27;);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _utilsClassNameMixin = require(&#x27;./utils/ClassNameMixin&#x27;);
+
+var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+
+var _InputJs = require(&#x27;./Input.js&#x27;);
+
+var _InputJs2 = _interopRequireDefault(_InputJs);
 
 /**
  * 多选按钮组组件
@@ -420,34 +442,45 @@ import Input from &#x27;./Input.js&#x27;;
  * @demo input.js {js}
  * @show true
  * */
-@ClassNameMixin
-export default class CheckboxGroup extends Component{
 
-    static propTypes = {
+var CheckboxGroup = (function (_Component) {
+    _inherits(CheckboxGroup, _Component);
 
+    _createClass(CheckboxGroup, null, [{
+        key: &#x27;propTypes&#x27;,
+        value: {},
+        enumerable: true
+    }]);
+
+    function CheckboxGroup(props, context) {
+        _classCallCheck(this, _CheckboxGroup);
+
+        _Component.call(this, props, context);
+    }
+
+    CheckboxGroup.prototype.componentDidMount = function componentDidMount() {};
+
+    CheckboxGroup.prototype.render = function render() {
+
+        return _react2[&#x27;default&#x27;].createElement(
+            &#x27;div&#x27;,
+            { style: this.props.style,
+                className: _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;input-group&#x27;), this.props.className || &#x27;&#x27;) },
+            _react2[&#x27;default&#x27;].createElement(
+                &#x27;div&#x27;,
+                { className: this.getClassName(&#x27;input-group-container&#x27;) },
+                this.props.children
+            )
+        );
     };
 
-    constructor(props, context) {
-        super(props, context);
-    }
+    var _CheckboxGroup = CheckboxGroup;
+    CheckboxGroup = _utilsClassNameMixin2[&#x27;default&#x27;](CheckboxGroup) || CheckboxGroup;
+    return CheckboxGroup;
+})(_react.Component);
 
-
-
-    componentDidMount(){
-
-    }
-    render(){
-
-        return (
-            &lt;div style={this.props.style}
-                 className={classnames(this.getClassName(&#x27;input-group&#x27;),this.props.className || &#x27;&#x27;)}&gt;
-                &lt;div className={this.getClassName(&#x27;input-group-container&#x27;)}&gt;
-                {this.props.children}
-                &lt;/div&gt;
-            &lt;/div&gt;
-        );
-    }
-}
+exports[&#x27;default&#x27;] = CheckboxGroup;
+module.exports = exports[&#x27;default&#x27;];
     </pre>
 </div>
 

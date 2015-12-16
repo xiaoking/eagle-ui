@@ -2,11 +2,11 @@
  * Created by mac on 15/11/4.
  */
 import React, { Component ,PropTypes} from 'react';
-import ButtonGroup from '../../../lib/ButtonGroup.js';
-import Button from '../../../lib/Button.js';
-import Row from '../../../lib/Row.js';
-import Col from '../../../lib/Col.js';
-import Grid from '../../../lib/Grid.js';
+import ButtonGroup from '../../../src/ButtonGroup.js';
+import Button from '../../../src/Button.js';
+import Row from '../../../src/Row.js';
+import Col from '../../../src/Col.js';
+import Grid from '../../../src/Grid.js';
 
 export default class ButtonCls extends Component{
     render(){

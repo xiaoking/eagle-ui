@@ -404,13 +404,46 @@
 /**
  * Created by panqianjin on 15/11/17.
  */
-import React,{Component,PropTypes} from &#x27;react&#x27;;
-import ClassNameMixin from &#x27;./utils/ClassNameMixin&#x27;;
-import classnames from &#x27;classnames&#x27;;
-import Button from &#x27;./Button.js&#x27;;
-import Row from &#x27;./Row.js&#x27;;
-import Col from &#x27;./Col.js&#x27;;
-import Grid from &#x27;./Grid.js&#x27;;
+&#x27;use strict&#x27;;
+
+exports.__esModule = true;
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (&#x27;value&#x27; in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &#x27;default&#x27;: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&#x27;Cannot call a class as a function&#x27;); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== &#x27;function&#x27; &amp;&amp; superClass !== null) { throw new TypeError(&#x27;Super expression must either be null or a function, not &#x27; + typeof superClass); } subClass.prototype = Object.create(superClass &amp;&amp; superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _react = require(&#x27;react&#x27;);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _utilsClassNameMixin = require(&#x27;./utils/ClassNameMixin&#x27;);
+
+var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+
+var _classnames2 = require(&#x27;classnames&#x27;);
+
+var _classnames3 = _interopRequireDefault(_classnames2);
+
+var _ButtonJs = require(&#x27;./Button.js&#x27;);
+
+var _ButtonJs2 = _interopRequireDefault(_ButtonJs);
+
+var _RowJs = require(&#x27;./Row.js&#x27;);
+
+var _RowJs2 = _interopRequireDefault(_RowJs);
+
+var _ColJs = require(&#x27;./Col.js&#x27;);
+
+var _ColJs2 = _interopRequireDefault(_ColJs);
+
+var _GridJs = require(&#x27;./Grid.js&#x27;);
+
+var _GridJs2 = _interopRequireDefault(_GridJs);
+
 /**
  * tips组件
  * 只是从tooltipPanel获得props渲染，其他操作均在tooltipPanel中
@@ -421,40 +454,50 @@ import Grid from &#x27;./Grid.js&#x27;;
  * @demo tooltip.js{js}
  * @show false
  * */
-@ClassNameMixin
-export default class Tooltip extends Component {
-    static propType={
-        /**
-         * 提示是否展示
-         * @property show
-         * @type Boolean
-         * @default null
-         * */
-        show: PropTypes.boolean,
-        /**
-         * 提示内容
-         * @property msg
-         * @type String
-         * @default null
-         * */
-        msg: PropTypes.string,
-        /**
-         * 提示方向
-         * @property direction
-         * @type String
-         * @default null
-         * */
-        direction: PropTypes.string,
-        classPrefix: PropTypes.string,
-        componentTag:PropTypes.string
-    }
-    constructor(props, context) {
-        super(props, context);
+
+var Tooltip = (function (_Component) {
+    _inherits(Tooltip, _Component);
+
+    _createClass(Tooltip, null, [{
+        key: &#x27;propType&#x27;,
+        value: {
+            /**
+             * 提示是否展示
+             * @property show
+             * @type Boolean
+             * @default null
+             * */
+            show: _react.PropTypes.boolean,
+            /**
+             * 提示内容
+             * @property msg
+             * @type String
+             * @default null
+             * */
+            msg: _react.PropTypes.string,
+            /**
+             * 提示方向
+             * @property direction
+             * @type String
+             * @default null
+             * */
+            direction: _react.PropTypes.string,
+            classPrefix: _react.PropTypes.string,
+            componentTag: _react.PropTypes.string
+        },
+        enumerable: true
+    }]);
+
+    function Tooltip(props, context) {
+        _classCallCheck(this, _Tooltip);
+
+        _Component.call(this, props, context);
         this.state = {
             show: this.props.show,
             direction: this.props.direction
-        }
+        };
     }
+
     /**
      * 接收到新props时执行,state.show变为nextProps.show
      * 接收到新props时执行,state.show变为nextProps.show
@@ -462,34 +505,37 @@ export default class Tooltip extends Component {
      * @method componentWillReceiveProps
      * @return null
      * */
-    componentWillReceiveProps(nextProps){
+
+    Tooltip.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
         this.setState({
-            show : nextProps.show
+            show: nextProps.show
         });
-    }
-    render() {
-        return (
-            &lt;Grid ref= {this.props.ref} className={classnames(
-                this.getClassName(&#x27;wraper&#x27;),
-                {
+    };
 
-                      [this.getClassName(&#x27;show&#x27;)]: this.state.show
-                      //[this.getClassName(&#x27;show&#x27;)]: true
-                }
-            )} &gt;
-                    &lt;div className={classnames(
-                    this.getClassName(&#x27;arrow-&#x27;+this.props.direction)
-                )}&gt;&lt;/div&gt;
-                    &lt;div className={classnames(
-                    this.getClassName(&#x27;content&#x27;)
-                )}&gt;
-                        {this.props.msg}
-                    &lt;/div&gt;
+    Tooltip.prototype.render = function render() {
+        var _classnames;
 
-            &lt;/Grid&gt;
+        return _react2[&#x27;default&#x27;].createElement(
+            _GridJs2[&#x27;default&#x27;],
+            { ref: this.props.ref, className: _classnames3[&#x27;default&#x27;](this.getClassName(&#x27;wraper&#x27;), (_classnames = {}, _classnames[this.getClassName(&#x27;show&#x27;)] = this.state.show, _classnames)) },
+            _react2[&#x27;default&#x27;].createElement(&#x27;div&#x27;, { className: _classnames3[&#x27;default&#x27;](this.getClassName(&#x27;arrow-&#x27; + this.props.direction)) }),
+            _react2[&#x27;default&#x27;].createElement(
+                &#x27;div&#x27;,
+                { className: _classnames3[&#x27;default&#x27;](this.getClassName(&#x27;content&#x27;)) },
+                this.props.msg
+            )
         );
-    }
-}
+    };
+
+    var _Tooltip = Tooltip;
+    Tooltip = _utilsClassNameMixin2[&#x27;default&#x27;](Tooltip) || Tooltip;
+    return Tooltip;
+})(_react.Component);
+
+exports[&#x27;default&#x27;] = Tooltip;
+module.exports = exports[&#x27;default&#x27;];
+
+//[this.getClassName(&#x27;show&#x27;)]: true
     </pre>
 </div>
 

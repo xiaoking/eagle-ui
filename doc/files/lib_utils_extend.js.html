@@ -401,8 +401,10 @@
 
 <div class="file">
     <pre class="prettyprint linenums" id='src_code'>
+&#x27;use strict&#x27;;
+
 function isObject(obj) {
-  return typeof(obj) === &#x27;object&#x27; &amp;&amp; obj !== null;
+  return typeof obj === &#x27;object&#x27; &amp;&amp; obj !== null;
 }
 
 /**
@@ -413,37 +415,34 @@ function isObject(obj) {
 *  @param override - an object containing properties to be overwritten. It
 *                    should have the same structure as the object object.
 */
-let extend = (base, override) =&gt; {
+var extend = function extend(base, override) {
 
-  let mergedObject = {};
+  var mergedObject = {};
 
   //Loop through each key in the base object
-  Object.keys(base).forEach((key) =&gt; {
+  Object.keys(base).forEach(function (key) {
 
-    let baseProp = base[key];
-    let overrideProp;
+    var baseProp = base[key];
+    var overrideProp = undefined;
 
     if (isObject(override)) overrideProp = override[key];
 
     //Recursive call extend if the prop is another object, else just copy it over
-    mergedObject[key] = isObject(baseProp) &amp;&amp; !Array.isArray(baseProp) ?
-      extend(baseProp, overrideProp) : baseProp;
-
+    mergedObject[key] = isObject(baseProp) &amp;&amp; !Array.isArray(baseProp) ? extend(baseProp, overrideProp) : baseProp;
   });
 
   //Loop through each override key and override the props in the
   //base object
   if (isObject(override)) {
 
-    Object.keys(override).forEach((overrideKey) =&gt; {
+    Object.keys(override).forEach(function (overrideKey) {
 
-      let overrideProp = override[overrideKey];
+      var overrideProp = override[overrideKey];
 
       //Only copy over props that are not objects
       if (!isObject(overrideProp) || Array.isArray(overrideProp)) {
         mergedObject[overrideKey] = overrideProp;
       }
-
     });
   }
 
@@ -451,7 +450,6 @@ let extend = (base, override) =&gt; {
 };
 
 module.exports = extend;
-
     </pre>
 </div>
 

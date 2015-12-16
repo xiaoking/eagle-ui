@@ -401,9 +401,29 @@
 
 <div class="file">
     <pre class="prettyprint linenums" id='src_code'>
-import React,{ PropTypes, Component } from &#x27;react&#x27;;
-import classnames from &#x27;classnames&#x27;;
-import ClassNameMixin from &#x27;./utils/ClassNameMixin.js&#x27;;
+&#x27;use strict&#x27;;
+
+exports.__esModule = true;
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (&#x27;value&#x27; in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &#x27;default&#x27;: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&#x27;Cannot call a class as a function&#x27;); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== &#x27;function&#x27; &amp;&amp; superClass !== null) { throw new TypeError(&#x27;Super expression must either be null or a function, not &#x27; + typeof superClass); } subClass.prototype = Object.create(superClass &amp;&amp; superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _react = require(&#x27;react&#x27;);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _classnames = require(&#x27;classnames&#x27;);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _utilsClassNameMixinJs = require(&#x27;./utils/ClassNameMixin.js&#x27;);
+
+var _utilsClassNameMixinJs2 = _interopRequireDefault(_utilsClassNameMixinJs);
 
 /**
  * 表组件
@@ -415,35 +435,46 @@ import ClassNameMixin from &#x27;./utils/ClassNameMixin.js&#x27;;
  * @since 0.1.0
  * @author bo.an@dianping.com
  * */
-@ClassNameMixin
-export default class List extends Component{
 
-    static propTypes = {
-    };
+var List = (function (_Component) {
+    _inherits(List, _Component);
 
-    static defaultProps = {
+    function List() {
+        _classCallCheck(this, _List);
 
-    };
-
-
+        _Component.apply(this, arguments);
+    }
 
     /**
      * @method render
      * @return {ReactElement}
      * */
-    render(){
-        return (
-            &lt;div className={
-                classnames(
-                    this.getClassName(&#x27;list&#x27;),
-                    this.props.className
-                )}&gt;
-                {this.props.children}
-            &lt;/div&gt;
-        );
 
-    }
-}
+    List.prototype.render = function render() {
+        return _react2[&#x27;default&#x27;].createElement(
+            &#x27;div&#x27;,
+            { className: _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;list&#x27;), this.props.className) },
+            this.props.children
+        );
+    };
+
+    _createClass(List, null, [{
+        key: &#x27;propTypes&#x27;,
+        value: {},
+        enumerable: true
+    }, {
+        key: &#x27;defaultProps&#x27;,
+        value: {},
+        enumerable: true
+    }]);
+
+    var _List = List;
+    List = _utilsClassNameMixinJs2[&#x27;default&#x27;](List) || List;
+    return List;
+})(_react.Component);
+
+exports[&#x27;default&#x27;] = List;
+module.exports = exports[&#x27;default&#x27;];
     </pre>
 </div>
 

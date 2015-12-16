@@ -2,9 +2,9 @@
  * Created by panqianjin on 15/11/17.
  */
 import React,{Component} from 'react';
-import Tooltip from '../../../lib/Tooltip.js';
-import Button from '../../../lib/Button.js';
-import TooltipPanel from '../../../lib/TooltipPanel.js';
+import Tooltip from '../../../src/Tooltip.js';
+import Button from '../../../src/Button.js';
+import TooltipPanel from '../../../src/TooltipPanel.js';
 let Demo = class Demo extends Component{
     render(){
         return (

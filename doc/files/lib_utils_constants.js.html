@@ -406,53 +406,57 @@
  */
 //classname前缀
 
-function setNamespace(className){
-    return &#x60;${className}&#x60;;
+&#x27;use strict&#x27;;
+
+exports.__esModule = true;
+function setNamespace(className) {
+  return &#x27;&#x27; + className;
 }
-const CLASS_NAME_NAMESPACE = &#x27;eg&#x27;;
+var CLASS_NAME_NAMESPACE = &#x27;eg&#x27;;
 
-export const classConstants = {
-    /**
-     * 状态
-     * */
-    //禁用
-    disabled : setNamespace(&#x27;disabled&#x27;),
-    //启用
-    enable : setNamespace(&#x27;enable&#x27;),
-    block:setNamespace(&#x27;block&#x27;),
-    //垂直
-    tacked:setNamespace(&#x27;tacked&#x27;),
-    //宽度自适应
-    justify:setNamespace(&#x27;justify&#x27;),
-    //选中
-    active : setNamespace(&#x27;active&#x27;),
-    //大小
-    size : setNamespace(&#x27;size&#x27;),
-    //圆形样式
-    radius : setNamespace(&#x27;radius&#x27;),
-    //隨圆
-    round : setNamespace(&#x27;round&#x27;),
-    //向上箭头
-    &#x27;arrow-up&#x27;: setNamespace(&#x27;arrow-up&#x27;),
-    //向下箭头
-    &#x27;arrow-down&#x27;: setNamespace(&#x27;arrow-down&#x27;),
+var classConstants = {
+  /**
+   * 状态
+   * */
+  //禁用
+  disabled: setNamespace(&#x27;disabled&#x27;),
+  //启用
+  enable: setNamespace(&#x27;enable&#x27;),
+  block: setNamespace(&#x27;block&#x27;),
+  //垂直
+  tacked: setNamespace(&#x27;tacked&#x27;),
+  //宽度自适应
+  justify: setNamespace(&#x27;justify&#x27;),
+  //选中
+  active: setNamespace(&#x27;active&#x27;),
+  //大小
+  size: setNamespace(&#x27;size&#x27;),
+  //圆形样式
+  radius: setNamespace(&#x27;radius&#x27;),
+  //隨圆
+  round: setNamespace(&#x27;round&#x27;),
+  //向上箭头
+  &#x27;arrow-up&#x27;: setNamespace(&#x27;arrow-up&#x27;),
+  //向下箭头
+  &#x27;arrow-down&#x27;: setNamespace(&#x27;arrow-down&#x27;),
 
-    /**
-     * 颜色
-     * */
-    //成功样式
-    success : setNamespace(&#x27;success&#x27;),
-    //错误红色
-    error : setNamespace(&#x27;error&#x27;),
-    //警告warning
-    warning : setNamespace(&#x27;warning&#x27;),
-    //危险danger
-    danger : setNamespace(&#x27;danger&#x27;),
-    //展示
-    show: setNamespace(&#x27;show&#x27;),
-    white :setNamespace(&#x27;white&#x27;),
-    classNameNamespace:CLASS_NAME_NAMESPACE
+  /**
+   * 颜色
+   * */
+  //成功样式
+  success: setNamespace(&#x27;success&#x27;),
+  //错误红色
+  error: setNamespace(&#x27;error&#x27;),
+  //警告warning
+  warning: setNamespace(&#x27;warning&#x27;),
+  //危险danger
+  danger: setNamespace(&#x27;danger&#x27;),
+  //展示
+  show: setNamespace(&#x27;show&#x27;),
+  white: setNamespace(&#x27;white&#x27;),
+  classNameNamespace: CLASS_NAME_NAMESPACE
 };
+exports.classConstants = classConstants;
     </pre>
 </div>
 
