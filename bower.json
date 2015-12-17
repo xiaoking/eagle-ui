@@ -11,7 +11,19 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "lib",
+    "doc",
+    "neurons",
+    "node_modules",
+    "src",
+    "test",
+    "webpack",
+    "cortex.json",
+    "docConfig.json",
+    "gulpfile.js",
+    "karma.conf.js",
+    "package.json"
   ],
   "dependencies": {
     "react": "~0.14.0"

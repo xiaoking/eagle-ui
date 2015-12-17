@@ -1,8 +1,8 @@
 {
   "name": "eagle-ui",
-  "version": "0.1.6",
+  "version": "0.1.8",
   "description": "This is a used to develop the background management system based on the react to develop a set of UI framework",
-  "main": "index.js",
+  "main": "lib/index",
   "repository": "git://github.com/xiaoking/eagle-ui.git",
   "keywords": [
     "engle-ui",
@@ -11,7 +11,7 @@
     "react ui"
   ],
   "scripts": {
-    "build": "node_modules/.bin/gulp && node_modules/.bin/gulp min",
+    "build": "node_modules/.bin/gulp && node_modules/.bin/gulp min && node_modules/.bin/gulp style-webpack",
     "test": "karma start",
     "demo": "node_modules/.bin/gulp demo",
     "doc": "smartDoc ||node_modules/.bin/smartDoc"
@@ -25,7 +25,8 @@
     "url": "http://github.com/xiaoking/eagle-ui/issues"
   },
   "homepage": "http://github.com/xiaoking/eagle-ui",
-  "dependencies": {
+  "dependencies":{},
+  "devDependencies": {
     "babel": "^6.0.15",
     "babel-core": "^5.8.23",
     "babel-loader": "^5.3.2",
