@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -422,13 +446,13 @@ var _react = require(&#x27;react&#x27;);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _utilsClassNameMixin = require(&#x27;./utils/ClassNameMixin&#x27;);
-
-var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
-
 var _classnames = require(&#x27;classnames&#x27;);
 
 var _classnames2 = _interopRequireDefault(_classnames);
+
+var _utilsComponent = require(&#x27;./utils/Component&#x27;);
+
+var _utilsComponent2 = _interopRequireDefault(_utilsComponent);
 
 /**
  * 标签
@@ -448,59 +472,49 @@ var Label = (function (_Component) {
         key: &#x27;propTypes&#x27;,
         value: {
             url: _react.PropTypes.string,
-            clickCallback: _react.PropTypes.func
+            activeCallback: _react.PropTypes.func
         },
         enumerable: true
     }, {
         key: &#x27;defaultProps&#x27;,
         value: {
             classPrefix: &#x27;label&#x27;,
-            url: &#x27;javascript:void(0);&#x27;
+            url: &#x27;javascript:void(0);&#x27;,
+            componentTag: &#x27;a&#x27;
         },
         enumerable: true
     }]);
 
     function Label(props, context) {
-        _classCallCheck(this, _Label);
+        _classCallCheck(this, Label);
 
         _Component.call(this, props, context);
-
-        //this.state = {
-        //    active:this.props.active || false
-        //};
     }
 
     /**
      * 点击回调函数
      * */
 
-    Label.prototype.clickHandler = function clickHandler(e) {
-        var clickCallback = this.props.clickCallback;
+    Label.prototype.mouseDownHandler = function mouseDownHandler(e) {
         var target = e.target;
-        //,
-        //     active = !this.state.active;
-        //this.setState({
-        //    active:active
-        //});
-        clickCallback &amp;&amp; clickCallback(target.getAttribute(&#x27;value&#x27;), target.innerHTML, target, !this.props.active);
+
+        this.execMethod(&#x27;active&#x27;, target.getAttribute(&#x27;value&#x27;), target.innerHTML, target, !this.props.active);
     };
 
     Label.prototype.render = function render() {
         var url = this.props.url;
 
         return _react2[&#x27;default&#x27;].createElement(
-            &#x27;a&#x27;,
-            _extends({ href: url }, this.props, { className: _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;item&#x27;), this.getClassNames(this.props), this.getClassName(this.props.className)
-                //this.getClassNames(this.state)
-                ), onMouseDown: this.clickHandler.bind(this) }),
+            this.componentTag,
+            _extends({ href: url }, this.props, { className: _classnames2[&#x27;default&#x27;](this.getProperty(), this.props.className),
+                onMouseDown: this.mouseDownHandler.bind(this)
+            }),
             this.props.children
         );
     };
 
-    var _Label = Label;
-    Label = _utilsClassNameMixin2[&#x27;default&#x27;](Label) || Label;
     return Label;
-})(_react.Component);
+})(_utilsComponent2[&#x27;default&#x27;]);
 
 exports[&#x27;default&#x27;] = Label;
 module.exports = exports[&#x27;default&#x27;];

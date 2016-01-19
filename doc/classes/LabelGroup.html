@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -417,14 +441,28 @@
             <ul class="index-list properties extends">
                 
                     <li class="index-item property">
-                        <a href="#" data-tabid="#property" data-anchor="#property_clickCallback" data-tablink="clickCallback">clickCallback</a>
+                        <a href="#" data-tabid="#property" data-anchor="#property_activeCallback" data-tablink="activeCallback">activeCallback</a>
 
                         
                         
                     </li>
                 
                     <li class="index-item property">
-                        <a href="#" data-tabid="#property" data-anchor="#property_simple" data-tablink="simple">simple</a>
+                        <a href="#" data-tabid="#property" data-anchor="#property_defaultChecked" data-tablink="defaultChecked">defaultChecked</a>
+
+                        
+                        
+                    </li>
+                
+                    <li class="index-item property">
+                        <a href="#" data-tabid="#property" data-anchor="#property_egType" data-tablink="egType">egType</a>
+
+                        
+                        
+                    </li>
+                
+                    <li class="index-item property">
+                        <a href="#" data-tabid="#property" data-anchor="#property_spacing" data-tablink="spacing">spacing</a>
 
                         
                         
@@ -471,7 +509,7 @@
 
             
                 <div class="foundat">
-                    Defined in: <a href="../files/lib_LabelGroup.js.html#l48"><code>lib&#x2F;LabelGroup.js:48</code></a>
+                    Defined in: <a href="../files/lib_LabelGroup.js.html#l40"><code>lib&#x2F;LabelGroup.js:40</code></a>
                 </div>
             
 
@@ -524,7 +562,7 @@
             
         
         
-        <a href="../files/lib_LabelGroup.js.html#l48"><code>lib&#x2F;LabelGroup.js:48</code></a>
+        <a href="../files/lib_LabelGroup.js.html#l40"><code>lib&#x2F;LabelGroup.js:40</code></a>
         
         </p>
 
@@ -585,7 +623,7 @@ let Demo = class Demo extends Component{
                         &lt;/Row&gt;
                         &lt;Row&gt;
                             &lt;Col&gt;
-                                &lt;LabelGroup title=&#39;行政区&#39; defaultChecked=&#39;全部&#39; clickCallback={this.show} end&gt;
+                                &lt;LabelGroup spacing={94} title=&#39;行政区&#39; defaultChecked=&#39;全部&#39; activeCallback={this.show} end&gt;
                                     &lt;Label value="0" className="all"&gt;全部&lt;/Label&gt;
                                     &lt;Label value="1"&gt;卢湾区&lt;/Label&gt;
                                     &lt;Label value="10"&gt;徐汇区&lt;/Label&gt;
@@ -604,7 +642,26 @@ let Demo = class Demo extends Component{
                         &lt;/Row&gt;
                         &lt;Row&gt;
                             &lt;Col&gt;
-                                &lt;LabelGroup defaultChecked=&#39;卢湾区&#39; clickCallback={this.show} end&gt;
+                                &lt;LabelGroup title=&#39;商品类型&#39; defaultChecked=&#39;全部&#39; activeCallback={this.show} end&gt;
+                                    &lt;Label value="0" className="all"&gt;全部&lt;/Label&gt;
+                                    &lt;Label value="1"&gt;卢湾区&lt;/Label&gt;
+                                    &lt;Label value="10"&gt;徐汇区&lt;/Label&gt;
+                                    &lt;Label&gt;静安区&lt;/Label&gt;
+                                    &lt;Label&gt;长宁区&lt;/Label&gt;
+                                    &lt;Label&gt;闵行区&lt;/Label&gt;
+                                    &lt;Label&gt;浦东新区&lt;/Label&gt;
+                                    &lt;Label&gt;黄浦区&lt;/Label&gt;
+                                    &lt;Label&gt;普陀区&lt;/Label&gt;
+                                    &lt;Label&gt;闸北区&lt;/Label&gt;
+                                    &lt;Label&gt;虹口区&lt;/Label&gt;
+                                    &lt;Label&gt;杨浦区&lt;/Label&gt;
+                                    &lt;Label&gt;宝山区&lt;/Label&gt;
+                                &lt;/LabelGroup&gt;
+                            &lt;/Col&gt;
+                        &lt;/Row&gt;
+                        &lt;Row&gt;
+                            &lt;Col&gt;
+                                &lt;LabelGroup defaultChecked=&#39;卢湾区&#39; activeCallback={this.show} end&gt;
                                     &lt;Label value="0"&gt;全部&lt;/Label&gt;
                                     &lt;Label value="1"&gt;卢湾区&lt;/Label&gt;
                                     &lt;Label value="10"&gt;徐汇区&lt;/Label&gt;
@@ -628,7 +685,7 @@ let Demo = class Demo extends Component{
                         &lt;/Row&gt;
                         &lt;Row&gt;
                             &lt;Col&gt;
-                                &lt;LabelGroup simple  defaultChecked=&#39;全部&#39; clickCallback={this.show} end&gt;
+                                &lt;LabelGroup egType="simple" activeCallback={this.show}&gt;
                                     &lt;Label value="0"&gt;全部&lt;/Label&gt;
                                     &lt;Label value="1"&gt;卢湾区&lt;/Label&gt;
                                     &lt;Label value="10"&gt;徐汇区&lt;/Label&gt;
@@ -641,24 +698,57 @@ let Demo = class Demo extends Component{
                         &lt;/Row&gt;
                         &lt;Row&gt;
                             &lt;Col&gt;
+                                &lt;h3&gt;form标签组&lt;/h3&gt;
+                            &lt;/Col&gt;
+                        &lt;/Row&gt;
+                        &lt;Row&gt;
+                            &lt;Col sm={6}&gt;
+                                &lt;LabelGroup egType="form" &gt;
+                                    &lt;Label value="0"&gt;当前日佣金基数&lt;/Label&gt;
+                                    &lt;Label value="1"&gt;&lt;h1 className="color-error"&gt;9112&lt;/h1&gt;&lt;/Label&gt;
+                                &lt;/LabelGroup&gt;
+                            &lt;/Col&gt;
+                            &lt;Col sm={6}&gt;
+                                &lt;LabelGroup egType="form" &gt;
+                                    &lt;Label value="0"&gt;当前日佣金基数&lt;/Label&gt;
+                                    &lt;Label value="1"&gt;&lt;h1 className="color-error"&gt;9112&lt;/h1&gt;&lt;/Label&gt;
+                                &lt;/LabelGroup&gt;
+                            &lt;/Col&gt;
+                        &lt;/Row&gt;
+                        &lt;Row&gt;
+                            &lt;Col sm={6}&gt;
+                                &lt;LabelGroup egType="form" &gt;
+                                    &lt;Label value="0"&gt;当前日佣金基数&lt;/Label&gt;
+                                    &lt;Label value="1"&gt;121212121&lt;/Label&gt;
+                                &lt;/LabelGroup&gt;
+                            &lt;/Col&gt;
+                            &lt;Col sm={6}&gt;
+                                &lt;LabelGroup egType="form" &gt;
+                                    &lt;Label value="0"&gt;当前日佣金基数&lt;/Label&gt;
+                                    &lt;Label value="1"&gt;&lt;h1 className="color-error"&gt;9112&lt;/h1&gt;&lt;/Label&gt;
+                                &lt;/LabelGroup&gt;
+                            &lt;/Col&gt;
+                        &lt;/Row&gt;
+                        &lt;Row&gt;
+                            &lt;Col&gt;
                                 &lt;h3&gt;单个标签&lt;/h3&gt;
                             &lt;/Col&gt;
                         &lt;/Row&gt;
                         &lt;Row&gt;
                             &lt;Col sm={2}&gt;
-                                &lt;Label active&gt;选中&lt;/Label&gt;
+                                &lt;Label active egSize="xs"&gt;选中&lt;/Label&gt;
                             &lt;/Col&gt;
                             &lt;Col sm={2}&gt;
-                                &lt;Label success&gt;成功&lt;/Label&gt;
+                                &lt;Label  egStyle="success"&gt;成功&lt;/Label&gt;
                             &lt;/Col&gt;
                             &lt;Col sm={2}&gt;
-                                &lt;Label error&gt;错误&lt;/Label&gt;
+                                &lt;Label  egStyle="error"&gt;错误&lt;/Label&gt;
                             &lt;/Col&gt;
                             &lt;Col sm={2}&gt;
                                 &lt;Label disabled&gt;禁用&lt;/Label&gt;
                             &lt;/Col&gt;
                             &lt;Col sm={2}&gt;
-                                &lt;Label error radius&gt;圆角&lt;/Label&gt;
+                                &lt;Label egStyle="warning" egSize="lg" &gt;warning&lt;/Label&gt;
                             &lt;/Col&gt;
                             &lt;Col sm={2}&gt;
                                 &lt;Label &gt;默认&lt;/Label&gt;
@@ -698,8 +788,8 @@ export default class LabelCls extends Component{
                 <h2 class="off-left">Properties</h2>
 
                 
-                    <div id="property_clickCallback" class="property item">
-    <h3 class="name"><code>clickCallback</code></h3>
+                    <div id="property_activeCallback" class="property item">
+    <h3 class="name"><code>activeCallback</code></h3>
     <span class="type">Function</span>
 
     
@@ -721,7 +811,7 @@ export default class LabelCls extends Component{
             
         
         
-        <a href="../files/lib_LabelGroup.js.html#l78"><code>lib&#x2F;LabelGroup.js:78</code></a>
+        <a href="../files/lib_LabelGroup.js.html#l70"><code>lib&#x2F;LabelGroup.js:70</code></a>
         
         </p>
 
@@ -731,7 +821,7 @@ export default class LabelCls extends Component{
     </div>
 
     <div class="description">
-        <div class="stdoc-code"><p>点击事件，所有label会被继承</p>
+        <div class="stdoc-code"><p>点击后触发的回调，所有label会被继承</p>
 </div>
     </div>
 
@@ -743,9 +833,9 @@ export default class LabelCls extends Component{
 </div>
 
                 
-                    <div id="property_simple" class="property item">
-    <h3 class="name"><code>simple</code></h3>
-    <span class="type">Boolean</span>
+                    <div id="property_defaultChecked" class="property item">
+    <h3 class="name"><code>defaultChecked</code></h3>
+    <span class="type">String Integer</span>
 
     
 
@@ -766,7 +856,7 @@ export default class LabelCls extends Component{
             
         
         
-        <a href="../files/lib_LabelGroup.js.html#l71"><code>lib&#x2F;LabelGroup.js:71</code></a>
+        <a href="../files/lib_LabelGroup.js.html#l76"><code>lib&#x2F;LabelGroup.js:76</code></a>
         
         </p>
 
@@ -776,13 +866,103 @@ export default class LabelCls extends Component{
     </div>
 
     <div class="description">
-        <div class="stdoc-code"><p>普通标签列表</p>
+        <div class="stdoc-code"><p>默认选中的项</p>
+</div>
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_egType" class="property item">
+    <h3 class="name"><code>egType</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_LabelGroup.js.html#l63"><code>lib&#x2F;LabelGroup.js:63</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <div class="stdoc-code"><p>标签展现形式{form|simple|default}</p>
 </div>
     </div>
 
     
         <p><strong>Default:</strong></p>
-         <code> false</code>
+         <code> default</code>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_spacing" class="property item">
+    <h3 class="name"><code>spacing</code></h3>
+    <span class="type">Integer</span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_LabelGroup.js.html#l82"><code>lib&#x2F;LabelGroup.js:82</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <div class="stdoc-code"><p>间距，label集合与左边title的间距</p>
+</div>
+    </div>
+
     
 
     
@@ -814,7 +994,7 @@ export default class LabelCls extends Component{
             
         
         
-        <a href="../files/lib_LabelGroup.js.html#l65"><code>lib&#x2F;LabelGroup.js:65</code></a>
+        <a href="../files/lib_LabelGroup.js.html#l57"><code>lib&#x2F;LabelGroup.js:57</code></a>
         
         </p>
 

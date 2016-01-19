@@ -1,0 +1,161 @@
+@eg-calendar-width:100%/4;
+
+.eg-calendar-container{
+    position: absolute;
+    z-index: 9011;
+    //transition: opacity .4s ease-out;
+    border: 1px solid #eee;
+    box-shadow: 0 0 5px #eee;
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 8px 1px #ccc;
+    webkit-box-shadow: 0px 0px 8px 1px #ccc;
+    .eg-calendar-item:not(.no-hover){
+        cursor: pointer;
+    }
+    .eg-calendar-box{
+        .eg-calendar-selected{
+            color: @white !important;
+            background:@brand-primary ;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+        }
+        .eg-calendar-disabled{
+            color: #ccc;
+            cursor: default;
+        }
+    }
+
+}
+.eg-calendar-box{
+    background: @white;
+    width: 270px;
+    .box{
+        padding: 15px;
+    }
+}
+.eg-calendar-header{
+    //text-align: right;
+    line-height: 28px;
+    margin-bottom: 10px;
+    .options{
+        border: 1px solid #ccc;
+        height: 28px;
+        vertical-align: middle;
+        margin-right: 30px;
+    }
+    .today{
+        cursor: pointer;
+        position: relative;
+        top: 2px;
+    }
+    th{
+        padding-bottom: 10px;
+    }
+    .title{
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        &:hover{
+            background: #f0f0f0;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+        }
+    }
+}
+.eg-calendar-body{
+    .calendar{
+        width: 100%;
+        text-align: center;
+        tr.body td,tr.head td{
+            height: 25px;
+            vertical-align: middle;
+            span{
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                display: inline-block;
+                &:hover:not(.eg-calendar-selected):not(.eg-calendar-disabled):not(.no-hover){
+                    background: #f0f0f0;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .month-list{
+            span{
+                display: inline-block;
+                zoom:1;
+                width: @eg-calendar-width;
+                text-align: center;
+                height: 55px;
+                line-height: 55px;
+                i{
+                    font-style: normal;
+                    padding: 4px 9px;
+                    -webkit-border-radius: 500px;
+                    -moz-border-radius: 500px;
+                    border-radius: 500px;
+                    cursor: pointer;
+                    &:hover:not(.eg-selected){
+                        background: #f0f0f0;
+                    }
+                }
+            }
+        }
+
+    }
+    .old{
+        color: #ccc;
+    }
+    .head{
+        color: #999;
+    }
+}
+.eg-icon-prev,.eg-icon-next{
+    &:hover{
+        background: #f0f0f0;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+}
+
+/**左箭头*/
+.eg-icon-prev,.eg-icon-next{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    cursor: pointer;
+    &:after{
+        content: '';
+        display: inline-block;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 12px;
+        height: 12px;
+        border-top: 2px solid #999;
+        border-left: 2px solid #999;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+}
+.eg-icon-next{
+    &:after{
+        border-left:none;
+        border-right: 2px solid #999;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+}
+
+

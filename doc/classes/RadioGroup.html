@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -558,14 +582,10 @@
  * Created by mac on 15/11/4.
  */
 import React,{Component,PropTypes} from &#39;react&#39;;
-import Input from &#39;../../../src/Input.js&#39;;
-import Row from &#39;../../../src/Row.js&#39;;
-import Col from &#39;../../../src/Col.js&#39;;
-import Grid from &#39;../../../src/Grid.js&#39;;
-import RadioGroup from &#39;../../../src/RadioGroup.js&#39;;
-import CheckboxGroup from &#39;../../../src/CheckboxGroup.js&#39;;
-import CalendarPanel from &#39;../../../src/CalendarPanel.js&#39;;
+
 import querystring from &#39;querystring&#39;;
+
+import {Select,FormGroup,CalendarPanel,CheckboxGroup,RadioGroup,Grid,Row,Col,PanelContent,Panel,Input} from &#39;../../../src/index.js&#39;;
 
 
 let Demo= class Demo extends Component{
@@ -587,41 +607,116 @@ let Demo= class Demo extends Component{
             show:false
         });
     }
+    getValueCallback(val){
+        alert(val);
+        console.dir(val);
+    }
+
+    getValue(val){
+        console.dir(val);
+    }
+
+    change(e){
+        console.dir(e.target.value);
+    }
 
     render(){
 
         return (
-            &lt;Grid&gt;
-                &lt;Row&gt;
-                    &lt;Col sm={12}&gt;&lt;Input name="test" id="test" placeholder="请输入" icon="calendar"  /&gt;&lt;/Col&gt;
-                    &lt;Col sm={12}&gt;
-                        &lt;CheckboxGroup&gt;
-                            &lt;Input  type="checkbox" checked  disabled={true}  /&gt;
-                            &lt;Input  type="checkbox"  disabled={true}   /&gt;
-                            &lt;Input  type="checkbox"   /&gt;
-                            &lt;Input  type="checkbox" checked  /&gt;
-                        &lt;/CheckboxGroup&gt;
-                    &lt;/Col&gt;
-                    &lt;Col sm={12}&gt;
-                        &lt;Col sm={6}&gt;
-                            &lt;RadioGroup defaultChecked="石榴" name="radio-test"&gt;
-                                &lt;Input  type="radio"  label="石榴" value="石榴" /&gt;
-                                &lt;Input  type="radio"  label="橘子" value="橘子"  /&gt;
-                                &lt;Input  type="radio"  label="苹果" value="苹果" /&gt;
-                            &lt;/RadioGroup&gt;
+            &lt;Panel&gt;
+                &lt;PanelContent&gt;
+                &lt;Grid&gt;
+                    &lt;Row&gt;
+                        &lt;Col sm={12}&gt;&lt;Input name="test" id="test" placeholder="请输入" icon="calendar"  /&gt;&lt;/Col&gt;
+                        &lt;Col sm={12}&gt;
+                            &lt;CheckboxGroup&gt;
+                                &lt;Input  type="checkbox" checked  disabled={true}  /&gt;
+                                &lt;Input  type="checkbox"  disabled={true}   /&gt;
+                                &lt;Input  type="checkbox" getValueCallback={::this.getValue}  value="ccc"  /&gt;
+                                &lt;Input  type="checkbox" checked onChange={::this.change} value="bbb"  /&gt;
+                            &lt;/CheckboxGroup&gt;
                         &lt;/Col&gt;
-                        &lt;Col sm={6}&gt;
-                            &lt;RadioGroup defaultChecked="鸡蛋" name="radio-foot"&gt;
-                                &lt;Input  type="radio"  label="大白菜" value="大白菜" /&gt;
-                                &lt;Input  type="radio"  label="鸡蛋" value="鸡蛋" disabled={true}  /&gt;
-                                &lt;Input  type="radio"  label="猪肉" value="猪肉" /&gt;
-                                &lt;Input  type="radio"  label="牛肉" value="牛肉" /&gt;
-                                &lt;Input  type="radio"  label="鱼肉" value="鱼肉" disabled={true} /&gt;
-                            &lt;/RadioGroup&gt;
+                        &lt;Col sm={12}&gt;
+                            &lt;Col sm={6}&gt;
+                                &lt;RadioGroup defaultChecked="石榴" name="radio-test"&gt;
+                                    &lt;Input  type="radio"  label="石榴" value="石榴" /&gt;
+                                    &lt;Input  type="radio"  label="橘子" value="橘子"  /&gt;
+                                    &lt;Input  type="radio"  label="苹果" value="苹果" /&gt;
+                                &lt;/RadioGroup&gt;
+                            &lt;/Col&gt;
+                            &lt;Col sm={6}&gt;
+                                &lt;RadioGroup defaultChecked="鸡蛋" name="radio-foot" getValueCallback={this.getValueCallback}&gt;
+                                    &lt;Input  type="radio"  label="大白菜" value="大白菜" /&gt;
+                                    &lt;Input  type="radio"  label="鸡蛋" value="鸡蛋" disabled={true}  /&gt;
+                                    &lt;Input  type="radio"  label="猪肉" value="猪肉" /&gt;
+                                    &lt;Input  type="radio"  label="牛肉" value="牛肉" /&gt;
+                                    &lt;Input  type="radio"  label="鱼肉" value="鱼肉" disabled={true} /&gt;
+                                &lt;/RadioGroup&gt;
+                            &lt;/Col&gt;
                         &lt;/Col&gt;
-                    &lt;/Col&gt;
-                &lt;/Row&gt;
-            &lt;/Grid&gt;
+                    &lt;/Row&gt;
+                    &lt;Row&gt;
+                        &lt;Col&gt;&lt;h4&gt;表单&lt;/h4&gt;&lt;/Col&gt;
+                    &lt;/Row&gt;
+                    &lt;Row&gt;
+                        &lt;Col&gt;
+                            &lt;FormGroup&gt;
+                                &lt;Row&gt;
+                                    &lt;Col sm={2}&gt;姓名&lt;/Col&gt;
+                                    &lt;Col sm={10}&gt;&lt;Input name="test" id="test" placeholder="请输入姓名"   /&gt;&lt;/Col&gt;
+                                &lt;/Row&gt;
+                                &lt;Row&gt;
+                                    &lt;Col sm={2}&gt;姓名&lt;/Col&gt;
+                                    &lt;Col sm={10}&gt;&lt;Input name="test" id="test" placeholder="请输入姓名"   /&gt;&lt;/Col&gt;
+                                &lt;/Row&gt;
+                                &lt;Row&gt;
+                                    &lt;Col sm={2}&gt;性别&lt;/Col&gt;
+                                    &lt;Col sm={10}&gt;
+                                        &lt;RadioGroup defaultChecked="男" name="radio-sex"&gt;
+                                            &lt;Input  type="radio"  label="男" value="男" /&gt;
+                                            &lt;Input  type="radio"  label="女" value="女"  /&gt;
+                                        &lt;/RadioGroup&gt;
+                                    &lt;/Col&gt;
+                                &lt;/Row&gt;
+                                &lt;Row&gt;
+                                    &lt;Col sm={2}&gt;体育爱好&lt;/Col&gt;
+                                    &lt;Col sm={10}&gt;
+                                        &lt;CheckboxGroup&gt;
+                                            &lt;Input  type="checkbox" label="足球" checked   /&gt;
+                                            &lt;Input  type="checkbox" label="篮球"    /&gt;
+                                            &lt;Input  type="checkbox" label="羽毛球" checked   /&gt;
+                                            &lt;Input  type="checkbox" label="乒乓球"    /&gt;
+                                        &lt;/CheckboxGroup&gt;
+                                    &lt;/Col&gt;
+                                &lt;/Row&gt;
+                                &lt;Row&gt;
+                                    &lt;Col sm={2}&gt;姓名&lt;/Col&gt;
+                                    &lt;Col sm={13}&gt;&lt;Input name="test" id="test" placeholder="请输入姓名"   /&gt;&lt;/Col&gt;
+                                    &lt;FormGroup&gt;
+                                        &lt;Col sm={13}&gt;出生日期&lt;/Col&gt;
+                                        &lt;Col sm={13} end&gt;&lt;Input name="test" id="test" placeholder="请输入出生日期"   /&gt;&lt;/Col&gt;
+                                    &lt;/FormGroup&gt;
+                                    &lt;FormGroup&gt;
+                                        &lt;Col sm={13}&gt;省份证&lt;/Col&gt;
+                                        &lt;Col sm={13} end&gt;&lt;Input name="test" id="test" placeholder="请输入省份证"   /&gt;&lt;/Col&gt;
+                                    &lt;/FormGroup&gt;
+                                &lt;/Row&gt;
+                                &lt;Row&gt;
+                                    &lt;Col sm={2}&gt;所在城市&lt;/Col&gt;
+                                    &lt;Col sm={10}&gt;
+                                        &lt;Select placeholder="请选择城市" &gt;
+                                            &lt;item value=&#39;bei&#39;&gt;北京&lt;/item&gt;
+                                            &lt;item value=&#39;shang&#39;&gt;上海&lt;/item&gt;
+                                            &lt;item value=&#39;nan&#39;&gt;南京&lt;/item&gt;
+                                        &lt;/Select&gt;
+                                    &lt;/Col&gt;
+                                &lt;/Row&gt;
+                            &lt;/FormGroup&gt;
+                        &lt;/Col&gt;
+                    &lt;/Row&gt;
+                &lt;/Grid&gt;
+                &lt;/PanelContent&gt;
+            &lt;/Panel&gt;
         );
     }
 };

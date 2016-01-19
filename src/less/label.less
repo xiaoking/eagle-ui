@@ -1,0 +1,60 @@
+.eg-label{
+    padding: 2px 4px;
+    display: inline-block;
+    .border-radius(2px);
+}
+
+.eg-label-active{
+    background: @brand-primary;
+    color: @white;
+}
+
+.eg-label-group{
+    overflow: hidden;
+    .title{
+        float: left;
+        padding: 2px 4px;
+        color: lighten(@gray-light,13%);
+    }
+    .generic-label(10px 20px 0 0,none,2px 4px,2px,normal,underline,-10px 0 0 0);
+    .item-box{
+        overflow: hidden;
+    }
+    .item-list{
+        width: 103%;
+    }
+}
+
+.eg-label-group-simple{
+    .generic-label(0 15px 0 0,1px solid darken(@gray-lighter,15%),0px 15px 0px 0px,0,14px,underline,0);
+}
+
+.eg-label-group-form{
+    overflow: visible;
+    .eg-label{
+        cursor: text;
+        &:first-child{
+            color: lighten(@gray-light,13%);
+        }
+    }
+    .generic-label(0 10px 0 0,none,0 ,0,14px,none,0);
+}
+
+.generic-color(eg-label,primary,@white,@brand-primary);
+.generic-color(eg-label,success,@white,@brand-success);
+.generic-color(eg-label,info,@white,@brand-info);
+.generic-color(eg-label,warning,@white,@brand-warning);
+.generic-color(eg-label,danger,@white,@brand-danger);
+.generic-color(eg-label,error,@white,@brand-error);
+
+.generic-color(eg-label,disabled,@gray-light,@gray-lighter);
+
+.eg-label-lg{
+    font-size: @font-size-h4;
+}
+.eg-label-sm{
+    font-size: @font-size-base;
+}
+.eg-label-xs{
+    font-size: @font-size-small;
+}

@@ -1,11 +1,12 @@
 /**
  * Created by mac on 15/9/7.
  */
-import React,{ PropTypes, Component } from 'react';
+import React,{ PropTypes } from 'react';
 import classnames from 'classnames';
 
-import ClassNameMixin from './utils/ClassNameMixin';
 import Input from './Input.js';
+
+import Component from './utils/Component';
 
 /**
  * 单选按钮组组件
@@ -17,7 +18,6 @@ import Input from './Input.js';
  * @demo input.js {js}
  * @show true
  * */
-@ClassNameMixin
 export default class RadioGroup extends Component{
 
     static propTypes = {
@@ -56,7 +56,7 @@ export default class RadioGroup extends Component{
             this.setState({
                 checked:target.value
             });
-            this.props.getValueCallback &&( this.props.getValueCallback(target.value,target) );
+            this.execMethod('getValue',target.value,target);
         }
     }
 
@@ -77,7 +77,6 @@ export default class RadioGroup extends Component{
                 name,
                 value,
                 label,
-                onCheck,
                 ...other,
                 } = option.props;
 
@@ -88,7 +87,7 @@ export default class RadioGroup extends Component{
                 key={option.props.value}
                 value={option.props.value}
                 label={option.props.label}
-                onCheck={::this._onChange}
+                activeCallback={::this._onChange}
                 checked={option.props.value === this.state.checked}/>;
 
         },this);

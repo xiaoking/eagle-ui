@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -669,12 +693,16 @@ import Col from &#39;../../../src/Col.js&#39;;
 import Grid from &#39;../../../src/Grid.js&#39;;
 
 export default class ButtonCls extends Component{
+    onActive(target,html){
+        console.dir(html);
+        alert(&#39;测试&#39;);
+    }
     render(){
         return (
             &lt;Grid&gt;
                 &lt;Row&gt;
-                    &lt;Col sm={12}&gt;
-                        &lt;ButtonGroup justify&gt;
+                    &lt;Col&gt;
+                        &lt;ButtonGroup egType="justify" activeCallback={this.onActive}&gt;
                             &lt;Button radius egSize="sm" egStyle="warning"&gt;水平按钮组1&lt;/Button&gt;
                             &lt;Button radius egSize="sm" egStyle="warning"&gt;水平按钮组2&lt;/Button&gt;
                             &lt;Button radius egSize="sm" egStyle="warning"&gt;水平按钮组3&lt;/Button&gt;
@@ -683,7 +711,7 @@ export default class ButtonCls extends Component{
                 &lt;/Row&gt;
                 &lt;Row&gt;
                     &lt;Col sm={12}&gt;
-                        &lt;ButtonGroup tacked&gt;
+                        &lt;ButtonGroup egType="tacked"&gt;
                             &lt;Button radius egSize="sm" egStyle=""&gt;垂直按钮组1&lt;/Button&gt;
                             &lt;Button radius egSize="sm" egStyle=""&gt;垂直按钮组2&lt;/Button&gt;
                             &lt;Button radius egSize="sm" egStyle=""&gt;垂直按钮组3&lt;/Button&gt;
@@ -697,10 +725,10 @@ export default class ButtonCls extends Component{
                     &lt;Col sm={3}&gt;&lt;Button radius egSize="sm" egStyle="error"&gt;错误&lt;/Button&gt;&lt;/Col&gt;
                 &lt;/Row&gt;
                 &lt;Row&gt;
-                    &lt;Col sm={3}&gt;&lt;Button radius egSize="sm" egStyle="gray"&gt;灰色&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button radius egSize="sm" egStyle="info"&gt;info&lt;/Button&gt;&lt;/Col&gt;
                     &lt;Col sm={3}&gt;&lt;Button radius egSize="sm" &gt;默认&lt;/Button&gt;&lt;/Col&gt;
-                    &lt;Col sm={3}&gt;&lt;Button radius egSize="sm" egStyle="white"&gt;白色&lt;/Button&gt;&lt;/Col&gt;
-                    &lt;Col sm={3}&gt;&lt;Button radius egSize="sm" egStyle="white"&gt;白色&lt;/Button&gt;&lt;/Col&gt;
+                        &lt;Col sm={3}&gt;&lt;Button radius egSize="sm" egStyle="white"&gt;白色&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button radius egSize="sm" egStyle="white" disabled&gt;白色&lt;/Button&gt;&lt;/Col&gt;
                 &lt;/Row&gt;
                 &lt;Row&gt;
                     &lt;Col sm={3}&gt;&lt;Button block radius egSize="sm" egStyle="gray"&gt;灰色&lt;/Button&gt;&lt;/Col&gt;
@@ -725,6 +753,23 @@ export default class ButtonCls extends Component{
                     &lt;Col sm={3}&gt;&lt;Button block radius egSize="lg" &gt;小号&lt;/Button&gt;&lt;/Col&gt;
                     &lt;Col sm={3}&gt;&lt;Button block radius egSize="lg" disabled&gt;小号&lt;/Button&gt;&lt;/Col&gt;
                     &lt;Col sm={3}&gt;&lt;Button block radius egSize="lg" egStyle="link" &gt;小号&lt;/Button&gt;&lt;/Col&gt;
+                &lt;/Row&gt;
+                &lt;Row&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block egSize="sm" egStyle="warning" hollow&gt;警告&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block egSize="sm" egStyle="success" hollow&gt;成功&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block egSize="sm" egStyle="danger" hollow&gt;危险&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block egSize="sm" egStyle="error" hollow&gt;错误&lt;/Button&gt;&lt;/Col&gt;
+                &lt;/Row&gt;
+                &lt;Row&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block egSize="sm" egStyle="primary" hollow&gt;primary&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block egSize="sm" egStyle="info" hollow&gt;infp&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block egSize="sm" egStyle="default" hollow&gt;default&lt;/Button&gt;&lt;/Col&gt;
+                &lt;/Row&gt;
+                &lt;Row&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block egSize="sm" egStyle="warning" disabled hollow&gt;警告&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block egSize="sm" egStyle="success" disabled hollow&gt;成功&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block egSize="sm" egStyle="danger" disabled hollow&gt;危险&lt;/Button&gt;&lt;/Col&gt;
+                    &lt;Col sm={3}&gt;&lt;Button block egSize="sm" egStyle="error" disabled hollow&gt;错误&lt;/Button&gt;&lt;/Col&gt;
                 &lt;/Row&gt;
             &lt;/Grid&gt;
         );
@@ -800,7 +845,7 @@ export default class ButtonCls extends Component{
             
         
         
-        <a href="../files/lib_utils_ClassNameMixin.js.html#l114"><code>lib&#x2F;utils&#x2F;ClassNameMixin.js:114</code></a>
+        <a href="../files/lib_utils_ClassNameMixin.js.html#l119"><code>lib&#x2F;utils&#x2F;ClassNameMixin.js:119</code></a>
         
         </p>
 
@@ -922,7 +967,7 @@ export default class ButtonCls extends Component{
             
         
         
-        <a href="../files/lib_utils_ClassNameMixin.js.html#l13"><code>lib&#x2F;utils&#x2F;ClassNameMixin.js:13</code></a>
+        <a href="../files/lib_utils_ClassNameMixin.js.html#l16"><code>lib&#x2F;utils&#x2F;ClassNameMixin.js:16</code></a>
         
         </p>
 
@@ -1056,7 +1101,7 @@ export default class ButtonCls extends Component{
             
         
         
-        <a href="../files/lib_utils_ClassNameMixin.js.html#l43"><code>lib&#x2F;utils&#x2F;ClassNameMixin.js:43</code></a>
+        <a href="../files/lib_utils_ClassNameMixin.js.html#l46"><code>lib&#x2F;utils&#x2F;ClassNameMixin.js:46</code></a>
         
         </p>
 
@@ -1184,7 +1229,7 @@ export default class ButtonCls extends Component{
             
         
         
-        <a href="../files/lib_utils_ClassNameMixin.js.html#l61"><code>lib&#x2F;utils&#x2F;ClassNameMixin.js:61</code></a>
+        <a href="../files/lib_utils_ClassNameMixin.js.html#l64"><code>lib&#x2F;utils&#x2F;ClassNameMixin.js:64</code></a>
         
         </p>
 
@@ -1301,7 +1346,7 @@ export default class ButtonCls extends Component{
             
         
         
-        <a href="../files/lib_utils_ClassNameMixin.js.html#l103"><code>lib&#x2F;utils&#x2F;ClassNameMixin.js:103</code></a>
+        <a href="../files/lib_utils_ClassNameMixin.js.html#l108"><code>lib&#x2F;utils&#x2F;ClassNameMixin.js:108</code></a>
         
         </p>
 
@@ -1431,7 +1476,7 @@ export default class ButtonCls extends Component{
             
         
         
-        <a href="../files/lib_utils_ClassNameMixin.js.html#l125"><code>lib&#x2F;utils&#x2F;ClassNameMixin.js:125</code></a>
+        <a href="../files/lib_utils_ClassNameMixin.js.html#l130"><code>lib&#x2F;utils&#x2F;ClassNameMixin.js:130</code></a>
         
         </p>
 
@@ -1553,7 +1598,7 @@ export default class ButtonCls extends Component{
             
         
         
-        <a href="../files/lib_utils_ClassNameMixin.js.html#l82"><code>lib&#x2F;utils&#x2F;ClassNameMixin.js:82</code></a>
+        <a href="../files/lib_utils_ClassNameMixin.js.html#l85"><code>lib&#x2F;utils&#x2F;ClassNameMixin.js:85</code></a>
         
         </p>
 

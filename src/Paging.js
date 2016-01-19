@@ -174,7 +174,6 @@ export default class Paging extends Component{
         this.props.pageCallback && this.props.pageCallback(index );
         return this.goto(index);
     }
-
     /**
      * 生成页码
      * @method generate
@@ -194,30 +193,30 @@ export default class Paging extends Component{
         len = len>this.pages ? this.pages : len;
 
         if(currentPage>1){
-            htmlList.push(<a href="javascript:void(0);" className="" onClick={::this.prev}>上一页</a>);
+            htmlList.push(<a href="javascript:void(0);" key="上一页" className="" onClick={::this.prev}>上一页</a>);
         }
 
         //9     ....4....|.
         if(currentPage>=7){
-            htmlList.push(<a href="javascript:void(0);" onClick={::this.gotoPage.bind(this,1)}>{1}</a>);
-            htmlList.push(<a href="javascript:void(0);">...</a>);
+            htmlList.push(<a href="javascript:void(0);" key={1} onClick={::this.gotoPage.bind(this,1)}>{1}</a>);
+            htmlList.push(<a href="javascript:void(0);" key="...上一页">...</a>);
             //i+=1;
         }
 
         for(;i<=len;i++){
-            htmlList.push(<a href="javascript:void(0);" onClick={this.gotoPage.bind(this,i)} className={classnames({
+            htmlList.push(<a href="javascript:void(0);" key={i} onClick={this.gotoPage.bind(this,i)} className={classnames({
               [this.getClassName(activeClass) ]:  i==currentPage
             } ) } >{i}</a> );
         }
         //pages-currentPage =
         let bt = this.pages-currentPage;
         if(bt>=7 ){
-            htmlList.push(<a href="javascript:void(0);">...</a>);
-            htmlList.push(<a href="javascript:void(0);" onClick={::this.gotoPage.bind(this,this.pages)}>{this.pages}</a>);
+            htmlList.push(<a href="javascript:void(0);" key="...下一页">...</a>);
+            htmlList.push(<a href="javascript:void(0);" key={this.pages} onClick={::this.gotoPage.bind(this,this.pages)}>{this.pages}</a>);
         }
 
         if(this.pages>1 && currentPage!=this.pages){
-            htmlList.push(<a href="javascript:void(0);" onClick={::this.next}>下一页</a>);
+            htmlList.push(<a href="javascript:void(0);" key="下一页"  onClick={::this.next}>下一页</a>);
 
         }
 
@@ -233,13 +232,17 @@ export default class Paging extends Component{
         let {loadPageCallback} = this.props;
 
         loadPageCallback && (loadPageCallback(val) );
+
+        this.setState({
+            defaultNumber:val
+        });
     }
 
     accordingNumber(){
         let opts = [],num=10;
 
         for(let i=1;i<11;i++){
-            opts.push(<option value={num*i}>{num*i}</option>);
+            opts.push(<option value={num*i}  key={num*i}>{num*i}</option>);
         }
 
         return (
@@ -247,7 +250,7 @@ export default class Paging extends Component{
                 marginRight:'20px'
             }}>
                 每页显示&nbsp;&nbsp;
-                <select defaultValue={this.state.defaultNumber} onChange={::this.changePageSizeHandler}>
+                <select defaultValue={this.props.pageSize} onChange={::this.changePageSizeHandler}>
                     {
                         opts
                     }

@@ -1,11 +1,12 @@
 /**
  * Created by mac on 15/9/7.
  */
-import React,{ PropTypes, Component } from 'react';
+import React,{ PropTypes } from 'react';
 import classnames from 'classnames';
 
-import ClassNameMixin from './utils/ClassNameMixin';
 import Input from './Input.js';
+
+import Component from './utils/Component.js';
 
 /**
  * 多选按钮组组件
@@ -17,7 +18,6 @@ import Input from './Input.js';
  * @demo input.js {js}
  * @show true
  * */
-@ClassNameMixin
 export default class CheckboxGroup extends Component{
 
     static propTypes = {
@@ -27,8 +27,6 @@ export default class CheckboxGroup extends Component{
     constructor(props, context) {
         super(props, context);
     }
-
-
 
     componentDidMount(){
 

@@ -1,0 +1,8 @@
+.icon-direction(@direction:right,@p:32px){
+    .input-icon{
+        @{direction}:@padding-default*2;
+    }
+    input:not([type*="checkbox"]):not([type*="radio"]){
+        padding-@{direction}:@p;
+    }
+}

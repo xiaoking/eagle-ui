@@ -9,6 +9,7 @@ import Button from './Button.js';
 import Row from './Row.js';
 import Col from './Col.js';
 import Grid from './Grid.js';
+import ReactDom from 'react/lib/ReactDOM';
 /**
  * tipsPanel组件
  * 方向可选：top,down,left,right.默认down
@@ -120,7 +121,7 @@ class TooltipPanel extends Component {
      * */
     changeStyle(direction){
         let dir = direction;
-        let [dbody,delement,tipNode,eleNode] = [document.body,document.documentElement,React.findDOMNode(this.refs.tips),React.findDOMNode(this.refs.container).children[0]];
+        let [dbody,delement,tipNode,eleNode] = [document.body,document.documentElement,ReactDom.findDOMNode(this.refs.tips),ReactDom.findDOMNode(this.refs.container).children[0]];
         let bodys = {
             height: dbody.clientHeight,
             width: dbody.clientWidth
@@ -182,7 +183,7 @@ class TooltipPanel extends Component {
     getMaxBody(body,doc){
         let maxBody = {
             height: body.height > doc.height ? body.height : doc.height,
-            width: body.width > doc.width ? body.width : doc.width,
+            width: body.width > doc.width ? body.width : doc.width
 
         };
         return maxBody;

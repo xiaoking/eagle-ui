@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>lib/utils/Suggestion.js - eagle-ui</title>
+  
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-smart">
+ <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               <a class="navbar-brand mainlogo" href="">
+             
+            <img alt="eagle-ui" src="../assets/css/logo.png" title="eagle-ui">
+            
+                eagle-ui
+          </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                 <ul class="nav navbar-nav">
+                    
+                    <li><a href="">主页</a>
+                    </li>
+                    
+                    <li><a href="/documents/eagle-ui/examples/">例子</a>
+                    </li>
+                    
+                </ul>
+               <div class="navbar-form navbar-right filterAPi" autocomplete="off">
+                <input type="text" id='txtSearchAPI' class="form-control search-query" placeholder="Search for API" />
+                 <ul id="filterList" class="filterItems dropdown-menu" role="menu"></ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="sidebar">
+    <h3>Modules/Classes</h3>
+        <div id="api-tabview-filter">
+            <input id='txtSearch' type="search" class="form-control" placeholder="Type to filter Modules/Classes">
+        </div>
+        <dl id="sidebar_list">
+             
+                <dt>
+                    <span class="glyphicon glyphicon-minus"></span>
+                    <a href="../modules/form.html">form</a>
+                </dt>
+                <dd>
+                    <ul>
+                   
+                       <li>
+                            
+                           <a href="../classes/CheckboxGroup.html">CheckboxGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Input.html">Input</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/RadioGroup.html">RadioGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Select.html">Select</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/ValidatorPanel.html">ValidatorPanel</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Button.html">Button</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/ButtonGroup.html">ButtonGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                    </ul>
+                </dd>
+             
+                <dt>
+                    <span class="glyphicon glyphicon-minus"></span>
+                    <a href="../modules/grid.html">grid</a>
+                </dt>
+                <dd>
+                    <ul>
+                   
+                       <li>
+                            
+                           <a href="../classes/Grid.html">Grid</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Row.html">Row</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Col.html">Col</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                    </ul>
+                </dd>
+             
+                <dt>
+                    <span class="glyphicon glyphicon-minus"></span>
+                    <a href="../modules/panel.html">panel</a>
+                </dt>
+                <dd>
+                    <ul>
+                   
+                       <li>
+                            
+                           <a href="../classes/Panel.html">Panel</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/PanelContent.html">PanelContent</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/PanelFooter.html">PanelFooter</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/PanelHeader.html">PanelHeader</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                    </ul>
+                </dd>
+             
+                <dt>
+                    <span class="glyphicon glyphicon-minus"></span>
+                    <a href="../modules/table.html">table</a>
+                </dt>
+                <dd>
+                    <ul>
+                   
+                       <li>
+                            
+                           <a href="../classes/Th.html">Th</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Table.html">Table</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Td.html">Td</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tr.html">Tr</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                    </ul>
+                </dd>
+             
+                <dt>
+                    <span class="glyphicon glyphicon-minus"></span>
+                    <a href="../modules/ui.html">ui</a>
+                </dt>
+                <dd>
+                    <ul>
+                   
+                       <li>
+                            
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Search.html">Search</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Star.html">Star</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Calendar.html">Calendar</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/CalendarPanel.html">CalendarPanel</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Dialog.html">Dialog</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Label.html">Label</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/LabelGroup.html">LabelGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/List.html">List</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Paging.html">Paging</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tabset.html">Tabset</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Toast.html">Toast</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/TooltipPanel.html">TooltipPanel</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                    </ul>
+                </dd>
+             
+        </dl>
+</div>
+   
+    <div class="stdoc-content">
+        <!--     <form id="options-form" class="form-inline pull-right">
+        Show:
+        <label for="api-show-inherited" class="checkbox">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected" class="checkbox">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private" class="checkbox">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated" class="checkbox">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </form>
+
+ -->
+        <div class="apidocs">
+            <div id="docs-main">
+                <div class="content">
+                    <div class="page-header">
+    <h1>lib/utils/Suggestion.js <small>File</small></h1>
+</div>
+
+<div class="file">
+    <pre class="prettyprint linenums" id='src_code'>
+/**
+ * Created by panqianjin on 15/11/12.
+ */
+&#x27;use strict&#x27;;
+
+exports.__esModule = true;
+
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &#x27;default&#x27;: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) &gt;= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&#x27;Cannot call a class as a function&#x27;); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== &#x27;function&#x27; &amp;&amp; superClass !== null) { throw new TypeError(&#x27;Super expression must either be null or a function, not &#x27; + typeof superClass); } subClass.prototype = Object.create(superClass &amp;&amp; superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _react = require(&#x27;react&#x27;);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactLibReactDOM = require(&#x27;react/lib/ReactDOM&#x27;);
+
+var _reactLibReactDOM2 = _interopRequireDefault(_reactLibReactDOM);
+
+var _classnames = require(&#x27;classnames&#x27;);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _Component2 = require(&#x27;./Component&#x27;);
+
+var _Component3 = _interopRequireDefault(_Component2);
+
+var _extend = require(&#x27;extend&#x27;);
+
+var _extend2 = _interopRequireDefault(_extend);
+
+var Suggestion = (function (_Component) {
+    _inherits(Suggestion, _Component);
+
+    function Suggestion(props, context) {
+        _classCallCheck(this, Suggestion);
+
+        _Component.call(this, props, context);
+
+        //获取初始数据
+        this.options = this.getOptions();
+
+        //this.setState();
+        //缓存
+        this._cache = {};
+
+        this.suggestion = this.uniqueId();
+
+        //selectItem 选中项
+        this.selectItem = null;
+    }
+
+    Suggestion.prototype.setDefaultState = function setDefaultState(obj) {
+        _Component.prototype.setDefaultState.call(this, _extend2[&#x27;default&#x27;]({}, {
+            _reload: false,
+            _data: this.options,
+            _selectedIndex: -1,
+            _selectedValue: &#x27;&#x27;,
+            _key: this.props.defaultChecked || &#x27;&#x27;,
+            value: this.props.defaultChecked || &#x27;&#x27;,
+            _activeValue: &#x27;&#x27;,
+            delay: 400
+        }, obj));
+    };
+
+    Suggestion.prototype.setCache = function setCache(key, value) {
+        this._cache[key] = value;
+    };
+
+    Suggestion.prototype.getCache = function getCache(key) {
+        return this._cache[key];
+    };
+
+    Suggestion.prototype.setDefaultData = function setDefaultData() {
+        this.setState({
+            _selectedIndex: -1,
+            _data: this.options
+        });
+    };
+
+    //搜索 数据查询方式 ajax或者直接查询或者缓存中获取
+
+    Suggestion.prototype.search = function search(key) {
+
+        var data = this.getCache(key),
+            _this = this;
+
+        //缓存中没有数据
+        try {
+            if ((!data || data.length &lt;= 0) &amp;&amp; key != &#x27;&#x27;) {
+
+                //拿取query异步数据
+                data = _this.execMethod(&#x27;query&#x27;, key);
+                debugger;
+                //data = data(key);
+                //没拿到数据则从原始数据中查询
+                if (!data) {
+                    //options
+                    var str = JSON.stringify(this.options);
+                    ///([^}]+&quot;key&quot;:&quot;[^&quot;]*北京[^&quot;]*&quot;.+?\})/gi
+                    //let reg = new RegExp(&#x27;(\{[^}]+&quot;key&quot;:&quot;[^&quot;]*&#x27;+key+&#x27;[^&quot;]*&quot;.+?\})&#x27;,&#x27;gi&#x27;);
+                    var reg = new RegExp(&#x27;([^[},]*\{+&quot;key&quot;:&quot;[^&quot;]*&#x27; + key + &#x27;[^&quot;]*&quot;.+?\})&#x27;, &#x27;gi&#x27;);
+
+                    str = str.match(reg);
+
+                    data = str ? str : []; //this._cache[key];
+                }
+
+                this.setCache(key, data);
+            }
+            //重新绑定data渲染数据
+            this.setState({
+                _data: data &amp;&amp; data.length &gt; 0 ? data : [],
+                _selectedIndex: -1
+            });
+        } catch (ex) {
+            throw new Error(ex);
+        }
+    };
+
+    Suggestion.prototype.getOptions = function getOptions() {
+        var optionsList = [];
+        _react2[&#x27;default&#x27;].Children.map(this.props.children, function (item, i) {
+            var _item$props = item.props;
+            var value = _item$props.value;
+            var children = _item$props.children;
+
+            var other = _objectWithoutProperties(_item$props, [&#x27;value&#x27;, &#x27;children&#x27;]);
+
+            optionsList.push({
+                key: children,
+                value: value,
+                index: i
+            });
+        }, this);
+
+        return optionsList;
+    };
+
+    Suggestion.prototype.moveActive = function moveActive(type) {
+        var _data = this.state._data;
+
+        var _selectedIndex = this.state._selectedIndex;
+        _selectedIndex = type == &#x27;up&#x27; ? _selectedIndex - 1 : _selectedIndex + 1;
+
+        if (_selectedIndex &gt;= _data.length) {
+            _selectedIndex = 0;
+        }
+
+        if (_selectedIndex &lt; 0) {
+            _selectedIndex = _data.length - 1;
+        }
+        var data = this.getData(_selectedIndex);
+        this.setState({
+            _selectedIndex: _selectedIndex,
+            _activeValue: data ? data.key : &#x27;&#x27;
+        });
+        //checkedCallback
+        this.execMethod(&#x27;checked&#x27;, this.refs[this.suggestion], _selectedIndex);
+        /*clearTimeout(this.__clearTimeoutForValue);
+        this.__clearTimeoutForValue = setTimeout(,this.props.delay*3);*/
+    };
+
+    //监听用户输入
+
+    Suggestion.prototype.keyHandler = function keyHandler(event) {
+        if (event.type != &#x27;keydown&#x27;) {
+            var val = this.trim(event.target.value);
+            if (val === &#x27;&#x27;) {
+                this.hide();
+                return;
+            }
+
+            switch (event.keyCode) {
+                case 27:
+                    this.hide();
+                    return;
+                case 38:
+                    //up键
+                    this.show();
+                    this.moveActive(&#x27;up&#x27;);
+                    return;
+                case 40:
+                    //down键
+                    this.show();
+                    this.moveActive(&#x27;down&#x27;);
+                    return;
+                case 13:
+                    //回车
+                    event.preventDefault();
+                    event.stopPropagation();
+                    if (this.state._selectedIndex &lt;= -1) {
+                        //当用户没有选择任何sug项而直接按回车时
+                        this.execMethod(&#x27;success&#x27;, val);
+                    } else {
+                        //当用户通过上下键选择了某一项sug项后按回车时
+                        this._clickHandler(this.getData(this.state._selectedIndex), &#x27;enter&#x27;);
+                    }
+                    return;
+                default:
+                    this.setState({
+                        _activeValue: &#x27;&#x27;
+                    });
+                    this.valChange(val);
+            }
+        }
+    };
+
+    Suggestion.prototype.valChange = function valChange(key) {
+        clearTimeout(this.timeOutId);
+        this.timeOutId = setTimeout((function () {
+            this.show();
+            this.search(key);
+        }).bind(this), this.state.delay);
+    };
+
+    Suggestion.prototype._mouseEnterHandler = function _mouseEnterHandler(i) {
+        this.setState({
+            _selectedIndex: i
+        });
+    };
+
+    Suggestion.prototype.setValue = function setValue(value) {
+        this.setState({
+            value: value
+        });
+    };
+
+    Suggestion.prototype.getData = function getData(index) {
+        var data = this.state._data[index];
+        return data ? typeof data == &#x27;string&#x27; ? JSON.parse(data) : data : null;
+    };
+
+    Suggestion.prototype._clickHandler = function _clickHandler(item) {
+        var type = arguments.length &lt;= 1 || arguments[1] === undefined ? &quot;click&quot; : arguments[1];
+
+        this.selectItem = item;
+
+        this.setValue(item.key);
+        this.setState({
+            _activeValue: &#x27;&#x27;,
+            _selectedIndex: -1
+        });
+
+        this.execMethod(&#x27;getValue&#x27;, item.value, item.key, type);
+
+        this.hide();
+    };
+
+    Suggestion.prototype.renderList = function renderList() {
+        var data = this.state._data,
+            value = this.state.value,
+            selectedValue = this.state._selectedValue,
+            list = [];
+
+        for (var i = 0, len = data.length, item = undefined; i &lt; len; i++) {
+            item = this.getData(i);
+            if (value == item.key) {
+                this.selectItem = item;
+            }
+
+            list.push(_react2[&#x27;default&#x27;].createElement(
+                &#x27;li&#x27;,
+                {
+                    key: item.value,
+                    &#x27;data-value&#x27;: item.value,
+                    className: _classnames2[&#x27;default&#x27;]({
+                        &#x27;active&#x27;: i == this.state._selectedIndex //item.value == selectedValue
+                    }),
+                    onMouseEnter: this._mouseEnterHandler.bind(this, i),
+                    onMouseLeave: this._mouseEnterHandler.bind(this, -1),
+                    onMouseDown: this._clickHandler.bind(this, item, &#x27;click&#x27;)
+                },
+                item.key
+            ));
+        }
+        return list;
+    };
+
+    Suggestion.prototype.getValue = function getValue() {
+        return this.selectItem;
+    };
+
+    Suggestion.prototype.getTextValue = function getTextValue() {
+        var _state = this.state;
+        var value = _state.value;
+        var _activeValue = _state._activeValue;
+
+        return _activeValue ? _activeValue : value;
+    };
+
+    Suggestion.prototype.removeActiveValue = function removeActiveValue() {
+        this.setState({
+            _activeValue: &#x27;&#x27;
+        });
+    };
+
+    //渲染列表
+
+    Suggestion.prototype.renderSuggestion = function renderSuggestion() {
+        return _react2[&#x27;default&#x27;].createElement(
+            &#x27;ul&#x27;,
+            { ref: this.suggestion, className: _classnames2[&#x27;default&#x27;](this.getClassNamespace() + &#x27;-suggestion&#x27;, {}, this.state._isShow ? &#x27;&#x27; : &#x27;hide&#x27;) },
+            this.renderList()
+        );
+    };
+
+    return Suggestion;
+})(_Component3[&#x27;default&#x27;]);
+
+exports[&#x27;default&#x27;] = Suggestion;
+module.exports = exports[&#x27;default&#x27;];
+    </pre>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<a id="gotoTop" class='well well-small' href='#'>
+    Top
+</a>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/doc.js"></script>
+</body>
+</html>

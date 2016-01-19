@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -424,29 +448,21 @@ var _react = require(&#x27;react&#x27;);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _utilsClassNameMixin = require(&#x27;./utils/ClassNameMixin&#x27;);
+var _classnames = require(&#x27;classnames&#x27;);
 
-var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+var _classnames2 = _interopRequireDefault(_classnames);
 
-var _classnames2 = require(&#x27;classnames&#x27;);
+var _reactLibReactDOM = require(&#x27;react/lib/ReactDOM&#x27;);
 
-var _classnames3 = _interopRequireDefault(_classnames2);
-
-var _GridJs = require(&#x27;./Grid.js&#x27;);
-
-var _GridJs2 = _interopRequireDefault(_GridJs);
-
-var _RowJs = require(&#x27;./Row.js&#x27;);
-
-var _RowJs2 = _interopRequireDefault(_RowJs);
-
-var _ColJs = require(&#x27;./Col.js&#x27;);
-
-var _ColJs2 = _interopRequireDefault(_ColJs);
+var _reactLibReactDOM2 = _interopRequireDefault(_reactLibReactDOM);
 
 var _LabelJs = require(&#x27;./Label.js&#x27;);
 
 var _LabelJs2 = _interopRequireDefault(_LabelJs);
+
+var _utilsComponent = require(&#x27;./utils/Component&#x27;);
+
+var _utilsComponent2 = _interopRequireDefault(_utilsComponent);
 
 /**
  * 标签组
@@ -472,37 +488,57 @@ var LabelGroup = (function (_Component) {
              * */
             title: _react.PropTypes.string,
             /**
-             * 普通标签列表
-             * @property simple
-             * @type Boolean
-             * @default false
+             * 标签展现形式{form|simple|default}
+             * @property egType
+             * @type String
+             * @default default
              * */
-            simple: _react.PropTypes.bool,
+            egType: _react.PropTypes.oneOf([&#x27;simple&#x27;, &#x27;form&#x27;, &#x27;default&#x27;]),
             /**
-             * 点击事件，所有label会被继承
-             * @property clickCallback
+             * 点击后触发的回调，所有label会被继承
+             * @property activeCallback
              * @type Function
              * */
-            clickCallback: _react.PropTypes.func
+            activeCallback: _react.PropTypes.func,
+            /**
+             * 默认选中的项
+             * @property defaultChecked
+             * @type String Integer
+             * */
+            defaultChecked: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.number]),
+            /**
+             * 间距，label集合与左边title的间距
+             * @property spacing
+             * @type Integer
+             * */
+            spacing: _react.PropTypes.number
         },
         enumerable: true
     }, {
         key: &#x27;defaultProps&#x27;,
         value: {
-            classPrefix: &#x27;label&#x27;,
+            classPrefix: &#x27;label-group&#x27;,
             simple: false
         },
         enumerable: true
     }]);
 
     function LabelGroup(props, context) {
-        _classCallCheck(this, _LabelGroup);
+        _classCallCheck(this, LabelGroup);
 
         _Component.call(this, props, context);
 
-        this.state = {
-            checked: this.props.defaultChecked
-        };
+        this.setDefaultState({
+            checked: this.props.defaultChecked,
+            itemStyle: {
+                marginLeft: this.props.spacing + &#x27;px&#x27;
+            }
+        });
+
+        this.isInit = true;
+
+        this.titleObj = this.uniqueId();
+        this.itemObj = this.uniqueId();
     }
 
     LabelGroup.prototype.activeHandler = function activeHandler(callback, value, text, target, active) {
@@ -516,62 +552,75 @@ var LabelGroup = (function (_Component) {
         }
     };
 
+    LabelGroup.prototype.renderTitle = function renderTitle() {
+        var title = this.props.title;
+        var html = [];
+
+        if (title) {
+            html.push(_react2[&#x27;default&#x27;].createElement(
+                &#x27;div&#x27;,
+                { className: &#x27;title&#x27;, key: title, ref: this.titleObj },
+                title
+            ));
+        }
+
+        return html;
+    };
+
+    LabelGroup.prototype.loadedCallback = function loadedCallback() {
+
+        var offsetV = _reactLibReactDOM2[&#x27;default&#x27;].findDOMNode(this.refs[this.titleObj]),
+            itemStyle = {};
+
+        if (offsetV &amp;&amp; !this.props.spacing) {
+            var cssStr = &#x27;margin-left:&#x27; + (offsetV.offsetWidth + 30) + &#x27;px;&#x27;;
+            _reactLibReactDOM2[&#x27;default&#x27;].findDOMNode(this.refs[this.itemObj]).style.cssText = cssStr;
+        }
+    };
+
     LabelGroup.prototype.render = function render() {
-        var _classnames,
-            _this2 = this;
+        var _this2 = this;
 
         var _this = this;
         var options = _react2[&#x27;default&#x27;].Children.map(this.props.children, function (option) {
             var _option$props = option.props;
-            var clickCallback = _option$props.clickCallback;
+            var activeCallback = _option$props.activeCallback;
             var url = _option$props.url;
+            var children = _option$props.children;
+            var value = _option$props.value;
 
-            var other = _objectWithoutProperties(_option$props, [&#x27;clickCallback&#x27;, &#x27;url&#x27;]);
+            var other = _objectWithoutProperties(_option$props, [&#x27;activeCallback&#x27;, &#x27;url&#x27;, &#x27;children&#x27;, &#x27;value&#x27;]);
 
             return _react2[&#x27;default&#x27;].createElement(
                 _LabelJs2[&#x27;default&#x27;],
                 _extends({}, other, {
+                    key: children,
                     url: url ? url : _this.props.url,
-                    value: option.props.value ? option.props.value : option.props.children,
-                    clickCallback: _this.activeHandler.bind(_this, clickCallback ? clickCallback : _this.props.clickCallback),
-                    active: _this2.props.simple ? false : option.props.children === _this.state.checked }),
-                option.props.children
+                    value: value ? value : children,
+                    activeCallback: _this.activeHandler.bind(_this, activeCallback ? activeCallback : _this.props.activeCallback),
+                    active: _this2.props.egType ? false : children === _this.state.checked }),
+                children
             );
         }, this);
 
-        var labelCroupContent = this.props.simple ? _react2[&#x27;default&#x27;].createElement(
+        return _react2[&#x27;default&#x27;].createElement(
             &#x27;div&#x27;,
-            { className: _classnames3[&#x27;default&#x27;](this.getClassName(&#x27;group-simple&#x27;)) },
-            options
-        ) : _react2[&#x27;default&#x27;].createElement(
-            _GridJs2[&#x27;default&#x27;],
-            { className: _classnames3[&#x27;default&#x27;](this.getClassName(&#x27;group&#x27;), (_classnames = {}, _classnames[this.getClassName(&#x27;end&#x27;)] = !!this.props.end, _classnames)) },
+            { className: _classnames2[&#x27;default&#x27;](this.getProperty(), &#x27;clearfix&#x27;) },
+            this.renderTitle(),
             _react2[&#x27;default&#x27;].createElement(
-                _RowJs2[&#x27;default&#x27;],
-                null,
-                this.props.title ? _react2[&#x27;default&#x27;].createElement(
-                    _ColJs2[&#x27;default&#x27;],
-                    { sm: 1 },
-                    _react2[&#x27;default&#x27;].createElement(
-                        &#x27;div&#x27;,
-                        { className: _classnames3[&#x27;default&#x27;](this.getClassName(&#x27;title&#x27;)) },
-                        this.props.title
-                    )
-                ) : null,
+                &#x27;div&#x27;,
+                { className: &#x27;item-box clearfix&#x27;, ref: this.itemObj, style: this.state.itemStyle },
                 _react2[&#x27;default&#x27;].createElement(
-                    _ColJs2[&#x27;default&#x27;],
-                    { sm: this.props.title ? 11 : 12, end: true },
+                    &#x27;div&#x27;,
+                    { className: &#x27;item-list&#x27; },
                     options
                 )
             )
         );
-        return labelCroupContent;
     };
 
-    var _LabelGroup = LabelGroup;
-    LabelGroup = _utilsClassNameMixin2[&#x27;default&#x27;](LabelGroup) || LabelGroup;
     return LabelGroup;
-})(_react.Component);
+})(_utilsComponent2[&#x27;default&#x27;]);
 
 exports[&#x27;default&#x27;] = LabelGroup;
 module.exports = exports[&#x27;default&#x27;];

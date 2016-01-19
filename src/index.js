@@ -20,23 +20,31 @@ export Paging from './Paging.js';
 export Calendar from './Calendar';
 export Tab from './Tab.js';
 export Tabset from './Tabset.js';
+export Star from './Star.js'
+export Suggestion from './Suggestion.js';
+export ImgSlider from './ImgSlider.js';
+export CalendarPanel from './CalendarPanel.js';
 
 export Dialog from './Dialog.js';
 export Tooltip from './Tooltip.js';
-export Panel from './Panel/Panel.js';
-export PanelContent from './Panel/PanelContent.js';
-export PanelFooter from './Panel/PanelFooter.js';
-export PanelHeader from './Panel/PanelHeader.js';
+export Panel from './panels/Panel.js';
+export PanelContent from './panels/PanelContent.js';
+export PanelFooter from './panels/PanelFooter.js';
+export PanelHeader from './panels/PanelHeader.js';
 
 export List from './List.js';
 export Item from './Item.js';
 export ValidatorPanel from './ValidatorPanel';
 
 
-export Table from './Table/Table.js';
-export Tr from './Table/Tr.js';
-export Td from './Table/Td.js';
-export Th from './Table/Th.js';
+export Table from './tables/Table.js';
+export Tr from './tables/Tr.js';
+export Td from './tables/Td.js';
+export Th from './tables/Th.js';
+export FormGroup from './FormGroup.js';
+
+export Icon from './utils/Icon';
+
 window['Eagleui'] = {};
 
 [
@@ -44,7 +52,7 @@ window['Eagleui'] = {};
     'Button','ButtonGroup','CheckboxGroup','Input','RadioGroup','Label','ValidatorPanel',
     'Crumb','Search','Select','LabelGroup','Toast','Paging','Calendar','Tab','Tabset','Dialog','Tooltip',
     'Panel','PanelContent','PanelFooter','PanelHeader','List','Item',
-    'Table','Tr','Td','Th'
+    'Table','Tr','Td','Th','ImgSlider','FormGroup','Suggestion','ImgSlider','CalendarPanel','Star','Icon'
 ].forEach(function(clazzName){
     Eagleui[clazzName] =exports[clazzName];
 });

@@ -1,0 +1,87 @@
+.eg-dialog-hide{
+    opacity:0;
+    visibility:hidden;
+}
+.eg-dialog-mask{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 8900;
+    background:rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    .transition(~"all ease-in-out .4s ");
+    .eg-dialog-hide;
+
+}
+.eg-dialog{
+    .transition(~"transform ease-in-out .2s ");
+    .transform(translate(-50%,-70%));
+    .border-radius(3px);
+    position:fixed;
+    top:50%;
+    left:50%;
+    opacity: 1;
+    z-index: 9000;
+    background: #fff;
+    border:1px solid #e5e5e5;
+
+    .header{
+        padding:15px 15px;
+        border-bottom:1px solid #e5e5e5;
+        &.header-bg{
+            background: #eee;
+            border-color: transparent;
+        }
+    }
+
+    .content{
+        margin: 0;
+        height: auto;
+        padding: 15px;
+    }
+
+    .footer{
+        text-align: center;
+        padding: 0 15px 15px;
+        background: #fff;
+        button:not(:last-of-type){
+            margin-right: 10px;
+        }
+    }
+}
+
+.eg-dialog-show{
+    visibility:visible;
+    opacity:1;
+    .eg-dialog{
+        .transform(translate(-50%,-50%) );
+    }
+}
+
+.eg-dialog-alert,.eg-dialog-confirm{
+    width: 500px;
+    text-align: center;
+}
+.eg-dialog-lg{
+    width: 1000px;
+}
+.eg-dialog-sm{
+    width: 800px;
+}
+.eg-dialog-xs{
+    width: 500px;
+}
+
+.eg-dialog-outside{
+    background:transparent;
+    border:none;
+    .header{
+        display: none;
+    }
+    .content{
+        padding: 0;
+    }
+}

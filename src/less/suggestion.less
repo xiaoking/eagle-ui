@@ -1,0 +1,50 @@
+.eg-suggestion{
+    background: #fff;
+    //display: none;
+    //visibility: hidden;
+    position: absolute;
+    width: 100%;
+    //bottom: 0;
+    left:0;
+    zoom:1;
+    .transition(~"height ease-in-out .4s");
+
+    border:@input-border-size @input-border-type darken(@input-border-color,5%);
+    .border-radius(0px 0px 4px 4px);
+    max-height: @suggestion-max-height;
+    overflow: auto;
+
+    li{
+        //text-indent: 10px;
+        padding: @padding-default @padding-default*2;
+        cursor: pointer;
+        &:hover,&:focus{
+            color:@suggestion-hover-color;
+        }
+        &.active{
+            color:@suggestion-active-color;
+        }
+    }
+}
+.eg-suggestion-warp{
+    position: relative;
+    .eg-suggestion{
+        max-height:@suggestion-max-height*3;
+        li:not(.noresult){
+            .transition(~"background ease-in-out .15s,color ease-in-out .15s");
+            &:hover,&:focus{
+                color: @white;
+                background: lighten(@suggestion-hover-color,0%);
+            }
+            &.active{
+                color: @white;
+                background: lighten(@suggestion-hover-color,0%);
+            }
+        }
+    }
+    .subkey{
+        float: right;
+        font-size: @font-size-small;
+        color: @suggestion-subkey-color;
+    }
+}

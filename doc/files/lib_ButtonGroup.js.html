@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -422,9 +446,9 @@ var _react = require(&#x27;react&#x27;);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _utilsClassNameMixin = require(&#x27;./utils/ClassNameMixin&#x27;);
+var _utilsComponent = require(&#x27;./utils/Component&#x27;);
 
-var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+var _utilsComponent2 = _interopRequireDefault(_utilsComponent);
 
 var _classnames = require(&#x27;classnames&#x27;);
 
@@ -460,7 +484,8 @@ var ButtonGroup = (function (_Component) {
              * @type Boolean
              * @default false
              * */
-            tacked: _react.PropTypes.bool
+            tacked: _react.PropTypes.bool,
+            egType: _react.PropTypes.string
         },
         enumerable: true
     }, {
@@ -478,7 +503,7 @@ var ButtonGroup = (function (_Component) {
     }]);
 
     function ButtonGroup(props, context) {
-        _classCallCheck(this, _ButtonGroup);
+        _classCallCheck(this, ButtonGroup);
 
         _Component.call(this, props, context);
         //this.classNameMixin = new ClassNameMixin(this.props);
@@ -489,8 +514,10 @@ var ButtonGroup = (function (_Component) {
     }
 
     ButtonGroup.prototype.mouseDownHandler = function mouseDownHandler(e) {
+        var target = e.target;
+        this.execMethod(&#x27;active&#x27;, target, target.innerHTML);
         this.setState({
-            active: e.target.innerHTML
+            active: target.innerHTML
         });
     };
 
@@ -510,15 +537,13 @@ var ButtonGroup = (function (_Component) {
 
         return _react2[&#x27;default&#x27;].createElement(
             Component,
-            _extends({}, this.props, { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;btn-group&#x27;), &#x27;clearfix&#x27;, this.getClassNames(this.props)) }),
+            _extends({}, this.props, { className: _classnames2[&#x27;default&#x27;](this.getProperty(), &#x27;clearfix&#x27;) }),
             options
         );
     };
 
-    var _ButtonGroup = ButtonGroup;
-    ButtonGroup = _utilsClassNameMixin2[&#x27;default&#x27;](ButtonGroup) || ButtonGroup;
     return ButtonGroup;
-})(_react.Component);
+})(_utilsComponent2[&#x27;default&#x27;]);
 
 exports[&#x27;default&#x27;] = ButtonGroup;
 module.exports = exports[&#x27;default&#x27;];

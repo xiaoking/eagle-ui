@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -449,6 +473,10 @@ var _ColJs2 = _interopRequireDefault(_ColJs);
 var _GridJs = require(&#x27;./Grid.js&#x27;);
 
 var _GridJs2 = _interopRequireDefault(_GridJs);
+
+var _reactLibReactDOM = require(&#x27;react/lib/ReactDOM&#x27;);
+
+var _reactLibReactDOM2 = _interopRequireDefault(_reactLibReactDOM);
 
 /**
  * tipsPanel组件
@@ -584,9 +612,9 @@ var TooltipPanel = (function (_Component) {
         var dbody = document.body;
         var delement = document.documentElement;
 
-        var tipNode = _react2[&#x27;default&#x27;].findDOMNode(this.refs.tips);
+        var tipNode = _reactLibReactDOM2[&#x27;default&#x27;].findDOMNode(this.refs.tips);
 
-        var eleNode = _react2[&#x27;default&#x27;].findDOMNode(this.refs.container).children[0];
+        var eleNode = _reactLibReactDOM2[&#x27;default&#x27;].findDOMNode(this.refs.container).children[0];
 
         var bodys = {
             height: dbody.clientHeight,

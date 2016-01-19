@@ -6,6 +6,9 @@ let consts = classConstants;
 
 
 export default obj=>{
+    obj.prototype.getClassNamespace=function(){
+        return consts.classNameNamespace;
+    };
     /**
      * 给className添加前缀后返回className
      * @method getClassName
@@ -73,10 +76,11 @@ export default obj=>{
      * */
     obj.prototype.setPrefix= function(name,pre=true){
         let str = consts.classNameNamespace;
-        if(pre && this.props.classPrefix){
-            str+='-'+this.props.classPrefix;
+        const {classPrefix} = this.props;
+        if(pre && classPrefix){
+            str+='-'+classPrefix;
         }
-        if(name !=this.props.classPrefix){
+        if(name !=classPrefix){
             str += '-'+name;
         }
 

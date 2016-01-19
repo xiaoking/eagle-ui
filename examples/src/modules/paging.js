@@ -11,24 +11,26 @@ import querystring from 'querystring';
 let page = 1;
 function callback(page){
     page = page;
-    window.location = location.origin+location.pathname+'?page='+page+'&pageSize='+pageSize;
+    window.location = location.href.replace(/\?.*/,'')+'?page='+page+'&pageSize='+pageSize;
 }
 
 function loadPageCallback(pageSize){
-    window.location = location.origin+location.pathname+'?page='+page+'&pageSize='+pageSize;
+    window.location = location.href.replace(/\?.*/,'')+'?page='+page+'&pageSize='+pageSize;
 }
-
-page =location.search ? querystring.parse(location.search.substr(1) ).page*1 : 1;
-
-var pageSize = location.search ? querystring.parse(location.search.substr(1) ).pageSize*1 : 20;
+var pageSize = 20;
 
 
 export default class PagingCls extends Component{
+
     render(){
+        let query = this.props.location.query,
+        page = query.page*1 ||0,
+        pageSize = query.pageSize*1 || 20;
         return (
             <Row>
                 <Col sm={12}>
-                    <Paging showItemsNumber={true} loadPageCallback={loadPageCallback} currentPage={page} pageSize={pageSize} pageCallback={callback} total={5024} />
+                    <Paging showItemsNumber={true} loadPageCallback={loadPageCallback} currentPage={page} pageSize={pageSize}
+                            pageCallback={callback} total={5024} />
                 </Col>
             </Row>
         );

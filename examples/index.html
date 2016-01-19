@@ -3,8 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>demo演示</title>
-    <link rel="stylesheet" href="eagle-ui.css"/>
+    <link rel="stylesheet" href="js/eagle-ui.css"/>
     <style type="text/css">
+        .detail-hollow-star{
+            background: url("../examples/imgs/empty-star.png") center;
+            background-size:20px 20px;
+            width:20px;
+            height:20px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .shop-detail-hui-icon{
+            position:absolute;
+            background: url("../examples/imgs/thunder.png") center;
+            background-size: contain;
+            top: -4px;
+            left:50%;
+            width:25px;
+            height:25px;
+            margin-top: -10px;
+            margin-Left:-4px
+        }
         .page-Panel{
             padding:40px;
         }
@@ -45,11 +64,11 @@
         }
 
         .menu{
-            width: 300px;
+            width: 250px;
             position: fixed;
             left: 0;
             top: 0;
-            bottom: 0;
+            bottom: 80px;
             background: #fff;
             border-right: 1px solid #e2e2e2;
             overflow-y: scroll;
@@ -62,7 +81,7 @@
             border-bottom: 1px solid #e2e2e2;
         }
         .content{
-            margin:10px 10px 10px 310px;
+            margin:10px 10px 10px 270px;
             height: 100%;
         }
         .menu .active{
@@ -82,6 +101,7 @@
 <body>
 <div class="">
     <div class="menu" id="menu">
+        <a class="sub ft-18" href="#/icon" >icon fonts</a>
         <a class="sub ft-18" href="javascript:void(0);">表单</a>
         <div class="menu-panel">
             <a href="#/input" >Input</a>
@@ -89,15 +109,20 @@
             <a href="#/select" >下拉菜单(Select)</a>
             <a href="#/validate" >验证控件</a>
         </div>
-        <a class="sub ft-18" href="#/demo1">布局</a>
-        <a class="sub ft-18" href="#/Demo2">面板</a>
+        <a class="sub ft-18" href="#/Demo1">布局</a>
+        <a class="sub ft-18" href="#/Demo2">面板demo</a>
+        <a class="sub ft-18" href="#/Detail">商户详情页面demo</a>
         <a class="sub ft-18" href="#/table">表格</a>
+        <a class="sub ft-18" href="#/panel">面板panel</a>
         <a class="sub ft-18" href="javascript:void(0);">UI</a>
         <div class="menu-panel">
+            <a href="#/suggesion" >联想词</a>
             <a href="#/crumb" >面包屑</a>
             <a href="#/tab" >Tab</a>
             <a href="#/dialog" >弹出层</a>
+            <a href="#/slider">照片浏览插件</a>
             <a href="#/label" >标签</a>
+            <a href="#/star" >星星</a>
             <a href="#/calendar" >日历</a>
             <a href="#/paging" >分页</a>
             <a href="#/toast" >Toast</a>

@@ -1,0 +1,196 @@
+//color
+@gray-base:                 #000;
+@gray-darker:               #222; // #222
+@gray-dark:                 #333;   // #333
+@gray:                      #555; // #555
+@gray-light:                #777; // #777
+@gray-lighter:              #eee; // #eee
+
+@white:                     #fff;
+//语义化的颜色
+@brand-primary:             #ee5511; // #337ab7
+@brand-success:             #5cb85c;
+@brand-info:                #5bc0de;
+@brand-warning:             #e0690c;
+@brand-danger:              #d9534f;
+@brand-error:               #cc3333;
+
+//默认body中字体颜色
+@text-color:                @gray-dark;
+//默认body背景色
+@body-bg:                   #f1f1f1;
+
+//链接颜色
+@link-color:                @gray-dark;
+//链接hover颜色
+@link-hover-color:          darken(@gray-dark,15%);
+//** Link hover decoration.
+@link-hover-decoration:     underline;
+
+//font
+@font-family-sans-serif:    "Microsoft YaHei","helvetica regular", "Helvetica Neue", Arial, Helvetica, STHeiTi, sans-serif;
+@font-family-base:          @font-family-sans-serif;
+
+@font-size-base:            14px;
+
+@font-size-large:           ceil((@font-size-base * 1.25)); // ~18px
+@font-size-small:           ceil((@font-size-base * 0.85)); // ~12px
+
+@font-size-h1:              ceil((@font-size-base * 1.57)); // ~22px
+@font-size-h2:              ceil((@font-size-base * 1.4)); // ~20px
+@font-size-h3:              @font-size-large; // ~18px
+@font-size-h4:              ceil((@font-size-base * 1.14)); // ~16px
+@font-size-h5:              @font-size-base;
+@font-size-h6:              @font-size-small; // ~12px
+
+@line-height-base:          1.428571429; // 20/14
+
+//** Number of columns in the grid.
+@grid-columns:              12;
+//** Padding between columns. Gets divided in half for the left and right.
+@grid-gutter-width:         30px;
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+@grid-float-breakpoint:     @screen-sm-min;
+//** Point at which the navbar begins collapsing.
+@grid-float-breakpoint-max: (@grid-float-breakpoint - 1);
+
+@container-tablet:             (720px + @grid-gutter-width);
+//** For `@screen-sm-min` and up.
+@container-sm:                 @container-tablet;
+
+// Medium screen / desktop
+@container-desktop:            (940px + @grid-gutter-width);
+//** For `@screen-md-min` and up.
+@container-md:                 @container-desktop;
+
+// Large screen / wide desktop
+@container-large-desktop:      (1140px + @grid-gutter-width);
+//** For `@screen-lg-min` and up.
+@container-lg:                 @container-large-desktop;
+
+//** Deprecated `@screen-xs` as of v3.0.1
+@screen-xs:                  480px;
+//** Deprecated `@screen-xs-min` as of v3.2.0
+@screen-xs-min:              @screen-xs;
+//** Deprecated `@screen-phone` as of v3.0.1
+@screen-phone:               @screen-xs-min;
+
+// Small screen / tablet
+//** Deprecated `@screen-sm` as of v3.0.1
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+//** Deprecated `@screen-tablet` as of v3.0.1
+@screen-tablet:              @screen-sm-min;
+
+// Medium screen / desktop
+//** Deprecated `@screen-md` as of v3.0.1
+@screen-md:                  992px;
+@screen-md-min:              @screen-md;
+//** Deprecated `@screen-desktop` as of v3.0.1
+@screen-desktop:             @screen-md-min;
+
+// Large screen / wide desktop
+//** Deprecated `@screen-lg` as of v3.0.1
+@screen-lg:                  1200px;
+@screen-lg-min:              @screen-lg;
+//** Deprecated `@screen-lg-desktop` as of v3.0.1
+@screen-lg-desktop:          @screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);
+
+//边距
+@padding-default:           5px;
+//垂直和水平最大内边距
+@padding-large-vertical:    @padding-default*2;//10
+@padding-large-horizontal:  @padding-default*3;//15
+@padding-small-vertical:    @padding-default;
+@padding-small-horizontal:  @padding-large-vertical;
+@padding-xs-vertical:       1px;
+@padding-xs-horizontal:     @padding-default;
+
+@line-height-large:         1.3333333;
+@line-height-small:         1.5;
+
+@border-radius-base:        4px;
+@border-radius-large:       6px;
+@border-radius-small:       3px;
+
+//animation
+@animation-duration-large:  0.8s;
+@animation-duration-small:  0.6s;
+@animation-duration-xs:     0.5s;
+
+//button
+@btn-font-weight:                normal;
+
+@btn-hollow-bg:                  @white;
+@btn-hollow-color:               @gray-dark;
+
+@btn-white-color:              @gray-dark;
+@btn-white-bg:                 @white;
+@btn-white-border:             darken(@gray-lighter,10%);
+
+@btn-default-color:              @white;
+@btn-default-bg:                 @brand-primary;
+@btn-default-border:             transparent;
+
+@btn-primary-color:              @gray-dark;
+@btn-primary-bg:                 @white;
+@btn-primary-border:             #dbdad9;
+
+@btn-success-color:              @white;
+@btn-success-bg:                 @brand-success;
+@btn-success-border:             darken(@btn-success-bg, 5%);
+
+@btn-info-color:                 @white;
+@btn-info-bg:                    @brand-info;
+@btn-info-border:                darken(@btn-info-bg, 5%);
+
+@btn-warning-color:              @white;
+@btn-warning-bg:                 @brand-warning;
+@btn-warning-border:             darken(@btn-warning-bg, 5%);
+
+@btn-danger-color:               @white;
+@btn-danger-bg:                  @brand-danger;
+@btn-danger-border:              darken(@btn-danger-bg, 5%);
+
+@btn-error-color:               @white;
+@btn-error-bg:                  #fa3f39;
+@btn-error-border:              darken(@btn-error-bg, 5%);
+
+@btn-link-disabled-color:        @gray-light;
+
+@btn-border-radius-base:         @border-radius-base;
+@btn-border-radius-large:        @border-radius-large;
+@btn-border-radius-small:        @border-radius-small;
+
+//input
+@input-border-color:             @gray-lighter;
+@input-border-size:              1px;
+@input-border-type:              solid;
+
+@input-min-height:              18px;
+@input-max-height:              60px;
+
+@input-icon-size:               16px;
+
+//suggestion
+@suggestion-hover-color:        @brand-primary;
+@suggestion-active-color:       @suggestion-hover-color;
+@suggestion-max-height:         150px;
+@suggestion-min-height:         0;
+@suggestion-subkey-color:       darken(@gray-lighter,15%);
+
+//panel
+@panel-header-backgourd-color:  darken(@white,5%);
+@panel-margin-bottom:           20px;
+@panel-footer-backgourd-color:  @panel-header-backgourd-color;
+@panel-backgourd-color:         @white;
+@panel-border-color:            #ddd;
+
+//label
+@label-spacing:                 20px;

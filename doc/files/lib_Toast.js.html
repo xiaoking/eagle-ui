@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -424,9 +448,9 @@ var _utilsClassNameMixin = require(&#x27;./utils/ClassNameMixin&#x27;);
 
 var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 
-var _classnames2 = require(&#x27;classnames&#x27;);
+var _classnames = require(&#x27;classnames&#x27;);
 
-var _classnames3 = _interopRequireDefault(_classnames2);
+var _classnames2 = _interopRequireDefault(_classnames);
 
 var _ButtonJs = require(&#x27;./Button.js&#x27;);
 
@@ -443,6 +467,14 @@ var _ColJs2 = _interopRequireDefault(_ColJs);
 var _GridJs = require(&#x27;./Grid.js&#x27;);
 
 var _GridJs2 = _interopRequireDefault(_GridJs);
+
+var _Dialog = require(&#x27;./Dialog&#x27;);
+
+var _Dialog2 = _interopRequireDefault(_Dialog);
+
+var _utilsComponent = require(&#x27;./utils/Component&#x27;);
+
+var _utilsComponent2 = _interopRequireDefault(_utilsComponent);
 
 /**
  * 提示组件
@@ -472,11 +504,11 @@ var Toast = (function (_Component) {
             type: _react.PropTypes.string,
             /**
              * 文字信息
-             * @property msg
+             * @property message
              * @type String
              * @default 保存成功
              * */
-            msg: _react.PropTypes.string,
+            message: _react.PropTypes.string,
             /**
              * tips n秒后消失 默认2秒
              * @property seconds
@@ -484,13 +516,6 @@ var Toast = (function (_Component) {
              * @default 2
              * */
             seconds: _react.PropTypes.number,
-            /**
-             * 是否显示遮罩，默认false
-             * @property overlay
-             * @type Boolean
-             * @default false
-             * */
-            overlay: _react.PropTypes.boolean,
             /**
              * 类名样式前缀
              * @property classPrefix
@@ -511,141 +536,62 @@ var Toast = (function (_Component) {
     }, {
         key: &#x27;defaultProps&#x27;,
         value: {
-            type: &#x27;sucess-tips&#x27;,
-            msg: &#x27;保存成功&#x27;,
+            type: &#x27;success&#x27;,
+            message: &#x27;保存成功&#x27;,
             seconds: 2,
-            overlay: false,
-            classPrefix: &#x27;tips&#x27;,
+            classPrefix: &#x27;dialog&#x27;,
             componentTag: &#x27;div&#x27;
         },
         enumerable: true
     }]);
 
     function Toast(props, context) {
-        _classCallCheck(this, _Toast);
+        _classCallCheck(this, Toast);
 
         _Component.call(this, props, context);
-        this.flag = true;
-        this.state = {
-            /**
-             * 是否显示tips
-             * @type Boolean
-             * */
-            show: this.props.show
-        };
     }
 
     /**
-     * 接收到新props时执行,props改变，改变state.show
-     * @method componentWillReceiveProps
-     *
+     * 改变state.show 隐藏tips,并调用回调方法
+     * @method close
+     * @return null
      * */
 
-    Toast.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
-        this.setState({
-            /**
-             * state.show随新的props里的值改变
-             * @type Boolean
-             * */
-            show: nextProps.show
-        });
+    Toast.prototype.close = function close() {
+        var seconds = this.props.seconds * 1000,
+            _this = this;
+        clearTimeout(this.timeout);
+        this.timeout = setTimeout(function () {
+            _this.props.closeCallback &amp;&amp; _this.props.closeCallback();
+            _Dialog2[&#x27;default&#x27;].close();
+        }, seconds);
     };
 
-    /**
-     * change flag状态，即非第一次
-     * */
+    Toast.prototype.renderDialog = function renderDialog(className) {
+        var _props = this.props;
+        var message = _props.message;
+        var children = _props.children;
+        var type = _props.type;
 
-    Toast.prototype.componentDidMount = function componentDidMount() {
-        this.flag = false;
-    };
-
-    /**
-     * @method render
-     * @return {ReactElement}
-     * */
-
-    Toast.prototype.render = function render() {
-        var _classnames;
-
-        this.setTimeoutForClose();
+        this.close();
         return _react2[&#x27;default&#x27;].createElement(
-            _GridJs2[&#x27;default&#x27;],
-            { ref: &#x27;container&#x27;, className: _classnames3[&#x27;default&#x27;](this.getClassName(this.props.overlay ? &#x27;container&#x27; : &#x27;wapper&#x27;), (_classnames = {}, _classnames[&#x27;fadein&#x27;] = this.state.show, _classnames[&#x27;fadeout&#x27;] = this.flag ? false : !this.state.show, _classnames)) },
-            !this.flag &amp;&amp; !this.state.show ? this.displayNone() : null,
-            this.toast()
-        );
-    };
-
-    /**
-     * 改变display形态
-     * */
-
-    Toast.prototype.displayNone = function displayNone() {
-        var _this = this;
-        clearTimeout(this.timer);
-        this.timer = setTimeout((function () {
-            this.removeClass(_react2[&#x27;default&#x27;].findDOMNode(_this.refs.container), &#x27;fadeout&#x27;);
-        }).bind(this), 400);
-    };
-
-    /**
-     * 渲染toast主体
-     * @method toast
-     * @return {ReactElement}
-     * */
-
-    Toast.prototype.toast = function toast() {
-        return _react2[&#x27;default&#x27;].createElement(
-            _RowJs2[&#x27;default&#x27;],
-            { className: _classnames3[&#x27;default&#x27;](this.getClassNamesForArguments(this.props.classPrefix)) },
+            &#x27;div&#x27;,
+            { className: &#x27;clearfix&#x27; },
+            _react2[&#x27;default&#x27;].createElement(&#x27;div&#x27;, { style: { padding: &#x27;5px 15px&#x27;, float: &#x27;left&#x27; }, className: _classnames2[&#x27;default&#x27;](this.setPrefix(&#x27;tips-&#x27; + type, false)) }),
             _react2[&#x27;default&#x27;].createElement(
-                _ColJs2[&#x27;default&#x27;],
-                null,
-                _react2[&#x27;default&#x27;].createElement(
-                    _RowJs2[&#x27;default&#x27;],
-                    { className: _classnames3[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;content&#x27;)) },
-                    _react2[&#x27;default&#x27;].createElement(&#x27;div&#x27;, { style: { padding: &#x27;5px 15px&#x27;, float: &#x27;left&#x27; }, className: _classnames3[&#x27;default&#x27;](this.getClassNamesForArguments(this.props.type)) }),
-                    _react2[&#x27;default&#x27;].createElement(
-                        &#x27;div&#x27;,
-                        { style: { padding: &#x27;5px 15px&#x27;, float: &#x27;right&#x27; } },
-                        this.props.msg
-                    )
-                )
+                &#x27;div&#x27;,
+                { style: { padding: &#x27;5px 15px&#x27;, float: &#x27;right&#x27; } },
+                children || message
             )
         );
     };
 
-    /**
-     * 延时n秒消失
-     * @method  setTimeoutForClose
-     * @return null
-     * */
-
-    Toast.prototype.setTimeoutForClose = function setTimeoutForClose() {
-        if (this.state.show) {
-            var seconds = this.props.seconds * 1000;
-            clearTimeout(this.timeout);
-            this.timeout = setTimeout(this.closeToast.bind(this), seconds);
-        }
+    Toast.prototype.render = function render() {
+        return this.renderDialog(&#x27;toast&#x27;);
     };
 
-    /**
-     * 改变state.show 隐藏tips,并调用回调方法
-     * @method closeToast
-     * @return null
-     * */
-
-    Toast.prototype.closeToast = function closeToast() {
-        this.props.closeCallback &amp;&amp; this.props.closeCallback();
-        this.setState({
-            show: false
-        });
-    };
-
-    var _Toast = Toast;
-    Toast = _utilsClassNameMixin2[&#x27;default&#x27;](Toast) || Toast;
     return Toast;
-})(_react.Component);
+})(_utilsComponent2[&#x27;default&#x27;]);
 
 exports[&#x27;default&#x27;] = Toast;
 module.exports = exports[&#x27;default&#x27;];

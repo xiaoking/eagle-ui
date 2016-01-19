@@ -1,0 +1,10 @@
+.font-size(@size:12px){
+    font-size:@size ;
+}
+.generic-fonts(@index:1,@size:22px) when(@index<=6){
+    @f:replace(~"@{size}","px","");
+    h@{index},.ft-@{f},.h@{index}{
+        .font-size(@size);
+    }
+    .generic-fonts(@index+1,@size - 2);
+}

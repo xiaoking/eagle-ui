@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -418,6 +442,10 @@ function _inherits(subClass, superClass) { if (typeof superClass !== &#x27;funct
 var _react = require(&#x27;react&#x27;);
 
 var _react2 = _interopRequireDefault(_react);
+
+var _reactLibReactDOM = require(&#x27;react/lib/ReactDOM&#x27;);
+
+var _reactLibReactDOM2 = _interopRequireDefault(_reactLibReactDOM);
 
 var _classnames = require(&#x27;classnames&#x27;);
 
@@ -515,7 +543,7 @@ var CalendarPanel = (function (_Component) {
 
     CalendarPanel.prototype.inputFocusHandler = function inputFocusHandler(e) {
 
-        var container = _react2[&#x27;default&#x27;].findDOMNode(this),
+        var container = _reactLibReactDOM2[&#x27;default&#x27;].findDOMNode(this),
             _this = this,
             calendar = container.querySelector(&#x27;.&#x27; + this.getClassName(&#x27;container&#x27;)),
             input = e.target;
@@ -569,7 +597,8 @@ var CalendarPanel = (function (_Component) {
                 onMouseUp: _this.inputMouseUpHandler.bind(_this),
                 onFocus: _this.inputFocusHandler.bind(_this),
                 value: _this.state.value,
-                onChange: _this.inputChangeHandler.bind(_this)
+                onChange: _this.inputChangeHandler.bind(_this),
+                icon: option.props.icon
             }));
         }, this);
 

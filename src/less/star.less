@@ -1,0 +1,16 @@
+.eg-star,.eg-star-grey{
+  background: data-uri('./img/star.png') repeat-x 0 0;
+}
+.eg-star{
+  display: inline-block;
+  width: 70px;
+  height: 13px;
+  background-size: 70px auto;
+  .eg-star-grey{
+    height: inherit;
+    background-position: 0 -14px;
+    background-size: inherit;
+    overflow: hidden;
+    max-width: 100%;
+  }
+}

@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -401,53 +425,19 @@
 
 <div class="file">
     <pre class="prettyprint linenums" id='src_code'>
-/**
- * Created by panqianjin on 15/10/30.
- */
 &#x27;use strict&#x27;;
 
 exports.__esModule = true;
 
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (&#x27;value&#x27; in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
 function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &#x27;default&#x27;: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&#x27;Cannot call a class as a function&#x27;); } }
+var _dialogDialog = require(&#x27;./dialog/Dialog&#x27;);
 
-function _inherits(subClass, superClass) { if (typeof superClass !== &#x27;function&#x27; &amp;&amp; superClass !== null) { throw new TypeError(&#x27;Super expression must either be null or a function, not &#x27; + typeof superClass); } subClass.prototype = Object.create(superClass &amp;&amp; superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var _react = require(&#x27;react&#x27;);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _utilsClassNameMixin = require(&#x27;./utils/ClassNameMixin&#x27;);
-
-var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
-
-var _classnames = require(&#x27;classnames&#x27;);
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
-var _ButtonJs = require(&#x27;./Button.js&#x27;);
-
-var _ButtonJs2 = _interopRequireDefault(_ButtonJs);
-
-var _RowJs = require(&#x27;./Row.js&#x27;);
-
-var _RowJs2 = _interopRequireDefault(_RowJs);
-
-var _ColJs = require(&#x27;./Col.js&#x27;);
-
-var _ColJs2 = _interopRequireDefault(_ColJs);
-
-var _GridJs = require(&#x27;./Grid.js&#x27;);
-
-var _GridJs2 = _interopRequireDefault(_GridJs);
+var _dialogDialog2 = _interopRequireDefault(_dialogDialog);
 
 /**
- * 弹框组件，dialog类型：分为alert,confirm,dialog,mask 四种。默认alert。
- * 根据show的存在与否决定弹框展示与否
- * @class dialog
+ * 弹出层组件
+ * @class Dialog
  * @module ui
  * @extends Component
  * @constructor
@@ -456,376 +446,103 @@ var _GridJs2 = _interopRequireDefault(_GridJs);
  * @show true
  * */
 
-var Dialog = (function (_Component) {
-    _inherits(Dialog, _Component);
+/**
+ * 点击确认按钮后会执行此回调，默认调用Dialog.confirm会返回promise
+ * @property successCallback
+ * @type Function
+ * @default
+ * */
 
-    _createClass(Dialog, null, [{
-        key: &#x27;propType&#x27;,
-        value: {
-            /**
-             * dialog类型：分为alert,confirm,dialog,mask 四种。默认alert
-             * @property type
-             * @type String
-             * @default alert
-             * */
-            type: _react.PropTypes.string,
-            /**
-             * 标题
-             * @property title
-             * @type String
-             * @default &quot;&quot;
-             * */
-            title: _react.PropTypes.string,
-            /**
-             * 点击确定时，回调方法
-             * @property successCallback
-             * @type Function
-             * @default null
-             * */
-            successCallback: _react.PropTypes.func,
-            /**
-             * 点击取消时，回调方法
-             * @property cancelCallback
-             * @type Function
-             * @default null
-             * */
-            cancelCallback: _react.PropTypes.func,
-            /**
-             * 类名样式前缀
-             * @property classPrefix
-             * @type sting
-             * @default crumb
-             * */
-            classPrefix: _react.PropTypes.string,
-            /**
-             * 标签tagName
-             * @property componentTag
-             * @type String
-             * @default div
-             * */
-            componentTag: _react.PropTypes.string
+/**
+ * 点击取消按钮或关闭后会执行此回调，默认调用Dialog.confirm会返回promise
+ * @property cancelCallback
+ * @type Function
+ * @default
+ * */
 
-        },
-        enumerable: true
-    }, {
-        key: &#x27;defaultProps&#x27;,
-        value: {
-            successCallback: null, //success回掉函数
-            cancelCallback: null, //cancel回调函数
-            close: false, //是否有x图标
-            title: &#x27;&#x27;, //标题
-            type: &#x27;alert&#x27;,
-            classPrefix: &#x27;dialog&#x27;,
-            componentTag: &#x27;div&#x27;
-        },
-        enumerable: true
-    }]);
+/**
+ * 是否显示标题栏背景色
+ * @property isHeaderBackground
+ * @type Boolean
+ * @default true
+ * */
 
-    function Dialog(props, context) {
-        _classCallCheck(this, _Dialog);
+/**
+ * 底部按钮对齐方式 center、right or left
+ * @property buttonAlign
+ * @type String
+ * @default center
+ * */
 
-        _Component.call(this, props, context);
-        this.flag = true;
-        this.state = {
-            show: this.props.show,
-            init: true
-        };
-    }
+/**
+ * 是否显示标题栏
+ * @property isHeader
+ * @type Boolean
+ * @default true
+ * */
 
-    /**
-     * 接收到新props时执行,props是否存在show，是改变state.show，否则不变
-     * 生命周期方法
-     * @method componentWillReceiveProps
-     * */
+/**
+ * 内容区域对齐方式
+ * @property contentAlign
+ * @type String
+ * @default center
+ * */
 
-    Dialog.prototype.componentDidMount = function componentDidMount() {
-        //this.flag = false;
-    };
+/**
+ * 是否显示遮罩层
+ * @property isMask
+ * @type Boolean
+ * @default true
+ * */
 
-    Dialog.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
-        if (nextProps.show) {
-            this.flag = false;
-            this.setState({
-                show: nextProps.show
-            });
-        }
-    };
+/**
+ * 内容不在content之内 mask属性
+ * @property outside
+ * @type Boolean
+ * @default false
+ * */
 
-    /**
-     * @method render
-     * @return {ReactElement}
-     * */
+/**
+ * 是否显示关闭 mask常用属性
+ * @property isClose
+ * @type Boolean
+ * @default false
+ * */
 
-    Dialog.prototype.render = function render() {
-        var showOrHide = this.props.cancelCallback ? this.props.show : this.state.show;
-        return _react2[&#x27;default&#x27;].createElement(
-            _GridJs2[&#x27;default&#x27;],
-            { ref: &#x27;container&#x27;, className: _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;container&#x27;), this.flag ? &#x27;&#x27; : showOrHide ? &#x27;fadein&#x27; : &#x27;fadeout&#x27;) },
-            !this.flag &amp;&amp; !(this.props.cancelCallback ? this.props.show : this.state.show) ? this.displayNone() : null,
-            this[this.props.type.toLowerCase()](),
-            this.showOverlay(this.props.tips)
-        );
-    };
+/**
+ * 标题
+ * @property title
+ * @type String
+ * @default empty
+ * */
 
-    /**
-     * 改变display形态
-     * */
+/**
+ * 底部按钮组
+ * 例如：
+         [
+             {
+                 type: &#x27;success&#x27;,
+                 name: &#x27;确认&#x27;,
+                 callback:()=&gt;{}
+             },
+             {
+                 type:&#x27;cancel&#x27;,
+                 egStyle:&#x27;white&#x27;,
+                 name:&#x27;取消&#x27;,
+                 callback:()=&gt;{}
+             },
+             {
+                 egStyle:&#x27;warning&#x27;,
+                 name:&#x27;自定义按钮&#x27;,
+                 callback:()=&gt;{alert(&#x27;自定义按钮&#x27;);}
+             }
+         ]
+ * @property buttons
+ * @type Array
+ * @default empty
+ * */
 
-    Dialog.prototype.displayNone = function displayNone() {
-        var _this = this;
-        clearTimeout(this.timer);
-        this.timer = setTimeout((function () {
-            this.removeClass(_react2[&#x27;default&#x27;].findDOMNode(_this.refs.container), &#x27;fadeout&#x27;);
-        }).bind(this), 400);
-    };
-
-    Dialog.prototype.close = function close(callbackId) {
-        callbackId = this.props[callbackId + &#x27;Callback&#x27;];
-        if (callbackId) {
-            callbackId();
-            return this;
-        }
-
-        this.flag = false;
-        this.setState({
-            show: false
-        });
-    };
-
-    /**
-     * 点击X，调用cancelCallback（如果存在），否则通过改变自身state来关闭
-     * @method closeDialog
-     * @return null
-     * */
-
-    Dialog.prototype.closeDialog = function closeDialog() {
-        this.close(&#x27;cancel&#x27;);
-    };
-
-    /**
-     * 点击确定按钮，调用successCallback（如果存在），否则通过改变自身state来关闭
-     * @method submitForm
-     * @return null;
-     * */
-
-    Dialog.prototype.submitForm = function submitForm() {
-        this.close(&#x27;success&#x27;);
-    };
-
-    /**
-     * 点击取消按钮，调用cancelCallback（如果存在），否则通过改变自身state来关闭
-     * @method cancleDialog
-     * @return null;
-     * */
-
-    Dialog.prototype.cancleDialog = function cancleDialog() {
-        this.close(&#x27;cancel&#x27;);
-    };
-
-    /**
-     * 显示遮罩
-     * @method showOverlay
-     * @return {ReactElement}
-     * */
-
-    Dialog.prototype.showOverlay = function showOverlay() {
-        return _react2[&#x27;default&#x27;].createElement(_GridJs2[&#x27;default&#x27;], { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;overlay&#x27;)) });
-    };
-
-    /**
-     * 渲染alert
-     * @method alert
-     * @return  {ReactElement}
-     * */
-
-    Dialog.prototype.alert = function alert() {
-        return _react2[&#x27;default&#x27;].createElement(
-            _RowJs2[&#x27;default&#x27;],
-            { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;dialog&#x27;)), style: { width: &#x27;500px&#x27; } },
-            _react2[&#x27;default&#x27;].createElement(
-                _ColJs2[&#x27;default&#x27;],
-                null,
-                _react2[&#x27;default&#x27;].createElement(
-                    _RowJs2[&#x27;default&#x27;],
-                    { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;title&#x27;)), style: { textAlign: &#x27;center&#x27; } },
-                    this.props.title
-                ),
-                _react2[&#x27;default&#x27;].createElement(
-                    _RowJs2[&#x27;default&#x27;],
-                    { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;content&#x27;)), style: { textAlign: &#x27;center&#x27; } },
-                    _react2[&#x27;default&#x27;].createElement(
-                        _ColJs2[&#x27;default&#x27;],
-                        null,
-                        this.props.children
-                    )
-                ),
-                _react2[&#x27;default&#x27;].createElement(
-                    _RowJs2[&#x27;default&#x27;],
-                    { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;button&#x27;)) },
-                    _react2[&#x27;default&#x27;].createElement(
-                        _ColJs2[&#x27;default&#x27;],
-                        { sm: 12 },
-                        _react2[&#x27;default&#x27;].createElement(
-                            _ButtonJs2[&#x27;default&#x27;],
-                            { radius: true, egSize: &#x27;xs&#x27;, onClick: this.submitForm.bind(this) },
-                            &#x27;确定&#x27;
-                        )
-                    )
-                )
-            )
-        );
-    };
-
-    /**
-     * 渲染confirm
-     * @method confirm
-     * @return  {ReactElement}
-     * */
-
-    Dialog.prototype.confirm = function confirm() {
-        return _react2[&#x27;default&#x27;].createElement(
-            _RowJs2[&#x27;default&#x27;],
-            { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;dialog&#x27;)), style: { width: &#x27;500px&#x27; } },
-            _react2[&#x27;default&#x27;].createElement(
-                _ColJs2[&#x27;default&#x27;],
-                null,
-                _react2[&#x27;default&#x27;].createElement(
-                    _RowJs2[&#x27;default&#x27;],
-                    { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;title&#x27;)), style: { textAlign: &#x27;center&#x27; } },
-                    this.props.title,
-                    _react2[&#x27;default&#x27;].createElement(
-                        &#x27;div&#x27;,
-                        { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;close&#x27;)), onClick: this.closeDialog.bind(this) },
-                        &#x27;x&#x27;
-                    )
-                ),
-                _react2[&#x27;default&#x27;].createElement(
-                    _RowJs2[&#x27;default&#x27;],
-                    { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;content&#x27;)), style: { textAlign: &#x27;center&#x27; } },
-                    _react2[&#x27;default&#x27;].createElement(
-                        _ColJs2[&#x27;default&#x27;],
-                        null,
-                        this.props.children ? this.props.children : &#x27;请快乐的修bug&#x27;
-                    )
-                ),
-                _react2[&#x27;default&#x27;].createElement(
-                    _RowJs2[&#x27;default&#x27;],
-                    { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;button&#x27;)) },
-                    _react2[&#x27;default&#x27;].createElement(
-                        _ColJs2[&#x27;default&#x27;],
-                        { sm: 12 },
-                        _react2[&#x27;default&#x27;].createElement(
-                            _ButtonJs2[&#x27;default&#x27;],
-                            { radius: true, egSize: &#x27;xs&#x27;, style: { marginRight: &#x27;20px&#x27; }, onClick: this.submitForm.bind(this) },
-                            &#x27;确定&#x27;
-                        ),
-                        _react2[&#x27;default&#x27;].createElement(
-                            _ButtonJs2[&#x27;default&#x27;],
-                            { radius: true, white: true, egSize: &#x27;xs&#x27;, onClick: this.cancleDialog.bind(this) },
-                            &#x27;取消&#x27;
-                        )
-                    )
-                )
-            )
-        );
-    };
-
-    /**
-     * 渲染dialog
-     * @method dialog
-     * @return  {ReactElement}
-     * */
-
-    Dialog.prototype.dialog = function dialog() {
-        return _react2[&#x27;default&#x27;].createElement(
-            _RowJs2[&#x27;default&#x27;],
-            { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;dialog&#x27;)) },
-            _react2[&#x27;default&#x27;].createElement(
-                _ColJs2[&#x27;default&#x27;],
-                null,
-                _react2[&#x27;default&#x27;].createElement(
-                    _RowJs2[&#x27;default&#x27;],
-                    { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;title&#x27;)) },
-                    this.props.title,
-                    _react2[&#x27;default&#x27;].createElement(
-                        &#x27;div&#x27;,
-                        { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;close&#x27;)), onClick: this.closeDialog.bind(this) },
-                        &#x27;x&#x27;
-                    )
-                ),
-                _react2[&#x27;default&#x27;].createElement(
-                    _RowJs2[&#x27;default&#x27;],
-                    { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;content&#x27;)) },
-                    _react2[&#x27;default&#x27;].createElement(
-                        _ColJs2[&#x27;default&#x27;],
-                        null,
-                        this.props.children
-                    )
-                ),
-                _react2[&#x27;default&#x27;].createElement(
-                    _RowJs2[&#x27;default&#x27;],
-                    { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;button&#x27;)) },
-                    _react2[&#x27;default&#x27;].createElement(
-                        _ColJs2[&#x27;default&#x27;],
-                        { sm: 12 },
-                        _react2[&#x27;default&#x27;].createElement(
-                            _ButtonJs2[&#x27;default&#x27;],
-                            { radius: true, egSize: &#x27;xs&#x27;, style: { marginRight: &#x27;20px&#x27; }, onClick: this.submitForm.bind(this) },
-                            &#x27;确定&#x27;
-                        ),
-                        _react2[&#x27;default&#x27;].createElement(
-                            _ButtonJs2[&#x27;default&#x27;],
-                            { radius: true, white: true, egSize: &#x27;xs&#x27;, onClick: this.cancleDialog.bind(this) },
-                            &#x27;取消&#x27;
-                        )
-                    )
-                )
-            )
-        );
-    };
-
-    /**
-     * 渲染mask
-     * @method mask
-     * @return  {ReactElement}
-     * */
-
-    Dialog.prototype.mask = function mask() {
-        return _react2[&#x27;default&#x27;].createElement(
-            _RowJs2[&#x27;default&#x27;],
-            { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;dialog&#x27;)) },
-            _react2[&#x27;default&#x27;].createElement(
-                _ColJs2[&#x27;default&#x27;],
-                null,
-                _react2[&#x27;default&#x27;].createElement(
-                    _RowJs2[&#x27;default&#x27;],
-                    { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;title&#x27;, &#x27;mask-title&#x27;)) },
-                    this.props.title,
-                    _react2[&#x27;default&#x27;].createElement(
-                        &#x27;div&#x27;,
-                        { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;close&#x27;)), onClick: this.closeDialog.bind(this) },
-                        &#x27;x&#x27;
-                    )
-                ),
-                _react2[&#x27;default&#x27;].createElement(
-                    _RowJs2[&#x27;default&#x27;],
-                    { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;content&#x27;)), style: { marginTop: &#x27;10px&#x27; } },
-                    _react2[&#x27;default&#x27;].createElement(
-                        _ColJs2[&#x27;default&#x27;],
-                        null,
-                        this.props.children
-                    )
-                )
-            )
-        );
-    };
-
-    var _Dialog = Dialog;
-    Dialog = _utilsClassNameMixin2[&#x27;default&#x27;](Dialog) || Dialog;
-    return Dialog;
-})(_react.Component);
-
-exports[&#x27;default&#x27;] = Dialog;
+exports[&#x27;default&#x27;] = _dialogDialog2[&#x27;default&#x27;];
 module.exports = exports[&#x27;default&#x27;];
     </pre>
 </div>

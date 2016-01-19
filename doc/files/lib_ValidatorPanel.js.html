@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -426,6 +450,10 @@ var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
 var _classnames = require(&#x27;classnames&#x27;);
 
 var _classnames2 = _interopRequireDefault(_classnames);
+
+var _reactLibReactDOM = require(&#x27;react/lib/ReactDOM&#x27;);
+
+var _reactLibReactDOM2 = _interopRequireDefault(_reactLibReactDOM);
 
 /**
  * 表单验证组件&lt;br /&gt;
@@ -1056,7 +1084,7 @@ var ValidatorPanel = (function (_Component) {
     };
 
     ValidatorPanel.prototype.getForm = function getForm() {
-        return _react2[&#x27;default&#x27;].findDOMNode(this.refs[this.props.id ? this.props.id : this.formName]);
+        return _reactLibReactDOM2[&#x27;default&#x27;].findDOMNode(this.refs[this.props.id ? this.props.id : this.formName]);
     };
 
     ValidatorPanel.prototype.getElements = function getElements() {
@@ -1107,7 +1135,7 @@ var ValidatorPanel = (function (_Component) {
         initCallback.call(this, this.submit.bind(this));
 
         if (submitElement) {
-            document.querySelector(submitElement).addEventListener(&#x27;mousedown&#x27;, this.submit.bind(this), false);
+            document.querySelector(submitElement).addEventListener(&#x27;click&#x27;, this.submit.bind(this), false);
         }
         //let tip = this.getTip();
 

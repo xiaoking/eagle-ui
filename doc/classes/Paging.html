@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -650,24 +674,26 @@ import querystring from &#39;querystring&#39;;
 let page = 1;
 function callback(page){
     page = page;
-    window.location = location.origin+location.pathname+&#39;?page=&#39;+page+&#39;&amp;pageSize=&#39;+pageSize;
+    window.location = location.href.replace(/\?.*/,&#39;&#39;)+&#39;?page=&#39;+page+&#39;&amp;pageSize=&#39;+pageSize;
 }
 
 function loadPageCallback(pageSize){
-    window.location = location.origin+location.pathname+&#39;?page=&#39;+page+&#39;&amp;pageSize=&#39;+pageSize;
+    window.location = location.href.replace(/\?.*/,&#39;&#39;)+&#39;?page=&#39;+page+&#39;&amp;pageSize=&#39;+pageSize;
 }
-
-page =location.search ? querystring.parse(location.search.substr(1) ).page*1 : 1;
-
-var pageSize = location.search ? querystring.parse(location.search.substr(1) ).pageSize*1 : 20;
+var pageSize = 20;
 
 
 export default class PagingCls extends Component{
+
     render(){
+        let query = this.props.location.query,
+        page = query.page*1 ||0,
+        pageSize = query.pageSize*1 || 20;
         return (
             &lt;Row&gt;
                 &lt;Col sm={12}&gt;
-                    &lt;Paging showItemsNumber={true} loadPageCallback={loadPageCallback} currentPage={page} pageSize={pageSize} pageCallback={callback} total={5024} /&gt;
+                    &lt;Paging showItemsNumber={true} loadPageCallback={loadPageCallback} currentPage={page} pageSize={pageSize}
+                            pageCallback={callback} total={5024} /&gt;
                 &lt;/Col&gt;
             &lt;/Row&gt;
         );
@@ -1209,7 +1235,7 @@ export default class PagingCls extends Component{
             
         
         
-        <a href="../files/lib_Paging.js.html#l334"><code>lib&#x2F;Paging.js:334</code></a>
+        <a href="../files/lib_Paging.js.html#l338"><code>lib&#x2F;Paging.js:338</code></a>
         
         </p>
 

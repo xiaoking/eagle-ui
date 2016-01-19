@@ -21,7 +21,7 @@ export default class Grid extends Component{
 
         return (
             <div {...this.props}
-                className={classnames(this.getClassName('grid'),this.props.className)}>
+                className={classnames(this.getClassName('grid'),this.getClassName(this.props.fluid?'grid-'+'fluid':''),this.props.className)}>
                 {this.props.children}
             </div>
         );

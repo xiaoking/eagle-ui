@@ -1,8 +1,8 @@
 /**
  * Created by mac on 15/9/7.
  */
-import React,{Component,PropTypes} from 'react';
-import ClassNameMixin from './utils/ClassNameMixin';
+import React,{PropTypes} from 'react';
+import Component from './utils/Component';
 import classnames from 'classnames';
 
 /**
@@ -15,7 +15,7 @@ import classnames from 'classnames';
  * @demo button.js {js}
  * @show true
  * */
-@ClassNameMixin
+
 export default class Button extends Component{
     //static mixins = [ClassNameMixin];
     static propTypes = {
@@ -98,26 +98,25 @@ export default class Button extends Component{
     static defaultProps = {
         egSize:'default',
         classPrefix:'btn',
-        componentTag:'a'
+        componentTag:'button'
     };
     //lg
     //sm
     //xs this.getClassName('demo'); eg-demo
     constructor(props, context) {
         super(props, context);
-        //this.classNameMixin = new ClassNameMixin(this.props);
+        this.setProperty('hollow','hollow');
     }
+
     render(){
         //const {} = this.props;
         //什么颜色，大小  类型
-        let {egSize,componentTag:Component,egStyle} = this.props;
-        //let  size= this.classNameMixin.getClassName(egSize);
+        let {componentTag:Component} = this.props;
 
         return (
-            <Component {...this.props} className={
+            <Component {...this.otherProps} className={
                 classnames(
-                    this.getClassNamesForArguments('btn',egSize,egStyle),
-                    this.getClassNames(this.props),
+                    this.getProperty(),
                     this.props.className
                 )
                 }>{this.props.children}</Component>

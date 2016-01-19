@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -428,13 +452,13 @@ var _classnames = require(&#x27;classnames&#x27;);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _utilsClassNameMixin = require(&#x27;./utils/ClassNameMixin&#x27;);
-
-var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
-
 var _InputJs = require(&#x27;./Input.js&#x27;);
 
 var _InputJs2 = _interopRequireDefault(_InputJs);
+
+var _utilsComponent = require(&#x27;./utils/Component&#x27;);
+
+var _utilsComponent2 = _interopRequireDefault(_utilsComponent);
 
 /**
  * 单选按钮组组件
@@ -476,7 +500,7 @@ var RadioGroup = (function (_Component) {
     }]);
 
     function RadioGroup(props, context) {
-        _classCallCheck(this, _RadioGroup);
+        _classCallCheck(this, RadioGroup);
 
         _Component.call(this, props, context);
 
@@ -492,7 +516,7 @@ var RadioGroup = (function (_Component) {
             this.setState({
                 checked: target.value
             });
-            this.props.getValueCallback &amp;&amp; this.props.getValueCallback(target.value, target);
+            this.execMethod(&#x27;getValue&#x27;, target.value, target);
         }
     };
 
@@ -512,9 +536,8 @@ var RadioGroup = (function (_Component) {
             var name = _option$props.name;
             var value = _option$props.value;
             var label = _option$props.label;
-            var onCheck = _option$props.onCheck;
 
-            var other = _objectWithoutProperties(_option$props, [&#x27;name&#x27;, &#x27;value&#x27;, &#x27;label&#x27;, &#x27;onCheck&#x27;]);
+            var other = _objectWithoutProperties(_option$props, [&#x27;name&#x27;, &#x27;value&#x27;, &#x27;label&#x27;]);
 
             return _react2[&#x27;default&#x27;].createElement(_InputJs2[&#x27;default&#x27;], _extends({}, other, {
                 ref: option.props.value,
@@ -522,7 +545,7 @@ var RadioGroup = (function (_Component) {
                 key: option.props.value,
                 value: option.props.value,
                 label: option.props.label,
-                onCheck: _this._onChange.bind(_this),
+                activeCallback: _this._onChange.bind(_this),
                 checked: option.props.value === _this.state.checked }));
         }, this);
 
@@ -538,10 +561,8 @@ var RadioGroup = (function (_Component) {
         );
     };
 
-    var _RadioGroup = RadioGroup;
-    RadioGroup = _utilsClassNameMixin2[&#x27;default&#x27;](RadioGroup) || RadioGroup;
     return RadioGroup;
-})(_react.Component);
+})(_utilsComponent2[&#x27;default&#x27;]);
 
 exports[&#x27;default&#x27;] = RadioGroup;
 module.exports = exports[&#x27;default&#x27;];

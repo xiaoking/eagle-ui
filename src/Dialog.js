@@ -1,17 +1,8 @@
+import Dialog from './dialog/Dialog';
+
 /**
- * Created by panqianjin on 15/10/30.
- */
-import React,{Component,PropTypes} from 'react';
-import ClassNameMixin from './utils/ClassNameMixin';
-import classnames from 'classnames';
-import Button from './Button.js';
-import Row from './Row.js';
-import Col from './Col.js';
-import Grid from './Grid.js';
-/**
- * 弹框组件，dialog类型：分为alert,confirm,dialog,mask 四种。默认alert。
- * 根据show的存在与否决定弹框展示与否
- * @class dialog
+ * 弹出层组件
+ * @class Dialog
  * @module ui
  * @extends Component
  * @constructor
@@ -19,314 +10,101 @@ import Grid from './Grid.js';
  * @demo dialog.js{js}
  * @show true
  * */
-@ClassNameMixin
-export default
-class Dialog extends Component {
-    static propType = {
-        /**
-         * dialog类型：分为alert,confirm,dialog,mask 四种。默认alert
-         * @property type
-         * @type String
-         * @default alert
-         * */
-        type: PropTypes.string,
-        /**
-         * 标题
-         * @property title
-         * @type String
-         * @default ""
-         * */
-        title: PropTypes.string,
-        /**
-         * 点击确定时，回调方法
-         * @property successCallback
-         * @type Function
-         * @default null
-         * */
-        successCallback: PropTypes.func,
-        /**
-         * 点击取消时，回调方法
-         * @property cancelCallback
-         * @type Function
-         * @default null
-         * */
-        cancelCallback: PropTypes.func,
-        /**
-         * 类名样式前缀
-         * @property classPrefix
-         * @type sting
-         * @default crumb
-         * */
-        classPrefix: PropTypes.string,
-        /**
-         * 标签tagName
-         * @property componentTag
-         * @type String
-         * @default div
-         * */
-        componentTag: PropTypes.string
 
-    }
-    static defaultProps = {
-        successCallback: null,//success回掉函数
-        cancelCallback: null,//cancel回调函数
-        close: false,//是否有x图标
-        title: '',//标题
-        type: 'alert',
-        classPrefix: 'dialog',
-        componentTag: 'div'
-    }
+/**
+ * 点击确认按钮后会执行此回调，默认调用Dialog.confirm会返回promise
+ * @property successCallback
+ * @type Function
+ * @default
+ * */
 
-    constructor(props, context) {
-        super(props, context);
-        this.flag = true;
-        this.state = {
-            show: this.props.show,
-            init: true
-        };
-    }
-    /**
-     * 接收到新props时执行,props是否存在show，是改变state.show，否则不变
-     * 生命周期方法
-     * @method componentWillReceiveProps
-     * */
-    componentDidMount(){
-        //this.flag = false;
-    }
-    componentWillReceiveProps (nextProps) {
-        if(nextProps.show ){
-            this.flag = false;
-            this.setState({
-                show:nextProps.show
-            });
-        }
+/**
+ * 点击取消按钮或关闭后会执行此回调，默认调用Dialog.confirm会返回promise
+ * @property cancelCallback
+ * @type Function
+ * @default
+ * */
 
-    }
-    /**
-     * @method render
-     * @return {ReactElement}
-     * */
-    render() {
-        let showOrHide = this.props.cancelCallback?this.props.show:this.state.show;
-        return (
-            <Grid ref = 'container' className={classnames(
-                this.getClassName('container'),
-                this.flag ? '':showOrHide?'fadein':'fadeout'
-                )}>
-                {!this.flag && !(this.props.cancelCallback?this.props.show:this.state.show)?this.displayNone():null}
-                {this[this.props.type.toLowerCase()]()}
-                {this.showOverlay(this.props.tips)}
-            </Grid>
-        );
-    }
-    /**
-     * 改变display形态
-     * */
-    displayNone(){
-        let _this =this;
-        clearTimeout(this.timer);
-        this.timer = setTimeout(function(){this.removeClass( React.findDOMNode(_this.refs.container),'fadeout')}.bind(this),400);
-    }
+/**
+ * 是否显示标题栏背景色
+ * @property isHeaderBackground
+ * @type Boolean
+ * @default true
+ * */
 
-    close(callbackId){
-        callbackId = this.props[`${callbackId}Callback`];
-        if(callbackId){
-           callbackId();
-           return this;
-        }
+/**
+ * 底部按钮对齐方式 center、right or left
+ * @property buttonAlign
+ * @type String
+ * @default center
+ * */
 
-        this.flag = false;
-        this.setState({
-            show: false
-        });
-    }
-    /**
-     * 点击X，调用cancelCallback（如果存在），否则通过改变自身state来关闭
-     * @method closeDialog
-     * @return null
-     * */
-    closeDialog() {
-        this.close('cancel');
-    }
+/**
+ * 是否显示标题栏
+ * @property isHeader
+ * @type Boolean
+ * @default true
+ * */
 
-    /**
-     * 点击确定按钮，调用successCallback（如果存在），否则通过改变自身state来关闭
-     * @method submitForm
-     * @return null;
-     * */
-    submitForm() {
-        this.close('success');
-    }
-    /**
-     * 点击取消按钮，调用cancelCallback（如果存在），否则通过改变自身state来关闭
-     * @method cancleDialog
-     * @return null;
-     * */
-    cancleDialog() {
-        this.close('cancel');
-    }
+/**
+ * 内容区域对齐方式
+ * @property contentAlign
+ * @type String
+ * @default center
+ * */
 
-    /**
-     * 显示遮罩
-     * @method showOverlay
-     * @return {ReactElement}
-     * */
-    showOverlay() {
-        return (
-            <Grid className={
-                classnames(
-                    this.getClassNamesForArguments('overlay')
-                )
-            }>
-            </Grid>
-        );
+/**
+ * 是否显示遮罩层
+ * @property isMask
+ * @type Boolean
+ * @default true
+ * */
 
-    }
+/**
+ * 内容不在content之内 mask属性
+ * @property outside
+ * @type Boolean
+ * @default false
+ * */
 
-    /**
-     * 渲染alert
-     * @method alert
-     * @return  {ReactElement}
-     * */
-    alert() {
-        return (
-            <Row className={ classnames(
-                    this.getClassNamesForArguments('dialog')
-                )} style={{width:'500px'}}>
-                <Col>
-                    <Row className={classnames(
-                   this.getClassNamesForArguments('title')
-                )} style={{textAlign:'center'}}>
-                            {this.props.title}
-                    </Row>
-                    <Row className={ classnames(
-                    this.getClassNamesForArguments('content'))} style={{textAlign:'center'}}>
-                        <Col>
-                            {this.props.children}
-                        </Col>
-                    </Row>
-                    <Row className={ classnames(
-                    this.getClassNamesForArguments('button')
-                )}>
-                        <Col sm={12}>
-                            <Button radius egSize="xs" onClick={::this.submitForm}>确定</Button>
-                        </Col>
-                    </Row>
-                </Col>
-            </Row>
-        );
-    }
-    /**
-     * 渲染confirm
-     * @method confirm
-     * @return  {ReactElement}
-     * */
+/**
+ * 是否显示关闭 mask常用属性
+ * @property isClose
+ * @type Boolean
+ * @default false
+ * */
 
-    confirm() {
-        return (
-            <Row className={ classnames(
-                    this.getClassNamesForArguments('dialog')
-                )} style={{width:'500px'}}>
-                <Col>
-                    <Row className={classnames(
-                   this.getClassNamesForArguments('title')
-                )} style={{textAlign:'center'}}>
-                            {this.props.title}
-                            <div className={classnames(
-                    this.getClassNamesForArguments('close')
-                    )} onClick={::this.closeDialog}>x
-                            </div>
-                    </Row>
-                    <Row className={ classnames(
-                    this.getClassNamesForArguments('content'))} style={{textAlign:'center'}}>
-                        <Col>
-                            {this.props.children?this.props.children:'请快乐的修bug'}
-                        </Col>
-                    </Row>
-                    <Row className={ classnames(
-                    this.getClassNamesForArguments('button'))}>
-                        <Col sm={12}>
-                            <Button radius egSize="xs" style={{marginRight:'20px'}} onClick={::this.submitForm}>确定
-                            </Button>
-                            <Button radius white egSize="xs" onClick={::this.cancleDialog}>取消</Button>
-                        </Col>
-                    </Row>
-                </Col>
-            </Row>
-        );
-    }
+/**
+ * 标题
+ * @property title
+ * @type String
+ * @default empty
+ * */
 
-    /**
-     * 渲染dialog
-     * @method dialog
-     * @return  {ReactElement}
-     * */
-    dialog() {
-        return (
-            <Row className={ classnames(
-                    this.getClassNamesForArguments('dialog')
-                )}>
-                <Col>
-                    <Row className={classnames(
-                   this.getClassNamesForArguments('title')
-                )}>
-                            {this.props.title}
-                            <div className={classnames(
-                    this.getClassNamesForArguments('close')
-                    )} onClick={::this.closeDialog}>x
-                            </div>
-                    </Row>
-                    <Row className={ classnames(
-                    this.getClassNamesForArguments('content'))}>
-                        <Col>
-                            {this.props.children}
-                        </Col>
-                    </Row>
-                    <Row className={ classnames(
-                    this.getClassNamesForArguments('button'))}>
-                        <Col sm={12}>
-                            <Button radius egSize="xs" style={{marginRight:'20px'}} onClick={::this.submitForm}>确定
-                            </Button>
-                            <Button radius white egSize="xs" onClick={::this.cancleDialog}>取消</Button>
-                        </Col>
-                    </Row>
-                </Col>
-            </Row>
-        );
-    }
-    /**
-     * 渲染mask
-     * @method mask
-     * @return  {ReactElement}
-     * */
+/**
+ * 底部按钮组
+ * 例如：
+         [
+             {
+                 type: 'success',
+                 name: '确认',
+                 callback:()=>{}
+             },
+             {
+                 type:'cancel',
+                 egStyle:'white',
+                 name:'取消',
+                 callback:()=>{}
+             },
+             {
+                 egStyle:'warning',
+                 name:'自定义按钮',
+                 callback:()=>{alert('自定义按钮');}
+             }
+         ]
+ * @property buttons
+ * @type Array
+ * @default empty
+ * */
 
-    mask() {
-        return (
-            <Row className={ classnames(
-                    this.getClassNamesForArguments('dialog')
-                )}>
-                <Col>
-                    <Row className={classnames(
-                   this.getClassNamesForArguments('title','mask-title')
-
-                )}>
-                            {this.props.title}
-                            <div className={classnames(
-                    this.getClassNamesForArguments('close')
-                    )} onClick={::this.closeDialog}>x
-                            </div>
-                    </Row>
-                    <Row className={ classnames(
-                    this.getClassNamesForArguments('content'))} style={{marginTop:'10px'}}>
-                        <Col>
-                            {this.props.children}
-                        </Col>
-                    </Row>
-                </Col>
-            </Row>
-
-        )
-    }
-}
-
-
+export default Dialog;

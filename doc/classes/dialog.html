@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>dialog - eagle-ui</title>
+    <title>Dialog - eagle-ui</title>
   
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -396,11 +420,10 @@
             <div id="docs-main">
                 <div class="content">
                     <div class="page-header">
-    <h1>dialog <small>Class</small></h1>
+    <h1>Dialog <small>Class</small></h1>
 </div>
  <div class="well well-small sign-left3">
-      <div class="stdoc-code"><p>弹框组件，dialog类型：分为alert,confirm,dialog,mask 四种。默认alert。
-根据show的存在与否决定弹框展示与否</p>
+      <div class="stdoc-code"><p>弹出层组件</p>
 </div>
  </div>
 
@@ -410,86 +433,26 @@
         <div class="index-section methods col-sm-4">
             <h3>Methods</h3>
             
-            <ul class="index-list methods extends">
-                
-                    <li class="index-item method">
-                        <a href="#" data-tabid="#method" data-anchor="#method_alert" data-tablink="alert">alert</a>
-
-                        
-                        
-                    </li>
-                
-                    <li class="index-item method">
-                        <a href="#" data-tabid="#method" data-anchor="#method_cancleDialog" data-tablink="cancleDialog">cancleDialog</a>
-
-                        
-                        
-                    </li>
-                
-                    <li class="index-item method">
-                        <a href="#" data-tabid="#method" data-anchor="#method_closeDialog" data-tablink="closeDialog">closeDialog</a>
-
-                        
-                        
-                    </li>
-                
-                    <li class="index-item method">
-                        <a href="#" data-tabid="#method" data-anchor="#method_componentWillReceiveProps" data-tablink="componentWillReceiveProps">componentWillReceiveProps</a>
-
-                        
-                        
-                    </li>
-                
-                    <li class="index-item method">
-                        <a href="#" data-tabid="#method" data-anchor="#method_confirm" data-tablink="confirm">confirm</a>
-
-                        
-                        
-                    </li>
-                
-                    <li class="index-item method">
-                        <a href="#" data-tabid="#method" data-anchor="#method_dialog" data-tablink="dialog">dialog</a>
-
-                        
-                        
-                    </li>
-                
-                    <li class="index-item method">
-                        <a href="#" data-tabid="#method" data-anchor="#method_mask" data-tablink="mask">mask</a>
-
-                        
-                        
-                    </li>
-                
-                    <li class="index-item method">
-                        <a href="#" data-tabid="#method" data-anchor="#method_render" data-tablink="render">render</a>
-
-                        
-                        
-                    </li>
-                
-                    <li class="index-item method">
-                        <a href="#" data-tabid="#method" data-anchor="#method_showOverlay" data-tablink="showOverlay">showOverlay</a>
-
-                        
-                        
-                    </li>
-                
-                    <li class="index-item method">
-                        <a href="#" data-tabid="#method" data-anchor="#method_submitForm" data-tablink="submitForm">submitForm</a>
-
-                        
-                        
-                    </li>
-                
-            </ul>
-            
         </div>
     
         <div class="index-section properties col-sm-4">
             <h3>Properties</h3>
             
             <ul class="index-list properties extends">
+                
+                    <li class="index-item property">
+                        <a href="#" data-tabid="#property" data-anchor="#property_buttonAlign" data-tablink="buttonAlign">buttonAlign</a>
+
+                        
+                        
+                    </li>
+                
+                    <li class="index-item property">
+                        <a href="#" data-tabid="#property" data-anchor="#property_buttons" data-tablink="buttons">buttons</a>
+
+                        
+                        
+                    </li>
                 
                     <li class="index-item property">
                         <a href="#" data-tabid="#property" data-anchor="#property_cancelCallback" data-tablink="cancelCallback">cancelCallback</a>
@@ -499,14 +462,42 @@
                     </li>
                 
                     <li class="index-item property">
-                        <a href="#" data-tabid="#property" data-anchor="#property_classPrefix" data-tablink="classPrefix">classPrefix</a>
+                        <a href="#" data-tabid="#property" data-anchor="#property_contentAlign" data-tablink="contentAlign">contentAlign</a>
 
                         
                         
                     </li>
                 
                     <li class="index-item property">
-                        <a href="#" data-tabid="#property" data-anchor="#property_componentTag" data-tablink="componentTag">componentTag</a>
+                        <a href="#" data-tabid="#property" data-anchor="#property_isClose" data-tablink="isClose">isClose</a>
+
+                        
+                        
+                    </li>
+                
+                    <li class="index-item property">
+                        <a href="#" data-tabid="#property" data-anchor="#property_isHeader" data-tablink="isHeader">isHeader</a>
+
+                        
+                        
+                    </li>
+                
+                    <li class="index-item property">
+                        <a href="#" data-tabid="#property" data-anchor="#property_isHeaderBackground" data-tablink="isHeaderBackground">isHeaderBackground</a>
+
+                        
+                        
+                    </li>
+                
+                    <li class="index-item property">
+                        <a href="#" data-tabid="#property" data-anchor="#property_isMask" data-tablink="isMask">isMask</a>
+
+                        
+                        
+                    </li>
+                
+                    <li class="index-item property">
+                        <a href="#" data-tabid="#property" data-anchor="#property_outside" data-tablink="outside">outside</a>
 
                         
                         
@@ -521,13 +512,6 @@
                 
                     <li class="index-item property">
                         <a href="#" data-tabid="#property" data-anchor="#property_title" data-tablink="title">title</a>
-
-                        
-                        
-                    </li>
-                
-                    <li class="index-item property">
-                        <a href="#" data-tabid="#property" data-anchor="#property_type" data-tablink="type">type</a>
 
                         
                         
@@ -548,8 +532,6 @@
     <ul id="itemTab" class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#class">Detail</a></li>
         
-            <li><a data-toggle="tab" href="#method">Methods</a></li>
-        
         
             <li><a data-toggle="tab" href="#property">Properties</a></li>
         
@@ -569,7 +551,7 @@
 
             
                 <div class="foundat">
-                    Defined in: <a href="../files/lib_Dialog.js.html#l44"><code>lib&#x2F;Dialog.js:44</code></a>
+                    Defined in: <a href="../files/lib_Dialog.js.html#l11"><code>lib&#x2F;Dialog.js:11</code></a>
                 </div>
             
 
@@ -588,10 +570,10 @@
             
                 <div class="constructor">
                     <h2>Constructor</h2>
-                    <div id="method_dialog" class="method item">
-    <h3 class="name">dialog</h3>
+                    <div id="method_Dialog" class="method item">
+    <h3 class="name">Dialog</h3>
     <code>
-    dialog
+    Dialog
     
         <span class="paren">()</span>
     
@@ -622,7 +604,7 @@
             
         
         
-        <a href="../files/lib_Dialog.js.html#l44"><code>lib&#x2F;Dialog.js:44</code></a>
+        <a href="../files/lib_Dialog.js.html#l11"><code>lib&#x2F;Dialog.js:11</code></a>
         
         </p>
 
@@ -653,31 +635,226 @@
 
             <div class="example-content  showdemo ">
                 <div class="stdoc-code"><pre class="code prettyprint"><code>/**
- * Created by panqianjin on 15/11/4.
+ * Created by min.xiao
  */
 import React,{Component} from &#39;react&#39;;
-import Dialog from &#39;../../../src/Dialog.js&#39;;
-import Button from &#39;../../../src/Button.js&#39;;
-import Grid from &#39;../../../src/Grid.js&#39;;
-import Row from &#39;../../../src/Row.js&#39;;
-import Col from &#39;../../../src/Col.js&#39;;
+
+import {Col,Row,Grid,Button,Dialog,Panel,PanelHeader,PanelContent,PanelFooter,FormGroup,Input,RadioGroup,CheckboxGroup,Select} from &#39;../../../src/index&#39;;
+
 let Demo= class Demo extends Component{
 
     static defaultProps = {
-        show: false,
-        type: "alert"
-    }
+    };
 
     constructor(props, context) {
         super(props, context);
-        this.state = {
-            show: this.props.show,
-            type: this.props.type,
-            title:&#39;这是个提示&#39;
-        }
     }
+
+    getScope(dialog){
+        this.dialog = dialog;
+    }
+
+    show(name){
+        Dialog.mask(name).then(function(){
+            console.dir(&#39;...alert....&#39;);
+            Dialog.close();
+        },function(type){
+            console.dir(type);
+        });
+    }
+
+    showAlert(){
+        Dialog.alert(&#39;哈哈，我是alert&#39;);
+    }
+    nomask(){
+        Dialog.alert(&#39;哈哈，我是alert&#39;,{
+            isMask:false
+        });
+    }
+
+    showConfirm(){
+        Dialog.confirm(&#39;确定你已经打开了么？&#39;).then(()=&gt;{
+            alert(&#39;确定&#39;);
+        },()=&gt;{
+            alert(&#39;取消&#39;);
+        });
+    }
+
     render(){
         return (
+            &lt;div&gt;
+                &lt;Button onClick={::this.show.bind(this,&#39;demo1&#39;)} className="mg-right-15"&gt;点击我mask&lt;/Button&gt;
+                &lt;Button onClick={::this.show.bind(this,&#39;demo2&#39;)} className="mg-right-15"&gt;点击我mask2表单秀&lt;/Button&gt;
+                &lt;Button onClick={::this.show.bind(this,&#39;demo3&#39;)} className="mg-right-15"&gt;点击我mask3 outside&lt;/Button&gt;
+                &lt;Button onClick={::this.showAlert} className="mg-right-15"&gt;点击我alert&lt;/Button&gt;
+                &lt;Button onClick={::this.nomask} className="mg-right-15"&gt;无遮罩显示&lt;/Button&gt;
+                &lt;Button onClick={::this.showConfirm}&gt;点击我Confirm&lt;/Button&gt;
+                &lt;Dialog id="demo1" egSize="xs" buttonAlign="right" title="苍老师你好" buttons={[
+                    {
+                        type: &#39;success&#39;,
+                        name: &#39;确认&#39;,
+                        callback:()=&gt;{}
+                    },
+                    {
+                        type:&#39;cancel&#39;,
+                        egStyle:&#39;white&#39;,
+                        name:&#39;取消&#39;,
+                        callback:()=&gt;{}
+                    },
+                    {
+                        egStyle:&#39;warning&#39;,
+                        name:&#39;自定义按钮&#39;,
+                        callback:()=&gt;{alert(&#39;自定义按钮&#39;);}
+                    }
+                    ]}&gt;
+                    &lt;div&gt;
+                        哈哈，你好苍老师
+                    &lt;/div&gt;
+                &lt;/Dialog&gt;
+                &lt;Dialog id="demo2" egSize="sm" title="表单验证" buttons={[
+                    {
+                        type: &#39;success&#39;,
+                        name: &#39;提交&#39;,
+                        callback:()=&gt;{}
+                    },
+                    {
+                        type:&#39;cancel&#39;,
+                        egStyle:&#39;white&#39;,
+                        name:&#39;取消&#39;,
+                        callback:()=&gt;{}
+                    }
+                    ]}&gt;
+                    &lt;Grid&gt;
+                    &lt;Row&gt;
+                        &lt;Col&gt;
+                            &lt;Panel heading="我是标题"&gt;
+                                &lt;PanelContent&gt;
+                                    &lt;Row&gt;
+                                        &lt;Col&gt;
+                                            &lt;FormGroup&gt;
+                                                &lt;Row&gt;
+                                                    &lt;Col sm={2}&gt;姓名&lt;/Col&gt;
+                                                    &lt;Col sm={10}&gt;&lt;Input name="test" id="test" placeholder="请输入姓名"   /&gt;&lt;/Col&gt;
+                                                &lt;/Row&gt;
+                                                &lt;Row&gt;
+                                                    &lt;Col sm={2}&gt;姓名&lt;/Col&gt;
+                                                    &lt;Col sm={10}&gt;&lt;Input name="test" id="test" placeholder="请输入姓名"   /&gt;&lt;/Col&gt;
+                                                &lt;/Row&gt;
+                                                &lt;Row&gt;
+                                                    &lt;Col sm={2}&gt;性别&lt;/Col&gt;
+                                                    &lt;Col sm={10}&gt;
+                                                        &lt;RadioGroup defaultChecked="男" name="radio-sex"&gt;
+                                                            &lt;Input  type="radio"  label="男" value="男" /&gt;
+                                                            &lt;Input  type="radio"  label="女" value="女"  /&gt;
+                                                        &lt;/RadioGroup&gt;
+                                                    &lt;/Col&gt;
+                                                &lt;/Row&gt;
+                                                &lt;Row&gt;
+                                                    &lt;Col sm={2}&gt;体育爱好&lt;/Col&gt;
+                                                    &lt;Col sm={10}&gt;
+                                                        &lt;CheckboxGroup&gt;
+                                                            &lt;Input  type="checkbox" label="足球" checked   /&gt;
+                                                            &lt;Input  type="checkbox" label="篮球"    /&gt;
+                                                            &lt;Input  type="checkbox" label="羽毛球" checked   /&gt;
+                                                            &lt;Input  type="checkbox" label="乒乓球"    /&gt;
+                                                        &lt;/CheckboxGroup&gt;
+                                                    &lt;/Col&gt;
+                                                &lt;/Row&gt;
+                                                &lt;Row&gt;
+                                                    &lt;Col sm={2}&gt;姓名&lt;/Col&gt;
+                                                    &lt;Col sm={13}&gt;&lt;Input name="test" id="test" placeholder="请输入姓名"   /&gt;&lt;/Col&gt;
+                                                    &lt;FormGroup&gt;
+                                                        &lt;Col sm={13}&gt;出生日期&lt;/Col&gt;
+                                                        &lt;Col sm={13} end&gt;&lt;Input name="test" id="test" placeholder="请输入出生日期"   /&gt;&lt;/Col&gt;
+                                                    &lt;/FormGroup&gt;
+                                                &lt;/Row&gt;
+                                                &lt;Row&gt;
+                                                    &lt;Col sm={2}&gt;所在城市&lt;/Col&gt;
+                                                    &lt;Col sm={10} layer&gt;
+                                                        &lt;Row style={{margin:0}}&gt;
+                                                            &lt;Col sm={4} end&gt;
+                                                                &lt;Select placeholder="请选择城市" &gt;
+                                                                    &lt;item value=&#39;bei&#39;&gt;北京&lt;/item&gt;
+                                                                    &lt;item value=&#39;shang&#39;&gt;上海&lt;/item&gt;
+                                                                    &lt;item value=&#39;nan&#39;&gt;南京&lt;/item&gt;
+                                                                &lt;/Select&gt;
+                                                            &lt;/Col&gt;
+                                                        &lt;/Row&gt;
+                                                    &lt;/Col&gt;
+                                                &lt;/Row&gt;
+                                            &lt;/FormGroup&gt;
+                                        &lt;/Col&gt;
+                                    &lt;/Row&gt;
+                                    &lt;Row&gt;
+                                        &lt;Col padding={&#39;0&#39;}&gt;
+                                            &lt;Panel heading="我是标题二"&gt;
+                                                &lt;PanelContent padding={true}&gt;
+                                                    我是下一个内容区
+                                                &lt;/PanelContent&gt;
+                                            &lt;/Panel&gt;
+                                        &lt;/Col&gt;
+
+                                    &lt;/Row&gt;
+                                    &lt;Row&gt;
+                                        &lt;Col padding={&#39;0&#39;}&gt;
+                                            &lt;Panel heading="我是标题三" &gt;
+                                                &lt;PanelContent padding={true}&gt;
+                                                    我是下一个内容区
+                                                &lt;/PanelContent&gt;
+                                            &lt;/Panel&gt;
+                                        &lt;/Col&gt;
+
+                                    &lt;/Row&gt;
+                                &lt;/PanelContent&gt;
+                            &lt;/Panel&gt;
+                        &lt;/Col&gt;
+                    &lt;/Row&gt;
+                    &lt;/Grid&gt;
+                &lt;/Dialog&gt;
+                &lt;Dialog id="demo3" title="panel" outside egSize="lg"&gt;
+                    &lt;Panel egType="normal" margin="0"&gt;
+                        &lt;PanelHeader&gt;另一种形式的嵌套&lt;/PanelHeader&gt;
+                        &lt;PanelContent&gt;
+                            &lt;Panel egType="normal"&gt;
+                                &lt;PanelHeader&gt;另一种形式的嵌套2&lt;/PanelHeader&gt;
+                                &lt;PanelContent&gt;
+                                    &lt;Row&gt;
+                                        &lt;Col&gt;
+                                            我是内容区
+                                        &lt;/Col&gt;
+                                    &lt;/Row&gt;
+                                    &lt;Row&gt;
+                                        &lt;Col&gt;
+                                            &lt;Panel  margin={&#39;0&#39;}&gt;
+                                                &lt;PanelHeader&gt;另一种形式的嵌套3&lt;/PanelHeader&gt;
+                                                &lt;PanelContent&gt;
+                                                    &lt;Row&gt;
+                                                        &lt;Col&gt;
+                                                            我是内容区
+                                                        &lt;/Col&gt;
+                                                    &lt;/Row&gt;
+                                                &lt;/PanelContent&gt;
+                                            &lt;/Panel&gt;
+                                        &lt;/Col&gt;
+                                    &lt;/Row&gt;
+                                &lt;/PanelContent&gt;
+                            &lt;/Panel&gt;
+                            &lt;Panel margin={&#39;0&#39;}&gt;
+                                &lt;PanelHeader&gt;另一种形式的嵌套2&lt;/PanelHeader&gt;
+                                &lt;PanelContent&gt;
+                                    &lt;Row&gt;
+                                        &lt;Col&gt;
+                                            我是内容区
+                                        &lt;/Col&gt;
+                                    &lt;/Row&gt;
+                                &lt;/PanelContent&gt;
+                            &lt;/Panel&gt;
+                        &lt;/PanelContent&gt;
+                    &lt;/Panel&gt;
+                &lt;/Dialog&gt;
+            &lt;/div&gt;
+        );
+        /*return (
          &lt;Grid&gt;
         &lt;Row&gt;
             &lt;Col sm={3}&gt;&lt;Button block radius egSize="sm" onClick={::this.showDialog}&gt;dialog&lt;/Button&gt;&lt;/Col&gt;
@@ -685,38 +862,26 @@ let Demo= class Demo extends Component{
             &lt;Col sm={3}&gt;&lt;Button block radius egSize="sm" onClick={::this.showConfirm}&gt;confirm&lt;/Button&gt;&lt;/Col&gt;
             &lt;Col sm={3}&gt;&lt;Button block radius egSize="sm" onClick={::this.showMsak}&gt;mask&lt;/Button&gt;&lt;/Col&gt;
         &lt;/Row&gt;
-            &lt;Dialog type={this.state.type} show={this.state.show} title={this.state.title}&gt;
+            &lt;Dialog type={this.state.type} show={this.state.show} title={this.state.title} ref={::this.getScope}&gt;
             ahflaskdjflajsflajsdlf;jkasdfk
                 adfkjasd;fkjas;dlf
                 asdfkn;askdfnas
             &lt;/Dialog&gt;
            &lt;/Grid&gt;
-        );
+        );*/
     }
-    showDialog(){
-        this.setState({
-            show: true,
-            type: &#39;dialog&#39;
-        })
+    /*showDialog(){
+        this.dialog.open(&#39;dialog&#39;);
     }
     showAlert(){
-        this.setState({
-            show: true,
-            type: &#39;alert&#39;
-        })
+        this.dialog.open(&#39;alert&#39;);
     }
     showConfirm(){
-        this.setState({
-            show: true,
-            type: &#39;confirm&#39;
-        })
+        this.dialog.open(&#39;confirm&#39;);
     }
     showMsak(){
-        this.setState({
-            show: true,
-            type: &#39;mask&#39;
-        })
-    }
+        this.dialog.open(&#39;mask&#39;);
+    }*/
 };
 
 export default class DialogCls extends Component{
@@ -740,730 +905,125 @@ export default class DialogCls extends Component{
         </div>
 
         
-            <div id="method" class="tab-pane">
-                <h2 class="off-left">Methods</h2>
-
-                
-                    <div id="method_alert" class="method item">
-    <h3 class="name">alert</h3>
-    <code>
-    alert
-    
-        <span class="paren">()</span>
-    
-    </code>
-
-    
-        <span class="returns-inline">
-            <span class="type">ReactElement</span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/lib_Dialog.js.html#l232"><code>lib&#x2F;Dialog.js:232</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description well well-small sign-left3">
-        <div class="stdoc-code"><p>渲染alert</p>
-</div>
-    </div>
-
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                
-                    
-                        <span class="type">ReactElement</span>:
-                    
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-                
-                    <div id="method_cancleDialog" class="method item">
-    <h3 class="name">cancleDialog</h3>
-    <code>
-    cancleDialog
-    
-        <span class="paren">()</span>
-    
-    </code>
-
-    
-        <span class="returns-inline">
-            <span class="type"></span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/lib_Dialog.js.html#l212"><code>lib&#x2F;Dialog.js:212</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description well well-small sign-left3">
-        <div class="stdoc-code"><p>点击取消按钮，调用cancelCallback（如果存在），否则通过改变自身state来关闭</p>
-</div>
-    </div>
-
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                
-                    
-                    <p>null;</p>
-
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-                
-                    <div id="method_closeDialog" class="method item">
-    <h3 class="name">closeDialog</h3>
-    <code>
-    closeDialog
-    
-        <span class="paren">()</span>
-    
-    </code>
-
-    
-        <span class="returns-inline">
-            <span class="type"></span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/lib_Dialog.js.html#l192"><code>lib&#x2F;Dialog.js:192</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description well well-small sign-left3">
-        <div class="stdoc-code"><p>点击X，调用cancelCallback（如果存在），否则通过改变自身state来关闭</p>
-</div>
-    </div>
-
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                
-                    
-                    <p>null</p>
-
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-                
-                    <div id="method_componentWillReceiveProps" class="method item">
-    <h3 class="name">componentWillReceiveProps</h3>
-    <code>
-    componentWillReceiveProps
-    
-        <span class="paren">()</span>
-    
-    </code>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/lib_Dialog.js.html#l132"><code>lib&#x2F;Dialog.js:132</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description well well-small sign-left3">
-        <div class="stdoc-code"><p>接收到新props时执行,props是否存在show，是改变state.show，否则不变
-生命周期方法</p>
-</div>
-    </div>
-
-    
-
-    
-
-    
-</div>
-
-                
-                    <div id="method_confirm" class="method item">
-    <h3 class="name">confirm</h3>
-    <code>
-    confirm
-    
-        <span class="paren">()</span>
-    
-    </code>
-
-    
-        <span class="returns-inline">
-            <span class="type">ReactElement</span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/lib_Dialog.js.html#l276"><code>lib&#x2F;Dialog.js:276</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description well well-small sign-left3">
-        <div class="stdoc-code"><p>渲染confirm</p>
-</div>
-    </div>
-
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                
-                    
-                        <span class="type">ReactElement</span>:
-                    
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-                
-                    <div id="method_dialog" class="method item">
-    <h3 class="name">dialog</h3>
-    <code>
-    dialog
-    
-        <span class="paren">()</span>
-    
-    </code>
-
-    
-        <span class="returns-inline">
-            <span class="type">ReactElement</span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/lib_Dialog.js.html#l330"><code>lib&#x2F;Dialog.js:330</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description well well-small sign-left3">
-        <div class="stdoc-code"><p>渲染dialog</p>
-</div>
-    </div>
-
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                
-                    
-                        <span class="type">ReactElement</span>:
-                    
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-                
-                    <div id="method_mask" class="method item">
-    <h3 class="name">mask</h3>
-    <code>
-    mask
-    
-        <span class="paren">()</span>
-    
-    </code>
-
-    
-        <span class="returns-inline">
-            <span class="type">ReactElement</span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/lib_Dialog.js.html#l384"><code>lib&#x2F;Dialog.js:384</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description well well-small sign-left3">
-        <div class="stdoc-code"><p>渲染mask</p>
-</div>
-    </div>
-
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                
-                    
-                        <span class="type">ReactElement</span>:
-                    
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-                
-                    <div id="method_render" class="method item">
-    <h3 class="name">render</h3>
-    <code>
-    render
-    
-        <span class="paren">()</span>
-    
-    </code>
-
-    
-        <span class="returns-inline">
-            <span class="type">ReactElement</span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/lib_Dialog.js.html#l151"><code>lib&#x2F;Dialog.js:151</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description well well-small sign-left3">
-        <div class="stdoc-code"></div>
-    </div>
-
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                
-                    
-                        <span class="type">ReactElement</span>:
-                    
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-                
-                    <div id="method_showOverlay" class="method item">
-    <h3 class="name">showOverlay</h3>
-    <code>
-    showOverlay
-    
-        <span class="paren">()</span>
-    
-    </code>
-
-    
-        <span class="returns-inline">
-            <span class="type">ReactElement</span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/lib_Dialog.js.html#l222"><code>lib&#x2F;Dialog.js:222</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description well well-small sign-left3">
-        <div class="stdoc-code"><p>显示遮罩</p>
-</div>
-    </div>
-
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                
-                    
-                        <span class="type">ReactElement</span>:
-                    
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-                
-                    <div id="method_submitForm" class="method item">
-    <h3 class="name">submitForm</h3>
-    <code>
-    submitForm
-    
-        <span class="paren">()</span>
-    
-    </code>
-
-    
-        <span class="returns-inline">
-            <span class="type"></span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/lib_Dialog.js.html#l202"><code>lib&#x2F;Dialog.js:202</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description well well-small sign-left3">
-        <div class="stdoc-code"><p>点击确定按钮，调用successCallback（如果存在），否则通过改变自身state来关闭</p>
-</div>
-    </div>
-
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                
-                    
-                    <p>null;</p>
-
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-                
-            </div>
-        
 
         
             <div id="property" class="tab-pane">
                 <h2 class="off-left">Properties</h2>
+
+                
+                    <div id="property_buttonAlign" class="property item">
+    <h3 class="name"><code>buttonAlign</code></h3>
+    <span class="type">String</span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_Dialog.js.html#l43"><code>lib&#x2F;Dialog.js:43</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <div class="stdoc-code"><p>底部按钮对齐方式 center、right or left</p>
+</div>
+    </div>
+
+    
+        <p><strong>Default:</strong></p>
+         <code> center</code>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_buttons" class="property item">
+    <h3 class="name"><code>buttons</code></h3>
+    <span class="type">Array</span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_Dialog.js.html#l92"><code>lib&#x2F;Dialog.js:92</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <div class="stdoc-code"><p>底部按钮组
+例如：
+        [
+            {
+                type: &#39;success&#39;,
+                name: &#39;确认&#39;,
+                callback:()=&gt;{}
+            },
+            {
+                type:&#39;cancel&#39;,
+                egStyle:&#39;white&#39;,
+                name:&#39;取消&#39;,
+                callback:()=&gt;{}
+            },
+            {
+                egStyle:&#39;warning&#39;,
+                name:&#39;自定义按钮&#39;,
+                callback:()=&gt;{alert(&#39;自定义按钮&#39;);}
+            }
+        ]</p>
+</div>
+    </div>
+
+    
+        <p><strong>Default:</strong></p>
+         <code> empty</code>
+    
+
+    
+
+    
+</div>
 
                 
                     <div id="property_cancelCallback" class="property item">
@@ -1489,7 +1049,7 @@ export default class DialogCls extends Component{
             
         
         
-        <a href="../files/lib_Dialog.js.html#l83"><code>lib&#x2F;Dialog.js:83</code></a>
+        <a href="../files/lib_Dialog.js.html#l29"><code>lib&#x2F;Dialog.js:29</code></a>
         
         </p>
 
@@ -1499,14 +1059,11 @@ export default class DialogCls extends Component{
     </div>
 
     <div class="description">
-        <div class="stdoc-code"><p>点击取消时，回调方法</p>
+        <div class="stdoc-code"><p>点击取消按钮或关闭后会执行此回调，默认调用Dialog.confirm会返回promise</p>
 </div>
     </div>
 
     
-        <p><strong>Default:</strong></p>
-         <code> null</code>
-    
 
     
 
@@ -1514,56 +1071,8 @@ export default class DialogCls extends Component{
 </div>
 
                 
-                    <div id="property_classPrefix" class="property item">
-    <h3 class="name"><code>classPrefix</code></h3>
-    <span class="type">Sting</span>
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/lib_Dialog.js.html#l90"><code>lib&#x2F;Dialog.js:90</code></a>
-        
-        </p>
-
-        
-
-        
-    </div>
-
-    <div class="description">
-        <div class="stdoc-code"><p>类名样式前缀</p>
-</div>
-    </div>
-
-    
-        <p><strong>Default:</strong></p>
-         <code> crumb</code>
-    
-
-    
-
-    
-</div>
-
-                
-                    <div id="property_componentTag" class="property item">
-    <h3 class="name"><code>componentTag</code></h3>
+                    <div id="property_contentAlign" class="property item">
+    <h3 class="name"><code>contentAlign</code></h3>
     <span class="type">String</span>
 
     
@@ -1585,7 +1094,7 @@ export default class DialogCls extends Component{
             
         
         
-        <a href="../files/lib_Dialog.js.html#l97"><code>lib&#x2F;Dialog.js:97</code></a>
+        <a href="../files/lib_Dialog.js.html#l57"><code>lib&#x2F;Dialog.js:57</code></a>
         
         </p>
 
@@ -1595,13 +1104,253 @@ export default class DialogCls extends Component{
     </div>
 
     <div class="description">
-        <div class="stdoc-code"><p>标签tagName</p>
+        <div class="stdoc-code"><p>内容区域对齐方式</p>
 </div>
     </div>
 
     
         <p><strong>Default:</strong></p>
-         <code> div</code>
+         <code> center</code>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_isClose" class="property item">
+    <h3 class="name"><code>isClose</code></h3>
+    <span class="type">Boolean</span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_Dialog.js.html#l78"><code>lib&#x2F;Dialog.js:78</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <div class="stdoc-code"><p>是否显示关闭 mask常用属性</p>
+</div>
+    </div>
+
+    
+        <p><strong>Default:</strong></p>
+         <code> false</code>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_isHeader" class="property item">
+    <h3 class="name"><code>isHeader</code></h3>
+    <span class="type">Boolean</span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_Dialog.js.html#l50"><code>lib&#x2F;Dialog.js:50</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <div class="stdoc-code"><p>是否显示标题栏</p>
+</div>
+    </div>
+
+    
+        <p><strong>Default:</strong></p>
+         <code> true</code>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_isHeaderBackground" class="property item">
+    <h3 class="name"><code>isHeaderBackground</code></h3>
+    <span class="type">Boolean</span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_Dialog.js.html#l36"><code>lib&#x2F;Dialog.js:36</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <div class="stdoc-code"><p>是否显示标题栏背景色</p>
+</div>
+    </div>
+
+    
+        <p><strong>Default:</strong></p>
+         <code> true</code>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_isMask" class="property item">
+    <h3 class="name"><code>isMask</code></h3>
+    <span class="type">Boolean</span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_Dialog.js.html#l64"><code>lib&#x2F;Dialog.js:64</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <div class="stdoc-code"><p>是否显示遮罩层</p>
+</div>
+    </div>
+
+    
+        <p><strong>Default:</strong></p>
+         <code> true</code>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_outside" class="property item">
+    <h3 class="name"><code>outside</code></h3>
+    <span class="type">Boolean</span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_Dialog.js.html#l71"><code>lib&#x2F;Dialog.js:71</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <div class="stdoc-code"><p>内容不在content之内 mask属性</p>
+</div>
+    </div>
+
+    
+        <p><strong>Default:</strong></p>
+         <code> false</code>
     
 
     
@@ -1633,7 +1382,7 @@ export default class DialogCls extends Component{
             
         
         
-        <a href="../files/lib_Dialog.js.html#l76"><code>lib&#x2F;Dialog.js:76</code></a>
+        <a href="../files/lib_Dialog.js.html#l22"><code>lib&#x2F;Dialog.js:22</code></a>
         
         </p>
 
@@ -1643,13 +1392,10 @@ export default class DialogCls extends Component{
     </div>
 
     <div class="description">
-        <div class="stdoc-code"><p>点击确定时，回调方法</p>
+        <div class="stdoc-code"><p>点击确认按钮后会执行此回调，默认调用Dialog.confirm会返回promise</p>
 </div>
     </div>
 
-    
-        <p><strong>Default:</strong></p>
-         <code> null</code>
     
 
     
@@ -1681,7 +1427,7 @@ export default class DialogCls extends Component{
             
         
         
-        <a href="../files/lib_Dialog.js.html#l69"><code>lib&#x2F;Dialog.js:69</code></a>
+        <a href="../files/lib_Dialog.js.html#l85"><code>lib&#x2F;Dialog.js:85</code></a>
         
         </p>
 
@@ -1697,55 +1443,7 @@ export default class DialogCls extends Component{
 
     
         <p><strong>Default:</strong></p>
-         <code> &quot;&quot;</code>
-    
-
-    
-
-    
-</div>
-
-                
-                    <div id="property_type" class="property item">
-    <h3 class="name"><code>type</code></h3>
-    <span class="type">String</span>
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/lib_Dialog.js.html#l62"><code>lib&#x2F;Dialog.js:62</code></a>
-        
-        </p>
-
-        
-
-        
-    </div>
-
-    <div class="description">
-        <div class="stdoc-code"><p>dialog类型：分为alert,confirm,dialog,mask 四种。默认alert</p>
-</div>
-    </div>
-
-    
-        <p><strong>Default:</strong></p>
-         <code> alert</code>
+         <code> empty</code>
     
 
     

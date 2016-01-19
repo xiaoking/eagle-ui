@@ -36,11 +36,11 @@ This is a used to develop the background management system based on the react to
 
 ## Documentation
 
-Open the project in the doc directory index can refer to
+Open the project in the doc directory index can refer to or link to [http://uedfamily.com/documents/eagle-ui/doc](http://uedfamily.com/documents/eagle-ui/doc)
 
 ## Examples
 
-Download dependent package installation bower, start the server, static access eagle - UI examples directory file to view the demo
+Download dependent package installation bower, start the server, static access eagle - UI examples directory file to view the demo； or link to [http://uedfamily.com/documents/eagle-ui/examples](http://uedfamily.com/documents/eagle-ui/examples)
 
 ```	
 		$ cd eagle-ui

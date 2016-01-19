@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -419,13 +443,17 @@ var _react = require(&#x27;react&#x27;);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _utilsClassNameMixin = require(&#x27;./utils/ClassNameMixin&#x27;);
+var _utilsComponent = require(&#x27;./utils/Component&#x27;);
 
-var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+var _utilsComponent2 = _interopRequireDefault(_utilsComponent);
 
-var _classnames10 = require(&#x27;classnames&#x27;);
+var _classnames2 = require(&#x27;classnames&#x27;);
 
-var _classnames11 = _interopRequireDefault(_classnames10);
+var _classnames3 = _interopRequireDefault(_classnames2);
+
+var _utilsIcon = require(&#x27;./utils/Icon&#x27;);
+
+var _utilsIcon2 = _interopRequireDefault(_utilsIcon);
 
 /**
  * input表单组件&lt;br /&gt;
@@ -468,143 +496,148 @@ var Input = (function (_Component) {
              * @property label
              * @type String
              * */
-            label: &#x27;请选择&#x27;
+            label: &#x27;请选择&#x27;,
+            /**
+             * 需要显示的icon
+             * @property icon
+             * @type String
+             * */
+            /**
+             * 给icon设置样式
+             * @property iconStyle
+             * @type Object
+             * */
+            classPrefix: &#x27;input&#x27;,
+            /**
+             * icon,input类型只能是text这种的
+             * @property icon
+             * @type String
+             * */
+            icon: &#x27;&#x27;,
+            /**
+             * icon展示的方向，{left,right}
+             * @property iconDirection
+             * @type String
+             * */
+            iconDirection: &#x27;&#x27;
         },
         enumerable: true
     }]);
 
     function Input(props, context) {
-        _classCallCheck(this, _Input);
+        _classCallCheck(this, Input);
 
         _Component.call(this, props, context);
 
         this.className = &#x27;input-&#x27;;
 
         this.state = {
-            isActive: this.props.checked
+            _active: this.props.checked
         };
     }
 
-    Input.prototype.setCheck = function setCheck() {
-        this.setState({
-            isActive: !this.state.isActive
-        });
+    Input.prototype.getIcon = function getIcon(type, checked, icon) {
+        var classMap = {
+            radio: {
+                active: &#x27;adjust_checked&#x27;,
+                &#x27;default&#x27;: &#x27;adjust_unchecked&#x27;
+            },
+            checkbox: {
+                active: &#x27;checkbox_checked&#x27;,
+                &#x27;default&#x27;: &#x27;checkbox_unchecked&#x27;
+            }
+        };
+
+        var iconType = classMap[type];
+
+        var html = null,
+            iconStyle = this.props.iconStyle || {},
+            name = &#x27;&#x27;;
+
+        if (iconType) {
+            name = iconType[checked ? &#x27;active&#x27; : &#x27;default&#x27;];
+        } else {
+            name = icon;
+        }
+
+        if (name) {
+            return _react2[&#x27;default&#x27;].createElement(_utilsIcon2[&#x27;default&#x27;], { className: _classnames3[&#x27;default&#x27;](&quot;input-icon&quot;), name: name, style: iconStyle });
+        }
+
+        return html;
     };
 
-    Input.prototype.checkbox = function checkbox() {
-        var _classnames, _classnames2, _classnames3;
+    Input.prototype.changeHander = function changeHander(e) {
+        var target = e.target,
+            type = target.type.toLowerCase();
 
-        var checked = typeof this.props.checked != &#x27;undefined&#x27; ? this.props.checked : this.state.isActive;
-        return _react2[&#x27;default&#x27;].createElement(
-            &#x27;div&#x27;,
-            { ref: &#x27;&#x27;, className: _classnames11[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;&#x27; + this.className + this.props.type), (_classnames = {}, _classnames[&#x27;eg-input-&#x27; + this.props.type + &#x27;-active&#x27;] = checked, _classnames), (_classnames2 = {}, _classnames2[&#x27;eg-input-&#x27; + this.props.type + &#x27;-disabled&#x27;] = this.props.disabled, _classnames2)), onClick: this.setCheck.bind(this) },
-            _react2[&#x27;default&#x27;].createElement(&#x27;input&#x27;, _extends({ type: this.props.type }, this.props, { onChange: this.onchange.bind(this) })),
-            _react2[&#x27;default&#x27;].createElement(
-                &#x27;div&#x27;,
-                { className: &#x27;box&#x27; },
-                _react2[&#x27;default&#x27;].createElement(
-                    &#x27;div&#x27;,
-                    { className: _classnames11[&#x27;default&#x27;](&#x27;checkbox&#x27;, (_classnames3 = {}, _classnames3[this.getClassName(&#x27;icon-tick&#x27;, false)] = checked, _classnames3)) },
-                    _react2[&#x27;default&#x27;].createElement(&#x27;div&#x27;, { className: &#x27;round&#x27; })
-                )
-            ),
-            _react2[&#x27;default&#x27;].createElement(
-                &#x27;label&#x27;,
-                null,
-                this.props.label
-            )
-        );
-    };
+        if (this.isRadio(type)) {
+            this.execMethod(&#x27;active&#x27;, target);
+        } else if (this.isCheckbox(type)) {
 
-    //暂时用在图片片选框
+            this.setState({
+                _active: !this.state._active
+            });
+            this.execMethod(&#x27;getValue&#x27;, target.value || &#x27;&#x27;, target);
+        }
 
-    Input.prototype.checkboxs = function checkboxs() {
-        var _classnames4, _classnames5, _classnames6;
-
-        var checked = typeof this.props.checked != &#x27;undefined&#x27; ? this.props.checked : this.state.isActive;
-        return _react2[&#x27;default&#x27;].createElement(
-            &#x27;div&#x27;,
-            { ref: &#x27;&#x27;, className: _classnames11[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;&#x27; + this.className + this.props.type), (_classnames4 = {}, _classnames4[&#x27;eg-input-&#x27; + this.props.type + &#x27;-active&#x27;] = checked, _classnames4), (_classnames5 = {}, _classnames5[&#x27;eg-input-&#x27; + this.props.type + &#x27;-disabled&#x27;] = this.props.disabled, _classnames5)), onClick: this.setCheck.bind(this) },
-            _react2[&#x27;default&#x27;].createElement(&#x27;input&#x27;, _extends({}, this.props, { type: &#x27;checkbox&#x27;, onChange: this.onchange.bind(this) })),
-            _react2[&#x27;default&#x27;].createElement(
-                &#x27;div&#x27;,
-                { className: &#x27;box&#x27; },
-                _react2[&#x27;default&#x27;].createElement(
-                    &#x27;div&#x27;,
-                    { className: _classnames11[&#x27;default&#x27;](&#x27;checkbox&#x27;, (_classnames6 = {}, _classnames6[this.getClassName(&#x27;icon-tick&#x27;, false)] = checked, _classnames6)) },
-                    _react2[&#x27;default&#x27;].createElement(&#x27;div&#x27;, { className: &#x27;round&#x27; })
-                )
-            ),
-            _react2[&#x27;default&#x27;].createElement(
-                &#x27;label&#x27;,
-                null,
-                this.props.label
-            )
-        );
-    };
-
-    Input.prototype.onchange = function onchange(e) {
-        if (this.props.onCheck) {
-            this.props.onCheck(e.target);
+        if (this.props.onChange) {
+            this.props.onChange(e);
         }
     };
 
-    Input.prototype.radio = function radio() {
-        var _classnames7, _classnames8;
-
-        return _react2[&#x27;default&#x27;].createElement(
-            &#x27;div&#x27;,
-            { className: _classnames11[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;&#x27; + this.className + this.props.type), (_classnames7 = {}, _classnames7[&#x27;eg-input-&#x27; + this.props.type + &#x27;-active&#x27;] = this.props.checked, _classnames7), (_classnames8 = {}, _classnames8[&#x27;eg-input-&#x27; + this.props.type + &#x27;-disabled&#x27;] = this.props.disabled, _classnames8)) },
-            _react2[&#x27;default&#x27;].createElement(&#x27;input&#x27;, _extends({ type: this.props.type }, this.props, { onChange: this.onchange.bind(this) })),
-            _react2[&#x27;default&#x27;].createElement(
-                &#x27;div&#x27;,
-                { className: &#x27;box&#x27; },
-                _react2[&#x27;default&#x27;].createElement(
-                    &#x27;div&#x27;,
-                    { className: &#x27;checkbox&#x27; },
-                    _react2[&#x27;default&#x27;].createElement(&#x27;div&#x27;, { className: &#x27;round&#x27; })
-                )
-            ),
-            _react2[&#x27;default&#x27;].createElement(
-                &#x27;label&#x27;,
-                null,
-                this.props.label
-            )
+    Input.prototype.isCheckbox = function isCheckbox(type) {
+        return (/checkbox/.test(type || this.props.type)
         );
     };
 
-    Input.prototype.text = function text() {
-        var _classnames9;
-
-        return _react2[&#x27;default&#x27;].createElement(
-            &#x27;div&#x27;,
-            { className: _classnames11[&#x27;default&#x27;]((_classnames9 = {}, _classnames9[this.getClassName(&#x27;icon-container&#x27;)] = !!this.props.icon, _classnames9)) },
-            _react2[&#x27;default&#x27;].createElement(&#x27;input&#x27;, _extends({}, this.props, { className: _classnames11[&#x27;default&#x27;](this.getDefaultClass()) })),
-            _react2[&#x27;default&#x27;].createElement(&#x27;i&#x27;, { className: &#x27;icon-input-right icon-&#x27; + this.props.icon })
+    Input.prototype.isRadio = function isRadio(type) {
+        return (/radio/.test(type || this.props.type)
         );
-    };
-
-    Input.prototype.getDefaultClass = function getDefaultClass() {
-        //border:1px solid #fff;
-        return this.getClassName(this.className + this.props.type);
     };
 
     Input.prototype.render = function render() {
-        var type = this.props.type;
+        var _classnames;
 
-        type = type.toLowerCase();
+        var _props = this.props;
+        var disabled = _props.disabled;
+        var type = _props.type;
+        var label = _props.label;
+        var icon = _props.icon;
+        var iconDirection = this.props.iconDirection;
+        var checked = this.props.checked;
 
-        if (type != &#x27;radio&#x27; &amp;&amp; type != &#x27;checkbox&#x27;) {
-            type = &#x27;text&#x27;;
+        if (this.isCheckbox()) {
+            checked = this.state._active;
         }
-        //const {name,id,value,placeholder,autocomplete,disabled,type} = this.props;
-        return this[type]();
+
+        if (icon) {
+            if (iconDirection == &#x27;&#x27;) {
+                iconDirection = &#x27;right&#x27;;
+            }
+
+            iconDirection = this.getClassName(&#x27;icon-&#x27; + iconDirection);
+        }
+
+        return _react2[&#x27;default&#x27;].createElement(
+            &#x27;div&#x27;,
+            { className: _classnames3[&#x27;default&#x27;](this.getProperty(), type, (_classnames = {
+                    &#x27;active&#x27;: checked,
+                    &#x27;disabled&#x27;: disabled,
+                    &#x27;show-icon&#x27;: !!icon
+                }, _classnames[&#x27;&#x27; + iconDirection] = !!iconDirection, _classnames)) },
+            this.getIcon(type, checked, icon),
+            _react2[&#x27;default&#x27;].createElement(
+                &#x27;label&#x27;,
+                null,
+                label
+            ),
+            _react2[&#x27;default&#x27;].createElement(&#x27;input&#x27;, _extends({ type: type }, this.otherProps, { onChange: disabled ? function () {} : this.changeHander.bind(this) }))
+        );
     };
 
-    var _Input = Input;
-    Input = _utilsClassNameMixin2[&#x27;default&#x27;](Input) || Input;
     return Input;
-})(_react.Component);
+})(_utilsComponent2[&#x27;default&#x27;]);
 
 exports[&#x27;default&#x27;] = Input;
 module.exports = exports[&#x27;default&#x27;];

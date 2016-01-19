@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -418,6 +442,13 @@
                         
                     </li>
                 
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_render" data-tablink="render">render</a>
+
+                        
+                        
+                    </li>
+                
             </ul>
             
         </div>
@@ -426,6 +457,13 @@
             <h3>Properties</h3>
             
             <ul class="index-list properties extends">
+                
+                    <li class="index-item property">
+                        <a href="#" data-tabid="#property" data-anchor="#property_data" data-tablink="data">data</a>
+
+                        
+                        
+                    </li>
                 
                     <li class="index-item property">
                         <a href="#" data-tabid="#property" data-anchor="#property_data" data-tablink="data">data</a>
@@ -470,7 +508,7 @@
 
             
                 <div class="foundat">
-                    Defined in: <a href="../files/lib_Table_Table.js.html#l39"><code>lib&#x2F;Table&#x2F;Table.js:39</code></a>
+                    Defined in: <a href="../files/lib_tables_Table.js.html#l39"><code>lib&#x2F;tables&#x2F;Table.js:39</code></a>
                 </div>
             
 
@@ -523,7 +561,7 @@
             
         
         
-        <a href="../files/lib_Table_Table.js.html#l39"><code>lib&#x2F;Table&#x2F;Table.js:39</code></a>
+        <a href="../files/lib_tables_Table.js.html#l39"><code>lib&#x2F;tables&#x2F;Table.js:39</code></a>
         
         </p>
 
@@ -557,11 +595,11 @@
  * Created by mac on 15/11/4.
  */
 import React,{Component} from &#39;react&#39;;
-import Table from &#39;../../../src/Table/Table.js&#39;;
-import Tr from &#39;../../../src/Table/Tr.js&#39;;
-import Td from &#39;../../../src/Table/Td.js&#39;;
-import Th from &#39;../../../src/Table/Th.js&#39;;
-import Column from &#39;../../../src/Table/Column.js&#39;;
+import Table from &#39;../../../src/tables/Table.js&#39;;
+import Tr from &#39;../../../src/tables/Tr.js&#39;;
+import Td from &#39;../../../src/tables/Td.js&#39;;
+import Th from &#39;../../../src/tables/Th.js&#39;;
+import Column from &#39;../../../src/tables/Column.js&#39;;
 
 import Row from &#39;../../../src/Row.js&#39;;
 import Col from &#39;../../../src/Col.js&#39;;
@@ -741,7 +779,79 @@ export default class TableCls extends Component{
             
         
         
-        <a href="../files/lib_Table_Table.js.html#l115"><code>lib&#x2F;Table&#x2F;Table.js:115</code></a>
+        <a href="../files/lib_Table_Table.js.html#l117"><code>lib&#x2F;Table&#x2F;Table.js:117</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"></div>
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">ReactElement</span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
+                    <div id="method_render" class="method item">
+    <h3 class="name">render</h3>
+    <code>
+    render
+    
+        <span class="paren">()</span>
+    
+    </code>
+
+    
+        <span class="returns-inline">
+            <span class="type">ReactElement</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_tables_Table.js.html#l117"><code>lib&#x2F;tables&#x2F;Table.js:117</code></a>
         
         </p>
 
@@ -807,6 +917,51 @@ export default class TableCls extends Component{
         
         
         <a href="../files/lib_Table_Table.js.html#l58"><code>lib&#x2F;Table&#x2F;Table.js:58</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <div class="stdoc-code"><p>用来渲染表格的数组，可选参数，如果传入data，会更具table下的column标签绑定的属性进行渲染</p>
+</div>
+    </div>
+
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_data" class="property item">
+    <h3 class="name"><code>data</code></h3>
+    <span class="type">Array</span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_tables_Table.js.html#l58"><code>lib&#x2F;tables&#x2F;Table.js:58</code></a>
         
         </p>
 

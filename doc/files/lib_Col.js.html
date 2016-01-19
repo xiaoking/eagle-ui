@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -423,6 +447,10 @@ var _classnames = require(&#x27;classnames&#x27;);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
+var _utilsComponent = require(&#x27;./utils/Component&#x27;);
+
+var _utilsComponent2 = _interopRequireDefault(_utilsComponent);
+
 /**
  * 列
  * @class Col
@@ -441,21 +469,23 @@ var Col = (function (_Component) {
         _Component.apply(this, arguments);
     }
 
-    Col.prototype.getWidthClass = function getWidthClass() {
-        var className = [&#x27;eg-sm-&#x27; + (this.props.sm ? this.props.sm : &#x27;12&#x27;)];
+    Col.prototype.initCallback = function initCallback() {
+        var sm = this.props.sm;
 
-        if (this.props.end) {
-            className.push(&#x27;eg-end&#x27;);
-        }
-
-        return className.join(&#x27; &#x27;);
+        //this.setProperty(&#x27;sm&#x27;,this.props.egSize+&#x27;-&#x27;+sm );
+        this.setProperty(&#x27;end&#x27;, &#x27;end&#x27;);
+        this.setProperty(&#x27;layer&#x27;, &#x27;layer&#x27;);
+        //
     };
 
     Col.prototype.render = function render() {
+        var _props = this.props;
+        var sm = _props.sm;
+        var egSize = _props.egSize;
 
         return _react2[&#x27;default&#x27;].createElement(
-            &#x27;div&#x27;,
-            _extends({}, this.props, { className: _classnames2[&#x27;default&#x27;](this.getWidthClass(), this.props.className) }),
+            this.componentTag,
+            _extends({}, this.props, { className: _classnames2[&#x27;default&#x27;](this.getProperty(), this.getClassName(egSize + &#x27;-&#x27; + sm), this.props.className), style: this.getStyles(this.props.style) }),
             this.props.children
         );
     };
@@ -468,7 +498,7 @@ var Col = (function (_Component) {
              * @property egSize
              * @type Integer
              * */
-            sm: _react.PropTypes.number.isRequired,
+            egSize: _react.PropTypes.string,
             /**
              * 是否是最后一列
              * @property end
@@ -478,10 +508,19 @@ var Col = (function (_Component) {
             end: _react.PropTypes.bool
         },
         enumerable: true
+    }, {
+        key: &#x27;defaultProps&#x27;,
+        value: {
+            classPrefix: &#x27;col&#x27;,
+            componentTag: &#x27;div&#x27;,
+            egSize: &#x27;md&#x27;,
+            sm: 12
+        },
+        enumerable: true
     }]);
 
     return Col;
-})(_react.Component);
+})(_utilsComponent2[&#x27;default&#x27;]);
 
 exports[&#x27;default&#x27;] = Col;
 module.exports = exports[&#x27;default&#x27;];

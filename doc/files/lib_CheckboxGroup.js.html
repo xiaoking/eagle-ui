@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -424,13 +448,13 @@ var _classnames = require(&#x27;classnames&#x27;);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _utilsClassNameMixin = require(&#x27;./utils/ClassNameMixin&#x27;);
-
-var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
-
 var _InputJs = require(&#x27;./Input.js&#x27;);
 
 var _InputJs2 = _interopRequireDefault(_InputJs);
+
+var _utilsComponentJs = require(&#x27;./utils/Component.js&#x27;);
+
+var _utilsComponentJs2 = _interopRequireDefault(_utilsComponentJs);
 
 /**
  * 多选按钮组组件
@@ -453,7 +477,7 @@ var CheckboxGroup = (function (_Component) {
     }]);
 
     function CheckboxGroup(props, context) {
-        _classCallCheck(this, _CheckboxGroup);
+        _classCallCheck(this, CheckboxGroup);
 
         _Component.call(this, props, context);
     }
@@ -474,10 +498,8 @@ var CheckboxGroup = (function (_Component) {
         );
     };
 
-    var _CheckboxGroup = CheckboxGroup;
-    CheckboxGroup = _utilsClassNameMixin2[&#x27;default&#x27;](CheckboxGroup) || CheckboxGroup;
     return CheckboxGroup;
-})(_react.Component);
+})(_utilsComponentJs2[&#x27;default&#x27;]);
 
 exports[&#x27;default&#x27;] = CheckboxGroup;
 module.exports = exports[&#x27;default&#x27;];

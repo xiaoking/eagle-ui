@@ -1,6 +1,7 @@
-import React,{ PropTypes, Component } from 'react';
+import React,{ PropTypes } from 'react';
 import classnames from 'classnames';
 
+import Component from './utils/Component';
 /**
  * 列
  * @class Col
@@ -10,14 +11,13 @@ import classnames from 'classnames';
  * @since 0.1.0
  * */
 export default class Col extends Component{
-
     static propTypes = {
         /**
          * 占几列，共12列
          * @property egSize
          * @type Integer
          * */
-        sm:PropTypes.number.isRequired,
+        egSize:PropTypes.string,
         /**
          * 是否是最后一列
          * @property end
@@ -27,25 +27,31 @@ export default class Col extends Component{
         end:PropTypes.bool
     };
 
-    getWidthClass(){
-        let className= ['eg-sm-'+(this.props.sm?this.props.sm:'12') ];
+    static defaultProps = {
+        classPrefix:'col',
+        componentTag:'div',
+        egSize:'md',
+        sm:12
+    };
 
-        if(this.props.end){
-            className.push('eg-end');
-        }
-
-        return className.join(' ');
+    initCallback(){
+        let {sm} = this.props;
+        //this.setProperty('sm',this.props.egSize+'-'+sm );
+        this.setProperty('end','end' );
+        this.setProperty('layer','layer');
+        //
     }
 
     render(){
-
+        let {sm,egSize} = this.props;
         return (
-            <div {...this.props} className={classnames(
-                this.getWidthClass(),
+            <this.componentTag {...this.props} className={classnames(
+                this.getProperty(),
+                this.getClassName(`${egSize}-${sm}`),
                 this.props.className
-            )} >
+            )}  style={this.getStyles(this.props.style)}>
                 {this.props.children}
-            </div>
+            </this.componentTag>
         );
     }
 }

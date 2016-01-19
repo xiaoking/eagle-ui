@@ -1,10 +1,10 @@
 /**
  * Created by mac on 15/9/7.
  */
-import React,{Component,PropTypes} from 'react';
-import ClassNameMixin from './utils/ClassNameMixin';
+import React,{PropTypes} from 'react';
 import classnames from 'classnames';
 
+import Component from './utils/Component';
 /**
  * 标签
  * @class Label
@@ -15,51 +15,42 @@ import classnames from 'classnames';
  * @demo label.js {js}
  * @show true
  * */
-@ClassNameMixin
 export default class Label extends Component{
     static propTypes = {
         url:PropTypes.string,
-        clickCallback:PropTypes.func
+        activeCallback:PropTypes.func
     };
     static defaultProps = {
         classPrefix:'label',
-        url:'javascript:void(0);'
+        url:'javascript:void(0);',
+        componentTag:'a'
     };
     constructor(props, context) {
         super(props, context);
-
-        //this.state = {
-        //    active:this.props.active || false
-        //};
     }
 
     /**
      * 点击回调函数
      * */
-    clickHandler(e){
-        let {clickCallback} = this.props,
-            target = e.target;
-        //,
-        //     active = !this.state.active;
-        //this.setState({
-        //    active:active
-        //});
-        clickCallback && clickCallback(target.getAttribute('value'),target.innerHTML,target,!this.props.active,);
+    mouseDownHandler(e){
+        let target = e.target;
+
+        this.execMethod('active',target.getAttribute('value'),target.innerHTML,target,!this.props.active);
     }
 
     render(){
         const {url} = this.props;
         return (
-            <a href={url} {...this.props} className={
-                classnames(
-                    this.getClassName('item'),
-                    this.getClassNames(this.props),
-                    this.getClassName(this.props.className)
-                    //this.getClassNames(this.state)
-                )
-            } onMouseDown={::this.clickHandler}>
+            <this.componentTag href={url} {...this.props} className={
+                    classnames(
+                        this.getProperty(),
+                        this.props.className
+                    )
+                }
+                onMouseDown={::this.mouseDownHandler}
+                >
                 {this.props.children}
-            </a>
+            </this.componentTag>
         );
     }
 }

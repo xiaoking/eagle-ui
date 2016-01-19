@@ -1,0 +1,33 @@
+.generic-label(@label-margin,@label-border,@label-padding,@label-radius,@label-line-height,@label-hover,@itembox-margin){
+
+    .eg-label{
+        border-right:@label-border;
+        .border-radius(@label-radius);
+        padding:@label-padding;
+        margin: @label-margin;
+        line-height: @label-line-height;
+        &:hover{
+            text-decoration: @label-hover;
+        }
+        &:last-child{
+            border-right: none;
+           // margin-right: 0;
+        }
+    }
+
+    .item-box{
+        margin:@itembox-margin;
+        overflow:visible;
+    }
+    .item-list{
+        width: 100%;
+    }
+}
+
+.generic-color(@prefix,@type,@color,@bk-color){
+
+    .@{prefix}-@{type}{
+        color: @color;
+        background-color:@bk-color ;
+    }
+}

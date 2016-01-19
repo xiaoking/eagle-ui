@@ -1,13 +1,11 @@
 /**
  * Created by mac on 15/9/7.
  */
-import React,{Component,PropTypes} from 'react';
-import ClassNameMixin from './utils/ClassNameMixin';
+import React,{PropTypes} from 'react';
 import classnames from 'classnames';
-import Grid from './Grid.js';
-import Row from './Row.js';
-import Col from './Col.js';
+import ReactDom from 'react/lib/ReactDOM';
 import Label from './Label.js';
+import Component from './utils/Component';
 
 /**
  * 标签组
@@ -19,7 +17,6 @@ import Label from './Label.js';
  * @demo label.js {js}
  * @show true
  * */
-@ClassNameMixin
 export default class LabelGroup extends Component{
     static propTypes = {
         /**
@@ -29,29 +26,52 @@ export default class LabelGroup extends Component{
          * */
         title:PropTypes.string,
         /**
-         * 普通标签列表
-         * @property simple
-         * @type Boolean
-         * @default false
+         * 标签展现形式{form|simple|default}
+         * @property egType
+         * @type String
+         * @default default
          * */
-        simple:PropTypes.bool,
+        egType:PropTypes.oneOf(['simple', 'form','default']),
         /**
-         * 点击事件，所有label会被继承
-         * @property clickCallback
+         * 点击后触发的回调，所有label会被继承
+         * @property activeCallback
          * @type Function
          * */
-        clickCallback:PropTypes.func
+        activeCallback:PropTypes.func,
+        /**
+         * 默认选中的项
+         * @property defaultChecked
+         * @type String Integer
+         * */
+        defaultChecked:PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.number
+        ]),
+        /**
+         * 间距，label集合与左边title的间距
+         * @property spacing
+         * @type Integer
+         * */
+        spacing:PropTypes.number
     };
     static defaultProps = {
-        classPrefix:'label',
+        classPrefix:'label-group',
         simple:false
     };
     constructor(props, context) {
         super(props, context);
 
-        this.state = {
-            checked:this.props.defaultChecked
-        };
+        this.setDefaultState({
+            checked:this.props.defaultChecked,
+            itemStyle:{
+                marginLeft:this.props.spacing+'px'
+            }
+        });
+
+        this.isInit = true;
+
+        this.titleObj = this.uniqueId();
+        this.itemObj = this.uniqueId();
     }
 
     activeHandler(callback,value,text,target,active){
@@ -65,59 +85,61 @@ export default class LabelGroup extends Component{
         }
     }
 
+    renderTitle(){
+        let {title} = this.props,
+            html = [];
+
+        if(title){
+            html.push(
+                <div className="title" key={title} ref={this.titleObj}>{title}</div>
+            );
+        }
+
+        return html;
+    }
+
+    loadedCallback(){
+
+        let offsetV = ReactDom.findDOMNode(this.refs[this.titleObj] ),
+            itemStyle = {};
+
+        if(offsetV && !this.props.spacing){
+            let cssStr = `margin-left:${offsetV.offsetWidth+30}px;`;
+            ReactDom.findDOMNode(this.refs[this.itemObj] ).style.cssText = cssStr;
+        }
+    }
 
     render(){
         let _this = this;
         let options = React.Children.map(this.props.children,(option)=>{
             let {
-                clickCallback,
+                activeCallback,
                 url,
+                children,
+                value,
                 ...other,
                 } = option.props;
 
             return <Label
                 {...other}
+                key={children}
                 url={url ? url:_this.props.url}
-                value = {option.props.value?option.props.value:option.props.children}
-                clickCallback={_this.activeHandler.bind(_this,clickCallback ? clickCallback:_this.props.clickCallback)}
-                active={this.props.simple?false:option.props.children === _this.state.checked}>{option.props.children}</Label>;
+                value = {value?value:children}
+                activeCallback={_this.activeHandler.bind(_this,activeCallback ? activeCallback:_this.props.activeCallback)}
+                active={this.props.egType?false:children === _this.state.checked}>{children}</Label>;
 
         },this);
 
-        let labelCroupContent=this.props.simple?
-            <div className={
-                classnames(
-                    this.getClassName('group-simple')
-                )
-           }>
-                {options}
-            </div>
-            :
-            <Grid className={
-                classnames(
-                    this.getClassName('group'),
-                    {
-                        [this.getClassName('end')]:!!this.props.end
-                    }
-                )
-           }>
-                <Row>
-                    {
-                        this.props.title?
-                            <Col sm={1}>
-                                <div className={classnames(this.getClassName('title') ) }>
-                                    {this.props.title}
-                                </div>
-                            </Col>
-                            :null
-                    }
-                    <Col sm={this.props.title?11:12} end>
-                        {options}
-                    </Col>
-                </Row>
-            </Grid>
         return (
-            labelCroupContent
+            <div className={classnames(
+                this.getProperty(),
+                'clearfix'
+            )}>
+                {this.renderTitle()}
+                <div className="item-box clearfix" ref={this.itemObj} style={this.state.itemStyle}>
+                    <div className="item-list">{options}</div>
+                </div>
+            </div>
         );
     }
 }

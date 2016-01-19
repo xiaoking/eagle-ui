@@ -1,0 +1,125 @@
+.eg-btn{
+    //btn颜色
+    display: inline-block;
+    margin-bottom: 0; // For input.btn
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    outline: 0;
+    text-decoration: none;
+    font-weight: @btn-font-weight;
+    .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-base; @line-height-base; @btn-border-radius-base);
+    .user-select(none);
+    .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+}
+
+.eg-btn-default {
+    .button-variant(@btn-default-color; @btn-default-bg; @btn-default-border);
+    //透明
+    &.eg-btn-hollow{
+        .button-variant(@btn-hollow-color; @btn-hollow-bg; @btn-default-border);
+    }
+}
+.eg-btn-primary {
+    .button-variant(@btn-primary-color; @btn-primary-bg; @btn-primary-border);
+    &.eg-btn-hollow{
+        .button-variant(@btn-hollow-color; @btn-hollow-bg; @btn-primary-border);
+    }
+    &:hover {
+        color: @btn-primary-color;
+        background-color: darken(@btn-primary-bg, 2%);
+        border-color: darken(@btn-primary-border, 5%);
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            background-color: darken(@btn-primary-bg,10%);
+            border-color: darken(@btn-primary-border,5%);
+            color: darken(@btn-primary-color,10%);
+        }
+    }
+}
+.eg-btn-white {
+    .button-variant(@btn-white-color; @btn-white-bg; @btn-white-border);
+}
+// Success appears as green
+.eg-btn-success {
+    .button-variant(@btn-success-color; @btn-success-bg; @btn-success-border);
+    &.eg-btn-hollow{
+        .button-variant(@btn-hollow-color; @btn-hollow-bg; @btn-success-border);
+    }
+}
+// Info appears as blue-green
+.eg-btn-info {
+    .button-variant(@btn-info-color; @btn-info-bg; @btn-info-border);
+    &.eg-btn-hollow{
+        .button-variant(@btn-hollow-color; @btn-hollow-bg; @btn-info-border);
+    }
+}
+// Warning appears as orange
+.eg-btn-warning {
+    .button-variant(@btn-warning-color; @btn-warning-bg; @btn-warning-border);
+    &.eg-btn-hollow{
+        .button-variant(@btn-hollow-color; @btn-hollow-bg; @btn-warning-border);
+    }
+}
+// Danger and error appear as red
+.eg-btn-danger {
+    .button-variant(@btn-danger-color; @btn-danger-bg; @btn-danger-border);
+    &.eg-btn-hollow{
+        .button-variant(@btn-hollow-color; @btn-hollow-bg; @btn-danger-border);
+    }
+}
+.eg-btn-error {
+    .button-variant(@btn-error-color; @btn-error-bg; @btn-error-border);
+    &.eg-btn-hollow{
+        .button-variant(@btn-hollow-color; @btn-hollow-bg; @btn-error-border);
+    }
+}
+.eg-btn-link {
+    border:none;
+    .button-variant(@gray-dark; transparent; @btn-error-border);
+}
+
+.eg-btn-lg {
+    .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-large; @line-height-large; @btn-border-radius-base);
+}
+.eg-btn-sm {
+    .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-base; @line-height-small; @btn-border-radius-base);
+}
+.eg-btn-xs {
+    .button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-small; @line-height-small; @btn-border-radius-base);
+}
+
+
+// Block button
+// --------------------------------------------------
+
+.eg-btn-block {
+    display: block;
+    width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.eg-btn-block + .eg-btn-block {
+    margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    &.eg-btn-block {
+        width: 100%;
+    }
+}

@@ -1,0 +1,17 @@
+.make-margin(@type,@pre,@min,@max) when (@min<=@max){
+
+    .@{pre}-left-@{min}{
+        @{type}-left:~"@{min}px";
+    }
+    .@{pre}-top-@{min}{
+        @{type}-top:~"@{min}px";
+    }
+    .@{pre}-right-@{min}{
+        @{type}-right:~"@{min}px";
+    }
+    .@{pre}-bottom-@{min}{
+        @{type}-bottom:~"@{min}px";
+    }
+
+    .make-margin(@type,@pre,@min+5,@max);
+}

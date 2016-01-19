@@ -1,0 +1,171 @@
+// Animation
+.keyframes(@name; @args) {
+    @-webkit-keyframes @name { @args(); }
+    @keyframes @name { @args(); }
+}
+.animation(@args) {
+    -webkit-animation: @args;
+    animation: @args;
+}
+.animation-delay(@delay) {
+    -webkit-animation-delay: @delay;
+    animation-delay: @delay;
+}
+.animation-direction(@direction) {
+    -webkit-animation-direction: @direction;
+    -o-animation-direction: @direction;
+}
+.animation-duration(@duration) {
+    -webkit-animation-duration:@duration;
+    animation-duration:@duration;
+}
+.animation-fill-mode(@mode) {
+    -webkit-animation-fill-mode: @mode;
+    animation-fill-mode: @mode;
+}
+.animation-iteration-count(@count) {
+    -webkit-animation-iteration-count: @count;
+    animation-iteration-count: @count;
+}
+.animation-name(@name) {
+    -webkit-animation-name: @name;
+    animation-name: @name;
+}
+.animation-play-state(@state) {
+    -webkit-animation-play-state: @state;
+    animation-play-state: @state;
+}
+.animation-timing-function(@function) {
+    -webkit-animation-timing-function: @function;
+    animation-timing-function: @function;
+}
+
+
+
+// Transforms
+
+.transform(@args) {
+    -webkit-transform: @args;
+    -ms-transform: @args;
+    transform: @args;
+}
+.transform-origin(@args) {
+    -webkit-transform-origin: @args;
+    -ms-transform-origin: @args;
+    transform-origin: @args;
+}
+.transform-style(@style) {
+    -webkit-transform-style: @style;
+    -ms-transform-style: @style;
+    transform-style: @style;
+}
+.rotate(@deg:45deg){
+    .transform(rotate(@deg));
+}
+.scale(@factor:.5){
+    .transform(scale(@factor));
+}
+.translate(@x,@y){
+    .transform(translate(@x,@y));
+}
+.translate3d(@x,@y,@z) {
+    .transform(translate3d(@x,@y,@z));
+}
+.translateHardware(@x,@y) {
+    .translate(@x,@y);
+    -webkit-transform: translate3d(@x,@y,0);
+    -o-transform: translate3d(@x,@y,0);
+    transform: translate3d(@x,@y,0);
+}
+
+// Transitions
+
+.transition(@args:200ms) {
+    .prefix(transition,@args);
+}
+.transition-delay(@delay:0) {
+    transition-delay: @delay;
+}
+.transition-duration(@duration:200ms) {
+    transition-duration: @duration;
+}
+.transition-property(@property:all) {
+    transition-property: @property;
+}
+.transition-timing-function(@function:ease) {
+    transition-timing-function: @function;
+}
+
+//动画运行时间和状态设置
+.animated(@time,@mode:both) {
+    .animation-duration(@time);
+    .animation-fill-mode(@mode);
+}
+
+//淡入、淡出
+
+@fadeIn-args:{
+    0% {
+        opacity:0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100% {
+        opacity:1;
+    }
+};
+@fadeOut-args:{
+    0% {
+        opacity:1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity:0;
+    }
+};
+@rotate-args:{
+    from{
+        .transform(rotate(0deg));
+    }
+    to{
+        .transform(rotate(360deg));
+    }
+};
+.keyframes(rotate,@rotate-args);
+.fadein(@type:fadeIn){
+    .keyframes(@type,@fadeIn-args);
+    .fadein{
+        .animation-name(@type);
+    }
+
+}
+.fadeout(@type:fadeOut){
+    .keyframes(@type,@fadeOut-args);
+    .fadeout{
+        .animation-name(@type);
+    }
+}
+//晃动
+/**晃动*/
+@shake-args:{
+    0%,100% {
+        .transform(translate3d(0,0,0));
+    }
+    10%,30%,50%,70%,90% {
+        .transform(translate3d(-10px,0,0));
+    }
+    20%,40%,60%,80% {
+        .transform(translate3d(10px,0,0) );
+    }
+};
+.shake(@name:shake){
+    .keyframes(shake,@shake-args);
+    .shake{
+        .animation-name(@name);
+    }
+
+}

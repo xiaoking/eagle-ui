@@ -1,8 +1,8 @@
 /**
  * Created by mac on 15/9/8.
  */
-import React,{Component,PropTypes} from 'react';
-import ClassNameMixin from './utils/ClassNameMixin';
+import React,{PropTypes} from 'react';
+import Component from './utils/Component';
 import classnames from 'classnames';
 
 /**
@@ -15,7 +15,6 @@ import classnames from 'classnames';
  * @demo button.js {js}
  * @show true
  * */
-@ClassNameMixin
 export default class ButtonGroup extends Component{
 
     static propTypes={
@@ -32,7 +31,8 @@ export default class ButtonGroup extends Component{
          * @type Boolean
          * @default false
          * */
-        tacked:PropTypes.bool
+        tacked:PropTypes.bool,
+        egType:PropTypes.string
     };
 
     static defaultProps = {
@@ -53,8 +53,10 @@ export default class ButtonGroup extends Component{
     }
 
     mouseDownHandler(e){
+        let target = e.target;
+        this.execMethod('active',target,target.innerHTML);
         this.setState({
-            active:e.target.innerHTML
+            active:target.innerHTML
         })
     }
 
@@ -74,9 +76,8 @@ export default class ButtonGroup extends Component{
         return (
             <Component {...this.props} className={
                 classnames(
-                    this.getClassNamesForArguments('btn-group'),
-                    'clearfix' ,
-                    this.getClassNames(this.props)
+                    this.getProperty(),
+                    'clearfix'
                 )}>{options}</Component>
         );
     }

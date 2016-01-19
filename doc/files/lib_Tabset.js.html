@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -436,6 +460,10 @@ var _TabJs = require(&#x27;./Tab.js&#x27;);
 
 var _TabJs2 = _interopRequireDefault(_TabJs);
 
+var _reactLibReactDOM = require(&#x27;react/lib/ReactDOM&#x27;);
+
+var _reactLibReactDOM2 = _interopRequireDefault(_reactLibReactDOM);
+
 /**
  * tab组件
  * @class Tabset
@@ -503,7 +531,7 @@ var Tabset = (function (_Component) {
     };
 
     Tabset.prototype.tabItemListMouseLeaveHandler = function tabItemListMouseLeaveHandler() {
-        var activeTab = _react2[&#x27;default&#x27;].findDOMNode(this.refs[&#x27;tabItem&#x27; + this.state.active]);
+        var activeTab = _reactLibReactDOM2[&#x27;default&#x27;].findDOMNode(this.refs[&#x27;tabItem&#x27; + this.state.active]);
         this.timeoutObj = setTimeout((function () {
             this.tabItemMouseEnterHandler(activeTab.offsetLeft, activeTab.offsetWidth);
         }).bind(this), 400);
@@ -511,12 +539,15 @@ var Tabset = (function (_Component) {
 
     Tabset.prototype.tabItemMouseEnterHandler = function tabItemMouseEnterHandler(left, width) {
         clearTimeout(this.timeoutObj);
-        this.setState({
-            tabSlider: {
-                left: left,
-                width: width
-            }
-        });
+        clearTimeout(this.timeoutEnter);
+        this.timeoutEnter = setTimeout((function () {
+            this.setState({
+                tabSlider: {
+                    left: left,
+                    width: width
+                }
+            });
+        }).bind(this), 200);
     };
 
     Tabset.prototype.render = function render() {

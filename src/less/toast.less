@@ -1,0 +1,80 @@
+/**成功图标*/
+.eg-tips-success{
+    background: @brand-success;
+    width: 30px;
+    height: 30px;
+    .border-radius(30px);
+    display: inline-block;
+    position: relative;
+}
+/**出错提示*/
+.eg-tips-error{
+    background: @brand-error;
+    width: 30px;
+    height: 30px;
+    .border-radius(30px);
+    display: inline-block;
+    position: relative;
+    &:before{
+        height: 2px;
+        width: 2px;
+        background: #fff;
+        left: 14px;
+        top: 19px;
+    }
+    &:after{
+        height: 10px;
+        width: 2px;
+        background: #fff;
+        left: 14px;
+        top: 6px;
+    }
+}
+/**加载中*/
+.eg-tips-loading{
+    background: #bbb;
+    width: 30px;
+    height: 30px;
+    .border-radius(30px);
+    display: inline-block;
+    position: relative;
+    &:before{
+        width: 15px;
+        height: 15px;
+        background: transparent;
+        border: 2px solid #fff;
+        top: 5.5px;
+        left: 5.5px;
+        .border-radius(12px);
+        clip: rect(auto,16px,auto,auto);
+        animation: 0.5s linear 0s normal none infinite rotate;
+        -webkit-animation: 0.5s linear 0s normal none infinite rotate;
+        -moz-animation: 0.5s linear 0s normal none infinite rotate;
+    }
+}
+
+.eg-tips-success,.eg-icon-tick,.eg-tips-loading,.eg-tips-error{
+    &:before,&:after{
+        display: inline-block;
+        position: absolute;
+        content: "";
+    }
+}
+.eg-tips-success,.eg-icon-tick{
+    &:before{
+        height: 8px;
+        width: 2px;
+        background: #fff;
+        left: 10px;
+        top: 13px;
+        .transform(rotate(135deg));
+    }
+    &:after{
+        height: 14px;
+        width: 2px;
+        background: #fff;
+        left: 17px;
+        top: 8px;
+        .transform(rotate(45deg));
+    }
+}

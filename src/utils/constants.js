@@ -12,6 +12,18 @@ export const classConstants = {
     /**
      * 状态
      * */
+    //标签新增命名空间
+    //标签启用
+    positive:setNamespace('positive'),
+    //标签灰色
+    negative:setNamespace('negative'),
+    //标签无背景色
+    neutral:setNamespace('neutral'),
+    //标签灰白
+    modest:setNamespace('modest'),
+    //提示框暖色(黄色)
+    warm:setNamespace('warm'),
+
     //禁用
     disabled : setNamespace('disabled'),
     //启用
@@ -33,6 +45,8 @@ export const classConstants = {
     'arrow-up': setNamespace('arrow-up'),
     //向下箭头
     'arrow-down': setNamespace('arrow-down'),
+    //下边线
+    'bottom': setNamespace('bottom'),
 
     /**
      * 颜色

@@ -19,7 +19,7 @@ export default class Item extends Component{
     };
 
     static defaultProps = {
-
+        classPrefix:'item'
     };
 
 
@@ -29,12 +29,14 @@ export default class Item extends Component{
      * @return {ReactElement}
      * */
     render(){
+        let renderStyle=this.props.style||{};
         return (
             <div className={
                 classnames(
-                    this.getClassName('item'),
-                    this.props.className
-                )}>
+                    this.getClassNamesForArguments('item'),
+                    this.props.className,
+                    this.getClassNames(this.props)
+                )} style={renderStyle}>
                 {this.props.children}
             </div>
         );

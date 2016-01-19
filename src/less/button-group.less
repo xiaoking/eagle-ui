@@ -1,0 +1,56 @@
+.eg-btn-group{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    .eg-btn{
+        position: relative;
+        float: left;
+        margin-left: -1px;
+
+        &:not(:first-child):not(:last-child) {
+            border-radius: 0;
+        }
+
+        &:first-child:not(:last-child){
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+        }
+        &:last-child:not(:first-child){
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+        }
+    }
+
+}
+.eg-btn-group-tacked{
+    .eg-btn{
+        float: none;
+        display: block;
+        margin-left: 0;
+        margin-top: -1px;
+        &:first-child:not(:last-child) {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        &:last-child:not(:first-child) {
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 0;
+            border-top-left-radius: 0;
+        }
+    }
+}
+.eg-btn-group-justify{
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    .eg-btn{
+        float: none;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+    }
+}

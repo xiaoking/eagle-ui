@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -559,7 +583,7 @@
 
             
                 <div class="foundat">
-                    Defined in: <a href="../files/lib_ValidatorPanel.js.html#l27"><code>lib&#x2F;ValidatorPanel.js:27</code></a>
+                    Defined in: <a href="../files/lib_ValidatorPanel.js.html#l31"><code>lib&#x2F;ValidatorPanel.js:31</code></a>
                 </div>
             
 
@@ -612,7 +636,7 @@
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l27"><code>lib&#x2F;ValidatorPanel.js:27</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l31"><code>lib&#x2F;ValidatorPanel.js:31</code></a>
         
         </p>
 
@@ -646,19 +670,10 @@
  * Created by mac on 15/11/4.
  */
 import React,{Component} from &#39;react&#39;;
-import Input from &#39;../../../src/Input.js&#39;;
-import Button from &#39;../../../src/Button.js&#39;;
-import Row from &#39;../../../src/Row.js&#39;;
-import Panel from &#39;../../../src/panel/Panel.js&#39;;
-import PanelContent from &#39;../../../src/panel/PanelContent.js&#39;;
-import Col from &#39;../../../src/Col.js&#39;;
-import Grid from &#39;../../../src/Grid.js&#39;;
-import RadioGroup from &#39;../../../src/RadioGroup.js&#39;;
-import ValidatorPanel from &#39;../../../src/ValidatorPanel.js&#39;;
-import CalendarPanel from &#39;../../../src/CalendarPanel.js&#39;;
-import Tab from &#39;../../../src/Tab.js&#39;;
-import Tabset from &#39;../../../src/Tabset.js&#39;;
-import Dialog from &#39;../../../src/Dialog.js&#39;;
+import {Tabset,Tab,CalendarPanel,ValidatorPanel,Col,Row,Grid,Button,Dialog,Panel,PanelHeader,PanelContent,PanelFooter,FormGroup,Input,RadioGroup,CheckboxGroup,Select} from &#39;../../../src/index&#39;;
+
+
+
 
 let Demo = class Demo extends Component{
 
@@ -682,7 +697,8 @@ let Demo = class Demo extends Component{
                     text:&#39;value值不是字符串&#39;,
                     rule:function(value){
                         console.dir(value);
-                        return isNaN(value);
+                        //return isNaN(value);
+                        return true;
                     }
                 }
             },
@@ -725,12 +741,16 @@ let Demo = class Demo extends Component{
         console.dir(value);
     }
 
+    getDialog(d){
+        //this.dialog = d;
+    }
+
     change(value){
        this.setState({
            showTab:value,
-           update:&#39;uid&#39;+(+new Date()),
-           show:false
+           update:&#39;uid&#39;+(+new Date())
        });
+
     }
 
     submit(vals){
@@ -738,9 +758,7 @@ let Demo = class Demo extends Component{
     }
 
     showMask(){
-        this.setState({
-            show:true
-        });
+        Dialog.mask(&#39;demo2&#39;);
     }
 
     checktab(){
@@ -754,10 +772,12 @@ let Demo = class Demo extends Component{
                 &lt;/Row&gt;
                 &lt;Row&gt;
                 &lt;Col&gt;
+                    &lt;CheckboxGroup&gt;
                     &lt;Input  type="checkbox"  name="checkbox" value="1"  data-validate /&gt;
                     &lt;Input  type="checkbox"   name="checkbox" value="2" data-validate  /&gt;
                     &lt;Input  type="checkbox"   name="checkbox" value="3" data-validate  /&gt;
                     &lt;Input  type="checkbox"   name="checkbox" value="4" data-validate  /&gt;
+                    &lt;/CheckboxGroup&gt;
                 &lt;/Col&gt;
 
                 &lt;/Row&gt;
@@ -779,14 +799,14 @@ let Demo = class Demo extends Component{
                                     &lt;Col&gt;
                                         &lt;PanelContent&gt;
                                             &lt;RadioGroup defaultChecked={this.state.showTab+&#39;&#39;} name="radio-foot" getValueCallback={::this.change}&gt;
-                                                &lt;Input  type="radio"  label="显示第一个表单元素" value="0"  /&gt;
-                                                &lt;Input  type="radio"  label="显示第二个表单元素" value="1"   /&gt;
+                                                &lt;Input  type="radio"  label="非必填项" value="0"  /&gt;
+                                                &lt;Input  type="radio"  label="必填项" value="1"   /&gt;
                                             &lt;/RadioGroup&gt;
                                         &lt;/PanelContent&gt;
                                     &lt;/Col&gt;
                                 &lt;/Row&gt;
                                 &lt;Row&gt;
-                                    &lt;Col sm={5} end&gt;
+                                    &lt;Col sm={8} end&gt;
                                         &lt;ValidatorPanel rules={this.rules} submitElement="#submit" direction="right" id="testFrom" update={this.state.update} submitCallback={::this.submit}&gt;
                                             &lt;Row&gt;
                                                 &lt;Col&gt;
@@ -794,7 +814,7 @@ let Demo = class Demo extends Component{
                                                         &lt;Row&gt;
                                                             &lt;Col&gt;
                                                                 &lt;CalendarPanel&gt;
-                                                                    &lt;Input placeholder="请选择日期" icon="calendar" name="date" style={{width:&#39;150px&#39;}} data-validate /&gt;
+                                                                    &lt;Input placeholder="请选择日期" icon="calendar" name="date" data-validate /&gt;
                                                                 &lt;/CalendarPanel&gt;
 
                                                             &lt;/Col&gt;
@@ -802,12 +822,12 @@ let Demo = class Demo extends Component{
                                                         {this.checktab()}
                                                         &lt;Row&gt;
                                                             &lt;Col&gt;
-                                                                &lt;Input placeholder="请输入有效的号码" name="number" data-validate /&gt;
+                                                                &lt;Input placeholder="请输入手机号码" name="number" data-validate /&gt;
                                                             &lt;/Col&gt;
                                                         &lt;/Row&gt;
                                                         &lt;Row&gt;
                                                             &lt;Col&gt;
-                                                                &lt;Input placeholder="请输入有效的号码" name="equalTo" data-validate /&gt;
+                                                                &lt;Input placeholder="请再次确认手机号码" name="equalTo" data-validate /&gt;
                                                             &lt;/Col&gt;
                                                         &lt;/Row&gt;
                                                         &lt;Row&gt;
@@ -844,8 +864,8 @@ let Demo = class Demo extends Component{
                             &lt;/Tab&gt;
                         &lt;/Tabset&gt;
                     &lt;/Grid&gt;
-                    &lt;Dialog type={&#39;mask&#39;} show={this.state.show}&gt;
-                        &lt;Grid style={{width:&#39;300px&#39;}}&gt;
+                    &lt;Dialog id="demo2" egSize="sm" title="表单验证"&gt;
+                        &lt;Grid&gt;
                             &lt;ValidatorPanel rules={this.rules} submitElement="#ssubmit" direction="top" id="testDialogFrom" submitCallback={::this.submit}&gt;
                                 &lt;Row&gt;
                                     &lt;Col&gt;
@@ -930,7 +950,7 @@ export default Demo;</code></pre>
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l83"><code>lib&#x2F;ValidatorPanel.js:83</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l87"><code>lib&#x2F;ValidatorPanel.js:87</code></a>
         
         </p>
 
@@ -978,7 +998,7 @@ export default Demo;</code></pre>
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l176"><code>lib&#x2F;ValidatorPanel.js:176</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l180"><code>lib&#x2F;ValidatorPanel.js:180</code></a>
         
         </p>
 
@@ -1026,7 +1046,7 @@ export default Demo;</code></pre>
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l72"><code>lib&#x2F;ValidatorPanel.js:72</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l76"><code>lib&#x2F;ValidatorPanel.js:76</code></a>
         
         </p>
 
@@ -1071,7 +1091,7 @@ export default Demo;</code></pre>
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l97"><code>lib&#x2F;ValidatorPanel.js:97</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l101"><code>lib&#x2F;ValidatorPanel.js:101</code></a>
         
         </p>
 
@@ -1132,7 +1152,7 @@ export default Demo;</code></pre>
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l170"><code>lib&#x2F;ValidatorPanel.js:170</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l174"><code>lib&#x2F;ValidatorPanel.js:174</code></a>
         
         </p>
 
@@ -1177,7 +1197,7 @@ export default Demo;</code></pre>
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l163"><code>lib&#x2F;ValidatorPanel.js:163</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l167"><code>lib&#x2F;ValidatorPanel.js:167</code></a>
         
         </p>
 
@@ -1225,7 +1245,7 @@ export default Demo;</code></pre>
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l134"><code>lib&#x2F;ValidatorPanel.js:134</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l138"><code>lib&#x2F;ValidatorPanel.js:138</code></a>
         
         </p>
 
@@ -1270,7 +1290,7 @@ export default Demo;</code></pre>
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l157"><code>lib&#x2F;ValidatorPanel.js:157</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l161"><code>lib&#x2F;ValidatorPanel.js:161</code></a>
         
         </p>
 
@@ -1315,7 +1335,7 @@ export default Demo;</code></pre>
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l150"><code>lib&#x2F;ValidatorPanel.js:150</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l154"><code>lib&#x2F;ValidatorPanel.js:154</code></a>
         
         </p>
 
@@ -1363,7 +1383,7 @@ export default Demo;</code></pre>
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l90"><code>lib&#x2F;ValidatorPanel.js:90</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l94"><code>lib&#x2F;ValidatorPanel.js:94</code></a>
         
         </p>
 
@@ -1411,7 +1431,7 @@ export default Demo;</code></pre>
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l183"><code>lib&#x2F;ValidatorPanel.js:183</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l187"><code>lib&#x2F;ValidatorPanel.js:187</code></a>
         
         </p>
 
@@ -1459,7 +1479,7 @@ export default Demo;</code></pre>
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l142"><code>lib&#x2F;ValidatorPanel.js:142</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l146"><code>lib&#x2F;ValidatorPanel.js:146</code></a>
         
         </p>
 
@@ -1504,7 +1524,7 @@ export default Demo;</code></pre>
             
         
         
-        <a href="../files/lib_ValidatorPanel.js.html#l66"><code>lib&#x2F;ValidatorPanel.js:66</code></a>
+        <a href="../files/lib_ValidatorPanel.js.html#l70"><code>lib&#x2F;ValidatorPanel.js:70</code></a>
         
         </p>
 

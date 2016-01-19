@@ -1,0 +1,103 @@
+.eg-grid{
+    &.eg-grid-center{
+        .container-fixed();
+    }
+
+    /*@media (min-width: @screen-sm-min) {
+        width: @container-sm;
+    }
+    @media (min-width: @screen-md-min) {
+        width: @container-md;
+    }
+    @media (min-width: @screen-lg-min) {
+        width: @container-lg;
+    }*/
+}
+
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+.eg-grid-fluid {
+    .container-fixed();
+}
+
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+.eg-row {
+    .make-row();
+}
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+.make-grid-columns();
+
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+.make-grid(xs);
+
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: @screen-sm-min) {
+    .make-grid(sm);
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: @screen-md-min) {
+    .make-grid(md);
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: @screen-lg-min) {
+    .make-grid(lg);
+}
+
+[class*="eg-col-"] {
+    float: left;
+    padding-left:  ceil((@grid-gutter-width / 2));
+    padding-right: floor((@grid-gutter-width / 2));
+    padding-top:@padding-default;
+    padding-bottom:@padding-default;
+}
+
+[class*='eg-col-']:last-child{
+    float: right;
+}
+[class*='eg-col-'].eg-end{
+    float: left;
+}
+.eg-col-layer,
+.eg-form-group>.eg-col-layer,
+.eg-form-group>.eg-row>.eg-col-layer{
+    [class*='eg-col-'],[class*='eg-col-']:first-of-type{
+        padding: 0 ;
+        text-align: left;
+    }
+    .eg-row{
+        //margin: 0;
+    }
+}

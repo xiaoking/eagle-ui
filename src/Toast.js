@@ -1,13 +1,16 @@
 /**
  * Created by panqianjin on 15/10/30.
  */
-import React,{Component,PropTypes} from 'react';
+import React,{PropTypes} from 'react';
 import ClassNameMixin from './utils/ClassNameMixin';
 import classnames from 'classnames';
 import Button from './Button.js';
 import Row from './Row.js';
 import Col from './Col.js';
 import Grid from './Grid.js';
+import Dialog from './Dialog';
+
+import Component from './utils/Component';
 /**
  * 提示组件
  * 类型：分为success,error,loading 三种。默认success
@@ -20,7 +23,6 @@ import Grid from './Grid.js';
  * @demo toast.js{js}
  * @show true
  * */
-@ClassNameMixin
 export default
 class Toast extends Component {
     static propType = {
@@ -33,11 +35,11 @@ class Toast extends Component {
         type: PropTypes.string,
         /**
          * 文字信息
-         * @property msg
+         * @property message
          * @type String
          * @default 保存成功
          * */
-        msg: PropTypes.string,
+        message: PropTypes.string,
         /**
          * tips n秒后消失 默认2秒
          * @property seconds
@@ -45,13 +47,6 @@ class Toast extends Component {
          * @default 2
          * */
         seconds: PropTypes.number,
-        /**
-         * 是否显示遮罩，默认false
-         * @property overlay
-         * @type Boolean
-         * @default false
-         * */
-        overlay: PropTypes.boolean,
         /**
          * 类名样式前缀
          * @property classPrefix
@@ -67,130 +62,46 @@ class Toast extends Component {
          * */
         componentTag: PropTypes.string
 
-    }
+    };
     static defaultProps = {
-        type: 'sucess-tips',
-        msg: '保存成功',
+        type:'success',
+        message: '保存成功',
         seconds: 2,
-        overlay: false,
-        classPrefix: 'tips',
+        classPrefix: 'dialog',
         componentTag: 'div'
-    }
+    };
 
     constructor(props, context) {
         super(props, context);
-        this.flag = true;
-        this.state = {
-            /**
-             * 是否显示tips
-             * @type Boolean
-             * */
-            show: this.props.show
-        };
-    }
-    /**
-     * 接收到新props时执行,props改变，改变state.show
-     * @method componentWillReceiveProps
-     *
-     * */
-    componentWillReceiveProps(nextProps) {
-        this.setState({
-            /**
-             * state.show随新的props里的值改变
-             * @type Boolean
-             * */
-            show: nextProps.show
-        });
-
-    }
-    /**
-     * change flag状态，即非第一次
-     * */
-    componentDidMount(){
-        this.flag = false;
-    }
-    /**
-     * @method render
-     * @return {ReactElement}
-     * */
-    render() {
-        this.setTimeoutForClose();
-        return (
-            <Grid ref='container' className={classnames(
-                    this.getClassName(this.props.overlay?'container':'wapper'),
-                    {
-                        ['fadein']:this.state.show,
-                        ['fadeout']: this.flag?false:!this.state.show
-                    }
-                )}>
-                {!this.flag&&!this.state.show?this.displayNone():null}
-                {this.toast()}
-            </Grid>
-        );
-    }
-    /**
-     * 改变display形态
-     * */
-    displayNone(){
-        let _this =this;
-        clearTimeout(this.timer);
-        this.timer = setTimeout(function(){this.removeClass( React.findDOMNode(_this.refs.container),'fadeout')}.bind(this),400);
-    }
-
-    /**
-     * 渲染toast主体
-     * @method toast
-     * @return {ReactElement}
-     * */
-    toast() {
-        return (
-            <Row className={
-                 classnames(
-                    this.getClassNamesForArguments(this.props.classPrefix)
-                )}>
-                <Col>
-                    <Row className={classnames(
-                    this.getClassNamesForArguments('content')
-                )}>
-
-                        <div style={{padding: '5px 15px',float: 'left'}} className={classnames(
-                            this.getClassNamesForArguments(this.props.type)
-                        )}>
-                        </div>
-                        <div style={{padding: '5px 15px',float:'right'}}>
-                            {this.props.msg}
-                        </div>
-                    </Row>
-                </Col>
-            </Row>
-        )
-    }
-    /**
-     * 延时n秒消失
-     * @method  setTimeoutForClose
-     * @return null
-     * */
-    setTimeoutForClose() {
-        if (this.state.show) {
-            let seconds = this.props.seconds * 1000;
-            clearTimeout(this.timeout);
-            this.timeout = setTimeout(::this.closeToast, seconds
-        )
-            ;
-        }
     }
     /**
      * 改变state.show 隐藏tips,并调用回调方法
-     * @method closeToast
+     * @method close
      * @return null
      * */
-    closeToast() {
-        this.props.closeCallback && (this.props.closeCallback() );
-        this.setState({
-            show: false
-        });
+    close() {
+        let seconds = this.props.seconds * 1000,_this = this;
+        clearTimeout(this.timeout);
+        this.timeout = setTimeout(()=>{
+            _this.props.closeCallback && (_this.props.closeCallback() );
+            Dialog.close();
+        }, seconds);
     }
 
+    renderDialog(className){
+        const {message,children,type} = this.props;
+        this.close();
+        return (
+            <div className="clearfix">
+                <div style={{padding: '5px 15px',float: 'left'}} className={classnames(this.setPrefix('tips-'+type,false))}>
+                </div>
+                <div  style={{padding: '5px 15px',float: 'right'}}>{children||message}</div>
+            </div>
+        );
+    }
 
+    render(){
+        return this.renderDialog('toast');
+    }
 
 }

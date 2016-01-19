@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -469,7 +493,9 @@ var Table = (function (_Component) {
         enumerable: true
     }, {
         key: &#x27;defaultProps&#x27;,
-        value: {},
+        value: {
+            classPrefix: &#x27;table&#x27;
+        },
         enumerable: true
     }]);
 
@@ -555,9 +581,10 @@ var Table = (function (_Component) {
                 }, self)
             );
         });
+        console.log(this.props);
         return _react2[&#x27;default&#x27;].createElement(
             &#x27;table&#x27;,
-            { className: _classnames2[&#x27;default&#x27;](this.getClassName(&#x27;table&#x27;)) },
+            { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;table&#x27;), this.getClassNames(this.props)) },
             _react2[&#x27;default&#x27;].createElement(
                 &#x27;thead&#x27;,
                 null,

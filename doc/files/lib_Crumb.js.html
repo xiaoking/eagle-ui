@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -408,6 +432,8 @@
 
 exports.__esModule = true;
 
+var _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (&#x27;value&#x27; in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
 function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &#x27;default&#x27;: obj }; }
@@ -420,25 +446,17 @@ var _react = require(&#x27;react&#x27;);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _utilsClassNameMixin = require(&#x27;./utils/ClassNameMixin&#x27;);
-
-var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
-
 var _classnames = require(&#x27;classnames&#x27;);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _GridJs = require(&#x27;./Grid.js&#x27;);
+var _utilsComponent = require(&#x27;./utils/Component&#x27;);
 
-var _GridJs2 = _interopRequireDefault(_GridJs);
-
-var _RowJs = require(&#x27;./Row.js&#x27;);
-
-var _RowJs2 = _interopRequireDefault(_RowJs);
+var _utilsComponent2 = _interopRequireDefault(_utilsComponent);
 
 /**
  * 面包屑组件
- * @class crumb
+ * @class Crumb
  * @module ui
  * @extends Component
  * @constructor
@@ -479,7 +497,7 @@ var Crumb = (function (_Component) {
     }]);
 
     function Crumb(props, context) {
-        _classCallCheck(this, _Crumb);
+        _classCallCheck(this, Crumb);
 
         _Component.call(this, props, context);
     }
@@ -492,32 +510,31 @@ var Crumb = (function (_Component) {
     Crumb.prototype.render = function render() {
         var length = this.props.children.length;
         var li = this.props.children.map(function (item, index) {
+            var children = item.props.children;
+
             return _react2[&#x27;default&#x27;].createElement(
                 &#x27;li&#x27;,
-                null,
+                { key: children + index },
                 index &lt; length - 1 ? _react2[&#x27;default&#x27;].createElement(
                     &#x27;a&#x27;,
                     { href: item.props.url },
-                    item.props.children
-                ) : item.props.children
+                    children
+                ) : children
             );
         });
         return _react2[&#x27;default&#x27;].createElement(
-            _GridJs2[&#x27;default&#x27;],
-            { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(this.props.classPrefix)) },
+            this.componentTag,
+            _extends({}, this.props, { className: _classnames2[&#x27;default&#x27;](this.getProperty(), &#x27;clearfix&#x27;, this.props.className) }),
             _react2[&#x27;default&#x27;].createElement(
                 &#x27;ul&#x27;,
                 null,
                 li
-            ),
-            _react2[&#x27;default&#x27;].createElement(_RowJs2[&#x27;default&#x27;], { className: &#x27;clearfix&#x27; })
+            )
         );
     };
 
-    var _Crumb = Crumb;
-    Crumb = _utilsClassNameMixin2[&#x27;default&#x27;](Crumb) || Crumb;
     return Crumb;
-})(_react.Component);
+})(_utilsComponent2[&#x27;default&#x27;]);
 
 exports[&#x27;default&#x27;] = Crumb;
 module.exports = exports[&#x27;default&#x27;];

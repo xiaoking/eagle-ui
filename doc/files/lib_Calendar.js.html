@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -564,7 +588,7 @@ var Calendar = (function (_Component) {
                 //&quot;eg-active&quot; eg-calendar-selected
                 dom.push(_react2[&#x27;default&#x27;].createElement(
                     &#x27;td&#x27;,
-                    null,
+                    { key: d + j + &#x27;day&#x27; },
                     _react2[&#x27;default&#x27;].createElement(
                         &#x27;span&#x27;,
                         { className: _classnames5[&#x27;default&#x27;](this.getClassName(&#x27;item&#x27;), (_classnames = {}, _classnames[this.getClassName(&#x27;active&#x27;, false)] = this.isToday(year, month + 1, d), _classnames[this.getClassName(&#x27;disabled&#x27;)] = disabled, _classnames[&#x27;no-hover&#x27;] = d == &#x27; &#x27;, _classnames[this.getClassName(&#x27;selected&#x27;)] = this.isOptionSelect(selectedDate, defaultDate) &amp;&amp; defaultDate.getDate() == d &amp;&amp; !disabled, _classnames)), onMouseDown: disabled || d == &#x27; &#x27; ? &#x27;&#x27; : _this.dateClick.bind(_this, year + &#x27;/&#x27; + (month + 1) + &#x27;/&#x27; + d) },
@@ -609,7 +633,7 @@ var Calendar = (function (_Component) {
                 return monthList.map(function (month) {
                     return _react2[&#x27;default&#x27;].createElement(
                         &#x27;option&#x27;,
-                        { value: year + &#x27;/&#x27; + month + &#x27;/1&#x27; },
+                        { key: year + &#x27;/&#x27; + month + &#x27;/1&#x27;, value: year + &#x27;/&#x27; + month + &#x27;/1&#x27; },
                         year,
                         &#x27;年&#x27;,
                         _this.getDay(month),
@@ -644,11 +668,13 @@ var Calendar = (function (_Component) {
         }
 
         var d = undefined,
-            dom = [];
+            dom = [],
+            index = 0;
         while (arr.length &gt; 0) {
+            index += 1;
             dom.push(_react2[&#x27;default&#x27;].createElement(
                 &#x27;tr&#x27;,
-                { className: &#x27;body&#x27; },
+                { className: &#x27;body&#x27;, key: &#x27;line&#x27; + index },
                 this.getDates(arr, selectedDate, defaultDate)
             ));
         }
@@ -661,10 +687,17 @@ var Calendar = (function (_Component) {
         return d.getFullYear() == year &amp;&amp; d.getMonth() + 1 == month &amp;&amp; d.getDate() == date;
     };
 
+    //补位
+
+    Calendar.prototype.fill = function fill(d) {
+        d = parseInt(d, 10);
+        return d &lt; 10 ? &#x27;0&#x27; + d : d;
+    };
+
     Calendar.prototype.getDate = function getDate(year, month, date) {
         var format = this.props.format;
 
-        return format.replace(/y{4}/, year).replace(/M{1,2}/, month).replace(/d{1,2}/, date);
+        return format.replace(/y{4}/, year).replace(/M{1,2}/, this.fill(month)).replace(/d{1,2}/, this.fill(date));
     };
 
     Calendar.prototype.getDay = function getDay(day) {
@@ -723,7 +756,7 @@ var Calendar = (function (_Component) {
 
                 list.push(_react2[&#x27;default&#x27;].createElement(
                     &#x27;span&#x27;,
-                    null,
+                    { key: &#x27;year&#x27; + i },
                     _react2[&#x27;default&#x27;].createElement(
                         &#x27;i&#x27;,
                         { className: _classnames5[&#x27;default&#x27;]((_classnames2 = {}, _classnames2[_this.getClassName(&#x27;selected&#x27;, false)] = sYear == y, _classnames2.old = i == -1 || i == 10, _classnames2)), onMouseDown: _this.switchYear.bind(_this2, y) },
@@ -742,23 +775,27 @@ var Calendar = (function (_Component) {
                 &#x27;thead&#x27;,
                 { className: &#x27;eg-calendar-header&#x27; },
                 _react2[&#x27;default&#x27;].createElement(
-                    &#x27;th&#x27;,
+                    &#x27;tr&#x27;,
                     null,
-                    _react2[&#x27;default&#x27;].createElement(&#x27;div&#x27;, { className: this.getClassName(&#x27;icon-prev&#x27;, false), onMouseDown: this.switchYearForInterval.bind(this, year - 1, true) })
-                ),
-                _react2[&#x27;default&#x27;].createElement(
-                    &#x27;th&#x27;,
-                    { colSpan: &#x27;5&#x27; },
                     _react2[&#x27;default&#x27;].createElement(
-                        &#x27;div&#x27;,
-                        { className: &#x27;title&#x27; },
-                        year + &#x27;年-&#x27; + (year + 9) + &#x27;年&#x27;
+                        &#x27;th&#x27;,
+                        null,
+                        _react2[&#x27;default&#x27;].createElement(&#x27;div&#x27;, { className: this.getClassName(&#x27;icon-prev&#x27;, false), onMouseDown: this.switchYearForInterval.bind(this, year - 1, true) })
+                    ),
+                    _react2[&#x27;default&#x27;].createElement(
+                        &#x27;th&#x27;,
+                        { colSpan: &#x27;5&#x27; },
+                        _react2[&#x27;default&#x27;].createElement(
+                            &#x27;div&#x27;,
+                            { className: &#x27;title&#x27; },
+                            year + &#x27;年-&#x27; + (year + 9) + &#x27;年&#x27;
+                        )
+                    ),
+                    _react2[&#x27;default&#x27;].createElement(
+                        &#x27;th&#x27;,
+                        null,
+                        _react2[&#x27;default&#x27;].createElement(&#x27;div&#x27;, { className: this.getClassName(&#x27;icon-next&#x27;, false), onMouseDown: this.switchYearForInterval.bind(this, year + 10, true) })
                     )
-                ),
-                _react2[&#x27;default&#x27;].createElement(
-                    &#x27;th&#x27;,
-                    null,
-                    _react2[&#x27;default&#x27;].createElement(&#x27;div&#x27;, { className: this.getClassName(&#x27;icon-next&#x27;, false), onMouseDown: this.switchYearForInterval.bind(this, year + 10, true) })
                 )
             ),
             _react2[&#x27;default&#x27;].createElement(
@@ -790,23 +827,27 @@ var Calendar = (function (_Component) {
                 &#x27;thead&#x27;,
                 { className: &#x27;eg-calendar-header&#x27; },
                 _react2[&#x27;default&#x27;].createElement(
-                    &#x27;th&#x27;,
+                    &#x27;tr&#x27;,
                     null,
-                    _react2[&#x27;default&#x27;].createElement(&#x27;div&#x27;, { className: this.getClassName(&#x27;icon-prev&#x27;, false), onMouseDown: this.switchYear.bind(this, &#x27;-1&#x27;) })
-                ),
-                _react2[&#x27;default&#x27;].createElement(
-                    &#x27;th&#x27;,
-                    { colSpan: &#x27;5&#x27; },
                     _react2[&#x27;default&#x27;].createElement(
-                        &#x27;div&#x27;,
-                        { className: &#x27;title&#x27;, onMouseDown: (_context = this.switchWindow).bind.call(_context, this, 2) },
-                        selectDate.year + &#x27;年&#x27;
+                        &#x27;th&#x27;,
+                        null,
+                        _react2[&#x27;default&#x27;].createElement(&#x27;div&#x27;, { className: this.getClassName(&#x27;icon-prev&#x27;, false), onMouseDown: this.switchYear.bind(this, &#x27;-1&#x27;) })
+                    ),
+                    _react2[&#x27;default&#x27;].createElement(
+                        &#x27;th&#x27;,
+                        { colSpan: &#x27;5&#x27; },
+                        _react2[&#x27;default&#x27;].createElement(
+                            &#x27;div&#x27;,
+                            { className: &#x27;title&#x27;, onMouseDown: (_context = this.switchWindow).bind.call(_context, this, 2) },
+                            selectDate.year + &#x27;年&#x27;
+                        )
+                    ),
+                    _react2[&#x27;default&#x27;].createElement(
+                        &#x27;th&#x27;,
+                        null,
+                        _react2[&#x27;default&#x27;].createElement(&#x27;div&#x27;, { className: this.getClassName(&#x27;icon-next&#x27;, false), onMouseDown: this.switchYear.bind(this, &#x27;+1&#x27;) })
                     )
-                ),
-                _react2[&#x27;default&#x27;].createElement(
-                    &#x27;th&#x27;,
-                    null,
-                    _react2[&#x27;default&#x27;].createElement(&#x27;div&#x27;, { className: this.getClassName(&#x27;icon-next&#x27;, false), onMouseDown: this.switchYear.bind(this, &#x27;+1&#x27;) })
                 )
             ),
             _react2[&#x27;default&#x27;].createElement(
@@ -823,7 +864,7 @@ var Calendar = (function (_Component) {
 
                             return _react2[&#x27;default&#x27;].createElement(
                                 &#x27;span&#x27;,
-                                null,
+                                { key: item + &#x27;月&#x27; },
                                 _react2[&#x27;default&#x27;].createElement(
                                     &#x27;i&#x27;,
                                     { className: _classnames5[&#x27;default&#x27;]((_classnames3 = {}, _classnames3[_this.getClassName(&#x27;selected&#x27;, false)] = selectDate.month == item, _classnames3)), onMouseDown: _this.switchMonth.bind(_this, item * 1 - 1) },
@@ -850,23 +891,27 @@ var Calendar = (function (_Component) {
                 &#x27;thead&#x27;,
                 { className: &#x27;eg-calendar-header&#x27; },
                 _react2[&#x27;default&#x27;].createElement(
-                    &#x27;th&#x27;,
+                    &#x27;tr&#x27;,
                     null,
-                    _react2[&#x27;default&#x27;].createElement(&#x27;div&#x27;, { className: this.getClassName(&#x27;icon-prev&#x27;, false), onMouseDown: this.switchMonth.bind(this, &#x27;-1&#x27;) })
-                ),
-                _react2[&#x27;default&#x27;].createElement(
-                    &#x27;th&#x27;,
-                    { colSpan: &#x27;5&#x27; },
                     _react2[&#x27;default&#x27;].createElement(
-                        &#x27;div&#x27;,
-                        { className: &#x27;title&#x27;, onMouseDown: (_context2 = this.switchWindow).bind.call(_context2, this, 1) },
-                        selectDate.year + &#x27;年&#x27; + selectDate.month + &#x27;月&#x27;
+                        &#x27;th&#x27;,
+                        null,
+                        _react2[&#x27;default&#x27;].createElement(&#x27;div&#x27;, { className: this.getClassName(&#x27;icon-prev&#x27;, false), onMouseDown: this.switchMonth.bind(this, &#x27;-1&#x27;) })
+                    ),
+                    _react2[&#x27;default&#x27;].createElement(
+                        &#x27;th&#x27;,
+                        { colSpan: &#x27;5&#x27; },
+                        _react2[&#x27;default&#x27;].createElement(
+                            &#x27;div&#x27;,
+                            { className: &#x27;title&#x27;, onMouseDown: (_context2 = this.switchWindow).bind.call(_context2, this, 1) },
+                            selectDate.year + &#x27;年&#x27; + selectDate.month + &#x27;月&#x27;
+                        )
+                    ),
+                    _react2[&#x27;default&#x27;].createElement(
+                        &#x27;th&#x27;,
+                        null,
+                        _react2[&#x27;default&#x27;].createElement(&#x27;div&#x27;, { className: this.getClassName(&#x27;icon-next&#x27;, false), onMouseDown: this.switchMonth.bind(this, &#x27;+1&#x27;) })
                     )
-                ),
-                _react2[&#x27;default&#x27;].createElement(
-                    &#x27;th&#x27;,
-                    null,
-                    _react2[&#x27;default&#x27;].createElement(&#x27;div&#x27;, { className: this.getClassName(&#x27;icon-next&#x27;, false), onMouseDown: this.switchMonth.bind(this, &#x27;+1&#x27;) })
                 )
             ),
             _react2[&#x27;default&#x27;].createElement(
@@ -878,7 +923,7 @@ var Calendar = (function (_Component) {
                     weeks.map(function (week) {
                         return _react2[&#x27;default&#x27;].createElement(
                             &#x27;td&#x27;,
-                            null,
+                            { key: week },
                             week
                         );
                     })

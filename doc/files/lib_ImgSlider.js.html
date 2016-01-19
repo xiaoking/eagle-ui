@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>lib/ImgSlider.js - eagle-ui</title>
+  
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+</head>
+<body class="yui3-smart">
+ <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               <a class="navbar-brand mainlogo" href="">
+             
+            <img alt="eagle-ui" src="../assets/css/logo.png" title="eagle-ui">
+            
+                eagle-ui
+          </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                 <ul class="nav navbar-nav">
+                    
+                    <li><a href="">主页</a>
+                    </li>
+                    
+                    <li><a href="/documents/eagle-ui/examples/">例子</a>
+                    </li>
+                    
+                </ul>
+               <div class="navbar-form navbar-right filterAPi" autocomplete="off">
+                <input type="text" id='txtSearchAPI' class="form-control search-query" placeholder="Search for API" />
+                 <ul id="filterList" class="filterItems dropdown-menu" role="menu"></ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="sidebar">
+    <h3>Modules/Classes</h3>
+        <div id="api-tabview-filter">
+            <input id='txtSearch' type="search" class="form-control" placeholder="Type to filter Modules/Classes">
+        </div>
+        <dl id="sidebar_list">
+             
+                <dt>
+                    <span class="glyphicon glyphicon-minus"></span>
+                    <a href="../modules/form.html">form</a>
+                </dt>
+                <dd>
+                    <ul>
+                   
+                       <li>
+                            
+                           <a href="../classes/CheckboxGroup.html">CheckboxGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Input.html">Input</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/RadioGroup.html">RadioGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Select.html">Select</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/ValidatorPanel.html">ValidatorPanel</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Button.html">Button</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/ButtonGroup.html">ButtonGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                    </ul>
+                </dd>
+             
+                <dt>
+                    <span class="glyphicon glyphicon-minus"></span>
+                    <a href="../modules/grid.html">grid</a>
+                </dt>
+                <dd>
+                    <ul>
+                   
+                       <li>
+                            
+                           <a href="../classes/Grid.html">Grid</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Row.html">Row</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Col.html">Col</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                    </ul>
+                </dd>
+             
+                <dt>
+                    <span class="glyphicon glyphicon-minus"></span>
+                    <a href="../modules/panel.html">panel</a>
+                </dt>
+                <dd>
+                    <ul>
+                   
+                       <li>
+                            
+                           <a href="../classes/Panel.html">Panel</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/PanelContent.html">PanelContent</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/PanelFooter.html">PanelFooter</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/PanelHeader.html">PanelHeader</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                    </ul>
+                </dd>
+             
+                <dt>
+                    <span class="glyphicon glyphicon-minus"></span>
+                    <a href="../modules/table.html">table</a>
+                </dt>
+                <dd>
+                    <ul>
+                   
+                       <li>
+                            
+                           <a href="../classes/Th.html">Th</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Table.html">Table</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Td.html">Td</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tr.html">Tr</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                    </ul>
+                </dd>
+             
+                <dt>
+                    <span class="glyphicon glyphicon-minus"></span>
+                    <a href="../modules/ui.html">ui</a>
+                </dt>
+                <dd>
+                    <ul>
+                   
+                       <li>
+                            
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Item.html">Item</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Search.html">Search</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Star.html">Star</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Calendar.html">Calendar</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/CalendarPanel.html">CalendarPanel</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Dialog.html">Dialog</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Label.html">Label</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/LabelGroup.html">LabelGroup</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/List.html">List</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Paging.html">Paging</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tabset.html">Tabset</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Toast.html">Toast</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/TooltipPanel.html">TooltipPanel</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                    </ul>
+                </dd>
+             
+        </dl>
+</div>
+   
+    <div class="stdoc-content">
+        <!--     <form id="options-form" class="form-inline pull-right">
+        Show:
+        <label for="api-show-inherited" class="checkbox">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected" class="checkbox">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private" class="checkbox">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated" class="checkbox">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </form>
+
+ -->
+        <div class="apidocs">
+            <div id="docs-main">
+                <div class="content">
+                    <div class="page-header">
+    <h1>lib/ImgSlider.js <small>File</small></h1>
+</div>
+
+<div class="file">
+    <pre class="prettyprint linenums" id='src_code'>
+/**
+ * Created by slashhuang on 15/12/28.
+ */
+
+&#x27;use strict&#x27;;
+
+exports.__esModule = true;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (&#x27;value&#x27; in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &#x27;default&#x27;: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&#x27;Cannot call a class as a function&#x27;); } }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== &#x27;function&#x27; &amp;&amp; superClass !== null) { throw new TypeError(&#x27;Super expression must either be null or a function, not &#x27; + typeof superClass); } subClass.prototype = Object.create(superClass &amp;&amp; superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _react = require(&#x27;react&#x27;);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _utilsClassNameMixin = require(&#x27;./utils/ClassNameMixin&#x27;);
+
+var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
+
+var _classnames = require(&#x27;classnames&#x27;);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+/**
+ * 照片浏览组件
+ * @class Slider
+ * @module ui
+ * @extends Component
+ * @constructor
+ * @since 0.1.0
+ * @demo Slider.js {js}
+ * @show true
+ * */
+
+var ImgSlider = (function (_Component) {
+    _inherits(ImgSlider, _Component);
+
+    function ImgSlider(props, context) {
+        _classCallCheck(this, _ImgSlider);
+
+        _Component.call(this, props, context);
+        this.renderDisplay = this.renderDisplay.bind(this);
+        this.state = {
+            imgList: props.imgList,
+            thumbnailKey: props.thumbnailKey || props.urlKey || &#x27;url&#x27;,
+            pageNum: props.pageNum,
+            show: props.show,
+            showThumbnail: props.showThumbnail,
+            targetIndex: 0,
+            thumbNailIndex: 0
+        };
+    }
+
+    ImgSlider.prototype.componentWillReceiveProps = function componentWillReceiveProps(props) {
+        this.setState({
+            show: props.show,
+            showThumbnail: props.showThumbnail,
+            thumbnailKey: props.thumbnailKey || props.urlKey,
+            targetIndex: 0,
+            thumbNailIndex: 0,
+            imgList: props.imgList || this.state.imgList
+        });
+        var _this = this;
+    };
+
+    ImgSlider.prototype.renderDisplay = function renderDisplay(e) {
+        //点击下方缩略图的情况
+        var index = /img||li/i.test(e.target[&#x27;nodeName&#x27;]) ? e.target.getAttribute(&#x27;data-index&#x27;) : eval(&#x27;return&#x27;);
+        this.handleIndex.call(this, index * 1);
+    };
+
+    ImgSlider.prototype.handleIndex = function handleIndex(index) {
+        var length = this.state.imgList.length;
+        var pageNum = this.props.pageNum;
+        if (index &gt;= 0) {
+            //1图片总长度小于缩略图预制的长度 2未到最后的情况，展示逻辑放在一起
+            if (length &lt;= pageNum) {
+                this.setState({
+                    targetIndex: index,
+                    thumbNailIndex: 0
+                });
+            } else if (index &lt;= length - pageNum) {
+                this.setState({
+                    targetIndex: index == length ? length - 1 : index,
+                    thumbNailIndex: index
+                });
+            } else if (index &lt; length) {
+                //缩略图已到尾部
+                this.setState({
+                    targetIndex: index,
+                    thumbNailIndex: length - pageNum
+                });
+            } else {
+                //回到最后的状态
+                this.setState({
+                    targetIndex: length - 1,
+                    thumbNailIndex: length - pageNum
+                });
+            }
+        } else {
+            //回到最初状态
+            this.setState({
+                targetIndex: 0,
+                thumbNailIndex: 0
+            });
+        }
+    };
+
+    ImgSlider.prototype.addIndex = function addIndex() {
+        var num = arguments.length &lt;= 0 || arguments[0] === undefined ? 1 : arguments[0];
+
+        var length = this.state.imgList.length;
+        var index = this.state.targetIndex + num - length &gt;= 0 ? length - 1 : this.state.targetIndex + num;
+        this.handleIndex.call(this, index);
+    };
+
+    ImgSlider.prototype.lowerIndex = function lowerIndex() {
+        var num = arguments.length &lt;= 0 || arguments[0] === undefined ? 1 : arguments[0];
+
+        var index = this.state.targetIndex - num &lt; 0 ? 0 : this.state.targetIndex - num;
+        this.handleIndex.call(this, index);
+    };
+
+    ImgSlider.prototype.fadeOut = function fadeOut(e) {
+        if (e.target.className.match(&#x27;slider-mask&#x27;) || e.target.nodeName.toLowerCase() == &#x27;em&#x27;) {
+            this.setState({
+                show: false
+            });
+        }
+    };
+
+    ImgSlider.prototype.render = function render() {
+        var _this2 = this;
+
+        var _state = this.state;
+        var imgList = _state.imgList;
+        var thumbnailKey = _state.thumbnailKey;
+        var targetIndex = _state.targetIndex;
+        var thumbNailIndex = _state.thumbNailIndex;
+        var show = _state.show;
+        var showThumbnail = _state.showThumbnail;
+        var _props = this.props;
+        var profileKey = _props.profileKey;
+        var urlKey = _props.urlKey;
+        var titleKey = _props.titleKey;
+        var pageNum = _props.pageNum;
+
+        var length = imgList.length;
+        var containerStyle = { display: show ? &#x27;block&#x27; : &#x27;none&#x27; };
+        //设置行内样式
+        var customizeStyle = this.props.style || {};
+        //阻止背景滚动
+        //show?document.body.style.cssText=&#x27;position:fixed&#x27;:document.body.style.cssText=&#x27;&#x27;;
+        var thumbnailContainerStyle = { display: showThumbnail ? &#x27;block&#x27; : &#x27;none&#x27; };
+        return _react2[&#x27;default&#x27;].createElement(
+            &#x27;div&#x27;,
+            { onClick: this.fadeOut.bind(this) },
+            _react2[&#x27;default&#x27;].createElement(
+                &#x27;div&#x27;,
+                { ref: &#x27;slider-container&#x27;, className: _classnames2[&#x27;default&#x27;](&#x27;eg-slider-container&#x27;, &#x27;fadein&#x27;, this.props.className), style: _extends({}, customizeStyle, containerStyle) },
+                _react2[&#x27;default&#x27;].createElement(&#x27;em&#x27;, { onClick: this.fadeOut.bind(this) }),
+                _react2[&#x27;default&#x27;].createElement(
+                    &#x27;div&#x27;,
+                    { className: &#x27;eg-slider-img-container&#x27; },
+                    _react2[&#x27;default&#x27;].createElement(
+                        &#x27;div&#x27;,
+                        { className: &#x27;eg-slider-field-common eg-slider-field-left&#x27;, onClick: function () {
+                                return _this2.lowerIndex.call(_this2);
+                            } },
+                        _react2[&#x27;default&#x27;].createElement(&#x27;b&#x27;, { className: &#x27;eg-slider-arrow-left&#x27; })
+                    ),
+                    _react2[&#x27;default&#x27;].createElement(
+                        &#x27;div&#x27;,
+                        { className: &#x27;eg-slider-window&#x27;, style: { width: &#x27;380px&#x27; } },
+                        _react2[&#x27;default&#x27;].createElement(
+                            &#x27;ul&#x27;,
+                            { style: { width: length * 380 + &#x27;px&#x27;, left: -targetIndex * 380 + &#x27;px&#x27; } },
+                            imgList.map(function (img, index) {
+                                return _react2[&#x27;default&#x27;].createElement(
+                                    &#x27;li&#x27;,
+                                    { style: { width: &#x27;380px&#x27; }, key: &#x27;img-&#x27; + index },
+                                    _react2[&#x27;default&#x27;].createElement(&#x27;img&#x27;, { src: img[[urlKey]] })
+                                );
+                            })
+                        )
+                    ),
+                    _react2[&#x27;default&#x27;].createElement(
+                        &#x27;div&#x27;,
+                        { className: &#x27;eg-slider-field-common eg-slider-field-right&#x27;, onClick: function () {
+                                return _this2.addIndex.call(_this2);
+                            } },
+                        _react2[&#x27;default&#x27;].createElement(&#x27;b&#x27;, { className: &#x27;eg-slider-arrow-right&#x27; })
+                    ),
+                    _react2[&#x27;default&#x27;].createElement(
+                        &#x27;div&#x27;,
+                        { className: &#x27;eg-slider-img-hint&#x27; },
+                        _react2[&#x27;default&#x27;].createElement(
+                            &#x27;i&#x27;,
+                            null,
+                            imgList[targetIndex][titleKey]
+                        ),
+                        imgList[targetIndex][profileKey],
+                        _react2[&#x27;default&#x27;].createElement(
+                            &#x27;i&#x27;,
+                            null,
+                            targetIndex + 1,
+                            &#x27;/&#x27;,
+                            imgList.length
+                        )
+                    )
+                ),
+                _react2[&#x27;default&#x27;].createElement(
+                    &#x27;div&#x27;,
+                    { className: &#x27;eg-slider-img-container-thumbnail&#x27;, style: _extends({}, thumbnailContainerStyle) },
+                    _react2[&#x27;default&#x27;].createElement(
+                        &#x27;div&#x27;,
+                        { className: &#x27;eg-slider-field-common eg-slider-field-left&#x27;, onClick: function () {
+                                _this2.lowerIndex.call(_this2, pageNum);
+                            } },
+                        _react2[&#x27;default&#x27;].createElement(&#x27;b&#x27;, { className: &#x27;eg-slider-arrow-left&#x27; })
+                    ),
+                    _react2[&#x27;default&#x27;].createElement(
+                        &#x27;div&#x27;,
+                        { className: &#x27;eg-slider-window&#x27;, style: { width: &#x27;380px&#x27; } },
+                        _react2[&#x27;default&#x27;].createElement(
+                            &#x27;ul&#x27;,
+                            { onClick: this.renderDisplay,
+                                style: { width: 100 * length / pageNum + &#x27;%&#x27;,
+                                    left: -thumbNailIndex * 100 / pageNum + &#x27;%&#x27;
+                                } },
+                            imgList.map(function (img, index) {
+                                var inlineStyle = null;
+                                if (index == targetIndex) {
+                                    inlineStyle = {
+                                        borderColor: &#x27;#158acf&#x27;
+                                    };
+                                }
+                                return _react2[&#x27;default&#x27;].createElement(
+                                    &#x27;li&#x27;,
+                                    { &#x27;data-index&#x27;: index, style: _extends({ width: 100 / length - 1.1 + &#x27;%&#x27; }, inlineStyle), key: &#x27;thumb-&#x27; + index },
+                                    _react2[&#x27;default&#x27;].createElement(&#x27;img&#x27;, { src: img[thumbnailKey], &#x27;data-index&#x27;: index })
+                                );
+                            })
+                        )
+                    ),
+                    _react2[&#x27;default&#x27;].createElement(
+                        &#x27;div&#x27;,
+                        { className: &#x27;eg-slider-field-common eg-slider-field-right&#x27;, onClick: function () {
+                                _this2.addIndex.call(_this2, pageNum);
+                            } },
+                        _react2[&#x27;default&#x27;].createElement(&#x27;b&#x27;, { className: &#x27;eg-slider-arrow-right&#x27; })
+                    )
+                )
+            )
+        );
+    };
+
+    _createClass(ImgSlider, null, [{
+        key: &#x27;defaultProps&#x27;,
+        value: {
+            pageNum: 5,
+            show: false,
+            showThumbnail: true,
+            classPrefix: &#x27;slider&#x27;,
+            profileKey: &#x27;profile&#x27;,
+            urlKey: &#x27;url&#x27;,
+            titleKey: &#x27;description&#x27;
+        },
+        enumerable: true
+    }, {
+        key: &#x27;propTypes&#x27;,
+        value: {
+            /**
+             * 图片信息(对应图片信息数组对象中图片描述信息的key)
+             * @property profileKey
+             * @type string
+             * @default
+             * */
+            profileKey: _react.PropTypes.string,
+            /**
+             * 图片信息(对应图片信息数组对象中图片uri信息的key)
+             * @property urlKey
+             * @type string
+             * @default
+             * */
+            urlKey: _react.PropTypes.string,
+            /**
+             * 图片信息(对应图片信息数组对象中图片大标题信息的key)
+             * @property titleKey
+             * @type string
+             * @default
+             * */
+            titleKey: _react.PropTypes.string,
+            /**
+             * 缩略图的key
+             * @property thumbnailKey
+             * @type array
+             * @default 默认会拿urlKey
+             * */
+            thumbnailKey: _react.PropTypes.string,
+            /**
+             * 图片数组
+             * @property imgList
+             * @type Array
+             * @default 图片数组[{key:value}]
+             * */
+            imgList: _react.PropTypes.array,
+            /**
+             * 图片栏展示数目
+             * @property pageNum
+             * @type number
+             * @default 5
+             * */
+            pageNum: _react.PropTypes.number,
+            /**
+             * 是否显示图片展示slider
+             * @property show
+             * @type boolean
+             * @default false
+             * */
+            show: _react.PropTypes.bool,
+            /**
+             * 是否显示slider中的图片缩略图部分
+             * @property showThumbnail
+             * @type boolean
+             * @default true
+             * */
+            showThumbnail: _react.PropTypes.bool,
+            classPrefix: _react.PropTypes.string
+        },
+        enumerable: true
+    }]);
+
+    var _ImgSlider = ImgSlider;
+    ImgSlider = _utilsClassNameMixin2[&#x27;default&#x27;](ImgSlider) || ImgSlider;
+    return ImgSlider;
+})(_react.Component);
+
+exports[&#x27;default&#x27;] = ImgSlider;
+module.exports = exports[&#x27;default&#x27;];
+    </pre>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<a id="gotoTop" class='well well-small' href='#'>
+    Top
+</a>
+<script src="../assets/vendor/jquery/jquery-1.8.2.min.js"></script>
+<script src="../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script src="../assets/js/config.js"></script>
+<script src="../assets/js/doc.js"></script>
+</body>
+</html>

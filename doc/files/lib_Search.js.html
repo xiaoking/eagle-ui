@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -405,8 +429,6 @@
 
 exports.__esModule = true;
 
-var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i &lt; props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (&#x27;value&#x27; in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
 function _interopRequireDefault(obj) { return obj &amp;&amp; obj.__esModule ? obj : { &#x27;default&#x27;: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(&#x27;Cannot call a class as a function&#x27;); } }
@@ -417,33 +439,13 @@ var _react = require(&#x27;react&#x27;);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _utilsClassNameMixin = require(&#x27;./utils/ClassNameMixin&#x27;);
-
-var _utilsClassNameMixin2 = _interopRequireDefault(_utilsClassNameMixin);
-
 var _classnames = require(&#x27;classnames&#x27;);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
-var _InputJs = require(&#x27;./Input.js&#x27;);
+var _Suggestion2 = require(&#x27;./Suggestion&#x27;);
 
-var _InputJs2 = _interopRequireDefault(_InputJs);
-
-var _ButtonJs = require(&#x27;./Button.js&#x27;);
-
-var _ButtonJs2 = _interopRequireDefault(_ButtonJs);
-
-var _RowJs = require(&#x27;./Row.js&#x27;);
-
-var _RowJs2 = _interopRequireDefault(_RowJs);
-
-var _ColJs = require(&#x27;./Col.js&#x27;);
-
-var _ColJs2 = _interopRequireDefault(_ColJs);
-
-var _GridJs = require(&#x27;./Grid.js&#x27;);
-
-var _GridJs2 = _interopRequireDefault(_GridJs);
+var _Suggestion3 = _interopRequireDefault(_Suggestion2);
 
 /**
  * 搜索按钮组件
@@ -452,7 +454,7 @@ var _GridJs2 = _interopRequireDefault(_GridJs);
  * @module ui
  * @constructor
  * @since 0.1.0
- * @demo search.js{js}
+ * @demo suggestion.js{js}
  * @show true
  * @class Select
  * */
@@ -463,116 +465,17 @@ var _GridJs2 = _interopRequireDefault(_GridJs);
 
  * */
 
-var Search = (function (_Component) {
-    _inherits(Search, _Component);
+var Search = (function (_Suggestion) {
+  _inherits(Search, _Suggestion);
 
-    _createClass(Search, null, [{
-        key: &#x27;propType&#x27;,
-        value: {
-            /**
-             *
-             * @property id
-             * @type String
-             * @default &#x27;&#x27;
-             * */
-            id: _react.PropTypes.string,
-            /**
-             * 回调方法
-             * @property callback
-             * @type Function
-             * @default null
-             * */
-            callback: _react.PropTypes.func,
-            classPrefix: _react.PropTypes.string,
-            componentTag: _react.PropTypes.string
-        },
-        enumerable: true
-    }, {
-        key: &#x27;defaultProps&#x27;,
-        value: {
-            id: &#x27;1&#x27;,
-            callback: null,
-            placeholder: &#x27;请输入&#x27;,
-            classPrefix: &#x27;search&#x27;, //类名前前缀
-            componentTag: &#x27;div&#x27;
-        },
-        enumerable: true
-    }]);
+  function Search(props, context) {
+    _classCallCheck(this, Search);
 
-    function Search(props, context) {
-        _classCallCheck(this, _Search);
+    _Suggestion.call(this, props, context);
+  }
 
-        _Component.call(this, props, context);
-        this.state = {
-            value: this.props.value
-        };
-    }
-
-    /**
-     * 渲染元素
-     * @method render
-     * @return {ReactElement}
-     * */
-
-    Search.prototype.render = function render() {
-        return _react2[&#x27;default&#x27;].createElement(
-            _GridJs2[&#x27;default&#x27;],
-            { style: { minWidth: &#x27;240px&#x27; } },
-            _react2[&#x27;default&#x27;].createElement(
-                &#x27;div&#x27;,
-                { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;wrapper&#x27;, &#x27;icon&#x27;)) },
-                _react2[&#x27;default&#x27;].createElement(
-                    &#x27;div&#x27;,
-                    { className: _classnames2[&#x27;default&#x27;](this.getClassNamesForArguments(&#x27;content&#x27;)) },
-                    _react2[&#x27;default&#x27;].createElement(
-                        &#x27;div&#x27;,
-                        { style: { width: &#x27;100%&#x27; } },
-                        _react2[&#x27;default&#x27;].createElement(_InputJs2[&#x27;default&#x27;], { ref: this.props.name, id: this.props.id, placeholder: this.props.placeholder,
-                            onChange: this.changeValue.bind(this), onKeyPress: this.keyIn.bind(this) })
-                    )
-                ),
-                _react2[&#x27;default&#x27;].createElement(
-                    _ButtonJs2[&#x27;default&#x27;],
-                    { radius: true, egSize: &#x27;xs&#x27;, onClick: this.submitSearch.bind(this) },
-                    &#x27;搜索&#x27;
-                )
-            )
-        );
-    };
-
-    /**
-     * @method change input value
-     * @param none
-     * @return setState
-     * */
-
-    Search.prototype.changeValue = function changeValue(event) {
-        this.setState({
-            value: event.target.value
-        });
-    };
-
-    /**
-     * @method submit search
-     * @param none
-     * @return get value calback if exist
-     * */
-
-    Search.prototype.submitSearch = function submitSearch() {
-        var val = this.state.value;
-        this.props.callback &amp;&amp; this.props.callback(val);
-    };
-
-    Search.prototype.keyIn = function keyIn(event) {
-        if (event.charCode == 13) {
-            this.submitSearch();
-        }
-    };
-
-    var _Search = Search;
-    Search = _utilsClassNameMixin2[&#x27;default&#x27;](Search) || Search;
-    return Search;
-})(_react.Component);
+  return Search;
+})(_Suggestion3[&#x27;default&#x27;]);
 
 exports[&#x27;default&#x27;] = Search;
 module.exports = exports[&#x27;default&#x27;];

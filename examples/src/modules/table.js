@@ -2,11 +2,11 @@
  * Created by mac on 15/11/4.
  */
 import React,{Component} from 'react';
-import Table from '../../../src/Table/Table.js';
-import Tr from '../../../src/Table/Tr.js';
-import Td from '../../../src/Table/Td.js';
-import Th from '../../../src/Table/Th.js';
-import Column from '../../../src/Table/Column.js';
+import Table from '../../../src/tables/Table.js';
+import Tr from '../../../src/tables/Tr.js';
+import Td from '../../../src/tables/Td.js';
+import Th from '../../../src/tables/Th.js';
+import Column from '../../../src/tables/Column.js';
 
 import Row from '../../../src/Row.js';
 import Col from '../../../src/Col.js';

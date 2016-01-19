@@ -1,0 +1,53 @@
+.button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius) {
+    padding: @padding-vertical @padding-horizontal;
+    font-size: @font-size;
+    line-height: @line-height;
+    border-radius: @border-radius;
+}
+
+.button-variant(@color; @background; @border) {
+
+    color: @color;
+    background-color: @background;
+    border-color: @border;
+
+    &:hover {
+        color: @color;
+        background-color: darken(@background, 5%);
+        border-color: darken(@border, 10%);
+    }
+
+    &.eg-btn-active{
+        color: @color;
+        background-color: darken(@background, 5%);
+        border-color: darken(@border, 10%);
+
+        &:hover,
+        &.focus {
+            color: @color;
+            background-color: darken(@background, 12%);
+            border-color: darken(@border, 20%);
+        }
+    }
+
+    &.eg-btn-disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            background-color: lighten(@background,18%);
+            border-color: lighten(@border,15%);
+            color: darken(@color,10%);
+            cursor: default;
+        }
+    }
+
+    .badge {
+        color: @background;
+        background-color: @color;
+    }
+}

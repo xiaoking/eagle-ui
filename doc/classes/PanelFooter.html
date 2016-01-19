@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -418,6 +442,13 @@
                         
                     </li>
                 
+                    <li class="index-item method">
+                        <a href="#" data-tabid="#method" data-anchor="#method_render" data-tablink="render">render</a>
+
+                        
+                        
+                    </li>
+                
             </ul>
             
         </div>
@@ -426,6 +457,13 @@
             <h3>Properties</h3>
             
             <ul class="index-list properties extends">
+                
+                    <li class="index-item property">
+                        <a href="#" data-tabid="#property" data-anchor="#property_padding" data-tablink="padding">padding</a>
+
+                        
+                        
+                    </li>
                 
                     <li class="index-item property">
                         <a href="#" data-tabid="#property" data-anchor="#property_padding" data-tablink="padding">padding</a>
@@ -470,7 +508,7 @@
 
             
                 <div class="foundat">
-                    Defined in: <a href="../files/lib_Panel_PanelFooter.js.html#l25"><code>lib&#x2F;Panel&#x2F;PanelFooter.js:25</code></a>
+                    Defined in: <a href="../files/lib_panels_PanelFooter.js.html#l25"><code>lib&#x2F;panels&#x2F;PanelFooter.js:25</code></a>
                 </div>
             
 
@@ -523,7 +561,7 @@
             
         
         
-        <a href="../files/lib_Panel_PanelFooter.js.html#l25"><code>lib&#x2F;Panel&#x2F;PanelFooter.js:25</code></a>
+        <a href="../files/lib_panels_PanelFooter.js.html#l25"><code>lib&#x2F;panels&#x2F;PanelFooter.js:25</code></a>
         
         </p>
 
@@ -558,19 +596,10 @@
  */
 import React,{Component} from &#39;react&#39;;
 
-import Input from &#39;../../../src/Input.js&#39;;
-import Label from &#39;../../../src/Label.js&#39;;
-import LabelGroup from &#39;../../../src/LabelGroup.js&#39;;
-
-
-import Grid from &#39;../../../src/Grid.js&#39;;
-import Row from &#39;../../../src/Row.js&#39;;
-import Col from &#39;../../../src/Col.js&#39;;
-
-import Panel from &#39;../../../src/Panel/Panel.js&#39;;
-import PanelHeader from &#39;../../../src/Panel/PanelHeader.js&#39;;
-import PanelFooter from &#39;../../../src/Panel/PanelFooter.js&#39;;
-import PanelContent from &#39;../../../src/Panel/PanelContent.js&#39;;
+import {Row,Col,Grid,
+    Panel,PanelHeader,PanelFooter,PanelContent,
+    Input,Label,LabelGroup,
+    FormGroup,RadioGroup,CheckboxGroup,Select} from &#39;../../../src/index.js&#39;;
 
 
 let Demo = class Demo extends Component{
@@ -585,83 +614,278 @@ let Demo = class Demo extends Component{
     }
     render(){
         return (
-            &lt;Panel&gt;
-                &lt;PanelHeader&gt;title&lt;/PanelHeader&gt;
-                &lt;PanelContent&gt;
-                    &lt;Grid&gt;
-                        &lt;Row&gt;
-                            &lt;Col sm={1}&gt;
-                                &lt;Input label=&#39;&#39;  type="checkbox"  /&gt;
-                            &lt;/Col&gt;
-                            &lt;Col sm={10}&gt;
-                                &lt;div className=&#39;shop-card&#39;&gt;
-                                    &lt;h1 className=&#39;shop-card-title inline-block&#39;&gt;
-                                        西贝莜面村（中山公园店）
+            &lt;Grid fluid&gt;
+                &lt;Row&gt;
+                    &lt;Col&gt;
+                        &lt;h3&gt;无嵌套panel&lt;/h3&gt;
+                    &lt;/Col&gt;
+                &lt;/Row&gt;
+                &lt;Row&gt;
+                    &lt;Col end&gt;
+                        &lt;Panel&gt;
+                            &lt;PanelHeader&gt;title&lt;/PanelHeader&gt;
+                            &lt;PanelContent&gt;
+                                &lt;Row&gt;
+                                    &lt;Col sm={1}&gt;
+                                        &lt;Input label=&#39;&#39;  type="checkbox"  /&gt;
+                                    &lt;/Col&gt;
+                                    &lt;Col sm={10}&gt;
+                                        &lt;div className=&#39;shop-card&#39;&gt;
+                                            &lt;h1 className=&#39;shop-card-title inline-block&#39;&gt;
+                                                西贝莜面村（中山公园店）
 
-                                    &lt;/h1&gt;
-                                    &lt;Label error radius&gt;运营下线&lt;/Label&gt;
-                                    &lt;div&gt;
-                                        &lt;span className=&#39;row-key&#39;&gt;方案ID：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;21355&lt;/span&gt;
-                                        &lt;span className=&#39;row-key&#39;&gt;负责人：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;张三丰&lt;/span&gt;
-                                        &lt;span className=&#39;row-key&#39;&gt;城市：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;上海&lt;/span&gt;
-                                        &lt;span className=&#39;row-key&#39;&gt;售卖时间：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;2014-2015&lt;/span&gt;
-                                        &lt;span className=&#39;row-key&#39;&gt;售卖量：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;0&lt;/span&gt;
-                                    &lt;/div&gt;
-                                    &lt;div&gt;
-                                        &lt;span className=&#39;row-key&#39;&gt;客户：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;&lt;/span&gt;
-                                        &lt;span className=&#39;row-key&#39;&gt;已分配（王卓轩 2015-02-01 14:22）&lt;/span&gt;
-                                    &lt;/div&gt;
-                                    &lt;div&gt;
-                                        &lt;LabelGroup simple clickCallback={this.show} &gt;
-                                            &lt;Label&gt;流程历史&lt;/Label&gt;
-                                            &lt;Label&gt;编辑&lt;/Label&gt;
-                                            &lt;Label&gt;删除&lt;/Label&gt;
-                                            &lt;Label&gt;复制&lt;/Label&gt;
-                                        &lt;/LabelGroup&gt;
-                                    &lt;/div&gt;
-                                &lt;/div&gt;
-                            &lt;/Col&gt;
-                            &lt;Col sm={1}&gt;审批通过&lt;/Col&gt;
-                        &lt;/Row&gt;
-                        &lt;Row&gt;
-                            &lt;Col sm={1}&gt;
-                                &lt;Input label=&#39;&#39;  type="checkbox" checked  /&gt;
-                            &lt;/Col&gt;
-                            &lt;Col sm={10}&gt;
-                                &lt;div className=&#39;shop-card&#39;&gt;
-                                    &lt;h1 className=&#39;shop-card-title inline-block&#39;&gt;
-                                        西贝莜面村（中山公园店）
+                                            &lt;/h1&gt;
+                                            &lt;Label error radius&gt;运营下线&lt;/Label&gt;
+                                            &lt;div&gt;
+                                                &lt;span className=&#39;row-key&#39;&gt;方案ID：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;21355&lt;/span&gt;
+                                                &lt;span className=&#39;row-key&#39;&gt;负责人：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;张三丰&lt;/span&gt;
+                                                &lt;span className=&#39;row-key&#39;&gt;城市：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;上海&lt;/span&gt;
+                                                &lt;span className=&#39;row-key&#39;&gt;售卖时间：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;2014-2015&lt;/span&gt;
+                                                &lt;span className=&#39;row-key&#39;&gt;售卖量：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;0&lt;/span&gt;
+                                            &lt;/div&gt;
+                                            &lt;div&gt;
+                                                &lt;span className=&#39;row-key&#39;&gt;客户：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;&lt;/span&gt;
+                                                &lt;span className=&#39;row-key&#39;&gt;已分配（王卓轩 2015-02-01 14:22）&lt;/span&gt;
+                                            &lt;/div&gt;
+                                            &lt;div&gt;
+                                                &lt;LabelGroup simple clickCallback={this.show} &gt;
+                                                    &lt;Label&gt;流程历史&lt;/Label&gt;
+                                                    &lt;Label&gt;编辑&lt;/Label&gt;
+                                                    &lt;Label&gt;删除&lt;/Label&gt;
+                                                    &lt;Label&gt;复制&lt;/Label&gt;
+                                                &lt;/LabelGroup&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/Col&gt;
+                                    &lt;Col sm={1}&gt;审批通过&lt;/Col&gt;
+                                &lt;/Row&gt;
+                                &lt;Row&gt;
+                                    &lt;Col sm={1}&gt;
+                                        &lt;Input label=&#39;&#39;  type="checkbox" checked  /&gt;
+                                    &lt;/Col&gt;
+                                    &lt;Col sm={10}&gt;
+                                        &lt;div className=&#39;shop-card&#39;&gt;
+                                            &lt;h1 className=&#39;shop-card-title inline-block&#39;&gt;
+                                                西贝莜面村（中山公园店）
 
-                                    &lt;/h1&gt;
-                                    &lt;Label success radius&gt;售卖中&lt;/Label&gt;
-                                    &lt;div&gt;
-                                        &lt;span className=&#39;row-key&#39;&gt;方案ID：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;21355&lt;/span&gt;
-                                        &lt;span className=&#39;row-key&#39;&gt;负责人：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;张三丰&lt;/span&gt;
-                                        &lt;span className=&#39;row-key&#39;&gt;城市：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;上海&lt;/span&gt;
-                                        &lt;span className=&#39;row-key&#39;&gt;售卖时间：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;2014-2015&lt;/span&gt;
-                                        &lt;span className=&#39;row-key&#39;&gt;售卖量：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;0&lt;/span&gt;
-                                    &lt;/div&gt;
-                                    &lt;div&gt;
-                                        &lt;span className=&#39;row-key&#39;&gt;客户：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;&lt;/span&gt;
-                                        &lt;span className=&#39;row-key&#39;&gt;已分配（王卓轩 2015-02-01 14:22）&lt;/span&gt;
-                                    &lt;/div&gt;
-                                    &lt;div&gt;
-                                        &lt;LabelGroup simple clickCallback={this.show} &gt;
-                                            &lt;Label&gt;流程历史&lt;/Label&gt;
-                                            &lt;Label&gt;编辑&lt;/Label&gt;
-                                            &lt;Label&gt;删除&lt;/Label&gt;
-                                            &lt;Label&gt;复制&lt;/Label&gt;
-                                        &lt;/LabelGroup&gt;
-                                    &lt;/div&gt;
-                                &lt;/div&gt;
-                            &lt;/Col&gt;
-                            &lt;Col sm={1}&gt;审批通过&lt;/Col&gt;
-                        &lt;/Row&gt;
+                                            &lt;/h1&gt;
+                                            &lt;Label success radius&gt;售卖中&lt;/Label&gt;
+                                            &lt;div&gt;
+                                                &lt;span className=&#39;row-key&#39;&gt;方案ID：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;21355&lt;/span&gt;
+                                                &lt;span className=&#39;row-key&#39;&gt;负责人：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;张三丰&lt;/span&gt;
+                                                &lt;span className=&#39;row-key&#39;&gt;城市：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;上海&lt;/span&gt;
+                                                &lt;span className=&#39;row-key&#39;&gt;售卖时间：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;2014-2015&lt;/span&gt;
+                                                &lt;span className=&#39;row-key&#39;&gt;售卖量：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;0&lt;/span&gt;
+                                            &lt;/div&gt;
+                                            &lt;div&gt;
+                                                &lt;span className=&#39;row-key&#39;&gt;客户：&lt;/span&gt;&lt;span className=&#39;row-value&#39;&gt;&lt;/span&gt;
+                                                &lt;span className=&#39;row-key&#39;&gt;已分配（王卓轩 2015-02-01 14:22）&lt;/span&gt;
+                                            &lt;/div&gt;
+                                            &lt;div&gt;
+                                                &lt;LabelGroup simple clickCallback={this.show} &gt;
+                                                    &lt;Label&gt;流程历史&lt;/Label&gt;
+                                                    &lt;Label&gt;编辑&lt;/Label&gt;
+                                                    &lt;Label&gt;删除&lt;/Label&gt;
+                                                    &lt;Label&gt;复制&lt;/Label&gt;
+                                                &lt;/LabelGroup&gt;
+                                            &lt;/div&gt;
+                                        &lt;/div&gt;
+                                    &lt;/Col&gt;
+                                    &lt;Col sm={1}&gt;审批通过&lt;/Col&gt;
+                                &lt;/Row&gt;
 
-                    &lt;/Grid&gt;
-                &lt;/PanelContent&gt;
-                &lt;PanelFooter&gt;heiheihei&lt;/PanelFooter&gt;
-            &lt;/Panel&gt;
+                            &lt;/PanelContent&gt;
+                            &lt;PanelFooter&gt;heiheihei&lt;/PanelFooter&gt;
+                        &lt;/Panel&gt;
+                    &lt;/Col&gt;
+                &lt;/Row&gt;
+                &lt;Row&gt;
+                    &lt;Col&gt;
+                        &lt;h3&gt;panel嵌套&lt;small&gt;通过设置panel的heading属性达到此效果&lt;/small&gt;&lt;/h3&gt;
+                    &lt;/Col&gt;
+                &lt;/Row&gt;
+                &lt;Row&gt;
+                    &lt;Col&gt;
+                        &lt;Panel heading="我是标题"&gt;
+                            &lt;PanelContent&gt;
+                                &lt;Row&gt;
+                                    &lt;Col&gt;
+                                        &lt;FormGroup&gt;
+                                            &lt;Row&gt;
+                                                &lt;Col sm={2}&gt;姓名&lt;/Col&gt;
+                                                &lt;Col sm={10}&gt;&lt;Input name="test" id="test" placeholder="请输入姓名"   /&gt;&lt;/Col&gt;
+                                            &lt;/Row&gt;
+                                            &lt;Row&gt;
+                                                &lt;Col sm={2}&gt;姓名&lt;/Col&gt;
+                                                &lt;Col sm={10}&gt;&lt;Input name="test" id="test" placeholder="请输入姓名"   /&gt;&lt;/Col&gt;
+                                            &lt;/Row&gt;
+                                            &lt;Row&gt;
+                                                &lt;Col sm={2}&gt;性别&lt;/Col&gt;
+                                                &lt;Col sm={10}&gt;
+                                                    &lt;RadioGroup defaultChecked="男" name="radio-sex"&gt;
+                                                        &lt;Input  type="radio"  label="男" value="男" /&gt;
+                                                        &lt;Input  type="radio"  label="女" value="女"  /&gt;
+                                                    &lt;/RadioGroup&gt;
+                                                &lt;/Col&gt;
+                                            &lt;/Row&gt;
+                                            &lt;Row&gt;
+                                                &lt;Col sm={2}&gt;体育爱好&lt;/Col&gt;
+                                                &lt;Col sm={10}&gt;
+                                                    &lt;CheckboxGroup&gt;
+                                                        &lt;Input  type="checkbox" label="足球" checked   /&gt;
+                                                        &lt;Input  type="checkbox" label="篮球"    /&gt;
+                                                        &lt;Input  type="checkbox" label="羽毛球" checked   /&gt;
+                                                        &lt;Input  type="checkbox" label="乒乓球"    /&gt;
+                                                    &lt;/CheckboxGroup&gt;
+                                                &lt;/Col&gt;
+                                            &lt;/Row&gt;
+                                            &lt;Row&gt;
+                                                &lt;Col sm={2}&gt;姓名&lt;/Col&gt;
+                                                &lt;Col sm={13}&gt;&lt;Input name="test" id="test" placeholder="请输入姓名"   /&gt;&lt;/Col&gt;
+                                                &lt;FormGroup&gt;
+                                                    &lt;Col sm={13}&gt;出生日期&lt;/Col&gt;
+                                                    &lt;Col sm={13} end&gt;&lt;Input name="test" id="test" placeholder="请输入出生日期"   /&gt;&lt;/Col&gt;
+                                                &lt;/FormGroup&gt;
+                                            &lt;/Row&gt;
+                                            &lt;Row&gt;
+                                                &lt;Col sm={2}&gt;所在城市&lt;/Col&gt;
+                                                &lt;Col sm={10} layer&gt;
+                                                    &lt;Row style={{margin:0}}&gt;
+                                                        &lt;Col sm={4} end&gt;
+                                                            &lt;Select placeholder="请选择城市" &gt;
+                                                                &lt;item value=&#39;bei&#39;&gt;北京&lt;/item&gt;
+                                                                &lt;item value=&#39;shang&#39;&gt;上海&lt;/item&gt;
+                                                                &lt;item value=&#39;nan&#39;&gt;南京&lt;/item&gt;
+                                                            &lt;/Select&gt;
+                                                        &lt;/Col&gt;
+                                                    &lt;/Row&gt;
+                                                &lt;/Col&gt;
+                                            &lt;/Row&gt;
+                                        &lt;/FormGroup&gt;
+                                    &lt;/Col&gt;
+                                &lt;/Row&gt;
+                                &lt;Row&gt;
+                                    &lt;Col padding={&#39;0&#39;}&gt;
+                                        &lt;Panel heading="我是标题二"&gt;
+                                            &lt;PanelContent padding={true}&gt;
+                                                我是下一个内容区
+                                            &lt;/PanelContent&gt;
+                                        &lt;/Panel&gt;
+                                    &lt;/Col&gt;
+
+                                &lt;/Row&gt;
+                                &lt;Row&gt;
+                                    &lt;Col padding={&#39;0&#39;}&gt;
+                                        &lt;Panel heading="我是标题三" &gt;
+                                            &lt;PanelContent padding={true}&gt;
+                                                我是下一个内容区
+                                            &lt;/PanelContent&gt;
+                                        &lt;/Panel&gt;
+                                    &lt;/Col&gt;
+
+                                &lt;/Row&gt;
+                            &lt;/PanelContent&gt;
+                        &lt;/Panel&gt;
+                    &lt;/Col&gt;
+                &lt;/Row&gt;
+                &lt;Row&gt;
+                    &lt;Col&gt;
+                        &lt;h3&gt;默认嵌套&lt;/h3&gt;
+                    &lt;/Col&gt;
+                &lt;/Row&gt;
+                &lt;Row&gt;
+                    &lt;Col&gt;
+                        &lt;Panel&gt;
+                            &lt;PanelHeader&gt;另一种形式的嵌套&lt;/PanelHeader&gt;
+                            &lt;PanelContent&gt;
+                                &lt;Panel&gt;
+                                    &lt;PanelHeader&gt;另一种形式的嵌套2&lt;/PanelHeader&gt;
+                                    &lt;PanelContent&gt;
+                                        &lt;Row&gt;
+                                            &lt;Col&gt;
+                                                我是内容区
+                                            &lt;/Col&gt;
+                                        &lt;/Row&gt;
+                                        &lt;Row&gt;
+                                            &lt;Col&gt;
+                                                &lt;Panel&gt;
+                                                    &lt;PanelHeader&gt;另一种形式的嵌套3&lt;/PanelHeader&gt;
+                                                    &lt;PanelContent&gt;
+                                                        &lt;Row&gt;
+                                                            &lt;Col&gt;
+                                                                我是内容区
+                                                            &lt;/Col&gt;
+                                                        &lt;/Row&gt;
+                                                    &lt;/PanelContent&gt;
+                                                &lt;/Panel&gt;
+                                            &lt;/Col&gt;
+                                        &lt;/Row&gt;
+                                    &lt;/PanelContent&gt;
+                                &lt;/Panel&gt;
+                                &lt;Panel&gt;
+                                    &lt;PanelHeader&gt;另一种形式的嵌套2&lt;/PanelHeader&gt;
+                                    &lt;PanelContent&gt;
+                                        &lt;Row&gt;
+                                            &lt;Col&gt;
+                                                我是内容区
+                                            &lt;/Col&gt;
+                                        &lt;/Row&gt;
+                                    &lt;/PanelContent&gt;
+                                &lt;/Panel&gt;
+                            &lt;/PanelContent&gt;
+                        &lt;/Panel&gt;
+                    &lt;/Col&gt;
+                &lt;/Row&gt;
+                &lt;Row&gt;
+                    &lt;Col&gt;
+                        &lt;h3&gt;设置&lt;span className="color-primary"&gt;egType="normal"&lt;/span&gt;后的嵌套效果&lt;/h3&gt;
+                    &lt;/Col&gt;
+                &lt;/Row&gt;
+                &lt;Row&gt;
+                    &lt;Col&gt;
+                        &lt;Panel egType="normal"&gt;
+                            &lt;PanelHeader&gt;另一种形式的嵌套&lt;/PanelHeader&gt;
+                            &lt;PanelContent&gt;
+                                &lt;Panel egType="normal"&gt;
+                                    &lt;PanelHeader&gt;另一种形式的嵌套2&lt;/PanelHeader&gt;
+                                    &lt;PanelContent&gt;
+                                        &lt;Row&gt;
+                                            &lt;Col&gt;
+                                                我是内容区
+                                            &lt;/Col&gt;
+                                        &lt;/Row&gt;
+                                        &lt;Row&gt;
+                                            &lt;Col&gt;
+                                                &lt;Panel  margin={&#39;0&#39;}&gt;
+                                                    &lt;PanelHeader&gt;另一种形式的嵌套3&lt;/PanelHeader&gt;
+                                                    &lt;PanelContent&gt;
+                                                        &lt;Row&gt;
+                                                            &lt;Col&gt;
+                                                                我是内容区
+                                                            &lt;/Col&gt;
+                                                        &lt;/Row&gt;
+                                                    &lt;/PanelContent&gt;
+                                                &lt;/Panel&gt;
+                                            &lt;/Col&gt;
+                                        &lt;/Row&gt;
+                                    &lt;/PanelContent&gt;
+                                &lt;/Panel&gt;
+                                &lt;Panel margin={&#39;0&#39;}&gt;
+                                    &lt;PanelHeader&gt;另一种形式的嵌套2&lt;/PanelHeader&gt;
+                                    &lt;PanelContent&gt;
+                                        &lt;Row&gt;
+                                            &lt;Col&gt;
+                                                我是内容区
+                                            &lt;/Col&gt;
+                                        &lt;/Row&gt;
+                                    &lt;/PanelContent&gt;
+                                &lt;/Panel&gt;
+                            &lt;/PanelContent&gt;
+                        &lt;/Panel&gt;
+                    &lt;/Col&gt;
+                &lt;/Row&gt;
+            &lt;/Grid&gt;
+
 
         );
     }
@@ -758,6 +982,78 @@ export default Demo;</code></pre>
 </div>
 
                 
+                    <div id="method_render" class="method item">
+    <h3 class="name">render</h3>
+    <code>
+    render
+    
+        <span class="paren">()</span>
+    
+    </code>
+
+    
+        <span class="returns-inline">
+            <span class="type">ReactElement</span>
+        </span>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_panels_PanelFooter.js.html#l46"><code>lib&#x2F;panels&#x2F;PanelFooter.js:46</code></a>
+        
+        </p>
+
+
+        
+
+        
+    </div>
+
+    <div class="description well well-small sign-left3">
+        <div class="stdoc-code"></div>
+    </div>
+
+    
+
+    
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                
+                    
+                        <span class="type">ReactElement</span>:
+                    
+                
+            </div>
+        </div>
+    
+
+    
+</div>
+
+                
             </div>
         
 
@@ -790,6 +1086,54 @@ export default Demo;</code></pre>
         
         
         <a href="../files/lib_Panel_PanelFooter.js.html#l62"><code>lib&#x2F;Panel&#x2F;PanelFooter.js:62</code></a>
+        
+        </p>
+
+        
+
+        
+    </div>
+
+    <div class="description">
+        <div class="stdoc-code"><p>是否加padding</p>
+</div>
+    </div>
+
+    
+        <p><strong>Default:</strong></p>
+         <code> true</code>
+    
+
+    
+
+    
+</div>
+
+                
+                    <div id="property_padding" class="property item">
+    <h3 class="name"><code>padding</code></h3>
+    <span class="type">Bool</span>
+
+    
+
+    
+
+    
+
+    
+
+    <div class="meta">
+        
+            
+                
+                <p>
+                
+                Defined in
+                
+            
+        
+        
+        <a href="../files/lib_panels_PanelFooter.js.html#l62"><code>lib&#x2F;panels&#x2F;PanelFooter.js:62</code></a>
         
         </p>
 

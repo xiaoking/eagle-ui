@@ -1,0 +1,47 @@
+.eg-crumb {
+  overflow: hidden;
+  ul {
+    margin-left: -10px;
+    li {
+      float: left;
+      position: relative;
+      margin:0 10px;
+      cursor: pointer;
+      a {
+        display: block;
+        float: left;
+        background: transparent;
+        &:after, &:before {
+          display: inline-block;
+          background-color: lighten(@gray-light,30%);
+          position: absolute;
+          content: "";
+          right: -12px;
+          height: 8px;
+          width: 1px;
+        }
+        &:after {
+          top: 9px;
+          .transform(rotate(45deg));
+        }
+        &:before {
+          top: 4px;
+          .transform(rotate(135deg));
+
+        }
+      }
+
+    }
+    li:last-child {
+      cursor: default;
+      color: lighten(@gray-light,30%);
+      a{
+        &:before, &:after{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,54 @@
+
+@tr-split-line : #ddd;
+.eg-table{
+  background: @white;
+  border-spacing: 0px;
+  border-collapse: separate;
+  font-size: 14px;
+  width: 100%;
+  tr{
+    &.eg-tr-split{
+      td{
+        border-bottom: 1px solid @tr-split-line;
+      }
+    }
+    /*td[rowspan]{
+      border-bottom: 1px solid @tr-split-line;
+    }*/
+    td,th{
+      padding: 10px 15px;
+      text-align: left;
+      position: relative;
+    }
+    th{
+      color: #999;
+    }
+    td{
+      color: #333;
+    }
+  }
+  thead{
+    th{
+      border-bottom: 2px solid #ddd;
+    }
+  }
+  tbody{
+    tr{
+      &:nth-of-type(2n){
+        background: #f7f7f7;
+      }
+    }
+  }
+}
+/*商家详情页面 覆盖样式*/
+.eg-table-neutral{
+  thead{
+    display: none;
+  }
+  tbody {
+    tr{
+      background:none !important;
+      border-bottom: 1px solid #ddd;
+    }
+  }
+}

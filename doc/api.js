@@ -7,6 +7,8 @@ YUI.add("yuidoc-meta", function(Y) {
         "CalendarPanel",
         "CheckboxGroup",
         "Col",
+        "Crumb",
+        "Dialog",
         "Grid",
         "Input",
         "Item",
@@ -22,6 +24,9 @@ YUI.add("yuidoc-meta", function(Y) {
         "Row",
         "Search",
         "Select",
+        "Slider",
+        "Star",
+        "Suggestion",
         "Tab",
         "Table",
         "Tabset",
@@ -31,9 +36,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Tooltip",
         "TooltipPanel",
         "Tr",
-        "ValidatorPanel",
-        "crumb",
-        "dialog"
+        "ValidatorPanel"
     ],
     "modules": [
         "form",
@@ -128,10 +131,13 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "ui",
             "name": "ui",
-            "description": "tab组件",
+            "description": "星级评价",
             "classes": [
                 {
-                    "name": "crumb"
+                    "name": "Crumb"
+                },
+                {
+                    "name": "Slider"
                 },
                 {
                     "name": "Item"
@@ -140,7 +146,7 @@ YUI.add("yuidoc-meta", function(Y) {
                     "name": "Search"
                 },
                 {
-                    "name": "Tab"
+                    "name": "Star"
                 },
                 {
                     "name": "Calendar"
@@ -149,7 +155,7 @@ YUI.add("yuidoc-meta", function(Y) {
                     "name": "CalendarPanel"
                 },
                 {
-                    "name": "dialog"
+                    "name": "Dialog"
                 },
                 {
                     "name": "Label"
@@ -165,6 +171,12 @@ YUI.add("yuidoc-meta", function(Y) {
                 },
                 {
                     "name": "Tooltip"
+                },
+                {
+                    "name": "Suggestion"
+                },
+                {
+                    "name": "Tab"
                 },
                 {
                     "name": "Tabset"

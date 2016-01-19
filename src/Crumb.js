@@ -1,14 +1,13 @@
 /**
  * Created by panqianjin on 15/11/3.
  */
-import React,{Component,PropTypes} from 'react';
-import ClassNameMixin from './utils/ClassNameMixin';
+import React,{PropTypes} from 'react';
 import classnames from 'classnames';
-import Grid from './Grid.js';
-import Row from './Row.js';
+
+import Component from './utils/Component';
 /**
  * 面包屑组件
- * @class crumb
+ * @class Crumb
  * @module ui
  * @extends Component
  * @constructor
@@ -16,7 +15,6 @@ import Row from './Row.js';
  * @demo crumb.js{js}
  * @show true
  * */
-@ClassNameMixin
 export default class Crumb extends Component {
     static propTypes = {
         /**
@@ -48,19 +46,24 @@ export default class Crumb extends Component {
     render() {
         let length = this.props.children.length;
         let li = this.props.children.map((item,index)=>{
-                return <li>{index < length-1?<a href={item.props.url}>{item.props.children}</a>:item.props.children}</li>
-            })
+                const {children} = item.props;
+                return <li key={children+index}>{
+                    index < length-1?<a href={item.props.url}>{children}</a>:children
+                }</li>;
+            }
+        );
         return (
-            <Grid className={
+            <this.componentTag {...this.props} className={
                 classnames(
-                    this.getClassNamesForArguments(this.props.classPrefix)
+                    this.getProperty(),
+                    'clearfix',
+                    this.props.className
                 )
             }>
                 <ul>
                     {li}
                 </ul>
-                <Row className='clearfix'></Row>
-            </Grid>
+            </this.componentTag>
         )
     }
 }

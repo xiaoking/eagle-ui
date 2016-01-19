@@ -121,7 +121,7 @@ export default class Calendar extends Component{
                 d = arr.shift();
                 let disabled = ((startDate && new Date(year, month, d).getTime() <= new Date(startDate).getTime() ) || (endDate && new Date(year, month, d).getTime() >= new Date(endDate).getTime() ) );
                 //"eg-active" eg-calendar-selected
-                dom.push(<td><span className={
+                dom.push(<td key={d+j+'day'}><span className={
                     classnames(this.getClassName('item'),{
                         [this.getClassName('active',false)]:this.isToday(year,month+1,d ),
                         [this.getClassName('disabled')]:disabled,
@@ -161,7 +161,7 @@ export default class Calendar extends Component{
             return (
                 years.map((year)=>{
                     return monthList.map((month)=>{
-                        return <option value={`${year}/${month}/1`}>{year}年{_this.getDay(month)}月</option>
+                        return <option key={`${year}/${month}/1`} value={`${year}/${month}/1`}>{year}年{_this.getDay(month)}月</option>
                     })
                 })
             )
@@ -193,9 +193,10 @@ export default class Calendar extends Component{
             arr.push(i);
         }
 
-        let d,dom = [];
+        let d,dom = [],index=0;
         while(arr.length > 0){
-            dom.push(<tr className="body">
+            index+=1;
+            dom.push(<tr className="body" key={'line'+index}>
                 {
                     this.getDates(arr,selectedDate,defaultDate )
                 }
@@ -211,11 +212,16 @@ export default class Calendar extends Component{
         var d = this.today;
         return d.getFullYear() == year && (d.getMonth() + 1) == month && d.getDate() == date;
     }
+    //补位
+    fill(d){
+        d = parseInt(d,10);
+        return d<10?'0'+d:d;
+    }
 
     getDate(year, month, date){
         let {format} = this.props;
 
-        return format.replace(/y{4}/,year).replace(/M{1,2}/, month).replace(/d{1,2}/, date);
+        return format.replace(/y{4}/,year).replace(/M{1,2}/, this.fill(month) ).replace(/d{1,2}/, this.fill(date) );
     }
 
     getDay(day){
@@ -269,7 +275,7 @@ export default class Calendar extends Component{
                 list = [];
             for (let i = -1; i < 11; i++) {
                 list.push(
-                    <span><i className={classnames({
+                    <span key={'year'+i}><i className={classnames({
                                     [_this.getClassName('selected',false)]:sYear == y,
                                     old:i == -1 || i == 10
                                 })} onMouseDown={_this.switchYear.bind(this,y)}>{y}</i></span>
@@ -283,6 +289,7 @@ export default class Calendar extends Component{
 
             <table className="calendar">
                 <thead className="eg-calendar-header">
+                <tr>
                 <th>
                     <div className={this.getClassName('icon-prev',false)} onMouseDown={this.switchYearForInterval.bind(this,year-1,true)}></div>
                 </th>
@@ -292,6 +299,7 @@ export default class Calendar extends Component{
                 <th>
                     <div className={this.getClassName('icon-next',false)} onMouseDown={this.switchYearForInterval.bind(this,year+10,true)}></div>
                 </th>
+                </tr>
                 </thead>
                 <tbody>
                 <tr className="month-list">
@@ -313,6 +321,7 @@ export default class Calendar extends Component{
 
             <table className="calendar">
                 <thead className="eg-calendar-header">
+                <tr>
                 <th>
                     <div className={this.getClassName('icon-prev',false)} onMouseDown={this.switchYear.bind(this,'-1')}></div>
                 </th>
@@ -322,13 +331,14 @@ export default class Calendar extends Component{
                 <th>
                     <div className={this.getClassName('icon-next',false)} onMouseDown={this.switchYear.bind(this,'+1')}></div>
                 </th>
+                </tr>
                 </thead>
                 <tbody>
                     <tr className="month-list">
                         <td colSpan="7">
                         {
                             this.month.map(function(item){
-                                return <span><i className={classnames({
+                                return <span key={item+'月'}><i className={classnames({
                                     [_this.getClassName('selected',false)]:selectDate.month == item
                                 })} onMouseDown={_this.switchMonth.bind(_this,item*1-1)}>{item+'月'}</i></span>;
                             })
@@ -351,6 +361,7 @@ export default class Calendar extends Component{
 
             <table className="calendar">
                 <thead className="eg-calendar-header">
+                <tr>
                 <th>
                     <div className={this.getClassName('icon-prev',false)} onMouseDown={this.switchMonth.bind(this,'-1')}></div>
                 </th>
@@ -360,12 +371,13 @@ export default class Calendar extends Component{
                 <th>
                     <div className={this.getClassName('icon-next',false)}  onMouseDown={this.switchMonth.bind(this,'+1')}></div>
                 </th>
+                </tr>
                 </thead>
                 <tbody>
                 <tr className="head">
                     {
                         weeks.map(function(week){
-                            return <td>{week}</td>
+                            return <td key={week}>{week}</td>
                         })
                     }
                 </tr>

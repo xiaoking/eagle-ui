@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -638,7 +662,7 @@ var Paging = (function (_Component) {
         if (currentPage &gt; 1) {
             htmlList.push(_react2[&#x27;default&#x27;].createElement(
                 &#x27;a&#x27;,
-                { href: &#x27;javascript:void(0);&#x27;, className: &#x27;&#x27;, onClick: this.prev.bind(this) },
+                { href: &#x27;javascript:void(0);&#x27;, key: &#x27;上一页&#x27;, className: &#x27;&#x27;, onClick: this.prev.bind(this) },
                 &#x27;上一页&#x27;
             ));
         }
@@ -649,12 +673,12 @@ var Paging = (function (_Component) {
 
             htmlList.push(_react2[&#x27;default&#x27;].createElement(
                 &#x27;a&#x27;,
-                { href: &#x27;javascript:void(0);&#x27;, onClick: (_context = this.gotoPage).bind.call(_context, this, 1) },
+                { href: &#x27;javascript:void(0);&#x27;, key: 1, onClick: (_context = this.gotoPage).bind.call(_context, this, 1) },
                 1
             ));
             htmlList.push(_react2[&#x27;default&#x27;].createElement(
                 &#x27;a&#x27;,
-                { href: &#x27;javascript:void(0);&#x27; },
+                { href: &#x27;javascript:void(0);&#x27;, key: &#x27;...上一页&#x27; },
                 &#x27;...&#x27;
             ));
             //i+=1;
@@ -665,7 +689,7 @@ var Paging = (function (_Component) {
 
             htmlList.push(_react2[&#x27;default&#x27;].createElement(
                 &#x27;a&#x27;,
-                { href: &#x27;javascript:void(0);&#x27;, onClick: this.gotoPage.bind(this, i), className: _classnames3[&#x27;default&#x27;]((_classnames = {}, _classnames[this.getClassName(activeClass)] = i == currentPage, _classnames)) },
+                { href: &#x27;javascript:void(0);&#x27;, key: i, onClick: this.gotoPage.bind(this, i), className: _classnames3[&#x27;default&#x27;]((_classnames = {}, _classnames[this.getClassName(activeClass)] = i == currentPage, _classnames)) },
                 i
             ));
         }
@@ -676,12 +700,12 @@ var Paging = (function (_Component) {
 
             htmlList.push(_react2[&#x27;default&#x27;].createElement(
                 &#x27;a&#x27;,
-                { href: &#x27;javascript:void(0);&#x27; },
+                { href: &#x27;javascript:void(0);&#x27;, key: &#x27;...下一页&#x27; },
                 &#x27;...&#x27;
             ));
             htmlList.push(_react2[&#x27;default&#x27;].createElement(
                 &#x27;a&#x27;,
-                { href: &#x27;javascript:void(0);&#x27;, onClick: (_context2 = this.gotoPage).bind.call(_context2, this, this.pages) },
+                { href: &#x27;javascript:void(0);&#x27;, key: this.pages, onClick: (_context2 = this.gotoPage).bind.call(_context2, this, this.pages) },
                 this.pages
             ));
         }
@@ -689,7 +713,7 @@ var Paging = (function (_Component) {
         if (this.pages &gt; 1 &amp;&amp; currentPage != this.pages) {
             htmlList.push(_react2[&#x27;default&#x27;].createElement(
                 &#x27;a&#x27;,
-                { href: &#x27;javascript:void(0);&#x27;, onClick: this.next.bind(this) },
+                { href: &#x27;javascript:void(0);&#x27;, key: &#x27;下一页&#x27;, onClick: this.next.bind(this) },
                 &#x27;下一页&#x27;
             ));
         }
@@ -705,6 +729,10 @@ var Paging = (function (_Component) {
         var loadPageCallback = this.props.loadPageCallback;
 
         loadPageCallback &amp;&amp; loadPageCallback(val);
+
+        this.setState({
+            defaultNumber: val
+        });
     };
 
     Paging.prototype.accordingNumber = function accordingNumber() {
@@ -714,7 +742,7 @@ var Paging = (function (_Component) {
         for (var i = 1; i &lt; 11; i++) {
             opts.push(_react2[&#x27;default&#x27;].createElement(
                 &#x27;option&#x27;,
-                { value: num * i },
+                { value: num * i, key: num * i },
                 num * i
             ));
         }
@@ -727,7 +755,7 @@ var Paging = (function (_Component) {
             &#x27;每页显示  &#x27;,
             _react2[&#x27;default&#x27;].createElement(
                 &#x27;select&#x27;,
-                { defaultValue: this.state.defaultNumber, onChange: this.changePageSizeHandler.bind(this) },
+                { defaultValue: this.props.pageSize, onChange: this.changePageSizeHandler.bind(this) },
                 opts
             ),
             &#x27;  页&#x27;

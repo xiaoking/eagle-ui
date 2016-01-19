@@ -1,0 +1,5 @@
+.opacity(@factor) {
+    @iefactor: @factor*100;
+    filter: ~"alpha(opacity=@{iefactor})";
+    opacity: @factor;
+}

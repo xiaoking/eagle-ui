@@ -2,11 +2,7 @@
  * Created by panqianjin on 15/11/4.
  */
 import React,{Component} from 'react';
-import Toast from '../../../src/Toast.js';
-import Button from '../../../src/Button.js';
-import Grid from '../../../src/Grid.js';
-import Row from '../../../src/Row.js';
-import Col from '../../../src/Col.js';
+import {ButtonGroup,Toast,Col,Row,Grid,Button,Dialog,Panel,PanelHeader,PanelContent,PanelFooter,FormGroup,Input,RadioGroup,CheckboxGroup,Select} from '../../../src/index';
 let Demo= class Demo extends Component{
 
     static defaultProps = {
@@ -17,42 +13,37 @@ let Demo= class Demo extends Component{
     constructor(props, context) {
         super(props, context);
         this.state = {
-            show: this.props.show,
-            type: this.props.type,
-            overlay: true
+            isMask:true
         }
     }
+
+    showToast(){
+        let msg = arguments[0].getAttribute('data-message');
+
+        this.setState({
+            type:arguments[0].getAttribute('data-value'),
+            message:msg,
+            isMask:msg=='无遮罩加载成功' ?false:true
+        });
+        Dialog.mask('toast');
+    }
+
     render(){
+
         return (
             <Grid>
-                <Row>
-                    <Col sm={4}><Button block radius egSize="sm" onClick={::this.showSuccess}>success</Button></Col>
-                    <Col sm={4}><Button block radius egSize="sm" onClick={::this.showError}>error</Button></Col>
-                    <Col sm={4}><Button block radius egSize="sm" onClick={::this.showLoading}>loading</Button></Col>
-                </Row>
-                <Toast type={this.state.type} show={this.state.show} overlay={this.state.overlay}>
-                </Toast>
+                <ButtonGroup egType="justify" activeCallback={::this.showToast}>
+                    <Button data-value="success" data-message="数据载入成功">显示success</Button>
+                    <Button data-value="error"  data-message="数据加载失败">显示error</Button>
+                    <Button data-value="loading"  data-message="加载中...">显示loading</Button>
+                    <Button data-value="success"  data-message="无遮罩加载成功">无遮罩toast</Button>
+                </ButtonGroup>
+
+                <Dialog id="toast" isClose={false} isMask={this.state.isMask}>
+                    <Toast type={this.state.type}>{this.state.message}</Toast>
+                </Dialog>
             </Grid>
         );
-    }
-    showSuccess(){
-        this.setState({
-            show: true,
-            type: 'success'
-        })
-    }
-    showError(){
-        this.setState({
-            show: true,
-            type: 'error',
-            overlay: false
-        })
-    }
-    showLoading(){
-        this.setState({
-            show: true,
-            type: 'loading'
-        })
     }
 };
 export default Demo;

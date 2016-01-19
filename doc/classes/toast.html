@@ -243,7 +243,15 @@
                    
                        <li>
                             
-                           <a href="../classes/crumb.html">crumb</a>
+                           <a href="../classes/Crumb.html">Crumb</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Slider.html">Slider</a>
                            <ul>
                                 
                            </ul>
@@ -267,7 +275,7 @@
                     
                        <li>
                             
-                           <a href="../classes/Tab.html">Tab</a>
+                           <a href="../classes/Star.html">Star</a>
                            <ul>
                                 
                            </ul>
@@ -291,7 +299,7 @@
                     
                        <li>
                             
-                           <a href="../classes/dialog.html">dialog</a>
+                           <a href="../classes/Dialog.html">Dialog</a>
                            <ul>
                                 
                            </ul>
@@ -332,6 +340,22 @@
                        <li>
                             
                            <a href="../classes/Tooltip.html">Tooltip</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Suggestion.html">Suggestion</a>
+                           <ul>
+                                
+                           </ul>
+                       </li>
+                    
+                       <li>
+                            
+                           <a href="../classes/Tab.html">Tab</a>
                            <ul>
                                 
                            </ul>
@@ -414,35 +438,7 @@ overalay是否显示遮罩，默认false不显示</p>
             <ul class="index-list methods extends">
                 
                     <li class="index-item method">
-                        <a href="#" data-tabid="#method" data-anchor="#method_closeToast" data-tablink="closeToast">closeToast</a>
-
-                        
-                        
-                    </li>
-                
-                    <li class="index-item method">
-                        <a href="#" data-tabid="#method" data-anchor="#method_componentWillReceiveProps" data-tablink="componentWillReceiveProps">componentWillReceiveProps</a>
-
-                        
-                        
-                    </li>
-                
-                    <li class="index-item method">
-                        <a href="#" data-tabid="#method" data-anchor="#method_render" data-tablink="render">render</a>
-
-                        
-                        
-                    </li>
-                
-                    <li class="index-item method">
-                        <a href="#" data-tabid="#method" data-anchor="#method_setTimeoutForClose" data-tablink="setTimeoutForClose">setTimeoutForClose</a>
-
-                        
-                        
-                    </li>
-                
-                    <li class="index-item method">
-                        <a href="#" data-tabid="#method" data-anchor="#method_toast" data-tablink="toast">toast</a>
+                        <a href="#" data-tabid="#method" data-anchor="#method_close" data-tablink="close">close</a>
 
                         
                         
@@ -472,14 +468,7 @@ overalay是否显示遮罩，默认false不显示</p>
                     </li>
                 
                     <li class="index-item property">
-                        <a href="#" data-tabid="#property" data-anchor="#property_msg" data-tablink="msg">msg</a>
-
-                        
-                        
-                    </li>
-                
-                    <li class="index-item property">
-                        <a href="#" data-tabid="#property" data-anchor="#property_overlay" data-tablink="overlay">overlay</a>
+                        <a href="#" data-tabid="#property" data-anchor="#property_message" data-tablink="message">message</a>
 
                         
                         
@@ -535,7 +524,7 @@ overalay是否显示遮罩，默认false不显示</p>
 
             
                 <div class="foundat">
-                    Defined in: <a href="../files/lib_Toast.js.html#l44"><code>lib&#x2F;Toast.js:44</code></a>
+                    Defined in: <a href="../files/lib_Toast.js.html#l52"><code>lib&#x2F;Toast.js:52</code></a>
                 </div>
             
 
@@ -588,7 +577,7 @@ overalay是否显示遮罩，默认false不显示</p>
             
         
         
-        <a href="../files/lib_Toast.js.html#l44"><code>lib&#x2F;Toast.js:44</code></a>
+        <a href="../files/lib_Toast.js.html#l52"><code>lib&#x2F;Toast.js:52</code></a>
         
         </p>
 
@@ -622,11 +611,7 @@ overalay是否显示遮罩，默认false不显示</p>
  * Created by panqianjin on 15/11/4.
  */
 import React,{Component} from &#39;react&#39;;
-import Toast from &#39;../../../src/Toast.js&#39;;
-import Button from &#39;../../../src/Button.js&#39;;
-import Grid from &#39;../../../src/Grid.js&#39;;
-import Row from &#39;../../../src/Row.js&#39;;
-import Col from &#39;../../../src/Col.js&#39;;
+import {ButtonGroup,Toast,Col,Row,Grid,Button,Dialog,Panel,PanelHeader,PanelContent,PanelFooter,FormGroup,Input,RadioGroup,CheckboxGroup,Select} from &#39;../../../src/index&#39;;
 let Demo= class Demo extends Component{
 
     static defaultProps = {
@@ -637,42 +622,37 @@ let Demo= class Demo extends Component{
     constructor(props, context) {
         super(props, context);
         this.state = {
-            show: this.props.show,
-            type: this.props.type,
-            overlay: true
+            isMask:true
         }
     }
+
+    showToast(){
+        let msg = arguments[0].getAttribute(&#39;data-message&#39;);
+
+        this.setState({
+            type:arguments[0].getAttribute(&#39;data-value&#39;),
+            message:msg,
+            isMask:msg==&#39;无遮罩加载成功&#39; ?false:true
+        });
+        Dialog.mask(&#39;toast&#39;);
+    }
+
     render(){
+
         return (
             &lt;Grid&gt;
-                &lt;Row&gt;
-                    &lt;Col sm={4}&gt;&lt;Button block radius egSize="sm" onClick={::this.showSuccess}&gt;success&lt;/Button&gt;&lt;/Col&gt;
-                    &lt;Col sm={4}&gt;&lt;Button block radius egSize="sm" onClick={::this.showError}&gt;error&lt;/Button&gt;&lt;/Col&gt;
-                    &lt;Col sm={4}&gt;&lt;Button block radius egSize="sm" onClick={::this.showLoading}&gt;loading&lt;/Button&gt;&lt;/Col&gt;
-                &lt;/Row&gt;
-                &lt;Toast type={this.state.type} show={this.state.show} overlay={this.state.overlay}&gt;
-                &lt;/Toast&gt;
+                &lt;ButtonGroup egType="justify" activeCallback={::this.showToast}&gt;
+                    &lt;Button data-value="success" data-message="数据载入成功"&gt;显示success&lt;/Button&gt;
+                    &lt;Button data-value="error"  data-message="数据加载失败"&gt;显示error&lt;/Button&gt;
+                    &lt;Button data-value="loading"  data-message="加载中..."&gt;显示loading&lt;/Button&gt;
+                    &lt;Button data-value="success"  data-message="无遮罩加载成功"&gt;无遮罩toast&lt;/Button&gt;
+                &lt;/ButtonGroup&gt;
+
+                &lt;Dialog id="toast" isClose={false} isMask={this.state.isMask}&gt;
+                    &lt;Toast type={this.state.type}&gt;{this.state.message}&lt;/Toast&gt;
+                &lt;/Dialog&gt;
             &lt;/Grid&gt;
         );
-    }
-    showSuccess(){
-        this.setState({
-            show: true,
-            type: &#39;success&#39;
-        })
-    }
-    showError(){
-        this.setState({
-            show: true,
-            type: &#39;error&#39;,
-            overlay: false
-        })
-    }
-    showLoading(){
-        this.setState({
-            show: true,
-            type: &#39;loading&#39;
-        })
     }
 };
 export default Demo;</code></pre>
@@ -694,10 +674,10 @@ export default Demo;</code></pre>
                 <h2 class="off-left">Methods</h2>
 
                 
-                    <div id="method_closeToast" class="method item">
-    <h3 class="name">closeToast</h3>
+                    <div id="method_close" class="method item">
+    <h3 class="name">close</h3>
     <code>
-    closeToast
+    close
     
         <span class="paren">()</span>
     
@@ -732,7 +712,7 @@ export default Demo;</code></pre>
             
         
         
-        <a href="../files/lib_Toast.js.html#l229"><code>lib&#x2F;Toast.js:229</code></a>
+        <a href="../files/lib_Toast.js.html#l127"><code>lib&#x2F;Toast.js:127</code></a>
         
         </p>
 
@@ -758,281 +738,6 @@ export default Demo;</code></pre>
                     
                     <p>null</p>
 
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-                
-                    <div id="method_componentWillReceiveProps" class="method item">
-    <h3 class="name">componentWillReceiveProps</h3>
-    <code>
-    componentWillReceiveProps
-    
-        <span class="paren">()</span>
-    
-    </code>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/lib_Toast.js.html#l135"><code>lib&#x2F;Toast.js:135</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description well well-small sign-left3">
-        <div class="stdoc-code"><p>接收到新props时执行,props改变，改变state.show</p>
-</div>
-    </div>
-
-    
-
-    
-
-    
-</div>
-
-                
-                    <div id="method_render" class="method item">
-    <h3 class="name">render</h3>
-    <code>
-    render
-    
-        <span class="paren">()</span>
-    
-    </code>
-
-    
-        <span class="returns-inline">
-            <span class="type">ReactElement</span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/lib_Toast.js.html#l159"><code>lib&#x2F;Toast.js:159</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description well well-small sign-left3">
-        <div class="stdoc-code"></div>
-    </div>
-
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                
-                    
-                        <span class="type">ReactElement</span>:
-                    
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-                
-                    <div id="method_setTimeoutForClose" class="method item">
-    <h3 class="name">setTimeoutForClose</h3>
-    <code>
-    setTimeoutForClose
-    
-        <span class="paren">()</span>
-    
-    </code>
-
-    
-        <span class="returns-inline">
-            <span class="type"></span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/lib_Toast.js.html#l215"><code>lib&#x2F;Toast.js:215</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description well well-small sign-left3">
-        <div class="stdoc-code"><p>延时n秒消失</p>
-</div>
-    </div>
-
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                
-                    
-                    <p>null</p>
-
-                
-            </div>
-        </div>
-    
-
-    
-</div>
-
-                
-                    <div id="method_toast" class="method item">
-    <h3 class="name">toast</h3>
-    <code>
-    toast
-    
-        <span class="paren">()</span>
-    
-    </code>
-
-    
-        <span class="returns-inline">
-            <span class="type">ReactElement</span>
-        </span>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/lib_Toast.js.html#l188"><code>lib&#x2F;Toast.js:188</code></a>
-        
-        </p>
-
-
-        
-
-        
-    </div>
-
-    <div class="description well well-small sign-left3">
-        <div class="stdoc-code"><p>渲染toast主体</p>
-</div>
-    </div>
-
-    
-
-    
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                
-                    
-                        <span class="type">ReactElement</span>:
-                    
                 
             </div>
         </div>
@@ -1073,7 +778,7 @@ export default Demo;</code></pre>
             
         
         
-        <a href="../files/lib_Toast.js.html#l91"><code>lib&#x2F;Toast.js:91</code></a>
+        <a href="../files/lib_Toast.js.html#l92"><code>lib&#x2F;Toast.js:92</code></a>
         
         </p>
 
@@ -1121,7 +826,7 @@ export default Demo;</code></pre>
             
         
         
-        <a href="../files/lib_Toast.js.html#l98"><code>lib&#x2F;Toast.js:98</code></a>
+        <a href="../files/lib_Toast.js.html#l99"><code>lib&#x2F;Toast.js:99</code></a>
         
         </p>
 
@@ -1146,8 +851,8 @@ export default Demo;</code></pre>
 </div>
 
                 
-                    <div id="property_msg" class="property item">
-    <h3 class="name"><code>msg</code></h3>
+                    <div id="property_message" class="property item">
+    <h3 class="name"><code>message</code></h3>
     <span class="type">String</span>
 
     
@@ -1169,7 +874,7 @@ export default Demo;</code></pre>
             
         
         
-        <a href="../files/lib_Toast.js.html#l70"><code>lib&#x2F;Toast.js:70</code></a>
+        <a href="../files/lib_Toast.js.html#l78"><code>lib&#x2F;Toast.js:78</code></a>
         
         </p>
 
@@ -1186,54 +891,6 @@ export default Demo;</code></pre>
     
         <p><strong>Default:</strong></p>
          <code> 保存成功</code>
-    
-
-    
-
-    
-</div>
-
-                
-                    <div id="property_overlay" class="property item">
-    <h3 class="name"><code>overlay</code></h3>
-    <span class="type">Boolean</span>
-
-    
-
-    
-
-    
-
-    
-
-    <div class="meta">
-        
-            
-                
-                <p>
-                
-                Defined in
-                
-            
-        
-        
-        <a href="../files/lib_Toast.js.html#l84"><code>lib&#x2F;Toast.js:84</code></a>
-        
-        </p>
-
-        
-
-        
-    </div>
-
-    <div class="description">
-        <div class="stdoc-code"><p>是否显示遮罩，默认false</p>
-</div>
-    </div>
-
-    
-        <p><strong>Default:</strong></p>
-         <code> false</code>
     
 
     
@@ -1265,7 +922,7 @@ export default Demo;</code></pre>
             
         
         
-        <a href="../files/lib_Toast.js.html#l77"><code>lib&#x2F;Toast.js:77</code></a>
+        <a href="../files/lib_Toast.js.html#l85"><code>lib&#x2F;Toast.js:85</code></a>
         
         </p>
 
@@ -1313,7 +970,7 @@ export default Demo;</code></pre>
             
         
         
-        <a href="../files/lib_Toast.js.html#l63"><code>lib&#x2F;Toast.js:63</code></a>
+        <a href="../files/lib_Toast.js.html#l71"><code>lib&#x2F;Toast.js:71</code></a>
         
         </p>
 

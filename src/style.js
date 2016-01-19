@@ -1,1 +1,1 @@
-import include from './_include.less';
+import include from './less/eagle-ui.less';
